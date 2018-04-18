@@ -77,9 +77,15 @@ The certificates must be added to the Starter Plan instance. For convenience, th
 
         curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --basic --user ${USERID}:${PASSWORD} --data-binary '{}' ${API_URL}/api/v1/networks/${NETWORKID}/nodes/${PEER}/start
 
-4. Synchronize the certificates by using the following API call:
+4. Check the status of the network nodes by using the following API call:
 
         curl -X GET --header 'Content-Type: application/json' --header 'Accept: application/json' --basic --user ${USERID}:${PASSWORD} ${API_URL}/api/v1/networks/${NETWORKID}/nodes/status
+
+5. Ensure all peers are running then update the channel to contain the new certificates by using the following API call:
+
+        curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' --basic --user ${USERID}:${PASSWORD} --data-binary '{}' ${API_URL}/api/v1/networks/{networkID}/channels/{channelID}/sync
+
+
 
 ## Step Four: Creating an admin business network card
 
