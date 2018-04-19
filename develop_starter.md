@@ -41,7 +41,7 @@ The secret retrieved in the preceding step will be used to create a business net
 
 2. Import the card using the following command:
 
-        composer card import -f ca.card -n ca
+        composer card import -f ca.card -c ca
 
 3. Now that the card is imported, it can be used to exchange the **admin secret** for valid certificates from the CA. Run the following command to request certificates from the certificate authority:
 
