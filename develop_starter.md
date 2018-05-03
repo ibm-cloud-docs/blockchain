@@ -22,7 +22,7 @@ By using the developer environment, you can quickly model and test {{site.data.k
 
 ## Before you begin
 
-Ensure that you read the [About Starter Plan](./starter_plan.html) and [Getting started with Starter Plan](./get_start_starter_plan.html). Also, ensure that you have installed the [{{site.data.keyword.blockchainfull_notm}} Platform: Develop developer environment](./develop_install.html) and created an instance of the {{site.data.keyword.blockchainfull_notm}} Platform Starter Plan following the instructions in [Govern Starter Plan network](./get_start_starter_plan.html). Ensure you have Node v8.9 or higher and npm v5.x. Lastly, you will need Composer-cli version 0.18.1. Uninstall your current version of the CLI:
+Ensure that you read the [About Starter Plan](./starter_plan.html) and [Getting started with Starter Plan](./get_start_starter_plan.html). Also, ensure that you have installed the [{{site.data.keyword.blockchainfull_notm}} Platform: Develop developer environment](./develop_install.html) and created an instance of the {{site.data.keyword.blockchainfull_notm}} Platform Starter Plan following the instructions in [Govern Starter Plan network](./get_start_starter_plan.html). Ensure you have Node v8.9 or higher and npm v5.x. You will need a business network (also known as .bna file) ready to deploy for this guide. If you have no business network (.bna) file, check the [Develop the network](./develop.html) guide to develop one. Lastly, you will need Composer-cli version 0.18.1. Uninstall your current version of the CLI:
 
 `npm uninstall -g composer-cli`
 
