@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-4-16"
+lastupdated: "2018-5-3"
 
 ---
 
@@ -22,7 +22,7 @@ By using the developer environment, you can quickly model and test {{site.data.k
 
 ## Before you begin
 
-Ensure that you read the [About Starter Plan](./starter_plan.html) and [Getting started with Starter Plan](./get_start_starter_plan.html). Also ensure that you have installed the [{{site.data.keyword.blockchainfull_notm}} Platform: Develop developer environment](./develop_install.html) and created an instance of the {{site.data.keyword.blockchainfull_notm}} Platform Starter Plan following the instructions in [Govern Starter Plan network](./get_start_starter_plan.html). Ensure you have Node v8.9 or higher and npm v5.x. Lastly, you will need Composer-cli version 0.18.1. Uninstall your current version of the CLI:
+Ensure that you read the [About Starter Plan](./starter_plan.html) and [Getting started with Starter Plan](./get_start_starter_plan.html). Also, ensure that you have installed the [{{site.data.keyword.blockchainfull_notm}} Platform: Develop developer environment](./develop_install.html) and created an instance of the {{site.data.keyword.blockchainfull_notm}} Platform Starter Plan following the instructions in [Govern Starter Plan network](./get_start_starter_plan.html). Ensure you have Node v8.9 or higher and npm v5.x. You will need a business network (also known as .bna file) ready to deploy for this guide. If you have no business network (.bna) file, check the [Develop the network](./develop.html) guide to develop one. Lastly, you will need Composer-cli version 0.18.1. Uninstall your current version of the CLI:
 
 `npm uninstall -g composer-cli`
 
@@ -65,7 +65,7 @@ The `composer identity request` command creates a `credentials` directory that c
 
 The certificates must be added to the Starter Plan instance. For convenience, they can be added by using the {{site.data.keyword.blockchainfull_notm}} Platform UI. The certificates must be added, then the peers must be restarted, and then the certificates must be synced on the channel. The certificate needed is the `admin-pub.pem` file that was generated from the previous command, which is in the `credentials` directory.
 
-1. Back in the blockchain service, click on the members tab, then add certificate. Go to your `credentials` directory, and copy and paste the contents of the `admin-pub.pem` file in the certificate box. Submit the certificate and restart the peers. Note: restarting the peers takes a minute.
+1. Back in the blockchain service, click on the 'Members' tab, then to the right of 'Members', you should see 'Certificates'. Click on 'Certificates' and then on 'Add Certificate'. Go to your `credentials` directory, and copy and paste the contents of the `admin-pub.pem` file in the certificate box. Submit the certificate and restart the peers. Note: restarting the peers takes a minute.
 
 ![jlEb2y](https://i.makeagif.com/media/4-12-2018/jlEb2y.gif)
 
@@ -109,9 +109,37 @@ Next, the card created in the previous step can be used to install and start a b
 
         composer card import -f ./admin@vehicle-manufacture-network.card
 
-The business network is now deployed to the Starter Plan instance. You can now view your chaincode logs from your installed business network. Back in your blockchain instance, you can go into channels, click on 'defaultchannel' or what what you named you channel
-And then on the small '>' symbol. Then, under 'Actions', clock on the three-dot symbol
-and 'view details'. This is your chaincode log. You will be able to see all relevant details for 
-your business network here. Congrats!
+The business network is now deployed to the Starter Plan instance. You can now view your chaincode logs from your 
+installed business network. Back in your blockchain instance, you can go into channels, click on 'defaultchannel' or what
+ you named the channel
+and then on the small '>' symbol. Then, under 'Actions', click on the three-dot symbol
+and 'view details'. This is your chaincode log. You will be able to see all relevant details for your business network here. Your network is now instantiated!
 
 ![fN-Yuj](https://i.makeagif.com/media/4-13-2018/fN-Yuj.gif)
+
+## Step Six: Testing the business network
+
+This section will go over how to test your network with a local version of the composer-rest-server. We need composer-rest-server v0.18.1. Uninstall your current version of the composer-rest-server:
+
+`npm uninstall -g composer-rest-server`
+
+and install version 0.18.1:
+
+`npm install -g composer-rest-server@0.18.1`
+  
+1. Start up the server with the command below. Make sure you are in the same directory as your `connection.profile.json` file. Note: this guide will show the logs from the vehicle-manufacture-network, but you can use any .bna file you want. The process is the same. 
+
+        composer-rest-server -c admin@vehicle-manufacture-network -n never -w true
+
+2. In your browser, go to http://localhost:3000/explorer
+
+3. Click on 'Person' and then POST. Copy and paste the 'Example Value' from the Model, and paste it in the data field below.
+
+4. Under the data field, click the 'Try it out!' button.
+
+5. In your response body, you should see the data that you entered above. In your blockchain service, go back into your channel logs, as shown in Step 5 part 5, and you should see that your logs reflect the response body of the POST request.
+
+![aK59y7](https://i.makeagif.com/media/4-30-2018/aK59y7.gif)
+
+Nice job! You successfully ran a local version of your composer-rest-server and submitted transactions that have been logged to the IBM Blockchain Starter Plan. 
+
