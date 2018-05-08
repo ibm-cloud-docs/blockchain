@@ -133,18 +133,7 @@ and install version 0.18.1:
 
 2. In your browser, go to http://localhost:3000/explorer
 
-3. Click on 'Person' then POST and in the data field, enter:
-
-        {
-
-"$class": "org.acme.vehicle_network.Person",
-
-"username": "username",
-
-"email": "email@gmail.com"
-
-}
-
+3. Click on 'Person' and then POST. Copy and paste the 'Example Value' from the Model, and paste it in the data field below.
 
 4. Under the data field, click the 'Try it out!' button.
 
