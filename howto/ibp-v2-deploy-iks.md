@@ -128,7 +128,7 @@ Click the **Users** icon in the left navigation to view the list of users who ca
 ## Next steps
 {: #ibp-v2-deploy-iks-next-steps}
 
-Now that your console is ready to use, you can go ahead to the [build a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).
+Now that your console is ready to use, you can go ahead to [build a network](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network "Building a network tutorial").
 
 ## Updating the Kubernetes version of your cluster
 {: #ibp-v2-deploy-iks-updating-kubernetes}

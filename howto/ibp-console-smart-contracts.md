@@ -15,7 +15,7 @@ lastupdated: "2019-02-08"
 {:tip: .tip}
 {:pre: .pre}
 
-# Deploy a smart contract on the network tutorial
+# Deploying a smart contract on the network
 {: #ibp-console-smart-contracts}
 
 ***[Is this page helpful? Tell us.](https://www.surveygizmo.com/s3/4501493/IBM-Blockchain-Documentation)***
@@ -86,7 +86,7 @@ Use your console to perform these steps:
 1. On the smart contracts tab, find the smart contract from the list installed on your peers and click **Instantiate** from the overflow menu on the right side of the row.
 2. On the side panel that opens, select a channel,`channel1` to instantiate the smart contract on, and select the orderer where the channel resides, `Orderer` if you are following along in the tutorial. Click **Next**.
 3. Specify the [endorsement policy for the smart contract](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts-endorse), described in the following section.
-4. You also need to select the organization members to be included in the policy. If you are following along in the tutorial, that would be `org1msp` and possibly `org2msp` if you completed both the **Build a network** and **Join a network** tutorials.
+4. You also need to select the organization members to be included in the policy. If you are following along in the tutorial, that would be `org1msp` and possibly `org2msp` if you completed both the **Building a network** and **Joining a network** tutorials.
 5. On the last panel you are prompted to specify the smart contract function that you want to run when the smart contract starts, along with the associated arguments to pass to that function.
 
 You can view all of the smart contracts that have been instantiated on a channel by clicking the channel icon in the left navigation, selecting a channel from the table, and then clicking the **Channel details** tab.

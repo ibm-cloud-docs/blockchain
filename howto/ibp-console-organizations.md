@@ -94,4 +94,4 @@ After an organization has been added to a consortium, they can create a channel 
 2. Import the MSPs of organizations they want to add to the new channel into their console using the organizations tab. **Note** that organizations need to be added to the consortium before they can be added to a channel.
 3. Navigate to the **Channels** tab and click **Create channel**. This will open a side panel that will allow you to specify the channel name, membership, and channel policies. You can add any organizations that have been added to the consortium to the new channel.
 
-For more information about these steps, see [creating a channel](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network-create-channel1) in the Build a network tutorial.
+For more information about these steps, see [creating a channel](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network-create-channel1) in the **Building a network** tutorial.

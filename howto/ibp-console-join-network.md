@@ -15,7 +15,7 @@ lastupdated: "2019-02-08"
 {:tip: .tip}
 {:pre: .pre}
 
-# Join a network tutorial
+# Joining a network
 {: #ibp-console-join-network}
 
 ***[Is this page helpful? Tell us.](https://www.surveygizmo.com/s3/4501493/IBM-Blockchain-Documentation)***
@@ -23,7 +23,7 @@ lastupdated: "2019-02-08"
 {{site.data.keyword.blockchainfull}} Platform is a blockchain-as-a-service offering that that enables you to develop, deploy, and operate blockchain applications and networks. You can learn more about blockchain components and how they work together by visiting the [Blockchain component overview](/docs/services/blockchain/blockchain_component_overview.html#blockchain-component-overview). This tutorial is the second part in the [sample network tutorial series](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network-sample-tutorial) and describes how to create nodes in the {{site.data.keyword.blockchainfull_notm}} Platform console and connect them a blockchain consortium hosted in another cluster.
 {:shortdesc}
 
-If you have not already deployed the console to a Kubernetes cluster by using {{site.data.keyword.cloud_notm}} Kubernetes Service, see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.0](/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks). You can create a new Kubernetes cluster for the console deployment or use an existing one in your {{site.data.keyword.cloud_notm}} account. After you deploy the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster, you can launch the console to create and manage your blockchain components.
+If you have not already deployed the console to a Kubernetes cluster by using {{site.data.keyword.cloud_notm}} Kubernetes Service, see [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform free 2.0 beta](/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks). You can create a new Kubernetes cluster for the console deployment or use an existing one in your {{site.data.keyword.cloud_notm}} account. After you deploy the {{site.data.keyword.blockchainfull_notm}} Platform to your Kubernetes cluster, you can launch the console to create and manage your blockchain components.
 
 Whether you deploy to a paid or free Kubernetes cluster, use the Kubernetes dashboard to pay close attention to the resources at your disposal when you choose to deploy nodes and create channels. It is your responsibility to manage your Kubernetes cluster and deploy additional resources if necessary. While components will successfully deploy to a free cluster, the more components you add, the slower your components will run.
 {: note}
@@ -33,16 +33,16 @@ Whether you deploy to a paid or free Kubernetes cluster, use the Kubernetes dash
 
 This three-part tutorial series takes you through the process of creating and interconnecting a relatively simple, multi-node {{site.data.keyword.blockchainfull_notm}} Platform 2.0 network by using the console and leveraging your Kubernetes deployment.
 
-* [Build a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network) guides you through the process of hosting a network by creating an orderer and peer.
-* [Join a network tutorial](/docs/services/blockchain/howto/ibp-console-join-network.html#ibp-console-join-network) guides you through the process of joining an existing network by creating a peer and joining it to a channel.
-* [Deploy a smart contract on the network](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts) provides information on how to write a smart contract and deploy it on your network.
+* [Building a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network) guides you through the process of hosting a network by creating an orderer and peer.
+* [Joining a network tutorial](/docs/services/blockchain/howto/ibp-console-join-network.html#ibp-console-join-network) guides you through the process of joining an existing network by creating a peer and joining it to a channel.
+* [Deploying a smart contract on the network tutorial](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts) provides information on how to write a smart contract and deploy it on your network.
 
-You can use the steps in these tutorials to build a network with multiple organizations in one cluster for the purposes of development and testing. Use the **Build a network** tutorial if you want to found a blockchain consortium. Use the **Join a network** tutorial to connect a peer to the network. Following the tutorials with different consortium members allows you to create a truly **distributed** blockchain network.  
+You can use the steps in these tutorials to build a network with multiple organizations in one cluster for the purposes of development and testing. Use the **Building a network** tutorial if you want to found a blockchain consortium. Use the **Joining a network** tutorial to connect a peer to the network. Following the tutorials with different consortium members allows you to create a truly **distributed** blockchain network.  
 
-This tutorial is meant to show how to join a peer to an **existing** network. It presumes an orderer, that hosts the network, already exists in your cluster or on another {{site.data.keyword.blockchainfull_notm}} Platform cluster. If you don't have an existing network to join, visit the [Build a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network) tutorial to learn how to create one. The **Join a network** tutorial takes you through the steps to create the following `Org2` blockchain components, highlighted in the blue box:
+This tutorial is meant to show how to join a peer to an **existing** network. It presumes an orderer, that hosts the network, already exists in your cluster or on another {{site.data.keyword.blockchainfull_notm}} Platform cluster. If you don't have an existing network to join, visit the [Building a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network) to learn how to create one. The **Joining a network** tutorial takes you through the steps to create the following `Org2` blockchain components, highlighted in the blue box:
 ![Join network structure](../images/ib2-join-network.png "Join network structure")  
 *Figure 1. Join network structure*  
-Perform the steps in the **Join a network** tutorial to create the following components and complete the following actions:
+Perform the steps in the **Joining a network** tutorial to create the following components and complete the following actions:
 
 * **One peer organization** `Org2`  
   Create the Org2 Membership Services Provider (MSP) definition which defines the organization `Org2`.
@@ -51,9 +51,9 @@ Perform the steps in the **Join a network** tutorial to create the following com
 * **One Certificate Authority (CA)** `Org2 CA`
   A CA is the node that issues certificates to all organization members. We create one CA for the peer organization `Org2`.
 * **Joining one channel**
-  The tutorial describes how to join the channel that was created by the [Build a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network) tutorial.
+  The tutorial describes how to join the channel that was created by the [Building a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).
 
-Throughout this tutorial we supply **recommended values** for some of the fields in the console. This allows the names and identities to be easier to recognize in the tabs and drop-down lists. These values are not mandatory, but you will find them helpful. We provide a table of the recommended values after each task.
+Throughout this tutorial, we supply **recommended values** for some of the fields in the console. This allows the names and identities to be easier to recognize in the tabs and drop-down lists. These values are not mandatory, but you will find them helpful. We provide a table of the recommended values after each task.
 {:tip}
 
 ## Step one: Create additional organization and your entry point to your blockchain
@@ -261,7 +261,7 @@ You can the follow these steps if you are the admin of the **peer organization**
 ## Step three: Join your peer to the channel
 {: #ibp-console-join-network-join-peer-org2}
 
-We are almost done. Your peer can now be joined to an existing channel. You need to get the `channel name`, out-of-band, from the network operator who created the channel. In the **Build a network** tutorial we created a channel named `channel1`. If you are not already there, navigate to the **Channels** tab in the left navigation.
+We are almost done. Your peer can now be joined to an existing channel. You need to get the `channel name`, out-of-band, from the network operator who created the channel. In the **Building a network** tutorial we created a channel named `channel1`. If you are not already there, navigate to the **Channels** tab in the left navigation.
 
 Perform the following steps from your console:
 
@@ -273,14 +273,14 @@ Perform the following steps from your console:
 
 If you plan to leverage the Hyperledger Fabric [Private Data ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric.readthedocs.io/en/latest/private-data/private-data.html "Private data") or [Service Discovery ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric.readthedocs.io/en/latest/discovery-overview.html "Service Discovery") features, you must configure anchor peers in your organizations from the **Channels** tab. See this topic on [how to configure anchor peers for private data](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts-private-data) by using the **Channels** tab in console.
 
-You can also create a new channel once your organization is a member of the consortium. Use the steps to [create a channel](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network-create-channel) in the [Build a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).
+You can also create a new channel once your organization is a member of the consortium. Use the steps to [create a channel](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network-create-channel) in the [Building a network tutorial](/docs/services/blockchain/howto/ibp-console-build-network.html#ibp-console-build-network).
 
 ## Next steps
 {: #ibp-console-join-network-next-steps}
 
 After you have joined your peer to a channel, use the following steps to deploy a smart contract and begin submitting transactions to the blockchain:
 
-- [Deploy a smart contract on your network](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts) using the console.
+- [Deploy a smart contract on your network](/docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts) with the console.
 - After you have installed and instantiated your smart contract, you can [submit transactions using your client application](docs/services/blockchain/howto/ibp-console-smart-contracts.html#ibp-console-smart-contracts-connect-to-SDK).
 - Use [the commercial paper sample](/docs/services/blockchain/howto/ibp-console-create-app.html#ibp-console-app-commercial-paper) to deploy an example smart contract and submit transactions from sample application code.
 
