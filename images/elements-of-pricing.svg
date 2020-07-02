@@ -1,0 +1,106 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1210 673">
+  <defs>
+    <clipPath id="clip-path" transform="translate(5 5)">
+      <path class="cls-1" d="M0 164h288v499H0z"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(5 5)">
+      <path class="cls-1" d="M608 164h288v499H608z"/>
+    </clipPath>
+    <clipPath id="clip-path-3" transform="translate(5 5)">
+      <path class="cls-1" d="M304 164h288v499H304z"/>
+    </clipPath>
+    <clipPath id="clip-path-4" transform="translate(5 5)">
+      <path class="cls-1" d="M912 164h288v499H912z"/>
+    </clipPath>
+    <clipPath id="clip-path-5" transform="translate(5 5)">
+      <path class="cls-1" d="M0 60h288v104H0z"/>
+    </clipPath>
+    <clipPath id="clip-path-6" transform="translate(5 5)">
+      <path class="cls-1" d="M608 60h288v104H608z"/>
+    </clipPath>
+    <clipPath id="clip-path-7" transform="translate(5 5)">
+      <path class="cls-1" d="M304 60h288v104H304z"/>
+    </clipPath>
+    <clipPath id="clip-path-8" transform="translate(5 5)">
+      <path class="cls-1" d="M912 60h288v104H912z"/>
+    </clipPath>
+    <clipPath id="clip-path-9" transform="translate(5 5)">
+      <path class="cls-1" d="M0 0h288v48H0z"/>
+    </clipPath>
+    <clipPath id="clip-path-10" transform="translate(5 5)">
+      <path class="cls-1" d="M912 0h288v48H912z"/>
+    </clipPath>
+    <clipPath id="clip-path-11" transform="translate(5 5)">
+      <path class="cls-1" d="M304 0h592v48H304z"/>
+    </clipPath>
+    <style>
+      .cls-1{fill:none}.cls-3{fill:#c9deff}.cls-16{fill:#d5d9e0}.cls-19{font-size:24.48px;fill:#fff}.cls-19,.cls-22{font-family:IBMPlexSans-SemiBold,IBM Plex Sans;font-weight:600}.cls-20{font-size:21.6px}.cls-20,.cls-21,.cls-23{font-family:IBMPlexSans,IBM Plex Sans}.cls-21{font-size:23.76px}.cls-23{font-weight:400}
+    </style>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <path class="cls-3" d="M0 164h298v509H0z"/>
+  </g>
+  <g clip-path="url(#clip-path-2)">
+    <path class="cls-3" d="M608 164h298v509H608z"/>
+  </g>
+  <g clip-path="url(#clip-path-3)">
+    <path class="cls-3" d="M304 164h298v509H304z"/>
+  </g>
+  <g clip-path="url(#clip-path-4)">
+    <path class="cls-3" d="M912 164h298v509H912z"/>
+  </g>
+  <g clip-path="url(#clip-path-5)">
+    <path fill="#021873" d="M0 60h298v114H0z"/>
+  </g>
+  <g clip-path="url(#clip-path-6)">
+    <path fill="#0d6fff" d="M608 60h298v114H608z"/>
+  </g>
+  <g clip-path="url(#clip-path-7)">
+    <path fill="#054bda" d="M304 60h298v114H304z"/>
+  </g>
+  <g clip-path="url(#clip-path-8)">
+    <path fill="#6ba4ff" d="M912 60h298v114H912z"/>
+  </g>
+  <g clip-path="url(#clip-path-9)">
+    <path class="cls-16" d="M0 0h298v58H0z"/>
+  </g>
+  <g clip-path="url(#clip-path-10)">
+    <path class="cls-16" d="M912 0h298v58H912z"/>
+  </g>
+  <g clip-path="url(#clip-path-11)">
+    <path class="cls-16" d="M304 0h602v58H304z"/>
+  </g>
+  <text class="cls-19" transform="translate(20.75 100.43)">
+    IBM Blockchain <tspan x="0" y="36">Platform Cost</tspan>
+  </text>
+  <text class="cls-20" transform="translate(95.54 37.3)">
+    Blockchain
+  </text>
+  <text class="cls-19" transform="translate(323.75 100.43)">
+    IBM Cloud Kubernetes <tspan x="0" y="36">Service Cost</tspan>
+  </text>
+  <text class="cls-21" transform="translate(323.75 209.9)">
+    Multiple plans and tiers <tspan x="0" y="36">determine cost</tspan><tspan class="cls-22"><tspan x="0" y="99">Plans:</tspan><tspan class="cls-23" x="68.9" y="99"> Choose compute </tspan></tspan><tspan x="0" y="135">configuration based on </tspan><tspan x="0" y="171">various cluster sizes</tspan><tspan class="cls-22"><tspan x="0" y="234">Tiers:</tspan><tspan class="cls-23" x="62.37" y="234"> The more hours </tspan></tspan><tspan x="0" y="270">you use, the less you </tspan><tspan x="0" y="306">pay. per hour</tspan><tspan class="cls-22"><tspan x="0" y="369">Machine type:</tspan><tspan class="cls-23" x="154.65" y="369"> Shared, </tspan></tspan><tspan x="0" y="405">Dedicated, Bare Metal</tspan>
+  </text>
+  <text class="cls-21" transform="translate(21.71 209.9)">
+    Standard plan<tspan class="cls-22"><tspan x="0" y="63">$0.29 USD/VPC-Hr</tspan></tspan><tspan x="0" y="126">Based on number of </tspan><tspan x="0" y="162">VPC hours your </tspan><tspan x="0" y="198">instance uses </tspan><tspan x="0" y="261">1 VPC = 1 CPU</tspan>
+  </text>
+  <text transform="translate(931.71 209.9)" font-size="23.76" font-family="IBMPlexSans-SemiBold,IBM Plex Sans" font-weight="600">
+    Multi-Zone Region <tspan x="0" y="63">HA and DR</tspan><tspan x="0" y="126">Backup and Restore</tspan><tspan x="0" y="189">HSM</tspan><tspan x="0" y="252">Sysdig</tspan><tspan x="0" y="315">LogDNA</tspan>
+  </text>
+  <text class="cls-21" transform="translate(629.62 209.9)">
+    Multiple options and <tspan x="0" y="36">tiers determine cost</tspan><tspan class="cls-22"><tspan x="0" y="99">Options:</tspan><tspan class="cls-23" x="93.4" y="99"> File (default), </tspan></tspan><tspan x="0" y="135">Block, Object</tspan><tspan class="cls-22"><tspan x="0" y="198">Tiers:</tspan><tspan class="cls-23" x="62.37" y="198"> Based on </tspan></tspan><tspan x="0" y="261">IOPS/GB (read-write </tspan><tspan x="0" y="297">performance)</tspan>
+  </text>
+  <text class="cls-19" transform="translate(627.75 100.43)">
+    Storage Cost
+  </text>
+  <text class="cls-20" transform="translate(540.38 37.3)">
+    Infastructure
+  </text>
+  <text class="cls-19" transform="translate(930.75 100.43)">
+    Advanced Features<tspan x="0" y="36">(Costs vary)</tspan>
+  </text>
+  <text class="cls-20" transform="translate(963.22 37.3)">
+    Production add-ons
+  </text>
+</svg>

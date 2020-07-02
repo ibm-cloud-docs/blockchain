@@ -1,14 +1,16 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-03-05"
+  years: 2017, 2020
+lastupdated: "2019-06-18"
+
+keywords: Hyperledger Fabric, confidential channels, Membership Service Provider, Linux Foundation, SDKs, modular architecture, permissioned network
 
 subcollection: blockchain
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:codeblock: .codeblock}
 {:screen: .screen}
@@ -21,14 +23,14 @@ subcollection: blockchain
 {{site.data.keyword.blockchainfull}} network is built on the Hyperledger Fabric stack, one of the blockchain projects within the Linux Foundation's Hyperledger Project. It is a "permissioned" network where all users and components have known identities. Sign/verify logic is implemented at every communication touchpoint, and transactions are consented upon through a series of endorsement and validation checks. In this sense, it differs greatly from traditional blockchain implementations that promote anonymity and are forced to rely on cryptocurrencies and heavy compute obligations to validate transactions.
 {:shortdesc}
 
-Hyperledger Fabric offers a modular architecture to extend the scalability and performance. This topic introduces some key components in Hyperledger Fabric. For a complete introduction on Hyperledger Fabric, see [Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+Hyperledger Fabric offers a modular architecture to extend the scalability and performance. This topic introduces some key components in Hyperledger Fabric. For a complete introduction on Hyperledger Fabric, see [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
 
 ## Peers
 {: #hyperledger-fabric-peer}
 
-At a physical level, a blockchain network is comprised primarily of peer nodes (or, simply, peers). Peers are the fundamental elements of the network because they host ledgers and smart contracts (which are contained in ["chaincode" ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric.readthedocs.io/en/release-1.4/developapps/chaincodenamespace.html "Chaincode namespace" ). More accurately, the peer hosts **instances** of the ledger, and **instances** of smart contracts. Because smart contracts and ledgers are used to encapsulate the shared processes and shared information in a network, respectively, these aspects of a peer make them a good starting point to understand what a Fabric network actually does.
+At a physical level, a blockchain network is comprised primarily of peer nodes (or, simply, peers). Peers are the fundamental elements of the network because they host ledgers and smart contracts (which are contained in ["chaincode"](https://hyperledger-fabric.readthedocs.io/en/release-1.4/developapps/chaincodenamespace.html){: external}. More accurately, the peer hosts **instances** of the ledger, and **instances** of smart contracts. Because smart contracts and ledgers are used to encapsulate the shared processes and shared information in a network, respectively, these aspects of a peer make them a good starting point to understand what a Fabric network actually does.
 
-To learn more about peers specifically, check out [this document focusing just on peers ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric.readthedocs.io/en/release-1.4/peers/peers.html) from the Fabric community documentation.
+To learn more about peers specifically, check out [this document focusing just on peers](https://hyperledger-fabric.readthedocs.io/en/release-1.4/peers/peers.html){: external} from the Fabric community documentation.
 
 ## Certificate Authority
 {: #hyperledger-fabric-certificate-authority}
@@ -40,14 +42,14 @@ As a platform for **permissioned** blockchain networks, Hyperledger Fabric inclu
 
 This certificate-based control over network membership and actions enables members to restrict access to private and confidential channels, applications, and data, by specific user identities.
 
-For more information about the Hyperledger Fabric Certificate Authority component, see [Fabric CA User’s Guide ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/){:new_window}.
+For more information about the Hyperledger Fabric Certificate Authority component, see [Fabric CA User’s Guide](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/){: external}.
 
 ## Membership Service Provider
 {: #hyperledger-fabric-membership-service-provider}
 
 Hyperledger Fabric includes a **Membership Service Provider (MSP)** component to offer an abstraction of all cryptographic mechanisms and protocols behind issuing and validating certificates, and user authentication. The MSP is installed on each channel peer to ensure that transaction requests that are issued to the peer originate from an authenticated and authorized user identity.
 
-For more information about the Hyperledger Fabric Membership Services Provider component, see [Membership ![External link icon](../images/external_link.svg "External link icon")](https://hyperledger-fabric.readthedocs.io/en/release-1.4/membership/membership.html){:new_window} in the [Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+For more information about the Hyperledger Fabric Membership Services Provider component, see [Membership](https://hyperledger-fabric.readthedocs.io/en/release-1.4/membership/membership.html){: external} in the [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
 
 ## Ordering service
 {: #hyperledger-fabric-ordering-service}
@@ -56,11 +58,11 @@ In other distributed blockchains, such as Ethereum and Bitcoin, there is no cent
 
 Orderers are key components in a network because they perform a few essential functions:
 
-- They literally **order** the blocks of transactions that are sent to the peers to be written to their ledgers, and this process is called "ordering". If these transactions were instead bundled and ordered at the peers themselves, it would increase the possibility of one peer writing a transaction to its ledger where another peer did not, creating a state fork.
-- They maintain the **orderer system channel**, the place where the **consortium**, the list of peer organizations permitted to create channels, resides.
-- They perform important identity validation checks. For example, if an organization tries to create a channel when it is not a member of the orderer's consortium, the request will be denied. Orderers also validate against behaviors in transaction channels, such as the permissions for changing a channel configuration.
+- It literally **orders** the blocks of transactions that are sent to the peers to be written to their ledgers, and this process is called "ordering". If these transactions were instead bundled and ordered at the peers themselves, it would increase the possibility of one peer writing a transaction to its ledger where another peer did not, creating a state fork.
+- It maintains the **orderer system channel**, the place where the **consortium**, the list of peer organizations permitted to create channels, resides.
+- It performs important identity validation checks. For example, if an organization tries to create a channel when it is not a member of the orderer's consortium, the request will be denied. Orderers also validate against behaviors in transaction channels, such as the permissions for changing a channel configuration.
 
-Hyperledger Fabric currently supports both a SOLO (one ordering node) and Kafka-based ordering service implementations. For more information about Hyperledger Fabric ordering service, see [Bringing up a Kafka-based Ordering Service ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/kafka.html){:new_window} in  [Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+Hyperledger Fabric currently uses an implementation of the Raft protocol for its ordering service. For more information about the ordering service, see [The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/release-1.4/orderer/ordering_service.html){: external}.
 
 ## The Fabric SDKs
 {: #hyperledger-fabric-fabric-sdks}
@@ -80,7 +82,7 @@ Hyperledger Fabric delivers both a Node.js SDK and Java SDK, and provides the fo
 * Query the ledger for specific transactions, blocks or keys
 * Monitor events on a channel (for example, successful commitment of a transaction)
 
-For more information about Fabric SDKs, see [Hyperledger Fabric SDKs ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/fabric-sdks.html){:new_window} in [Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+For more information about Fabric SDKs, see [Hyperledger Fabric SDKs](https://hyperledger-fabric.readthedocs.io/en/release-1.4/fabric-sdks.html){: external} in [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
 
 ## Transaction flow
 {: #hyperledger-fabric-transaction-flow}
@@ -88,8 +90,7 @@ For more information about Fabric SDKs, see [Hyperledger Fabric SDKs ![External 
 To ensure data consistency and integrity, Hyperledger Fabric implements multiple checkpoints throughout the transaction flow, including client authentication, endorsement, ordering, and commitment to the ledger.
 
 **Figure 1** depicts the transaction flow on a Hyperledger Fabric blockchain network:
-![Transaction Flow](../images/v10_txflow.png "Transaction flow on a Hyperledger Fabric network")
-*Figure 1. Transaction flow on a Hyperledger Fabric network*
+![Transaction Flow](../images/v10_txflow.svg "Transaction flow on a Hyperledger Fabric network"){: caption="Figure 1. Transaction flow on a Hyperledger Fabric network" caption-side="bottom"}
 
 On a Hyperledger Fabric network, the flow of data for queries and transactions is initiated by a client-side application by submitting a transaction request to a peer on a channel. The initial flow of data across the network is common to both queries and transactions:
 
@@ -99,10 +100,10 @@ On a Hyperledger Fabric network, the flow of data for queries and transactions i
 	At this point in the transaction flow, the process diverges for queries and transactions. If the proposal called a query function in the chaincode, the application returns the data to the client. If the proposal called a function in the chaincode to update the ledger, the application continues with the following steps:
 3. The application forwards the transaction, which includes the read/write set and endorsements, to the **ordering service**.
 4. The transaction is then relayed to the ordering service. All channel peers validate each transaction in the block by applying the chaincode-specific Validation Policy and running a Concurrency Control Version Check.
-	* Any transactions that fails the validation process are marked as invalid in the block, and the block is appended to the channel's ledger.
+	* Any transaction that fail the validation process is marked as invalid in the block, and the block is appended to the channel's ledger.
 	* All valid transactions update the state database accordingly with the modified key/value pairs.
 
-The **gossip data dissemination protocol** continually broadcasts ledger data across the channel to ensure synchronized ledgers among peers. For more information, see [Gossip data dissemination protocol ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/gossip.html){:new_window} in
-[Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+The **gossip data dissemination protocol** continually broadcasts ledger data across the channel to ensure synchronized ledgers among peers. For more information, see [Gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/release-1.4/gossip.html){: external} in
+[Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
 
-For a step-by-step introduction on transaction flow, see [Transaction Flow ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/txflow.html){:new_window} in [Hyperledger Fabric documentation ![External link icon](../images/external_link.svg "External link icon")](http://hyperledger-fabric.readthedocs.io/en/release-1.4/){:new_window}.
+For a step-by-step introduction on transaction flow, see [Transaction Flow](https://hyperledger-fabric.readthedocs.io/en/release-1.4/txflow.html){: external} in [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.

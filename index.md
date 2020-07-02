@@ -1,80 +1,63 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-03-05"
+  years: 2017, 2020
+lastupdated: "2020-06-29"
+
+keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
 subcollection: blockchain
 
 ---
 
-{:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:note: .note}
 {:important: .important}
 {:tip: .tip}
+{:term: .term}
 {:pre: .pre}
+{:external: target="_blank" .external}
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform
 {: #get-started-ibp}
 
-{{site.data.keyword.blockchainfull}} Platform provides a managed and full stack blockchain-as-a-service (BaaS) offering that allows you to deploy blockchain components in environments of your choice. The environment can be {{site.data.keyword.cloud_notm}}, on-premises through {{site.data.keyword.cloud_notm}} Private, and third-party clouds, such as Amazon Web Services (AWS). In this tutorial, we'll take you through the general process to set up a basic blockchain network with {{site.data.keyword.blockchainfull_notm}} Platform.
+{{site.data.keyword.blockchainfull}} Platform provides a managed and full stack blockchain-as-a-service (BaaS) offering that allows you to deploy blockchain components in environments of your choice. Clients can build, operate, and grow their blockchain networks with an offering that can be used from development through production.
 {:shortdesc}
 
-**Important:** Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, read the technical and support information in the [Disclaimer](/docs/services/blockchain/needtoknow.html#disclaimer) section.
-
-
-## Before you begin
-{: #get-started-ibp-prereqs}
-
-{{site.data.keyword.blockchainfull_notm}} Platform provides different offerings to help all types of users get started on their blockchain journey and move their applications into production. You need to decide your environment and the offering that you will use. Figure 1 lists the capabilities, target audiences, pricing, and cloud platforms for different offerings. For more information about each offering, click the offering in the following table.
-
-| **Offerings** | **What's included** | **Billing policy** | **Cloud platform** |
-| ------------------------- |-----------|-----------|-----------|-----------|
-| [**Starter Plan**](/docs/services/blockchain/starter_plan.html#starter-plan-about) | {{site.data.keyword.IBM_notm}}-managed network with basic service levels, development, and testing environment | Monthly subscription | {{site.data.keyword.cloud_notm}} |
-| [**Enterprise Plan**](/docs/services/blockchain/enterprise_plan.html#enterprise-plan-about) | {{site.data.keyword.IBM_notm}}-managed network with advanced service levels and enterprise production ready environment | Monthly subscription | {{site.data.keyword.cloud_notm}} |
-| [**{{site.data.keyword.blockchainfull_notm}} Platform free 2.0 beta**](/docs/services/blockchain/howto/ibp-console.html#ibp-console-overview) | {{site.data.keyword.blockchainfull_notm}} Platform console to deploy and manage blockchain components in your {{site.data.keyword.cloud_notm}} Kubernetes cluster | Free for Beta | {{site.data.keyword.cloud_notm}} |
-| [**{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} Private**](/docs/services/blockchain/ibp-for-icp-about.html#ibp-icp-about) | Deployable CA, Orderer, and Peer Helm charts | [VPC pricing](/docs/services/blockchain/ibp-for-icp-about.html#ibp-icp-about-pricing) and Free Community Edition | {{site.data.keyword.cloud_notm}} Private |
-| [**{{site.data.keyword.blockchainfull_notm}} Platform for AWS**](/docs/services/blockchain/howto/remote_peer.html#remote-peer-aws-about) | AWS Quick Start Template to deploy remote peers that are outside {{site.data.keyword.cloud_notm}} | Free | AWS |
-
-*Figure 1. {{site.data.keyword.blockchainfull_notm}} Platform offerings*
-
-Do not use Starter Plan or the free 2.0 beta for production usage. It is a development and testing environment, and is not suitable for production workloads.
+Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, read the technical and support information in the [Disclaimer](/docs/blockchain?topic=blockchain-disclaimer#disclaimer) section.
 {: important}
 
-## Step one: Get an offering
-{: #get-started-ibp-step1}
+## Which {{site.data.keyword.blockchainfull_notm}} Platform offering is right for your business?
+{: #get-started-console-ocp-which-ibp}
 
-Ensure that you have the cloud account or PPA license to get an {{site.data.keyword.blockchainfull_notm}} Platform offering.
+{{site.data.keyword.blockchainfull_notm}} Platform provides different offerings that allow you to deploy your network in the environment of your choice. You need to decide if you want to deploy the {{site.data.keyword.blockchainfull_notm}} Platform 2.5 or if you want to use the {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}.
 
-* **Starter Plan**, **Enterprise Plan**, and **{{site.data.keyword.blockchainfull_notm}} Platform free 2.0 beta**
+| |{{site.data.keyword.blockchainfull_notm}} Platform for anywhere (2.5) | {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} |
+|----|---|----|
+| Where do you want to deploy the platform?|  Multiple Kubernetes distributions on a private, public, or hybrid multicloud <br><br> See [Supported Platforms](/docs/blockchain-sw-25?topic=blockchain-sw-25-console-ocp-about#console-ocp-about-prerequisites) | A Kubernetes cluster on {{site.data.keyword.cloud_notm}} <br><br> See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) |  
+| What are my deployment options? | <ul><li> Full platform </li> <li> [Only {{site.data.keyword.blockchainfull_notm}} images](#get-started-ibp-images) </li> </ul>| <ul><li> Full platform </li> </ul>
+| How is it billed? |Contact us for [pricing](/docs/blockchain-sw-25?topic=blockchain-sw-25-ibp-sw-pricing) |[$0.29 USD per allocated CPU hour](/docs/blockchain?topic=blockchain-ibp-saas-pricing)  |
+| Can I connect with Peers in other clouds? |  Yes| Yes |
+| Can my data center be [on-premises](#x4561212){: term} and behind a firewall? | Yes| No |
+| Can I use a console UI to deploy and manage my blockchain components? | Yes | Yes|
+| Are APIs available for node management? | Yes | Yes|
+| Does the product integrate with the {{site.data.keyword.blockchainfull_notm}} Platform VSCode extension to develop and test my smart contracts?| Yes | Yes|
+| I am an experienced Fabric customer. Are peer, CA, orderer, and smart contract images available and supported? | Yes | No |
+| Where can I learn more? |See [About {{site.data.keyword.blockchainfull_notm}} Platform 2.5](/docs/blockchain-sw-25?topic=blockchain-sw-25-console-ocp-about#console-ocp-about-offers)  | See [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities) |
+{: caption="Table 1. Which offering is right for your business?" caption-side="bottom"}
 
-  These offerings are available in {{site.data.keyword.cloud_notm}} and you can locate them in the [Catalog dashboard ![External link icon](images/external_link.svg "External link icon")](https://cloud.ibm.com/catalog "Catalog") of {{site.data.keyword.cloud_notm}}.
+### Developer Tools
 
-* **{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} Private**
+- [**{{site.data.keyword.blockchainfull_notm}} Platform Developer Tools**](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode)
+  Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally or run it from the cloud by using Red Hat CodeReady Workspaces.
 
-  This offering is delivered as a deployable Helm chart and has both paid edition and free Community edition. You can download the Enterprise Edition from [Passport Advantage Online ![External link icon](images/external_link.svg "External link icon")](https://www.ibm.com/software/passportadvantage/pao_customer.html) or download the free Community edition from [GitHub ![External link icon](images/external_link.svg "External link icon")](https://github.com/IBM/charts/blob/master/repo/stable/ibm-blockchain-platform-dev-1.0.0.tgz).
+### {{site.data.keyword.blockchainfull_notm}} images
+{: #get-started-ibp-images}
 
-* **{{site.data.keyword.blockchainfull_notm}} Platform for AWS**
+- Your purchase of {{site.data.keyword.blockchainfull_notm}} Platform 2.5 includes an entitlement to images for [peer](/docs/blockchain?topic=blockchain-glossary#glossary-peer), [Certificate Authority](#x2016383){: term}, [ordering service](#x9826021){: term}, and [smart contract](/docs/blockchain?topic=blockchain-glossary#glossary-smart-contracts) containers that are signed by IBM. The images are based on the open source Hyperledger Fabric code base and contain a number of enhancements for stability and serviceability. The images are bundled with support from IBM. The {{site.data.keyword.blockchainfull_notm}} images do not include the {{site.data.keyword.blockchainfull_notm}} management console or operator. This offering is intended for experienced Fabric users with existing Fabric deployments. For more information, see [{{site.data.keyword.blockchainfull_notm}} images for Hyperledger  Fabric](/docs/blockchain-sw-25?topic=blockchain-sw-25-blockchain-images#blockchain-images).
 
-  This offering is available in AWS and you can deploy a blockchain peer in AWS by using the [Quick Start template ![External link icon](images/external_link.svg "External link icon")](https://aws.amazon.com/quickstart/architecture/ibm-blockchain-platform/).
-
-## Step two: Deploy {{site.data.keyword.blockchainfull_notm}} Platform
-{: #get-started-ibp-step2}
-
-* **Starter Plan**, **Enterprise Plan**, and **{{site.data.keyword.blockchainfull_notm}} Platform free 2.0 beta**
-
-  Log in to {{site.data.keyword.cloud_notm}} and create a service instance with the offering. If you use Starter Plan, you can get a blockchain network with default configuration immediately after you [create the service instance](/docs/services/blockchain/get_start_starter_plan.html#getting-started-with-starter-plan). If you use Enterprise Plan or {{site.data.keyword.blockchainfull_notm}} Platform free 2.0 beta, you need to follow the wizard to complete initial configuration for your network. For more information, see [Creating an Enterprise Plan network](/docs/services/blockchain/get_start.html#getting-started-with-enterprise-plan-create-network) or [Deploying {{site.data.keyword.blockchainfull_notm}} Platform on {{site.data.keyword.cloud_notm}} Kubernetes Service](/docs/services/blockchain/howto/ibp-v2-deploy-iks.html#ibp-v2-deploy-iks).
-
-* **{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} Private**
-
-  Before you deploy a network, you need to [import the Helm chart to your {{site.data.keyword.cloud_notm}} Private](/docs/services/blockchain/howto/helm_install_icp.html#helm-install). Then, you can [configure and install {{site.data.keyword.blockchainfull_notm}} Platform](/docs/services/blockchain/howto/ibp-console-deploy-icp.html#ibp-console-deploy-icp).
-
-* **{{site.data.keyword.blockchainfull_notm}} Platform for AWS**
-
-  This offering is available in AWS and you can deploy a blockchain peer in AWS by using the [Quick Start template ![External link icon](images/external_link.svg "External link icon")](https://aws.amazon.com/quickstart/architecture/ibm-blockchain-platform/).
 
 ## Next steps
 {: #get-started-ibp-next-steps}
@@ -84,4 +67,4 @@ After you deploy {{site.data.keyword.blockchainfull_notm}} Platform in the envir
 ## Getting support
 {: #get-started-ibp-getting-support}
 
-{{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/services/blockchain/ibmblockchain_support.html#blockchain-support).
+{{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).

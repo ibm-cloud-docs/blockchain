@@ -1,107 +1,121 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="blockchain" audience="service" arm="339" href="/docs/services/blockchain/index.html" path="services/blockchain"}
-IBM Blockchain Platform
+{: .toc subcollection="blockchain" category="blockchain" audience="service" href="/docs/blockchain/index.html" product-page="https://www.ibm.com/cloud/blockchain-platform" console-page="/developer/blockchain/dashboard" path="blockchain"}
+IBM Blockchain Platform for IBM Cloud
 
 	{: .navgroup id="learn"}
 	{: .topicgroup}
-	Getting started tutorials
+	Getting started
 		index.md
-		get_start_starter_plan.md
-		get_start.md
 		howto/ibp-v2-deploy-iks.md
-		ibp_for_icp_deployment_guide.md
-		howto/remote_peer_aws.md
+
+	howto/ibp-console.md
+	whats_new.md
+	blockchain_component_overview.md
 
 	{: .topicgroup}
-	About IBM Blockchain Platform
-		starter_plan.md
-		enterprise_plan.md
-		howto/ibp-console.md
-		ibp-for-icp-about.md
-		howto/remote_peer.md
+	Getting started tutorials
+		howto/ibp-console-build-network.md
+		howto/ibp-console-join-network.md
+		howto/ibp-console-smart-contracts.md
+		howto/ibp-console-create-app.md
+		reference/videos.md
 
-	whats_new.md
+	{: .topicgroup}
+	Pricing
+		howto/pricing-saas.md
+		reference/detailed-pricing.md
+
+	security.md
+
+	{: .topicgroup}
+	High availability
+		ibp-console-ha.md
+		howto/ibp-console-ic-ha-howto.md
+		howto/ibp-console-ha-ca.md
+
+	data-residency.md
 	howto/ibp-v2-faq.md
-	blockchain_component_overview.md
 	needtoknow.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
 	{: .topicgroup}
+	IBM Blockchain Platform console
+		howto/ibp-console-manage.md
+		howto/ibp-console-advanced-deployment.md
+		howto/ibp-console-advanced-channel.md
+		howto/ibp-console-add-remove-raft.md
+		howto/ibp-console-import-nodes.md
+		howto/ibp-console-identities.md
+		howto/ibp-console-organizations.md
+		howto/ibp-console-govern-components.md
+		howto/ibp-v2-operations-service.md
+
+	{: .topicgroup}
 	Developing smart contracts and applications
-		howto/develop_chaincode.md
 		vscode-extension.md
 		best_practices.md
 
+	{: .topicgroup}
+	Advanced tutorials
+		howto/ibp-console-int-ca.md
+		reference/hsm-gemalto.md
+
+		{: .topicgroup}
+		Using Ansible Playbooks
+			howto/ansible.md
+			howto/ansible-build-network.md
 
 	{: .topicgroup}
-	Starter and Enterprise Plan
+	Monitoring your network
+		reference/logdna.md
+		reference/sysdig.md
+		[IBM Blockchain Platform Monitoring with Prometheus](https://developer.ibm.com/technologies/blockchain/tutorials/using-prometheus-metrics-to-monitor-your-ibm-blockchain-platform-network)
+
+	howto/ibp-v2-apis.md
+
+
+	{: .topicgroup}
+	Upgrading your Enterprise Plan network
+		enterprise_upgrade.md
+		enterprise_app_upgrade.md
+		enterprise_upgrade_tool.md
+		orderer_mapping.md
+
+	{: .topicgroup}
+	Enterprise Plan
+		get_start.md
+		enterprise_plan.md
 		v10_dashboard.md
-		develop_starter_enterprise.md
+		develop_enterprise.md
 		howto/prebuilt_samples.md
 		howto/create_channel.md
 		howto/install_instantiate_chaincode.md
-		v10_application.md
 		howto/swagger_apis.md
 		howto/create_join_network_with_apis.md
 		howto/monitor_network.md
 		certificates.md
-		howto/migrate_sp_ep.md
 		howto/pricing.md
 		howto/paying_mode.md
-
-	{: .topicgroup}
-	IBM Blockchain Platform 2.0
-		howto/ibp-console-build-network.md
-		howto/ibp-console-join-network.md
-		howto/ibp-console-smart-contracts.md
-		howto/ibp-console-create-app.md
-		howto/ibp-console-import-nodes.md
-		howto/ibp-console-identities.md
-		howto/ibp-console-organizations.md
-		howto/ibp-console-manage.md
-		howto/ibp-v2-troubleshooting.md
-
-	{: .topicgroup}
-	IBM Blockchain Platform on IBM Cloud Private
-		ibp_for_icp_deployment_guide.md
-		ICP_setup.md
-		howto/helm_install_icp.md
-
-	{: .topicgroup}
-	-- Certificate Authorities on IBM Cloud Private
-		howto/CA_deploy_icp.md
-		howto/CA_operate.md
-
-	{: .topicgroup}
-	-- Ordering services on IBM Cloud Private
-		howto/orderer_deploy_icp.md
-		howto/orderer_operate.md
-
-	{: .topicgroup}
-	-- Peers on IBM Cloud Private
-		howto/peer_deploy_icp.md
-		howto/peer_operate_icp.md
-		howto/peer_deploy_ibp.md
-		howto/peer_operate_ibp.md
-
-	{: .topicgroup}
-	IBM Blockchain Platform for Amazon Web Services
-		howto/remote_peer_aws.md
-		howto/remote_peer_operate_aws.md
+		knownissues.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
-	glossary.md
-	reference/ibp_regions.md
-	reference/videos.md
+	[API reference](https://cloud.ibm.com/apidocs/blockchain)
+
+
+	[What is Blockchain Technology?](https://www.ibm.com/blockchain/what-is-blockchain)
 	reference/v10_fabric.md
 	reference/k8s.md
+	reference/ibp_regions.md
+	[IBM Cloud storage](https://cloud.ibm.com/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks#ibp-console-storage)
+	glossary.md
 	{: .navgroup-end}
 
 	{: .navgroup id="help"}
+	release-notes.md
+	howto/ibp-v2-troubleshooting.md
 	ibmblockchain_support.md
-	knownissues.md
 	{: .navgroup-end}

@@ -1,0 +1,261 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1046.86" height="1000">
+  <path d="M348.8 929.94l-281.91-1a11.81 11.81 0 0 1-11.54-12V86a11.81 11.81 0 0 1 11.54-12l281.91 1a11.82 11.82 0 0 1 11.55 12v830.8a11.84 11.84 0 0 1-11.55 12.14zM978.38 929.94l-281.91-1a11.81 11.81 0 0 1-11.54-12V86a11.81 11.81 0 0 1 11.54-12l281.91 1a11.82 11.82 0 0 1 11.55 12v830.8a11.84 11.84 0 0 1-11.55 12.14z" fill="#010f5e" fill-rule="evenodd"/>
+  <path fill="none" d="M731.15 90.79h214.6v34h-214.6z"/>
+  <text transform="translate(799.18 108.64)" font-size="24.07" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Region 3
+  </text>
+  <path d="M663.59 929.94l-281.91-1a11.81 11.81 0 0 1-11.54-12V86a11.81 11.81 0 0 1 11.54-12l281.91 1a11.82 11.82 0 0 1 11.55 12v830.8a11.84 11.84 0 0 1-11.55 12.14z" fill="#010f5e" fill-rule="evenodd"/>
+  <path fill="none" d="M416.36 90.79h214.6v34h-214.6z"/>
+  <text transform="translate(484.39 108.64)" font-size="24.07" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Region 2
+  </text>
+  <path d="M655.59 908.14H388.83a11.85 11.85 0 0 1-11.62-12v-752.6a11.85 11.85 0 0 1 11.62-12h266.76a11.85 11.85 0 0 1 11.62 12v752.6a11.85 11.85 0 0 1-11.62 12zM339.89 908.14H73a11.85 11.85 0 0 1-11.62-12v-752.6a11.85 11.85 0 0 1 11.62-12h266.8a11.85 11.85 0 0 1 11.61 12v752.6a11.7 11.7 0 0 1-11.52 12zM970.05 908.14H703.28a11.85 11.85 0 0 1-11.62-12v-752.6a11.85 11.85 0 0 1 11.62-12h266.77a11.84 11.84 0 0 1 11.61 12v752.6a11.84 11.84 0 0 1-11.61 12z" fill="#fff" fill-rule="evenodd"/>
+  <path d="M956.23 881l-237.13 1.42a12 12 0 0 1-12-12l1.17-712.74a12 12 0 0 1 12-12l237.13-1.42a12 12 0 0 1 12 12l-1.17 712.85a12 12 0 0 1-12 11.89z" fill="#fff" stroke="#08caeb" stroke-dasharray="8" fill-rule="evenodd"/>
+  <path d="M943.57 862.59l-211.81.13a12 12 0 0 1-12-12V292.9a12 12 0 0 1 12-12l211.81-.14a12 12 0 0 1 12 12v557.83a12 12 0 0 1-12 12z" fill="#fff" stroke="#6182bb" fill-rule="evenodd"/>
+  <path fill="none" d="M722.48 308.05h230.4v23.3h-230.4z"/>
+  <text transform="translate(771.53 325.85)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    <tspan letter-spacing="-.02em">W</tspan><tspan x="21.09" y="0">or</tspan><tspan x="43.4" y="0" letter-spacing="-.02em">k</tspan><tspan x="55.68" y="0">er </tspan><tspan x="83.41" y="0" letter-spacing="-.02em">P</tspan><tspan x="97.51" y="0">ool</tspan>
+  </text>
+  <text transform="translate(765.85 188)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Single Clu<tspan x="107" y="0" letter-spacing="-.01em">s</tspan><tspan x="118.55" y="0" letter-spacing="0em">t</tspan><tspan x="126.91" y="0">er</tspan>
+  </text>
+  <text transform="translate(781.09 220.69)" font-size="18" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    + anti-affinity
+  </text>
+  <path d="M636.42 881l-237.13 1.41a12 12 0 0 1-12-12l1.16-712.74a12 12 0 0 1 12-12l237.14-1.42a12 12 0 0 1 12 12l-1.17 712.85a12 12 0 0 1-12 11.9z" fill="#fff" stroke="#08caeb" stroke-dasharray="8" fill-rule="evenodd"/>
+  <path d="M623.76 862.59l-211.76.13a12 12 0 0 1-12-12V292.9a12 12 0 0 1 12-12l211.81-.14a12 12 0 0 1 12 12v557.83a12 12 0 0 1-12.05 12z" fill="#fff" stroke="#6182bb" fill-rule="evenodd"/>
+  <path fill="none" d="M402.66 308.05h230.4v23.3h-230.4z"/>
+  <text transform="translate(451.72 325.85)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    <tspan letter-spacing="-.02em">W</tspan><tspan x="21.09" y="0">or</tspan><tspan x="43.4" y="0" letter-spacing="-.02em">k</tspan><tspan x="55.68" y="0">er </tspan><tspan x="83.41" y="0" letter-spacing="-.02em">P</tspan><tspan x="97.51" y="0">ool</tspan>
+  </text>
+  <text transform="translate(446.04 188)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Single Cluster
+  </text>
+  <text transform="translate(461.27 220.69)" font-size="18" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    + anti-affinity
+  </text>
+  <path d="M325 881l-237.15 1.42a12 12 0 0 1-12-12L77 157.68a12 12 0 0 1 12-12l237.14-1.42a12 12 0 0 1 12 12L337 869.11A12 12 0 0 1 325 881z" fill="#fff" stroke="#08caeb" stroke-dasharray="8" fill-rule="evenodd"/>
+  <path d="M312.32 862.59l-211.81.13a12 12 0 0 1-12-12V292.9a12 12 0 0 1 12-12l211.81-.14a12 12 0 0 1 12 12v557.83a12 12 0 0 1-12 12z" fill="#fff" stroke="#6182bb" fill-rule="evenodd"/>
+  <path fill="none" d="M91.22 308.05h230.4v23.3H91.22z"/>
+  <text transform="translate(140.27 325.85)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Pool
+  </text>
+  <path fill="none" d="M109.36 148.44h196.9v34h-196.9z"/>
+  <text transform="translate(134.59 188)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Single Cluster
+  </text>
+  <path fill="none" d="M101.57 90.79h214.6v34h-214.6z"/>
+  <text transform="translate(169.6 108.64)" font-size="24.07" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Region 1
+  </text>
+  <ellipse cx="43.96" cy="74.04" rx="19.9" ry="20.5" fill="#08caeb"/>
+  <path d="M278.78 511.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V500a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="#0039c8" d="M108.08 392.04h166.5v23.3h-166.5z"/>
+  <text transform="translate(132.14 404.85)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path d="M278.78 683.44h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12v120.6a12 12 0 0 1-12 11.9z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="none" d="M108.08 563.54h166.5v23.3h-166.5z"/>
+  <text transform="translate(132.14 576.36)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path d="M278.78 854.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V843a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="none" d="M108.08 735.04h166.5v23.3h-166.5z"/>
+  <text transform="translate(132.14 747.88)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path d="M602.06 511.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V500a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="none" d="M431.36 392.04h166.5v23.3h-166.5z"/>
+  <text transform="translate(455.39 404.85)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path d="M602.06 683.44h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12v120.6a12 12 0 0 1-12 11.9z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="none" d="M431.36 563.54h166.5v23.3h-166.5z"/>
+  <text transform="translate(455.39 576.36)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path d="M602.06 854.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V843a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
+  <path fill="none" d="M431.36 735.04h166.5v23.3h-166.5z"/>
+  <text transform="translate(455.39 747.88)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path fill="none" d="M733.16 151.24h196.9v34h-196.9z"/>
+  <path d="M938.8 520.11H736.56c-7.63 0-13.88-6-13.88-13.28V373.38c0-7.3 6.25-13.27 13.88-13.27H938.8c7.64 0 13.88 6 13.88 13.27v133.45c0 7.3-6.24 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(781.03 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 1
+  </text>
+  <path d="M307.39 520.11H105.14c-7.63 0-13.88-6-13.88-13.28V373.38c0-7.3 6.25-13.27 13.88-13.27h202.25c7.63 0 13.87 6 13.87 13.27v133.45c0 7.3-6.26 13.28-13.87 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(149.61 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 1
+  </text>
+  <path d="M616.48 520.11H414.23c-7.63 0-13.87-6-13.87-13.28V373.38c0-7.3 6.24-13.27 13.87-13.27h202.25c7.63 0 13.88 6 13.88 13.27v133.45c0 7.3-6.25 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(458.71 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 1
+  </text>
+  <path d="M938.8 688.38H736.56c-7.63 0-13.88-6-13.88-13.27V541.66c0-7.3 6.25-13.28 13.88-13.28H938.8c7.64 0 13.88 6 13.88 13.28v133.45c0 7.3-6.24 13.27-13.88 13.27z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(781.03 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 2
+  </text>
+  <path d="M307.39 688.38H105.14c-7.63 0-13.88-6-13.88-13.27V541.66c0-7.3 6.25-13.28 13.88-13.28h202.25c7.63 0 13.87 6 13.87 13.28v133.45c0 7.3-6.26 13.27-13.87 13.27z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(149.61 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 2
+  </text>
+  <path d="M616.48 688.38H414.23c-7.63 0-13.87-6-13.87-13.27V541.66c0-7.3 6.24-13.28 13.87-13.28h202.25c7.63 0 13.88 6 13.88 13.28v133.45c0 7.3-6.25 13.27-13.88 13.27z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(458.71 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 2
+  </text>
+  <path d="M938.8 856.66H736.56c-7.63 0-13.88-6-13.88-13.28V709.94c0-7.3 6.25-13.28 13.88-13.28H938.8c7.64 0 13.88 6 13.88 13.28v133.44c0 7.31-6.24 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(781.03 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 3
+  </text>
+  <path d="M307.39 856.66H105.14c-7.63 0-13.88-6-13.88-13.28V709.94c0-7.3 6.25-13.28 13.88-13.28h202.25c7.63 0 13.87 6 13.87 13.28v133.44c0 7.31-6.26 13.28-13.87 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(149.61 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 3
+  </text>
+  <path d="M616.48 856.66H414.23c-7.63 0-13.87-6-13.87-13.28V709.94c0-7.3 6.24-13.28 13.87-13.28h202.25c7.63 0 13.88 6 13.88 13.28v133.44c0 7.31-6.25 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
+  <text transform="translate(458.71 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Worker Node 3
+  </text>
+  <path fill="none" d="M729.36 392.04h166.5v23.3h-166.5zM729.36 563.54h166.5v23.3h-166.5z"/>
+  <text transform="translate(38.35 81.69)" font-size="21.66" font-family="Helvetica" style="isolation:isolate">
+    4
+  </text>
+  <text transform="translate(149.83 220.69)" font-size="18" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    + anti-affinity
+  </text>
+  <path d="M230.49 466.23H181.7c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c0 5.28-1.85 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(183.78 457.92)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    (Raft)
+  </text>
+  <text transform="translate(183.78 428.91)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Ordering<tspan x="0" y="12">Node 1</tspan>
+  </text>
+  <path d="M148.8 613.42H100c-2.26 0-4.11-4.32-4.11-9.6V573c0-5.28 1.85-9.6 4.11-9.6h48.8c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.3-1.85 9.62-4.11 9.62z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(102.1 591.04)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(102.1 578.62)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 2
+  </text>
+  <path d="M149.64 466.23h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(102.94 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(102.94 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 1
+  </text>
+  <path d="M458.74 802H410c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c-.05 5.28-1.89 9.6-4.15 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(412.03 779.42)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(412.03 767)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 4
+  </text>
+  <path d="M309.88 613.42h-48.79c-2.26 0-4.11-4.32-4.11-9.6V573c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c.02 5.3-1.84 9.62-4.1 9.62z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(263.17 605.12)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    (Raft)
+  </text>
+  <text transform="translate(263.17 576.1)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Ordering<tspan x="0" y="12">Node 3</tspan>
+  </text>
+  <path d="M230.49 613.42H181.7c-2.26 0-4.11-4.32-4.11-9.6V573c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c0 5.3-1.85 9.62-4.1 9.62z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(183.78 576.1)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Ordering<tspan x="0" y="12">Node 2</tspan>
+  </text>
+  <text transform="translate(182.11 605.58)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    (Raft)
+  </text>
+  <path d="M620.15 466.23h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(573.45 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Peers
+  </text>
+  <text transform="translate(573.45 460.39)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+    R1
+  </text>
+  <text transform="translate(573.45 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    CA 1
+  </text>
+  <path d="M942.76 466.23H894c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c-.03 5.28-1.89 9.6-4.13 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(896.05 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
+  </text>
+  <text transform="translate(896.05 460.39)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+    R1
+  </text>
+  <text transform="translate(896.05 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    CA 1
+  </text>
+  <path d="M309.88 466.23h-48.79c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c.02 5.28-1.84 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(263.17 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
+  </text>
+  <text transform="translate(263.17 460.39)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+    R1
+  </text>
+  <text transform="translate(263.17 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    CA 1
+  </text>
+  <g opacity=".5">
+    <path d="M230.29 841.45h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+    <text transform="translate(183.59 818.87)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+      <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
+    </text>
+    <text transform="translate(183.59 835.61)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+      R2
+    </text>
+    <text transform="translate(183.59 806.44)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+      CA 1
+    </text>
+  </g>
+  <g opacity=".5">
+    <path d="M309.88 841.45h-48.79c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c.02 5.28-1.84 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
+    <text transform="translate(263.17 818.87)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+      <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
+    </text>
+    <text transform="translate(263.17 835.61)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+      R2
+    </text>
+    <text transform="translate(263.17 806.44)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+      CA 2
+    </text>
+  </g>
+  <path d="M230.29 782h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.27-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(183.59 773.69)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    (<tspan x="3.04" y="0" letter-spacing="-.01em">R</tspan><tspan x="8.75" y="0">aft)</tspan>
+  </text>
+  <text transform="translate(183.59 744.67)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Ordering<tspan x="0" y="12">Node 4</tspan>
+  </text>
+  <path d="M309.88 782h-48.79c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c.02 5.27-1.84 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(263.17 744.67)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    Ordering<tspan x="0" y="12">Node 5</tspan>
+  </text>
+  <text transform="translate(263.17 773.73)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    (Raft)
+  </text>
+  <path d="M458.74 631.72H410c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c-.05 5.28-1.89 9.6-4.15 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(412.03 609.14)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(412.03 596.72)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 3
+  </text>
+  <path d="M784.69 631.72H735.9c-2.26 0-4.1-4.32-4.1-9.6v-30.8c0-5.28 1.84-9.6 4.1-9.6h48.79c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.8 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(737.98 609.14)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(737.98 596.72)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 5
+  </text>
+  <path d="M784.69 802H735.9c-2.26 0-4.1-4.32-4.1-9.6v-30.8c0-5.28 1.84-9.6 4.1-9.6h48.79c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.8 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(737.98 779.42)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Org 1
+  </text>
+  <text transform="translate(737.98 767)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
+    Peer 6
+  </text>
+  <path d="M309.88 672h-48.79c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.26 0 4.1 4.32 4.1 9.6v30.8c.02 5.32-1.84 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
+  <text transform="translate(263.17 649.46)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
+    Peers
+  </text>
+  <text transform="translate(263.17 666.2)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
+    R1
+  </text>
+  <text transform="translate(263.17 637.04)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
+    CA 2
+  </text>
+</svg>

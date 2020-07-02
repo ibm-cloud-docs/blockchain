@@ -1,0 +1,100 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 793.03 320.77">
+  <defs>
+    <style>
+      .cls-17{fill:#fff}.cls-11,.cls-13{stroke-miterlimit:10}.cls-2{font-size:8.13px}.cls-10,.cls-14,.cls-2,.cls-4{font-family:IBMPlexSans, IBM Plex Sans}.cls-4{font-size:6.39px}.cls-5{fill:#eb4b86}.cls-6{fill:#0db5b3}.cls-11,.cls-12,.cls-13,.cls-15{fill:none}.cls-10,.cls-14{font-size:7px}.cls-11,.cls-12,.cls-13{stroke:#fff}.cls-11,.cls-12{stroke-linecap:round}.cls-11{stroke-width:0.75px}.cls-12,.cls-15{stroke-linejoin:round}.cls-12,.cls-13{stroke-width:0.72px}.cls-14{fill:#1c1c1c}.cls-15{stroke:#a0a0a0}.cls-16{fill:#a0a0a0}
+    </style>
+  </defs>
+  <polyline points="36.05 72.14 756.98 72.14 756.98 36.07 36.05 36.07" style="stroke-miterlimit:10;stroke:#000;stroke-width:0.35px;fill:#fff"/>
+  <text class="cls-2" transform="translate(35.47 30.13)">
+    IBM Blockchain Platform
+  </text>
+  <text class="cls-2" transform="translate(425.8 30.13)">
+    Legend
+  </text>
+  <text transform="translate(35.47 60.59)" style="font-size:18.1px;font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700">
+    Intermediate Certificate Authority
+  </text>
+  <text class="cls-4" transform="translate(443.17 48.63)">
+    User
+  </text>
+  <circle cx="431.42" cy="45.91" r="5.35"/>
+  <circle class="cls-5" cx="431.42" cy="61.48" r="5.35"/>
+  <text class="cls-4" transform="translate(442.69 63.7)">
+    Root CA
+  </text>
+  <text class="cls-4" transform="translate(508.62 48.63)">
+    Infrastructure
+  </text>
+  <circle class="cls-6" cx="497.45" cy="45.91" r="5.35"/>
+  <line x1="414.54" y1="72.14" x2="414.54" y2="36.07" style="fill:none;stroke-miterlimit:10;stroke:#000;stroke-width:0.35px"/>
+  <rect x="181.13" y="102.5" width="430.76" height="175" style="fill:#f0f0f0"/>
+  <text transform="translate(192.46 119.18)" style="font-size:7.2px;font-family:IBMPlexSans-SemiBold, IBM Plex Sans;font-weight:600">
+    IBM Blockchain Platform
+  </text>
+  <text class="cls-10" transform="translate(554.44 263.45)">
+    User
+  </text>
+  <circle cx="561.72" cy="235.67" r="18"/>
+  <path class="cls-11" d="M566.49,229.71a4.85,4.85,0,1,1-4.85-4.85,4.85,4.85,0,0,1,4.85,4.85"/>
+  <path class="cls-11" d="M552.19,246.52a9.69,9.69,0,0,1,19-.13"/>
+  <circle class="cls-11" cx="561.7" cy="235.81" r="14.32"/>
+  <g>
+    <circle class="cls-6" cx="561.72" cy="130.9" r="18"/>
+    <line class="cls-12" x1="565.1" y1="137.14" x2="568.41" y2="142.89"/>
+    <path class="cls-12" d="M565.63,135.08a5.45,5.45,0,1,0-7.88,0l1.22,1-4,6.82"/>
+    <path class="cls-12" d="M566.36,117a15,15,0,0,0-13.53,26.36"/>
+    <path class="cls-12" d="M570.56,143.4a15,15,0,0,0-1.47-25.16"/>
+    <circle class="cls-13" cx="564.43" cy="135.96" r="1.36"/>
+    <circle class="cls-13" cx="569.31" cy="144.25" r="1.36"/>
+    <circle class="cls-13" cx="567.72" cy="117.55" r="1.36"/>
+    <path class="cls-13" d="M553,143.55a1.64,1.64,0,0,1,.2-.26,1.38,1.38,0,1,1-.2.26"/>
+  </g>
+  <g>
+    <circle class="cls-6" cx="366.72" cy="184.9" r="18"/>
+    <line class="cls-12" x1="370.1" y1="191.14" x2="373.41" y2="196.89"/>
+    <path class="cls-12" d="M370.63,189.08a5.45,5.45,0,1,0-7.88,0l1.22,1-4,6.82"/>
+    <path class="cls-12" d="M371.36,171a15,15,0,0,0-13.53,26.36"/>
+    <path class="cls-12" d="M375.56,197.4a15,15,0,0,0-1.47-25.16"/>
+    <circle class="cls-13" cx="369.43" cy="189.96" r="1.36"/>
+    <circle class="cls-13" cx="374.31" cy="198.25" r="1.36"/>
+    <circle class="cls-13" cx="372.72" cy="171.55" r="1.36"/>
+    <path class="cls-13" d="M358,197.55a1.64,1.64,0,0,1,.2-.26,1.38,1.38,0,1,1-.2.26"/>
+  </g>
+  <circle class="cls-5" cx="221.27" cy="185.45" r="18"/>
+  <text class="cls-10" transform="translate(554.47 159.41)">
+    Peer
+  </text>
+  <text class="cls-14" transform="translate(405.44 205.41)">
+    issues user certificate
+  </text>
+  <text class="cls-14" transform="translate(405.18 175.41)">
+    issues peer certificate
+  </text>
+  <text class="cls-14" transform="translate(254.92 200.41)">
+    issues CA certificate
+  </text>
+  <text class="cls-10" transform="translate(340.76 215.41)">
+    Intermediate CA
+  </text>
+  <text class="cls-10" transform="translate(208.09 215.41)">
+    Root CA
+  </text>
+  <g>
+    <path class="cls-15" d="M398.21,183l74.3-.87c8.57,0,15.51-8,15.51-17.83v-11c0-9.85,7-17.83,15.52-17.83h25.08"/>
+    <polygon class="cls-16" points="527.89 137.99 532.21 135.5 527.89 133.01 527.89 137.99"/>
+  </g>
+  <g>
+    <path class="cls-15" d="M398.21,192.18l74.3.87c8.57,0,15.51,8,15.51,17.83v11c0,9.85,7,17.83,15.52,17.83h25.08"/>
+    <polygon class="cls-16" points="527.89 242.17 532.21 239.68 527.89 237.19 527.89 242.17"/>
+  </g>
+  <g>
+    <line class="cls-15" x1="332.62" y1="187" x2="246.21" y2="187"/>
+    <polygon class="cls-16" points="331.89 184.51 336.21 187 331.89 189.49 331.89 184.51"/>
+  </g>
+  <g>
+    <polygon class="cls-17" points="215.19 189.69 222.98 189.69 222.98 189.34 222.98 188.98 215.19 188.98 215.19 189.69"/>
+    <polygon class="cls-17" points="227.62 183.12 227.62 182.76 215.19 182.76 215.19 183.47 227.62 183.47 227.62 183.12"/>
+    <polygon class="cls-17" points="227.62 180 227.62 179.65 215.19 179.65 215.19 180.36 227.62 180.36 227.62 180"/>
+    <path class="cls-17" d="M233.16,190a4.5,4.5,0,0,0-2.08-3.79v-8.78a.32.32,0,0,0-.1-.25l-4.67-4.67a.32.32,0,0,0-.25-.1h-14a.35.35,0,0,0-.35.35v23.34a.35.35,0,0,0,.35.35h13.12v2.07a.35.35,0,0,0,.2.31.29.29,0,0,0,.16,0,.33.33,0,0,0,.21-.07l2.95-2.17,2.89,2.16a.35.35,0,0,0,.37,0,.35.35,0,0,0,.19-.32v-5.68A4.47,4.47,0,0,0,233.16,190Zm-6.74-16.38,3.45,3.45h-3.45Zm-1.23,22.12H212.42V173.14h13.29v4.31a.35.35,0,0,0,.35.35h4.31v8a4.42,4.42,0,0,0-1.71-.34,4.51,4.51,0,0,0-1.77.36H215.2v.71h10.58a4.43,4.43,0,0,0-.58,6.3Zm4.44.71-.47-.35-.26-.2a.36.36,0,0,0-.42,0l-.26.2-.49.35-1.84,1.36v-4.27a4.48,4.48,0,0,0,2.75,1,4.42,4.42,0,0,0,1.71-.34,2.47,2.47,0,0,0,.36-.19,3.9,3.9,0,0,0,.35-.19,3.18,3.18,0,0,0,.35-.26v4.27Zm2.29-4.54c0,.08-.08.16-.13.23a4.82,4.82,0,0,1-.36.43,2.66,2.66,0,0,1-.35.32,2.39,2.39,0,0,1-.35.28c-.11.07-.24.13-.36.19a3.64,3.64,0,0,1-1.71.43,3.79,3.79,0,0,1-2.75-1.18,5,5,0,0,1-.35-.43l-.17-.28a3.74,3.74,0,0,1-.53-1.9,3.8,3.8,0,0,1,2.2-3.44,5.31,5.31,0,0,1,.56-.2,3.9,3.9,0,0,1,1-.16,3.64,3.64,0,0,1,1.71.43c.12.06.25.12.36.19a2.39,2.39,0,0,1,.35.28,3.74,3.74,0,0,1,.84,4.81Z"/>
+  </g>
+</svg>

@@ -1,0 +1,206 @@
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="15.36in" height="801.6" viewBox="0 0 1105.58 601.48">
+  <defs>
+    <clipPath id="a">
+      <path fill="#171717" d="M44.6 77.44h559.72V556.1H44.6z"/>
+    </clipPath>
+    <clipPath id="b">
+      <path fill="#f0f0f0" d="M641.24 77.34h419.33V556.1H641.24z"/>
+    </clipPath>
+  </defs>
+  <path fill="#171717" d="M44.6 77.44h559.72V556.1H44.6z"/>
+  <g clip-path="url(#a)" fill="#171717">
+    <path d="M44.6 77.44h559.72V556.1H44.6z"/>
+    <path d="M42.88 562.04l602.87 1.94V59.95L42.88 58.01v504.03z"/>
+  </g>
+  <g style="isolation:isolate">
+    <path fill="#f0f0f0" d="M641.24 77.34h419.33V556.1H641.24z"/>
+    <g clip-path="url(#b)">
+      <path fill="#f0f0f0" stroke="#f0f0f0" stroke-miterlimit="10" d="M641.24 77.34h419.33V556.1H641.24z"/>
+      <path fill="#171717" d="M639.95 562.04l451.65 1.94V59.85l-451.65-1.94v504.13z"/>
+    </g>
+  </g>
+  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M665.53 102.33h212.76v174.59H665.53z"/>
+  <path fill="none" stroke="#6f6f6f" stroke-miterlimit="8" stroke-width=".75" d="M931.06 151.18h-52.77M931.07 436.65H878.3M665.53 151.23H552.38M665.54 436.31H374.69"/>
+  <path fill="#006161" d="M70.88 155.76h105v46.47h-105z"/>
+  <text transform="translate(89.62 181.26)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Client App 1
+  </text>
+  <path fill="#757575" d="M70.88 123.76h105v32h-105z"/>
+  <text transform="translate(102.26 142.76)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Fabric SDK
+  </text>
+  <path fill="#fff" d="M448.38 130h104v42h-104z"/>
+  <text transform="translate(473.26 155.5)" font-size="12" font-family="IBMPlexSans, IBM Plex Sans">
+    Channel X
+  </text>
+  <text transform="translate(456.85 279)" font-size="8" fill="#fff" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700">
+    Ledger
+  </text>
+  <path fill="#282828" d="M578.04 301.82v-107.7h-151v203.13h151v-95.43z"/>
+  <text transform="translate(466.87 375.95)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ordering Service<tspan x="20.52" y="10.8">Nodes</tspan>
+  </text>
+  <circle cx="499.96" cy="337.92" r="23.6" fill="#f3f3f3"/>
+  <path d="M517.61 337.79a17.65 17.65 0 10-35.29 0M482.32 337.92a17.65 17.65 0 0035.29 0" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="488.73" cy="351.15" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="483.42" cy="332.4" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="512.03" cy="351.15" r="2.54" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="500.36" cy="320.27" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="516.51" cy="332.4" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <path fill="none" stroke="#6f6f6f" stroke-miterlimit="8" stroke-width=".75" d="M448.38 151.18h-73.69M214.88 151.18h-39M214.88 436.65h-38M500.18 194.12V172M500.01 436.65v-39.4"/>
+  <text transform="translate(444.69 216.22)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ordering Service Org
+  </text>
+  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M215.29 354.85H374.7v174.59H215.29z"/>
+  <circle cx="295.14" cy="385.84" r="23.58" fill="#f3f3f3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M294.99 388.7v-20.33M301.25 385.58v-17.21M288.73 385.58v-17.21M309.93 386.88l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M280.13 386.88l14.9 8.6 14.9-8.6"/>
+  <circle cx="294.99" cy="388.7" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="288.73" cy="385.58" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="301.25" cy="385.58" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <text transform="translate(272.65 422.85)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
+  </text>
+  <circle cx="294.99" cy="473.29" r="24.76" fill="#f3f3f3"/>
+  <path d="M302.13 464.89a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M282.45 488a13.34 13.34 0 0126.14-.17" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="295.54" cy="473.29" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="282.45" cy="488.01" r="1.52" transform="rotate(-34.6 282.4944 488.0444)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
+  <text transform="translate(282.76 510.81)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org B<tspan x="1.89" y="10.8">Peer</tspan>
+  </text>
+  <circle cx="500.38" cy="252.88" r="23.58" fill="#f3f3f3"/>
+  <path fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M500.23 255.74v-20.33M506.49 252.61v-17.2M493.98 252.61v-17.2"/>
+  <path fill="#f3f3f3" d="M515.17 253.92l-14.9-8.61-14.89 8.61v7.29l14.89 8.61 14.9-8.61v-7.29"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M515.17 253.92l-14.9-8.61-14.89 8.61v7.29l14.89 8.61 14.9-8.61v-7.29"/>
+  <path fill="#f3f3f3" d="M485.38 253.92l14.89 8.6 14.9-8.6"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M485.38 253.92l14.89 8.6 14.9-8.6"/>
+  <circle cx="500.23" cy="255.74" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="493.98" cy="252.61" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="506.49" cy="252.61" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <text transform="translate(477.89 289.88)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
+  </text>
+  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M665.32 354.95h212.76v174.59H665.32zM214.88 102.33h159.8v174.59h-159.8z"/>
+  <circle cx="770.1" cy="386.93" r="23.58" fill="#f3f3f3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M769.95 389.8v-20.33M776.2 386.67v-17.2M763.69 386.67v-17.2M784.89 387.97l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M755.09 387.97l14.9 8.6 14.9-8.6"/>
+  <circle cx="769.95" cy="389.8" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="763.69" cy="386.67" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="776.2" cy="386.67" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <text transform="translate(747.6 423.94)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
+  </text>
+  <circle cx="769.95" cy="474.38" r="24.76" fill="#f3f3f3"/>
+  <path d="M777.09 466a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M757.41 489.1a13.35 13.35 0 0126.14-.17" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="770.5" cy="474.38" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="757.41" cy="489.1" r="1.52" transform="rotate(-34.6 757.501 489.1212)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
+  <text transform="translate(757.64 511.9)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Org D<tspan x="1.98" y="10.8">Peer</tspan>
+  </text>
+  <circle cx="770.38" cy="134.33" r="23.58" fill="#f3f3f3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M770.23 137.19v-20.33M776.49 134.06v-17.2M763.97 134.06v-17.2M785.17 135.36l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M755.37 135.36l14.9 8.61 14.9-8.61"/>
+  <circle cx="770.23" cy="137.19" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="763.97" cy="134.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="776.49" cy="134.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <text transform="translate(747.88 171.33)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
+  </text>
+  <circle cx="770.23" cy="220.77" r="24.76" fill="#f3f3f3"/>
+  <path d="M777.37 212.37a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M757.69 235.49a13.35 13.35 0 0126.14-.16" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="770.78" cy="220.77" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="757.69" cy="235.49" r="1.52" transform="rotate(-34.6 757.7785 235.4934)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
+  <text transform="translate(758.15 258.29)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Org C<tspan x="1.75" y="10.8">Peer</tspan>
+  </text>
+  <text transform="translate(224.76 120.8)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org A
+  </text>
+  <circle cx="294.42" cy="133.33" r="23.58" fill="#f3f3f3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M294.27 136.19v-20.33M300.53 133.06v-17.2M288.01 133.06v-17.2M309.21 134.36l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M279.41 134.36l14.9 8.61 14.9-8.61"/>
+  <circle cx="294.27" cy="136.19" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="288.01" cy="133.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <circle cx="300.53" cy="133.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
+  <text transform="translate(271.92 170.33)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
+  </text>
+  <circle cx="294.27" cy="220.77" r="24.76" fill="#f3f3f3"/>
+  <path d="M301.41 212.37a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M281.73 235.49a13.35 13.35 0 0126.14-.16" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="294.82" cy="220.77" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
+  <circle cx="281.73" cy="235.49" r="1.52" transform="rotate(-34.6 281.7618 235.511)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
+  <text transform="translate(282.09 258.29)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org A<tspan x="1.84" y="10.8">Peer</tspan>
+  </text>
+  <text transform="translate(223.88 373.31)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org B
+  </text>
+  <text transform="translate(675.26 373.42)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org D
+  </text>
+  <text transform="translate(675.56 120.8)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Org C
+  </text>
+  <path fill="#006161" d="M71.88 429.41h105v46.47h-105z"/>
+  <text transform="translate(90.62 454.71)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Client App 2
+  </text>
+  <path fill="#757575" d="M71.88 397.41h105v32h-105z"/>
+  <text transform="translate(101.26 416.41)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Fabric SDK
+  </text>
+  <path fill="#006161" d="M931.07 429.08h105v46.47h-105z"/>
+  <text transform="translate(949.82 454.37)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Client App 4
+  </text>
+  <path fill="#757575" d="M931.07 397.08h105v32h-105z"/>
+  <text transform="translate(960.45 416.08)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Fabric SDK
+  </text>
+  <path fill="#006161" d="M930.07 147.92h105v46.47h-105z"/>
+  <text transform="translate(948.82 173.21)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Client App 3
+  </text>
+  <path fill="#757575" d="M930.07 115.92h105v32h-105z"/>
+  <text transform="translate(959.45 134.92)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
+    Fabric SDK
+  </text>
+  <path d="M787.72 441.85h40.75v27.63c-20.38 0-20.38 10.52-40.75 4.54z" fill="#0f6dff" fill-rule="evenodd"/>
+  <text transform="translate(790.44 461.52)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger X
+  </text>
+  <path d="M787.72 476.9h40.75v27.62c-20.38 0-20.38 10.52-40.75 4.54z" fill="#a11950" fill-rule="evenodd"/>
+  <text transform="translate(790.53 496.57)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger Y
+  </text>
+  <path d="M312.76 441.76h40.75v27.63c-20.38 0-20.38 10.52-40.75 4.54z" fill="#0f6dff" fill-rule="evenodd"/>
+  <text transform="translate(315.48 461.43)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger X
+  </text>
+  <path d="M312 188.25h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
+  <text transform="translate(314.76 206.92)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger X
+  </text>
+  <path d="M788 188.25h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
+  <text transform="translate(790.72 206.92)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger X
+  </text>
+  <path d="M442.88 322h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
+  <text transform="translate(445.6 340.7)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger X
+  </text>
+  <path d="M516.51 322h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#a11950" fill-rule="evenodd"/>
+  <text transform="translate(519.32 340.7)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger Y
+  </text>
+  <path fill="none" stroke="#a5a5a5" stroke-miterlimit="8" stroke-width=".75" d="M770.67 354.3v-76.9"/>
+  <path fill="none" stroke="#a5a5a5" stroke-miterlimit="10" d="M719.51 316.72H578.04"/>
+  <path fill="#fff" d="M719.51 295.32h104v42h-104z"/>
+  <text transform="translate(744.38 320.82)" font-size="12" font-family="IBMPlexSans, IBM Plex Sans">
+    Channel Y
+  </text>
+  <path d="M788 223.29h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#a11950" fill-rule="evenodd"/>
+  <text transform="translate(790.81 242.96)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
+    Ledger Y
+  </text>
+</svg>

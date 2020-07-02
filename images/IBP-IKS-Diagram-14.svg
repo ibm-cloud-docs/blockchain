@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2387px" height="1160px" viewBox="0 0 2387 1160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>IBP_Deployment</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="146" y="648" width="1527" height="275"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="1527" height="275" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="IBP_Deployment" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="2387" height="1160"></rect>
+        <g id="Group" opacity="0.866699219" transform="translate(50.000000, 105.000000)">
+            <rect id="Rectangle" stroke="#FFFFFF" fill="#011688" x="0.5" y="0.5" width="1124" height="1035"></rect>
+            <text id="IBM-Blockchain-Platf" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#FFFFFF">
+                <tspan x="193.9768" y="83">IBM Blockchain Platform</tspan>
+            </text>
+            <text id="The-service-that-all" font-family="IBMPlexSans, IBM Plex Sans" font-size="28.07" font-weight="normal" fill="#FFFFFF">
+                <tspan x="192" y="128">The service that allows you to deploy and manage your </tspan>
+                <tspan x="192" y="165">Hyperledger Fabric nodes.</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(100.000000, 151.000000)">
+            <circle id="Oval" stroke="#979797" fill="#FFFFFF" cx="51" cy="36" r="36"></circle>
+            <rect id="Rectangle" stroke="#FFFCFC" fill="#011688" x="0.5" y="186.5" width="1021" height="109"></rect>
+        </g>
+        <g id="Group" transform="translate(100.000000, 989.000000)" fill="#011688" stroke="#FFFAFA">
+            <rect id="Rectangle" x="0.5" y="0.5" width="1021" height="108"></rect>
+        </g>
+        <g id="Group-3" transform="translate(100.000000, 457.000000)">
+            <g id="Group" fill="#011688" stroke="#FFFBFB">
+                <rect id="Rectangle" x="0.5" y="0.5" width="1021" height="520"></rect>
+            </g>
+            <g id="Group" transform="translate(35.000000, 102.000000)" fill="#FFFFFF" stroke="#979797">
+                <rect id="Rectangle" x="0.5" y="0.5" width="294" height="393"></rect>
+            </g>
+            <g id="Group" transform="translate(350.000000, 102.000000)" fill="#FFFFFF" stroke="#979797">
+                <rect id="Rectangle" x="0.5" y="0.5" width="327" height="393"></rect>
+            </g>
+            <g id="Group" transform="translate(698.000000, 101.000000)" fill="#FFFFFF" stroke="#979797">
+                <rect id="Rectangle" x="0.5" y="0.5" width="294" height="393"></rect>
+            </g>
+            <text id="Hyperledger-Fabric-C" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#FFFFFF">
+                <tspan x="244.420285" y="63">Hyperledger Fabric Components</tspan>
+            </text>
+            <text id="Certificate-Authorit" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" line-spacing="32" fill="#000000">
+                <tspan x="121.146645" y="139.39513">Certificate </tspan>
+                <tspan x="127.60217" y="171.39513">Authority</tspan>
+            </text>
+            <text id="CA" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20.07" font-weight="500" line-spacing="32" fill="#000000">
+                <tspan x="166" y="333">CA</tspan>
+            </text>
+            <g id="Group-2" transform="translate(389.000000, 256.000000)">
+                <g id="Group" fill="#FFFFFF" stroke="#011688">
+                    <rect id="Rectangle" x="0.5" y="0.5" width="112" height="72"></rect>
+                </g>
+                <text id="Peer" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20.07" font-weight="500" line-spacing="32" fill="#000000">
+                    <tspan x="33.2352941" y="40">Peer</tspan>
+                </text>
+            </g>
+            <rect id="Rectangle" stroke="#011688" x="126.5" y="294.5" width="112" height="72"></rect>
+            <rect id="Rectangle" stroke="#011688" x="789.5" y="294.5" width="112" height="72"></rect>
+            <text id="Orderer" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20.07" font-weight="500" line-spacing="32" fill="#000000">
+                <tspan x="810" y="335">Orderer</tspan>
+            </text>
+            <g id="Group" transform="translate(525.000000, 256.000000)" fill="#FFFFFF" stroke="#011688">
+                <rect id="Rectangle" x="0.5" y="0.5" width="112" height="72"></rect>
+            </g>
+            <text id="Smart-Contract" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20.07" font-weight="500" line-spacing="22" fill="#000000">
+                <tspan x="547.730475" y="288.10013">Smart </tspan>
+                <tspan x="536.029665" y="310.10013">Contract</tspan>
+            </text>
+            <g id="Group" transform="translate(389.000000, 344.000000)" fill="#FFFFFF" stroke="#011688">
+                <rect id="Rectangle" x="0.5" y="0.5" width="112" height="72"></rect>
+            </g>
+            <text id="CouchDB" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20.07" font-weight="500" line-spacing="32" fill="#000000">
+                <tspan x="403" y="384">CouchDB</tspan>
+            </text>
+            <text id="Peer" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+                <tspan x="475.80045" y="160">Peer</tspan>
+            </text>
+            <text id="Ordering-Service" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" line-spacing="31" fill="#000000">
+                <tspan x="787.76239" y="140.39513">Ordering </tspan>
+                <tspan x="795.58423" y="171.39513">Service</tspan>
+            </text>
+        </g>
+        <g id="Group" transform="translate(1236.000000, 105.000000)">
+            <rect id="Rectangle" stroke="#979797" fill="#1E1E1F" opacity="0.703822545" x="0.5" y="0.5" width="1124" height="1035"></rect>
+            <g id="Group-6" transform="translate(481.000000, 236.000000)">
+                <rect id="Rectangle" stroke="#FFFBFB" fill="#FFFFFF" x="0.5" y="0.5" width="577" height="513"></rect>
+                <rect id="Rectangle" stroke="#FFFBFB" fill="#C9C5C5" x="0.5" y="546.5" width="577" height="227"></rect>
+                <g id="Group" transform="translate(64.000000, 110.000000)" fill="#FFFFFF" stroke="#979797">
+                    <rect id="Rectangle-2" x="0.5" y="0.5" width="460" height="348"></rect>
+                </g>
+                <text id="Cluster" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#2E2E2E">
+                    <tspan x="223.66724" y="52">Cluster </tspan>
+                </text>
+                <text id="Persistent-storage" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#000000">
+                    <tspan x="129.82409" y="602">Persistent storage </tspan>
+                </text>
+                <text id="(ex:-4-CPU-x-16GB-RA" opacity="0.624906994" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="21.07" font-weight="500" fill="#2E2E2E">
+                    <tspan x="174.01936" y="79">(ex: 4 CPU x 16GB RAM)</tspan>
+                </text>
+                <text id="Separate,-physical-s" opacity="0.825683594" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="21.07" font-weight="500" fill="#000000">
+                    <tspan x="153.477855" y="629">Separate, physical storage</tspan>
+                </text>
+                <text id="Worker-node" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+                    <tspan x="216.330405" y="166">Worker node</tspan>
+                </text>
+                <g id="Group" transform="translate(115.000000, 201.000000)" fill="#FFFFFF" stroke="#979797">
+                    <rect id="Rectangle-2" x="0.5" y="0.5" width="365" height="223"></rect>
+                </g>
+                <g id="Group" transform="translate(167.000000, 278.000000)" fill="#FFFFFF" stroke="#979797">
+                    <rect id="Rectangle-2" x="0.5" y="0.5" width="261" height="98"></rect>
+                </g>
+                <text id="Pod" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+                    <tspan x="268.13756" y="249">Pod</tspan>
+                </text>
+                <text id="App-containers" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+                    <tspan x="210.07951" y="332">App containers</tspan>
+                </text>
+                <g id="Group" transform="translate(106.000000, 650.000000)" fill="#FFFFFF" stroke="#979797">
+                    <rect id="Rectangle-2" x="0.5" y="0.5" width="365" height="73"></rect>
+                </g>
+                <text id="File-storage-(defaul" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+                    <tspan x="168.275415" y="694">File storage (default)</tspan>
+                </text>
+            </g>
+        </g>
+        <rect id="Rectangle" stroke="#FFFBFB" fill="#BFEEF6" x="1122.5" y="648.5" width="547" height="274"></rect>
+        <use id="Rectangle" stroke="#0A0909" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="7" xlink:href="#path-1"></use>
+        <text id="Containers" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+            <tspan x="1151.3236" y="711">Containers</tspan>
+        </text>
+        <text id="Blockchain-Service" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#000000">
+            <tspan x="56.003655" y="77">Blockchain Service</tspan>
+        </text>
+        <text id="IBM-Blockchain-Platf" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#FFFFFF">
+            <tspan x="306.89699" y="408">IBM Blockchain Platform Console (UI)</tspan>
+        </text>
+        <text id="IBM-Blockchain-Platf" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#FFFFFF">
+            <tspan x="206.3421" y="1058">IBM Blockchain Platform Extension for VS Code  </tspan>
+        </text>
+        <text id="Infrastructure-resou" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#000000">
+            <tspan x="1251.05361" y="77">Infrastructure resources</tspan>
+        </text>
+        <text id="IBM-Cloud-Kubernetes" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="37.07" font-weight="500" fill="#FFFFFF">
+            <tspan x="1402.04529" y="177">Kubernetes cluster on IBM Cloud</tspan>
+        </text>
+        <text id="Your-compute-and-mem" font-family="IBMPlexSans, IBM Plex Sans" font-size="28.07" font-weight="normal" fill="#FFFFFF">
+            <tspan x="1402" y="222">Your compute and memory that you allocate to your</tspan>
+            <tspan x="1402" y="259">blockchain instance.</tspan>
+        </text>
+        <g id="container-service-logo-3aec89a836" transform="translate(1297.000000, 151.000000)" fill-rule="nonzero">
+            <path d="M0,20 C0,20.8749039 0.488889414,21.7501334 1.46567591,22.4139659 L24.445463,38.0296642 C26.3996976,39.3576549 29.597987,39.3579806 31.5525523,38.0296642 L54.5339933,22.416246 C55.5114414,21.7524135 56,20.8768582 56,20.0016286 L56,46.9760936 C56,47.8513231 55.5114414,48.7265527 54.5339933,49.3907109 L31.5525523,65.0041291 C29.597987,66.3321198 26.3996976,66.3317941 24.445463,65.0041291 L1.46567591,49.3881051 C0.488558636,48.7242726 0,47.849043 0,46.9734877 L0,20 Z" id="Path" fill="#000000"></path>
+            <path d="M0,19.1721786 C0,20.0533282 0.488886526,20.9348058 1.46566725,21.6033772 L17.7626566,32.7558566 L24.4476341,28.1818179 C26.4021878,26.844347 29.6004584,26.8446751 31.5546814,28.1818179 L38.2376742,32.7565127 L54.534002,21.6060016 C55.5114442,20.9371021 56,20.0556245 56,19.174147 L56,19.161681 C56,18.2798753 55.5114442,17.3983977 54.5343327,16.7298263 L31.5560045,1.00265206 C29.6004584,-0.334162673 26.4025186,-0.334162673 24.4479648,1.00232401 L1.46665958,16.7272019 C0.489217302,17.3957733 0,18.2775789 0,19.1587285 L0,46 L0,19.1721786 Z" id="Path" fill="#0F6FFF"></path>
+        </g>
+        <path id="Line" d="M1907.5,601.5 L1119.5,601.5 L1119.5,596.5 L1907.5,596.5 L1907.5,584.5 L1936.5,599 L1907.5,613.5 L1907.5,601.5 Z" fill="#0CCAEB" fill-rule="nonzero"></path>
+        <path id="Line" d="M1907.5,601.5 L1119.5,601.5 L1119.5,596.5 L1907.5,596.5 L1907.5,584.5 L1936.5,599 L1907.5,613.5 L1907.5,601.5 Z" fill="#0CCAEB" fill-rule="nonzero"></path>
+        <path id="Line" d="M1839.91082,1026.44355 L1605.25194,808.631548 L1608.65348,804.966914 L1843.31236,1022.77892 L1851.47605,1013.9838 L1862.86646,1044.34015 L1831.74713,1035.23867 L1839.91082,1026.44355 Z" fill="#0CCAEB" fill-rule="nonzero"></path>
+        <path id="Line" d="M1910.21327,697.391307 L1609.54241,810.721092 L1607.77891,806.042411 L1908.44977,692.712626 L1904.21736,681.483791 L1936.46787,684.82365 L1914.44568,708.620142 L1910.21327,697.391307 Z" fill="#0CCAEB" fill-rule="nonzero"></path>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="141" cy="565" r="19"></circle>
+        <text id="1" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="135" y="570">1 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="1709" cy="597" r="19"></circle>
+        <text id="1" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="1703" y="602">1 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="1709" cy="597" r="19"></circle>
+        <text id="1" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="1703" y="602">1 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="1758" cy="597" r="19"></circle>
+        <text id="2" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="1752" y="602">2 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="1807" cy="597" r="19"></circle>
+        <text id="3" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="1801" y="602">3 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="455" cy="564" r="19"></circle>
+        <text id="2" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="449" y="569">2 </tspan>
+        </text>
+        <circle id="Oval" stroke="#979797" fill="#0CCAEB" cx="804" cy="563" r="19"></circle>
+        <text id="3" font-family="IBMPlexSans-Medium, IBM Plex Sans" font-size="21.07" font-weight="400" line-spacing="32" fill="#000000">
+            <tspan x="798" y="568">3 </tspan>
+        </text>
+        <g id="IBP_2_0_Service_Tile_Icon" transform="translate(111.000000, 150.000000)" fill="#13171A" fill-rule="nonzero">
+            <path d="M41.5,0 C18.5801829,-1.25125444e-15 2.80686807e-15,16.5654643 0,37 C-2.80686807e-15,57.4345357 18.5801829,74 41.5,74 C64.4198171,74 83,57.4345357 83,37 C83,27.1869899 78.6276911,17.7758951 70.8449314,10.8370491 C63.0621717,3.89820309 52.5064843,6.00873572e-16 41.5,0 Z M23.34375,50.875 L18.15625,50.875 L18.15625,23.125 L23.34375,23.125 L23.34375,50.875 Z M57.0625,57.8125 L25.9375,57.8125 L25.9375,53.1875 L57.0625,53.1875 L57.0625,57.8125 Z M57.0625,20.8125 L25.9375,20.8125 L25.9375,16.1875 L57.0625,16.1875 L57.0625,20.8125 Z M64.84375,50.875 L59.65625,50.875 L59.65625,23.125 L64.84375,23.125 L64.84375,50.875 Z" id="Shape"></path>
+        </g>
+        <text id="Each-component-consi" font-family="IBMPlexSans, IBM Plex Sans" font-size="20.07" font-weight="normal" line-spacing="32" fill="#000000">
+            <tspan x="1151" y="746">Each component consists of containers that are </tspan>
+            <tspan x="1151" y="778">deployed within the kubernetes Pod and are</tspan>
+            <tspan x="1151" y="810">visible within the kubernetes dashboard.</tspan>
+        </text>
+        <text id="*-Diagram-does-not-i" font-family="IBMPlexSans, IBM Plex Sans" font-size="15.07" font-weight="normal" line-spacing="20" fill="#000000">
+            <tspan x="1152" y="866">* Diagram does not include containers for deployment, components</tspan>
+            <tspan x="1152" y="886">   used to communicate with the console or collect logs.</tspan>
+        </text>
+        <rect id="Rectangle" stroke="#FFFBFB" fill="#BFEEF6" x="1279.5" y="415.5" width="391" height="156"></rect>
+        <text id="Pod" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="25.07" font-weight="500" fill="#000000">
+            <tspan x="1307.13756" y="462">Pod</tspan>
+        </text>
+        <rect id="Rectangle" fill="#0CCAEB" transform="translate(1694.005872, 748.641444) rotate(-21.000000) translate(-1694.005872, -748.641444) " x="1613.00587" y="724.641444" width="162" height="48"></rect>
+        <text id="CPU-&amp;-Memory" transform="translate(1693.063607, 748.557439) rotate(-21.000000) translate(-1693.063607, -748.557439) " font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="18.07" font-weight="500" fill="#000000">
+            <tspan x="1630.64983" y="755.557439">CPU &amp; Memory</tspan>
+        </text>
+        <rect id="Rectangle" fill="#0CCAEB" transform="translate(1679.103925, 902.031000) rotate(43.000000) translate(-1679.103925, -902.031000) " x="1615.60392" y="880.531" width="127" height="43"></rect>
+        <text id="Storage" transform="translate(1678.679494, 902.568135) rotate(42.000000) translate(-1678.679494, -902.568135) " font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="18.07" font-weight="500" fill="#000000">
+            <tspan x="1646.35226" y="909.568135">Storage</tspan>
+        </text>
+        <text id="Each-Fabric-componen" font-family="IBMPlexSans, IBM Plex Sans" font-size="20.07" font-weight="normal" line-spacing="32" fill="#000000">
+            <tspan x="1307" y="492">Each Fabric component is deployed</tspan>
+            <tspan x="1307" y="524">into an individual pod.</tspan>
+        </text>
+        <text id="*-Storage-cost-is-no" font-family="IBMPlexSans, IBM Plex Sans" font-size="17.07" font-weight="normal" fill="#2E2E2E">
+            <tspan x="1749.15916" y="1094">* Storage cost is not included in the cost of the Kubernetes Cluster</tspan>
+        </text>
+    </g>
+</svg>

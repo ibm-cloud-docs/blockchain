@@ -1,103 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 997 774" style="enable-background:new 0 0 997 774;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#DCDCDC;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:none;stroke:#001588;stroke-width:3;}
-	.st3{fill:#001588;}
-	.st4{fill:#C5C5C5;}
-	.st5{fill:#767171;}
-	.st6{fill:#5A6872;}
-	.st7{fill:#A2A3A2;}
-	.st8{font-family:'IBMPlexSans-Medium';}
-	.st9{font-size:19px;}
-	.st10{fill:#565656;}
-	.st11{font-size:16px;}
-	.st12{fill:#011688;stroke:#857B7B;}
-	.st13{fill:#FFFFFF;stroke:#FFFFFF;}
-	.st14{fill:#010F5E;}
-	.st15{fill:#0CCAEB;}
-	.st16{fill:#A2A3A2;stroke:#777777;stroke-miterlimit:10;}
-	.st17{font-size:14px;}
-	.st18{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-	.st19{fill:#979797;stroke:#A2A3A2;}
-</style>
-<title>Build your network Copy 2</title>
-<desc>Created with Sketch.</desc>
-<rect id="Rectangle" x="56" y="108" class="st0" width="848" height="549"/>
-<g id="Group-18" transform="translate(518.000000, 357.000000)">
-	<g id="Group-5">
-		<polygon id="Fill-1" class="st1" points="-4.5,-3.5 129.5,-3.5 129.5,55.5 -4.5,55.5 		"/>
-		<g id="Clip-4">
-		</g>
-		<polygon id="Stroke-3" class="st2" points="-4.5,55.5 129.5,55.5 129.5,-3.5 -4.5,-3.5 		"/>
-	</g>
-	<polygon id="Fill-6" class="st3" points="2,49 40,49 40,32 2,32 	"/>
-	<polygon id="Fill-7" class="st3" points="83,49 121,49 121,32 83,32 	"/>
-	<polygon id="Fill-8" class="st3" points="43,49 80,49 80,32 43,32 	"/>
-	<polygon id="Fill-9" class="st4" points="46,44 53,44 53,36 46,36 	"/>
-	<polygon id="Fill-10" class="st4" points="54,44 61,44 61,36 54,36 	"/>
-	<polygon id="Fill-11" class="st4" points="62,44 69,44 69,36 62,36 	"/>
-	<polygon id="Fill-12" class="st4" points="70,44 77,44 77,36 70,36 	"/>
-	<path id="Fill-13" class="st5" d="M50.5,31.2h0.3l-0.5,0.5v-6.9l0.5,0.5H50v-1h1.3v7.9h-0.8V31.2z M38.9,25.3h8v-1h-8V25.3z
-		 M27.9,25.3h8v-1h-8C27.9,24.3,27.9,25.3,27.9,25.3z M24.9,25.3h-5.4l0.5-0.5v1.7h-1v-2.2h5.9V25.3z M22.5,25.5l-3,6l-3-6H22.5z"/>
-	<path id="Fill-14" class="st5" d="M106.5,31.2h0.3l-0.5,0.5v-6.9l0.5,0.5H106v-1h1.3v7.9h-0.8V31.2z M94.9,25.3h8v-1h-8V25.3z
-		 M83.9,25.3h8v-1h-8V25.3z M80.9,25.3h-5.4l0.5-0.5v1.7h-1v-2.2h5.9V25.3z M78.5,25.5l-3,6l-3-6H78.5z"/>
-	<polygon id="Fill-15" class="st4" points="87,44 94,44 94,36 87,36 	"/>
-	<polygon id="Fill-16" class="st4" points="95,44 102,44 102,36 95,36 	"/>
-	<polygon id="Fill-17" class="st4" points="103,44 110,44 110,36 103,36 	"/>
-</g>
-<g id="UI-Icon_x2F_checkmark--outline_x2F__x24_ui-05" transform="translate(321.000000, 255.000000)">
-	<path id="Oval-2" class="st6" d="M2,9.5c3.6,0,6.5-2.9,6.5-6.5S5.6-3.5,2-3.5S-4.5-0.6-4.5,3S-1.6,9.5,2,9.5z M2,11
-		c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S6.4,11,2,11z"/>
-	<polygon id="check" class="st6" points="5.3,-0.3 6.7,1.1 0.8,7 -2.7,3.6 -1.3,2.2 0.8,4.2 	"/>
-</g>
-<rect id="Rectangle_1_" x="80" y="145" class="st7" width="348" height="152"/>
-<text transform="matrix(1 0 0 1 99.206 180)" class="st1 st8 st9">Org 1</text>
-<rect id="Rectangle_2_" x="363" y="133" class="st4" width="106" height="36"/>
-<text transform="matrix(1 0 0 1 386.176 157)" class="st10 st8 st11">Org1 CA</text>
-<rect id="Rectangle_3_" x="305" y="201" class="st4" width="106" height="56"/>
-<text transform="matrix(1 0 0 1 322.256 225)" class="st10 st8 st11">Org1 MSP </text>
-<text transform="matrix(1 0 0 1 323.616 245)" class="st10 st8 st11">definition</text>
-<rect id="Rectangle_4_" x="78.5" y="466.5" class="st12" width="347" height="151"/>
-<text transform="matrix(1 0 0 1 97.206 501)" class="st1 st8 st9">Org 2</text>
-<rect id="Rectangle_5_" x="97.5" y="524.5" class="st13" width="105" height="61"/>
-<text transform="matrix(1 0 0 1 110.124 561)" class="st14 st8 st11">Peer Org2</text>
-<rect id="Rectangle_6_" x="361.5" y="454.5" class="st13" width="105" height="35"/>
-<text transform="matrix(1 0 0 1 384.176 478)" class="st14 st8 st11">Org2 CA</text>
-<rect id="Rectangle_7_" x="305.5" y="525.5" class="st13" width="105" height="55"/>
-<text transform="matrix(1 0 0 1 322.256 549)" class="st14 st8 st11">Org2 MSP </text>
-<text transform="matrix(1 0 0 1 323.616 569)" class="st14 st8 st11">definition</text>
-<rect id="Rectangle_8_" x="101" y="199" class="st4" width="106" height="62"/>
-<text transform="matrix(1 0 0 1 114.124 236)" class="st10 st8 st11">Peer Org1</text>
-<g id="Group-3-Copy" transform="translate(202.000000, 558.000000)">
-	<g id="Clip-2_1_">
-	</g>
-	<path id="Fill-1_2_" class="st15" d="M-5.1-5h51v39c-25.5,0-25.5,14.9-51,6.4C-5.1,40.4-5.1-5-5.1-5z"/>
-</g>
-<g id="Group-3" transform="translate(209.000000, 227.000000)">
-	<g id="Clip-2">
-	</g>
-	<path id="Fill-1_1_" class="st16" d="M-9-5h52v39.8c-26,0-26,15.2-52,6.5V-5z"/>
-</g>
-<text transform="matrix(1 0 0 1 207 246)" class="st1 st8 st17">Ledger</text>
-<text transform="matrix(1 0 0 1 250.6936 246)" class="st1 st8 st17"> </text>
-<line class="st18" x1="177" y1="261" x2="177" y2="523.5"/>
-<ellipse id="Oval" class="st19" cx="317.5" cy="383.5" rx="194.5" ry="51.5"/>
-<text transform="matrix(1 0 0 1 207 261)" class="st1 st8 st17">X</text>
-<rect id="Rectangle_9_" x="491" y="302" class="st7" width="348" height="152"/>
-<text transform="matrix(1 0 0 1 201 577)" class="st1 st8 st17">Ledger</text>
-<text transform="matrix(1 0 0 1 244.6936 577)" class="st1 st8 st17"> </text>
-<text transform="matrix(1 0 0 1 201 592)" class="st1 st8 st17">X</text>
-<text transform="matrix(1 0 0 1 719.116 400)" class="st10 st8 st11">definition</text>
-<text transform="matrix(1 0 0 1 272.7465 395)" class="st10 st8 st9">channel1</text>
-<rect id="Rectangle_10_" x="774" y="290" class="st4" width="106" height="36"/>
-<text transform="matrix(1 0 0 1 787.228 314)" class="st10 st8 st11">Orderer CA</text>
-<text transform="matrix(1 0 0 1 511.447 337)" class="st1 st8 st9">Orderer Org</text>
-<rect id="Rectangle_11_" x="688" y="356" class="st4" width="125" height="56"/>
-<rect id="Rectangle-Copy" x="518" y="355" class="st4" width="125" height="56"/>
-<text transform="matrix(1 0 0 1 707.308 380)" class="st10 st8 st11">Orderer MSP </text>
-<text transform="matrix(1 0 0 1 552.324 379)" class="st10 st8 st11">Orderer</text>
+<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="848" height="549">
+  <path fill="#dcdcdc" d="M0 0h848v549H0z"/>
+  <path fill="#fff" d="M457.5 245.5h134v59h-134v-59z"/>
+  <path fill="none" stroke="#001588" stroke-width="3" d="M457.5 304.5h134v-59h-134v59z"/>
+  <path fill="#001588" d="M464 298h38v-17h-38v17zM545 298h38v-17h-38v17zM505 298h37v-17h-37v17z"/>
+  <path fill="#c5c5c5" d="M508 293h7v-8h-7v8zM516 293h7v-8h-7v8zM524 293h7v-8h-7v8zM532 293h7v-8h-7v8z"/>
+  <path d="M512.5 280.2h.3l-.5.5v-6.9l.5.5h-.8v-1h1.3v7.9h-.8zm-11.6-5.9h8v-1h-8zm-11 0h8v-1h-8zm-3 0h-5.4l.5-.5v1.7h-1v-2.2h5.9zm-2.4.2l-3 6-3-6zM568.5 280.2h.3l-.5.5v-6.9l.5.5h-.8v-1h1.3v7.9h-.8zm-11.6-5.9h8v-1h-8zm-11 0h8v-1h-8zm-3 0h-5.4l.5-.5v1.7h-1v-2.2h5.9zm-2.4.2l-3 6-3-6z" fill="#767171"/>
+  <path fill="#c5c5c5" d="M549 293h7v-8h-7v8zM557 293h7v-8h-7v8zM565 293h7v-8h-7v8z"/>
+  <g data-name="UI-Icon/checkmark--outline/$ui-05" fill="#5a6872">
+    <path d="M267 156.5a6.5 6.5 0 1 0-6.5-6.5 6.49 6.49 0 0 0 6.5 6.5zm0 1.5a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+    <path d="M270.3 146.7l1.4 1.4-5.9 5.9-3.5-3.4 1.4-1.4 2.1 2 4.5-4.5z"/>
+  </g>
+  <path data-name="Rectangle" fill="#a2a3a2" d="M24 37h348v152H24z"/>
+  <text transform="translate(43.21 72)" font-size="19" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org1<tspan x="13.53" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <path data-name="Rectangle" fill="#c5c5c5" d="M307 25h106v36H307z"/>
+  <text transform="translate(330.18 49)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org1 CA<tspan x="11.39" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <path data-name="Rectangle" fill="#c5c5c5" d="M249 93h106v56H249z"/>
+  <text transform="translate(266.26 117)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org1 MSP<tspan x="11.39" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <text transform="translate(267.62 137)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    definition
+  </text>
+  <path data-name="Rectangle" fill="#011688" stroke="#857b7b" d="M22.5 358.5h347v151h-347z"/>
+  <text transform="translate(41.21 393)" font-size="19" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org2<tspan x="13.53" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <path data-name="Rectangle" fill="#fff" stroke="#fff" d="M41.5 416.5h105v61h-105z"/>
+  <text transform="translate(54.12 453)" font-size="16" fill="#010f5e" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    <tspan letter-spacing="-.02em">Peer Org2</tspan>
+  </text>
+  <path data-name="Rectangle" fill="#fff" stroke="#fff" d="M305.5 346.5h105v35h-105z"/>
+  <text transform="translate(328.18 370)" font-size="16" fill="#010f5e" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org2 CA<tspan x="11.39" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <path data-name="Rectangle" fill="#fff" stroke="#fff" d="M249.5 417.5h105v55h-105z"/>
+  <text transform="translate(266.26 441)" font-size="16" fill="#010f5e" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Org2 MSP<tspan x="11.39" y="0" letter-spacing="-.02em"></tspan>
+  </text>
+  <text transform="translate(267.62 461)" font-size="16" fill="#010f5e" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    definition
+  </text>
+  <path data-name="Rectangle" fill="#c5c5c5" d="M45 91h106v62H45z"/>
+  <text transform="translate(58.12 128)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    <tspan letter-spacing="-.02em">Peer Org1</tspan>
+  </text>
+  <path data-name="Fill-1" d="M140.9 445h51v39c-25.5 0-25.5 14.9-51 6.4z" fill="#0ccaeb"/>
+  <path data-name="Fill-1" d="M144 114h52v39.8c-26 0-26 15.2-52 6.5z" fill="#a2a3a2" stroke="#777" stroke-miterlimit="10"/>
+  <text transform="translate(151 138)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" letter-spacing="-.01em" style="isolation:isolate">
+    Ledger<tspan x="7.04" y="0" letter-spacing="0em"></tspan>
+  </text>
+  <text transform="translate(194.69 138)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <path fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M121 153v262.5"/>
+  <ellipse cx="261.5" cy="275.5" rx="194.5" ry="51.5" fill="#979797" stroke="#a2a3a2"/>
+  <text transform="translate(151 153)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    X
+  </text>
+  <path data-name="Rectangle" fill="#a2a3a2" d="M435 194h348v152H435z"/>
+  <text transform="translate(145 469)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" letter-spacing="-.01em" style="isolation:isolate">
+    Ledger<tspan x="7.04" y="0" letter-spacing="0em"></tspan>
+  </text>
+  <text transform="translate(188.69 469)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+  </text>
+  <text transform="translate(145 484)" font-size="14" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    X
+  </text>
+  <text transform="translate(663.12 292)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    definition
+  </text>
+  <text transform="translate(216.75 287)" font-size="19" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Channel1
+  </text>
+  <path data-name="Rectangle" fill="#c5c5c5" d="M718 182h106v36H718z"/>
+  <text transform="translate(731.23 206)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Orderer CA<tspan x="11.39" y="0" letter-spacing="0em"></tspan>
+  </text>
+  <text transform="translate(455.45 229)" font-size="19" fill="#fff" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Orderer Org<tspan x="13.53" y="0" letter-spacing="0em"></tspan>
+  </text>
+  <path data-name="Rectangle" fill="#c5c5c5" d="M632 248h125v56H632z"/>
+  <path fill="#c5c5c5" d="M462 247h125v56H462z"/>
+  <text transform="translate(651.31 272)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Orderer MSP<tspan x="11.39" y="0" letter-spacing="0em"></tspan>
+  </text>
+  <text transform="translate(496.32 271)" font-size="16" fill="#565656" font-family="IBMPlexSans-Medium, IBM Plex Sans" style="isolation:isolate">
+    Orderer<tspan x="11.39" y="0" letter-spacing="0em"></tspan>
+  </text>
 </svg>

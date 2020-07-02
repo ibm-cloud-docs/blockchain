@@ -1,14 +1,16 @@
 ---
 
 copyright:
-  years: 2018.2019
+  years: 2018, 2020
 lastupdated: "2019-03-05"
+
+keywords: IBM Blockchain Platform, sample applications, Javascript application, IBM Cloud
 
 subcollection: blockchain
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
@@ -21,14 +23,10 @@ subcollection: blockchain
 {{site.data.keyword.blockchainfull}} Platform provides sample applications that you can deploy and test, so that you can get a better understanding of blockchain networks and application development.
 {:shortdesc}
 
-IBM does not provide support for networks using Hyperledger Composer in production, including the Composer CLI, JavaScript APIs, REST server, and Web Playground.
-{:note}
 
 |  Samples     | Use Case       | Sample type  | Creator and support  |
 | --------------|---------------------|----|-------|
-| [Marbles ![External link icon](../images/external_link.svg "External link icon")](https://github.com/IBM-Blockchain/marbles "Marbles")| Multiple users can create marbles with different properties and transfer them to others. <br> <br> Follow the instructions to deploy Marbles on the {{site.data.keyword.blockchainfull_notm}} Service on {{site.data.keyword.cloud_notm}}. Note that the screen captures display the Enterprise Plan UI, rather than Starter Plan. The functionality is similar. | GO chaincode with a Javascript application| IBM<br> [Get help ![External link icon](../images/external_link.svg "External link icon")](https://github.com/IBM-Blockchain/marbles/issues "Get help") |
+| [Marbles](https://github.com/IBM-Blockchain/marbles){: external}| Multiple users can create marbles with different properties and transfer them to others. <br> <br> Follow the instructions to deploy Marbles on the {{site.data.keyword.blockchainfull_notm}} Service on {{site.data.keyword.cloud_notm}}. | GO chaincode with a JavaScript application| IBM<br> [Get help](https://github.com/IBM-Blockchain/marbles/issues){: external} |
 
 
-The sample applications are created by IBM and community partners. Support for samples will be provided through the corresponding GitHub repositories. If you run into a problem, click the **Get help** link next to the publisher name, and open an issue in the GitHub repo to notify the relevant team.
-
-To deploy samples, you need a blockchain network on {{site.data.keyword.cloud_notm}} with either Starter Plan or Enterprise Plan, and configure a channel and peers. For more information, see [Getting started with Starter Plan](/docs/services/blockchain/get_start_starter_plan.html#getting-started-with-starter-plan) and [Getting started with Enterprise Plan](/docs/services/blockchain/get_start.html#getting-started-with-enterprise-plan).
+The sample applications are created by {{site.data.keyword.IBM_notm}} and community partners. Support for samples will be provided through the corresponding GitHub repositories. If you run into a problem, click the **Get help** link next to the publisher name, and open an issue in the GitHub repo to notify the relevant team. To deploy samples, you need a blockchain network on Enterprise Plan, and configure a channel and peers.

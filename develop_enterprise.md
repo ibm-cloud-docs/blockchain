@@ -1,37 +1,46 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-08"
+  years: 2017, 2020
+lastupdated: "2019-06-18"
+
+keywords: business network, Enterprise Plan, developer environment, certificate authority card, admin business network card, BNA, business network archive
+
+subcollection: blockchain
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:tip: .tip}
+{:note: .note}
+{:gif: data-image-type='gif'}
 
-# Deploying a business network on Enterprise Plan
+# Deploying business networks to Enterprise Plan
 {: #deploying-a-business-network}
 
-**IBM recommends using Hyperledger Composer solely for demos and proof-of-concepts. IBM does not provide support for networks using Hyperledger Composer in production, including the Composer CLI, JavaScript APIs, REST server, and Web Playground.**
+{{site.data.keyword.IBM}} does not provide support for networks that use Hyperledger Composer in production, including the Composer CLI, JavaScript APIs, REST server, and Web Playground.
+{:note}
 
-***[Is this page helpful? Tell us.](https://www.surveygizmo.com/s3/4501493/IBM-Blockchain-Documentation)***
+Business networks can be developed and deployed to Enterprise Plan networks by using the {{site.data.keyword.blockchainfull_notm}} Platform developer environment and Hyperledger Composer developer toolset. By using the developer environment, you can quickly model and test blockchain business networks and deploy them to an Enterprise Plan network of the {{site.data.keyword.blockchainfull_notm}} Platform.
+{:shortdesc}
 
-
-{{site.data.keyword.blockchainfull}} Platform: Develop's developer tools help you create a **Business Network Definition** which can then be packaged up into a business network archive (`.bna`). The developer environment allows you to deploy `.bna` files to a local or cloud {{site.data.keyword.blockchain}} for development and sharing.
+{{site.data.keyword.blockchainfull_notm}} Platform's developer tools help you create a **Business Network Definition** that can then be packaged up into a business network archive (`.bna`). The developer environment allows you to deploy `.bna` files to a local or cloud {{site.data.keyword.blockchain}} for development and sharing.
 
 This tutorial deals with the next step of a business network lifecycle, that is, to activate your business network by deploying the `.bna` to {{site.data.keyword.blockchainfull_notm}} Platform Enterprise Plan.
 
 ## Before you begin
+{: #deploying-a-business-network-enterprise-plan-before-begin}
 
 Ensure that you have installed the {{site.data.keyword.blockchainfull_notm}} developer environment and are comfortable with developing and deploying business networks. Guidance on writing business networks is available in the [Hyperledger Composer documentation](https://hyperledger.github.io/composer/latest/business-network/business-network-index).
 
-You need access to an Enterprise Plan instance of {{site.data.keyword.blockchainfull_notm}} Platform, and to have created your peers beforehand. For more information about {{site.data.keyword.blockchainfull_notm}} Platform Enterprise Plan, see the [Enterprise Plan overview](./enterprise_plan.html).
+You need access to an Enterprise Plan instance of {{site.data.keyword.blockchainfull_notm}} Platform, and to have created your peers beforehand. For more information about {{site.data.keyword.blockchainfull_notm}} Platform Enterprise Plan, see the [Enterprise Plan overview](/docs/blockchain?topic=blockchain-enterprise-plan-about#enterprise-plan-about).
 
-## Step One: Create a connection profile for {{site.data.keyword.blockchainfull_notm}} Platform
+## Step one: Create a connection profile for {{site.data.keyword.blockchainfull_notm}} Platform
+{: #deploying-a-business-network-create-connection-profile}
 
 1. Create a directory to store your connection details, for example:
 
@@ -54,30 +63,34 @@ You need access to an Enterprise Plan instance of {{site.data.keyword.blockchain
     /Users/myUserId/.composer-connection-profiles/bmx-hlfv11
     ```
 
-## Step Two: Retrieve your connection profile
+## Step two: Retrieve your connection profile
+{: #deploying-a-business-network-retrieve-connection-profile}
 
 1. From your {{site.data.keyword.blockchainfull_notm}} Platform dashboard, select **Overview**, then **Connection Profile** and the **Download** button to retrieve your connection profile.
 
 2. Save the connection profile in the directory structure created in the preceding step. Name it **connection.json**.
 
-## Step Three: Adding channel information
+## Step three: Add channel information
+{: #deploying-a-business-network-add-channel-information}
 
 1. Add the channel value in the `connection.json` to match the name of the channel that you plan to create and deploy your business network to. In the example connection profile template provided, the channels element is as follows: `"channels": {},`.
 
-## Step Four: Preparing your peers
+## Step Four: Prepare your peers
+{: #deploying-a-business-network-prepare-peers}
 
-**Please Note**: This step **must** be performed before you create the channel to deploy a business network to. If this step is performed after channel creation, a deployed business network **may not start**.
+This step **MUST** be performed before you create the channel to deploy a business network to. If this step is performed after channel creation, a deployed business network **might not start**.
+{:note}
 
 In the Connection Profile document under **certificateAuthorities** is an attribute **registrar** that contains attributes for **enrollId** and **enrollSecret** in the following format:
 
- ```
+  ```
         "registrar": [
             {
                 "enrollId": "admin",
                 "enrollSecret": "PA55W0RD12"
             }
         ],
- ```
+  ```
 
 1. Create a business network card for the CA by using the following command:
 
@@ -95,7 +108,7 @@ In the Connection Profile document under **certificateAuthorities** is an attrib
     ```
     {:codeblock}
 
-3. After the card has been imported, it can be used to acquire the certificates from the certificate authority using the following command:
+3. After the card has been imported, it can be used to acquire the certificates from the Certificate Authority using the following command:
 
     ```
     composer identity request --card ca --path ./credentials -u admin -s PA55W0RD12
@@ -114,7 +127,8 @@ In the Connection Profile document under **certificateAuthorities** is an attrib
 
 8. The certificate should now appear in the list of certificates.
 
-## Step Five: Creating your channel
+## Step five: Create your channel
+{: #deploying-a-business-network-create-your-channel}
 
 1. Select **Channels** from the navigation menu on the left panel and click the **New Channel** button.
 
@@ -130,7 +144,8 @@ In the Connection Profile document under **certificateAuthorities** is an attrib
 
 7. Select **Channels** from the navigation menu. The new channel in the list of channels and should have “No peers added yet”. Click the actions menu next to it and select **Join Peers**. Check the check boxes next to the Peers you want to add and press **Add Selected**.
 
-## Step Six: Creating a new identity to administer your business network
+## Step six: Create a new identity to administer your business network
+{: #deploying-a-business-network-add-new-identity-enterprise-plan}
 
 Create business network card by using the requested certificates. This business network card will have the authority to install chaincode onto the peers that have your uploaded public certificate and will be an issuer for the certificate authorities.
 
@@ -153,7 +168,8 @@ Create business network card by using the requested certificates. This business 
     Now we are ready to deploy your `.bna` file to the {{site.data.keyword.blockchainfull_notm}} Platform.
 
 
-## Step Seven: Deploying the business network
+## Step seven: Deploy the business network
+{: #deploying-a-business-network-deploy-business-network-enterprise-plan}
 
 Now you can deploy your `.bna` file to the {{site.data.keyword.blockchainfull_notm}} Platform.
 

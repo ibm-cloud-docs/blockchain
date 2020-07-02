@@ -1,0 +1,232 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 793.03 536.77">
+  <defs>
+    <style>
+      .cls-1,.cls-16,.cls-34{fill:#fff}.cls-1{stroke:#f0f0f0}.cls-1,.cls-21,.cls-22,.cls-27,.cls-35{stroke-miterlimit:10}.cls-2{fill:#f0f0f0}.cls-4{font-size:8.13px}.cls-19,.cls-34,.cls-4,.cls-6{font-family:IBMPlexSans, IBM Plex Sans}.cls-11{font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700}.cls-6{font-size:6.39px}.cls-7{fill:#eb4b86}.cls-31,.cls-8{fill:#757575}.cls-30,.cls-9{fill:#0db5b3}.cls-17,.cls-20,.cls-21,.cls-22,.cls-27,.cls-28,.cls-29,.cls-35{fill:none}.cls-11{font-size:10px}.cls-12{letter-spacing:-0.01em}.cls-15{letter-spacing:0em}.cls-17{stroke:#a0a0a0}.cls-17,.cls-20,.cls-28,.cls-29,.cls-30,.cls-31,.cls-32{stroke-linejoin:round}.cls-18{fill:#a0a0a0}.cls-19{font-size:7px}.cls-20,.cls-21,.cls-22,.cls-27,.cls-28,.cls-29,.cls-30,.cls-31,.cls-32,.cls-35{stroke:#fff}.cls-20,.cls-22,.cls-27,.cls-28,.cls-29,.cls-30,.cls-31,.cls-32{stroke-linecap:round}.cls-20,.cls-21{stroke-width:0.72px}.cls-22,.cls-29,.cls-30,.cls-31,.cls-32{stroke-width:0.75px}.cls-24{letter-spacing:-0.01em}.cls-26{letter-spacing:0em}.cls-27,.cls-28{stroke-width:0.65px}.cls-32{fill:#006161}.cls-34{font-size:10.08px}
+    </style>
+  </defs>
+  <rect class="cls-1" x="306.5" y="135.24" width="387.5" height="302.26"/>
+  <rect class="cls-1" x="312.5" y="129.24" width="387.5" height="302.26"/>
+  <rect class="cls-2" x="319.5" y="122.24" width="387.5" height="302.26"/>
+  <polyline points="36.05 72.14 756.98 72.14 756.98 36.07 36.05 36.07" style="stroke:#000;stroke-width:0.35px;stroke-miterlimit:10;fill:#fff"/>
+  <text class="cls-4" transform="translate(35.47 30.13)">
+    IBM Blockchain Platform
+  </text>
+  <text class="cls-4" transform="translate(425.8 30.13)">
+    Legend
+  </text>
+  <text transform="translate(35.47 60.59)" style="font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700;font-size:18.1px">
+    Red Hat OpenShift
+  </text>
+  <text class="cls-6" transform="translate(443.17 48.63)">
+    RBAC
+  </text>
+  <circle cx="431.42" cy="45.91" r="5.35"/>
+  <circle class="cls-7" cx="431.42" cy="61.48" r="5.35"/>
+  <text class="cls-6" transform="translate(442.69 63.7)">
+    Console
+  </text>
+  <circle class="cls-8" cx="497.45" cy="61.48" r="5.35"/>
+  <text class="cls-6" transform="translate(508.72 63.7)">
+    Routes
+  </text>
+  <text class="cls-6" transform="translate(508.62 48.63)">
+    Infrastructure
+  </text>
+  <circle class="cls-9" cx="497.45" cy="45.91" r="5.35"/>
+  <line x1="414.54" y1="72.14" x2="414.54" y2="36.07" style="fill:none;stroke:#000;stroke-width:0.35px;stroke-miterlimit:10"/>
+  <text class="cls-11" transform="translate(56.68 110.35)">
+    IBM Blockchain Platform Kubernetes Cluster<tspan x="0" y="12">Operational Tooling</tspan>
+  </text>
+  <text class="cls-11" transform="translate(318.68 110.35)">
+    Openshift Clu<tspan class="cls-12" x="63.96" y="0">s</tspan><tspan x="68.92" y="0" style="letter-spacing:0em">t</tspan><tspan x="72.71" y="0">er Se</tspan><tspan x="96.59" y="0" style="letter-spacing:0.01em">r</tspan><tspan x="100.7" y="0">vi</tspan><tspan class="cls-15" x="108.94" y="0">c</tspan><tspan x="114.06" y="0">e In</tspan><tspan class="cls-12" x="132.32" y="0">s</tspan><tspan x="137.28" y="0">tan</tspan><tspan class="cls-15" x="152.76" y="0">c</tspan><tspan x="157.88" y="0">e 1</tspan>
+  </text>
+  <rect class="cls-16" x="542.66" y="261" width="148" height="69"/>
+  <path class="cls-17" d="M428,219v9.68c0,2.84,3.18,5.15,7.11,5.15H482.6c3.93,0,7.11,2.3,7.11,5.14v5.52"/>
+  <polygon class="cls-18" points="487.22 243.76 489.71 248.08 492.21 243.76 487.22 243.76"/>
+  <line class="cls-17" x1="427.57" y1="244.49" x2="427.57" y2="219"/>
+  <polygon class="cls-18" points="430.06 243.76 427.57 248.08 425.08 243.76 430.06 243.76"/>
+  <text class="cls-19" transform="translate(351.52 299.26)">
+    Peer-1
+  </text>
+  <circle class="cls-9" cx="362.59" cy="271.49" r="18"/>
+  <line class="cls-20" x1="365.97" y1="277.72" x2="369.28" y2="283.48"/>
+  <path class="cls-20" d="M366.5,275.67a5.46,5.46,0,1,0-9.39-3.78,5.4,5.4,0,0,0,1.51,3.76l1.22,1-4,6.82"/>
+  <path class="cls-20" d="M367.22,257.62A15,15,0,0,0,353.7,284"/>
+  <path class="cls-20" d="M371.43,284A15,15,0,0,0,370,258.83"/>
+  <circle class="cls-21" cx="365.29" cy="276.55" r="1.36"/>
+  <circle class="cls-21" cx="370.18" cy="284.84" r="1.36"/>
+  <circle class="cls-21" cx="368.59" cy="258.14" r="1.36"/>
+  <path class="cls-21" d="M353.9,284.13a1,1,0,0,1,.2-.25,1.35,1.35,0,1,1-.2.25"/>
+  <g>
+    <text class="cls-19" transform="translate(351.52 350.28)">
+      Peer-2
+    </text>
+    <circle class="cls-9" cx="362.59" cy="322.51" r="18"/>
+    <g>
+      <line class="cls-20" x1="365.97" y1="328.74" x2="369.28" y2="334.49"/>
+      <path class="cls-20" d="M366.5,326.69a5.46,5.46,0,1,0-9.39-3.79,5.41,5.41,0,0,0,1.51,3.77l1.22,1-4,6.81"/>
+      <path class="cls-20" d="M367.22,308.64A15,15,0,0,0,353.7,335"/>
+      <path class="cls-20" d="M371.43,335A15,15,0,0,0,370,309.85"/>
+      <circle class="cls-21" cx="365.29" cy="327.56" r="1.36"/>
+      <circle class="cls-21" cx="370.18" cy="335.86" r="1.36"/>
+      <circle class="cls-21" cx="368.59" cy="309.15" r="1.36"/>
+      <path class="cls-21" d="M353.9,335.15a1.21,1.21,0,0,1,.2-.26,1.36,1.36,0,0,1,1.93,1.93,1.36,1.36,0,0,1-2.13-1.67"/>
+    </g>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(351.52 401.51)">
+      Peer-3
+    </text>
+    <circle class="cls-9" cx="362.59" cy="373.74" r="18"/>
+    <g>
+      <line class="cls-20" x1="365.97" y1="379.97" x2="369.28" y2="385.72"/>
+      <path class="cls-20" d="M366.5,377.91a5.45,5.45,0,1,0-7.88,0l1.22,1-4,6.81"/>
+      <path class="cls-20" d="M367.22,359.87a15,15,0,0,0-13.52,26.36"/>
+      <path class="cls-20" d="M371.43,386.24A15,15,0,0,0,370,361.07"/>
+      <circle class="cls-21" cx="365.29" cy="378.79" r="1.36"/>
+      <circle class="cls-21" cx="370.18" cy="387.09" r="1.36"/>
+      <circle class="cls-21" cx="368.59" cy="360.38" r="1.36"/>
+      <path class="cls-21" d="M353.9,386.38a1.21,1.21,0,0,1,.2-.26,1.38,1.38,0,1,1-.2.26"/>
+    </g>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(472.69 299.35)">
+      Orderer-1
+    </text>
+    <circle class="cls-9" cx="488.42" cy="271.49" r="18"/>
+    <g>
+      <line class="cls-20" x1="491.72" y1="277.59" x2="495.03" y2="283.34"/>
+      <path class="cls-20" d="M492.25,275.53a5.45,5.45,0,1,0-7.88,0l1.22,1-4,6.81"/>
+      <path class="cls-20" d="M493,257.49a15,15,0,0,0-13.53,26.36"/>
+      <path class="cls-20" d="M497.18,283.86a15,15,0,0,0-1.48-25.17"/>
+      <circle class="cls-21" cx="491.04" cy="276.41" r="1.36"/>
+      <circle class="cls-21" cx="495.93" cy="284.71" r="1.36"/>
+      <circle class="cls-21" cx="494.34" cy="258" r="1.36"/>
+      <path class="cls-21" d="M479.65,284a1.64,1.64,0,0,1,.2-.26,1.38,1.38,0,1,1-.2.26"/>
+    </g>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(419 299.15)">
+      CA-1
+    </text>
+    <circle class="cls-9" cx="426.57" cy="271.49" r="18"/>
+    <g>
+      <line class="cls-20" x1="429.75" y1="277.72" x2="433.06" y2="283.48"/>
+      <path class="cls-20" d="M430.27,275.67a5.45,5.45,0,1,0-7.87,0l1.21,1-4,6.82"/>
+      <path class="cls-20" d="M431,257.62A15,15,0,0,0,417.48,284"/>
+      <path class="cls-20" d="M435.21,284a15,15,0,0,0-1.48-25.16"/>
+      <circle class="cls-21" cx="429.07" cy="276.55" r="1.36"/>
+      <circle class="cls-21" cx="433.96" cy="284.84" r="1.36"/>
+      <circle class="cls-21" cx="432.37" cy="258.14" r="1.36"/>
+      <path class="cls-21" d="M417.68,284.13a1,1,0,0,1,.2-.25,1.35,1.35,0,1,1-.2.25"/>
+    </g>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(419 350.17)">
+      CA-2
+    </text>
+    <circle class="cls-9" cx="426.57" cy="322.51" r="18"/>
+    <g>
+      <line class="cls-20" x1="429.75" y1="328.74" x2="433.06" y2="334.49"/>
+      <path class="cls-20" d="M430.27,326.69a5.45,5.45,0,1,0-7.87,0l1.21,1-4,6.81"/>
+      <path class="cls-20" d="M431,308.64A15,15,0,0,0,417.48,335"/>
+      <path class="cls-20" d="M435.21,335a15,15,0,0,0-1.48-25.16"/>
+      <circle class="cls-21" cx="429.07" cy="327.56" r="1.36"/>
+      <circle class="cls-21" cx="433.96" cy="335.86" r="1.36"/>
+      <circle class="cls-21" cx="432.37" cy="309.15" r="1.36"/>
+      <path class="cls-21" d="M417.68,335.15a1.21,1.21,0,0,1,.2-.26,1.36,1.36,0,0,1,1.93,1.93,1.36,1.36,0,0,1-2.13-1.67"/>
+    </g>
+  </g>
+  <g>
+    <rect class="cls-1" x="62.06" y="153.24" width="128.55" height="74.21"/>
+    <rect class="cls-1" x="67.06" y="148.24" width="128.55" height="74.21"/>
+    <rect class="cls-2" x="71.68" y="142.79" width="128.55" height="74.21"/>
+    <text class="cls-19" transform="translate(104.26 197.66)">
+      Operational Tooling <tspan x="17.83" y="8.4">Instance</tspan>
+    </text>
+    <circle class="cls-7" cx="135.83" cy="169.41" r="18"/>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(607.72 319.27)">
+      RBAC
+    </text>
+    <circle cx="616.66" cy="291.49" r="18"/>
+    <path class="cls-22" d="M621.43,285.53a4.85,4.85,0,1,1-4.85-4.85,4.85,4.85,0,0,1,4.85,4.85"/>
+    <path class="cls-22" d="M607.13,302.34a9.69,9.69,0,0,1,19-.13"/>
+    <circle class="cls-22" cx="616.64" cy="291.63" r="14.32"/>
+  </g>
+  <rect class="cls-16" x="542.66" y="148" width="148" height="72"/>
+  <rect class="cls-16" x="354.19" y="147" width="148" height="69"/>
+  <text class="cls-19" transform="translate(328.84 136.68)">
+    Se<tspan x="7.91" y="0" style="letter-spacing:0.01em">r</tspan><tspan x="10.55" y="0">vi</tspan><tspan class="cls-24" x="15.74" y="0">c</tspan><tspan x="19.22" y="0">e in</tspan><tspan x="30.44" y="0" style="letter-spacing:-0.01em">s</tspan><tspan x="33.8" y="0">tan</tspan><tspan class="cls-24" x="43.97" y="0">c</tspan><tspan class="cls-26" x="47.45" y="0">e namespa</tspan><tspan class="cls-24" x="81.82" y="0">c</tspan><tspan class="cls-26" x="85.3" y="0">e</tspan>
+  </text>
+  <g>
+    <path class="cls-17" d="M426.71,219v9.68c0,2.84-3.18,5.15-7.11,5.15H372.11c-3.93,0-7.11,2.3-7.11,5.14v5.52"/>
+    <polygon class="cls-18" points="362.51 243.76 365 248.08 367.49 243.76 362.51 243.76"/>
+  </g>
+  <g>
+    <line class="cls-17" x1="398.41" y1="179.31" x2="159" y2="179.31"/>
+    <polygon class="cls-18" points="397.68 176.81 402 179.31 397.68 181.8 397.68 176.81"/>
+  </g>
+  <g>
+    <path class="cls-27" d="M132.4,176.36c1.09-.06,2.24-.1,3.43-.1a46.9,46.9,0,0,1,8.68.72c2.22.45,3.6,1.06,3.6,1.74s-1.38,1.29-3.6,1.73a46,46,0,0,1-8.68.72c-.85,0-1.68,0-2.49,0l-.94-.05"/>
+    <path class="cls-27" d="M125.65,180.09c-1.32-.39-2.09-.87-2.09-1.37,0-.68,1.37-1.29,3.59-1.74.79-.15,1.68-.29,2.65-.4"/>
+    <path class="cls-27" d="M132.4,171.45c1.09-.06,2.24-.1,3.43-.1a46.9,46.9,0,0,1,8.68.72c2.22.45,3.6,1.06,3.6,1.74s-1.38,1.29-3.6,1.73a46,46,0,0,1-8.68.72c-.85,0-1.68,0-2.49,0l-.94,0"/>
+    <path class="cls-27" d="M125.65,175.18c-1.32-.39-2.09-.86-2.09-1.37,0-.68,1.37-1.29,3.59-1.74.79-.15,1.68-.29,2.65-.4"/>
+    <path class="cls-27" d="M132.4,166.54c1.09-.06,2.24-.1,3.43-.1a46.9,46.9,0,0,1,8.68.72c2.22.45,3.6,1.06,3.6,1.74s-1.38,1.29-3.6,1.73a46,46,0,0,1-8.68.72c-.85,0-1.68,0-2.49,0l-.94,0"/>
+    <path class="cls-27" d="M125.65,170.27c-1.32-.39-2.09-.86-2.09-1.37,0-.68,1.37-1.29,3.59-1.74.79-.15,1.68-.29,2.65-.4"/>
+    <path class="cls-27" d="M132.4,161.63c1.09-.06,2.24-.09,3.43-.09a47,47,0,0,1,8.68.71c2.22.45,3.6,1.06,3.6,1.74s-1.38,1.29-3.6,1.74a47,47,0,0,1-8.68.71c-.85,0-1.68,0-2.49-.05l-.94,0"/>
+    <path class="cls-27" d="M125.65,165.36c-1.32-.39-2.09-.86-2.09-1.37,0-.68,1.37-1.29,3.59-1.74.79-.15,1.68-.29,2.65-.4"/>
+    <circle class="cls-28" cx="131.03" cy="166.24" r="1.23"/>
+    <path class="cls-27" d="M125.65,160.45c-1.32-.39-2.09-.86-2.09-1.37,0-.68,1.37-1.29,3.59-1.73a52.68,52.68,0,0,1,17.36,0c2.22.44,3.6,1.05,3.6,1.73s-1.38,1.29-3.6,1.74a46.9,46.9,0,0,1-8.68.72c-.85,0-1.68,0-2.49,0l-1-.05"/>
+    <circle class="cls-28" cx="131.03" cy="161.33" r="1.23"/>
+    <circle class="cls-28" cx="131.03" cy="171.15" r="1.23"/>
+    <circle class="cls-28" cx="131.03" cy="176.06" r="1.23"/>
+    <circle class="cls-28" cx="131.03" cy="180.97" r="1.23"/>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(602.61 209.27)">
+      Operator
+    </text>
+    <circle class="cls-9" cx="616.73" cy="180.68" r="18"/>
+    <line class="cls-29" x1="616.61" y1="182.87" x2="616.61" y2="167.35"/>
+    <line class="cls-29" x1="621.39" y1="180.48" x2="621.39" y2="167.35"/>
+    <line class="cls-29" x1="611.84" y1="180.48" x2="611.84" y2="167.35"/>
+    <polyline class="cls-29" points="628.02 181.47 616.65 174.91 605.27 181.47 605.27 187.04 616.65 193.61 628.02 187.04 628.02 181.47"/>
+    <polyline class="cls-29" points="605.27 181.47 616.65 188.04 628.02 181.47"/>
+    <circle class="cls-30" cx="616.61" cy="182.87" r="1.19"/>
+    <circle class="cls-30" cx="611.84" cy="180.48" r="1.19"/>
+    <circle class="cls-30" cx="621.39" cy="180.48" r="1.19"/>
+  </g>
+  <g>
+    <text class="cls-19" transform="translate(415.53 205.27)">
+      Routes
+    </text>
+    <circle class="cls-8" cx="426.6" cy="177.13" r="18"/>
+    <polyline class="cls-31" points="436 174.8 418.34 174.8 418.34 176.82"/>
+    <polyline class="cls-31" points="419.08 186.84 436 186.84 436 174.8"/>
+    <line class="cls-32" x1="426.06" y1="168.82" x2="426.06" y2="186.84"/>
+    <circle class="cls-31" cx="426.06" cy="168.82" r="1.1"/>
+    <line class="cls-32" x1="431.21" y1="165.88" x2="431.21" y2="186.84"/>
+    <circle class="cls-31" cx="431.21" cy="165.88" r="1.1"/>
+    <line class="cls-32" x1="420.91" y1="171.94" x2="420.91" y2="186.84"/>
+    <circle class="cls-31" cx="420.91" cy="171.76" r="1.1"/>
+    <polygon class="cls-31" points="413.19 176.91 418.89 186.84 436 186.84 430.2 176.91 413.19 176.91"/>
+  </g>
+  <rect class="cls-8" x="33.01" y="458" width="727" height="56"/>
+  <text transform="translate(45.68 481.35)" style="font-size:14.4px;font-family:IBMPlexSans-Bold, IBM Plex Sans;font-weight:700;fill:#fff">
+    Service instance cluster<tspan x="0" y="17.28">details:</tspan>
+  </text>
+  <text class="cls-34" transform="translate(241.84 482.45)">
+    Clusters can either be single <tspan x="0" y="12.1">or multi-zone</tspan>
+  </text>
+  <text class="cls-34" transform="translate(417.06 482.45)">
+    Anti-affinity rules will be used to deploy <tspan x="0" y="12.1">node across Multi Zone Region (MZR)</tspan>
+  </text>
+  <text class="cls-34" transform="translate(643.84 482.45)">
+    Customer provisions <tspan x="0" y="12.1">compute of choice</tspan>
+  </text>
+  <line class="cls-35" x1="236" y1="475" x2="236" y2="496"/>
+  <line class="cls-35" x1="410.5" y1="475" x2="410.5" y2="496"/>
+  <line class="cls-35" x1="638.5" y1="475" x2="638.5" y2="496"/>
+</svg>

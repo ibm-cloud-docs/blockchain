@@ -1,0 +1,413 @@
+{
+    "ibp-v2-faq-v2-IBP-Overview-1-7": [
+        "Why is IBP better than Hyperledger Fabric",
+        "Why is Blockchain better than Hyperledger Fabric",
+        "Why is IBP better than HLF",
+        "Why is Blockchain better than HLF",
+        "Why is IBM Blockchain Platform better than Hyperledger Fabric"
+    ],
+    "ibp-v2-faq-version": [
+        "What version of IBP am I running",
+        "What version of IBM Blockchain Platform am I running",
+        "What is my Blockchain version",
+        "What version is Blockchain",
+        "What version is IBP"
+    ],
+    "ibp-v2-faq-v2-Hyperledger-Fabric-3-1": [
+        "What version of Hyperledger Fabric is being used with IBM Blockchain Platform",
+        "What version of HLF is being used with IBP",
+        "What version of Hyperledger is being used with Blockchain",
+        "What version of Hyperledger is being used with IBP",
+        "Hyperledger and Blockchain versions"
+    ],
+    "ibp-v2-faq-v2-IBP-Overview-1-3": [
+        "What is the database for peers in blockchain",
+        "Are my peers using couchdb",
+        "Are my peers using leveldb in IBP",
+        "couchdb or leveldb for my peers in blockchain",
+        "what database is being used in my channel for IBP"
+    ],
+    "ibp-v2-faq-v2-IBP-Overview-1-4": [
+        "what languages are used for a smart contract",
+        "can I use golang for my smart contract ",
+        "can I use node.js for my smart contract in blockchain",
+        "can I use Javascript for my smart contract",
+        "languages supported bu smart contract in IBP",
+        "can I use Java for my smart contract"
+    ],
+    "ibp-v2-faq-v2-external-certs": [
+        "can I use my own cert with my peer for blockchain",
+        "can I use my own cert with my orderer in blockchain",
+        " X.509 compliant certificate in blockchain platform",
+        "can I use my own certificate with my peer in IBP",
+        "can I use my own blockchain certificate with my orderer",
+        "can I use a certificate from an external CA in IBP",
+        "can I use a cert from an external CA within blockchain"
+    ],
+    "ibp-v2-faq-migrate-raft": [
+        "use raft migrate from Hyperledger Fabric v1.4.x to IBM Blockchain Platform",
+        "use raft with IBM Blockchain Platform",
+        "migrate from HLF v1.4.x to IBM Blockchain Platform and use raft",
+        "migrate from HLF v1.4.x to IBP and use raft",
+        "migrate from HLF v1.4.x to blockchain and use raft"
+    ],
+    "ibp-v2-faq-vscode-tutorials": [
+        "VSCode extension tutorials Blockchain",
+        "vscode tutorial for blockchain",
+        "VSCode extension tutorials IBM Blockchain Platform",
+        "tutorials within the VSCode extension for blockchain",
+        "VSCode extension tutorials IBP"
+    ],
+    "ibp-v2-faq-mon-client-app": [
+        "monitor IBM Blockchain Platform health",
+        "monitoring the health of a IBP client ",
+        "monitor blockchain health",
+        "health of IBM Blockchain Platform",
+        "health of IBP",
+        "health of blockchain"
+    ],
+    "ibp-v2-faq-mon-res": [
+        "monitoring blockchain resources best practices",
+        "monitoring IBP resources",
+        "monitoring IBM Blockchain Platform resources",
+        "blockchain and IKS resources monitoring ",
+        "monitor blockchain and IKS resources",
+        "monitoring blockchain and kubernetes resources"
+    ],
+    "ibp-v2-faq-service-discovery": [
+        "service discovery routing in blockchain",
+        "peer routing for blockchain",
+        "endorsement policy with service discovery in blockchain",
+        "using Layouts and EndorsersByGroup with service discovery",
+        "will an endorsement request be routed to any peer in block chain"
+    ],
+    "ibp-v2-faq-hsm": [
+        "how do I manage private keys for blockchain",
+        "use an HSM for private keys in blockchain",
+        "use Hardware Security Module for private keys in blockchain",
+        "securing keys in IBP",
+        "securing keys in blockchain"
+    ],
+    "ibp-v2-faq-hippa": [
+        "Does IBP support HIPAA",
+        "HIPAA support for blockchain",
+        "IBM Blockchain Platform HIPAA ready",
+        "Does Blockckchain support HIPAA",
+        "Does IBM Blockckchain Platform support HIPAA"
+    ],
+    "ibp-v2-ports": [
+        "What ports does IBM Blockchain Platform use",
+        "What ports does IBP use",
+        "What ports does Blockchain use",
+        "I need to open ports for Blockchain console",
+        "console ports for IBP",
+        "ports used by blockchain",
+        "console ports for Blockchain",
+        "console ports for IBM Blockchain Platform"
+    ],
+    "ibp-v2-faq-raft-tls": [
+        "does IBM Blockchain Platform communicate between nodes",
+        "How does IBP communicate between nodes",
+        "does Blockchain communicate between nodes",
+        "Raft nodes use TLS in blockchain",
+        "Does Blockchain use TLS to communicate",
+        "Does Raft service use TLS"
+    ],
+    "ibp-v2-faq-cloud-pricing": [
+        "How am I charged to use IBP",
+        "How am I charged to use IBM Blockchain Platform",
+        "How am I charged to use Blockchain",
+        "how much is blockchain",
+        "What is the cost to use IBP",
+        "pricing plan for IBM Blockchain Platform",
+        "Blockchain charges"
+    ],
+    "ibp-v2-faq-free-cluster": [
+        "Can I use Blockchain for free",
+        "Can I use IBP for free",
+        "Can I use IBM Blockchain Platform for free",
+        "limitation of using free Blockchain",
+        "limitation of using free IBP",
+        "limitation of using free IBM Blockchain Platform"
+    ],
+    "ibp-v2-faq-ocp-versions": [
+        "Redhat Open shift support Blockchain",
+        "versions of Red Hat OpenShift supported on IBP",
+        "Redhat Open shift support IBM Blockchain Platform",
+        "versions of OpenShift supported on IBP",
+        "Redhat Open shift support IBP"
+    ],
+    "ibp-v2-faq-ocp-trial": [
+        "free trial redhat openshift Blockchain",
+        "trial option available for blockchain using a Red Hat ",
+        "free trial redhat openshift on blockchain",
+        "free trial redhat openshift IBM Blockchain Platform",
+        "free trial redhat openshift IBP"
+    ],
+    "ibp-v2-faq-ocp-migrate": [
+        "migrate Kubernetes cluster to a Red Hat OpenShift in Blockchain",
+        "migrate off kubernetes to red hat for blockchain",
+        "migrate the blockchain components on my Kubernetes service cluster to a Red Hat ",
+        "migrate Kubernetes cluster to a Red Hat OpenShift IBP",
+        "migrate Kubernetes cluster to a Red Hat OpenShift IBM Blockchain Platform"
+    ],
+    "ibp-v2-faq-cloud-invoice": [
+        "cost price invoice Kubernetes and Blockchain",
+        "price breakdown for Kubernetes , Storage, and Blockchain in my monthly invoice",
+        "price breakdown for on my invoice for blockchain",
+        "price in the invoice for Kubernetes and IBM Blockchain Platform",
+        "cost price for Kubernetes and IBP on my invoice"
+    ],
+    "ibp-v2-faq-v2-IBP-Overview-1-5": [
+        "upgrade to V 2.0 version Blockchain enterprise",
+        "upgrade from V1 to V2 IBM Blockchain Platform",
+        "upgrading Blockchain V1.0 ",
+        "upgrade from V1.0 in IBM Blockchain Platform enterprise",
+        "upgrading V1.0 to  2.0 new version IBP enterprise"
+    ],
+    "ibp-v2-faq-v2-IBP-Overview-1-8": [
+        "deleted delete blockchain CAs, peers, and ordering nodes ",
+        "what happens after I delete Blockchain Platform service",
+        "after deleting Blockchain Platform service",
+        "deleted IBM Blockchain Platform CAs, peers, and ordering nodes ",
+        "deleted delete IBP CAs, peers, and ordering nodes "
+    ],
+    "ibp-v2-faq-v2-IBP-Overview-1-9": [
+        "Blockchain regions available",
+        "locations supported for blockchain",
+        "IBM Blockchain Platform regions available",
+        "IBP regions available",
+        "location availability for IBP",
+        "regions  available for Blockchain Platform "
+    ],
+    "ibp-v2-faq-v2-Infrastructure-4-2": [
+        "existing Kubernetes cluster works with the IBM Blockchain Platform 1.13 1.14 1.15",
+        "use my existing Kubernetes cluster for blockchain",
+        "use my existing Kubernetes with blockchain",
+        "existing Kubernetes cluster working with Blockchain",
+        "existing Kubernetes cluster works with the IBP 1.13 1.14 1.15"
+    ],
+    "ibp-v2-faq-customer-logs": [
+        "audit logs for Blockchain",
+        "blockchain store the customer's logs",
+        "how long are audit logs maintained in blockchain",
+        "find the logs for blockchain",
+        "audit logs for IBP",
+        "long are audit logs for blockchain kept",
+        "audit logs for IBM Blockchain Platform"
+    ],
+    "ibp-v2-faq-v2-Logging-and-Monitoring-11-6": [
+        "access to logging services in blockchain",
+        "get access to logging information in blockchain",
+        "directly access to peer, CA, and ordering node logs in blockchain",
+        "how to access logs in blockchain console",
+        "logging services logs peer, CA, and ordering node logs Kubernetes IBP"
+    ],
+    "ibp-v2-faq-cloud-storage": [
+        "persistent file storage IBM Blockchain Platform classic ",
+        "what persistent file storage does Blockchain use ",
+        "persistent file storage does IBM Blockchain Platform classic use",
+        "persistent file storage for blockchain",
+        "persistent file storage does IBP classic used"
+    ],
+    "ibp-v2-faq-cloud-mzr-storage": [
+        "need multizone region storage for IBM Blockchain ",
+        "multizone region storage requirements for IBP",
+        "multizone region storage needed for IBM Blockchain Platform",
+        "mzr storage needed for blockchain",
+        "is MZR storage required for IBM Blockchain Platform "
+    ],
+    "ibp-v2-troubleshooting-chrome-v77": [
+        "blockchain console actions failing in my Chrome browser?",
+        "Blockchain console not working in Chrome ",
+        "IBP console errors in Chrome Version",
+        "IBP console issue in Chrome",
+        "blockchain console failing in Chrome",
+        "IBM blockchain conflict with Chrome version 77.0.3865.90"
+    ],
+    "ibp-v2-troubleshooting-status-unavailable": [
+        "hover over my node the status is Status unavailable",
+        "IBP node status unavailable.",
+        "Blockchain console peer status unavailable",
+        "IBP CA status unavailable",
+        "IBP orderer node status unavailable"
+    ],
+    "ibp-v2-troubleshooting-status-undetectable": [
+        "hover over my node, the status is Status undetectable",
+        "IBP node status undetectable",
+        "Blockchain console peer status undetectable",
+        "IBP CA status undetectable",
+        "IBP orderer node status undetectable"
+    ],
+    "ibp-troubleshoot-ordering-service": [
+        "error Unable to get system channel when I open my ordering service",
+        "blockchain Unable to get system channel error",
+        "error Unable to get system channel in blockchain",
+        "unable to get system channel message when opening blockchain ordering service",
+        "Blockchain ordering service says unable to get system channel"
+    ],
+    "ibp-console-smart-contracts-troubleshoot-entry1": [
+        "Why did my smart contract installation fail for IBP",
+        "blockchain smart contract instantiation failed",
+        "Blockchain error occurred when installing smart contract on peer.",
+        "Why did my smart contract upgrade fail in blockchain",
+        "smart contract upgrade failing in blockchain",
+        "An error occurred when installing smart contract on peer in blockchain",
+        "IBP smart contract upgrade fail"
+    ],
+    "ibp-console-build-network-troubleshoot-missing-sc": [
+        "smart contract that I installed on the peer not listed in blockchain",
+        "Can't see installed smart contract listed for IBP",
+        "smart contract mising in UI for blockchain",
+        "Smart contract installation on peer not visible on blockchain",
+        "installed smart contract is not listed in blockchain"
+    ],
+    "ibp-v2-troubleshooting-browser-storage": [
+        " channel, smart contracts, and identities have disappeared from the console",
+        "Identities disappeared from Blockchain console",
+        "can't find identities in blockchain console",
+        "IBP console wallet empty",
+        "Channels in IBP gone",
+        "smart contracts not in blockchain UI",
+        "recover wallet identities blockchain"
+    ],
+    "ibp-v2-troubleshooting-create-msp": [
+        "error An error occurred when updating channel when I try to add an organization to my channel in blockchain",
+        "blockchain error An error occurred when updating channel",
+        "An error occurred when updating channel in blockchain",
+        "An error occurred when updating channel error blockchain",
+        "IBP updating channel error when I add an org to channel"
+    ],
+    "ibp-v2-troubleshooting-console-401": [
+        "log in to blockchain console, why am I getting a 401 unauthorized error?",
+        "IBM Blockchain 401 error when I login",
+        "Can't login to IBP, unauthorized error",
+        "blockchain 401 unathorized error",
+        "401 error when logging into BC console"
+    ],
+    "ibp-v2-troubleshooting-console-helm-reset": [
+        "Cluster linking is taking too long error when I try to link Kubernetes Service cluster to Blockchain Platform service instance?",
+        "Cluster linking is taking too long error trying to link blockchain and kubernetes",
+        "error Cluster linking is taking too long in blockchain",
+        "Cluster linking is taking too long error in Blockchain",
+        "too long error when linking Kubernetes to Blockchain Platform"
+    ],
+    "ibp-v2-troubleshooting-smart-contract-anchor-peers": [
+        "first invoke of a smart contract returning an error: no suitable peers available to initialize from",
+        "error: no suitable peers available to initialize from in blockchain",
+        "IBP no suitable peers available to initialize from error",
+        "Blockchain no suitable peers error",
+        "can't invoke smart contract because there are no suitable peers"
+    ],
+    "ibp-console-build-network-troubleshoot-entry1": [
+        "node operations failing after I create my peer or ordering service",
+        "blockchain nodes failing after creating peer",
+        "IBP node operations failing after creating ordering service",
+        "created peer and node operations don't work anymore in blockchain",
+        "After creating an ordering service, blockchain node operations fail"
+    ],
+    "ibp-console-build-network-troubleshoot-entry2": [
+        "my peer or ordering node fail to start",
+        "Blockchain peers fail to start",
+        "peers failing to start in Blockchain",
+        "peer fails to start ifor Blockchain",
+        "IBP ordering nodes won't start",
+        "IBM Blockchain peers and nodes don't start"
+    ],
+    "ibp-console-smart-contracts-troubleshoot-entry2": [
+        "view my smart contract container logs in IBP",
+        "IBP where are smart contract container logs",
+        "How to find Blockchain smart contract container logs?",
+        "find the smart contract container logs in IBP",
+        "IBM blockchain smart contract container logs"
+    ],
+    "ibp-v2-troubleshooting-hsm-proxy": [
+        "ordering node that is configured to use HSM not working in IBP",
+        "Blockchain CA configured for HSM doesn't work",
+        "IBP HSM configured peer not working",
+        "blockchain error Private key not found",
+        "Private key not found in blockchain",
+        "nodes that use HSM are not working for blockchain",
+        "ordering node that uses HSM isn't working",
+        "Certificate Authority node isn't working when configured for HSM"
+    ],
+    "ibp-v2-troubleshooting-endorsement-sig-failure": [
+        "transactions returning an endorsement policy error: signature set did not satisfy policy",
+        "IBP signature set did not satisfy policy error",
+        "IBP error signature set did not satisfy policy",
+        "Blockchain transactions returning endorsement policy error",
+        "signature set did not satisfy policy error returns on my blockchain transactions"
+    ],
+    "ibp-v2-troubleshooting-anchor-peer": [
+        "transactions I submit from VS Code failing with a No endorsement plan available error?",
+        "Blockchain transactions from VSCode failing \"no endorsement plan available\"",
+        "No endorsement plan available error in blockchain",
+        "blockchain error No endorsement plan available ",
+        "IBP transactions from VSCode failing from endorsement plan error",
+        "VS Code blockchain transactions returning no endorsement plan available"
+    ],
+    "ibp-v2-troubleshooting-endorsement": [
+        "transactions I submit from VS Code failing with an endorsement failure",
+        "No endorsement plan available error in blockchain",
+        "Blockchain error No endorsement plan available ",
+        "VSCode Blockchain transactions failing from endorsement error",
+        "VS code IBP endorsement error on transactions "
+    ],
+    "ibp-v2-troubleshooting-cluster-expired": [
+        "In Blockchain My IBM Cloud Kubernetes cluster expired",
+        "Blockchain cluster trial has expired",
+        "e-mail that my Kubernetes cluster is about to expire for blockchain",
+        "IBP kube cluster trial ended",
+        "Blockchain cluster expiring "
+    ],
+    "ibp-v2-troubleshooting-unbound-persistent-volume-claim": [
+        "After I deploy a node, I'm seeing a message in my IBM Cloud Kubernetes cluster reporting that the pod has unbound immediate persistent volume claims",
+        "Blockchain \"pod has unbound immediate persistent volume claims\"",
+        "my Kubernetes cluster reporting that the pod has unbound immediate persistent volume claims",
+        "deployed IBP node and see pod unbounded message in Kubernetes "
+    ],
+    "ibp-v2-troubleshooting-crash-loop-backoff": [
+        "After I deploy a node,  Kubernetes cluster reporting that the pod has hit a crash loop backoff",
+        "pod has hit crash loop backoff message after deploying a node",
+        "Kubernetes cluster reporting that the pod has hit a crash loop backoff",
+        "Kubernetes cluster reporting that the pod has hit a crash loop backoff in blockchain",
+        "deployed blockchain node and Kubernetes says the pod has hit a crash loop backoff"
+    ],
+    "ibp-v2-troubleshooting-healthchecks": [
+        "nodes deployed on IBM Cloud Private not processing transactions and are failing health checks",
+        "ICP Blockchain failing health check",
+        "ICP IBP failing health check",
+        "health checks fail for blockchain",
+        "Cloud private blockchain not processing transactions "
+    ],
+    "ibp-console-transientfailure": [
+        "Blockchain Platform Console is showing a \"all SubConns are in TransientFailure\" error. ",
+        "IBP console \"all SubConns are in TransientFailure\" error",
+        "blockchain showing all sub conns are in transient failure error",
+        "IBP transient failure error",
+        "blockchain subconns error"
+    ],
+    "ibp-troubleshooting-delete-peer": [
+        "delete or restart the peer pods in blockchain",
+        "blockchain delete the peer pods",
+        "blockchain how to restart peer pods",
+        "deleting peer pods in IBP",
+        "IBP restart peer pods button",
+        "IBP where to delete peer pods"
+    ],
+    "ibp-troubleshooting-contract-fail": [
+        "upgrade of the smart contract container, the procedure crashed and all the contracts were lost",
+        "recover a contract after a failed upgrade of the smart contract container",
+        "lost all blockchain contracts after crash",
+        "IBP lost contracts after upgrade of smart contract container",
+        "crash removed all blockchain contracts",
+        "Blockchain can't find contracts after upgrade of container "
+    ],
+    "ibp-v2-troubleshooting-upgrade-tool": [
+        "retry a chaincode migration in blockchain",
+        "upgrade my chaincode and get a blockchain error",
+        "encountered an error starting the chaincode container in blockchain",
+        "failed chaincode migration in blockchain",
+        "chaincode migration fails in blockchain console"
+    ]
+}
