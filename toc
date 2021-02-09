@@ -29,7 +29,6 @@ IBM Blockchain Platform for IBM Cloud
 
 	{: .topicgroup}
 	High availability
-		ibp-console-ha.md
 		howto/ibp-console-ic-ha-howto.md
 		howto/ibp-console-ha-os.md
 		howto/ibp-console-ha-ca.md
@@ -113,6 +112,7 @@ IBM Blockchain Platform for IBM Cloud
 
 	{: .navgroup id="reference"}
 	[API reference](https://cloud.ibm.com/apidocs/blockchain)
+	ibp-console-ha.md
 	reference/v10_fabric.md
 	reference/k8s.md
 	[IBM Developer](https://developer.ibm.com/technologies/blockchain/)
