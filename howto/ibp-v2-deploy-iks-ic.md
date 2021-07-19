@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-19"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -221,7 +221,7 @@ To configure this access you must complete the following steps:
    6. Check the **Administrator** and **Manager** roles for this user.
    7. Click **Assign**.
 
-For more information about Kubernetes access control, see [how to pick the right access policy and role for your users](/docs/containers?topic=containers-users#access_roles).
+For more information about Kubernetes access control, see [how to pick the right access policy and role for your users](/docs/containers?topic=containers-users#checking-perms).
 
 ## Post-install instructions
 {: #ibp-v2-deploy-iks-post-install}
