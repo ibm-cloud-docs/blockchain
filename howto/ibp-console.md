@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-13"
+lastupdated: "2021-07-19"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -302,7 +302,7 @@ A single instance of the console, also known as Operational Tooling, is created 
 
 - See this tutorial on how to [Analyze logs and monitor application health with {{site.data.keyword.la_full_notm}} and {{site.data.keyword.cloud_notm}} Monitoring](/docs/solution-tutorials?topic=solution-tutorials-application-log-analysis).
 
-- The {{site.data.keyword.blockchainfull_notm}} Platform peers and orderers are automatically configured to expose a `/metrics` endpoint that Prometheus can use to scrape a wide variety of blockchain metric data. Read more about using [Prometheus in {{site.data.keyword.cloud_notm}}](/docs/cloud-foundry?topic=cloud-foundry-monitoring#prometheus){: external}.
+- The {{site.data.keyword.blockchainfull_notm}} Platform peers and orderers are automatically configured to expose a `/metrics` endpoint that Prometheus can use to scrape a wide variety of blockchain metric data. Read more about using [Prometheus in {{site.data.keyword.cloud_notm}}](/docs/compare-and-comply?topic=compare-and-comply-alerts){: external}.
 
 **Storage**  
 - Utilize {{site.data.keyword.cloud_notm}} [File](/docs/FileStorage?topic=FileStorage-getting-started) or [Block](/docs/BlockStorage?topic=BlockStorage-getting-started) storage when blockchain nodes are provisioned. See the topic on [Persistent storage considerations](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks#ibp-console-storage) to learn more about how blockchain integrates with {{site.data.keyword.cloud_notm}} storage options.
