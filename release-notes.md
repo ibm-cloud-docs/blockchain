@@ -32,14 +32,12 @@ Use these release notes that are grouped by date to learn about the latest chang
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch)  
 For instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative. This means that if multiple patches, for example `1.4.7-0` and `1.4.12-1`, are available for a node, you should always select the latest patch, `1.4.12-1` in this case, wherever possible because it includes the fixes from the previous patches as well.   
 
-
 ## 10 Aug 2021
 {: #10-08-2021}
 
 Miscellaneous bug fixes and security patches.
 
 Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
-
 
 
 
