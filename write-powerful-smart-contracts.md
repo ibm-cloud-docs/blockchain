@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-06-03"
+lastupdated: "2021-08-10"
 
 keywords: smart contract, lifecycle, package, definition
 
@@ -10,16 +10,16 @@ subcollection: blockchain
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:term: .term}
-{:important: .important}
-{:tip: .tip}
-{:pre: .pre}
-{:script: data-hd-video='script'}
+{: external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: screen: .screen}
+{: codeblock: .codeblock}
+{: note: .note}
+{: term: .term}
+{: important: .important}
+{: tip: .tip}
+{: pre: .pre}
+{: script: data-hd-video='script'}
 
 # Writing powerful smart contracts
 {: #write-powerful-smart-contracts}

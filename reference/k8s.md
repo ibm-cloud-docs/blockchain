@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2019, 2020
+  years: 2019, 2021
 lastupdated: "2019-08-30"
 
 subcollection: blockchain
@@ -21,7 +21,7 @@ subcollection: blockchain
 {: #k8s-overview}
 
 The {{site.data.keyword.blockchainfull_notm}} Platform allows you to provision blockchain components into your Kubernetes cluster. Kubernetes is an open-source system for automating deployment, scaling, and management of containerized applications.
-{:shortdesc}
+{: shortdesc}
 
 Kubernetes provides a container-centric management environment. It orchestrates computing, networking, and storage infrastructure on behalf of user workloads. This provides much of the simplicity of Platform as a Service (PaaS) with the flexibility of Infrastructure as a Service (IaaS), and enables portability across infrastructure providers.
 

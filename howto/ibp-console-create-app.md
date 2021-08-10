@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-18"
+lastupdated: "2021-08-10"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -27,7 +27,7 @@ subcollection: blockchain
 
 
 After you install smart contracts and deploy your nodes, you can use client applications to transact with other members of your network. Applications can invoke the business logic that is contained in smart contracts to create, transfer, or update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks that you manage from {{site.data.keyword.blockchainfull}} Platform console.
-{:shortdesc}
+{: shortdesc}
 
 **Target audience:** This topic is designed for application developers who are interested in learning more about how to create a client application that interacts with a blockchain network.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-06-19"
+  years: 2017, 2021
+lastupdated: "2021-08-10"
 
 
 keywords: IBM Blockchain offerings, Linux Foundation, Hyperledger Fabric, open source, community contribution
@@ -11,14 +11,14 @@ subcollection: blockchain
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: codeblock: .codeblock}
+{: screen: .screen}
+{: pre: .pre}
+{: note: .note}
+{: important: .important}
+{: tip: .tip}
+{: external: target="_blank" .external}
 
 # Disclaimer
 {: #disclaimer}
@@ -29,12 +29,12 @@ subcollection: blockchain
 {: #disclaimer-support-statement}
 
 {{site.data.keyword.IBM_notm}}'s long history of leadership in innovation continues with the {{site.data.keyword.blockchainfull_notm}} Platform offerings on {{site.data.keyword.cloud_notm}}. Blockchain is a rapidly progressing technology that is projected to disrupt the financial industry, local and global supply chains, and logistical support in any number of business spaces. Through various early adoption programs, {{site.data.keyword.IBM_notm}} customers and business partners are actively driving blockchain as an industrial solution. {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} is one such program. **As with any new technology, {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} users need to be aware of the potential for rapid and fundamental change**.
-{:shortdesc}
+{: shortdesc}
 
 The architecture behind {{site.data.keyword.blockchainfull_notm}} is the Linux Foundation's Hyperledger Fabric project. Each open-source community contribution improves Hyperledger Fabric but can present adoption challenges. **{{site.data.keyword.IBM_notm}} cautions against defining or exchanging financial assets directly on any Hyperledger Fabric blockchain network**.
 
 {{site.data.keyword.IBM_notm}} does not support networks that use Hyperledger Composer in production, including the Composer CLI, JavaScript APIs, REST server, and Web Playground.
-{:note}
+{: note}
 
 ## Open-source statement
 {: #disclaimer-open-source-statement}

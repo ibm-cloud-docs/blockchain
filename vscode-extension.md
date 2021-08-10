@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-04-19"
+lastupdated: "2021-08-10"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -10,15 +10,15 @@ subcollection: blockchain
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:term: .term}
-{:important: .important}
-{:tip: .tip}
-{:pre: .pre}
-{:external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: codeblock: .codeblock}
+{: screen: .screen}
+{: note: .note}
+{: term: .term}
+{: important: .important}
+{: tip: .tip}
+{: pre: .pre}
+{: external: target="_blank" .external}
 
 
 # Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-04"
+lastupdated: "2021-08-10"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -10,15 +10,15 @@ subcollection: blockchain
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:important: .important}
-{:term: .term}
-{:tip: .tip}
-{:pre: .pre}
+{: external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: screen: .screen}
+{: codeblock: .codeblock}
+{: note: .note}
+{: important: .important}
+{: term: .term}
+{: tip: .tip}
+{: pre: .pre}
 
 
 # Security
@@ -28,7 +28,7 @@ subcollection: blockchain
 
 
 {{site.data.keyword.blockchainfull}} Platform provides a scalable, highly reliable platform that helps customers deploy applications and data quickly and securely. This document provides information about securing your {{site.data.keyword.blockchainfull_notm}} Platform service instance, where the blockchain console runs, and best practices for securing the linked Kubernetes cluster where the blockchain nodes are deployed.
-{:shortdesc}
+{: shortdesc}
 
 ## Security on the {{site.data.keyword.blockchainfull_notm}} Platform console
 {: #ibp-security-ibp}

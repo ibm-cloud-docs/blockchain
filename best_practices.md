@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-03"
+lastupdated: "2021-08-10"
 
 keywords: best practices, develop applications, connectivity, availability, mutual TLS, CouchDB
 
@@ -10,18 +10,18 @@ subcollection: blockchain
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:javascript: data-hd-programlang="javascript"}
-{:java: data-hd-programlang="java"}
-{:screen: .screen}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:help: data-hd-content-type='help'}
-{:support: data-reuse='support'}
-{:pre: .pre}
+{: external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: codeblock: .codeblock}
+{: javascript: data-hd-programlang="javascript"}
+{: java: data-hd-programlang="java"}
+{: screen: .screen}
+{: note: .note}
+{: important: .important}
+{: tip: .tip}
+{: help: data-hd-content-type='help'}
+{: support: data-reuse='support'}
+{: pre: .pre}
 
 
 # Best practices for application development

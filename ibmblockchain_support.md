@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-04"
+lastupdated: "2021-08-10"
 
 keywords: IBM Blockchain Platform, support case, Hyperledger Fabric Community, Cloud tickets, Rocket Chat, dWAnswers
 
@@ -10,20 +10,20 @@ subcollection: blockchain
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:pre: .pre}
+{: external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: codeblock: .codeblock}
+{: screen: .screen}
+{: note: .note}
+{: important: .important}
+{: tip: .tip}
+{: pre: .pre}
 
 # Getting support
 {: #blockchain-support}
 
 {{site.data.keyword.blockchainfull}} Platform provides several avenues for troubleshooting problems and getting support, which depend on the {{site.data.keyword.blockchainfull_notm}} Platform offerings that you use.
-{:shortdesc}
+{: shortdesc}
 
 For all {{site.data.keyword.blockchainfull_notm}} Platform offerings, it is recommended to first use [free digital support resources](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-resources) to troubleshoot problems and get help from {{site.data.keyword.IBM_notm}} and the Hyperledger Fabric Community.
 
@@ -67,7 +67,7 @@ The response to your support case depends on your [{{site.data.keyword.cloud_not
 - If you do not purchase support, your {{site.data.keyword.cloud_notm}} Pay-As-You-Go or Subscription account comes with a free **Basic Support** plan. In this case, your support case is automatically registered as Sev-4.
 
 Before you open a support ticket, you need to [gather your logs](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-logs).
-{:  important}
+{: important}
 
 Follow these steps to submit a support case.
 

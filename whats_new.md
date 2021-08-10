@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-05"
+lastupdated: "2021-08-10"
 
 keywords: IBM Blockchain Platform, release, new features
 
@@ -10,14 +10,14 @@ subcollection: blockchain
 
 ---
 
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:external: target="_blank" .external}
+{: shortdesc: .shortdesc}
+{: codeblock: .codeblock}
+{: screen: .screen}
+{: pre: .pre}
+{: note: .note}
+{: important: .important}
+{: tip: .tip}
+{: external: target="_blank" .external}
 
 
 # What's new
