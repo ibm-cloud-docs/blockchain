@@ -23,7 +23,7 @@ subcollection: blockchain
 {: #operations_service}
 
 The {{site.data.keyword.blockchainfull}} Platform includes an Operations Service feature that was introduced in Hyperledger Fabric v1.4.0. The feature provides a RESTful “operations” API for operators to perform node health checks, pull operational metrics from the peer and orderer nodes, and manage logging levels. The peer and the orderer nodes host an HTTP server that offers the RESTful “operations” API.  For more information about the Operations Service provided by Hyperledger Fabric, see [The Operations Service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/operations_service.html){: external}.
-{:shortdesc}
+{: shortdesc}
 
 
 ## Considerations and limitations

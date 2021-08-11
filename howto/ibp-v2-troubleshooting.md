@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-06-09"
+lastupdated: "2021-08-10"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -32,7 +32,7 @@ content-type: troubleshoot
 
 
 General problems can occur when you use the console to manage nodes, channels, or smart contracts. In many cases, you can recover from these problems by following a few simple steps.
-{:shortdesc}
+{: shortdesc}
 
 This topic describes common issues that can occur when you use the {{site.data.keyword.blockchainfull_notm}} Platform console.  
 

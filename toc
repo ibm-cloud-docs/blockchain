@@ -1,5 +1,5 @@
-{:navgroup: .navgroup}
-{:topicgroup: .topicgroup}
+{:navgroup:.navgroup}
+{:topicgroup:.topicgroup}
 
 {: .toc subcollection="blockchain" category="blockchain" audience="service" href="/docs/blockchain/index.html" console-page="/developer/blockchain/dashboard" product-page="https://www.ibm.com/cloud/blockchain-platform" path="blockchain"}
 IBM Blockchain Platform for IBM Cloud

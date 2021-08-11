@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-05-18"
+lastupdated: "2021-08-10"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -29,7 +29,7 @@ subcollection: blockchain
 {: #ansible-build}
 
 Customers can use Ansible playbooks to automate the setup and tear down of {{site.data.keyword.blockchainfull}} Platform network components.
-{:shortdesc}
+{: shortdesc}
 
 **Target audience:** This topic is designed for system administrators or operators who are responsible for creating or removing components in an {{site.data.keyword.blockchainfull_notm}} Platform network and are new to Ansible playbooks.
 

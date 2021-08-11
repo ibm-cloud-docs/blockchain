@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-08-10"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -25,7 +25,7 @@ subcollection: blockchain
 
 
 When you deploy a node from the console, there are various advanced deployment options available for each node type. The following topic provides more details about each of those options.
-{:shortdesc}
+{: shortdesc}
 
 **Target audience:** This topic is designed for advanced network operators who are familiar with Hyperledger Fabric and are responsible for creating, monitoring, and managing their components in the blockchain network.
 
