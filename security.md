@@ -261,68 +261,68 @@ In the environment section under `spec.containers`, add the following:
 Following are the two policies that we apply:
 1. Deny-all-ingress.
     This policy denies all ingress (`ingress: []`) network traffic to the pods (`podSelector: {}`) in the namespace it applies to. This ensure only the needed traffics go through.
-```
-kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: networkpolicy-denyall
-  namespace: <>
-  labels:
-    type: "ibm-hlfsupport-console"
-    app.kubernetes.io/name: "ibm-hlfsupport"
-    app.kubernetes.io/instance: "ibm-hlfsupport-console"
-    app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
-    release: "operator"
-    helm.sh/chart: "ibm-hlfsupport"
-spec:
-  podSelector: {}
-  ingress: []
-```
-{: codeblock}
+    ```
+    kind: NetworkPolicy
+    apiVersion: networking.k8s.io/v1
+    metadata:
+      name: networkpolicy-denyall
+      namespace: <>
+      labels:
+        type: "ibm-hlfsupport-console"
+        app.kubernetes.io/name: "ibm-hlfsupport"
+        app.kubernetes.io/instance: "ibm-hlfsupport-console"
+        app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
+        release: "operator"
+        helm.sh/chart: "ibm-hlfsupport"
+    spec:
+      podSelector: {}
+      ingress: []
+    ```
+    {: codeblock}
 
 
 2. Ingress
     This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibm-hlfsupport"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
-```
-kind: NetworkPolicy
-apiVersion: networking.k8s.io/v1
-metadata:
-  name: networkpolicy-ingress
-  labels:
-    type: "ibm-hlfsupport-console"
-    app.kubernetes.io/name: "ibm-hlfsupport"
-    app.kubernetes.io/instance: "ibm-hlfsupport-console"
-    app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
-    release: "operator"
-    helm.sh/chart: "ibm-hlfsupport"
-spec:
-  ingress:
-  - from: [] # everywhere
-    ports:
-    - port: 7051 # peer-api
-      protocol: TCP
-    - port: 9443 # peer-operations / ca-operations
-      protocol: TCP
-    - port: 7443 # peer-grpcweb / orderer-grpcweb
-      protocol: TCP
-    - port: 7052
-      protocol: TCP # peer-chaincode
-    - port: 3000 # optools
-      protocol: TCP
-    - port: 7050 # orderer-grpc
-      protocol: TCP
-    - port: 8443 # orderer-operations
-      protocol: TCP
-    - port: 22222 # fileserver #check install/invoke chaincode
-      protocol: TCP
-    - port: 11111 # grpc #check install/invoke chaincode
-      protocol: TCP
-    - port: 7054 # ca
-      protocol: TCP
-  podSelector:
-    matchLabels:
-      app.kubernetes.io/name: "ibm-hlfsupport"
-  policyTypes:
-    - Ingress
-```
-{: codeblock}
+    ```
+    kind: NetworkPolicy
+    apiVersion: networking.k8s.io/v1
+    metadata:
+      name: networkpolicy-ingress
+      labels:
+        type: "ibm-hlfsupport-console"
+        app.kubernetes.io/name: "ibm-hlfsupport"
+        app.kubernetes.io/instance: "ibm-hlfsupport-console"
+        app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
+        release: "operator"
+        helm.sh/chart: "ibm-hlfsupport"
+    spec:
+      ingress:
+      - from: [] # everywhere
+        ports:
+        - port: 7051 # peer-api
+          protocol: TCP
+        - port: 9443 # peer-operations / ca-operations
+          protocol: TCP
+        - port: 7443 # peer-grpcweb / orderer-grpcweb
+          protocol: TCP
+        - port: 7052
+          protocol: TCP # peer-chaincode
+        - port: 3000 # optools
+          protocol: TCP
+        - port: 7050 # orderer-grpc
+          protocol: TCP
+        - port: 8443 # orderer-operations
+          protocol: TCP
+        - port: 22222 # fileserver #check install/invoke chaincode
+          protocol: TCP
+        - port: 11111 # grpc #check install/invoke chaincode
+          protocol: TCP
+        - port: 7054 # ca
+          protocol: TCP
+      podSelector:
+        matchLabels:
+          app.kubernetes.io/name: "ibm-hlfsupport"
+      policyTypes:
+        - Ingress
+    ```
+    {: codeblock}
