@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-04"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -65,6 +65,9 @@ This topic describes common issues that can occur when you use the {{site.data.k
 - [Why are my transactions returning an endorsement policy error: signature set did not satisfy policy?](#ibp-v2-troubleshooting-endorsement-sig-failure)
 - [Why are the transactions I submit from VS Code failing with a No endorsement plan available error?](#ibp-v2-troubleshooting-anchor-peer)
 - [Why are the transactions I submit from VS Code failing with an endorsement failure?](#ibp-v2-troubleshooting-endorsement)
+- [Why is my peer unable to communicate with my ordering node?](#ibp-v2-troubleshooting-peer-bad-connection)
+- [When I hover over my node, the status is red, what does this mean?](#ibp-v2-troubleshooting-status-error})
+- [How do I disable the network policies in my namespace?](#ibp-v2-troubleshooting-disable-network-policies)
 - [How do I delete a peer pod?](#ibp-troubleshooting-delete-peer)
 - [How can I recover a contract after a failed upgrade of the smart contract container?](#ibp-troubleshooting-contract-fail)
 
@@ -232,6 +235,7 @@ After you create an ordering service, the status is `Running`. But when you open
 Unable to get system channel. If you associated an identity without administrative privilege on the ordering service node,
 you will not be able to view or manage ordering service details.
 ```
+{: codeblock}
 
 This problem can occur when the console has lost contact with your Kubernetes cluster on {{site.data.keyword.cloud_notm}}. This can happen if your console has not recently communicated with your cluster, or if you have made changes to your cluster that have overridden the settings used by the {{site.data.keyword.blockchainfull_notm}} platform.
 {: tsCauses}
@@ -263,12 +267,12 @@ You may receive this error if this version of the smart contract already exists 
 
 {: tsSymptoms}
 Installing a smart contract on a peer fails with an error similar to the following:
-
 ```
 An error occurred when installing smart contract on peer.
 error in simulation: failed to execute transaction
 421fac...2fda: error sending: timeout expired while executing transaction.
 ```
+{: codeblock}
 
 {: tsCauses}
 When running the {{site.data.keyword.blockchainfull_notm}} Platform on s390x architecture, or in an environment with constrained resources, it is possible that smart contract installation can fail on a peer if the default timeout is too short on the peer that is running the Fabric v2x image.
@@ -302,6 +306,7 @@ My Node.js smart contract endorsement fails with the error:
 ```
 Error: endorsement failure during query. response: status:500 message:"error in simulation: failed to execute transaction 6cbcf9f94bdef3fc68abba5604e46293ae: could not launch chaincode nodecc:1.1: error building chaincode: error building image: external builder failed: external builder failed to build: external builder 'ibp-builder' failed: exit status 3"
 ```
+{: codeblock}
 
 {: tsCauses}
 By default, a Fabric v1.4 peer creates a Node v8 runtime, and a Fabric v2.x peer creates a Node v12 runtime. In order for the smart contract to work with Node 12 runtime, the `fabric-contract-api` and `fabric-shim` node modules must be at v1.4.5 or greater.
@@ -452,6 +457,7 @@ When I try to invoke a smart contract from the Fabric SDK, the transaction fails
 ```
 error: [Network]: _initializeInternalChannel: no suitable peers available to initialize from Failed to submit transaction: Error: no suitable peers available to initialize from
 ```
+{: codeblock}
 
 This error occurs if you have not configured an anchor peer on your channel. Unless you have manually updated your connection profile, your application needs to use the [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} feature to learn about the peers it needs to submit the transaction to.
 {: tsCauses}
@@ -490,11 +496,14 @@ The peer log includes:
 ```
 [main] InitCmd -> ERRO 001 Cannot run peer because cannot init crypto, folder “/certs/msp” does not exist`
 ```
+{: codeblock}
+
 or the ordering node log contains:
 
 ```
 Failed to initialize local MSP: admin 0 is invalid [The identity does not contain OU [CLIENT], MSP: [orderermsp],The identity does not contain OU [ADMIN], MSP: [orderermsp]]
 ```
+{: codeblock}
 
 - This error can occur under the following conditions:
   - When you created the peer or ordering service organization MSP definition, you specified an enroll ID and secret that corresponds to an identity of type `peer` and not `client` or `admin`. It must be of type `client` or `admin`.
@@ -592,6 +601,7 @@ When I invoke a smart contract to submit a transaction, the transaction returns 
 ```
 returned error: VSCC error: endorsement policy failure, err: signature set did not satisfy policy
 ```
+{: codeblock}
 
 If you have recently joined a channel and installed the smart contract, this error occurs if you have not added your organization to the endorsement policy. Because your organization is not on the list of organizations who can endorse a transaction from the smart contract, the endorsement from your peers is rejected by the channel. If you encounter this problem, you can change the endorsement policy by upgrading the smart contract. For more information, see [Specifying an endorsement policy](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-install-propose) and [Versioning a smart contract](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-versioning).
 {: tsCauses}
@@ -632,6 +642,66 @@ This error occurs when the peer's enroll id type does not match the smart contra
 
 The only way to resolve this error is to delete the peer and create a new one with an enroll id that has the correct type `peer`. You can use the enroll id and secret from an existing user of type `peer` from the peer's CA or register a new user with type `peer`. Follow the instructions in the [Build a network tutorial](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-peer-org1) to create a new peer identity with the correct type and peer.
 {: tsResolve}
+
+
+## Why is my peer unable to communicate with my ordering node?
+{: #ibp-v2-troubleshooting-peer-bad-connection}
+{: troubleshoot}
+
+A peer node has a timeout or connection refused error when trying to communicate with the orderer.
+{: tsSymptoms}
+
+This problem can occur due to the network policies applied by the operator, which occurs when the environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY` is set to `"true"`.
+{: tsCauses}
+
+[Disable the network policies in your namespace](#ibp-v2-troubleshooting-disable-network-policies). This should resolve connectivity issues with your nodes.
+{: tsResolve}
+
+## When I hover over my node, the status is red, what does this mean?
+{: #ibp-v2-troubleshooting-status-error}
+{: troubleshoot}
+
+A CA, peer, or ordering node has a red status box, meaning there may be connectivity issues with the node. Ideally, when you hover over any node, the node status should be `Running`.
+{: tsSymptoms}
+
+This problem can occur due to the network policies applied by the operator, which occurs when the environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY` is set to `"true"`.
+{: tsCauses}
+
+[Disable the network policies in your namespace](#ibp-v2-troubleshooting-disable-network-policies). This should resolve connectivity issues with your nodes.
+{: tsResolve}
+
+## How do I disable the network policies in my namespace?
+{: #ibp-v2-troubleshooting-disable-network-policies}
+{: troubleshoot}
+
+You may need to disable the network policies in your namespace to address connectivity issues in your network.
+{: tsSymptoms}
+
+Check if network policies have been applied in your namespace by running the following CLI command:
+{: tsResolve}
+
+```
+kubectl get netpol -n <NAMESPACE>
+```
+{: codeblock}
+
+If the command returns a list of one or more network policies that you did not apply and/or you want to disable, first disable the operator creation of network policies. Get the operator deployment spec in your namespace and check for environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY`:
+```
+kubectl get deploy ibm-hlfsupport-operator -n <NAMESPACE>
+```
+{: codeblock}
+
+If it is present, remove the environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY`:
+```
+kubectl edit deploy ibm-hlfsupport-operator -n <NAMESPACE>
+```
+{: codeblock}
+
+Once the operator creation of the network policy has been disabled, delete the network policies from the namespace:
+```
+kubectl delete netpol -n <NAMESPACE> <NETWORKPOLICYNAME>
+```
+{: codeblock}
 
 ## How do I delete a peer pod?
 {: #ibp-troubleshooting-delete-peer}

@@ -228,6 +228,8 @@ subcollection: blockchain
 
 * [Hyperledger Fabric Security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-fabric)
 
+* [Enable network policy](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-enable-network-policy)
+
 
 ## High availability
 {: #sitemap_high_availability}
@@ -1339,6 +1341,12 @@ subcollection: blockchain
 * [Why are the transactions I submit from VS Code failing with a No endorsement plan available error?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-v2-troubleshooting-anchor-peer)
 
 * [Why are the transactions I submit from VS Code failing with an endorsement failure?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-v2-troubleshooting-endorsement)
+
+* [Why is my peer unable to communicate with my ordering node?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-v2-troubleshooting-peer-bad-connection)
+
+* [When I hover over my node, the status is red, what does this mean?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-v2-troubleshooting-status-error)
+
+* [How do I disable the network policies in my namespace?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-v2-troubleshooting-disable-network-policies)
 
 * [How do I delete a peer pod?](/docs/blockchain?topic=blockchain-ibp-v2-troubleshooting#ibp-troubleshooting-delete-peer)
 
