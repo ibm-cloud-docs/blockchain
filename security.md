@@ -268,12 +268,12 @@ Following are the two policies that we apply:
       name: networkpolicy-denyall
       namespace: <>
       labels:
-        type: "ibm-hlfsupport-console"
-        app.kubernetes.io/name: "ibm-hlfsupport"
-        app.kubernetes.io/instance: "ibm-hlfsupport-console"
-        app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
+        type: "ibp-console"
+        app.kubernetes.io/name: "ibp"
+        app.kubernetes.io/instance: "ibp-console"
+        app.kubernetes.io/managed-by: "ibp-operator"
         release: "operator"
-        helm.sh/chart: "ibm-hlfsupport"
+        helm.sh/chart: "ibp"
     spec:
       podSelector: {}
       ingress: []
@@ -282,19 +282,19 @@ Following are the two policies that we apply:
 
 
 2. Ingress
-    This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibm-hlfsupport"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
+    This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibp"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
     ```
     kind: NetworkPolicy
     apiVersion: networking.k8s.io/v1
     metadata:
       name: networkpolicy-ingress
       labels:
-        type: "ibm-hlfsupport-console"
-        app.kubernetes.io/name: "ibm-hlfsupport"
-        app.kubernetes.io/instance: "ibm-hlfsupport-console"
-        app.kubernetes.io/managed-by: "ibm-hlfsupport-operator"
+        type: "ibp-console"
+        app.kubernetes.io/name: "ibp"
+        app.kubernetes.io/instance: "ibp-console"
+        app.kubernetes.io/managed-by: "ibp-operator"
         release: "operator"
-        helm.sh/chart: "ibm-hlfsupport"
+        helm.sh/chart: "ibp"
     spec:
       ingress:
       - from: [] # everywhere
@@ -321,7 +321,7 @@ Following are the two policies that we apply:
           protocol: TCP
       podSelector:
         matchLabels:
-          app.kubernetes.io/name: "ibm-hlfsupport"
+          app.kubernetes.io/name: "ibp"
       policyTypes:
         - Ingress
     ```
