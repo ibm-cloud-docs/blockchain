@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-07-07"
+lastupdated: "2021-10-04"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -101,7 +101,7 @@ Hyperledger Fabric is a powerful, versatile, pluggable, open source, distributed
 {: faq}
 
 
-{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.3.
+{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.4.
 
 
 
@@ -262,7 +262,7 @@ When you delete an {{site.data.keyword.blockchainfull_notm}} Platform service in
 {: support}
 
 Your existing Kubernetes cluster works with the {{site.data.keyword.blockchainfull_notm}} Platform if it satisfies the following conditions:
-- It is running Kubernetes version v1.17 - v1.20.
+- It is running Kubernetes version v1.19 - v1.21.
 - There are enough available resources in the cluster.
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-08-31"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -1703,6 +1703,13 @@ Copy the following text and save it to a file named `ibp-hsm-config.yaml`:
 ```yaml
 version: v1
 type: hsm
+resources:
+    limits: {}
+    requests: {}
+securityContext:
+    privileged: false
+    runAsNonRoot: false
+    runAsUser: 0
 library:
   image: <HSM_IMAGE_URL>
   auth:
@@ -1791,14 +1798,21 @@ Copy the following text and save it to a file named `ibp-hsm-config.yaml`:
 
 ```yaml
 daemon:
-  image: us.icr.io/ibp-temp/ibp-zdaemon:zhsm-s390x
+  image: us.icr.io/ibp-test/opencryptoki-deamon:s390x-1.0.1
   auth:
-    imagePullSecret: regcred
+    imagePullSecret: "ibprepo-key-secret"
+  resources:
+    limits:
+      cex.s390.ibm.com/ibp: 1
+  securityContext:
+    privileged: false
+    runAsNonRoot: false
+    runAsUser: 0
 library:
   filepath: /hsm/opencryptoki/libopencryptoki.so.0.0.0
-  image: us.icr.io/ibp-temp/ibp-zdaemon:zhsm-s390x
+  image: us.icr.io/ibp-test/opencryptoki-deamon:s390x-1.0.1
   auth:
-    imagePullSecret: regcred
+    imagePullSecret: "ibprepo-key-secret"
 envs:
   - name: LD_LIBRARY_PATH
     value: /stdll
