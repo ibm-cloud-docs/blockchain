@@ -127,7 +127,7 @@ subcollection: blockchain
 -->
 </style>
 
-{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with IKS v1.22. Upgrading an IKS cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions. 
+{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions. 
 {: important}
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
