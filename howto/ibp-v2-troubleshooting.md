@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-05"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -66,7 +66,7 @@ This topic describes common issues that can occur when you use the {{site.data.k
 - [Why are the transactions I submit from VS Code failing with a No endorsement plan available error?](#ibp-v2-troubleshooting-anchor-peer)
 - [Why are the transactions I submit from VS Code failing with an endorsement failure?](#ibp-v2-troubleshooting-endorsement)
 - [Why is my peer unable to communicate with my ordering node?](#ibp-v2-troubleshooting-peer-bad-connection)
-- [When I hover over my node, the status is red, what does this mean?](#ibp-v2-troubleshooting-status-error})
+- [When I hover over my node, the status is red, what does this mean?](#ibp-v2-troubleshooting-status-error)
 - [How do I disable the network policies in my namespace?](#ibp-v2-troubleshooting-disable-network-policies)
 - [How do I delete a peer pod?](#ibp-troubleshooting-delete-peer)
 - [How can I recover a contract after a failed upgrade of the smart contract container?](#ibp-troubleshooting-contract-fail)

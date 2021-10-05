@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-05"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -260,6 +260,7 @@ In the environment section under `spec.containers`, add the following:
 
 Following are the two policies that we apply:
 1. Deny-all-ingress.
+
     This policy denies all ingress (`ingress: []`) network traffic to the pods (`podSelector: {}`) in the namespace it applies to. This ensure only the needed traffics go through.
     ```
     kind: NetworkPolicy
@@ -281,7 +282,8 @@ Following are the two policies that we apply:
     {: codeblock}
 
 
-2. Ingress
+2. Ingress.
+
     This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibp"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
     ```
     kind: NetworkPolicy
