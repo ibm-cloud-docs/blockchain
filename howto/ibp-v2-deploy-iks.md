@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-05"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -126,6 +126,9 @@ subcollection: blockchain
     }
 -->
 </style>
+
+{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with IKS v1.22. Upgrading an IKS cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions. 
+{: important}
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
 {: #ibp-v2-deploy-iks}
