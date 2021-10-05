@@ -243,7 +243,7 @@ Because {{site.data.keyword.blockchainfull_notm}} Platform is based on Hyperledg
 ## Enable network policy
 {: #ibp-security-enable-network-policy}
 
-Enable network policy will automatically install when the console is created. In the operator deployment specification, the operator needs to add an environment variable IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY and set its value to "true".
+Enable network policy will automatically install when the console is created. In the operator deployment specification, the operator needs to add an environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY` and set its value to `true`.
 ```
 kubectl edit deploy ibm-hlfsupport-operator -n <offering-namespace>
 ```
