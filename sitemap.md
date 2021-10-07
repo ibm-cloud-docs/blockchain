@@ -83,8 +83,8 @@ subcollection: blockchain
 * [Getting started](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-deploy)
 
 * [Architecture reference](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-architecture)
-        * [{{site.data.keyword.blockchainfull_notm}} Platform on {{site.data.keyword.cloud_notm}} Kubernetes Service Architecture](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-architecture-iks)
-        * [IBM Blockchain Platform on Red Hat OpenShift Architecture](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-architecture-ocp)
+    * [{{site.data.keyword.blockchainfull_notm}} Platform on {{site.data.keyword.cloud_notm}} Kubernetes Service Architecture](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-architecture-iks)
+    * [IBM Blockchain Platform on Red Hat OpenShift Architecture](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-architecture-ocp)
 
 * [Integrating with {{site.data.keyword.cloud_notm}} and other third-party services](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-v2-deploy-iks-integrations)
 
@@ -123,8 +123,8 @@ subcollection: blockchain
 * [February 06, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-02-06-2020)
 
 * [October 02, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019)
-        * [Reminders for Starter Plan users](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-reminders)
-        * [The {{site.data.keyword.blockchainfull_notm}} Platform console UI has been updated](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-Console)
+    * [Reminders for Starter Plan users](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-reminders)
+    * [The {{site.data.keyword.blockchainfull_notm}} Platform console UI has been updated](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-Console)
 
 * [August 27, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-8-27-2019)
 
@@ -208,23 +208,23 @@ subcollection: blockchain
 [Security](/docs/blockchain?topic=blockchain-ibp-security)
 
 * [Security on the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp)
-        * [IAM (Identity and Access Management)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-iam)
-        * [Ports](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-ports)
-        * [Key management](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-keys)
-        * [Membership Service Providers (MSPs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-msp)
-        * [Access control lists (ACLs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-acls)
-        * [API authentication](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-apis)
+    * [IAM (Identity and Access Management)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-iam)
+    * [Ports](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-ports)
+    * [Key management](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-keys)
+    * [Membership Service Providers (MSPs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-msp)
+    * [Access control lists (ACLs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-acls)
+    * [API authentication](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-ibp-apis)
 
 * [Best practices for security on the customer Kubernetes cluster](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes)
-        * [Kubernetes cluster security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-security)
-        * [Network security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-network)
-        * [Internet Ports](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-ports)
-        * [Cluster and Operating System security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-container-os)
-        * [Keys and cluster access information](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-keys)
-        * [Membership Service Providers (MSPs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-msp)
-        * [Storage](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-storage)
-        * [Data privacy](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-privacy)
-        * [GDPR](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-gdpr)
+    * [Kubernetes cluster security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-security)
+    * [Network security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-network)
+    * [Internet Ports](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-ports)
+    * [Cluster and Operating System security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-container-os)
+    * [Keys and cluster access information](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-Kubernetes-keys)
+    * [Membership Service Providers (MSPs)](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-msp)
+    * [Storage](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-storage)
+    * [Data privacy](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-privacy)
+    * [GDPR](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-gdpr)
 
 * [Hyperledger Fabric Security](/docs/blockchain?topic=blockchain-ibp-security#ibp-security-kubernetes-fabric)
 
@@ -521,16 +521,16 @@ subcollection: blockchain
 [Creating applications](/docs/blockchain?topic=blockchain-ibp-console-app)
 
 * [Overview](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-learning-resources)
-        * [High-Level Programming Model APIs](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-high-level)
-        * [Low-Level Fabric SDK APIs**](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-low-level)
+    * [High-Level Programming Model APIs](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-high-level)
+    * [Low-Level Fabric SDK APIs**](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-low-level)
 
 * [Application connectivity and availability](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-transx)
 
 * [Network considerations](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-networking)
 
 * [Application compatibility](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-compat)
-        * [SDKs](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-compat-sdk)
-        * [Smart contracts](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-compat-sc)
+    * [SDKs](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-compat-sdk)
+    * [Smart contracts](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-compat-sc)
 
 * [Registering an application identity](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-identities)
 
@@ -543,13 +543,13 @@ subcollection: blockchain
 * [Invoking a smart contract by using the SDK](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-invoke)
 
 * [Running the Commercial Paper sample](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper)
-        * [Prerequisites](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-prereq)
-        * [Step one: Download the sample](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-one-download-sample)
-        * [Step two: Install and Propose smart contract](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-two-install-propose)
-        * [Step three: Generate certificates for your wallet](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-three-generate-certificates)
-        * [Step four: Use the connection profile to build a Fabric gateway](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-four-gateway)
-        * [Step five: Invoke the smart contract](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-five-invoke)
-        * [Step six: Operate the sample as Digibank](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-six-operate-as-digibank)
+    * [Prerequisites](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-prereq)
+    * [Step one: Download the sample](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-one-download-sample)
+    * [Step two: Install and Propose smart contract](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-two-install-propose)
+    * [Step three: Generate certificates for your wallet](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-three-generate-certificates)
+    * [Step four: Use the connection profile to build a Fabric gateway](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-four-gateway)
+    * [Step five: Invoke the smart contract](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-five-invoke)
+    * [Step six: Operate the sample as Digibank](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-commercial-paper-step-six-operate-as-digibank)
 
 * [Connecting to your network by using low-level Fabric SDK APIs](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-low-level-api)
 
@@ -953,16 +953,16 @@ subcollection: blockchain
 [Backing up and restoring components and networks](/docs/blockchain?topic=blockchain-backup-restore)
 
 * [ Overview](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-overview)
-        * [Backup considerations for each node type](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-node-considerations)
-        * [Scheduling snapshots](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-schedule-snapshot)
+    * [Backup considerations for each node type](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-node-considerations)
+    * [Scheduling snapshots](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-schedule-snapshot)
 
 * [Taking snapshots](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-take-snapshot)
-        * [Node snapshots](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-peer-snapshot)
+    * [Node snapshots](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-peer-snapshot)
 
 * [Restoring nodes](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore)
-        * [Sequencing restorations](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-sequence)
-        * [Restoring a peer](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-peer)
-        * [Restoring an ordering node](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-orderer)
+    * [Sequencing restorations](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-sequence)
+    * [Restoring a peer](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-peer)
+    * [Restoring an ordering node](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore-orderer)
 
 
 ## Building a network with APIs
@@ -976,41 +976,41 @@ subcollection: blockchain
 * [Before you begin](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-prereq)
 
 * [Authentication](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-authentication)
-        * [Retrieving service credentials](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-retrieve-service-credentials)
-        * [Retrieving an access token](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-retrieve-token)
+    * [Retrieving service credentials](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-retrieve-service-credentials)
+    * [Retrieving an access token](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-retrieve-token)
 
 * [Forming your API request](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-form-api-request)
 
 * [Limitations](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-limitations)
 
 * [Building a network by using APIs](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-build-with-apis)
-        * [Creating a node within a specific zone](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-zone)
+    * [Creating a node within a specific zone](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-zone)
 
 * [Creating a node with a custom configuration](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-custom)
-        * [Example: Creating a custom Certificate Authority](/docs/blockchain?topic=blockchain-ibp-v2-apis#example-creating-a-custom-certificate-authority)
-        * [Create a high availability CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#create-a-high-availability-ca)
-        * [Deploy a node that uses an HSM](/docs/blockchain?topic=blockchain-ibp-v2-apis#deploy-a-node-that-uses-an-hsm)
+    * [Example: Creating a custom Certificate Authority](/docs/blockchain?topic=blockchain-ibp-v2-apis#example-creating-a-custom-certificate-authority)
+    * [Create a high availability CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#create-a-high-availability-ca)
+    * [Deploy a node that uses an HSM](/docs/blockchain?topic=blockchain-ibp-v2-apis#deploy-a-node-that-uses-an-hsm)
 
 * [Import a network by using APIs](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-import-with-apis)
 
 * [Operating your CA with the Fabric CA client](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-fabric-ca-client)
-        * [Set up the Fabric CA client](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-setup-fabric-ca-client)
-        * [Generate certificates with your CA admin](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-enroll-ca-admin)
-        * [Registering the component identity with the CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-component)
-        * [Registering your organization administrator](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-admin)
-        * [Generating the admin Membership Service Provider (MSP) folder](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-enroll-admin)
-        * [Registering the component identity with the TLS CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-component-tls)
-        * [Troubleshooting](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-troubleshooting)
+    * [Set up the Fabric CA client](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-setup-fabric-ca-client)
+    * [Generate certificates with your CA admin](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-enroll-ca-admin)
+    * [Registering the component identity with the CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-component)
+    * [Registering your organization administrator](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-admin)
+    * [Generating the admin Membership Service Provider (MSP) folder](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-enroll-admin)
+    * [Registering the component identity with the TLS CA](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-register-component-tls)
+    * [Troubleshooting](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-troubleshooting)
 
 * [Creating an organization MSP definition](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-msp)
 
 * [Creating a configuration file](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config)
-        * [Retrieve the CA connection information](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-connx-info)
-        * [Provide your component enroll ID and secret](/docs/blockchain?topic=blockchain-ibp-v2-apis#provide-your-component-enroll-id-and-secret)
-        * [Provide the signCert of your organization administrator](/docs/blockchain?topic=blockchain-ibp-v2-apis#provide-the-signcert-of-your-organization-administrator)
-        * [CSR (Certificate Signing Request) hosts](/docs/blockchain?topic=blockchain-ibp-v2-apis#csr)
-        * [Completing the configuration file](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-file)
-        * [Importing an admin identity into the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-admin-console)
+    * [Retrieve the CA connection information](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-connx-info)
+    * [Provide your component enroll ID and secret](/docs/blockchain?topic=blockchain-ibp-v2-apis#provide-your-component-enroll-id-and-secret)
+    * [Provide the signCert of your organization administrator](/docs/blockchain?topic=blockchain-ibp-v2-apis#provide-the-signcert-of-your-organization-administrator)
+    * [CSR (Certificate Signing Request) hosts](/docs/blockchain?topic=blockchain-ibp-v2-apis#csr)
+    * [Completing the configuration file](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config-file)
+    * [Importing an admin identity into the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-admin-console)
 
 
 ## Hyperledger Fabric
@@ -1065,10 +1065,10 @@ subcollection: blockchain
 * [Building the proxy image](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-build-img)
 
 * [Deploying the proxy to your cluster](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy)
-        * [**Step one:**  Create a new namespace](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s1)
-        * [**Step two:** Create a Kubernetes secret](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s2)
-        * [**Step three:** Deploy the proxy pod](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s3)
-        * [**Step four:** Configure communication between the proxy and the blockchain components](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s4)
+    * [**Step one:**  Create a new namespace](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s1)
+    * [**Step two:** Create a Kubernetes secret](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s2)
+    * [**Step three:** Deploy the proxy pod](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s3)
+    * [**Step four:** Configure communication between the proxy and the blockchain components](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-deploy-s4)
 
 * [Next steps](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy#ibp-hsm-build-pkcs11-proxy-next-steps)
 
@@ -1220,18 +1220,18 @@ subcollection: blockchain
 * [22 Feb 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#02-22-2021)
 
 * [12 Jan 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-12-2021)
-        * [New logging configuration panel](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-12-2021-logger-ui)
+    * [New logging configuration panel](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-12-2021-logger-ui)
 
 * [08 Dec 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#12-08-2020)
 
 * [19 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-19-2020)
 
 * [02 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020)
-        * [Fabric v2.x node upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-upgrade)
-        * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-lc)
-        * [Improvements for HSM support](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-hsm)
-        * [Certificate renewal enhancements](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-cert-renew)
-        * [Remove registered user from CA](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-delete-user)
+    * [Fabric v2.x node upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-upgrade)
+    * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-lc)
+    * [Improvements for HSM support](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-hsm)
+    * [Certificate renewal enhancements](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-cert-renew)
+    * [Remove registered user from CA](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-delete-user)
 
 * [1 Oct 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-01-2020)
 
@@ -1240,17 +1240,17 @@ subcollection: blockchain
 * [14 July 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-14-2020)
 
 * [18 June 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020)
-        * [Fabric peer and ordering node images](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-images)
-        * [Elimination of Docker daemon dependency](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-docker)
-        * [Multizone-capable storage](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-Multizone)
-        * [Kubernetes version upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-k8s)
+    * [Fabric peer and ordering node images](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-images)
+    * [Elimination of Docker daemon dependency](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-docker)
+    * [Multizone-capable storage](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-Multizone)
+    * [Kubernetes version upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-k8s)
 
 * [20 May 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020)
-        * [Support for Intermediate Certificate Authorities (CAs)](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-ICA)
-        * [Updated connection profile](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-connx-profile)
+    * [Support for Intermediate Certificate Authorities (CAs)](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-ICA)
+    * [Updated connection profile](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-connx-profile)
 
 * [16 April 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-16-2020)
-        * [Support for AWS HSM](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-16-2020-AWS-HSM)
+    * [Support for AWS HSM](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-16-2020-AWS-HSM)
 
 * [24 March 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#03-24-2020)
 
