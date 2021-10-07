@@ -33,7 +33,8 @@ Build a PKCS #11 Docker image that contains the HSM client that will run on your
 1. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> First, copy and save the following text to a file named `docker-entrypoint.sh`. You do not need to make any changes to this file.
   ```
   #!/bin/bash -ex
-  #CLIENT_ADDRESS - address where the client is running HSM_ADDRESS - address where the HSM server is running
+  #CLIENT_ADDRESS - address where the client is running 
+  #HSM_ADDRESS - address where the HSM server is running
 
   #add the server
   vtl addServer -n ${HSM_ADDRESS} -c /configs/server.pem
