@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-10-07"
 
 keywords: HSM, PKCS11 proxy
 
@@ -10,100 +10,7 @@ subcollection: blockchain
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -128,25 +35,25 @@ Build a PKCS #11 Docker image that contains the HSM client that will run on your
   ```bash
   #!/bin/bash -ex
 
-  # CLIENT_ADDRESS - address where the client is running
+  #CLIENT_ADDRESS - address where the client is running
   # HSM_ADDRESS - address where the HSM server is running
 
-  # add the server
+  #add the server
   vtl addServer -n ${HSM_ADDRESS} -c /configs/server.pem
 
-  # create fake certs for client for lunaclient to register the addresses
-  # in the config
+  #create fake certs for client for lunaclient to register the addresses
+  #in the config
   vtl createcert -n ${CLIENT_ADDRESS}
 
-  # copy the certs mounted to the location where the client looks
-  # for them
+  #copy the certs mounted to the location where the client looks
+  #for them
   cp /configs/cert.pem /usr/safenet/lunaclient/cert/client/${CLIENT_ADDRESS}.pem
   cp /configs/key.pem /usr/safenet/lunaclient/cert/client/${CLIENT_ADDRESS}Key.pem
 
-  # finally verify that the connection worked
+  #finally verify that the connection worked
   vtl verify
 
-  # start the pkcs11 proxy
+  #start the pkcs11 proxy
   pkcs11-daemon $LIBRARY_LOCATION -
   ```
   {: codeblock}
@@ -227,7 +134,6 @@ Build a PKCS #11 Docker image that contains the HSM client that will run on your
    {: codeblock}
 
 4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Before you deploy the Docker image to your Kubernetes cluster, it is recommended that you first try to run the image locally. Run the following command to verify that the image was built successfully:
-
    ```
    docker run -it -e HSM_ADDRESS=<HSM_ADDRESS> -e CLIENT_ADDRESS=<CLIENT_ADDRESS> -v configs/:/configs test
    ```
@@ -260,6 +166,7 @@ Build a PKCS #11 Docker image that contains the HSM client that will run on your
   + pkcs11-daemon /usr/safenet/lunaclient/lib/libCryptoki2_64.so -
   pkcs11-proxy[12]: Listening on: tcp://0.0.0.0:2345
   ```
+  {: codeblock}
 
 ## Deploy the Docker image onto your Kubernetes cluster
 {: #ibp-hsm-build-pkcs11-proxy-ic-deploy-k8s}  
@@ -289,13 +196,14 @@ After the local test in the previous step is successful, you are ready to deploy
   kubectl create secret docker-registry docker-pull-secret --docker-username=dockeruser --docker-password=dockerpwd --docker-email=dockeruser@example.com --docker-server=dockeruser/pkcs11-proxy:v1 -n hsm
   ```
   {: codeblock}
+
     These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster (doing so will allow you to deploy containers to Kubernetes namespaces other than default). This also implies that you'll need to define a corresponding image pull secret entry in the deployment YAML file. See the following links for further details:
 
       - [Using an image pull secret to access images in other IBM Cloud accounts or external private registries from non-default Kubernetes namespaces](/docs/containers?topic=containers-registry#other)
       - [Copying an existing image pull secret](/docs/containers?topic=containers-registry#copy_imagePullSecret)
       - [Referring to the image pull secret in your pod deployment](/docs/containers?topic=containers-images#pod_imagePullSecret)
-3. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>  Copy and paste the following text to a file named `service.yaml`:
 
+3. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>  Copy and paste the following text to a file named `service.yaml`:
   ```yaml
   apiVersion: v1
   kind: Service
@@ -323,7 +231,6 @@ After the local test in the previous step is successful, you are ready to deploy
   {: note}
 
 4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Copy and paste the following text to a file named `deployment.yaml`:
-
   ```yaml
   apiVersion: apps/v1
   kind: Deployment
@@ -369,16 +276,16 @@ After the local test in the previous step is successful, you are ready to deploy
         - name: config-volume
           configMap:
             name: gemalto-config
-          # readinessProbe:
-          #   tcpSocket:
-          #     port: 2345
-          #   initialDelaySeconds: 5
-          #   periodSeconds: 10
-          # livenessProbe:
-          #   tcpSocket:
-          #     port: 2345
-          #   initialDelaySeconds: 15
-          #   periodSeconds: 20
+              # readinessProbe:
+              # tcpSocket:
+              # port: 2345
+              # initialDelaySeconds: 5
+              # periodSeconds: 10
+              # livenessProbe:
+              # tcpSocket:
+              # port: 2345
+              # initialDelaySeconds: 15
+              # periodSeconds: 20
   ```
   {: codeblock}
 
@@ -397,7 +304,6 @@ After the local test in the previous step is successful, you are ready to deploy
   If you are deploying to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, then more than likely you will be using the IBM Container Registry as your private image repository. For details on how to leverage this service for hosting your images, see [Setting up an image registry](/docs/containers?topic=containers-registry){: external}.
 
 5. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Now, run the following commands using the Kubernetes CLI from your HSM client:
-
   ```
   # Create configmap on cluster
   kubectl create cm -n hsm gemalto-config --from-file=configs/server.pem --from-file=configs/cert.pem --from-file=configs/key.pem
@@ -411,7 +317,6 @@ After the local test in the previous step is successful, you are ready to deploy
   {: codeblock}
 
 6. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> In order to use the HSM, the {{site.data.keyword.blockchainfull_notm}} Platform needs the address of the PCKS #11 proxy. The combination of the **cluster-ip address** of the PCKS #11 proxy and the associated port form the PCKS #11 proxy address that is required by console when you configure a node to use the HSM.  Again, run the following command using the Kubernetes CLI from your HSM client:
-
   ```
   $ kubectl get service -n hsm
   ```
@@ -423,6 +328,7 @@ After the local test in the previous step is successful, you are ready to deploy
   NAME            TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
   pkcs11-proxy1   ClusterIP   172.21.191.187   <none>        2345/TCP   5d3h
   ```
+  {: codeblock}
 
   Combine the value of the **CLUSTER-IP** address above `172.21.191.187` and **PORT** `2345` to build the PCKS #11 proxy address that is required by console in the form `tcp://172.21.191.187:2345`.
 
