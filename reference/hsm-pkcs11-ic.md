@@ -31,22 +31,16 @@ This process involves deploying an **HSM** and configuring a partition as well a
 Build a PKCS #11 Docker image that contains the HSM client that will run on your Kubernetes cluster. But before you can build the image, two files are required on the client: the `docker-entrypoint.sh` and the Docker image file.
 
 1. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> First, copy and save the following text to a file named `docker-entrypoint.sh`. You do not need to make any changes to this file.
-
-  ```bash
+  ```
   #!/bin/bash -ex
-
-  #CLIENT_ADDRESS - address where the client is running
-  # HSM_ADDRESS - address where the HSM server is running
+  #CLIENT_ADDRESS - address where the client is running HSM_ADDRESS - address where the HSM server is running
 
   #add the server
   vtl addServer -n ${HSM_ADDRESS} -c /configs/server.pem
+  
+  #create fake certs for client for lunaclient to register the addresses in the config vtl createcert -n ${CLIENT_ADDRESS}
 
-  #create fake certs for client for lunaclient to register the addresses
-  #in the config
-  vtl createcert -n ${CLIENT_ADDRESS}
-
-  #copy the certs mounted to the location where the client looks
-  #for them
+  #copy the certs mounted to the location where the client looks for them
   cp /configs/cert.pem /usr/safenet/lunaclient/cert/client/${CLIENT_ADDRESS}.pem
   cp /configs/key.pem /usr/safenet/lunaclient/cert/client/${CLIENT_ADDRESS}Key.pem
 
