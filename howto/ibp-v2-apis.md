@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-10-14"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
@@ -63,18 +63,18 @@ You need a basic authentication credential to ensure that you have access to you
   3. Click the **Add** button.
 4. After the new credential is created, click **View credentials** under the **ACTIONS** header of this credential. The contents of the credential looks similar to the following example:
 
-  ```
-  {
-    "api_endpoint": "https://1088ac8563e44f5a92539d946733ad7e-optools.so01.blockchain.test.cloud.ibm.com"
-    "apikey": "nvASKts6B6lMZGZUNTGVP7MLK2BujMnxz0plSPYaqc3R",
-    "configtxlator": "https://1088ac8563e44f5a92539d946733ad7e-configtxlator.so01.blockchain.test.cloud.ibm.com",
-    "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:blockchain:us-south:a/9d46037caee397faa45c55e087d26baa:1088ac85-63e4-4f5a-9253-9d946733ad7e::",
-    "iam_apikey_name": "auto-generated-apikey-c1981f5c-cff0-464f-9a78-ed2f52e24d1a",
-    "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
-    "iam_serviceid_crn": "crn:v1:staging:public:iam-identity::a/9d46037caee397faa45c55e087d26baa::serviceid:ServiceId-774190c5-9c37-4f68-8572-8d6e2aabbc7e",
-  }
-  ```
-  {: codeblock}
+    ```
+    {
+      "api_endpoint": "https://1088ac8563e44f5a92539d946733ad7e-optools.so01.blockchain.test.cloud.ibm.com"
+      "apikey": "nvASKts6B6lMZGZUNTGVP7MLK2BujMnxz0plSPYaqc3R",
+      "configtxlator": "https://1088ac8563e44f5a92539d946733ad7e-configtxlator.so01.blockchain.test.cloud.ibm.com",
+      "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:blockchain:us-south:a/9d46037caee397faa45c55e087d26baa:1088ac85-63e4-4f5a-9253-9d946733ad7e::",
+      "iam_apikey_name": "auto-generated-apikey-c1981f5c-cff0-464f-9a78-ed2f52e24d1a",
+      "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+      "iam_serviceid_crn": "crn:v1:staging:public:iam-identity::a/9d46037caee397faa45c55e087d26baa::serviceid:ServiceId-774190c5-9c37-4f68-8572-8d6e2aabbc7e",
+    }
+    ``
+    {: codeblock}
 
 In the service credential, you can find the [API key](#x8051010){: term} (`apikey`) and **API endpoint** (`api_endpoint`) that you need to retrieve a {{site.data.keyword.iamshort}} (IAM) access token.
 
@@ -85,27 +85,27 @@ You can authenticate with {{site.data.keyword.blockchainfull_notm}} Platform by 
 
 Call the {{site.data.keyword.iamshort}} API to retrieve your access token.
 
-```bash
-curl -X POST \
-  "https://iam.cloud.ibm.com/identity/token" \
-  -H "Content-Type: application/x-www-form-urlencoded" \
-  -H "Accept: application/json" \
-  -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" \
-```
-{: codeblock}
+    ```bash
+    curl -X POST \
+        "https://iam.cloud.ibm.com/identity/token" \
+        -H "Content-Type: application/x-www-form-urlencoded" \
+        -H "Accept: application/json" \
+        -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" \
+    ```
+    {: codeblock}
 
 In the request, replace `<API_KEY>` with the `apikey` value from your service credentials. The following truncated example shows the token output:
 
-```
-{
-"access_token": "eyJraWQiOiIyM...",
-"refresh_token": "...",
-"expires_in":3600,
-"expiration":1555558683,
-"scope":"ibm openid"}
-```
-{: codeblock}
-{: screen}
+    ```
+    {
+    "access_token": "eyJraWQiOiIyM...",
+    "refresh_token": "...",
+    "expires_in":3600,
+    "expiration":1555558683,
+    "scope":"ibm openid"}
+    ```
+    {: codeblock}
+    {: screen}
 
 Use the full `access_token` value, prefixed by the `Bearer` token type, to programmatically work with your blockchain network by using the APIs.
 
@@ -119,14 +119,14 @@ When you make an API call to the service, structure your API request according t
 
 To build your request, pair an API endpoint with the appropriate authentication credentials in the following format:
 
-```bash
-curl -X <API method> \
-    <API_endpoint>/<API> \
-    -H 'authorization: Bearer <access_token>' \
-    -H 'Content-Type: application/json' \
-    -d '<request body>' \
-```
-{: codeblock}
+    ```bash
+    curl -X <API method> \
+        <API_endpoint>/<API> \
+        -H 'authorization: Bearer <access_token>' \
+        -H 'Content-Type: application/json' \
+        -d '<request body>' \
+    ```
+    {: codeblock}
 
 Example cURL commands are provided for each API in the [{{site.data.keyword.blockchainfull_notm}} Platform API reference doc](/apidocs/blockchain){: external}.
 
