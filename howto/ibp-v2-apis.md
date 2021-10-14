@@ -10,18 +10,8 @@ subcollection: blockchain
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:important: .important}
-{:term: .term}
-{:tip: .tip}
-{:faq: data-hd-content-type='faq'}
-{:pre: .pre}
-{:curl: #curl .ph data-hd-programlang='curl'}
 
 
 # Building a network with APIs
@@ -62,7 +52,6 @@ You need a basic authentication credential to ensure that you have access to you
   2. You can leave the **Add inline configuration parameter** field blank.
   3. Click the **Add** button.
 4. After the new credential is created, click **View credentials** under the **ACTIONS** header of this credential. The contents of the credential looks similar to the following example:
-
     ```
     {
       "api_endpoint": "https://1088ac8563e44f5a92539d946733ad7e-optools.so01.blockchain.test.cloud.ibm.com"
@@ -73,7 +62,7 @@ You need a basic authentication credential to ensure that you have access to you
       "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
       "iam_serviceid_crn": "crn:v1:staging:public:iam-identity::a/9d46037caee397faa45c55e087d26baa::serviceid:ServiceId-774190c5-9c37-4f68-8572-8d6e2aabbc7e",
     }
-    ``
+    ```
     {: codeblock}
 
 In the service credential, you can find the [API key](#x8051010){: term} (`apikey`) and **API endpoint** (`api_endpoint`) that you need to retrieve a {{site.data.keyword.iamshort}} (IAM) access token.
@@ -84,27 +73,26 @@ In the service credential, you can find the [API key](#x8051010){: term} (`apike
 You can authenticate with {{site.data.keyword.blockchainfull_notm}} Platform by retrieving an access token from IAM. With an access token, you can work with the {{site.data.keyword.blockchainfull_notm}} Platform API on behalf of your service or application on or outside {{site.data.keyword.cloud_notm}}, without needing to share your personal user credentials.  
 
 Call the {{site.data.keyword.iamshort}} API to retrieve your access token.
-
-    ```bash
-    curl -X POST \
-        "https://iam.cloud.ibm.com/identity/token" \
-        -H "Content-Type: application/x-www-form-urlencoded" \
-        -H "Accept: application/json" \
-        -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" \
-    ```
-    {: codeblock}
+``` 
+  curl -X POST \
+    "https://iam.cloud.ibm.com/identity/token" \
+    -H "Content-Type: application/x-www-form-urlencoded" \
+    -H "Accept: application/json" \
+    -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" \
+```
+{: codeblock}
 
 In the request, replace `<API_KEY>` with the `apikey` value from your service credentials. The following truncated example shows the token output:
-
-    ```
-    {
+```
+  {
     "access_token": "eyJraWQiOiIyM...",
     "refresh_token": "...",
     "expires_in":3600,
     "expiration":1555558683,
     "scope":"ibm openid"}
-    ```
-    {: codeblock}
+```
+{: codeblock}
+
     {: screen}
 
 Use the full `access_token` value, prefixed by the `Bearer` token type, to programmatically work with your blockchain network by using the APIs.
@@ -118,15 +106,14 @@ Access tokens are valid for one hour, but you can regenerate them as needed. To 
 When you make an API call to the service, structure your API request according to how you initially provisioned your {{site.data.keyword.blockchainfull_notm}} Platform service instance.
 
 To build your request, pair an API endpoint with the appropriate authentication credentials in the following format:
-
-    ```bash
-    curl -X <API method> \
-        <API_endpoint>/<API> \
-        -H 'authorization: Bearer <access_token>' \
-        -H 'Content-Type: application/json' \
-        -d '<request body>' \
-    ```
-    {: codeblock}
+```bash
+  curl -X <API method> \
+      <API_endpoint>/<API> \
+      -H 'authorization: Bearer <access_token>' \
+      -H 'Content-Type: application/json' \
+      -d '<request body>' \
+```
+{: codeblock}
 
 Example cURL commands are provided for each API in the [{{site.data.keyword.blockchainfull_notm}} Platform API reference doc](/apidocs/blockchain){: external}.
 
