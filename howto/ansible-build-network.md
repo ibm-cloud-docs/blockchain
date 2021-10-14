@@ -145,7 +145,7 @@ These instructions assume that you have installed [Docker](https://docs.docker.c
     PLAY RECAP *********************************************************************
     localhost                  : ok=7    changed=5    unreachable=0    failed=0 skipped=1    rescued=0    ignored=0    
     ```
-{:codeblock}
+    {:codeblock}
 
   If the playbook completes successfully, you should see `failed=0`. Go ahead now and log in to your console to confirm that **Ordering Org** CA, **Ordering Org** organization, and **Ordering Service** was created.
 
