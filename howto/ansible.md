@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-14"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -60,7 +60,9 @@ The {{site.data.keyword.blockchainfull_notm}} Platform Ansible collection uses t
 
 The Ansible playbooks include a set of modules that you can use to automate the deployment of your nodes, registering of identities, channel creation, and smart contracts installation and instantiation.
 
-After you deploy the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, or on your supported Kubernetes distribution, there are three ways to build your network. To understand the benefit of using the Ansible playbooks, we compare the options:
+
+
+- **Deploying your blockchain network** After you deploy the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, or on your supported Kubernetes distribution, there are three ways to build your network. To understand the benefit of using the Ansible playbooks, we compare the options:
 
   1. **Deploy your nodes and configure your network manually using the console user interface.** This option is most useful for getting started and learning about the platform and how the console works. It requires stepping through multiple panels to configure all the settings for your nodes, organizations, channels, and smart contracts.
 
@@ -83,12 +85,15 @@ When you use the Ansible playbooks to deploy blockchain nodes, the identities th
 
 There are multiple ways to install the Ansible collection. One option is to install all of the prerequisite software locally, which can be cumbersome for first-time Ansible users. Another simpler option is to run the playbooks from a Docker image. Because using a Docker image completely bypasses the need for the prerequisite setup (the prereqs are part of the Docker image), this approach is by far the simplest option and is the process that we use throughout these tutorials. This option does require that you install Docker before proceeding. To determine whether Docker is installed, run the command `docker --version`. If it is installed, you'll see something similar to:
 
-  ```
-  Docker version 18.09.2, build 6247962
-  ```
+    ```
+    Docker version 18.09.2, build 6247962
+    ```
+    {: codeblock}
+
 If you do not have Docker installed, see [install Docker](https://docs.docker.com/get-docker/){: external} to download and install it. You can also check out the [Docker site](https://www.docker.com/){: external} for more education and documentation.
 
 Advanced users can review the [Ansible collection documentation](https://ibm-blockchain.github.io/ansible-collection/installation.html){: external} for other installation options.
+
 
 
 
