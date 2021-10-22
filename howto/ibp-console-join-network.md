@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-22"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, join a network, system channel
 
@@ -100,6 +100,7 @@ Perform the following steps from your console:
   | **Field** | **Display name** | **Enroll ID** | **Secret** |
   | ------------------------- |-----------|-----------|-----------|
   | **Create CA** | Org2 CA  | admin | adminpw |
+  
   {: caption="Table 1. Creating the peer organization CA" caption-side="bottom"}
 
 After you deploy the CA, you will use it when you create your organization MSP, register users, and to create your entry point to a network, the **peer**.
