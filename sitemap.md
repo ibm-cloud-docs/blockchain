@@ -1205,6 +1205,8 @@ subcollection: blockchain
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
 
+* [26 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-26-2021)
+
 * [05 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-10-2021)
 
 * [10 Aug 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-08-2021)
