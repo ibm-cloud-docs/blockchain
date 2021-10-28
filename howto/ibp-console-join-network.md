@@ -3,7 +3,7 @@
 copyright:
   years: 2019, 2021
 
-lastupdated: "2021-08-10"
+lastupdated: "2021-10-25"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, join a network, system channel
 
@@ -97,10 +97,10 @@ Perform the following steps from your console:
 
 **Task: Creating the peer organization CA**
 
-  | **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|
-  | **Create CA** | Org2 CA  | admin | adminpw |
-  {: caption="Table 1. Creating the peer organization CA" caption-side="bottom"}
+| **Field** | **Display name** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- |
+| **Create CA** | Org2 CA  | admin | adminpw |
+{: caption="Table 1. Creating the peer organization CA" caption-side="bottom"}
 
 After you deploy the CA, you will use it when you create your organization MSP, register users, and to create your entry point to a network, the **peer**.
 
@@ -125,19 +125,19 @@ After setting the CA admin identity, you will be able to see the table of regist
 
 **Task: Associate identity**
 
-  |  **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Enroll ID** |  Org2 CA Admin  | admin | adminpw |
-  {: caption="Table 2. Associate the CA admin identity" caption-side="bottom"}
+|  **Field** | **Display name** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- |
+| **Enroll ID** |  Org2 CA Admin  | admin | adminpw |
+{: caption="Table 2. Associate the CA admin identity" caption-side="bottom"}
 
 You can view the CA admin identity in your console wallet by clicking on the **Wallet** in the left navigation. Click the identity to view the certificate and private key of the CA admin. The identity is not stored in your console or managed by {{site.data.keyword.IBM_notm}}. It is only stored in local browser storage. If you change browsers, you will need to import this identity into your Wallet to be able to operate the CA. Click **Export identity** to download the certificate and private key.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org2 CA Admin | Org2 CA admin identity |
-  {: caption="Table 3. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- |--- | --- |
+| **Identity** | Org2 CA Admin | Org2 CA admin identity |
+{: caption="Table 3. Check your Wallet" caption-side="bottom"}
 
 ### Using your CA to register identities
 {: #ibp-console-join-network-use-CA-org2}
@@ -159,12 +159,12 @@ Registering these identities with the CA is only the first step in **creating** 
 
 **Task: Register users**
 
-  |  **Field** | **Description** | **Enroll ID** | **Secret** | **Type**
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create CA**  | CA admin | admin | adminpw | client |
-  | **Register users** |  Org2 MSP Admin  | org2admin | org2adminpw | admin |
-  | | Peer identity |  peer2 | peer2pw | peer|
-  {: caption="Table 4. Using your CA to register user" caption-side="bottom"}
+|  **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
+| --- | --- | --- | --- | --- |
+| **Create CA**  | CA admin | admin | adminpw | client |
+| **Register users** |  Org2 MSP Admin  | org2admin | org2adminpw | admin |
+| | Peer identity |  peer2 | peer2pw | peer|
+{: caption="Table 4. Using your CA to register user" caption-side="bottom"}
 
 ### Creating the peer organization MSP
 {: #ibp-console-join-network-create-peers-org2}
@@ -186,22 +186,22 @@ Now that we have created the peer's CA and used it to **register** our organizat
 
 **Task: Create the peer organization MSP definition**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create Organization** | Org2 MSP | org2msp |||
-  | **Root CA** | Org2 CA ||||
-  | **Org Admin Cert** | |  | org2admin | org2adminpw |
-  | **Identity** | Org2 MSP Admin |||||
-  {: caption="Table 5. Create the peer organization MSP definition" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
+| --- | --- | --- | --- | --- |
+| **Create Organization** | Org2 MSP | org2msp |  | |
+| **Root CA** | Org2 CA | | | |
+| **Org Admin Cert** |  |  | org2admin | org2adminpw |
+| **Identity** | Org2 MSP Admin | | | |
+{: caption="Table 5. Create the peer organization MSP definition" caption-side="bottom"}
 
 After you have created the MSP, you should be able to see the peer organization admin in your **Wallet**, which can be accessed by clicking on the **Wallet** in the left navigation.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org2 MSP Admin  | Org2 identity |
-  {: caption="Table 6. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- | --- | ---|
+| **Identity** | Org2 MSP Admin  | Org2 identity |
+{: caption="Table 6. Check your Wallet" caption-side="bottom"}
 
 For more information about MSPs, see [managing organizations](/docs/blockchain?topic=blockchain-ibp-console-organizations#ibp-console-organizations).
 
@@ -245,12 +245,12 @@ Use your console to perform the following steps:
 **Task: Deploying a peer**
 
 |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
-| ------------------------- |-----------|-----------|-----------|-----------|
-| **Create Peer** | Peer Org2 | org2msp |||
-| **CA** | Org2 CA ||||
-| **Peer Identity** | |  | peer2 | peer2pw |
-| **Administrator certificate** | org2msp ||||
-| **Associate identity** | Org2 MSP Admin  |||||
+| --- | --- | --- | --- | --- |
+| **Create Peer** | Peer Org2 | org2msp | | |
+| **CA** | Org2 CA |  | | |
+| **Peer Identity** | | | peer2 | peer2pw |
+| **Administrator certificate** | org2msp | | | |
+| **Associate identity** | Org2 MSP Admin |  | | |
 {: caption="Table 7. Deploying a peer" caption-side="bottom"}
 
 In a production scenario, it is recommended to deploy three peers to each channel. This is to allow one peer to go down (for example, during a maintenance cycle) and still maintain highly available peers. To deploy more than one peer for an organization, use the same CA you used to register your first peer identity. In this tutorial, that would be `Org2 CA`. Then, register a new peer identity using a distinct enroll ID and secret. For example, `org2secondpeer` and `org2secondpeerpw`. Then, when creating the peer, give this enroll ID and secret. As this peer is still associated with Org2, choose `Org2 CA`, `Org2 MSP`, and `Org2 MSP Admin ` from the drop-down lists. You may choose to give this new peer a different admin, which can be registered and enrolled with `Org2 CA`, but this optional. This tutorial series will only show the process for creating a single peer for each peer organization.
@@ -398,16 +398,16 @@ When you are ready, click **Create channel**. You will be taken back to the **Ch
 
 **Task: Create a channel**
 
-  |  **Field** | **Name** |
-  | ------------------------- |-----------|
-  | **Channel name** | channel2 |
-  | **Ordering Service** | Ordering Service |
-  | **Organizations** | Org2 MSP |
-  | **Channel update policy** | 2 out of 2 |
-  | **Access control list** | None |
-  | **Channel creator MSP** | Org2 MSP |
-  | **Identity** | Org2 MSP Admin  |
-  {: caption="Table 8. Create a channel" caption-side="bottom"}
+|  **Field** | **Name** |
+| --- | --- |
+| **Channel name** | channel2 |
+| **Ordering Service** | Ordering Service |
+| **Organizations** | Org2 MSP |
+| **Channel update policy** | 2 out of 2 |
+| **Access control list** | None |
+| **Channel creator MSP** | Org2 MSP |
+| **Identity** | Org2 MSP Admin |
+{: caption="Table 8. Create a channel" caption-side="bottom"}
 
 The next step is to join a peer to this channel. Click the pending tile and select the organization peers to be added to the channel.
 

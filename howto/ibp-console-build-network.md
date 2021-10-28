@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-10-25"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -10,100 +10,7 @@ subcollection: blockchain
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -250,10 +157,10 @@ To create the CA that will issue certificates for your first organization, perfo
 
 **Task: Creating the peer organization CA**
 
-  | **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|
-  | **Create CA** | Org1 CA  | admin | adminpw |
-  {: caption="Table 1. Creating the peer organization CA" caption-side="bottom"}
+| **Field** | **Display name** | **Enroll ID** | **Secret** |
+| --- | --- | --- | ---|
+| **Create CA** | Org1 CA  | admin | adminpw |
+{: caption="Table 1. Creating the peer organization CA" caption-side="bottom"}
 
 After you deploy the CA, you need to associate an admin identity. This will allow you to operate your CA and use it to create your organization MSP, register users, and your **peer**.
 
@@ -277,20 +184,20 @@ After setting the CA admin identity, you will be able to see the table of regist
 
 **Task: Associate identity**
 
-  |  **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Enroll ID** |  Org1 CA Admin | admin | adminpw |
-  {: caption="Table 2. Associate the CA admin identity" caption-side="bottom"}
+|  **Field** | **Display name** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- |
+| **Enroll ID** |  Org1 CA Admin | admin | adminpw |
+{: caption="Table 2. Associate the CA admin identity" caption-side="bottom"}
 
 
 You can view the CA admin identity in your console Wallet by clicking on the **Wallet** in the left navigation. Click the identity to view the certificate and private key of the CA admin.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org1 CA Admin | Org1 CA admin identity |
-  {: caption="Table 3. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- | --- | --- |
+| **Identity** | Org1 CA Admin | Org1 CA admin identity |
+{: caption="Table 3. Check your Wallet" caption-side="bottom"}
 
 The identity is not stored in your console or managed by {{site.data.keyword.IBM_notm}}. It is only stored in local browser storage. If you change browsers, you will need to import this identity into your Wallet to be able to operate the CA. Click **Export identity** to download the identity along with its certificate and private key.
 {: important}
@@ -315,12 +222,12 @@ Registering these identities with the CA is only the first step in **creating** 
 
 **Task: Register users**
 
-  |  **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create CA**  | CA admin | admin | adminpw | client |
-  | **Register users** | Org1 admin | org1admin | org1adminpw | admin |
-  | | Peer identity |  peer1 | peer1pw | peer |
-  {: caption="Table 4. Using your CA to register users" caption-side="bottom"}
+|  **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
+| --- | --- | --- | --- | --- |
+| **Create CA**  | CA admin | admin | adminpw | client |
+| **Register users** | Org1 admin | org1admin | org1adminpw | admin |
+| | Peer identity |  peer1 | peer1pw | peer |
+{: caption="Table 4. Using your CA to register users" caption-side="bottom"}
 
 ### Creating the peer organization MSP definition
 {: #ibp-console-build-network-create-peers-org1}
@@ -340,23 +247,23 @@ Now that we have created the peer's CA and used it to **register** identities fo
 
 **Task: Create the peer organization MSP**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create Organization** | Org1 MSP | org1msp |||
-  | **Root CA** | Org1 CA ||||
-  | **Org Admin Cert** | |  | org1admin | org1adminpw |
-  | **Identity** | Org1 MSP Admin |||||
-  {: caption="Table 5. Create the peer organization MSP definition" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
+| --- | --- | --- | --- | --- |
+| **Create Organization** | Org1 MSP | org1msp |  | |
+| **Root CA** | Org1 CA | | | |
+| **Org Admin Cert** |  |  | org1admin | org1adminpw |
+| **Identity** | Org1 MSP Admin | | | |
+{: caption="Table 5. Create the peer organization MSP definition" caption-side="bottom"}
 
 After you have created the MSP, you should be able to see the peer organization admin in your console **Wallet**.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org1 CA Admin | Org1 admin identity |
-  | **Identity** | Org1 MSP Admin | Org1 MSP admin identity |
-  {: caption="Table 6. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- | --- | --- |
+| **Identity** | Org1 CA Admin | Org1 admin identity |
+| **Identity** | Org1 MSP Admin | Org1 MSP admin identity |
+{: caption="Table 6. Check your Wallet" caption-side="bottom"}
 
 For more information about MSPs, see [managing organizations](/docs/blockchain?topic=blockchain-ibp-console-organizations#ibp-console-organizations).
 
@@ -398,14 +305,14 @@ Use your console to perform the following steps:
 
 **Task: Deploying a peer**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create Peer** | Peer Org1 | org1msp |||
-  | **CA** | Org1 CA ||||
-  | **Peer Identity** | |  | peer1 | peer1pw |
-  | **Administrator certificate** | org1msp ||||
-  | **Associate identity** | Org1 MSP Admin |||||
-  {: caption="Table 7. Deploying a peer" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- | --- |
+| **Create Peer** | Peer Org1 | org1msp | | |
+| **CA** | Org1 CA |  | | |
+| **Peer Identity** | |  | peer1 | peer1pw |
+| **Administrator certificate** | org1msp | | | |
+| **Associate identity** | Org1 MSP Admin | | | |
+{: caption="Table 7. Deploying a peer" caption-side="bottom"}
 
 In a production scenario, it is recommended that each organization deploy three peers to each channel. These can be the same three peers joined to different channels or different peers. It is up to the organization. This is to allow one peer to go down (for example, during a maintenance cycle) and still maintain highly available peers. To deploy more than one peer for an organization, use the same CA you used to register your first peer identity. In this tutorial, that would be `Org1 CA`. Then, register a new peer identity using a distinct enroll ID and secret. For example, `org1secondpeer` and `org1secondpeerpw`. Then, when creating the peer, give this enroll ID and secret. As this peer is still associated with Org1, choose `Org1 CA`, `Org1 MSP`, and `Org1 MSP Admin ` from the drop-down lists. You may choose to give this new peer a different admin, which can be registered and enrolled with `Org1 CA`, but this optional. This tutorial series will only show the process for creating a single peer for each peer organization.
 {:tip}
@@ -507,21 +414,21 @@ After the CA is running, as indicated by the green box in the tile, complete the
 
 **Task: Associate identity**
 
-  |  **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Enroll ID** |  Ordering Service CA Admin  | admin | adminpw |
-  {: caption="Table 8. Associate CA admin identity" caption-side="bottom"}
+|  **Field** | **Display name** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- |
+| **Enroll ID** |  Ordering Service CA Admin  | admin | adminpw |
+{: caption="Table 8. Associate CA admin identity" caption-side="bottom"}
 
 You should be able to see the CA admin in your **Wallet**. As we said above, the identity is not stored in your console or managed by {{site.data.keyword.IBM_notm}}. It is only stored in local browser storage. If you change browsers, you will need to import this identity into your console Wallet to be able to operate the CA. Click the CA admin and then click **Export identity** to download the certificate and private key.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org1 CA Admin | Org1 CA admin identity |
-  | **Identity** | Org1 MSP Admin   | Org1 admin identity |
-  | **Identity** | Ordering Service CA Admin | Ordering Service CA admin identity |
-  {: caption="Table 9. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- | --- | --- |
+| **Identity** | Org1 CA Admin | Org1 CA admin identity |
+| **Identity** | Org1 MSP Admin   | Org1 admin identity |
+| **Identity** | Ordering Service CA Admin | Ordering Service CA admin identity |
+{: caption="Table 9. Check your Wallet" caption-side="bottom"}
 
 ### Using your CA to register ordering service node and ordering service admin identities
 {: #ibp-console-build-network-use-CA-orderer}
@@ -537,12 +444,12 @@ After you have associated the CA admin, you can use the CA tile to create these 
 
 **Task: Create a CA and register users**
 
-  | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create CA** | Ordering Service CA | admin | adminpw | client |
-  | **Register users** | Ordering Service admin | OSadmin | OSadminpw | admin |
-  |  | Ordering Service node identity |  OS1 | OS1pw | orderer |
-  {: caption="Table 10. Create a CA and register users" caption-side="bottom"}
+| **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
+| --- | --- | --- | --- | --- |
+| **Create CA** | Ordering Service CA | admin | adminpw | client |
+| **Register users** | Ordering Service admin | OSadmin | OSadminpw | admin |
+|  | Ordering Service node identity |  OS1 | OS1pw | orderer |
+{: caption="Table 10. Create a CA and register users" caption-side="bottom"}
 
 For the purpose of this tutorial, we are only creating one node identity. This identity will be used by the one node that we will deploy to create the ordering service. While you would not want to do this in a multi-organizational ordering service, it is acceptable given that all of the ordering nodes are owned by the same organization.
 
@@ -564,25 +471,25 @@ Create your ordering service organization MSP definition and specify the admin i
 
 **Task: Create the ordering service organization MSP definition**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create Organization** | Ordering Service MSP | osmsp |||
-  | **Root CA** | Ordering Service CA ||||
-  | **Org Admin Cert** | |  | OSadmin | OSadminpw |
-  | **Identity** | Ordering Service MSP Admin |||||
-  {: caption="Table 11. Create the ordering service organization MSP definition" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
+| ---  | --- | --- | --- | --- |
+| **Create Organization** | Ordering Service MSP | osmsp |  | |
+| **Root CA** | Ordering Service CA | | | |
+| **Org Admin Cert** |  |  | OSadmin | OSadminpw |
+| **Identity** | Ordering Service MSP Admin | | | |
+{: caption="Table 11. Create the ordering service organization MSP definition" caption-side="bottom"}
 
 After you have created the MSP, you should be able to see the ordering service organization admin in your **Wallet**, which can be accessed by clicking on the **Wallet** in the left navigation.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Org1 CA Admin  | Org1 CA admin identity |
-  | **Identity** | Org1 MSP Admin   | Org1 admin identity |
-  | **Identity** | Ordering Service CA Admin | Ordering Service CA admin identity |
-  | **Identity** | Ordering Service MSP Admin   | Ordering Service admin identity |
-  {: caption="Table 12. Check your wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| --- | --- | --- |
+| **Identity** | Org1 CA Admin  | Org1 CA admin identity |
+| **Identity** | Org1 MSP Admin   | Org1 admin identity |
+| **Identity** | Ordering Service CA Admin | Ordering Service CA admin identity |
+| **Identity** | Ordering Service MSP Admin   | Ordering Service admin identity |
+{: caption="Table 12. Check your wallet" caption-side="bottom"}
 
 For more information about MSPs, see [managing organizations](/docs/blockchain?topic=blockchain-ibp-console-organizations#ibp-console-organizations).
 
@@ -611,14 +518,14 @@ Perform the following steps from your console:
 
 **Task: Create an ordering service**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create ordering service** | Ordering Service | osmsp |||
-  | **CA** | Ordering Service CA ||||
-  | **Ordering Service Identity** | |  | OS1 | OS1pw |
-  | **Administrator certificate** | Ordering Service MSP ||||
-  | **Associate identity** | Ordering Service MSP Admin   |||||
-  {: caption="Table 13. Create an ordering service" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
+| --- | --- | --- | --- | --- |
+| **Create ordering service** | Ordering Service | osmsp |  | |
+| **CA** | Ordering Service CA |  | | |
+| **Ordering Service Identity** | | | OS1 | OS1pw |
+| **Administrator certificate** | Ordering Service MSP |  | | |
+| **Associate identity** | Ordering Service MSP Admin   | | | |
+{: caption="Table 13. Create an ordering service" caption-side="bottom"}
 
 After the ordering service has been created, you are able to see it on the **Nodes** panel.
 
@@ -719,16 +626,16 @@ Perform the following steps from your console:
 
 **Task: Create a channel**
 
-  |  **Field** | **Name** |
-  | ------------------------- |-----------|
-  | **Channel name** | channel1 |
-  | **Ordering Service** | Ordering Service |
-  | **Organizations** | Org1 MSP |
-  | **Channel update policy** | 1 out of 1 |
-  | **Access control list** | None |
-  | **Channel creator MSP** | Org1 MSP |
-  | **Identity** | Org1 MSP Admin  |
-  {: caption="Table 14. Create a channel" caption-side="bottom"}
+|  **Field** | **Name** |
+| --- | --- |
+| **Channel name** | channel1 |
+| **Ordering Service** | Ordering Service |
+| **Organizations** | Org1 MSP |
+| **Channel update policy** | 1 out of 1 |
+| **Access control list** | None |
+| **Channel creator MSP** | Org1 MSP |
+| **Identity** | Org1 MSP Admin  |
+{: caption="Table 14. Create a channel" caption-side="bottom"}
 
 The next step is to join a peer to this channel.
 
