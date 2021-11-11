@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-11"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -33,7 +33,7 @@ Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, r
 | |{{site.data.keyword.blockchainfull_notm}} Platform for anywhere (2.5.2) | {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} |
 |----|---|----|
 | Where do you want to deploy the platform?|  Multiple Kubernetes distributions on a private, public, or hybrid **multicloud** <br><br> See [Supported Platforms](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites) | A Kubernetes cluster on {{site.data.keyword.cloud_notm}} <br><br> See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) |  
-| What are my deployment options? | <ul><li> Full platform </li> <li> [Only {{site.data.keyword.blockchainfull_notm}} images](#get-started-ibp-images) </li> </ul>| <ul><li> Full platform </li> </ul>
+| What are my deployment options? | <ul><li> Full platform </li> <li> <a href="#get-started-ibp-images">Only {{site.data.keyword.blockchainfull_notm}} images</a> </li> </ul>| <ul><li> Full platform </li> </ul>
 | How is it billed? |Contact us for [pricing](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-sw-pricing) |[$0.29 USD per allocated CPU hour](/docs/blockchain?topic=blockchain-ibp-saas-pricing)  |
 | Can I connect with peers in other clouds? |  Yes| Yes |
 | Can my data center be [on-prem](#x4561212){: term} and behind a firewall? | Yes| No |
@@ -50,7 +50,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ### Developer Tools
 
 - [**{{site.data.keyword.blockchainfull_notm}} Platform Developer Tools**](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode)
-  Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally or run it from the cloud by using Red Hat CodeReady Workspaces.
+    Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally or run it from the cloud by using Red Hat CodeReady Workspaces.
 
 ### {{site.data.keyword.blockchainfull_notm}} images
 {: #get-started-ibp-images}
@@ -66,3 +66,5 @@ After you deploy {{site.data.keyword.blockchainfull_notm}} Platform in the envir
 {: #get-started-ibp-getting-support}
 
 {{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
+
+

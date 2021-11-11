@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-11-11"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -148,7 +148,7 @@ ibpconsole     1/1       1            1           1m
 After you apply the fix to your console, you need to use your console UI to update the nodes of your blockchain network. Browse to the console UI and open the nodes overview tab. To upgrade a node, open the node tile and click the **Upgrade available** button. You cannot upgrade nodes that you imported to the console.
 
 Apply upgrades to nodes one at a time. Your nodes are unavailable to process requests or transactions while the patch is being applied. Therefore, to avoid any disruption of service, you need to ensure that another node of the same type is available to process requests whenever possible. Installing upgrades on a node takes about a minute to complete and when it is complete, the node is ready to process requests.
-{:important}
+{: important}
 
 ## Rolling back the fix pack installation
 {: #install-fixpack-rollback}
@@ -328,7 +328,7 @@ kubectl get ibpconsole ibpconsole -o yaml > console.yaml
 Then add the URL of your local registry to the `spec:` section of `console.yaml`. Replace `<LOCAL_REGISTRY>` with the URL of your local registry:
 ```
 spec:
-  registryURL: <LOCAL_REGISTRY>
+    registryURL: <LOCAL_REGISTRY>
 ```
 {: codeblock}
 
@@ -342,3 +342,5 @@ kubectl apply -f console-upgrade.yaml
 {: #install-fixpack-nodes-firewall}
 
 After you upgrade your console, you can use the console UI to upgrade the nodes of your blockchain network. For more information, see [Upgrade your blockchain nodes](#install-fixpack-nodes).
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-11"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -82,12 +82,12 @@ The {{site.data.keyword.blockchainfull_notm}} Platform includes the following ke
 - **Easily code** your [smart contracts](#x8888420){: term} in Node.js, Golang, Java, or JavaScript. Use the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools to easily develop smart contracts locally or use Red Hat CodeReady Workspaces to develop them in the cloud. Leverage **SDK integration** with the console, and learn from our rich tutorials and samples.
 - **Simplified DevOps** allows you to move from development to test to production in a single environment by scaling up your Kubernetes resources to add more components.
 - **Up-to-date Fabric key features**. Choose which version of Hyperledger Fabric you want to use when deploying peers or ordering nodes. Leverage the latest features of Hyperledger Fabric v1.4.12 and v2.2.4:
-  - [Smart contract lifecycle](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode_lifecycle.html){: external}
-  - [Raft ordering service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html#raft){: external}
-  - [Private data collections](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-private-data) that provide increased data privacy by ensuring that ledger data is shared to only authorized peers via the gossip protocol.
-  - [Fabric Node OUs](https://hyperledger-fabric.readthedocs.io/en/release-2.2/membership/membership.html#node-ou-roles-and-msps){: external}
-  - [Service discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external}, allowing you to dynamically discover and update how your application interacts with your network.
-  - [Channel access control lists](https://hyperledger-fabric.readthedocs.io/en/release-2.2/access_control.html){: external} that allow you additional control of the governance of your channels and smart contracts.
+    - [Smart contract lifecycle](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode_lifecycle.html){: external}
+    - [Raft ordering service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html#raft){: external}
+    - [Private data collections](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-private-data) that provide increased data privacy by ensuring that ledger data is shared to only authorized peers via the gossip protocol.
+    - [Fabric Node OUs](https://hyperledger-fabric.readthedocs.io/en/release-2.2/membership/membership.html#node-ou-roles-and-msps){: external}
+    - [Service discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external}, allowing you to dynamically discover and update how your application interacts with your network.
+    - [Channel access control lists](https://hyperledger-fabric.readthedocs.io/en/release-2.2/access_control.html){: external} that allow you additional control of the governance of your channels and smart contracts.
 
 **OPERATE --- Total control of your deployments**
 - **Host or join a network**. Deploy peers that are hosted in your cluster to multiple channels on multiple clouds, or invite other organizations to join your consortium or channels while the organizations manage their nodes independently across infrastructures.
@@ -115,8 +115,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ## Supported {{site.data.keyword.cloud_notm}} configuration
 {: #ibp-console-overview-supported-cfg}
 
-**{{site.data.keyword.blockchainfull}} Platform is currently incompatible with Kubernetes v1.22. Upgrading an Kubernetes
- cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions.** <br/><br/> **Reminder:** {{site.data.keyword.containerlong_notm}} 1.17 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.17 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20.  Be aware that  {{site.data.keyword.containerlong_notm}} 1.19 is already deprecated, therefore now is a good time to upgrade to 1.20. To get started, see [1.17 to 1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.17 to 1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
+**{{site.data.keyword.blockchainfull}} Platform is currently incompatible with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions.** <br/><br/> **Reminder:** {{site.data.keyword.containerlong_notm}} 1.17 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.17 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20.  Be aware that  {{site.data.keyword.containerlong_notm}} 1.19 is already deprecated, therefore now is a good time to upgrade to 1.20. To get started, see [1.17 to 1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.17 to 1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
 {: important}
 
 | | |
@@ -244,3 +243,5 @@ For a list of the current security certifications that {{site.data.keyword.block
 {: #ibp-console-overview-support}
 
 For more information about how to get support on {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}, as well as free blockchain developer resources and support forums that you can use to troubleshoot problems, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
+
+

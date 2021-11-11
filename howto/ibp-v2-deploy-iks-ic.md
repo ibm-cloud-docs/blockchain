@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-11"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -134,13 +134,13 @@ You must wait for the update to complete before you can [resume the {{site.data.
 
 The user who links the blockchain service instance to the Kubernetes cluster must have the `Administrator` and `Manager` roles in Kubernetes.
 To configure this access you must complete the following steps:
-   1. In the {{site.data.keyword.cloud_notm}} dashboard, click the **Manage** drop-down list, then **Access (IAM)**.
-   2. In the left navigation menu, click **Users** and click the ID of user who will link the service instance to the Kubernetes cluster.
-   3. Click **Access Policies**, then **Assign access**.
-   4. Click the tile **Assign access to resources**.
-   5. In the Services drop-down list, select **Kubernetes Service**.
-   6. Check the **Administrator** and **Manager** roles for this user.
-   7. Click **Assign**.
+    1. In the {{site.data.keyword.cloud_notm}} dashboard, click the **Manage** drop-down list, then **Access (IAM)**.
+    2. In the left navigation menu, click **Users** and click the ID of user who will link the service instance to the Kubernetes cluster.
+    3. Click **Access Policies**, then **Assign access**.
+    4. Click the tile **Assign access to resources**.
+    5. In the Services drop-down list, select **Kubernetes Service**.
+    6. Check the **Administrator** and **Manager** roles for this user.
+    7. Click **Assign**.
 
 For more information about Kubernetes access control, see [how to pick the right access policy and role for your users](/docs/containers?topic=containers-users#checking-perms).
 
@@ -175,3 +175,5 @@ If the service instance contains organizations that are participating in an acti
 {: important}
 
 If your service instance deletion fails, it could be because the Kubernetes cluster is not accessible. If this occurs, open a [support ticket](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases) to request the service instance deletion.
+
+

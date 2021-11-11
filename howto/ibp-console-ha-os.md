@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-11-11"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -15,100 +15,7 @@ completion-time: 45m
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -154,11 +61,11 @@ Choose the regions of your Kubernetes clusters carefully. While it is fine for t
 
 * [Create an {{site.data.keyword.blockchainfull_notm}} Platform service instance in {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-create-service-instance).  
 
-  Deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform in each cluster and verify that you can log in to the console.
+    Deploy an instance of the {{site.data.keyword.blockchainfull_notm}} Platform in each cluster and verify that you can log in to the console.
 
 * [Build a network tutorial](/docs/blockchain?topic=blockchain-ibp-console-build-network)  
 
-  We assume that you are already familiar with the console and using it to deploy a CA, register users, enroll identities, create a Membership Service Provider (MSP), and create an ordering service. If you have not used the console before, you should review the Build a Network tutorial because a similar process is used in throughout the following instructions.
+    We assume that you are already familiar with the console and using it to deploy a CA, register users, enroll identities, create a Membership Service Provider (MSP), and create an ordering service. If you have not used the console before, you should review the Build a Network tutorial because a similar process is used in throughout the following instructions.
 
 ## Deploy the ordering service in Region 1
 {: #ibp-console-hadr-mr-os-region1}
@@ -183,7 +90,7 @@ For simplicity, we create an ordering service where all of the ordering nodes be
 6. Review the Summary page, then click **Add Certificate Authority**.
 
 Depending on your cluster type, deployment of the CA can take up to ten minutes. When the CA is first deployed, the status indicator box in the CA tile is a flashing gray box. When the CA is successfully deployed and is running, this box turns green, indicating that it is "Running" and can be operated from the console. Before proceeding with the steps below, you must wait until the CA status is "Running". If the gray box stops flashing, try reloading the page in your browser to refresh the status.
-{:important}
+{: important}
 
 ### Associate the CA admin identity
 {: #ibp-console-hadr-mr-os-region1-ca-admin}
@@ -198,19 +105,19 @@ After the CA is running, as indicated by the green box in the tile, complete the
 
 **Task: Associate identity**
 
-  |  **Field** | **Display name** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Enroll ID** |  Multiregion OS CA Admin  | admin | adminpw |
-  {: caption="Table 1. Associate CA admin identity" caption-side="bottom"}
+|  **Field** | **Display name** | **Enroll ID** | **Secret** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Enroll ID** |  Multiregion OS CA Admin  | admin | adminpw |
+{: caption="Table 1. Associate CA admin identity" caption-side="bottom"}
 
 You should be able to see the CA admin in your **Wallet**.
 
 **Task: Check your Wallet**
 
-  | **Field** |  **Display name** | **Description** |
-  | ------------------------- |-----------|----------|
-  | **Identity** | Multiregion OS CA Admin | Multiregion OS CA admin identity |
-  {: caption="Table 2. Check your Wallet" caption-side="bottom"}
+| **Field** |  **Display name** | **Description** |
+| ------------------------- |-----------|----------|
+| **Identity** | Multiregion OS CA Admin | Multiregion OS CA admin identity |
+{: caption="Table 2. Check your Wallet" caption-side="bottom"}
 
 ### Use your CA to register identities
 {: #ibp-console-hadr-mr-os-region1-ca-reg}
@@ -229,12 +136,12 @@ Because you have already associated the CA admin identity, you can now use the C
 
 **Task: Create a CA and register users**
 
-  | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create CA** | Multiregion OS CA | admin | adminpw | client |
-  | **Register users** | Ordering Service admin | osadmin | osadminpw | admin |
-  |  | Ordering Service node 1 identity |  os1 | os1pw | orderer |
-  {: caption="Table 3. Register users with CA" caption-side="bottom"}
+| **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Create CA** | Multiregion OS CA | admin | adminpw | client |
+| **Register users** | Ordering Service admin | osadmin | osadminpw | admin |
+|  | Ordering Service node 1 identity |  os1 | os1pw | orderer |
+{: caption="Table 3. Register users with CA" caption-side="bottom"}
 
 You could register a new user for each ordering node, but to keep things simple we will reuse the same user enroll ID and secret for each ordering node. Reusing the enroll ID is acceptable in this case because a unique certificate is generated when the ordering node is created and the identity is enrolled. But it is important to ensure that you have not restricted the **maximum enrollments** for the user when it is initially registered so that a new certificate can be generated when the user is enrolled when each ordering node is created. The default value of **maximum enrollments** is `unlimited`.
 {: tip}
@@ -256,23 +163,23 @@ Create your ordering service organization MSP definition and specify the admin i
 
 **Task: Create the ordering service organization MSP definition**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create Organization** | Multiregion OS MSP | mrosmsp |||
-  | **Root CA** |  Multiregion OS CA ||||
-  | **Org Admin Cert** | |  | osadmin | osadminpw |
-  | **Identity** | Multiregion OS MSP Admin |||||
-  {: caption="Table 4. Create the ordering service organization MSP definition" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Create Organization** | Multiregion OS MSP | mrosmsp |||
+| **Root CA** |  Multiregion OS CA ||||
+| **Org Admin Cert** | |  | osadmin | osadminpw |
+| **Identity** | Multiregion OS MSP Admin |||||
+{: caption="Table 4. Create the ordering service organization MSP definition" caption-side="bottom"}
 
 After you create the MSP, you should be able to see the ordering service organization admin in your **Wallet**, which can be accessed by clicking the **Wallet** tab in the left navigation.
 
 **Task: Check your Wallet**
 
-  | **Field**    |  **Display name** | **Description** |
-  | -------------|-------------------|-----------------|
-  | **Identity** | Multiregion OS CA Admin |  Multiregion OS CA admin identity |
-  | **Identity** | Multiregion OS MSP Admin | Multiregion OS MSP admin identity |
-  {: caption="Table 5. Check your wallet" caption-side="bottom"}
+| **Field**    |  **Display name** | **Description** |
+| -------------|-------------------|-----------------|
+| **Identity** | Multiregion OS CA Admin |  Multiregion OS CA admin identity |
+| **Identity** | Multiregion OS MSP Admin | Multiregion OS MSP admin identity |
+{: caption="Table 5. Check your wallet" caption-side="bottom"}
 
 ### Create single node ordering service in Region 1.
 {: #ibp-console-hadr-mr-os-region1-osn1}
@@ -283,26 +190,26 @@ After you create the MSP, you should be able to see the ordering service organiz
 4. Choose **One ordering node** because we are creating a single node ordering service and then adding the other four nodes to it.
 5. For more granular control of which zone the node gets deployed in, if your Kubernetes cluster is configured for multiple zones the console includes an advanced deployment option labeled `Deployment zone selection`. Selecting this option allows you to place the node in a specific zone inside your cluster. Or the anti-affinity policy of the console will automatically deploy your ordering nodes to different worker nodes within each zone based on the resources available. Learn more about the available [zone selection options](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-on-k8s-zone). If you prefer to let the system choose the zone for you, you can leave this advanced option unchecked. Click **Next**.
 6. On the **Add ordering service** page
-   * Select `Multiregion OS CA` as your CA.
-   * Then, select the **enroll ID** for the node identity that you created for your ordering service from the drop-down list, `os1`.
-   * Enter the associated **secret**, `os1pw`.
-   * Select your MSP, `Multiregion OS MSP` from the drop-down list.
-   * For purposes of this tutorial, you can skip the **TLS CSR hostname** option.
-   * In the **Fabric version** drop-down list, select the latest available version, as it will contain the latest bug fixes.
-   * Click **Next**.
+    * Select `Multiregion OS CA` as your CA.
+    * Then, select the **enroll ID** for the node identity that you created for your ordering service from the drop-down list, `os1`.
+    * Enter the associated **secret**, `os1pw`.
+    * Select your MSP, `Multiregion OS MSP` from the drop-down list.
+    * For purposes of this tutorial, you can skip the **TLS CSR hostname** option.
+    * In the **Fabric version** drop-down list, select the latest available version, as it will contain the latest bug fixes.
+    * Click **Next**.
 7. The **Associate identity** step allows you to choose an admin for your ordering service. Select `Multiregion OS MSP Admin` and click **Next**.
 8. Review the Summary page and click **Add ordering service**.
 
 **Task: Create an ordering service**
 
-  |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
-  | ------------------------- |-----------|-----------|-----------|-----------|
-  | **Create ordering service** | Multiregion Ordering Service | mrosmsp |||
-  | **CA** | Multiregion OS CA ||||
-  | **Ordering Service Identity** | |  | os1 | os1pw |
-  | **Administrator certificate** | Multiregion OS MSP ||||
-  | **Associate identity** | Multiregion OS MSP Admin   |||||
-  {: caption="Table 6. Create an ordering service" caption-side="bottom"}
+|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Create ordering service** | Multiregion Ordering Service | mrosmsp |||
+| **CA** | Multiregion OS CA ||||
+| **Ordering Service Identity** | |  | os1 | os1pw |
+| **Administrator certificate** | Multiregion OS MSP ||||
+| **Associate identity** | Multiregion OS MSP Admin   |||||
+{: caption="Table 6. Create an ordering service" caption-side="bottom"}
 
 It takes several minutes for the ordering service to be deployed to your **Region 1** cluster. After the ordering service has been successfully deployed, you are able to see it on the **Nodes** panel with a green status indicator. You may need to refresh your browser.
 
@@ -318,23 +225,23 @@ Now we can create a second ordering node in **Region 1** and add it to the order
 5. Provide a name for this ordering node, `OS2-Region1`.
 6. If you want to control which zone the node is created in, select the advanced deployment option that is labeled `Deployment zone selection`, otherwise you can leave this advanced option unchecked. Click **Next**.
 7. On the **Add another node** page:
-   * Select `Multiregion OS CA` as your CA.
-   * Then, select `os1` as the **enroll ID** for the node
-   * Enter the associated **secret**, `os1pw`.
-   * Select your MSP, `Multiregion OS MSP` from the drop-down list.
-   * As before, skip the **TLS CSR hostname** option.
-   * In the **Fabric version** drop-down list, select the latest available version, as it will contain the latest bug fixes.
-   * Click **Next**.
+    * Select `Multiregion OS CA` as your CA.
+    * Then, select `os1` as the **enroll ID** for the node
+    * Enter the associated **secret**, `os1pw`.
+    * Select your MSP, `Multiregion OS MSP` from the drop-down list.
+    * As before, skip the **TLS CSR hostname** option.
+    * In the **Fabric version** drop-down list, select the latest available version, as it will contain the latest bug fixes.
+    * Click **Next**.
 8. Review the Summary page and click **Add another node**.
 
 **Task: Add second ordering node**
 
- |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
- | ------------------------- |-----------|-----------|-----------|-----------|
- | **Create ordering node** | OS2-Region1 | Multiregion OS MSP |||
- | **CA** | Multiregion OS CA ||||
- | **Ordering Service Identity** | |  | os1 | os1pw |
- {: caption="Table 7. Create second ordering node" caption-side="bottom"}
+|  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Create ordering node** | OS2-Region1 | Multiregion OS MSP |||
+| **CA** | Multiregion OS CA ||||
+| **Ordering Service Identity** | |  | os1 | os1pw |
+{: caption="Table 7. Create second ordering node" caption-side="bottom"}
 
 
 
@@ -344,7 +251,7 @@ Now we can create a second ordering node in **Region 1** and add it to the order
 To complete the process of adding the node, you need to add it to the consenter set of the system channel. After the ordering node has been successfully added, a new tile with the name of `OS2-Region1` appears on the **Multiregion Ordering Service** page with the label "Requires attention". This state reflects the fact that, while the node creation process has been successful, the node is not yet part of the consenter set of the system channel. The node must be added to the system channel before it can be added to any of the application channels.
 
 Recall that the "consenter set" refers to the ordering service nodes actively participating in the ordering process on a channel, while the "system channel", which is managed by the ordering service, forms the template for application channels.
-{:tip}
+{: tip}
 
 To add the node you created to the system channel, click the `OS2-Region1` node. You will see an **Add node to ordering service** button. Click this button. After the node has been added to the ordering service, the node is now part of the system channel.
 
@@ -383,20 +290,20 @@ After you import a node into your console, you can use it create or manage other
 {: tip}
 
 1. Import the CA.
-  * From the **Nodes** tab, click **Add a Certificate Authority**, then **Import an existing Certificate Authority**.
-  * Click **Add file** and browse to the  `Multiregion OS CA_ca.json` file that you exported from the console in **Region 1** and click **Add Certificate Authority**.
-  * Open the imported `Multiregion OS CA` tile.
-  * Click **Associate identity**.
-  * Specify the enroll ID and secret we used when we created the CA, `admin` and `adminpw` then **Associate identity**.
+    * From the **Nodes** tab, click **Add a Certificate Authority**, then **Import an existing Certificate Authority**.
+    * Click **Add file** and browse to the  `Multiregion OS CA_ca.json` file that you exported from the console in **Region 1** and click **Add Certificate Authority**.
+    * Open the imported `Multiregion OS CA` tile.
+    * Click **Associate identity**.
+    * Specify the enroll ID and secret we used when we created the CA, `admin` and `adminpw` then **Associate identity**.
 2. Import the Ordering service.
-  * From the **Nodes** tab, click **Add ordering service**, then **Import an existing ordering service**.  
-  * Click **Add file** and browse to the `Multiregion Ordering Service_orderer.json` file that you exported from the console in **Region 1** and click **Add ordering service**.
+    * From the **Nodes** tab, click **Add ordering service**, then **Import an existing ordering service**.  
+    * Click **Add file** and browse to the `Multiregion Ordering Service_orderer.json` file that you exported from the console in **Region 1** and click **Add ordering service**.
 3. Import the orderer organization msp.
-  * From the **Organizations** tab, click **Import MSP definition** and then click **Add file**.
-  * Browse to the `Multiregion OS MSP_msp.json` file that you exported from the console in **Region 1** and click **Import MSP definition**.
+    * From the **Organizations** tab, click **Import MSP definition** and then click **Add file**.
+    * Browse to the `Multiregion OS MSP_msp.json` file that you exported from the console in **Region 1** and click **Import MSP definition**.
 4. Import the MSP admin identity.
-  * From the **Wallet** tab, click **Add identity** then **Upload JSON**.
-  * Browse to the `Multiregion OS MSP Admin_identity.json` file that you exported from the console in **Region 1** and click **Add identity**.
+    * From the **Wallet** tab, click **Add identity** then **Upload JSON**.
+    * Browse to the `Multiregion OS MSP Admin_identity.json` file that you exported from the console in **Region 1** and click **Add identity**.
 
 ### Add third ordering node from Region 2
 {: #ibp-console-hadr-mr-os-region2-osn3}
@@ -411,22 +318,22 @@ Now we are ready to create a third ordering node that resides in **Region 2** an
 5. Provide a name for this ordering node, `OS3-Region2`.
 6. Again you can click the advanced deployment option that is labeled `Deployment zone selection` if you want to choose the zone where this node is deployed. Otherwise, you can leave it unchecked and let the system choose for you. Click **Next**.
 7. On the **Add ordering service** page
-   * Select `Multiregion OS CA` as your CA.
-   * Then, select `os1` as the **enroll ID** for the node identity.
-   * Enter the associated **secret**, `os1pw`.
-   * Select your MSP, `Multiregion OS MSP` from the drop-down list.
-   * For purposes of this tutorial, you can skip the **TLS CSR hostname** option.
-   * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
+    * Select `Multiregion OS CA` as your CA.
+    * Then, select `os1` as the **enroll ID** for the node identity.
+    * Enter the associated **secret**, `os1pw`.
+    * Select your MSP, `Multiregion OS MSP` from the drop-down list.
+    * For purposes of this tutorial, you can skip the **TLS CSR hostname** option.
+    * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
 8. Review the Summary page and click **Add another node**.
 
 **Task: Add third ordering node**
 
- |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
- | ------------------------- |-----------|-----------|-----------|-----------|
- | **Create ordering node** | os3-Region2 | Multiregion OS MSP |||
- | **CA** | Multiregion OS CA ||||
- | **Ordering Service Identity** | |  | os1 | os1pw |
- {: caption="Table 8. Create third ordering node" caption-side="bottom"}
+|  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
+| ------------------------- |-----------|-----------|-----------|-----------|
+| **Create ordering node** | os3-Region2 | Multiregion OS MSP |||
+| **CA** | Multiregion OS CA ||||
+| **Ordering Service Identity** | |  | os1 | os1pw |
+{: caption="Table 8. Create third ordering node" caption-side="bottom"}
 
 To complete the process of adding the node, you need to add it to the consenter set of the system channel.
 
@@ -462,20 +369,20 @@ Because all of the actions in this section are performed from the blockchain con
 Repeat the steps to import the console components from **Region 1**, but this time import them into the **Region 3** console:
 
 1. Import the CA.
-  * From the **Nodes** tab, click **Add a Certificate Authority**, then **Import an existing Certificate Authority**.
-  * Click **Add file** and browse to the  `Multiregion OS CA_ca.json` file and click **Add Certificate Authority**.
-  * Open the imported `Multiregion OS CA` tile.
-  * Click **Associate identity**.
-  * Specify the enroll ID and secret we used when we created the CA, `admin` and `adminpw`, then **Associate identity**.
+    * From the **Nodes** tab, click **Add a Certificate Authority**, then **Import an existing Certificate Authority**.
+    * Click **Add file** and browse to the  `Multiregion OS CA_ca.json` file and click **Add Certificate Authority**.
+    * Open the imported `Multiregion OS CA` tile.
+    * Click **Associate identity**.
+    * Specify the enroll ID and secret we used when we created the CA, `admin` and `adminpw`, then **Associate identity**.
 2. Import the Ordering service.
-  * From the **Nodes** tab, click **Add ordering service**, then **Import an existing ordering service**.  
-  * Click **Add file** and browse to the `Multiregion Ordering Service_orderer.json` file and click **Add ordering service**.
+    * From the **Nodes** tab, click **Add ordering service**, then **Import an existing ordering service**.  
+    * Click **Add file** and browse to the `Multiregion Ordering Service_orderer.json` file and click **Add ordering service**.
 3. Import the orderer organization msp.
-  * From the **Organizations** tab, click **Import MSP definition** and then click **Add file**.
-  * Browse to the `Multiregion OS MSP_msp.json` file and click **Import MSP definition**.
+    * From the **Organizations** tab, click **Import MSP definition** and then click **Add file**.
+    * Browse to the `Multiregion OS MSP_msp.json` file and click **Import MSP definition**.
 4. Import the MSP admin identity.
-  * From the **Wallet** tab, click **Add identity** then **Upload JSON**.
-  * Browse to the `Multiregion OS MSP Admin_identity.json` file and click **Add identity**.
+    * From the **Wallet** tab, click **Add identity** then **Upload JSON**.
+    * Browse to the `Multiregion OS MSP Admin_identity.json` file and click **Add identity**.
 
 ### Add fourth and fifth ordering nodes from Region 3
 {: #ibp-console-hadr-mr-os-region2-osn3}
@@ -490,12 +397,12 @@ Almost done. Let's create the last two ordering nodes that will reside in **Regi
 5. Provide a name for this ordering node, `OS4-Region3`.
 6. Again, if you want to choose the zone where this node is deployed, click the advanced deployment option that is labeled `Deployment zone selection`. Otherwise, leave it unchecked and let the system choose for you. Click **Next**.
 7. On the **Add ordering service** page
-   * Select `Multiregion OS CA` as your CA.
-   * Then, select `os1` as the **enroll ID** for the node identity.
-   * Enter the associated **secret**, `os1pw`.
-   * Select your MSP, `Multiregion OS MSP` from the drop-down list.
-   * For purposes of this tutorial you can skip the **TLS CSR hostname** option.
-   * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
+    * Select `Multiregion OS CA` as your CA.
+    * Then, select `os1` as the **enroll ID** for the node identity.
+    * Enter the associated **secret**, `os1pw`.
+    * Select your MSP, `Multiregion OS MSP` from the drop-down list.
+    * For purposes of this tutorial you can skip the **TLS CSR hostname** option.
+    * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
 8. Review the Summary page and click **Add another node**. Don't worry about adding `OS4-Region3` to the system channel yet. We'll do that after adding the last ordering node.
 **Task: Add fourth ordering node**
 
@@ -537,10 +444,10 @@ Open both new ordering nodes, `OS4-Region3` and `OS5-Region3`, and click `Export
 The final step is to update the ordering service in each region with the ordering nodes that were generated in the other two regions.
 
 1. In the **Region 1** console, import the `os3-Region2`, `os4-Region3`, and `os5-Region3` files.
-  * From the **Nodes** tab, open the `Multiregion Ordering Service` tile and click the **Ordering nodes** tab.
-  * Click **Add another node** and then **Import an existing ordering node**.
-  * Click **Add file** and browse to the `JSON` file for one of the exported ordering nodes.
-  * Repeat this process for the other two ordering node `JSON` files.
+    * From the **Nodes** tab, open the `Multiregion Ordering Service` tile and click the **Ordering nodes** tab.
+    * Click **Add another node** and then **Import an existing ordering node**.
+    * Click **Add file** and browse to the `JSON` file for one of the exported ordering nodes.
+    * Repeat this process for the other two ordering node `JSON` files.
 2. In the **Region 2** console, import the `os4-Region3`, and `os5-Region3` files by repeating the same steps that you used in the **Region 1** console.
 3. In the **Region 3** console, import the `os3-Region2` file by repeating the same steps.
 
@@ -558,20 +465,20 @@ The following screen capture shows what the ordering service looks like on the c
 
 * Create application channels
 
-  The multiregion ordering service is now configured for HA across regions and is ready for peer organizations to create application channels. If the peers do not reside in any of the consoles that are used in this tutorial, you need to export our five-node ordering service and import it along with the orderer organization MSP into the console where the peer resides. This allows the peer organization admin to create application channels that are based on the ordering service. For instructions on how to create an application channel, see the [Build a network tutorial](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-channel).
+    The multiregion ordering service is now configured for HA across regions and is ready for peer organizations to create application channels. If the peers do not reside in any of the consoles that are used in this tutorial, you need to export our five-node ordering service and import it along with the orderer organization MSP into the console where the peer resides. This allows the peer organization admin to create application channels that are based on the ordering service. For instructions on how to create an application channel, see the [Build a network tutorial](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-channel).
 
 * Multi-organization ordering service
 
-  For simplicity, we use a single organization for all five ordering nodes in this tutorial. But it is possible when you build an HA ordering service that multiple organizations will want to contribute their own ordering nodes to the ordering service. In that case, the process is largely the same. The major difference is that each organization that wants to contribute an ordering node needs to have their own CA and own organization MSP definition. The process to add ordering nodes from separate organizations is described in the [Adding and removing ordering service nodes](/docs/blockchain?topic=blockchain-ibp-console-add-remove-orderer) topic and the resulting architecture in this case would be similar to:
+    For simplicity, we use a single organization for all five ordering nodes in this tutorial. But it is possible when you build an HA ordering service that multiple organizations will want to contribute their own ordering nodes to the ordering service. In that case, the process is largely the same. The major difference is that each organization that wants to contribute an ordering node needs to have their own CA and own organization MSP definition. The process to add ordering nodes from separate organizations is described in the [Adding and removing ordering service nodes](/docs/blockchain?topic=blockchain-ibp-console-add-remove-orderer) topic and the resulting architecture in this case would be similar to:
 
-  ![Multiregion multi-organization ordering service](../images/mr-ha-os-multiorg.png "Multiregion multi-organization ordering service"){: caption="Figure 6. Multiregion, multi-organization ordering service" caption-side="bottom"}
+    ![Multiregion multi-organization ordering service](../images/mr-ha-os-multiorg.png "Multiregion multi-organization ordering service"){: caption="Figure 6. Multiregion, multi-organization ordering service" caption-side="bottom"}
 
 
 * Clean up  
-  Want to start fresh? You can remove the following resources that you created as a part of this tutorial:
+    Want to start fresh? You can remove the following resources that you created as a part of this tutorial:
 
-  * From the **Nodes** tab, open the `Multiregion OS CA` and click the trash can ![trash can](../../icons/icon_trash.svg).
-  * From the **Organizations** tab, open the `Multiregion OS MSP` and click the trash can ![trash can](../../icons/icon_trash.svg).
-  * From the **Nodes** tab, open the `Multiregion Ordering Service` and click the trash can ![trash can](../../icons/icon_trash.svg).
-  * From the **Wallet** tab, open `Multiregion OS CA Admin` and click **Remove identity**.
-  * From the **Wallet** tab, open `Multiregion OS MSP Admin` and click **Remove identity**.
+    * From the **Nodes** tab, open the `Multiregion OS CA` and click the trash can ![trash can](../../icons/icon_trash.svg).
+    * From the **Organizations** tab, open the `Multiregion OS MSP` and click the trash can ![trash can](../../icons/icon_trash.svg).
+    * From the **Nodes** tab, open the `Multiregion Ordering Service` and click the trash can ![trash can](../../icons/icon_trash.svg).
+    * From the **Wallet** tab, open `Multiregion OS CA Admin` and click **Remove identity**.
+    * From the **Wallet** tab, open `Multiregion OS MSP Admin` and click **Remove identity**.

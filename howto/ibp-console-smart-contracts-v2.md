@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-11-11"
 
 keywords: smart contract, private data, private data collection, anchor peer, implicit collections
 
@@ -10,100 +10,7 @@ subcollection: blockchain
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -140,7 +47,7 @@ For more information about advanced channel options, which includes setting the 
 {: #ibp-console-smart-contracts-v2-before-fabimage}
 
 As a reminder, to leverage the smart contract lifecycle process, the peers on the channel must be running a Fabric v2.x image. The Fabric level of a peer is visible in the console by clicking a peer node to open it.
-  ![Peer version](../images/peer-version.png "How to find the Fabric version of the peer"){: caption="Figure 1. How to find the Fabric version of the peer" caption-side="bottom"}
+![Peer version](../images/peer-version.png "How to find the Fabric version of the peer"){: caption="Figure 1. How to find the Fabric version of the peer" caption-side="bottom"}
 
 If your peer is running a Fabric v1.4.x image, you cannot use this tutorial to manage your smart contract. Instead, see the [Deploy a smart contract using Fabric v1.4](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v14) tutorial for instructions on how to deploy the smart contract on the channel or upgrade the peer to use a Fabric v2.x image.
 
@@ -200,24 +107,24 @@ Because Fabric v2.x peers do not have a "shim" (the external dependencies that a
 The `build.gradle` file for the smart contract must be updated:
 
 1. If the smart contract uses the `shadowjar` 2.x plugin, then it should be updated to version 5 by using the following code:
-	```
-	plugins {
-	    id 'com.github.johnrengelman.shadow' version '5.1.0'
-	    id 'java'
-	}
-	```
-	{: codeblock}
+    ```
+    plugins {
+        id 'com.github.johnrengelman.shadow' version '5.1.0'
+        id 'java'
+    }
+    ```
+    {: codeblock}
 
 2. The `repositories` section of the file must contain the `maven URL` for `jitpack`, for example:
-  ```
-	repositories {
-	    ...
-	    maven {
-	        url 'https://jitpack.io'
-	    }
-	}
-	```
-	{: codeblock}
+    ```
+        repositories {
+        ...
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+    ```
+    {: codeblock}
 
 
 **Init functions**  
@@ -271,12 +178,12 @@ The `go.mod` file will resemble:
 ```
 module mysmartcontract
 
- go 1.14
+    go 1.14
 
- require (
-         github.com/hyperledger/fabric-chaincode-go v0.0.0-20200511190512-bcfeb58dd83a
-         github.com/hyperledger/fabric-protos-go v0.0.0-20200506201313-25f6564b9ac4
- )
+    require (
+        github.com/hyperledger/fabric-chaincode-go v0.0.0-20200511190512-bcfeb58dd83a
+        github.com/hyperledger/fabric-protos-go v0.0.0-20200506201313-25f6564b9ac4
+    )
 ```
 or if you are using the `Go contract-api`, it will resemble:
 ```
@@ -363,24 +270,24 @@ All lifecycle actions are managed from the **Channels** tab in the console.
 2. Because the console allows you to act as multiple organizations from a single console, you must first select the organization that is proposing this smart contract definition and the associated peer admin identity. A peer admin identity is required to install a smart contract. Not sure? Open the peer CA and verify that the identity associated with the peer has the type `admin` in the list of CA users.
 
 3. On the next panel, browse to your smart contract package and click **Add file**.  You can install a new package or browse to an existing package that was installed on another peer in your organization.
-  Smart contract packages can also be installed on a peer node directly by using the **Install smart contract** button. If you used that option, instead of clicking **Add file**, click the **Existing package** tab and select the package that you installed on your peer.
-  {: note}
+    Smart contract packages can also be installed on a peer node directly by using the **Install smart contract** button. If you used that option, instead of clicking **Add file**, click the **Existing package** tab and select the package that you installed on your peer.
+    {: note}
 
 4. On the **Smart contract details** panel you can specify a unique name and version to use for this smart contract definition. The console extracts these values from the package name itself but you can override them and specify any values that your organization prefers.
-  Be careful how you name your proposal. If a proposal with the same name already exists on the channel, this proposal replaces it.
-  {: tip}
+    Be careful how you name your proposal. If a proposal with the same name already exists on the channel, this proposal replaces it.
+    {: tip}
 
 5. On the **Install smart contract** panel, you can install the smart contract on all your peers on the channel or just a subset. In a production network, for redundancy reasons, you should install the smart contract on at least two peers, or three when you want to maintain redundancy but still allow for one peer to go down for maintenance. 
-  Since you are proposing the smart contract, it must be installed on at least one peer.
-  {: note}
+    Since you are proposing the smart contract, it must be installed on at least one peer.
+    {: note}
 
 6. On the **Smart contract endorsement policy** panel, you can designate how many organizations need to endorse a smart contract transaction before it can be committed to the ledger.  The default smart contract endorsement policy is inherited from the application endorsement policy of the channel, but can be overridden here by selecting specific organizations and the required number, or by pasting in your own policy JSON. Remember, this smart contract  endorsement policy becomes part of the proposal that must be agreed to by the other channel members before the smart contract can be committed to the channel. The endorsement policy must follow the format that is specified in the Fabric documentation [endorsement policy syntax](https://hyperledger-fabric.readthedocs.io/en/release-2.2/endorsement-policies.html#endorsement-policy-syntax){: external}.
 
 7. If your smart contract includes Fabric private data collections, you need to upload the associated collection configuration JSON file on the **Additional private data collection** panel. Otherwise, you can skip this step. For more information, see [private data](#ibp-console-smart-contracts-v2-private-data).
 
 8. Your smart contract proposal definition is listed on the **Summary panel**. Everything that you selected on the previous panels become part of the proposal definition. It also includes the list of organization members that will receive the proposal notification. Once a proposal is created, the definition cannot be modified.
-  Proposal definitions cannot be modified after they are created. If, after creating the proposal you realize that changes are required to the definition, you need to create a new proposal. However, you are permitted to update the package on the proposal.
-  {: important}
+    Proposal definitions cannot be modified after they are created. If, after creating the proposal you realize that changes are required to the definition, you need to create a new proposal. However, you are permitted to update the package on the proposal.
+    {: important}
 
 9. When you are satisfied with the proposal, click **Propose** to install the smart contract on the selected peers and send an approval notification to the channel members. When the proposal is successful, it is visible in the **Channels** tab under **Smart contract definitions** with a status of **_Proposed_** on the tile. It is also visible to members of the channel lifecycle endorsement policy under the console Notifications (bell) icon.
 
@@ -411,15 +318,15 @@ The members, including the originator, cannot change the definition. They can si
 2. Before you can approve a smart proposal, you are required to select your organization and the associated **peer admin identity** that you want to use to approve or endorse the proposal.
 
 3. Channel members can choose among these options:
-  - **Approve the definition, but do not install the package on any of their peers.** Useful when the smart contract can run on the channel but is not required for your organization.
+    - **Approve the definition, but do not install the package on any of their peers.** Useful when the smart contract can run on the channel but is not required for your organization.
 
-  - **Approve the definition and install the package on one or more peers in their organization.** The proposal originator needs to share the package file out of band with the channel members so they can upload it and install it on their peers. Smart contract packages cannot be shared from the console.
+    - **Approve the definition and install the package on one or more peers in their organization.** The proposal originator needs to share the package file out of band with the channel members so they can upload it and install it on their peers. Smart contract packages cannot be shared from the console.
 
-  - **Approve the definition but upload their own package and install it on one or more peers in their organization.** When an organization prefers to run their own version of the smart contract package on the channel (provided the read/write set logic is the same), they can upload their own smart contract package file during the approval.
+    - **Approve the definition but upload their own package and install it on one or more peers in their organization.** When an organization prefers to run their own version of the smart contract package on the channel (provided the read/write set logic is the same), they can upload their own smart contract package file during the approval.
 
-  - **Approve the definition but select an existing package from another peer in their organization.** When an organization prefers to run their own version of the smart contract package on the channel, provided that the read/write set logic is the same, and that package is already installed on another peer in their organization, they can select the existing smart contract package during the approval.
+    - **Approve the definition but select an existing package from another peer in their organization.** When an organization prefers to run their own version of the smart contract package on the channel, provided that the read/write set logic is the same, and that package is already installed on another peer in their organization, they can select the existing smart contract package during the approval.
 
-  - **If a member wants to reject the smart contract proposal, they should simply abstain from approving the definition.**  Instead, they can create a new smart contract proposal with the definition they prefer and either upload a new smart contract package or use the existing one from the original proposal. **Note:** The new proposal must use a new smart contract **definition name**.
+    - **If a member wants to reject the smart contract proposal, they should simply abstain from approving the definition.**  Instead, they can create a new smart contract proposal with the definition they prefer and either upload a new smart contract package or use the existing one from the original proposal. **Note:** The new proposal must use a new smart contract **definition name**.
 
 After you approve a smart contract proposal and while it is waiting for approvals from other members, you can still update the package for your organization, or install it on additional peers if needed. Simply, reopen the proposal tile on the **Channels** tab and click **Update package details** next to your organization to upload a new package.  If you do upload a new package, when you create the updated package, we recommend incrementing the third digit of the version on the package name to help you differentiate the packages. For example, if the existing package is named `MySmartContract@1.0.0.tar.gz`, the new package is named `MySmartContract@1.0.1.tar.gz`.
 
@@ -462,7 +369,7 @@ Based on the preceding steps, the following table provides a summary of the life
 | **Install the smart contract on additional or newly added peers** after I approved it | Forgot to install the package on a peer? Or perhaps you've added new peers? Open the smart contract tile on the **Channels** tab. Next to your organization, click **Update package details**. If you want to install the same package on the newly added peers, click **Existing package** and browse to the package that you want to install. Otherwise, you can click **Add file** to upload a new package. Then, select which peers to install the package on.|
 | **Reject a smart contract proposal** or definition| Fabric does not include an option to reject a smart contract proposal. Rather, you can abstain from approving, which can prevent the proposal from ever satisfying the lifecycle endorsement policy. Or, you can make a new proposal with a new smart contract definition name, and include the terms that you prefer.  |
 | **Commit a smart contract** definition | After the proposal has reached the required number of approvals, the status of the proposal on the **Channels** tab changes to **Ready to commit**. Any channel member can click the tile and then click **Commit** to commit the definition to the channel. At that point, the associated smart contract can begin accepting transactions on the peers. |
-| **Update a smart contract _definition_ that has been committed** to the channel | All updates to smart contract _definitions_ have to be approved by channel members, according to the channel lifecycle endorsement policy, before they can be committed to the channel. Changes that require approval include: <ul><li>Updates to the **agreed to business logic of the smart contract** that require a new package.</li><li>Updates to the **smart contract endorsement policy**.</li><li>Updates to a **private data collection**.</li></ul> <br><br>**Tip:** If no changes are made to the agreed to business logic, then updates to the smart contract _package_ do not require approval of channel members. See the next task, **Update a smart contract package after the definition is committed to the channel**.  <br><br>To update any of these elements, you have to create a new proposal in order for the update to be approved. You can additionally update the smart contract package but it is not required, for example if you only need to change the endorsement policy.<br><br> **Important:** If the proposal includes a smart contract package that updates the agreed to business logic, all organizations that are part of the smart contract endorsement policy should install that package, or their own version of it, on their peers. Otherwise, after it is committed, the peers that are running the previous version are no longer able to endorse transactions. This could cause transactions not being committed to the ledger because there are not enough endorsements to satisfy the endorsement criteria. <br><br> Because this is an update to an existing smart contract definition, you need to use the same smart contract definition name but it is recommended to increment the version by a second digit. For example, change the version from `1.1` to `1.2`. This second digit version update is a best practice, which signals channel members that this proposal is an update to an existing smart contract definition and requires approval.  |
+| **Update a smart contract _definition_ that has been committed** to the channel | All updates to smart contract _definitions_ have to be approved by channel members, according to the channel lifecycle endorsement policy, before they can be committed to the channel. Changes that require approval include: <ul><li>Updates to the <strong>agreed to business logic of the smart contract</strong> that require a new package.</li><li>Updates to the <strong>smart contract endorsement policy</strong>.</li><li>Updates to a <strong>private data collection</strong>.</li></ul> <br><br>**Tip:** If no changes are made to the agreed to business logic, then updates to the smart contract _package_ do not require approval of channel members. See the next task, **Update a smart contract package after the definition is committed to the channel**.  <br><br>To update any of these elements, you have to create a new proposal in order for the update to be approved. You can additionally update the smart contract package but it is not required, for example if you only need to change the endorsement policy.<br><br> **Important:** If the proposal includes a smart contract package that updates the agreed to business logic, all organizations that are part of the smart contract endorsement policy should install that package, or their own version of it, on their peers. Otherwise, after it is committed, the peers that are running the previous version are no longer able to endorse transactions. This could cause transactions not being committed to the ledger because there are not enough endorsements to satisfy the endorsement criteria. <br><br> Because this is an update to an existing smart contract definition, you need to use the same smart contract definition name but it is recommended to increment the version by a second digit. For example, change the version from `1.1` to `1.2`. This second digit version update is a best practice, which signals channel members that this proposal is an update to an existing smart contract definition and requires approval.  |
 | **Update a smart contract _package_** after the definition is committed to the channel| Assuming there are no changes to the agreed to business logic, a smart contract package can be updated without approval from channel members. If there is a change to the logic, see the previous task **Update a smart contract definition that has been committed to the channel** for the process. <br><br>From the **Channels** tab, open the smart contract tile and click **Update package details** next to your organization. If you want to install a package that exists on another peer in your organization, select it from the **Existing package** tab. Or, click **Add file** to upload your own [version](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2#ibp-console-smart-contracts-v2-pkg-best-practice) of the smart contract package. Then select the peers to install it on. Since the smart contract definition is committed, the peer can immediately begin to process requests for the updated smart contract.  |
 | **Install the smart contract on peers in my organization after it has been committed** | It's possible that you approved a smart contract for the channel, but elected to not install it on any of your peers. Later, you decide you do want to run the package on your peers.  From the **Channels** tab, open the smart contract tile and click **Update package details** next to your organization. If you want to install the existing package, select it from the **Existing package** tab. Or, upload your own version of the smart contract package. Then select the peers to install it on. Since the smart contract definition is committed, the peer can immediately begin to process requests for the smart contract.  |
 | **Install the smart contract on additional or new peers** after it is committed to the channel | After the smart contract definition is committed, maybe you need to install the smart contract package on additional peers or newly created peers. From the **Channels** tab, open the smart contract tile and click **Update package details** next to your organization. If you want to install the existing package, select it from the **Existing package** tab. Or, upload your own version of the smart contract package. Then select the peers to install it on. Since the smart contract definition is committed, the peer can immediately begin to process requests for the smart contract.  |
@@ -508,8 +415,8 @@ In order to facilitate the smart contract versioning process, _package_ naming s
 `[SMART_CONTRACT_NAME]_[VERSION]`
 
 where`[VERSION]` contains:
- - `n.n` when the version requires approval across organizations in the channel. For example,  `mysmartcontract_1.0`.
- - `n.n.n` when the version does not require approval from other organizations on a channel. For example,  `mysmartcontract_1.0.1`. Note that this updated version of the smart contract package cannot introduce any modifications the to read/write set that could cause transaction endorsement to fail.  Use this option to incrementally patch your smart contract as needed. This means organizations can roll out minor fixes, for example slight variations such as error checking, to the smart contract independent of other organizations. The important thing is that always, the smart contract must implement the same reads and the same writes to the ledger across all organizations.
+- `n.n` when the version requires approval across organizations in the channel. For example,  `mysmartcontract_1.0`.
+- `n.n.n` when the version does not require approval from other organizations on a channel. For example,  `mysmartcontract_1.0.1`. Note that this updated version of the smart contract package cannot introduce any modifications the to read/write set that could cause transaction endorsement to fail.  Use this option to incrementally patch your smart contract as needed. This means organizations can roll out minor fixes, for example slight variations such as error checking, to the smart contract independent of other organizations. The important thing is that always, the smart contract must implement the same reads and the same writes to the ledger across all organizations.
 
 Although this recommended convention is not enforced by Fabric, it provides a standard nomenclature for you to update the smart contract on your organization's peers without requiring approval from other channel members.  
 {: important}
@@ -544,11 +451,11 @@ Whenever channel members agree to an update in the business logic, and channel m
 
 1. What happens to my peers if I forget to upgrade them to the latest version before committing the smart contract definition on the channel?  
 
-  After updating a smart contract definition to use a use smart contract package and committing it to the channel, if there are still peers on the channel running the previous version, those peers are no longer able to endorse transactions for the smart contract. Also, you risk not having enough endorsements for transactions to be committed to the ledger, depending on how the smart contract endorsement policy is defined. However, it is possible to install the new version of the smart contract package on these peers after the smart contract definition is committed to the channel and the peers will again be able to endorse transactions, effectively catching up.
+    After updating a smart contract definition to use a use smart contract package and committing it to the channel, if there are still peers on the channel running the previous version, those peers are no longer able to endorse transactions for the smart contract. Also, you risk not having enough endorsements for transactions to be committed to the ledger, depending on how the smart contract endorsement policy is defined. However, it is possible to install the new version of the smart contract package on these peers after the smart contract definition is committed to the channel and the peers will again be able to endorse transactions, effectively catching up.
 
 2. What happens when I remove an organization from my private data collection?
 
-   The peers in that organization continue to store data in the private data collection until its ledger reaches the block that removes its membership from the collection. After that occurs, the peers will not receive private data in any future transactions, and _clients_ of that organization will no longer be able to query the private data via a smart contract from any peer.
+    The peers in that organization continue to store data in the private data collection until its ledger reaches the block that removes its membership from the collection. After that occurs, the peers will not receive private data in any future transactions, and _clients_ of that organization will no longer be able to query the private data via a smart contract from any peer.
 
 3. What happens to the existing `chaincode-execution` pod after I update my smart contract?
 
@@ -564,6 +471,7 @@ Whenever channel members agree to an update in the business logic, and channel m
     kubectl delete pod <CHAINCODE-EXECUTION-POD> -n <NAMESPACE>
     ```
     {: codeblock}
+
     Replace `<CHAINCODE-EXECUTION-POD>` with the name of the `chaincode-execution` pod for the prior version of the smart contract that is visible in the output of the previous command.
 
 ## Private data

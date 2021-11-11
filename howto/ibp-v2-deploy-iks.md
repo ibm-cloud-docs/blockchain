@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-11"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -169,9 +169,9 @@ Before you deploy the console, ensure that you understand the following consider
 - You have the option to link your {{site.data.keyword.blockchainfull_notm}} Platform service instance to a free Kubernetes cluster for evaluation of the offering, however capacity and performance are limited, none of your data can be migrated, and the cluster is deleted after 30 days.
 - You are responsible for the management of health monitoring, security, and logging of your Kubernetes cluster. See this [information](/docs/containers?topic=containers-responsibilities_iks){: external} for details on what {{site.data.keyword.cloud_notm}} manages and what you are responsible for.
 - You are also responsible for monitoring the resource usage of your Kubernetes cluster by using the Kubernetes dashboard. If you need to increase storage capacity of your cluster, see this information on how to modify your existing volume:
-  - [IBM File Storage](/docs/FileStorage?topic=FileStorage-expandCapacity)
-  - [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/resize-pvc/)
-  - [Block storage](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity)
+    - [IBM File Storage](/docs/FileStorage?topic=FileStorage-expandCapacity)
+    - [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/resize-pvc/)
+    - [Block storage](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity)
 - You are responsible for managing and securing your certificates and private keys. {{site.data.keyword.IBM_notm}} does not store your certificates in the Kubernetes cluster.
 - {{site.data.keyword.blockchainfull_notm}} Platform is available in select regions. Refer to this topic on [{{site.data.keyword.blockchainfull_notm}} Platform locations](/docs/blockchain?topic=blockchain-ibp-regions-locations) for an updated list.
 - {{site.data.keyword.blockchainfull_notm}} Platform is compatible with a Kubernetes cluster on {{site.data.keyword.cloud_notm}} running Kubernetes v1.19 - v1.21.
@@ -190,12 +190,12 @@ Watch the following [video series](http://ibm.biz/BlockchainPlatformSeries) to l
 Before you begin:
 
 - Ensure that you have an [{{site.data.keyword.cloud_notm}} paid account](https://cloud.ibm.com/catalog/services/blockchain){: external}. If you do not have an account:
-   1. Click the **Sign up** button.
-   2. After you create a free trial account, upgrade it to a **Pay-As-You-Go** type by going to **Manage** > **Billing and Usage** > **Billing** in the {{site.data.keyword.cloud_notm}} console, and clicking **Add Credit Card**.
-   3. Ensure that the user has both Administrator and Manager roles for the Kubernetes cluster that they will link to their blockchain service instance. See these steps on [how to assign Kubernetes access roles](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-k8x-access-roles) for more information.
+    1. Click the **Sign up** button.
+    2. After you create a free trial account, upgrade it to a **Pay-As-You-Go** type by going to **Manage** > **Billing and Usage** > **Billing** in the {{site.data.keyword.cloud_notm}} console, and clicking **Add Credit Card**.
+    3. Ensure that the user has both Administrator and Manager roles for the Kubernetes cluster that they will link to their blockchain service instance. See these steps on [how to assign Kubernetes access roles](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-k8x-access-roles) for more information.
 
 When you plan to use the service instance in the context of a broader organization-wide solution, it is recommended that the participating organizations use a functional email address to create their network. In this case, access to the network does not depend on any single individual's availability.
-{:tip}
+{: tip}
 
 - If you plan to use an existing Kubernetes cluster on {{site.data.keyword.cloud_notm}}, ensure the version of Kubernetes it is running is between v1.19 - v1.21. For more information about how to determine what version of Kubernetes your cluster is running and how to upgrade the version, see [Updating the Kubernetes version of your cluster](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-updating-kubernetes).
 
@@ -220,7 +220,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform console has been successf
 #### Cluster size recommendations
 {: #ibp-v2-deploy-iks-resources-required-free}
 
- When you link your {{site.data.keyword.blockchainfull_notm}} Platform console to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, you need to ensure that your Kubernetes cluster meets the minimum hardware resource requirements:
+When you link your {{site.data.keyword.blockchainfull_notm}} Platform console to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, you need to ensure that your Kubernetes cluster meets the minimum hardware resource requirements:
 
 |Kubernetes cluster type | Use case | CPU | RAM | Worker nodes |
 |-----------|------|-----|-----------------------|
@@ -230,7 +230,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform console has been successf
 ** Preview the {{site.data.keyword.blockchainfull_notm}} Platform at no charge for 30 days when you link your {{site.data.keyword.blockchainfull_notm}} Platform service instance to an {{site.data.keyword.cloud_notm}} Kubernetes free cluster. Performance will be limited by throughput, storage and functionality. {{site.data.keyword.cloud_notm}} will delete your Kubernetes cluster after 30 days and you cannot migrate any nodes or data from a free cluster to a paid cluster. Also note that when components are deployed to a free cluster, the resource allocation for the nodes is sized smaller than a paid cluster.
 
 These resources are sufficient for testing and experimentation. The [Build a network tutorial](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network), in which you create two peers, two CAs, and a single node ordering service, takes up approximately 1.95 CPU. A five node ordering service requires 1.75 CPU by itself. Therefore, if you plan to deploy a five node ordering service, you should not deploy a Kubernetes cluster with a 2 CPU single worker node as the ordering service will not fit comfortably with other nodes. We recommend a cluster with nodes of at least 4 CPU. The more worker nodes you add, the easier your cluster will be able to handle your deployments.
-{:note}
+{: note}
 
 **Paid clusters**  
 {: #ibp-v2-deploy-iks-resources-required-paid}
@@ -256,7 +256,7 @@ For a sense of how much storage and compute you will need in your cluster, refer
 Note that when smart contracts are installed on peers that run a Fabric v2.x image, the smart contract is launched in its own pod instead of a separate container on the peer, which accounts for the smaller amount of resources required on the peer.
 
 If you plan to deploy a five node Raft ordering service, note that the total of your deployment will increase by a factor of five. So a total of 1.75 CPU, 3.5 GB of memory, and 500 GB of storage for the five Raft nodes. A 4x16 Kubernetes two worker node cluster is minimally recommended to allow plenty of CPU for the Raft cluster and any other nodes you deploy.
-{:tip}
+{: tip}
 
 ## Persistent storage considerations
 {: #ibp-console-storage}
@@ -294,9 +294,9 @@ After you deploy blockchain nodes to your cluster, you should not change the `de
 {: important}
 
 If you need to increase storage capacity of your cluster, see this information on how to modify your existing volume:
-  - [IBM File Storage](/docs/FileStorage?topic=FileStorage-expandCapacity)
-  - [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/resize-pvc/)
-  - [Block storage](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity)
+- [IBM File Storage](/docs/FileStorage?topic=FileStorage-expandCapacity)
+- [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/resize-pvc/)
+- [Block storage](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity)
 
 ## Using Multizone (MZR) clusters with {{site.data.keyword.blockchainfull_notm}} Platform
 {: #ibp-console-mzr}
@@ -325,27 +325,29 @@ From your {{site.data.keyword.cloud_notm}} account, you can deploy the {{site.da
 - **Multicloud** Not running an OpenShift or Kubernetes cluster in IBM Cloud? The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 can be installed on your OpenShift or Kubernetes cluster in your cloud or on-prem. With this option as well, you are responsible for the maintenance of your console and blockchain components.
 
 <div class=solutionBoxContainer>
-  <div class="solutionBox">
-    <a href = "/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-create-service-instance">
-      <div>
+    <div class="solutionBox">
+        <a href = "/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-create-service-instance">
+        <div>
         <p><strong><img src="../images/IBMCloud.png" alt="IBM Cloud icon" width="25" style="width:25px; border-style: none"/> Deploy from IBM Cloud Catalog</p>
         <p class="bx--type-caption">Use the IBM Cloud Catalog to deploy the Platform to an OpenShift or IBM Kubernetes service cluster in IBM Cloud.</p>
-      </div>
+        </div>
     </a>
-  </div>
-  <div class="solutionBox">
-    <a href = "/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp-rhm">
-      <div>
+    </div>
+    <div class="solutionBox">
+        <a href = "/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp-rhm">
+        <div>
         <p><strong><img src="../images/logo_redhat.png" alt="OpenShift icon" width="25" style="width:25px; border-style: none"/> Deploy from Red Hat Marketplace</p>
         <p class="bx--type-caption">Use the Red Hat Marketplace to deploy the IBM Blockchain  Platform to an OpenShift cluster in IBM Cloud.</p>
-      </div>
+        </div>
     </a>
-  </div>
-  <div class="solutionBox">
-    <a href = "/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console">
-      <div>
+    </div>
+    <div class="solutionBox">
+        <a href = "/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console">
+        <div>
         <p><strong><img src="../images/logo_openshift.svg" alt="OpenShift icon" width="25" style="width:25px; border-style: none"/>&nbsp;&nbsp;<img src="../images/kubernetes.png " alt="OpenShift icon" width="25" style="width:25px; border-style: none"/>&nbsp;&nbsp; Deploy to another cloud or on-prem</p>
         <p class="bx--type-caption"><strong>(Multicloud)</strong> Deploy the IBM Blockchain Platform to your OpenShift or Kubernetes cluster in your cloud or on-prem.</p>
-      </div>
+        </div>
     </a>
 </div>
+
+

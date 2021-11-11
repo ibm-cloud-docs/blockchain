@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-11"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
@@ -25,7 +25,7 @@ This tutorial introduces the generic flow to build a blockchain network with {{s
 ## Swagger
 {: #ibp-v2-apis-swagger}
 
-After you review the instructions in this topic on how to use the APIs, you can alternatively access a Swagger version of the APIs instead of the [APIs in {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/apidocs/blockchain){:external} where the current version is `v2`. If you need to access the `v1` version of the APIs, you can import the `v1` version into the [Swagger editor](http://editor.swagger.io){: external}.
+After you review the instructions in this topic on how to use the APIs, you can alternatively access a Swagger version of the APIs instead of the [APIs in {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/apidocs/blockchain){: external} where the current version is `v2`. If you need to access the `v1` version of the APIs, you can import the `v1` version into the [Swagger editor](http://editor.swagger.io){: external}.
 
 - [v1](https://github.com/ibm-cloud-docs/blockchain/blob/master/reference/ibp-v1.yaml){: external}
 - [v2](https://github.com/ibm-cloud-docs/blockchain/blob/master/reference/ibp-v2.yaml){: external}
@@ -48,19 +48,19 @@ You need a basic authentication credential to ensure that you have access to you
 1. In your [{{site.data.keyword.cloud_notm}} resource list](https://cloud.ibm.com/resources){: external}, under **Services**, open the blockchain service instance that you created.
 2. Click **Service credentials** from the left navigator.
 3. Click the **New Credential** button on the **Service credentials** page to create a new credential.
-  1. Give the credential a name, for example, *UseAPIs*.
-  2. You can leave the **Add inline configuration parameter** field blank.
-  3. Click the **Add** button.
+    1. Give the credential a name, for example, *UseAPIs*.
+    2. You can leave the **Add inline configuration parameter** field blank.
+    3. Click the **Add** button.
 4. After the new credential is created, click **View credentials** under the **ACTIONS** header of this credential. The contents of the credential looks similar to the following example:
     ```
     {
-      "api_endpoint": "https://1088ac8563e44f5a92539d946733ad7e-optools.so01.blockchain.test.cloud.ibm.com"
-      "apikey": "nvASKts6B6lMZGZUNTGVP7MLK2BujMnxz0plSPYaqc3R",
-      "configtxlator": "https://1088ac8563e44f5a92539d946733ad7e-configtxlator.so01.blockchain.test.cloud.ibm.com",
-      "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:blockchain:us-south:a/9d46037caee397faa45c55e087d26baa:1088ac85-63e4-4f5a-9253-9d946733ad7e::",
-      "iam_apikey_name": "auto-generated-apikey-c1981f5c-cff0-464f-9a78-ed2f52e24d1a",
-      "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
-      "iam_serviceid_crn": "crn:v1:staging:public:iam-identity::a/9d46037caee397faa45c55e087d26baa::serviceid:ServiceId-774190c5-9c37-4f68-8572-8d6e2aabbc7e",
+        "api_endpoint": "https://1088ac8563e44f5a92539d946733ad7e-optools.so01.blockchain.test.cloud.ibm.com"
+        "apikey": "nvASKts6B6lMZGZUNTGVP7MLK2BujMnxz0plSPYaqc3R",
+        "configtxlator": "https://1088ac8563e44f5a92539d946733ad7e-configtxlator.so01.blockchain.test.cloud.ibm.com",
+        "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:staging:public:blockchain:us-south:a/9d46037caee397faa45c55e087d26baa:1088ac85-63e4-4f5a-9253-9d946733ad7e::",
+        "iam_apikey_name": "auto-generated-apikey-c1981f5c-cff0-464f-9a78-ed2f52e24d1a",
+        "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+        "iam_serviceid_crn": "crn:v1:staging:public:iam-identity::a/9d46037caee397faa45c55e087d26baa::serviceid:ServiceId-774190c5-9c37-4f68-8572-8d6e2aabbc7e",
     }
     ```
     {: codeblock}
@@ -74,8 +74,8 @@ You can authenticate with {{site.data.keyword.blockchainfull_notm}} Platform by 
 
 Call the {{site.data.keyword.iamshort}} API to retrieve your access token.
 ``` 
-  curl -X POST \
-    "https://iam.cloud.ibm.com/identity/token" \
+    curl -X POST \
+        "https://iam.cloud.ibm.com/identity/token" \
     -H "Content-Type: application/x-www-form-urlencoded" \
     -H "Accept: application/json" \
     -d "grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&apikey=<API_KEY>" \
@@ -84,7 +84,7 @@ Call the {{site.data.keyword.iamshort}} API to retrieve your access token.
 
 In the request, replace `<API_KEY>` with the `apikey` value from your service credentials. The following truncated example shows the token output:
 ```
-  {
+{
     "access_token": "eyJraWQiOiIyM...",
     "refresh_token": "...",
     "expires_in":3600,
@@ -107,11 +107,11 @@ When you make an API call to the service, structure your API request according t
 
 To build your request, pair an API endpoint with the appropriate authentication credentials in the following format:
 ```bash
-  curl -X <API method> \
-      <API_endpoint>/<API> \
-      -H 'authorization: Bearer <access_token>' \
-      -H 'Content-Type: application/json' \
-      -d '<request body>' \
+    curl -X <API method> \
+        <API_endpoint>/<API> \
+        -H 'authorization: Bearer <access_token>' \
+        -H 'Content-Type: application/json' \
+        -d '<request body>' \
 ```
 {: codeblock}
 
@@ -129,20 +129,20 @@ You can use APIs to create blockchain components in your instance of the {{site.
 
 1. Create a Certificate Authority (CA) by calling [`POST /ak/api/v2/kubernetes/components/ca`](/apidocs/blockchain#create-a-ca).
 
-  Remember your input and the response, you will need them later.
-  {: tip}
+    Remember your input and the response, you will need them later.
+    {: tip}
 
-  You need to wait for the CA to start. It might take several minutes depending on environment. You can call `GET <ca_url>/cainfo` API to check your CA status. You will get repeated errors, then a `200` status code, which means you can proceed to the next step. Note that this API call times out after one minute.
+    You need to wait for the CA to start. It might take several minutes depending on environment. You can call `GET <ca_url>/cainfo` API to check your CA status. You will get repeated errors, then a `200` status code, which means you can proceed to the next step. Note that this API call times out after one minute.
 
 2. Use your CA to register your component and administrator identities, and generate the necessary certificates. You can use the Fabric CA client to complete the following steps:
 
-  - [Set up the Fabric CA client](#ibp-v2-apis-config-fabric-ca-client).
-  - [Generate certificates with your CA admin](#ibp-v2-apis-enroll-ca-admin).
-  - [Register the new component with your CA](#ibp-v2-apis-config-register-component).
-  - You also need to [register an organization administrator](#ibp-v2-apis-config-register-admin) and then [generate certificates for the admin](#ibp-v2-apis-config-enroll-admin) inside an MSP folder. You do not have to complete this step if you have already registered your admin identity.
-  - [Register the new component with your TLS CA](#ibp-v2-apis-config-register-component-tls).
+    - [Set up the Fabric CA client](#ibp-v2-apis-config-fabric-ca-client).
+    - [Generate certificates with your CA admin](#ibp-v2-apis-enroll-ca-admin).
+    - [Register the new component with your CA](#ibp-v2-apis-config-register-component).
+    - You also need to [register an organization administrator](#ibp-v2-apis-config-register-admin) and then [generate certificates for the admin](#ibp-v2-apis-config-enroll-admin) inside an MSP folder. You do not have to complete this step if you have already registered your admin identity.
+    - [Register the new component with your TLS CA](#ibp-v2-apis-config-register-component-tls).
 
-  You can also complete these steps by using your {{site.data.keyword.blockchainfull_notm}} Platform console. For more information, see [Creating and managing identities](/docs/blockchain/?topic=blockchain-ibp-console-identities). 
+    You can also complete these steps by using your {{site.data.keyword.blockchainfull_notm}} Platform console. For more information, see [Creating and managing identities](/docs/blockchain/?topic=blockchain-ibp-console-identities). 
 
 3. [Create an MSP definition for your organization](#ibp-v2-apis-msp) by calling [`POST /ak/api/v2/components/msp`](/apidocs/blockchain?#import-an-msp).
 
@@ -164,6 +164,7 @@ for more information.
 
 
 
+
 ### Creating a node within a specific zone
 {: #ibp-v2-apis-zone}
 
@@ -172,7 +173,7 @@ If you are using a multizone cluster, you can use the APIs to deploy a blockchai
 
 1. Find the zones that your worker nodes are located. Navigate to the [Kubernetes service](https://cloud.ibm.com/kubernetes/clusters){: external} or [OpenShift](https://cloud.ibm.com/kubernetes/clusters?platformType=openshift){: external} cluster overview screen of your multizone cluster on {{site.data.keyword.cloud_notm}}. From the cluster overview screen, select your cluster and click **Worker Nodes** to see a table of all the worker nodes in your cluster. You can find the zone where each worker node is located in the **Zone** column of the table.
 
-  You can also find the zones of your worker nodes by using the kubectl CLI. Navigate to the **Access** panel and follow the instructions under **Gain access to your cluster** to connect to your cluster by using the {{site.data.keyword.cloud_notm}} and kubectl CLI tools. When you are connected, use the command `kubectl get nodes --show-labels` to get the full list of nodes and zones of your cluster. You will be to find the zone that each worker node is located after `zone` field under the `LABELS` column.
+    You can also find the zones of your worker nodes by using the kubectl CLI. Navigate to the **Access** panel and follow the instructions under **Gain access to your cluster** to connect to your cluster by using the {{site.data.keyword.cloud_notm}} and kubectl CLI tools. When you are connected, use the command `kubectl get nodes --show-labels` to get the full list of nodes and zones of your cluster. You will be to find the zone that each worker node is located after `zone` field under the `LABELS` column.
 
 
 
@@ -193,8 +194,8 @@ curl -X POST "https://{API-Endpoint}/ak/api/v2/kubernetes/components/fabric-ca" 
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {IAM-Token}" \
 -d "{
-      \"display_name\": \"My CA\",
-      \"config_override\":{
+        \"display_name\": \"My CA\",
+        \"config_override\":{
         \"ca\":{
           \"registry\":{
             \"maxenrollments\": -1,
@@ -204,18 +205,18 @@ curl -X POST "https://{API-Endpoint}/ak/api/v2/kubernetes/components/fabric-ca" 
               \"type\": \"client\",
               \"affiliation\": \"\",
               \"attrs\":{
-                      \"hf.Registrar.Roles\": \"*\",
-                      \"hf.Registrar.DelegateRoles\": \"*\",
-                      \"hf.Revoker\": true,
-                      \"hf.IntermediateCA\": true,
-                      \"hf.GenCRL\": true,
-                      \"hf.Registrar.Attributes\": \"*\",
-                      \"hf.AffiliationMgr\": true
+\"hf.Registrar.Roles\": \"*\",
+\"hf.Registrar.DelegateRoles\": \"*\",
+\"hf.Revoker\": true,
+\"hf.IntermediateCA\": true,
+\"hf.GenCRL\": true,
+\"hf.Registrar.Attributes\": \"*\",
+\"hf.AffiliationMgr\": true
               }
             }]
           }
         }
-      }
+        }
     }"
 ```
 {: codeblock}
@@ -223,10 +224,10 @@ curl -X POST "https://{API-Endpoint}/ak/api/v2/kubernetes/components/fabric-ca" 
 You use also the `"configoverride"` to create or update a CA with custom settings for your organization. This provides you with more control over the identities and certificates that are created by your CA. For example, you would use the following command to set your organization name and location.
 ```
 curl -X POST \
-  https://<API endpoint>/ak/api/v2/kubernetes/components/fabric-ca \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer <IAM_token>' \
-  -d "{
+    https://<API endpoint>/ak/api/v2/kubernetes/components/fabric-ca \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer <IAM_token>' \
+    -d "{
     "display_name": "Sample CA",
     "configoverride": {
       "ca": {
@@ -262,7 +263,7 @@ curl -X POST \
               ],
             }
         }
-  }"
+    }"
 ```
 {: codeblock}
 
@@ -275,10 +276,10 @@ You can use configuration override to deploy a CA with replica sets that share t
 To use the APIs to deploy an HA CA, you need to provide the database connection file to the `"db"` section of the config override JSON string. For example, the API request below will deploy a CA with two replicas that connect to a database located on {{site.data.keyword.cloud_notm}}.
 ```
 curl -X POST \
-  https://<API endpoint>/ak/api/v2/kubernetes/components/fabric-ca \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer <IAM_token>' \
-  -d '{
+    https://<API endpoint>/ak/api/v2/kubernetes/components/fabric-ca \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer <IAM_token>' \
+    -d '{
     "display_name": "Sample CA",
     "replicas": 2,
     "configoverride": {
@@ -288,7 +289,7 @@ curl -X POST \
         "tls": {
           "certfiles": [
             "<base64 encoded pem>"
-                      ],
+                        ],
           "enabled": true
                 },
         "type": "postgres"
@@ -300,7 +301,7 @@ curl -X POST \
         "tls": {
           "certfiles": [
                     "<base64 encoded pem>"
-                      ],
+                        ],
         "enabled": true
                 },
         "type": "postgres"
@@ -325,7 +326,7 @@ curl -X POST \
               }
             }
     }    
-  }
+    }
 }'
 ```
 {: codeblock}
@@ -340,9 +341,9 @@ curl -X POST "https://{API-Endpoint}/ak/api/v2/kubernetes/components/fabric-peer
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer {IAM-Token}" \
 -d "{
-      \"display_name\": \"My Peer\",
-      \"msp_id\": \"org2\",
-      \"config\": {
+    \"display_name\": \"My Peer\",
+    \"msp_id\": \"org2\",
+    \"config\": {
         \"enrollment\": {
           \"component\": {
             \"cahost\": \"n3a3ec3-myca.ibp.us-south.containers.appdomain.cloud\",
@@ -371,19 +372,19 @@ curl -X POST "https://{API-Endpoint}/ak/api/v2/kubernetes/components/fabric-peer
             ]
           }
         }
-      },
-      \"hsm\": {
+        },
+        \"hsm\": {
             \"pkcs11endpoint\": \"tcp://example.com:666\",
-      },
-      \"config_override\": {
-        \"bccsp\": {
-          \"default\": \"PKCS11\",
-          \"pkcs11\": {
-              \"label\": \"blockchain\",
-              "pin": \"91927001\"
+        },
+        \"config_override\": {
+          \"bccsp\": {
+            \"default\": \"PKCS11\",
+            \"pkcs11\": {
+                \"label\": \"blockchain\",
+                "pin": \"91927001\"
+                }
             }
-          }
-        }
+            }
     }"
 ```
 {: codeblock}
@@ -395,10 +396,10 @@ You can also use the APIs to import {{site.data.keyword.blockchainfull_notm}} co
 
 1. Import a CA by calling [`POST /ak/api/v2/components/ca`](/apidocs/blockchain#import-a-ca).
 
-  Remember your input and the response, you will need them later.
-  {: tip}
+    Remember your input and the response, you will need them later.
+    {: tip}
 
-  You need to wait for the CA to start. It might take several minutes depending on environment. You can call [`GET /components`](/apidocs/blockchain#get-all-components) to check the CA status. You will get repeated errors before you get a `200` status code to go to next step. Note that this API call times out in one minute.
+    You need to wait for the CA to start. It might take several minutes depending on environment. You can call [`GET /components`](/apidocs/blockchain#get-all-components) to check the CA status. You will get repeated errors before you get a `200` status code to go to next step. Note that this API call times out in one minute.
 
 2. Import an organization MSP definition by calling [`POST /ak/api/v2/components/msp`](/apidocs/blockchain#import-an-msp).
 
@@ -418,6 +419,7 @@ for more information.
 
 
 
+
 ## Operating your CA with the Fabric CA client
 {: #ibp-v2-apis-config-fabric-ca-client}
 
@@ -428,56 +430,56 @@ You can use the Fabric CA client to operate your CAs. Run the following Fabric C
 
 1. Download the [Fabric CA client](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/users-guide.html#fabric-ca-client){: external} to your local file system.
 
-  The easiest way to get the Fabric CA client is to download all of the Fabric tool binaries directly. Navigate to a directory where you would like to download the binaries with your command line, and fetch them by running the following [cURL](https://hyperledger-fabric.readthedocs.io/en/release-2.2/prereqs.html#install-curl){: external} command.
+    The easiest way to get the Fabric CA client is to download all of the Fabric tool binaries directly. Navigate to a directory where you would like to download the binaries with your command line, and fetch them by running the following [cURL](https://hyperledger-fabric.readthedocs.io/en/release-2.2/prereqs.html#install-curl){: external} command.
 
-  ```
-  curl -sSL http://bit.ly/2ysbOFE | bash -s 1.4.3 1.4.3 -d -s
-  ```
-  {: codeblock}
+    ```
+    curl -sSL http://bit.ly/2ysbOFE | bash -s 1.4.3 1.4.3 -d -s
+    ```
+    {: codeblock}
 
-  This command installs the binaries in a `bin/` directory.
+    This command installs the binaries in a `bin/` directory.
 
 2. Set the `PATH` path to the directory where you downloaded the Fabric tool binaries:
 
-  ```
-  export PATH=$PATH:<full/path/to/fabric-ca-client/bin>
-  ```
-  {: codeblock}
+    ```
+    export PATH=$PATH:<full/path/to/fabric-ca-client/bin>
+    ```
+    {: codeblock}
 
-  For example, if you installed the binaries in your home directory you would set your `PATH` as:
+    For example, if you installed the binaries in your home directory you would set your `PATH` as:
 
-  ```
-  export PATH=$PATH:$HOME/bin
-  ```
-  {: codeblock}
+    ```
+    export PATH=$PATH:$HOME/bin
+    ```
+    {: codeblock}
 
 3. Create the folder where you will store the certificates of your CA admin.
 
-  ```
-  mkdir -p $HOME/fabric-ca-client/ca-admin
-  ```
-  {: codeblock}
+    ```
+    mkdir -p $HOME/fabric-ca-client/ca-admin
+    ```
+    {: codeblock}
 
 4. Set the value of the `$FABRIC_CA_CLIENT_HOME` environment variable to be the path where the CA client will store the generated MSP certificates. Ensure that you remove the configuration material that might be created by earlier attempts. If you didn't run the `enroll` command before, the `msp` folder and the `.yaml` file do not exist.
 
-  ```
-  export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca-client/ca-admin
-  rm -rf $FABRIC_CA_CLIENT_HOME/fabric-ca-client-config.yaml
-  rm -rf $FABRIC_CA_CLIENT_HOME/msp
-  ```
-  {: codeblock}
+    ```
+    export FABRIC_CA_CLIENT_HOME=$HOME/fabric-ca-client/ca-admin
+    rm -rf $FABRIC_CA_CLIENT_HOME/fabric-ca-client-config.yaml
+    rm -rf $FABRIC_CA_CLIENT_HOME/msp
+    ```
+    {: codeblock}
 
 5. Retrieve the TLS certificate of your CA to be used by the Fabric CA client. If you are using the {{site.data.keyword.blockchainfull_notm}} Platform console, open the CA and click **Settings**, and look for the certificate in base64 format in the **TLS Certificate** field. If your are using the APIs, you can call [`GET /ak/api/v2/components`](/apidocs/blockchain#get-all-components) and find the CA TLS certificate in the `"PEM"` field. If you created the CA by using the `Create a Fabric CA` API, you can also find the TLS certificate in the response body.
 
-  You need to convert the certificate from base64 into PEM format to use it to communicate with your CA. Insert the base64 encoded string of the TLS certificate into command below. Ensure that you are in your `$HOME/fabric-ca-client` directory.
+    You need to convert the certificate from base64 into PEM format to use it to communicate with your CA. Insert the base64 encoded string of the TLS certificate into command below. Ensure that you are in your `$HOME/fabric-ca-client` directory.
 
-  ```
-  cd $HOME/fabric-ca-client
-  mkdir catls
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  echo <base64_string> | base64 --decode $FLAG > tls.pem
-  ```
-  {: codeblock}
+    ```
+    cd $HOME/fabric-ca-client
+    mkdir catls
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    echo <base64_string> | base64 --decode $FLAG > tls.pem
+    ```
+    {: codeblock}
 
 ### Generate certificates with your CA admin
 {: #ibp-v2-apis-enroll-ca-admin}
@@ -486,63 +488,63 @@ A **CA admin** identity was automatically registered for you when you created yo
 
 1. Ensure that you complete the steps to [set up the Fabric CA client](#ibp-v2-apis-config-fabric-ca-client) and that `$FABRIC_CA_CLIENT_HOME` is set to the directory where you want to store your CA admin certs.
 
-  ```
-  echo $FABRIC_CA_CLIENT_HOME
-  $HOME/fabric-ca-client/ca-admin
-  ```
-  {: codeblock}
+    ```
+    echo $FABRIC_CA_CLIENT_HOME
+    $HOME/fabric-ca-client/ca-admin
+    ```
+    {: codeblock}
 
 2. Run the following command to generate certificates:
 
-  ```
-  fabric-ca-client enroll -u https://<enroll_id>:<enroll_password>@<ca_url_with_port> --caname <ca_name>  --tls.certfiles   <ca_tls_cert_path>
-  ```
-  {: codeblock}
+    ```
+    fabric-ca-client enroll -u https://<enroll_id>:<enroll_password>@<ca_url_with_port> --caname <ca_name>  --tls.certfiles   <ca_tls_cert_path>
+    ```
+    {: codeblock}
 
-  The `<enroll_id>`and `<enroll_password>` in the command are the `enroll_id` and `enroll_secret` you specified when you created the CA. Use the **Certificate Authority Endpoint URL** from your {{site.data.keyword.blockchainfull_notm}} Platform console or the `"ca_url"` returned by your API call as the value for `<ca_url_with_port>`. Leave off the `http://` at the beginning. The `<ca_name>` is the **CA Name** from your console, or the `"ca_name"` returned by the APIs.
+    The `<enroll_id>`and `<enroll_password>` in the command are the `enroll_id` and `enroll_secret` you specified when you created the CA. Use the **Certificate Authority Endpoint URL** from your {{site.data.keyword.blockchainfull_notm}} Platform console or the `"ca_url"` returned by your API call as the value for `<ca_url_with_port>`. Leave off the `http://` at the beginning. The `<ca_name>` is the **CA Name** from your console, or the `"ca_name"` returned by the APIs.
 
-  The `<ca_tls_cert_path>` is the full path your CA TLS cert.
+    The `<ca_tls_cert_path>` is the full path your CA TLS cert.
 
-  A real call might look similar to the following example command:
+    A real call might look similar to the following example command:
 
-  ```
-  fabric-ca-client enroll -u https://admin:adminpw@9.30.94.174:30167 --caname ca --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
-  ```  
-  {: codeblock}
+    ```
+    fabric-ca-client enroll -u https://admin:adminpw@9.30.94.174:30167 --caname ca --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
+    ```  
+    {: codeblock}
 
 **Tip:** If the value of the enrollment URL, which is the `-u` parameter value, contains a special character, you need to either encode the special character or surround the URL with the single quotation marks. For example, `!` becomes `%21`, or the command looks like:
 
-  ```
-  ./fabric-ca-client enroll -u 'https://admin:C25A06287!0@ash-zbc07c.4.secure.blockchain.ibm.com:21241' --tls.certfiles $HOME/fabric-ca-remote/cert.pem --caname ca
-  ```
-  {: codeblock}
+    ```
+    ./fabric-ca-client enroll -u 'https://admin:C25A06287!0@ash-zbc07c.4.secure.blockchain.ibm.com:21241' --tls.certfiles $HOME/fabric-ca-remote/cert.pem --caname ca
+    ```
+    {: codeblock}
 
-  The `enroll` command generates a complete set of certificates, which is known as a Membership Service Provider (MSP) folder, that is located inside the directory where you set to `$HOME` path for your Fabric CA client. For example, `$HOME/fabric-ca-client/ca-admin`. For more information about MSPs and what the MSP folder contains, see the [Membership Service Providers](https://hyperledger-fabric.readthedocs.io/en/release-2.2/msp.html){: external} concept topic in the Fabric documentation.
+    The `enroll` command generates a complete set of certificates, which is known as a Membership Service Provider (MSP) folder, that is located inside the directory where you set to `$HOME` path for your Fabric CA client. For example, `$HOME/fabric-ca-client/ca-admin`. For more information about MSPs and what the MSP folder contains, see the [Membership Service Providers](https://hyperledger-fabric.readthedocs.io/en/release-2.2/msp.html){: external} concept topic in the Fabric documentation.
 
-  If the `enroll` command fails, see the [Troubleshooting topic](#ibp-v2-apis-config-troubleshooting) for possible causes.
+    If the `enroll` command fails, see the [Troubleshooting topic](#ibp-v2-apis-config-troubleshooting) for possible causes.
 
-  You can run a tree command to verify that you have completed all of the prerequisite steps. Navigate to the directory where you stored your certificates. A tree command should generate a result similar to the following structure:
+    You can run a tree command to verify that you have completed all of the prerequisite steps. Navigate to the directory where you stored your certificates. A tree command should generate a result similar to the following structure:
 
-  ```
-  cd $HOME/fabric-ca-client
-  tree
-  .
-  ├── ca-admin
-  │   ├── fabric-ca-client-config.yaml
-  │   └── msp
-  │       ├── cacerts
-  │       │   └── 9-30-250-70-30395-SampleOrgCA.pem
-  │       ├── IssuerPublicKey
-  │       ├── IssuerRevocationPublicKey
-  │       ├── keystore
-  │       │   └── 2a97952445b38a6e0a14db134645981b74a3f93992d9ddac54cb4b4e19cdf525_sk
-  │       ├── signcerts
-  │       │   └── cert.pem
-  │       └── user
-  └── catls
-      └── tls.pem    
-  ```
-  {: codeblock}
+    ```
+    cd $HOME/fabric-ca-client
+    tree
+    .
+    ├── ca-admin
+    │   ├── fabric-ca-client-config.yaml
+    │   └── msp
+    │       ├── cacerts
+    │       │   └── 9-30-250-70-30395-SampleOrgCA.pem
+    │       ├── IssuerPublicKey
+    │       ├── IssuerRevocationPublicKey
+    │       ├── keystore
+    │       │   └── 2a97952445b38a6e0a14db134645981b74a3f93992d9ddac54cb4b4e19cdf525_sk
+    │       ├── signcerts
+    │       │   └── cert.pem
+    │       └── user
+    └── catls
+        └── tls.pem    
+    ```
+    {: codeblock}
 
 ### Registering the component identity with the CA
 {: #ibp-v2-apis-config-register-component}
@@ -551,63 +553,63 @@ First, you need to register a component identity with your CA. Your component us
 
 1. [Generate certificates with your CA admin](#ibp-v2-apis-enroll-ca-admin) by using the Fabric CA client. Use these admin certificates to issue the following commands. Ensure that `$FABRIC_CA_CLIENT_HOME` is set to `$HOME/fabric-ca-client/ca-admin`.
 
-  ```
-  echo $FABRIC_CA_CLIENT_HOME
-  $HOME/fabric-ca-client/ca-admin
-  ```
-  {: codeblock}
+    ```
+    echo $FABRIC_CA_CLIENT_HOME
+    $HOME/fabric-ca-client/ca-admin
+    ```
+    {: codeblock}
 
 2. Issue the following command to find your affiliation and your organization name.
-  ```
-  fabric-ca-client affiliation list --caname <ca_name> --tls.certfiles <ca_tls_cert_path>
-  ```
-  {: codeblock}
+    ```
+    fabric-ca-client affiliation list --caname <ca_name> --tls.certfiles <ca_tls_cert_path>
+    ```
+    {: codeblock}
 
-  Your command might look like the following example:
-  ```
-  fabric-ca-client affiliation list --caname ca --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
-  ```
-  {: codeblock}
+    Your command might look like the following example:
+    ```
+    fabric-ca-client affiliation list --caname ca --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
+    ```
+    {: codeblock}
 
-  You should see information that is similar to the following example:
-  ```
-  affiliation: org1
-      affiliation: org1.department1
-  ```
-  {: codeblock}
+    You should see information that is similar to the following example:
+    ```
+    affiliation: org1
+        affiliation: org1.department1
+    ```
+    {: codeblock}
 
-  Make a note of the second **affiliation** value, for example, `org1.department1`. You need to use this value in the command below.
+    Make a note of the second **affiliation** value, for example, `org1.department1`. You need to use this value in the command below.
 
-  If you created the CA with the {{site.data.keyword.blockchainfull_notm}} APIs instead of the console, your CA is deployed without affiliations, unless you created affiliations by using the Fabric CA Client. If your CA does not have affiliations, you can skip this step and leave the `--id.affiliation` off future commands.
+    If you created the CA with the {{site.data.keyword.blockchainfull_notm}} APIs instead of the console, your CA is deployed without affiliations, unless you created affiliations by using the Fabric CA Client. If your CA does not have affiliations, you can skip this step and leave the `--id.affiliation` off future commands.
 
 3. Run the following command to register the ordering node or peer.
 
-  ```
-  fabric-ca-client register --caname <ca_name> --id.name <name> --id.affiliation org1.department1 --id.type <component_type> --id.secret <secret> --tls.certfiles <ca_tls_cert_path>
-  ```
-  {: codeblock}
+    ```
+    fabric-ca-client register --caname <ca_name> --id.name <name> --id.affiliation org1.department1 --id.type <component_type> --id.secret <secret> --tls.certfiles <ca_tls_cert_path>
+    ```
+    {: codeblock}
 
-  Create a name and password for the component and then use them to replace `name` and `secret`.  Make a note of this information. Set the `--id.type` to `orderer` if you are deploying an ordering node, or set it to `peer` if you are deploying a peer. The command might look similar to the following example:
+    Create a name and password for the component and then use them to replace `name` and `secret`.  Make a note of this information. Set the `--id.type` to `orderer` if you are deploying an ordering node, or set it to `peer` if you are deploying a peer. The command might look similar to the following example:
 
-  ```
-  fabric-ca-client register --caname ca --id.affiliation org1.department1 --id.name peer1 --id.secret peer1pw --id.type peer --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
-  ```
-  {: codeblock}
+    ```
+    fabric-ca-client register --caname ca --id.affiliation org1.department1 --id.name peer1 --id.secret peer1pw --id.type peer --tls.certfiles $HOME/fabric-ca-client/catls/tls.pem
+    ```
+    {: codeblock}
 
-  You need to save the `"enrollid"` and `"enrollsecret"` from the command above for when you create your configuration file.
-  {: important}
+    You need to save the `"enrollid"` and `"enrollsecret"` from the command above for when you create your configuration file.
+    {: important}
 
-  You can register an identity only once. If you experience a problem, try a command with a new username and password. As a security measure, use each identity, and the accompanying enrollID and secret, to deploy only one peer. While you can use one **admin** identity for several components (this is the recommended deployment strategy), do not reuse peer IDs and passwords.
+    You can register an identity only once. If you experience a problem, try a command with a new username and password. As a security measure, use each identity, and the accompanying enrollID and secret, to deploy only one peer. While you can use one **admin** identity for several components (this is the recommended deployment strategy), do not reuse peer IDs and passwords.
 
-  When the command completes successfully, you should see information that is similar to the following example:
+    When the command completes successfully, you should see information that is similar to the following example:
 
-  ```
-  2018/06/18 16:53:00 [INFO] Configuration file location: /fabric-ca-platform/admin/fabric-ca-client-config.yaml
-  2018/06/18 16:53:00 [INFO] TLS Enabled
-  2018/06/18 16:53:00 [INFO] TLS Enabled
-  Password: peerpw
-  ```
-  {: codeblock}
+    ```
+    2018/06/18 16:53:00 [INFO] Configuration file location: /fabric-ca-platform/admin/fabric-ca-client-config.yaml
+    2018/06/18 16:53:00 [INFO] TLS Enabled
+    2018/06/18 16:53:00 [INFO] TLS Enabled
+    Password: peerpw
+    ```
+    {: codeblock}
 
 ### Registering your organization administrator
 {: #ibp-v2-apis-config-register-admin}
@@ -811,100 +813,100 @@ You can use the APIs to create an organization MSP definition by calling [`POST 
 
 3. You need to provide the signCert, in base64 format, of your organization administrator that you registered and enrolled by using the Fabric CA client.  
 
-  Navigate to the MSP directory that was created when you [generated certificates by using your organization administrator](#ibp-v2-apis-config-enroll-admin).
-  ```
-  cd $HOME/fabric-ca-client/peer-admin/msp
-  ```
-  {: codeblock}
+    Navigate to the MSP directory that was created when you [generated certificates by using your organization administrator](#ibp-v2-apis-config-enroll-admin).
+    ```
+    cd $HOME/fabric-ca-client/peer-admin/msp
+    ```
+    {: codeblock}
 
-  In this MSP directory, open the signCert file of the new user and convert it to base64 format by using the following commands:
+    In this MSP directory, open the signCert file of the new user and convert it to base64 format by using the following commands:
 
-  ```
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  cat $HOME/<path-to-peer-admin>/msp/signcerts/cert.pem | base64 $FLAG
-  ```
-  {: codeblock}
+    ```
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    cat $HOME/<path-to-peer-admin>/msp/signcerts/cert.pem | base64 $FLAG
+    ```
+    {: codeblock}
 
-  **Note:** It is important that the string generated by using the command above is formatted as a single line. It should look similar to:
+    **Note:** It is important that the string generated by using the command above is formatted as a single line. It should look similar to:
 
-  ```
-  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlFbERDQ0EzeWdBd0lCQWdJUUFmMmo2MjdLZGNpSVE0dHlTOCs4a1RBTkJna3Foa2lHOXcwQkFRc0ZBREJoDQpNUXN3Q1FZRFZRUUdFd0pWVXpFVk1CTUdBMVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNUmt3RndZRFZRUUxFeEIzDQpkM2N1WkdsbmFXTmxjblF1WTI5dE1TQXdIZ1lEVlFRREV4ZEVhV2RwUTJWeWRDQkhiRzlpWVd3Z1VtOXZkQ0JEDQpRVEFlRncweE16QXpNRGd4TWpBd01EQmFGdzB5TXpBek1EZ3hNakF3TURCYU1FMHhDekFKQmdOVkJBWVRBbFZUDQpNUlV3RXdZRFZRUUtFd3hFYVdkcFEyVnlkQ0JKYm1NeEp6QWxCZ05WQkFNVEhrUnBaMmxEWlhKMElGTklRVElnDQpVMlZqZFhKbElGTmxjblpsY2lC
-  ```
-  Not like this:
+    ```
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlFbERDQ0EzeWdBd0lCQWdJUUFmMmo2MjdLZGNpSVE0dHlTOCs4a1RBTkJna3Foa2lHOXcwQkFRc0ZBREJoDQpNUXN3Q1FZRFZRUUdFd0pWVXpFVk1CTUdBMVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNUmt3RndZRFZRUUxFeEIzDQpkM2N1WkdsbmFXTmxjblF1WTI5dE1TQXdIZ1lEVlFRREV4ZEVhV2RwUTJWeWRDQkhiRzlpWVd3Z1VtOXZkQ0JEDQpRVEFlRncweE16QXpNRGd4TWpBd01EQmFGdzB5TXpBek1EZ3hNakF3TURCYU1FMHhDekFKQmdOVkJBWVRBbFZUDQpNUlV3RXdZRFZRUUtFd3hFYVdkcFEyVnlkQ0JKYm1NeEp6QWxCZ05WQkFNVEhrUnBaMmxEWlhKMElGTklRVElnDQpVMlZqZFhKbElGTmxjblpsY2lC
+    ```
+    Not like this:
 
-  ```
-  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlFbERDQ0EzeWdBd0lCQWdJUUFmMmo2MjdL
-  ZGNpSVE0dHlTOCs4a1RBTkJna3Foa2lHOXcwQkFRc0ZBREJoDQpNUXN3Q1FZRFZRUUdFd0pWVXpF
-  Vk1CTUdBMVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNUmt3RndZRFZRUUxFeEIzDQpkM2N1WkdsbmFX
-  VEFlRncweE16QXpNRGd4TWpBd01EQmFGdzB5TXpBek1EZ3hNakF3TURCYU1FMHhDekFKQmdOVkJB
-  WVRBbFZUDQpNUlV3RXdZRFZRUUtFd3hFYVdkcFEyVnlkQ0JKYm1NeEp6QWxCZ05WQkFNVEhrUnBa
-  ```
-  {: codeblock}
+    ```
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlFbERDQ0EzeWdBd0lCQWdJUUFmMmo2MjdL
+    ZGNpSVE0dHlTOCs4a1RBTkJna3Foa2lHOXcwQkFRc0ZBREJoDQpNUXN3Q1FZRFZRUUdFd0pWVXpF
+    Vk1CTUdBMVVFQ2hNTVJHbG5hVU5sY25RZ1NXNWpNUmt3RndZRFZRUUxFeEIzDQpkM2N1WkdsbmFX
+    VEFlRncweE16QXpNRGd4TWpBd01EQmFGdzB5TXpBek1EZ3hNakF3TURCYU1FMHhDekFKQmdOVkJB
+    WVRBbFZUDQpNUlV3RXdZRFZRUUtFd3hFYVdkcFEyVnlkQ0JKYm1NeEp6QWxCZ05WQkFNVEhrUnBa
+    ```
+    {: codeblock}
 
-  For example:
+    For example:
 
-  ```
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  cat $HOME/fabric-ca-client/peer-admin/msp/signcerts/cert.pem | base64 $FLAG
-  ```
-  {: codeblock}
+    ```
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    cat $HOME/fabric-ca-client/peer-admin/msp/signcerts/cert.pem | base64 $FLAG
+    ```
+    {: codeblock}
 
-  This command prints a string that is similar to the following example:
+    This command prints a string that is similar to the following example:
 
-  ```
-  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNuRENDQWtPZ0F3SUJBZ0lVTXF5VDhUdnlwY3lYR2sxNXRRY3hxa1RpTG9Nd0NnWUlLb1pJemowRUF3SXcKYURFTTlEKaFhTTzRTWjJ2ZHBPL1NQZWtSRUNJQ3hjUmZVSWlkWHFYWGswUGN1OHF2aCtWSkhGeHBLUnQ3dStHZDMzalNSLwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
-  ```
-  {: codeblock}
+    ```
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNuRENDQWtPZ0F3SUJBZ0lVTXF5VDhUdnlwY3lYR2sxNXRRY3hxa1RpTG9Nd0NnWUlLb1pJemowRUF3SXcKYURFTTlEKaFhTTzRTWjJ2ZHBPL1NQZWtSRUNJQ3hjUmZVSWlkWHFYWGswUGN1OHF2aCtWSkhGeHBLUnQ3dStHZDMzalNSLwotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+    ```
+    {: codeblock}
 
-  Provide this string to the `admins` field of the API request.
+    Provide this string to the `admins` field of the API request.
 
 4. You also need to provide the root certificate of your CA. This certificate was created when you [generated certificates by using your CA admin](#ibp-v2-apis-enroll-ca-admin).
 
-  Navigate to the CA admin MSP directory.
-  ```
-  cd $HOME/fabric-ca-client/ca-admin/msp
-  ```
-  {: codeblock}
+    Navigate to the CA admin MSP directory.
+    ```
+    cd $HOME/fabric-ca-client/ca-admin/msp
+    ```
+    {: codeblock}
 
-  In this directory, open the cacerts folder and convert the certificate inside into base64 format by using the following commands:
-  ```
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  cat $HOME/<path-to-ca-admin>/msp/cacerts/<ca_root_cert>.pem | base64 $FLAG
-  ```
-  {: codeblock}
+    In this directory, open the cacerts folder and convert the certificate inside into base64 format by using the following commands:
+    ```
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    cat $HOME/<path-to-ca-admin>/msp/cacerts/<ca_root_cert>.pem | base64 $FLAG
+    ```
+    {: codeblock}
 
-  This prints the root cert as a base64 encoded sting.
+    This prints the root cert as a base64 encoded sting.
 
-  ```
-  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNGekNDQWIyZ0F3SUJBZ0lVQmZnZzcvVnIrL25OVEFNQlQ4UUtHL00wQU8wd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU1TURVd016RXpNamt3TUZvWERUTTBNRFF5T1RFek1qa3dNRm93YURFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1Sa3dGd1lEVlFRREV4Qm1ZV0p5YVdNdFkyRXRjMlZ5CmRtVnlNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUVXMUtvN2lWeVE2VWkwdDVqbU5KaWVuSUwKR3pNM1BDWHlhL2VSQ0NWMmFQb0dTZ1lrVUg2UWN5RjAzbFlMZFU4Y0drNTQ0alViVC9KT1lYeVgzTWc4bHFORgpNRU13RGdZRFZSMFBBUUgvQkFRREFnRUdNQklHQTFVZEV3RUIvd1FJTUFZQkFmOENBUUV3SFFZRFZSME9CQllFCkZDK2lJR0NSb2Zvb3FsVkZoU3dOMmk2MXNJaVBNQW9HQ0NxR1NNNDlCQU1DQTBnQU1FVUNJUURTYW9RL1E0QzkKbFl1VGNhVXVHb3d6YmhUZHBuN2F3S2lHN1Nvd2lSQXVld0lnUWlyM3RNR3IvYWo2aU5lRXJFN2NyOVowQ0gvTwp3QnNQcWd4RVR3MjVqZUU9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
-  ```
-  {: codeblock}
+    ```
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNGekNDQWIyZ0F3SUJBZ0lVQmZnZzcvVnIrL25OVEFNQlQ4UUtHL00wQU8wd0NnWUlLb1pJemowRUF3SXcKYURFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVJrd0Z3WURWUVFERXhCbVlXSnlhV010ClkyRXRjMlZ5ZG1WeU1CNFhEVEU1TURVd016RXpNamt3TUZvWERUTTBNRFF5T1RFek1qa3dNRm93YURFTE1Ba0cKQTFVRUJoTUNWVk14RnpBVkJnTlZCQWdURGs1dmNuUm9JRU5oY205c2FXNWhNUlF3RWdZRFZRUUtFd3RJZVhCbApjbXhsWkdkbGNqRVBNQTBHQTFVRUN4TUdSbUZpY21sak1Sa3dGd1lEVlFRREV4Qm1ZV0p5YVdNdFkyRXRjMlZ5CmRtVnlNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUVXMUtvN2lWeVE2VWkwdDVqbU5KaWVuSUwKR3pNM1BDWHlhL2VSQ0NWMmFQb0dTZ1lrVUg2UWN5RjAzbFlMZFU4Y0drNTQ0alViVC9KT1lYeVgzTWc4bHFORgpNRU13RGdZRFZSMFBBUUgvQkFRREFnRUdNQklHQTFVZEV3RUIvd1FJTUFZQkFmOENBUUV3SFFZRFZSME9CQllFCkZDK2lJR0NSb2Zvb3FsVkZoU3dOMmk2MXNJaVBNQW9HQ0NxR1NNNDlCQU1DQTBnQU1FVUNJUURTYW9RL1E0QzkKbFl1VGNhVXVHb3d6YmhUZHBuN2F3S2lHN1Nvd2lSQXVld0lnUWlyM3RNR3IvYWo2aU5lRXJFN2NyOVowQ0gvTwp3QnNQcWd4RVR3MjVqZUU9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    ```
+    {: codeblock}
 
-  Provide this string to the `root_certs` field of the API request.
+    Provide this string to the `root_certs` field of the API request.
 
 5. You should also provide the root certificate of your TLS CA. The TLS root certificate allows your peers to participate in [gossip](#x9829550){: term} on a channel.
 
-  Navigate to the MSP directory that was generated when you [enrolled your TLS CA admin](#ibp-v2-apis-config-register-component-tls).
-  ```
-  cd $HOME/fabric-ca-client/tlsca-admin/msp
-  ```
-  {: codeblock}
+    Navigate to the MSP directory that was generated when you [enrolled your TLS CA admin](#ibp-v2-apis-config-register-component-tls).
+    ```
+    cd $HOME/fabric-ca-client/tlsca-admin/msp
+    ```
+    {: codeblock}
 
-  In this directory, open the cacerts folder and convert the certificate inside into base64 format by using the following commands:
-  ```
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  cat $HOME/<path-to-tlsca-admin>/msp/cacerts/<tls_root_cert>.pem | base64 $FLAG
-  ```
-  {: codeblock}
+    In this directory, open the cacerts folder and convert the certificate inside into base64 format by using the following commands:
+    ```
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    cat $HOME/<path-to-tlsca-admin>/msp/cacerts/<tls_root_cert>.pem | base64 $FLAG
+    ```
+    {: codeblock}
 
-  The command prints the TLS CA root cert as a base64 encoded sting.
+    The command prints the TLS CA root cert as a base64 encoded sting.
 
-  ```
-  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNHRENDQWI2Z0F3SUJBZ0lVWUVQWnprNXV2b3dobEtacG5JMXplODdIQUlnd0NnWUlLb1pJemowRUF3SXcKWFRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVE0d0RBWURWUVFERXdWMGJITmpZVEFlCkZ3MHhPVEExTURNeE16STVNREJhRncwek5EQTBNamt4TXpJNU1EQmFNRjB4Q3pBSkJnTlZCQVlUQWxWVE1SY3cKRlFZRFZRUUlFdzVPYjNKMGFDQkRZWEp2YkdsdVlURVVNQklHQTFVRUNoTUxTSGx3WlhKc1pXUm5aWEl4RHpBTgpCZ05WQkFzVEJrWmhZbkpwWXpFT01Bd0dBMVVFQXhNRmRHeHpZMkV3V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPClBRTUJCd05DQUFRdSs2UnZWd2w5T2dDVlAraEVxbjVxdExRVG9LWkw4a1lic0pOeU1JbERoc3hlNWx6cW1zQkoKbTk2eUR2TVV6OSsxL2pzb1M4M1JqMVAwc3M2TnJNb3FvMXd3V2pBT0JnTlZIUThCQWY4RUJBTUNBUVl3RWdZRApWUjBUQVFIL0JBZ3dCZ0VCL3dJQkFUQWRCZ05WSFE0RUZnUVVnUEc4anJEK1BxVjdoelc3WDlsbTFrMS91WjR3CkZRWURWUjBSQkE0d0RJY0VxVGJESW9jRUNwbnBkVEFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBenk3cHJZaVMKQmlDVWdYeWRkY09WMm9mZmtqaEI0N091QXFjQWNqZS9SWkVDSUdKZFgzZ1ErTDRIN3duY1RoZkwrenU1ejV1UApGUWhXTmlNS3hQWEYrZnYwCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
-  ```
-  {: codeblock}
+    ```
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUNHRENDQWI2Z0F3SUJBZ0lVWUVQWnprNXV2b3dobEtacG5JMXplODdIQUlnd0NnWUlLb1pJemowRUF3SXcKWFRFTE1Ba0dBMVVFQmhNQ1ZWTXhGekFWQmdOVkJBZ1REazV2Y25Sb0lFTmhjbTlzYVc1aE1SUXdFZ1lEVlFRSwpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVE0d0RBWURWUVFERXdWMGJITmpZVEFlCkZ3MHhPVEExTURNeE16STVNREJhRncwek5EQTBNamt4TXpJNU1EQmFNRjB4Q3pBSkJnTlZCQVlUQWxWVE1SY3cKRlFZRFZRUUlFdzVPYjNKMGFDQkRZWEp2YkdsdVlURVVNQklHQTFVRUNoTUxTSGx3WlhKc1pXUm5aWEl4RHpBTgpCZ05WQkFzVEJrWmhZbkpwWXpFT01Bd0dBMVVFQXhNRmRHeHpZMkV3V1RBVEJnY3Foa2pPUFFJQkJnZ3Foa2pPClBRTUJCd05DQUFRdSs2UnZWd2w5T2dDVlAraEVxbjVxdExRVG9LWkw4a1lic0pOeU1JbERoc3hlNWx6cW1zQkoKbTk2eUR2TVV6OSsxL2pzb1M4M1JqMVAwc3M2TnJNb3FvMXd3V2pBT0JnTlZIUThCQWY4RUJBTUNBUVl3RWdZRApWUjBUQVFIL0JBZ3dCZ0VCL3dJQkFUQWRCZ05WSFE0RUZnUVVnUEc4anJEK1BxVjdoelc3WDlsbTFrMS91WjR3CkZRWURWUjBSQkE0d0RJY0VxVGJESW9jRUNwbnBkVEFLQmdncWhrak9QUVFEQWdOSUFEQkZBaUVBenk3cHJZaVMKQmlDVWdYeWRkY09WMm9mZmtqaEI0N091QXFjQWNqZS9SWkVDSUdKZFgzZ1ErTDRIN3duY1RoZkwrenU1ejV1UApGUWhXTmlNS3hQWEYrZnYwCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    ```
+    {: codeblock}
 
-  Provide this string to the `tls_root_certs` field of the API request.
+    Provide this string to the `tls_root_certs` field of the API request.
 
 ## Creating a configuration file
 {: #ibp-v2-apis-config}
@@ -914,32 +916,32 @@ You need to complete a configuration file in order to create a peer or ordering 
 The template for the configuration file can be found below:
 ```
 {
-	"enrollment": {
-		"component": {
-			"cahost": "",
-			"caport": "",
-			"caname": "",
-			"catls": {
-				"cacert": ""
-			},
-			"enrollid": "",
-			"enrollsecret": "",
-			"admincerts": [""]
-		},
-		"tls": {
-			"cahost": "",
-			"caport": "",
-			"caname": "",
-			"catls": {
-				"cacert": ""
-			},
-			"enrollid": "",
-			"enrollsecret": "",
-			"csr": {
-				"hosts": [""]
-			}
-		}
-	}
+    "enrollment": {
+        "component": {
+            "cahost": "",
+            "caport": "",
+            "caname": "",
+            "catls": {
+                "cacert": ""
+            },
+            "enrollid": "",
+            "enrollsecret": "",
+            "admincerts": [""]
+        },
+        "tls": {
+            "cahost": "",
+            "caport": "",
+            "caname": "",
+            "catls": {
+                "cacert": ""
+            },
+            "enrollid": "",
+            "enrollsecret": "",
+            "csr": {
+                "hosts": [""]
+            }
+        }
+    }
 }
 ```
 {: codeblock}
@@ -962,37 +964,37 @@ You can call [`GET /ak/api/v2/components`](/apidocs/blockchain#get-all-component
 - The `"cacert"` is the base64-encoded TLS certificate of your CA. This is the value of the `pem` field in the response body or the exported JSON file.
 
 - The fields in the `"tls"` section below require the same information as you passed to the component sections above, except you need to use the value of the CA TLS instance name that is specified during CA deployment. Replace `caname` with the value of `tlsca_name` in the response body or the exported JSON file. Use the same TLS cert for the `"cacert"` value.
-  ```
-  "tls": {
-    "cahost": "",
+    ```
+    "tls": {
+        "cahost": "",
     "caport": "",
     "caname": "",
     "catls": {
-      "cacert": ""
-  ```
-  {: codeblock}
+        "cacert": ""
+    ```
+    {: codeblock}
 
 ### Provide your component enroll ID and secret
 
 1. Paste the `name` and `secret` you used to [register your component with your default CA](#ibp-v2-apis-config-register-component) as the `"enrollid"` and `"enrollsecret"` in the configuration file, under the `"component"` section:
 
-  ```
-  "component": {...
-    },
+    ```
+    "component": {...
+        },
     "enrollid": "peer1",
     "enrollsecret": "peer1pw",
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 2. Paste the `name` and `secret` you used to [register your component with your tls CA](#ibp-v2-apis-config-register-component-tls) as the `"enrollid"` and `"enrollsecret"` in the configuration file, under the `"tls"` section:
 
-  ```
-  "tls": {...
-    },
+    ```
+    "tls": {...
+        },
     "enrollid": "peertls",
     "enrollsecret": "peertlspw",
-  ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
 ### Provide the signCert of your organization administrator
 
@@ -1052,8 +1054,8 @@ You have the option of providing a custom domain to your component by using the 
 
 ```
 "csr": {
-  "hosts": [""]
-  }
+    "hosts": [""]
+    }
 ```
 {: codeblock}
 
@@ -1111,3 +1113,5 @@ If you want to use the {{site.data.keyword.blockchainfull_notm}} Platform consol
 - **Private Key:** Upload your admins private key. If you followed the instructions above, you can find this key in the `$HOME/fabric-ca-client/peer-admin/msp/keystore/` folder.
 
 After you import your admin identity, you can associate this identity with the components that you create. You can then use the console to operate your network.
+
+

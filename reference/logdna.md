@@ -74,11 +74,13 @@ The namespace is the first part of the URL beginning with the letter `n` and fol
 kubectl get po -n <NAMESPACE>
 ```
 {: codeblock}
+
 Replace `<NAMESPACE>` with the value of your namespace. For example:
 ```
 kubectl get po -n nf85a2a
 ```
 {: codeblock}
+
 The output looks similar to:
 NAME                            READY   STATUS    RESTARTS   AGE
 ibp-operator-6558fdc54f-c5zmn   1/1     Running   0          65m
@@ -99,7 +101,7 @@ In this case, `nf85a2apeerorg1-5765d88c85-jglk2` represents the name of the peer
 
 The process to view the logs for a smart contract is similar to how you view your node logs but varies depending on whether your peer is running a Fabric v1.4 or v2.x image. The Fabric version that the peer is running is visible when you click on a peer node in the console:
 
-  ![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 2.How to find peer fabric version" caption-side="bottom"}
+![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 2.How to find peer fabric version" caption-side="bottom"}
 
 
 #### <img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v1.4 peer image  
@@ -136,6 +138,7 @@ Next, use kubectl commands to get a list of all of the chaincode pods running in
 kubectl get po -n <NAMESPACE> | grep chaincode-execution | cut -d" " -f1 | xargs -I {} kubectl get po {} -n <NAMESPACE> --show-labels
 ```
 {: codeblock}
+
 Replacing `<NAMESPACE>` with the name of your cluster namespace.
 
 You should see results similar to:
@@ -162,3 +165,5 @@ pod:chaincode-execution-0a8fb504-78e2-4d50-a614-e95fb7e7c8f4
 {: #ibp-LogDNA-summary}
 
 Congratulations. In this tutorial you learned how easy it is to use LogDNA to view the logs for your blockchain nodes and smart contracts. To learn more about monitoring your network, check out the tutorial on using [Open Dashboard](/docs/monitoring?topic=monitoring-getting-started) with your blockchain network.
+
+

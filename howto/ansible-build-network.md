@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-11"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -114,40 +114,40 @@ These instructions assume that you have installed [Docker](https://docs.docker.c
 
 1. We use a Docker command to run the first playbook that creates an ordering organization that is named **Ordering Org**, with a certificate authority named **Ordering Org CA**, and finally a single node ordering service named **Ordering Service**. If you have not already, go ahead and modify the console connection variables inside the `ordering-org-vars.yml` by using the instructions from the previous section. You are now ready to run an Ansible playbook from Docker.
 
-  The following command invokes the `01-create-ordering-organization-components.yml` playbook.
+    The following command invokes the `01-create-ordering-organization-components.yml` playbook.
 
     ```
     docker run --rm -v <FULLY-QUALIFIED-PATH-TO-PLAYBOOKS>:/playbooks ibmcom/ibp-ansible ansible-playbook /playbooks/<PLAYBOOK>.yml
     ```
     {: codeblock}
 
-  where:
-  - `--rm` tells Docker to remove the container when the command completes.
-  - `-v <FULLY-QUALIFIED-PATH-TO-PLAYBOOKS>` is used to mount the `tutorial` folder into the Docker container. Replace `<FULLY-QUALIFIED-PATH-TO-PLAYBOOKS>` with the fully qualified path to where the `tutorial` folder resides on your local system. When you run the command from the `tutorial` folder you can replace this value with `$PWD`.
-  - `ibmcom/ibp-ansible` represents the tag of the Docker image that is published by {{site.data.keyword.IBM_notm}}.
-  - `<PLAYBOOK>` is used to designate which playbook to run.
+    where:
+    - `--rm` tells Docker to remove the container when the command completes.
+    - `-v <FULLY-QUALIFIED-PATH-TO-PLAYBOOKS>` is used to mount the `tutorial` folder into the Docker container. Replace `<FULLY-QUALIFIED-PATH-TO-PLAYBOOKS>` with the fully qualified path to where the `tutorial` folder resides on your local system. When you run the command from the `tutorial` folder you can replace this value with `$PWD`.
+    - `ibmcom/ibp-ansible` represents the tag of the Docker image that is published by {{site.data.keyword.IBM_notm}}.
+    - `<PLAYBOOK>` is used to designate which playbook to run.
 
-  For example:
+    For example:
     ```
     cd tutorial
     docker run --rm -v $PWD:/playbooks ibmcom/ibp-ansible ansible-playbook /playbooks/01-create-ordering-organization-components.yml
     ```
     {: codeblock}
 
-  While the command is running, you see output from each task. You can safely ignore the following warning:
+    While the command is running, you see output from each task. You can safely ignore the following warning:
     ```
     [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'`.
     ```
-    {:codeblock}
+    {: codeblock}
 
-  When the playbook is finished, in the `PLAY RECAP` section, you see output similar to:
+    When the playbook is finished, in the `PLAY RECAP` section, you see output similar to:
     ```
     PLAY RECAP *********************************************************************
     localhost                  : ok=7    changed=5    unreachable=0    failed=0 skipped=1    rescued=0    ignored=0    
     ```
-    {:codeblock}
+    {: codeblock}
 
-  If the playbook completes successfully, you should see `failed=0`. Go ahead now and log in to your console to confirm that **Ordering Org** CA, **Ordering Org** organization, and **Ordering Service** was created.
+    If the playbook completes successfully, you should see `failed=0`. Go ahead now and log in to your console to confirm that **Ordering Org** CA, **Ordering Org** organization, and **Ordering Service** was created.
 
 2. The same instructions can be repeated for the next playbook, `02-create-endorsing-organization-components.yml`. This playbook creates an endorsing organization named **Org1**, with a certificate authority named **Org1 CA**, and then a peer named **Org1 Peer**. When you open the playbook, notice in the comments that this playbook uses a different variables file `org1-vars.yml`. Edit that file with your console connection information. And then run that playbook:
     ```
@@ -155,7 +155,7 @@ These instructions assume that you have installed [Docker](https://docs.docker.c
     ```
     {: codeblock}
 
-  Again, if you check your console, you can see that the **Org1 CA**, **Org1** organization, and **Org1 Peer** was created.
+    Again, if you check your console, you can see that the **Org1 CA**, **Org1** organization, and **Org1 Peer** was created.
 
 3. You can continue running each playbook individually in the list to stand up a basic network that contains an ordering service, two peer organizations, two peers, and a channel. The playbooks also install smart contracts on the peers and instantiate them on the channel.
 
@@ -196,7 +196,7 @@ If you are paying close attention, you might notice that the playbooks will run 
 | **Customizing the name of the ordering service** | The default ordering service name is defined in the `common-vars.yml` file in the `ordering_service_name` parameter. Edit this value to specify the preferred name of the ordering service. |
 | **Adjusting how many ordering nodes are created for an ordering service** |By default, the `01-create-ordering-organization-components.yml` playbook is configured to create a single node ordering service. If your cluster has the resources to support additional ordering nodes in the ordering service, you can modify how many ordering nodes are created when the ordering service is deployed by editing the `01-create-ordering-organization-components.yml` playbook and specifying the number of ordering nodes that you want to deploy in the `ordering_service_nodes:` parameter. |
 | **Adjusting node resources** | You can customize the resources that are allocated to a node by editing the `resources` block of its associated module. For example, to modify the CPU and memory that is allocated to a CA node, navigate to your clone of the  [certificate_authority](https://github.com/IBM-Blockchain/ansible-collection/blob/main/plugins/modules/certificate_authority.py) module on your local system. Scroll down to the `resources` section and modify the values that are assigned to `cpu` and `memory`. Likewise, you can modify peer resources in your clone of the [peer](https://github.com/IBM-Blockchain/ansible-collection/blob/main/plugins/modules/peer.py) module or the ordering service resources in the [ordering service](https://github.com/IBM-Blockchain/ansible-collection/blob/main/plugins/modules/ordering_service.py) module. |
-| **Using your own smart contract** | By default, the `19-install-chaincode.yml` and `20-instantiate-chaincode.yml` playbooks use the Fabric 2.0 smart contract lifecycle with the `FabCar` sample smart contract. When you are ready to deploy your own smart contract, you need to: <br><ol><li>Include the smart contract package in the `tutorial` directory and name it using the format `<SMART-CONTRACT-NAME>@<VERSION>.tar.gz`.</li><li> Refer to your smart contract by replacing the value of the  `smart_contract_base_name:` and `smart_contract_version:` parameters in the `common-vars.yml` file.</li></ol> |
+| **Using your own smart contract** | By default, the `19-install-chaincode.yml` and `20-instantiate-chaincode.yml` playbooks use the Fabric 2.0 smart contract lifecycle with the `FabCar` sample smart contract. When you are ready to deploy your own smart contract, you need to: <br><ol><li>Include the smart contract package in the <code>tutorial</code> directory and name it using the format <code><SMART-CONTRACT-NAME>@<VERSION>.tar.gz</code>.</li><li> Refer to your smart contract by replacing the value of the  <code>smart_contract_base_name:</code> and <code>smart_contract_version:</code> parameters in the <code>common-vars.yml</code> file.</li></ol> |
 | **Using your own enroll ID and secrets** | When the playbooks deploy a node, it uses the enroll IDs specified in the [01-create-ordering-organization-components.yml](https://github.com/IBM-Blockchain/ansible-collection/blob/main/tutorial/01-create-ordering-organization-components.yml) and  [02-create-endorsing-organization-components.yml](https://github.com/IBM-Blockchain/ansible-collection/blob/main/tutorial/02-create-endorsing-organization-components.yml) files. The associated enroll secrets are provided in the corresponding variable files [ordering-org-vars.yml](https://github.com/IBM-Blockchain/ansible-collection/blob/main/tutorial/ordering-org-vars.yml), [org1-vars.yml](https://github.com/IBM-Blockchain/ansible-collection/blob/main/tutorial/org1-vars.yml), and [org2-vars.yml](https://github.com/IBM-Blockchain/ansible-collection/blob/main/tutorial/org2-vars.yml). You can customize the values of the enroll ID and secrets in these files according to your needs. |
 {: caption="Table 1. Hints and tips for using the Ansible collection" caption-side="bottom"}
 
@@ -226,7 +226,7 @@ Using the wallet identities from the preceding table, you can now follow the ste
 
 | Associate an identity with CAs |
 |:-------------------------------|
-| <ul><li>Navigate to the **Nodes** tab.</li><li>Open the **Ordering Org CA** and click **Associate identity**.</li><li>Click the **Existing CA** tab and select the **Ordering Org CA Admin**.</li><li>If you created the endorsing organizations for the peers, repeat these steps for the **Org1 CA** and **Org2 CA** nodes, associating the **Org1 CA Admin** and **Org2 CA Admin** identities respectively.</li></ul> |
+| <ul><li>Navigate to the <strong>Nodes</strong> tab.</li><li>Open the <strong>Ordering Org CA</strong> and click <strong>Associate identity</strong>.</li><li>Click the <strong>Existing CA</strong> tab and select the <strong>Ordering Org CA Admin</strong>.</li><li>If you created the endorsing organizations for the peers, repeat these steps for the <strong>Org1 CA</strong> and <strong>Org2 CA</strong> nodes, associating the <strong>Org1 CA Admin</strong> and <strong>Org2 CA Admin</strong> identities respectively.</li></ul> |
 {: class="simple-tab-table"}
 {: caption="Table 2. CA identities" caption-side="top"}
 {: #simpletabtable1}
@@ -235,7 +235,7 @@ Using the wallet identities from the preceding table, you can now follow the ste
 
 | Associate an identity with peers |
 |----------------------------------|
-| <ul><li>Navigate to the **Nodes** tab.</li><li>Open the **Org1 Peer** and click **Associate identity**.</li><li>Select the **Org1 Admin** from the drop-down list and click **Associate identity**.</li><li>If you created the second endorsing organization (Org2) for the peers, repeat these steps for the **Org2 Peer** by associating the **Org2 Admin** identity.</li></ul>  |
+| <ul><li>Navigate to the <strong>Nodes</strong> tab.</li><li>Open the <strong>Org1 Peer</strong> and click <strong>Associate identity</strong>.</li><li>Select the <strong>Org1 Admin</strong> from the drop-down list and click <strong>Associate identity</strong>.</li><li>If you created the second endorsing organization (Org2) for the peers, repeat these steps for the <strong>Org2 Peer</strong> by associating the <strong>Org2 Admin</strong> identity.</li></ul>  |
 {: caption="Table 2. Peer identities" caption-side="top"}
 {: #simpletabtable2}
 {: tab-title="Peer nodes"}
@@ -244,7 +244,7 @@ Using the wallet identities from the preceding table, you can now follow the ste
 
 | Associate an identity with the ordering service |
 |-------------------------------------------------|
-| <ul><li>Navigate to the **Nodes** tab.</li><li>Open the **Ordering Service** and click **Associate identity**.</li><li>Select the **Ordering Org Admin** from the drop-down list and click **Associate identity**.</li></ul> |
+| <ul><li>Navigate to the <strong>Nodes</strong> tab.</li><li>Open the <strong>Ordering Service</strong> and click <strong>Associate identity</strong>.</li><li>Select the <strong>Ordering Org Admin</strong> from the drop-down list and click <strong>Associate identity</strong>.</li></ul> |
 {: caption="Table 2. Ordering service identities" caption-side="top"}
 {: #simpletabtable3}
 {: tab-title="Ordering service"}

@@ -39,65 +39,68 @@ You need to gather the following information from your peer and orderer.
 
 - **`peer-endpoint`** or **`orderer-endpoint`**
 
-  You can find the operations endpoint URL of the peer or orderer in the peer or orderer JSON file that you export from the console.
+    You can find the operations endpoint URL of the peer or orderer in the peer or orderer JSON file that you export from the console.
 
     1. Click the peer or orderer in the **Node** tab.
     2. On the peer or orderer page, click the **Settings** icon besides the peer or orderer name.
     3. In the side panel, click **Export** to save the peer or orderer JSON file.
     4. Find the operations endpoint URL that is the value of the `operations_url` parameter in the JSON file. This value is referred to as the `peer-endpoint` or `orderer-endpoint` in the commands later in this topic. For example:
 
-      ```
-      {
-      "short_name": "Peer1Org1_0",
-      "name": "Peer1 Org1",
-      "url": "https://169.46.208.93:32739",
-      "type": "fabric-peer",
-      "msp_id": "org1msp",
-      "operations_url": "https://169.46.208.93:32101"
-      }
-      ```
+        ```
+        {
+        "short_name": "Peer1Org1_0",
+        "name": "Peer1 Org1",
+        "url": "https://169.46.208.93:32739",
+        "type": "fabric-peer",
+        "msp_id": "org1msp",
+        "operations_url": "https://169.46.208.93:32101"
+        }
+        ```
+        {: codeblock}
 
-      ```
-      {
-      "short_name": "Orderer_0",
-      "name": "Orderer",
-      "url": "https://169.46.208.93:31612",
-      "type": "fabric-orderer",
-      "msp_id": "orderermsp",
-      "operations_url": "https://169.46.208.93:30115"
-      }
-      ```
+        ```
+        {
+        "short_name": "Orderer_0",
+        "name": "Orderer",
+        "url": "https://169.46.208.93:31612",
+        "type": "fabric-orderer",
+        "msp_id": "orderermsp",
+        "operations_url": "https://169.46.208.93:30115"
+        }
+        ```
+        {: codeblock}
 
 - **`client-tls-cert`** and **`client-tls-key`**
 
-  You can find the certificate and private key of the TLS CA in the console.
+    You can find the certificate and private key of the TLS CA in the console.
 
-  1. Click the peer or orderer's CA node in the **Node** tab.
-  2. On the CA tab, click the actions menu next to the `admin` user and click **Enroll identity**.
-  3. On the side panel that opens, select **TLS Certificate Authority** from the Certificate Authority drop-down list.
-  4. Enter the **Enroll secret** for the admin user and click **Next**.
-  5. Enter an **Identity display name** and click **Add identity to Wallet**.
-  6. Open the **Wallet** tab and click the identity you just created.
-  7. Click **Export identity** to download the Certificate and Private key to a JSON file.
-  8. Open the exported JSON file.
-  9. Find the private key that is the value of the `private_key` parameter in the JSON file. This is your `client-tls-key` for use in the commands below.
-  10. Find the TLS CA certificate that is the value of the `cert` parameter in the JSON file. This is your `client-tls-cert` for use in the commands below.
+    1. Click the peer or orderer's CA node in the **Node** tab.
+    2. On the CA tab, click the actions menu next to the `admin` user and click **Enroll identity**.
+    3. On the side panel that opens, select **TLS Certificate Authority** from the Certificate Authority drop-down list.
+    4. Enter the **Enroll secret** for the admin user and click **Next**.
+    5. Enter an **Identity display name** and click **Add identity to Wallet**.
+    6. Open the **Wallet** tab and click the identity you just created.
+    7. Click **Export identity** to download the Certificate and Private key to a JSON file.
+    8. Open the exported JSON file.
+    9. Find the private key that is the value of the `private_key` parameter in the JSON file. This is your `client-tls-key` for use in the commands below.
+    10. Find the TLS CA certificate that is the value of the `cert` parameter in the JSON file. This is your `client-tls-cert` for use in the commands below.
 
 - **`peer tls-ca cert`** or **`orderer tls-ca cert`**
 
-  You can find the TLS CA certificate of the peer or orderer in the console.
+    You can find the TLS CA certificate of the peer or orderer in the console.
 
-  1. Click the peer or orderer's node in the **Node** tab.
-  2. Click the **Settings** icon beside the node name.
-  3. Copy the node's TLS CA certificate string. This is your `peer tls-ca cert` or `orderer tls-ca cert` that can be used in the commands below.
+    1. Click the peer or orderer's node in the **Node** tab.
+    2. Click the **Settings** icon beside the node name.
+    3. Copy the node's TLS CA certificate string. This is your `peer tls-ca cert` or `orderer tls-ca cert` that can be used in the commands below.
 
 **Note:** For all the certificates and keys, you must convert the certificate strings, which are in `base64` format, to individual `.pem` files by using the following commands:
-  ```
-  export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
-  echo <base64_string> | base64 --decode $FLAG > <key_name>.pem
-  ```
-  {: codeblock}
-{:important}
+    ```
+    export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0"; fi)
+    echo <base64_string> | base64 --decode $FLAG > <key_name>.pem
+    ```
+    {: codeblock}
+    
+{: important}
 
 
 ## Checking node health
@@ -173,3 +176,5 @@ curl -X PUT  https://169.46.208.93:3210/logspec -d '{"spec":"chaincode=debug:inf
 After you set a new logging level, you can use the [view logging level command](#operations_service_log_level_view) to check your settings.
 
 For more information about log level configuration, see [Log level management](https://hyperledger-fabric.readthedocs.io/en/release-2.2/operations_service.html#log-level-management){: external} in Hyperledger Fabric documentation.
+
+

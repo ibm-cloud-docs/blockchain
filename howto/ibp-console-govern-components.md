@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-11-11"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -42,10 +42,11 @@ In this topic, we'll cover the process for [reallocating resources](#ibp-console
 {: #ibp-console-govern-components-reallocate-resources}
 
 Resizing a node requires the containers to be rebuilt, which can cause a delay in the functioning of the node.
-{:important}
+{: important}
 
 We recommend using the [{{site.data.keyword.mon_full_notm}}](https://www.ibm.com/cloud/cloud-monitoring) tool in combination with your {{site.data.keyword.cloud_notm}} Kubernetes dashboard to monitor your Kubernetes resource usage. When you determine that a worker node is running out of resources, you can add a new larger worker node to your cluster and then delete the existing working node.
-{:note}
+{: note}
+
 
 
 
@@ -186,24 +187,24 @@ Because Fabric v2.x peers do not have a "shim" (the external dependencies that a
 The `build.gradle` file for the smart contract must be updated:
 
 1. If the smart contract uses the `shadowjar` 2.x plugin, then it should be updated to version 5 by using the following code:
-	```
-	plugins {
-	    id 'com.github.johnrengelman.shadow' version '5.1.0'
-	    id 'java'
-	}
-	```
-	{: codeblock}
+    ```
+    plugins {
+        id 'com.github.johnrengelman.shadow' version '5.1.0'
+        id 'java'
+    }
+    ```
+    {: codeblock}
 
 2. The `repositories` section of the file must contain the `maven URL` for `jitpack`, for example:
-  ```
-	repositories {
-	    ...
-	    maven {
-	        url 'https://jitpack.io'
-	    }
-	}
-	```
-	{: codeblock}
+    ```
+        repositories {
+        ...
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+    ```
+    {: codeblock}
 
 
 **Init functions**  
@@ -252,6 +253,7 @@ kubectl get po -n <NAMESPACE> | grep chaincode-execution | cut -d" " -f1 | xargs
 
 
 
+
 If you want to delete a single smart contract pod, you will first have to figure out the name of your smart contract pod.
 
 
@@ -290,12 +292,14 @@ kubectl delete pod <POD_NAME> -n <NAMESPACE>
 
 
 
+
 You can also use kubectl commands to delete all of the nodes in your cluster by issuing commands to delete each type of node. First, set the namespace where the nodes you want to delete are located:
 
 ```
 kubectl config set-context --current --namespace=<NAMESPACE>
 ```
 {: codeblock}
+
 
 
 
