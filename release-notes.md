@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-12"
+lastupdated: "2021-11-15"
 
 
 keywords: release note, latest changes, Hyperledger Fabric
@@ -40,7 +40,7 @@ Miscellaneous bug fixes and security patches.
 ## 26 Oct 2021
 {: #26-10-2021}
 
-**Certificate Authority (CA) patch 1.5.2-2, Peer and ordering node patch 1.4.12-5, 2.2.4-3.**
+**Certificate Authority (CA) patch 1.5.2-2, Peer and ordering node patch 1.4.12-5, 2.2.4-2.**
 
 Miscellaneous bug fixes and security patches.
 
@@ -48,7 +48,7 @@ Miscellaneous bug fixes and security patches.
 ## 05 Oct 2021
 {: #05-10-2021}
 
-**Certificate Authority (CA) patch 1.5.2-1, Peer and ordering node patch 1.4.12-3, 2.2.4-2.**
+**Certificate Authority (CA) patch 1.5.2-1, Peer and ordering node patch 1.4.12-3, 2.2.4-1.**
 
 Miscellaneous bug fixes and security patches.
 
