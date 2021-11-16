@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-11"
 
 keywords: pricing model, hourly, per hour, CPU, vCPU, virtual core, cost, scalability, estimation, optimize your cost, billing, free, trial, preview, pricing examples
 
@@ -77,7 +77,7 @@ The following capabilities are only available on a paid cluster:
 **How to preview {{site.data.keyword.IBM_notm}} Blockchain Platform for free**  
 {: #ibp-saas-pricing-free-howto}
 
-1. Get an [{{site.data.keyword.cloud_notm}} Account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fblockchain){:external}.
+1. Get an [{{site.data.keyword.cloud_notm}} Account](https://cloud.ibm.com/registration?target=%2Fcatalog%2Fservices%2Fblockchain){: external}.
 2. Upgrade your {{site.data.keyword.cloud_notm}} Account to "Pay-as-you-go" by adding in a credit card. You will not be charged.
 3. Launch {{site.data.keyword.blockchainfull_notm}} Platform in the [{{site.data.keyword.cloud_notm}} Catalog](https://cloud.ibm.com/catalog/services/blockchain-platform){: external}.
 4. Under **Select a pricing plan**, ensure that the **Standard** plan is selected and then click **Create**.
@@ -109,11 +109,11 @@ When you allocate VPCs (or CPU) to a blockchain node, the node consumes CPUs fro
 The following table provides two examples of pricing with [default resource allocations]( #ibp-saas-pricing-default) unless otherwise noted. Both examples assume an {{site.data.keyword.cloud_notm}} Kubernetes service cluster and the default CouchDB database is used as the peer database. It also assumes peers are deployed with Fabric v2.x images instead of Fabric v1.4 images.
 - The **Test network** scenario is suitable for getting started with your first use case with IBM Blockchain and testing smart contracts.
 - The **Join a network** scenario includes two peers, and a Certificate Authority (CA) that is required for organization membership.
-   - These peers can join a production {{site.data.keyword.blockchainfull_notm}} Platform network that is hosted elsewhere.
-   - Nodes can always be dialed back to a minimal utilization state (0.001 CPU) when they are not in use to [lower costs](/docs/blockchain?topic=blockchain-ibp-console-govern-components).
-   - Because this scenario could be used for a **production** environment:
-     - The default compute resources have been doubled to provide greater capacity.
-     - The [Silver](/docs/containers?topic=containers-file_storage#file_storageclass_reference){: external} storage class is chosen for faster performance.
+    - These peers can join a production {{site.data.keyword.blockchainfull_notm}} Platform network that is hosted elsewhere.
+    - Nodes can always be dialed back to a minimal utilization state (0.001 CPU) when they are not in use to [lower costs](/docs/blockchain?topic=blockchain-ibp-console-govern-components).
+    - Because this scenario could be used for a **production** environment:
+        - The default compute resources have been doubled to provide greater capacity.
+        - The [Silver](/docs/containers?topic=containers-file_storage#file_storageclass_reference){: external} storage class is chosen for faster performance.
 
 | Pricing options** (1 VPC = 1 CPU = 1 vCPU)| **Test Network** | **Join a Network** |
 |-|------------|-----------------------------|
@@ -126,7 +126,7 @@ The following table provides two examples of pricing with [default resource allo
 ** [Preview the {{site.data.keyword.blockchainfull_notm}} Platform at no charge](/docs/blockchain?topic=blockchain-ibp-saas-pricing#ibp-saas-pricing-free) for 30 days when you link your {{site.data.keyword.blockchainfull_notm}} Platform service instance to an {{site.data.keyword.cloud_notm}} Kubernetes free cluster. Performance is limited by throughput, storage and functionality. {{site.data.keyword.cloud_notm}} will delete your Kubernetes cluster after 30 days and you cannot migrate any nodes or data from a free cluster to a paid cluster.  
 
 Your actual costs will vary depending on additional factors such as transaction rate, the number of channels you require, the payload size on the transactions, and the maximum number of concurrent transactions. The pricing examples above are based on an {{site.data.keyword.cloud_notm}} Kubernetes single-zone cluster only.  If you chose a multi-zone cluster, there are extra fees for the additional zones and the required multi-zone load balancer. {{site.data.keyword.cloud_notm}} IP allocation charges are not included and considered negligible.
-{:note}
+{: note}
 
 There is no limit to the number of service instances that you can provision and associate to a single Kubernetes cluster. But you need to ensure that adequate resources are available by monitoring the CPU, memory, and storage usage to avoid disruption of service. The {{site.data.keyword.blockchainfull_notm}} Platform nodes do not have to be in their own cluster. You can have other {{site.data.keyword.cloud_notm}} services running in the same cluster that your blockchain components are running in, but again you need to ensure that you have adequate compute and storage to address all the requirements of all service instances.  
 
@@ -166,11 +166,11 @@ If {{site.data.keyword.cloud_notm}} has your credit card on file, you will be se
 1. Click the Download icon next to the invoice you want to view.
 2. You will have the option to download your invoice in "PDF invoice" or "EXCEL invoice" format.
 
-  * **PDF invoice** Select this format when limited detail is required. This format includes the line-item "Platform Services Containers" that includes your {{site.data.keyword.cloud_notm}} Kubernetes and Storage costs (as well as other container costs). The line item "Platform Services Other Services" aggregates your blockchain cost with other service costs.
+    * **PDF invoice** Select this format when limited detail is required. This format includes the line-item "Platform Services Containers" that includes your {{site.data.keyword.cloud_notm}} Kubernetes and Storage costs (as well as other container costs). The line item "Platform Services Other Services" aggregates your blockchain cost with other service costs.
 
-  * **EXCEL invoice** Select this format when you need more insight into your Kubernetes containers, storage instances, and blockchain cost. Navigate to the Detailed Billing sheet in the downloaded invoice workbook to understand how those specific line items break down, and see details of the specific containers/storage instances you got charged for. The Blockchain Platform cost is visible under the Description line item "Platform Service Plan Feature Usage: Blockchain Platform Standard" . For example, a Detailed Billing tab would look similar to the following:
+    * **EXCEL invoice** Select this format when you need more insight into your Kubernetes containers, storage instances, and blockchain cost. Navigate to the Detailed Billing sheet in the downloaded invoice workbook to understand how those specific line items break down, and see details of the specific containers/storage instances you got charged for. The Blockchain Platform cost is visible under the Description line item "Platform Service Plan Feature Usage: Blockchain Platform Standard" . For example, a Detailed Billing tab would look similar to the following:
 
-     ![Detailed invoice](../images/detailed-invoice.png "Detailed invoice"){: caption="Figure 2. Kubernetes cluster charges" caption-side="bottom"}
+![Detailed invoice](../images/detailed-invoice.png "Detailed invoice"){: caption="Figure 2. Kubernetes cluster charges" caption-side="bottom"}
 
 The pie-chart visible on the Usage tab of the {{site.data.keyword.cloud_notm}} Dashboard will not align with the invoices since it applies to  a different billing period.  
 {: note}
@@ -186,13 +186,15 @@ If you are using {{site.data.keyword.cloud_notm}} File storage, the costs are as
 One of the key benefits of the {{site.data.keyword.blockchainfull_notm}} Platform pricing model is the ability to dial back or delete resources when they are not needed.
 
 - **Switch your nodes to Minimum Utilization State**  
-  CPU on individual nodes can be scaled down to 0.001 CPU to completely minimize charges. Taking these actions renders the node non-functional. When the compute is needed later, you can use the reallocation option in the {{site.data.keyword.blockchainfull_notm}} Platform console to scale up to what is required. For more information about how resources can be reallocated, see [Reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components).
+    CPU on individual nodes can be scaled down to 0.001 CPU to completely minimize charges. Taking these actions renders the node non-functional. When the compute is needed later, you can use the reallocation option in the {{site.data.keyword.blockchainfull_notm}} Platform console to scale up to what is required. For more information about how resources can be reallocated, see [Reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components).
 
 - **Delete unused peer and deploy a new one when needed.**
-  Because the ledger is stored on the ordering node, when you deploy a new peer and join a channel, the peer receives a copy of the distributed ledger. The drawback to this approach is that you need to generate new certificates and join the peer to the channels again.  
+    Because the ledger is stored on the ordering node, when you deploy a new peer and join a channel, the peer receives a copy of the distributed ledger. The drawback to this approach is that you need to generate new certificates and join the peer to the channels again.  
 
-  It is not recommended to ever delete a CA node because the data on it can never be recovered. Likewise, if you have only a single ordering node, you should never delete it.  
-  {:important}
+    It is not recommended to ever delete a CA node because the data on it can never be recovered. Likewise, if you have only a single ordering node, you should never delete it.  
+    {: important}
 
 - **Monitor and adjust your resource allocation based on your needs**.
-  When you monitor your resource usage over time, you might decide that you can scale down the resources that are allocated to a node while still ensuring adequate performance. When you follow instructions for [reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components) in the console, the effects on total VPC for the node are updated and can be used to estimate revised monthly costs.  
+    When you monitor your resource usage over time, you might decide that you can scale down the resources that are allocated to a node while still ensuring adequate performance. When you follow instructions for [reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components) in the console, the effects on total VPC for the node are updated and can be used to estimate revised monthly costs.  
+
+

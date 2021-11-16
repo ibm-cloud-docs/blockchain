@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-04-05"
+lastupdated: "2021-11-11"
 
 keywords: network components, IBM Cloud Kubernetes Service, backup, restore, disaster, peer, orderer, ordering node, LevelDB, CouchDB
 
@@ -84,7 +84,7 @@ Consult the following chart to help you plan your strategy for taking backups:
 It is a best practice to create a regular schedule for the snapshotting of your components. If possible, try to coordinate these snapshots with the other members of your network to ensure that the most recent snapshots can be used if necessary. Because no peer snapshots can be used that are more recent than ordering service snapshots, you are bound by your snapshots of the ordering service when attempting to restore.
 
 Even though snapshots do not disrupt the functionality of your nodes, try to schedule snapshots during a time when the fewest transactions are being made. This ensures that differences in ledger heights between peers are kept to a minimum. In widely distributed networks, scheduling such a time might be difficult. Prioritize the proper ordering of snapshots over relative lulls in network activity.
-{:tip}
+{: tip}
 
 For this example, we assume one back up every 24 hours and retain seven backups.
 
@@ -157,35 +157,35 @@ Which produces a list of details similar to this example:
 
 ```
 Name:            pvc-494ba122-3501-4413-b719-cbb4b3a8f91b
-Labels:          CapacityGb=100
-                 Datacenter=dal10
-                 Iops=2
-                 StorageType=ENDURANCE
-                 Username=IBM02SEV2046428_106
-                 billingType=hourly
-                 failure-domain.beta.kubernetes.io/region=us-south
-                 failure-domain.beta.kubernetes.io/zone=dal10
-                 path=IBM02SEV2046428_106data01
-                 server=fsf-dal1002h-fz.adn.networklayer.com
-                 volumeId=155617812
-Annotations:     ibmFileProvisionerIdentity: 44cc1a5f-b755-11ea-bfae-3692beefed97
-                 pv.kubernetes.io/provisioned-by: ibm.io/ibmc-file
-Finalizers:      [kubernetes.io/pv-protection]
-StorageClass:    ibmc-file-bronze
-Status:          Bound
-Claim:           n3392fd/peera-statedb-pvc
-Reclaim Policy:  Delete
-Access Modes:    RWO
-VolumeMode:      Filesystem
-Capacity:        100Gi
-Node Affinity:   <none>
+Labels:         CapacityGb=100
+                Datacenter=dal10
+                Iops=2
+                StorageType=ENDURANCE
+                Username=IBM02SEV2046428_106
+                billingType=hourly
+                failure-domain.beta.kubernetes.io/region=us-south
+                failure-domain.beta.kubernetes.io/zone=dal10
+                path=IBM02SEV2046428_106data01
+                server=fsf-dal1002h-fz.adn.networklayer.com
+                volumeId=155617812
+Annotations:    ibmFileProvisionerIdentity: 44cc1a5f-b755-11ea-bfae-3692beefed97
+                pv.kubernetes.io/provisioned-by: ibm.io/ibmc-file
+Finalizers:     [kubernetes.io/pv-protection]
+StorageClass:   ibmc-file-bronze
+Status:         Bound
+Claim:          n3392fd/peera-statedb-pvc
+Reclaim Policy: Delete
+Access Modes:   RWO
+VolumeMode:     Filesystem
+Capacity:       100Gi
+Node Affinity:  <none>
 Message:
 Source:
-    Type:      NFS (an NFS mount that lasts the lifetime of a pod)
-    Server:    fsf-dal1002h-fz.adn.networklayer.com
-    Path:      /IBM02SEV2046428_106/data01
-    ReadOnly:  false
-Events:        <none>
+    Type:       NFS (an NFS mount that lasts the lifetime of a pod)
+    Server:     fsf-dal1002h-fz.adn.networklayer.com
+    Path:       /IBM02SEV2046428_106/data01
+    ReadOnly:   false
+Events:         <none>
 ```
 {: codeblock}
 
@@ -300,6 +300,7 @@ Then scale down the node by setting the `replicas` value to `0`.
 kubectl patch <component> <componentName> --type merge --patch '{"spec":{"replicas":0}}' -n <namespace>
 ```
 {: codeblock}
+
 
 
 Where `<component>` is one of: `ibppeer`, `ibporderer`, or `ibpca`.
@@ -418,6 +419,7 @@ kubectl patch <component> <componentName> --type merge --patch '{"spec":{"replic
 {: codeblock}
 
 
+
 Where `<component>` is, once again, one of: `ibppeer`, `ibporderer`, or `ibpca`.
 
 In this example, scale up `peera`:
@@ -440,8 +442,8 @@ The process for restoring an ordering node is largely similar to the process for
 
 In our example, the flow you would take is:
 
-1.  Scale down all five ordering nodes and peer deployments to zero to stop all traffic on the network.
-2.  Restore the peer nodes to the 3:00 a.m. CouchDB snapshot and the 3:05 a.m. peer pod snapshot.
-3.  Restore each ordering node to its 5:00 a.m. snapshot taken the same day as the peer snapshots you restored.
-4.  Scale all five ordering service deployments up to `1` and wait for five minutes after they have started to sync up.
-5.  Scale all peer deployments up to `1`.
+1. Scale down all five ordering nodes and peer deployments to zero to stop all traffic on the network.
+2. Restore the peer nodes to the 3:00 a.m. CouchDB snapshot and the 3:05 a.m. peer pod snapshot.
+3. Restore each ordering node to its 5:00 a.m. snapshot taken the same day as the peer snapshots you restored.
+4. Scale all five ordering service deployments up to `1` and wait for five minutes after they have started to sync up.
+5. Scale all peer deployments up to `1`.

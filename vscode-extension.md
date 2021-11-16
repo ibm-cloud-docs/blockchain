@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-11"
+lastupdated: "2021-11-11"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -10,100 +10,7 @@ subcollection: blockchain
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -163,8 +70,9 @@ While the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling t
 
 - Creation of a local Fabric network from a template (one organization, or two organizations)
 
-  If you want to deploy and test your smart contracts, instead of using a local Fabric network, you can build an {{site.data.keyword.blockchainfull_notm}} Platform network outside of Red Hat CodeReady Workspaces, and then use the **Add Environment** command to import it into the {{site.data.keyword.blockchainfull_notm}} Platform extension. Detailed steps are included later in this topic.
-  {: note}
+    If you want to deploy and test your smart contracts, instead of using a local Fabric network, you can build an {{site.data.keyword.blockchainfull_notm}} Platform network outside of Red Hat CodeReady Workspaces, and then use the **Add Environment** command to import it into the {{site.data.keyword.blockchainfull_notm}} Platform extension. Detailed steps are included later in this topic.
+    {: note}
+
 - If you plan to work on Go smart contracts, you need to configure the Go extension to the editor in your developer workspace.
 
 ### Choose your Developer Tooling environment
@@ -186,20 +94,21 @@ The following set of steps can be used to install the CodeReady Workspaces and c
 5. From the table of Installed Operators, click **Red Hat CodeReady Workspaces** > **CodeReady Workspaces cluster**.
 6. Red Hat CodeReady Workspaces are based on the open **Eclipse Che** project that uses Kubernetes and containers to provide any member of a development or IT team with a consistent, secure, and zero-configuration development environment. Click **Create CheCluster**.
 7. It takes several minutes for the CheCluster creation to complete. When it is ready, there are two URLs visible in the CheCluster Details **Overview** tab:
-  - **CodeReady Workspaces URL** - used to access the workspace.
-  - **Red Hat SSO Admin Console URL** - used to manage the users that are allowed to interact with the workspace.  
+    - **CodeReady Workspaces URL** - used to access the workspace.
+    - **Red Hat SSO Admin Console URL** - used to manage the users that are allowed to interact with the workspace.  
 
-  Click the **CodeReady Workspaces URL** and log in. You are asked to provide a `Username` that is used to form the name of the workspace, along with your `Email` address.  
+    Click the **CodeReady Workspaces URL** and log in. You are asked to provide a `Username` that is used to form the name of the workspace, along with your `Email` address.  
 
-  To avoid errors when creating the custom workspace in the next step, do not include any special characters in the `Username`.
-  {: tip}
+    To avoid errors when creating the custom workspace in the next step, do not include any special characters in the `Username`.
+    {: tip}
+
 8. Click **Create a Custom Workspace** and then click **IMPORT DEVFILE**. CodeReady Workspaces use **Devfiles** to describe the contents of a developer workspace. When you want to use CodeReady Workspaces with the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling, you need to bring several components into your Devfile. Specifically, you need to add the Developer Tooling as a `chePlugin` by including it in your list of components. The following `.yaml` file represents a minimal Devfile for using the {{site.data.keyword.blockchainfull_notm}} Platform extension with CodeReady Workspaces:
-  ```
-  ---
-  apiVersion: 1.0.0
-  metadata:
-    name: ibp-sample-devfile
-  components:
+    ```
+    ---
+    apiVersion: 1.0.0
+    metadata:
+        name: ibp-sample-devfile
+      components:
     - type: cheEditor
       id: eclipse/che-theia/latest
       alias: theia-editor
@@ -207,22 +116,22 @@ The following set of steps can be used to install the CodeReady Workspaces and c
     - type: chePlugin
       reference: https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/latest/download/ibm-blockchain-platform-che.yaml
       alias: ibm-blockchain-platform
-   ```
-  {: codeblock}
+    ```
+    {: codeblock}
 
-  Where:  
-  - **metadata:** is the name that is given to the workspace. In this example, it is `ibp-sample-devfile`. Users should specify their own value for this property.
-  - **components: - type: cheEditor** is the default **Eclipse Theia editor** that is automatically included in the CodeReady Workspaces and is not a required component in a Devfile. However, the {{site.data.keyword.blockchainfull_notm}} Platform extension requires a higher memory limit than the default, so it must be included along with the `memoryLimit` property to override the defaults.
-  - **components: - type: chePlugin** is the reference to the **{{site.data.keyword.blockchainfull_notm}} Platform VS Code extension**. The sample includes a reference to the latest version of our extension by using a URL from GitHub: `https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/latest/download/ibm-blockchain-platform-che.yaml`. This means that whenever the workspace starts or restarts, the latest version of our extension is installed. It is expected that updates are published to the extension every two weeks.
+    Where:  
+    - **metadata:** is the name that is given to the workspace. In this example, it is `ibp-sample-devfile`. Users should specify their own value for this property.
+    - **components: - type: cheEditor** is the default **Eclipse Theia editor** that is automatically included in the CodeReady Workspaces and is not a required component in a Devfile. However, the {{site.data.keyword.blockchainfull_notm}} Platform extension requires a higher memory limit than the default, so it must be included along with the `memoryLimit` property to override the defaults.
+    - **components: - type: chePlugin** is the reference to the **{{site.data.keyword.blockchainfull_notm}} Platform VS Code extension**. The sample includes a reference to the latest version of our extension by using a URL from GitHub: `https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/latest/download/ibm-blockchain-platform-che.yaml`. This means that whenever the workspace starts or restarts, the latest version of our extension is installed. It is expected that updates are published to the extension every two weeks.
 
     If you prefer to pin your workspace to a specific version of the VS Code extension, go to the [GitHub Releases page](https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases) and navigate to the URL for the version you prefer. Scroll down to the Assets twistie for that release to locate a set of files. Copy the URL for the file named `ibm-blockchain-platform-che-x.y.z.yaml`, for example `ibm-blockchain-platform-che-1.0.31.yaml`. The URL should look similar to: `https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/download/v1.0.31/ibm-blockchain-platform-che-1.0.31.yaml`. Paste this URL into the `reference` field, replacing the URL provided in the sample.
     {: tip}
 
-  This file can be further customized according to your developer environment needs, for example to check out Hyperledger Fabric samples from GitHub. Learn more about Devfiles in the [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/end-user_guide/workspaces-overview_crw#what-is-a-devfile_making-a-workspace-portable-using-a-devfile){: external}.
+    This file can be further customized according to your developer environment needs, for example to check out Hyperledger Fabric samples from GitHub. Learn more about Devfiles in the [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/end-user_guide/workspaces-overview_crw#what-is-a-devfile_making-a-workspace-portable-using-a-devfile){: external}.
 
 9. Click the **YAML** tile, and paste the edited sample into the `YAML` box. Then, click **Create & Open**. It takes several minutes for the workspace to load. After it loads successfully, click the blockchain icon to launch the Developer Tooling.
 
-  ![CodeReady Workspaces UI](images/crw.png "CodeReady Workspaces UI"){: caption="Figure 2. CodeReady Workspaces UI" caption-side="bottom"}  
+    ![CodeReady Workspaces UI](images/crw.png "CodeReady Workspaces UI"){: caption="Figure 2. CodeReady Workspaces UI" caption-side="bottom"}  
 
 ### Next steps
 {: #develop-vscode-crw-next}
@@ -264,8 +173,8 @@ If you are using Windows, you also must ensure the following:
 - Docker for Windows is configured to use Linux containers (by default).
 - You installed the C++ Build Tools for Windows from [windows-build-tools](https://github.com/felixrieseberg/windows-build-tools#windows-build-tools){: external}.
 - You installed [OpenSSL v1.0.2](https://www.openssl.org/community/binaries.html){: external} if you are working with smart contracts that use Fabric v1.4 dependencies and want to run the generated functional tests.
-  - Install the normal version, not the version marked as "light".
-  - Install the Win64 version into C:\OpenSSL-Win64 on 64-bit systems.
+    - Install the normal version, not the version marked as "light".
+    - Install the Win64 version into C:\OpenSSL-Win64 on 64-bit systems.
 
 
 **If you installed Node and npm by using a manager such as 'nvm' or 'nodenv', you need to set the default or global version. You can then restart VS Code for the version to be detected by the Prerequisites page.**
@@ -335,24 +244,24 @@ Because Fabric v2.x peers do not have a "shim" (the external dependencies that a
 The `build.gradle` file for the smart contract must be updated:
 
 1. If the smart contract uses the `shadowjar` 2.x plugin, then it should be updated to version 5 by using the following code:
-	```
-	plugins {
-	    id 'com.github.johnrengelman.shadow' version '5.1.0'
-	    id 'java'
-	}
-	```
-	{: codeblock}
+    ```
+    plugins {
+        id 'com.github.johnrengelman.shadow' version '5.1.0'
+        id 'java'
+    }
+    ```
+    {: codeblock}
 
 2. The `repositories` section of the file must contain the `maven URL` for `jitpack`, for example:
-  ```
-	repositories {
-	    ...
-	    maven {
-	        url 'https://jitpack.io'
-	    }
-	}
-	```
-	{: codeblock}
+    ```
+        repositories {
+        ...
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+    ```
+    {: codeblock}
 
 
 **Init functions**  
@@ -371,9 +280,9 @@ You need to package a smart contract before you can install it on your {{site.da
 1. Open your smart contract project in VS Code by clicking **File** and then click **Open ...**. You can also click **Open Workspace** if you saved your project as a workspace. Ensure that you have the smart contract project open in the file viewer.
 2. Click the **{{site.data.keyword.blockchainfull_notm}}** icon to open the **{{site.data.keyword.blockchainfull_notm}}** tab.
 3. In the **Smart Contracts** pane, click the overflow menu and select **Package Open Project**. You are asked for the name of the package and the version. You will also need to select whether you want to package it as a `.tar.gz` (for deploying to a channel with V2 application capability) or `.cds` (for deploying to a channel with V1 application capability). To find out the channel capabibilities/version, hover your mouse over the channel in the **Fabric Environments** panel that you wish to deploy to. This will display a tooltip containing the channel capabilities.
-  - If you have one smart contract project, it is packaged automatically and be displayed in the **Smart Contracts** pane.
-  - If you have multiple smart contract folders open, you are asked which one to package.
-  - If you have no smart contract folders open, you get an error message.
+    - If you have one smart contract project, it is packaged automatically and be displayed in the **Smart Contracts** pane.
+    - If you have multiple smart contract folders open, you are asked which one to package.
+    - If you have no smart contract folders open, you get an error message.
 
 If you want to control which files in the project are packaged, you can create a `.fabricignore` file in the top-level directory of your smart contract project. The file and pattern format for a `.fabricignore` file is the same as a [`.gitignore`](https://git-scm.com/docs/gitignore) file, for example:
 
@@ -651,6 +560,6 @@ You can also add new users to the wallets that have already been created:
 1. In the **Fabric Wallets** pane, right-click a wallet and select **Add Identity**.
 2. Provide a name for the identity and an MSP ID.
 3. You can upload a JSON file, provide a certificate and private key, or provide an enrollment ID and secret.
-  - If you are connecting to a network on the {{site.data.keyword.blockchainfull_notm}} Platform, you can download an identity from your {{site.data.keyword.blockchainfull_notm}} console, either by exporting an identity from your wallet or by enrolling and then exporting an identity using your Certificate Authority. You can then upload the JSON file directly to VS Code.
-  - If you use a certificate and private key, browse to the certificate and private key.
-  - If you use an enrollment ID and secret, choose the gateway to enroll with and enter the enrollment ID and secret.
+    - If you are connecting to a network on the {{site.data.keyword.blockchainfull_notm}} Platform, you can download an identity from your {{site.data.keyword.blockchainfull_notm}} console, either by exporting an identity from your wallet or by enrolling and then exporting an identity using your Certificate Authority. You can then upload the JSON file directly to VS Code.
+    - If you use a certificate and private key, browse to the certificate and private key.
+    - If you use an enrollment ID and secret, choose the gateway to enroll with and enter the enrollment ID and secret.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-15"
 
 keywords: import nodes, another console, import a CA, import a peer, import admin identities, import an ordering service node
 
@@ -40,8 +40,8 @@ While it is no longer necessary to associate an admin identity when importing a 
 
 There are two main reasons to import components:
 
-  1. A node will be deployed in one console and operated from another. In these cases, the relevant admin identity must be exported and imported, or a new admin identity for the node must be created. With the exception of upgrading the version of a node, it is possible to perform many of the same administrative actions on an imported node as on a node that was created within a console.
-  2. A node or MSP simply has to be known by a console so that it can be selected from a drop down list. For example, when creating a channel, it is necessary to choose which ordering service the channel will be hosted on. Similarly, when performing many channel actions, it can be necessary to specify one or more MSPs. In neither case is the person selecting the MSP an admin of the node or the organization. However, they do require the tile representing the node or MSP in their console so it can be selected from the drop down list.
+    1. A node will be deployed in one console and operated from another. In these cases, the relevant admin identity must be exported and imported, or a new admin identity for the node must be created. With the exception of upgrading the version of a node, it is possible to perform many of the same administrative actions on an imported node as on a node that was created within a console.
+    2. A node or MSP simply has to be known by a console so that it can be selected from a drop down list. For example, when creating a channel, it is necessary to choose which ordering service the channel will be hosted on. Similarly, when performing many channel actions, it can be necessary to specify one or more MSPs. In neither case is the person selecting the MSP an admin of the node or the organization. However, they do require the tile representing the node or MSP in their console so it can be selected from the drop down list.
 
 Note that when you import a component, you do not actually import the physical component into your cloud provider. Instead, the console uses the information in the JSON to build a representation of the component that can be operated from the console. Likewise, when you delete an imported node from the console, the node itself, which is still running at the location where it was deployed, is not deleted. It is simply removed from the console where it was imported.
 
@@ -92,13 +92,13 @@ If you intend to operate an imported node, you have two options:
 
 1. Import the admin identity into your Wallet before importing the node itself (the administrator of the console where the node was created will need to export the node and the admin identity).
 2. If the admin of the node does not want to share their admin identity, there are two other ways to become an admin of the node:
-     * The administrator of the console where the node was created can create a new admin identity, associate it with the node as an additional admin identity, and export that identity to your console along with the node.
-     * The other option has five steps:
-       1. The admin of the CA that was used to create the relevant identities for the peer and peer organization can register a new identity.
-       2. Then, they can send the enroll ID and secret of that identity to the importing console, as well as exporting the CA.
-       3. The importing console can then take the imported CA and use the enroll ID and secret to create a new identity.
-       4. This new identity would be sent back to the console where the peer was created and added as an admin of the peer.
-       5. Then the peer could be exported to the console where the new identity was created, allowing the new identity to operate the imported peer.
+    * The administrator of the console where the node was created can create a new admin identity, associate it with the node as an additional admin identity, and export that identity to your console along with the node.
+    * The other option has five steps:
+    1. The admin of the CA that was used to create the relevant identities for the peer and peer organization can register a new identity.
+    2. Then, they can send the enroll ID and secret of that identity to the importing console, as well as exporting the CA.
+    3. The importing console can then take the imported CA and use the enroll ID and secret to create a new identity.
+    4. This new identity would be sent back to the console where the peer was created and added as an admin of the peer.
+    5. Then the peer could be exported to the console where the new identity was created, allowing the new identity to operate the imported peer.
 
 In either case, because this new admin identity would only be an admin of the peer and not the organization that owns the peer, it preserves a separation of roles between the organization admin (the sign cert listed in the MSP, which might also be the peer admin in the console where the peer was created), and the new admin of the peer which was just created and associated. This peer admin would not be an organization admin by default. However, if it fits a use case to make an identity the admin of both the organization and an imported peer, this is achievable, see [Updating an organization MSP definition](/docs/blockchain?topic=blockchain-ibp-console-organizations#ibp-console-govern-update-msp).
 
@@ -126,18 +126,19 @@ The exports and imports of MSPs are performed in the **Organizations** tab.
 
 **To export your MSP:**  
 
- 1. Navigate to the **Organizations** tab and click your organization MSP tile.
- 2. In the tile that opens, click the **Export** icon.
+1. Navigate to the **Organizations** tab and click your organization MSP tile.
+2. In the tile that opens, click the **Export** icon.
 
-   ![Export MSP button](../images/export-msp.png "Export MSP button"){: caption="Figure 1. Export MSP button" caption-side="bottom"}
- 3. A JSON file is generated and downloaded to your local system.
- 4. Share this file with the other organization admins of your channel.
+    ![Export MSP button](../images/export-msp.png "Export MSP button"){: caption="Figure 1. Export MSP button" caption-side="bottom"}
+
+3. A JSON file is generated and downloaded to your local system.
+4. Share this file with the other organization admins of your channel.
 
 **To import an MSP from another organization:**  
 
- 1. Navigate to the **Organizations** tab and click **Import MSP**.
- 2. Browse to the MSP JSON file and click **Add file**.
- 3. Click **Import MSP**.  
+1. Navigate to the **Organizations** tab and click **Import MSP**.
+2. Browse to the MSP JSON file and click **Add file**.
+3. Click **Import MSP**.  
 
 **Note:** Under some circumstances, it is possible that the Node OU checkbox may be visible and checked when you import an MSP into your console. If that occurs, it is recommended that you leave it checked so that it enables Fabric Node OU support for the MSP, which simplifies the certificate renewal process for you in the future.
 
@@ -208,7 +209,7 @@ An ordering service is the blockchain component that collects transactions from 
 Importing an ordering service into the console allows you to create new channels for peers to transact privately.
 
 If you are having trouble with an ordering service you imported, it might be because it was exported too long ago for the JSON representing it to have all of the latest necessary fields in it that allow certain features to work. Reach out to the administrator of the console where the ordering service was created and ask them to re-export the ordering service.
-{:tip}
+{: tip}
 
 ### Before you begin
 {: #ibp-console-import-orderer-before-you-begin}
@@ -238,7 +239,7 @@ After you have imported the ordering service into the console, you can add new o
 ## Importing nodes from a locally deployed network
 {: #ibp-console-import-icp}
 
-You can import nodes that were created through {{site.data.keyword.cloud_notm}}, Red Hat OpenShift, and Kubernetes v1.19 - v1.21 environments into blockchain consoles that have been deployed on other clusters or on {{site.data.keyword.cloud_notm}}. However, you need to ensure that the port used by the gRPC URL of your nodes is exposed from outside the cluster. If you are deploying your network behind a firewall, you need to enable a passthru, for example by using an allowlist, to allow the console outside the cluster to communicate with your nodes.
+You can import nodes that were created through {{site.data.keyword.cloud_notm}}, Red Hat OpenShift, and Kubernetes v1.19 - v1.22 environments into blockchain consoles that have been deployed on other clusters or on {{site.data.keyword.cloud_notm}}. However, you need to ensure that the port used by the gRPC URL of your nodes is exposed from outside the cluster. If you are deploying your network behind a firewall, you need to enable a passthru, for example by using an allowlist, to allow the console outside the cluster to communicate with your nodes.
 
 As an example, you can find the JSON file of a peer below. To communicate with the peer from another console, you need to ensure that the `grpcwp_url` port, port 32403 in this example, is open to external traffic.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-04"
+lastupdated: "2021-11-15"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -33,7 +33,7 @@ For more information about the {{site.data.keyword.IBM_notm}} Kubernetes Service
 
 For more information about OpenShift, see [About the OpenShift Kubernetes Engine](https://docs.openshift.com/container-platform/4.3/welcome/oke_about.html){: external}.
 
-As both {{site.data.keyword.IBM_notm}} Kubernetes Service clusters and OpenShift clusters are based on Kubernetes, you will find that many of the underlying decisions about hardware and storage types will be the same regardless of which cluster provider you choose. Note that the Kubernetes version of the cluster you deploy must be v1.19 - v1.21 to be compatible with the {{site.data.keyword.blockchainfull_notm}} Platform.
+As both {{site.data.keyword.IBM_notm}} Kubernetes Service clusters and OpenShift clusters are based on Kubernetes, you will find that many of the underlying decisions about hardware and storage types will be the same regardless of which cluster provider you choose. Note that the Kubernetes version of the cluster you deploy must be v1.19 - v1.22 to be compatible with the {{site.data.keyword.blockchainfull_notm}} Platform.
 
 **Note that if you want high availability or disaster recovery, you will need to make a decision about the storage class you are using. The `default` storage class on the cluster will be used by the dynamic provisioning. So, customers can set any storage class as the default. For more information, see [Deciding on the file storage configuration](/docs/containers?topic=containers-file_storage#file_predefined_storageclass){: external}.**
 
@@ -121,7 +121,7 @@ Consider bookmarking the URL of your console so you can come back at a later tim
 ## Updating the Kubernetes version of your cluster
 {: #ibp-v2-deploy-iks-updating-kubernetes}
 
-If you use an existing {{site.data.keyword.cloud_notm}} Kubernetes service cluster, ensure that it is running Kubernetes v1.19 - v1.21.
+If you use an existing {{site.data.keyword.cloud_notm}} Kubernetes service cluster, ensure that it is running Kubernetes v1.19 - v1.22.
 
 You can check the Kubernetes version of your cluster in the [Kubernetes clusters page](https://cloud.ibm.com/kubernetes/clusters){: external} on {{site.data.keyword.cloud_notm}}, which lists all your clusters in a table.
 
@@ -134,13 +134,13 @@ You must wait for the update to complete before you can [resume the {{site.data.
 
 The user who links the blockchain service instance to the Kubernetes cluster must have the `Administrator` and `Manager` roles in Kubernetes.
 To configure this access you must complete the following steps:
-   1. In the {{site.data.keyword.cloud_notm}} dashboard, click the **Manage** drop-down list, then **Access (IAM)**.
-   2. In the left navigation menu, click **Users** and click the ID of user who will link the service instance to the Kubernetes cluster.
-   3. Click **Access Policies**, then **Assign access**.
-   4. Click the tile **Assign access to resources**.
-   5. In the Services drop-down list, select **Kubernetes Service**.
-   6. Check the **Administrator** and **Manager** roles for this user.
-   7. Click **Assign**.
+    1. In the {{site.data.keyword.cloud_notm}} dashboard, click the **Manage** drop-down list, then **Access (IAM)**.
+    2. In the left navigation menu, click **Users** and click the ID of user who will link the service instance to the Kubernetes cluster.
+    3. Click **Access Policies**, then **Assign access**.
+    4. Click the tile **Assign access to resources**.
+    5. In the Services drop-down list, select **Kubernetes Service**.
+    6. Check the **Administrator** and **Manager** roles for this user.
+    7. Click **Assign**.
 
 For more information about Kubernetes access control, see [how to pick the right access policy and role for your users](/docs/containers?topic=containers-users#checking-perms).
 
@@ -175,3 +175,5 @@ If the service instance contains organizations that are participating in an acti
 {: important}
 
 If your service instance deletion fails, it could be because the Kubernetes cluster is not accessible. If this occurs, open a [support ticket](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases) to request the service instance deletion.
+
+

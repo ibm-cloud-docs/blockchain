@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-26"
+lastupdated: "2021-11-15"
 
 
 keywords: release note, latest changes, Hyperledger Fabric
@@ -19,19 +19,28 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-Use these release notes that are grouped by date to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} that built on Hyperledger Fabric v1.4.12 and v2.2.4.
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric v1.4.12 and v2.2.4.
 {: shortdesc}
-
 
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch)  
 For instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative. This means that if multiple patches, for example `1.4.7-0` and `1.4.12-1`, are available for a node, you should always select the latest patch, `1.4.12-1` in this case, wherever possible because it includes the fixes from the previous patches as well.   
 
-## 26 Oct 2021
-{: #05-26-2021}
+## 16 Nov 2021
+{: #16-11-2021}
 
-**Certificate Authority (CA) patch 1.5.2-2, Peer and ordering node patch 1.4.12-5, 2.2.4-3.**
+**Certificate Authority (CA) patch 1.5.2-3, Peer and ordering node patch 1.4.12-6, 2.2.4-3.**
+
+Miscellaneous bug fixes and security patches.
+
+
+**Deprecation notice for {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}**: Because Kubernetes v1.22 deprecates a number of APIs, nodes running Kubernetes v1.13, v1.14, or v1.15 will no longer be updated to the latest {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} patches. In addition, no Kubernetes cluster nodes will be updated if the master node is not reachable. Impacted clusters are identified via Kubernetes calls to the master node and calls to health check endpoints for blockchain components. Migration instructions for impacted clusters will be posted here soon. 
+
+## 26 Oct 2021
+{: #26-10-2021}
+
+**Certificate Authority (CA) patch 1.5.2-2, Peer and ordering node patch 1.4.12-5, 2.2.4-2.**
 
 Miscellaneous bug fixes and security patches.
 
@@ -39,7 +48,7 @@ Miscellaneous bug fixes and security patches.
 ## 05 Oct 2021
 {: #05-10-2021}
 
-**Certificate Authority (CA) patch 1.5.2-1, Peer and ordering node patch 1.4.12-3, 2.2.4-2.**
+**Certificate Authority (CA) patch 1.5.2-1, Peer and ordering node patch 1.4.12-3, 2.2.4-1.**
 
 Miscellaneous bug fixes and security patches.
 

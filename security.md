@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-10-05"
+lastupdated: "2021-11-11"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -252,10 +252,10 @@ In the environment section under `spec.containers`, add the following:
 ```
 - name: IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY
    value:"true"
-   ```
-   {: codeblock}
+    ```
+    {: codeblock}
 
-   When the above option is enabled, the operator will install 2 network policies during the console installation. These network policies are meant to give basic defensive security mechanism, and opens only the ports that the offering uses. This by no means is a policy that can replace a firewall. The policies applied provide ingress security, as blockchain network may require to call npm, gradle, maven servers to get chaincode modules as well as to communicate with the orderers/peers/applications running outside the cluster on internet we do not provide egress policies.
+    When the above option is enabled, the operator will install 2 network policies during the console installation. These network policies are meant to give basic defensive security mechanism, and opens only the ports that the offering uses. This by no means is a policy that can replace a firewall. The policies applied provide ingress security, as blockchain network may require to call npm, gradle, maven servers to get chaincode modules as well as to communicate with the orderers/peers/applications running outside the cluster on internet we do not provide egress policies.
 
 Following are the two policies that we apply:
 1. Deny-all-ingress.

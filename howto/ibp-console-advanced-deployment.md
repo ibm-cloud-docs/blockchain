@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-31"
+lastupdated: "2021-11-11"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -51,7 +51,7 @@ The Build a network tutorial is useful for learning how to set up a basic networ
 {: #ibp-console-adv-deployment-before}
 
 **Before** attempting to deploy a node, it is the network operator's responsibility to monitor the cluster CPU, memory, and storage usage, and ensure that adequate resources are available in the cluster for the node.
-{:important}
+{: important}
 
 ### Allocating resources
 {: #ibp-console-adv-deployment-allocate-resources}
@@ -80,7 +80,7 @@ While users of a free cluster **must use default sizes** for the containers asso
 For cases when a user wants to minimize charges without stopping or deleting a node, it is possible to scale the node down to a minimum of 0.001 CPU (1 milliCPU). Note that the node will not be functional when using this amount of CPU.
 
 While the figures in this topic endeavor to be precise, be aware that there are times when a node may not deploy even when it appears that you have enough space in your cluster. Make sure to reference your Kubernetes dashboard to see when components deploy and for error messages when they don't. In cases where a component doesn't deploy for a lack of resources, even if there seems to be enough space in the cluster, you will likely have to deploy additional cluster resources for the component to deploy.
-{:tip}
+{: tip}
 
 The **Resource allocation** panel in the console provides default values for the various fields that are involved in creating a node. These values are chosen because they represent a good way to get started. However, every use case is different. While this topic provides guidance for ways to think about these values, it ultimately falls to the user to monitor their nodes and find sizings that work for them. Therefore, barring situations in which users are certain that they need values different from the defaults, a practical strategy is to use these defaults at first and adjust them later. For an overview of performance and scale of Hyperledger Fabric, which the {{site.data.keyword.blockchainfull_notm}} Platform is based on, see [Answering your questions on Hyperledger Fabric performance and scale](https://www.ibm.com/blogs/blockchain/2019/01/answering-your-questions-on-hyperledger-fabric-performance-and-scale/){: external}.
 
@@ -93,7 +93,7 @@ You are responsible for monitoring your CPU, memory, and storage consumption in 
 - [IBM file storage](/docs/FileStorage?topic=FileStorage-expandCapacity)
 - [Portworx](https://docs.portworx.com/portworx-install-with-kubernetes/storage-operations/create-pvcs/resize-pvc/)
 - [Block storage](/docs/BlockStorage?topic=BlockStorage-expandingcapacity#expandingcapacity)
-{:note}
+{: note}
 
 Every node has a gRPC web proxy container that bootstraps the communication layer between the console and a node. This container has fixed resource values and is included on the Resource allocation panel to provide an accurate estimate of how much space is required on your Kubernetes cluster in order for the node to deploy. Because the values for this container cannot be changed, we will not discuss the gRPC web proxy in the following sections.
 
@@ -156,136 +156,136 @@ You can use the console to configure resource allocation, HSM, or the CA databas
 
 ```json
 {
-	"ca": {
-		"cors": {
-			"enabled": false,
-			"origins": [
-				"*"
-			]
-		},
-		"debug": false,
-		"crlsizelimit": 512000,
-		"tls": {
-			"certfile": null,
-			"keyfile": null,
-			"clientauth": {
-				"type": "noclientcert",
-				"certfiles": null
-			}
-		},
-		"ca": {
-			"keyfile": null,
-			"certfile": null,
-			"chainfile": null
-		},
-		"crl": {
-			"expiry": "24h"
-		},
-		"registry": {
-			"maxenrollments": -1,
-			"identities": [
-				{
-					"name": "<<<adminUserName>>>",
-					"pass": "<<<adminPassword>>>",
-					"type": "client",
-					"attrs": {
-						"hf.Registrar.Roles": "*",
-						"hf.Registrar.DelegateRoles": "*",
-						"hf.Revoker": true,
-						"hf.IntermediateCA": true,
-						"hf.GenCRL": true,
-						"hf.Registrar.Attributes": "*",
-						"hf.AffiliationMgr": true
-					}
-				}
-			]
-		},
-		"db": {
-			"type": "sqlite3",
-			"datasource": "fabric-ca-server.db",
-			"tls": {
-				"enabled": false,
-				"certfiles": null,
-				"client": {
-					"certfile": null,
-					"keyfile": null
-				}
-			}
-		},
-		"affiliations": {
-      	"ibp": []
-    	},
-		"csr": {
-			"cn": "ca",
-			"keyrequest": {
-				"algo": "ecdsa",
-				"size": 256
-			},
-			"names": [
-				{
-					"C": "US",
-					"ST": "North Carolina",
-					"L": null,
-					"O": "Hyperledger",
-					"OU": "Fabric"
-				}
-			],
-			"hosts": [
-				"<<<MYHOST>>>",
-				"localhost"
-			],
-			"ca": {
-				"expiry": "131400h",
-				"pathlength": "<<<PATHLENGTH>>>"
-			}
-		},
-		"idemix": {
-			"rhpoolsize": 1000,
-			"nonceexpiration": "15s",
-			"noncesweepinterval": "15m"
-		},
-		"bccsp": {
-			"default": "SW",
-			"sw": {
-				"hash": "SHA2",
-				"security": 256,
-				"filekeystore": null
-			}
-		},
-		"intermediate": {
-			"parentserver": {
-				"url": null,
-				"caname": null
-			},
-			"enrollment": {
-				"hosts": null,
-				"profile": null,
-				"label": null
-			},
-			"tls": {
-				"certfiles": null,
-				"client": {
-					"certfile": null,
-					"keyfile": null
-				}
-			}
-		},
-		"cfg": {
-			"identities": {
-				"passwordattempts": 10,
-				"allowremove": true
-			}
-		},
-		"metrics": {
-			"provider": "prometheus",
-			"statsd": {
-				"network": "udp",
-				"address": "127.0.0.1:8125",
-				"writeInterval": "10s",
-				"prefix": "server"
-			}
-		}
-	}
+    "ca": {
+        "cors": {
+            "enabled": false,
+            "origins": [
+                "*"
+            ]
+        },
+        "debug": false,
+        "crlsizelimit": 512000,
+        "tls": {
+            "certfile": null,
+            "keyfile": null,
+            "clientauth": {
+                "type": "noclientcert",
+                "certfiles": null
+            }
+        },
+        "ca": {
+            "keyfile": null,
+            "certfile": null,
+            "chainfile": null
+        },
+        "crl": {
+            "expiry": "24h"
+        },
+        "registry": {
+            "maxenrollments": -1,
+            "identities": [
+                {
+                    "name": "<<<adminUserName>>>",
+                    "pass": "<<<adminPassword>>>",
+                    "type": "client",
+                    "attrs": {
+                        "hf.Registrar.Roles": "*",
+                        "hf.Registrar.DelegateRoles": "*",
+                        "hf.Revoker": true,
+                        "hf.IntermediateCA": true,
+                        "hf.GenCRL": true,
+                        "hf.Registrar.Attributes": "*",
+                        "hf.AffiliationMgr": true
+                    }
+                }
+            ]
+        },
+        "db": {
+            "type": "sqlite3",
+            "datasource": "fabric-ca-server.db",
+            "tls": {
+                "enabled": false,
+                "certfiles": null,
+                "client": {
+                    "certfile": null,
+                    "keyfile": null
+                }
+            }
+        },
+        "affiliations": {
+          "ibp": []
+        },
+        "csr": {
+            "cn": "ca",
+            "keyrequest": {
+                "algo": "ecdsa",
+                "size": 256
+            },
+            "names": [
+                {
+                    "C": "US",
+                    "ST": "North Carolina",
+                    "L": null,
+                    "O": "Hyperledger",
+                    "OU": "Fabric"
+                }
+            ],
+            "hosts": [
+                "<<<MYHOST>>>",
+                "localhost"
+            ],
+            "ca": {
+                "expiry": "131400h",
+                "pathlength": "<<<PATHLENGTH>>>"
+            }
+        },
+        "idemix": {
+            "rhpoolsize": 1000,
+            "nonceexpiration": "15s",
+            "noncesweepinterval": "15m"
+        },
+        "bccsp": {
+            "default": "SW",
+            "sw": {
+                "hash": "SHA2",
+                "security": 256,
+                "filekeystore": null
+            }
+        },
+        "intermediate": {
+            "parentserver": {
+                "url": null,
+                "caname": null
+            },
+            "enrollment": {
+                "hosts": null,
+                "profile": null,
+                "label": null
+            },
+            "tls": {
+                "certfiles": null,
+                "client": {
+                    "certfile": null,
+                    "keyfile": null
+                }
+            }
+        },
+        "cfg": {
+            "identities": {
+                "passwordattempts": 10,
+                "allowremove": true
+            }
+        },
+        "metrics": {
+            "provider": "prometheus",
+            "statsd": {
+                "network": "udp",
+                "address": "127.0.0.1:8125",
+                "writeInterval": "10s",
+                "prefix": "server"
+            }
+        }
+    }
 }
 ```        
 {: codeblock}
@@ -303,54 +303,54 @@ Here is an example of the minimum required `JSON` parameters for any override wh
 
 ```json
 {
-	"ca": {
-	  "csr": {
-		"cn": "<COMMONNAME>",
-		"keyrequest": {
-		  "algo": "ecdsa",
-		  "size": 256
-		},
-		"names": [
-		  {
-			"C": "US",
-			"ST": "North Carolina",
-			"L": "Location",
-			"O": "Hyperledger",
-			"OU": "Fabric"
-		  }
-		],
-		"hosts": [
-		  "<HOSTNAME>"
-		],
-		"ca": {
-		  "expiry": "131400h",
-		  "pathlength": 1024
-		}
-	  },
-	  "debug": false,
-	  "registry": {
-		"maxenrollments": -1,
-		"identities": [
-		  {
-			"name": "<ADMIN_ID>",
-			"pass": "<ADMIN_PWD>",
-			"type": "client",
-			"attrs": {
-			  "hf.Registrar.Roles": "*",
-			  "hf.Registrar.DelegateRoles": "*",
-			  "hf.Revoker": true,
-			  "hf.IntermediateCA": true,
-			  "hf.GenCRL": true,
-			  "hf.Registrar.Attributes": "*",
-			  "hf.AffiliationMgr": true
-			}
-		  }
-		]
-	  },
-		"affiliations": {
-			"ibp": []
-    	},
-	}
+    "ca": {
+        "csr": {
+        "cn": "<COMMONNAME>",
+        "keyrequest": {
+          "algo": "ecdsa",
+          "size": 256
+        },
+        "names": [
+          {
+            "C": "US",
+            "ST": "North Carolina",
+            "L": "Location",
+            "O": "Hyperledger",
+            "OU": "Fabric"
+          }
+        ],
+        "hosts": [
+          "<HOSTNAME>"
+        ],
+        "ca": {
+          "expiry": "131400h",
+          "pathlength": 1024
+        }
+        },
+        "debug": false,
+        "registry": {
+        "maxenrollments": -1,
+        "identities": [
+          {
+            "name": "<ADMIN_ID>",
+            "pass": "<ADMIN_PWD>",
+            "type": "client",
+            "attrs": {
+              "hf.Registrar.Roles": "*",
+              "hf.Registrar.DelegateRoles": "*",
+              "hf.Revoker": true,
+              "hf.IntermediateCA": true,
+              "hf.GenCRL": true,
+              "hf.Registrar.Attributes": "*",
+              "hf.AffiliationMgr": true
+            }
+          }
+        ]
+        },
+        "affiliations": {
+            "ibp": []
+        },
+    }
 }
 ```
 {: codeblock}
@@ -359,59 +359,59 @@ You can insert additional fields or modify the `JSON` that is visible in the **C
 
 ```json
 {
-	"ca": {
-	  "csr": {
-		"cn": "<COMMONNAME>",
-		"keyrequest": {
-		  "algo": "ecdsa",
-		  "size": 256
-		},
-		"names": [
-		  {
-			"C": "US",
-			"ST": "North Carolina",
-			"L": "Location",
-			"O": "Hyperledger",
-			"OU": "Fabric"
-		  }
-		],
-		"hosts": [
-		  "<HOSTNAME>"
-		],
-		"ca": {
-		  "expiry": "131400h",
-		  "pathlength": 1024
-		}
-	  },
-	  "debug": false,
-	  "registry": {
-		"maxenrollments": -1,
-		"identities": [
-		  {
-			"name": "<ADMIN_ID>",
-			"pass": "<ADMIN_PWD>",
-			"type": "client",
-			"attrs": {
-			  "hf.Registrar.Roles": "*",
-			  "hf.Registrar.DelegateRoles": "*",
-			  "hf.Revoker": true,
-			  "hf.IntermediateCA": true,
-			  "hf.GenCRL": true,
-			  "hf.Registrar.Attributes": "*",
-			  "hf.AffiliationMgr": true
-			}
-		  }
-		]
-		},
-		"affiliations": {
-			"ibp": []
+    "ca": {
+        "csr": {
+        "cn": "<COMMONNAME>",
+        "keyrequest": {
+          "algo": "ecdsa",
+          "size": 256
+        },
+        "names": [
+          {
+            "C": "US",
+            "ST": "North Carolina",
+            "L": "Location",
+            "O": "Hyperledger",
+            "OU": "Fabric"
+          }
+        ],
+        "hosts": [
+          "<HOSTNAME>"
+        ],
+        "ca": {
+          "expiry": "131400h",
+          "pathlength": 1024
+        }
+        },
+        "debug": false,
+        "registry": {
+        "maxenrollments": -1,
+        "identities": [
+          {
+            "name": "<ADMIN_ID>",
+            "pass": "<ADMIN_PWD>",
+            "type": "client",
+            "attrs": {
+              "hf.Registrar.Roles": "*",
+              "hf.Registrar.DelegateRoles": "*",
+              "hf.Revoker": true,
+              "hf.IntermediateCA": true,
+              "hf.GenCRL": true,
+              "hf.Registrar.Attributes": "*",
+              "hf.AffiliationMgr": true
+            }
+          }
+        ]
+        },
+        "affiliations": {
+            "ibp": []
     },
-		"cfg": {
-			"identities": {
-				"passwordattempts": 3
-			}
-		}
-	}
+        "cfg": {
+            "identities": {
+                "passwordattempts": 3
+            }
+        }
+    }
 }
 ```
 {: codeblock}
@@ -442,91 +442,91 @@ Only the following fields can be updated:
 
 ```json
 {
-	"ca":{
-		"cors": {
-			"enabled": false,
-			"origins": [
-				"*"
-			]
-		},
-		"debug": false,
-		"crlsizelimit": 512000,
-		"tls": {
-			"certfile": null,
-			"keyfile": null,
-			"clientauth": {
-				"type": "noclientcert",
-				"certfiles": null
-			}
-		},
-		"crl": {
-			"expiry": "24h"
-		},
-		"db": {
-			"type": "sqlite3",
-			"datasource": "fabric-ca-server.db",
-			"tls": {
-				"enabled": false,
-				"certfiles": null,
-				"client": {
-					"certfile": null,
-					"keyfile": null
-				}
-			}
-		},
-		"csr": {
-			"cn": "ca",
-			"keyrequest": {
-				"algo": "ecdsa",
-				"size": 256
-			},
-			"names": [
-				{
-					"C": "US",
-					"ST": "North Carolina",
-					"L": "Location",
-					"O": "Hyperledger",
-					"OU": "Fabric"
-				}
-			],
-			"hosts": [
-				"<<<MYHOST>>>",
-				"localhost"
-			],
-			"ca": {
-				"expiry": "131400h",
-				"pathlength": "<<<PATHLENGTH>>>"
-			}
-		},
-		"idemix": {
-			"rhpoolsize": 1000,
-			"nonceexpiration": "15s",
-			"noncesweepinterval": "15m"
-		},
-		"bccsp": {
-			"default": "SW",
-			"sw": {
-				"hash": "SHA2",
-				"security": 256,
-				"filekeystore": null
-			}
-		},
-		"cfg": {
-			"identities": {
-				"passwordattempts": 10,
-				"allowremove": true
-			}
-		},
-		"metrics": {
-			"provider": "prometheus",
-			"statsd": {
-				"network": "udp",
-				"address": "127.0.0.1:8125",
-				"writeInterval": "10s",
-				"prefix": "server"
-			}
-		}
-	}
+    "ca":{
+        "cors": {
+            "enabled": false,
+            "origins": [
+                "*"
+            ]
+        },
+        "debug": false,
+        "crlsizelimit": 512000,
+        "tls": {
+            "certfile": null,
+            "keyfile": null,
+            "clientauth": {
+                "type": "noclientcert",
+                "certfiles": null
+            }
+        },
+        "crl": {
+            "expiry": "24h"
+        },
+        "db": {
+            "type": "sqlite3",
+            "datasource": "fabric-ca-server.db",
+            "tls": {
+                "enabled": false,
+                "certfiles": null,
+                "client": {
+                    "certfile": null,
+                    "keyfile": null
+                }
+            }
+        },
+        "csr": {
+            "cn": "ca",
+            "keyrequest": {
+                "algo": "ecdsa",
+                "size": 256
+            },
+            "names": [
+                {
+                    "C": "US",
+                    "ST": "North Carolina",
+                    "L": "Location",
+                    "O": "Hyperledger",
+                    "OU": "Fabric"
+                }
+            ],
+            "hosts": [
+                "<<<MYHOST>>>",
+                "localhost"
+            ],
+            "ca": {
+                "expiry": "131400h",
+                "pathlength": "<<<PATHLENGTH>>>"
+            }
+        },
+        "idemix": {
+            "rhpoolsize": 1000,
+            "nonceexpiration": "15s",
+            "noncesweepinterval": "15m"
+        },
+        "bccsp": {
+            "default": "SW",
+            "sw": {
+                "hash": "SHA2",
+                "security": 256,
+                "filekeystore": null
+            }
+        },
+        "cfg": {
+            "identities": {
+                "passwordattempts": 10,
+                "allowremove": true
+            }
+        },
+        "metrics": {
+            "provider": "prometheus",
+            "statsd": {
+                "network": "udp",
+                "address": "127.0.0.1:8125",
+                "writeInterval": "10s",
+                "prefix": "server"
+            }
+        }
+    }
 }
 ```
 {: codeblock}
@@ -535,13 +535,13 @@ Paste the modified `JSON` that contains only the parameters that you want to upd
 
 ```json
 {
-	"ca": {
-		"cfg": {
-			"identities": {
-				"passwordattempts": 3
-			}
-		}
-	}
+    "ca": {
+        "cfg": {
+            "identities": {
+                "passwordattempts": 3
+            }
+        }
+    }
 }
 ```
 {: codeblock}
@@ -550,14 +550,14 @@ If you need to enable deletion of registered users from a CA you would insert `"
 
 ```json
 {
-  "ca": {
-    "cfg": {
+    "ca": {
+        "cfg": {
     "identities": {
-      "passwordattempts": 10,
-      "allowremove": true
-      }
+        "passwordattempts": 10,
+        "allowremove": true
+        }
     }
-  }
+    }
 }
 ```
 {: codeblock}
@@ -589,7 +589,7 @@ Because it can be useful to perform rich queries against the state database (for
 This support for rich queries is why **CouchDB is the default database** unless a user selects the **State database selection** box during the process of adding a peer selects **LevelDB** on the subsequent tab.
 
 Because the data is modeled differently in a Couch database than in a Level database, **the peers in a channel must all use the same database type**. If data written for a Level database is rejected by a Couch database (which can happen, as CouchDB keys have certain formatting restrictions as compared to LevelDB keys), a state fork would be created between the two ledgers. Therefore, **take extreme care when joining a channel to know the database type supported by the channel**. It might be necessary to create a new peer that uses the appropriate database type and join it to the channel. Note that the database type cannot be changed after a peer has been deployed.
-{:important}
+{: important}
 
 ### Deployment zone selection
 {: #ibp-console-adv-deployment-peer-k8s-zone}
@@ -611,7 +611,7 @@ The peer pod has four containers that can be adjusted:
 - **Smart contract launcher container**: Used to launch a separate pod for each smart contract, eliminating the need for a Docker-in-Docker container in the peer pod. Note that the smart contract launcher container is not where smart contracts actually run, and is therefore given a smaller default resource than the "smart contracts" container that used to be deployed along with a peer. It only exists to help create the pods where smart contracts run. You must make your own allowances in your deployment for the containers for smart contracts, as the pods spun up by the smart contract launcher are not bound by strict resource limitations. The pod will use as many resources as it needs depending on the size of a smart contract and the processing load it encounters. For more information, see [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/){: external}.
 
 Note that a separate pod will be created for each smart contract that is installed on each peer, even if you have multiple peers on the same channel that have all installed the same smart contract. So if you have three peers on a channel, and install a smart contract on each one, you will have three smart contract pods running. However, if these three peers are on more than one channel using the **exact same** smart contract, you will still only have three pods running. These smart contract pods will not be deleted if you delete the peer. You must delete them **separately**.
-{:important}
+{: important}
 
 The peer also includes a gRPC web proxy container, you cannot adjust the compute for this container.
 
@@ -646,131 +646,131 @@ A common use case would be to override some of the default timeouts, or peer pri
 
 ```json
 {
-	"peer": {
-		"id": "jdoe",
-		"networkId": "dev",
-		"keepalive": {
-			"minInterval": "60s",
-			"client": {
-				"interval": "60s",
-				"timeout": "20s"
-			},
-			"deliveryClient": {
-				"interval": "60s",
-				"timeout": "20s"
-			}
-		},
-		"gossip": {
-			"useLeaderElection": true,
-			"orgLeader": false,
-			"membershipTrackerInterval": "5s",
-			"maxBlockCountToStore": 100,
-			"maxPropagationBurstLatency": "10ms",
-			"maxPropagationBurstSize": 10,
-			"propagateIterations": 1,
-			"propagatePeerNum": 3,
-			"pullInterval": "4s",
-			"pullPeerNum": 3,
-			"requestStateInfoInterval": "4s",
-			"publishStateInfoInterval": "4s",
-			"stateInfoRetentionInterval": null,
-			"publishCertPeriod": "10s",
-			"skipBlockVerification": false,
-			"dialTimeout": "3s",
-			"connTimeout": "2s",
-			"recvBuffSize": 20,
-			"sendBuffSize": 200,
-			"digestWaitTime": "1s",
-			"requestWaitTime": "1500ms",
-			"responseWaitTime": "2s",
-			"aliveTimeInterval": "5s",
-			"aliveExpirationTimeout": "25s",
-			"reconnectInterval": "25s",
-			"election": {
-				"startupGracePeriod": "15s",
-				"membershipSampleInterval": "1s",
-				"leaderAliveThreshold": "10s",
-				"leaderElectionDuration": "5s"
-			},
-			"pvtData": {
-				"pullRetryThreshold": "60s",
-				"transientstoreMaxBlockRetention": 1000,
-				"pushAckTimeout": "3s",
-				"btlPullMargin": 10,
-				"reconcileBatchSize": 10,
-				"reconcileSleepInterval": "1m",
-				"reconciliationEnabled": true,
-				"skipPullingInvalidTransactionsDuringCommit": false
-			},
-			"state": {
-				"enabled": true,
-				"checkInterval": "10s",
-				"responseTimeout": "3s",
-				"batchSize": 10,
-				"blockBufferSize": 100,
-				"maxRetries": 3
-			}
-		},
-		"authentication": {
-			"timewindow": "15m"
-		},
-		"BCCSP": {
-			"Default": "SW",
-			"SW": {
-				"Hash": "SHA2",
-				"Security": 256,
-				"FileKeyStore": {
-					"KeyStore": null
-				}
-			},
-			"PKCS11": {
-				"Library": null,
-				"Label": null,
-				"Pin": null,
-				"Hash": null,
-				"Security": null,
-				"FileKeyStore": {
-					"KeyStore": null
-				}
-			}
-		},
-		"client": {
-			"connTimeout": "3s"
-		},
-		"deliveryclient": {
-			"reconnectTotalTimeThreshold": "3600s",
-			"connTimeout": "3s",
-			"reConnectBackoffThreshold": "3600s",
-			"addressOverrides": null
-		},
-		"adminService": null,
-		"validatorPoolSize": null,
-		"discovery": {
-			"enabled": true,
-			"authCacheEnabled": true,
-			"authCacheMaxSize": 1000,
-			"authCachePurgeRetentionRatio": 0.75,
-			"orgMembersAllowedAccess": false
-		}
-	},
-	"chaincode": {
-		"startuptimeout": "300s",
-		"executetimeout": "30s",
-		"logging": {
-			"level": "info",
-			"shim": "warning",
-			"format": "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
-		}
-	},
-	"metrics": {
-		"provider": "disabled",
-		"statsd": {
-			"network": "udp",
-			"address": "127.0.0.1:8125",
-			"writeInterval": "10s",
-			"prefix": null
-		}
-	}
+    "peer": {
+        "id": "jdoe",
+        "networkId": "dev",
+        "keepalive": {
+            "minInterval": "60s",
+            "client": {
+                "interval": "60s",
+                "timeout": "20s"
+            },
+            "deliveryClient": {
+                "interval": "60s",
+                "timeout": "20s"
+            }
+        },
+        "gossip": {
+            "useLeaderElection": true,
+            "orgLeader": false,
+            "membershipTrackerInterval": "5s",
+            "maxBlockCountToStore": 100,
+            "maxPropagationBurstLatency": "10ms",
+            "maxPropagationBurstSize": 10,
+            "propagateIterations": 1,
+            "propagatePeerNum": 3,
+            "pullInterval": "4s",
+            "pullPeerNum": 3,
+            "requestStateInfoInterval": "4s",
+            "publishStateInfoInterval": "4s",
+            "stateInfoRetentionInterval": null,
+            "publishCertPeriod": "10s",
+            "skipBlockVerification": false,
+            "dialTimeout": "3s",
+            "connTimeout": "2s",
+            "recvBuffSize": 20,
+            "sendBuffSize": 200,
+            "digestWaitTime": "1s",
+            "requestWaitTime": "1500ms",
+            "responseWaitTime": "2s",
+            "aliveTimeInterval": "5s",
+            "aliveExpirationTimeout": "25s",
+            "reconnectInterval": "25s",
+            "election": {
+                "startupGracePeriod": "15s",
+                "membershipSampleInterval": "1s",
+                "leaderAliveThreshold": "10s",
+                "leaderElectionDuration": "5s"
+            },
+            "pvtData": {
+                "pullRetryThreshold": "60s",
+                "transientstoreMaxBlockRetention": 1000,
+                "pushAckTimeout": "3s",
+                "btlPullMargin": 10,
+                "reconcileBatchSize": 10,
+                "reconcileSleepInterval": "1m",
+                "reconciliationEnabled": true,
+                "skipPullingInvalidTransactionsDuringCommit": false
+            },
+            "state": {
+                "enabled": true,
+                "checkInterval": "10s",
+                "responseTimeout": "3s",
+                "batchSize": 10,
+                "blockBufferSize": 100,
+                "maxRetries": 3
+            }
+        },
+        "authentication": {
+            "timewindow": "15m"
+        },
+        "BCCSP": {
+            "Default": "SW",
+            "SW": {
+                "Hash": "SHA2",
+                "Security": 256,
+                "FileKeyStore": {
+                    "KeyStore": null
+                }
+            },
+            "PKCS11": {
+                "Library": null,
+                "Label": null,
+                "Pin": null,
+                "Hash": null,
+                "Security": null,
+                "FileKeyStore": {
+                    "KeyStore": null
+                }
+            }
+        },
+        "client": {
+            "connTimeout": "3s"
+        },
+        "deliveryclient": {
+            "reconnectTotalTimeThreshold": "3600s",
+            "connTimeout": "3s",
+            "reConnectBackoffThreshold": "3600s",
+            "addressOverrides": null
+        },
+        "adminService": null,
+        "validatorPoolSize": null,
+        "discovery": {
+            "enabled": true,
+            "authCacheEnabled": true,
+            "authCacheMaxSize": 1000,
+            "authCachePurgeRetentionRatio": 0.75,
+            "orgMembersAllowedAccess": false
+        }
+    },
+    "chaincode": {
+        "startuptimeout": "300s",
+        "executetimeout": "30s",
+        "logging": {
+            "level": "info",
+            "shim": "warning",
+            "format": "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
+        }
+    },
+    "metrics": {
+        "provider": "disabled",
+        "statsd": {
+            "network": "udp",
+            "address": "127.0.0.1:8125",
+            "writeInterval": "10s",
+            "prefix": null
+        }
+    }
 }
 ```        
 {: codeblock}
@@ -786,16 +786,16 @@ You don't need to include the entire set of available parameters in the `JSON`, 
 
 ```json
 {
-  "peer": {
-    "chaincode": {
-      "startuptimeout": "600s"
+    "peer": {
+        "chaincode": {
+        "startuptimeout": "600s"
     }
-  },
-  "metrics": {
-    "statsd": {
-      "address": "127.0.0.1:9443"
+    },
+    "metrics": {
+        "statsd": {
+        "address": "127.0.0.1:9443"
     }
-  }
+    }
 }
 ```
 {: codeblock}
@@ -809,111 +809,111 @@ The following subset of parameters can be overridden after a peer is deployed:
 
 ```json
 {
-	"peer": {
-		"id": "jdoe",
-		"networkId": "dev",
-		"keepalive": {
-			"minInterval": "60s",
-			"client": {
-				"interval": "60s",
-				"timeout": "20s"
-			},
-			"deliveryClient": {
-				"interval": "60s",
-				"timeout": "20s"
-			}
-		},
-		"gossip": {
-			"useLeaderElection": true,
-			"orgLeader": false,
-			"membershipTrackerInterval": "5s",
-			"maxBlockCountToStore": 100,
-			"maxPropagationBurstLatency": "10ms",
-			"maxPropagationBurstSize": 10,
-			"propagateIterations": 1,
-			"propagatePeerNum": 3,
-			"pullInterval": "4s",
-			"pullPeerNum": 3,
-			"requestStateInfoInterval": "4s",
-			"publishStateInfoInterval": "4s",
-			"stateInfoRetentionInterval": null,
-			"publishCertPeriod": "10s",
-			"skipBlockVerification": false,
-			"dialTimeout": "3s",
-			"connTimeout": "2s",
-			"recvBuffSize": 20,
-			"sendBuffSize": 200,
-			"digestWaitTime": "1s",
-			"requestWaitTime": "1500ms",
-			"responseWaitTime": "2s",
-			"aliveTimeInterval": "5s",
-			"aliveExpirationTimeout": "25s",
-			"reconnectInterval": "25s",
-			"election": {
-				"startupGracePeriod": "15s",
-				"membershipSampleInterval": "1s",
-				"leaderAliveThreshold": "10s",
-				"leaderElectionDuration": "5s"
-			},
-			"pvtData": {
-				"pullRetryThreshold": "60s",
-				"transientstoreMaxBlockRetention": 1000,
-				"pushAckTimeout": "3s",
-				"btlPullMargin": 10,
-				"reconcileBatchSize": 10,
-				"reconcileSleepInterval": "1m",
-				"reconciliationEnabled": true,
-				"skipPullingInvalidTransactionsDuringCommit": false
-			},
-			"state": {
-				"enabled": true,
-				"checkInterval": "10s",
-				"responseTimeout": "3s",
-				"batchSize": 10,
-				"blockBufferSize": 100,
-				"maxRetries": 3
-			}
-		},
-		"authentication": {
-			"timewindow": "15m"
-		},
-		"client": {
-			"connTimeout": "3s"
-		},
-		"deliveryclient": {
-			"reconnectTotalTimeThreshold": "3600s",
-			"connTimeout": "3s",
-			"reConnectBackoffThreshold": "3600s",
-			"addressOverrides": null
-		},
-		"adminService": null,
-		"validatorPoolSize": null,
-		"discovery": {
-			"enabled": true,
-			"authCacheEnabled": true,
-			"authCacheMaxSize": 1000,
-			"authCachePurgeRetentionRatio": 0.75,
-			"orgMembersAllowedAccess": false
-		}
-	},
-	"chaincode": {
-		"startuptimeout": "300s",
-		"executetimeout": "30s",
-		"logging": {
-			"level": "info",
-			"shim": "warning",
-			"format": "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
-		}
-	},
-	"metrics": {
-		"provider": "disabled",
-		"statsd": {
-			"network": "udp",
-			"address": "127.0.0.1:8125",
-			"writeInterval": "10s",
-			"prefix": null
-		}
-	}
+    "peer": {
+        "id": "jdoe",
+        "networkId": "dev",
+        "keepalive": {
+            "minInterval": "60s",
+            "client": {
+                "interval": "60s",
+                "timeout": "20s"
+            },
+            "deliveryClient": {
+                "interval": "60s",
+                "timeout": "20s"
+            }
+        },
+        "gossip": {
+            "useLeaderElection": true,
+            "orgLeader": false,
+            "membershipTrackerInterval": "5s",
+            "maxBlockCountToStore": 100,
+            "maxPropagationBurstLatency": "10ms",
+            "maxPropagationBurstSize": 10,
+            "propagateIterations": 1,
+            "propagatePeerNum": 3,
+            "pullInterval": "4s",
+            "pullPeerNum": 3,
+            "requestStateInfoInterval": "4s",
+            "publishStateInfoInterval": "4s",
+            "stateInfoRetentionInterval": null,
+            "publishCertPeriod": "10s",
+            "skipBlockVerification": false,
+            "dialTimeout": "3s",
+            "connTimeout": "2s",
+            "recvBuffSize": 20,
+            "sendBuffSize": 200,
+            "digestWaitTime": "1s",
+            "requestWaitTime": "1500ms",
+            "responseWaitTime": "2s",
+            "aliveTimeInterval": "5s",
+            "aliveExpirationTimeout": "25s",
+            "reconnectInterval": "25s",
+            "election": {
+                "startupGracePeriod": "15s",
+                "membershipSampleInterval": "1s",
+                "leaderAliveThreshold": "10s",
+                "leaderElectionDuration": "5s"
+            },
+            "pvtData": {
+                "pullRetryThreshold": "60s",
+                "transientstoreMaxBlockRetention": 1000,
+                "pushAckTimeout": "3s",
+                "btlPullMargin": 10,
+                "reconcileBatchSize": 10,
+                "reconcileSleepInterval": "1m",
+                "reconciliationEnabled": true,
+                "skipPullingInvalidTransactionsDuringCommit": false
+            },
+            "state": {
+                "enabled": true,
+                "checkInterval": "10s",
+                "responseTimeout": "3s",
+                "batchSize": 10,
+                "blockBufferSize": 100,
+                "maxRetries": 3
+            }
+        },
+        "authentication": {
+            "timewindow": "15m"
+        },
+        "client": {
+            "connTimeout": "3s"
+        },
+        "deliveryclient": {
+            "reconnectTotalTimeThreshold": "3600s",
+            "connTimeout": "3s",
+            "reConnectBackoffThreshold": "3600s",
+            "addressOverrides": null
+        },
+        "adminService": null,
+        "validatorPoolSize": null,
+        "discovery": {
+            "enabled": true,
+            "authCacheEnabled": true,
+            "authCacheMaxSize": 1000,
+            "authCachePurgeRetentionRatio": 0.75,
+            "orgMembersAllowedAccess": false
+        }
+    },
+    "chaincode": {
+        "startuptimeout": "300s",
+        "executetimeout": "30s",
+        "logging": {
+            "level": "info",
+            "shim": "warning",
+            "format": "%{color}%{time:2006-01-02 15:04:05.000 MST} [%{module}] %{shortfunc} -> %{level:.4s} %{id:03x}%{color:reset} %{message}"
+        }
+    },
+    "metrics": {
+        "provider": "disabled",
+        "statsd": {
+            "network": "udp",
+            "address": "127.0.0.1:8125",
+            "writeInterval": "10s",
+            "prefix": null
+        }
+    }
 }
 ```
 {: codeblock}
@@ -922,9 +922,9 @@ Paste the modified `JSON` that contains only the parameters that you want to upd
 
 ```json
 {
-	"chaincode": {
-		"executetimeout": "30s"
-	}
+    "chaincode": {
+        "executetimeout": "30s"
+    }
 }
 ```
 {: codeblock}
@@ -984,7 +984,7 @@ As we noted in our section on [Considerations before you deploy a node](#ibp-con
 If you plan to deploy a five node Raft ordering service, note that the total of your deployment will increase by a factor of five, a total of 1.75 CPU, 3.5 GB of memory, and 500 GB of storage for the five Raft nodes. A 4 CPU Kubernetes single worker node cluster is the minimum recommended to allow enough CPU for the ordering service cluster and any other nodes you deploy.
 
 If an ordering service is overstressed, it might hit timeouts and start dropping transactions, requiring transactions to be resubmitted. This causes much greater harm to a network than a single peer struggling to keep up. In a Raft ordering service configuration, an overstressed leader node might stop sending heartbeat messages, triggering a leader election, and a temporary cessation of transaction ordering. Likewise, a follower node might miss messages and attempt to trigger a leader election where none is needed.
-{:important}
+{: important}
 
 For more details on the resource allocation panel in the console see [Allocating resource](#ibp-console-adv-deployment-allocate-resources).
 
@@ -1003,39 +1003,39 @@ The need to customize the ordering node configuration is less common than the pe
 
 ```json
 {
-	"General": {
-		"Keepalive": {
-			"ServerMinInterval": "60s",
-			"ServerInterval": "7200s",
-			"ServerTimeout": "20s"
-		},
-		"BCCSP": {
-			"Default": "SW",
-			"SW": {
-				"Hash": "SHA2",
-				"Security": 256,
-				"FileKeyStore": {
-					"KeyStore": null
-				}
-			}
-		},
-		"Authentication": {
-			"TimeWindow": "15m"
-		}
-	},
-	"Debug": {
-		"BroadcastTraceDir": null,
-		"DeliverTraceDir": null
-	},
-	"Metrics": {
-		"Provider": "disabled",
-		"Statsd": {
-			"Network": "udp",
-			"Address": "127.0.0.1:8125",
-			"WriteInterval": "30s",
-			"Prefix": null
-		}
-	}
+    "General": {
+        "Keepalive": {
+            "ServerMinInterval": "60s",
+            "ServerInterval": "7200s",
+            "ServerTimeout": "20s"
+        },
+        "BCCSP": {
+            "Default": "SW",
+            "SW": {
+                "Hash": "SHA2",
+                "Security": 256,
+                "FileKeyStore": {
+                    "KeyStore": null
+                }
+            }
+        },
+        "Authentication": {
+            "TimeWindow": "15m"
+        }
+    },
+    "Debug": {
+        "BroadcastTraceDir": null,
+        "DeliverTraceDir": null
+    },
+    "Metrics": {
+        "Provider": "disabled",
+        "Statsd": {
+            "Network": "udp",
+            "Address": "127.0.0.1:8125",
+            "WriteInterval": "30s",
+            "Prefix": null
+        }
+    }
 }
 ```        
 {: codeblock}
@@ -1052,16 +1052,16 @@ You don't need to include the entire set of available parameters in the `JSON`, 
 
 ```json
 {
-	"General": {
-		"Keepalive": {
-			"ServerTimeout": "60s"
-		}
-	},
-	"metrics": {
-		"statsd": {
-			"address": "127.0.0.1:9446"
-		}
-	}
+    "General": {
+        "Keepalive": {
+            "ServerTimeout": "60s"
+        }
+    },
+    "metrics": {
+        "statsd": {
+            "address": "127.0.0.1:9446"
+        }
+    }
 }
 ```
 {: codeblock}
@@ -1075,29 +1075,29 @@ The following list of parameters can be updated:
 
 ```json
 {
-	"General": {
-		"Keepalive": {
-			"ServerMinInterval": "60s",
-			"ServerInterval": "7200s",
-			"ServerTimeout": "20s"
-		},
-		"Authentication": {
-			"TimeWindow": "15m"
-		}
-	},
-	"Debug": {
-		"BroadcastTraceDir": null,
-		"DeliverTraceDir": null
-	},
-	"Metrics": {
-		"Provider": "disabled",
-		"Statsd": {
-			"Network": "udp",
-			"Address": "127.0.0.1:8125",
-			"WriteInterval": "30s",
-			"Prefix": null
-		}
-	}
+    "General": {
+        "Keepalive": {
+            "ServerMinInterval": "60s",
+            "ServerInterval": "7200s",
+            "ServerTimeout": "20s"
+        },
+        "Authentication": {
+            "TimeWindow": "15m"
+        }
+    },
+    "Debug": {
+        "BroadcastTraceDir": null,
+        "DeliverTraceDir": null
+    },
+    "Metrics": {
+        "Provider": "disabled",
+        "Statsd": {
+            "Network": "udp",
+            "Address": "127.0.0.1:8125",
+            "WriteInterval": "30s",
+            "Prefix": null
+        }
+    }
 }
 ```
 {: codeblock}
@@ -1106,11 +1106,11 @@ Paste the modified `JSON` that contains only the parameters that you want to upd
 
 ```json
 {
-	"General": {
-		"Keepalive": {
-			"ServerTimeout": "20s"
-		}
-	}
+    "General": {
+        "Keepalive": {
+            "ServerTimeout": "20s"
+        }
+    }
 }
 ```
 {: codeblock}
@@ -1128,16 +1128,16 @@ Instead of using an {{site.data.keyword.blockchainfull_notm}} Platform Certifica
 
 1. You need to gather the following certificate information and save it to individual files that can be uploaded to the console.   
 **Note:** The certificates inside the files can be in either `PEM` format or `base64 encoded` format.
-	* **Peer or ordering node identity certificate** This is the signing certificate from your external CA that the peer or ordering node will use. This certificate must contain the Organizational Unit (OU) attribute "peer" or "orderer" depending on the type of node it is used for.
-	* **Peer or ordering node identity private key** This is your private key corresponding to the signed certificate from your third-party CA that this peer or ordering node will use.
-	* **Peer or ordering service TLS CA certificate** This is the public signing certificate created by your external TLS CA that will be used by this peer or ordering node. The certificate needs to contain the x.509 Subject alternative name (SAN) for the peer or ordering nodes. If you are using the [Fabric CA client](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/clientcli.html) to enroll the identity, you specify the SAN by passing the `--csr.hosts` parameter on the `enroll` command. If the host name is not yet known, you can specify a wild card with the domain name, for example: `--csr.hosts '*.ibpv2-cluster.us-south.containers.appdomain.cloud,127.0.0.1'`.
-	* **Peer or ordering service TLS CA private key** This is the private key corresponding to the signed certificate from your TLS CA that will be used by this peer or ordering node for secure communications with other members on the network.
-	* **CA root certificate** (Optional) This is the root certificate of your external CA. You can also provide an intermediate CA root certificate or both.
-	* **TLS CA root certificate** (Optional) This is the root certificate of your external TLS CA. You must provide either a TLS CA root certificate or an intermediate TLS CA certificate, you can also provide both.
-	* **Intermediate CA TLS certificate**: (Optional) This is the TLS certificate if your TLS certificate is issued by an intermediate TLS CA. Upload the intermediate TLS CA certificate. You must provide either a TLS CA root certificate or an intermediate TLS CA certificate, you may also provide both.
-	* **Peer or ordering service admin identity certificate** This is the signing certificate from your external CA that the admin identity of this peer or ordering service will use. This certificate is also known as your peer or ordering service admin identity key. This certificate must contain the OU attribute "admin".
-	* **Peer or ordering service admin identity private key** This is the private key corresponding to the signed certificate from your external CA that the admin identity of this peer or ordering service will use.
-	* **Peer or ordering service organization MSP definition** You must manually generate this file by using instructions that are provided in [Manually building an MSP JSON file](/docs/blockchain?topic=blockchain-ibp-console-organizations#console-organizations-build-msp).
+    * **Peer or ordering node identity certificate** This is the signing certificate from your external CA that the peer or ordering node will use. This certificate must contain the Organizational Unit (OU) attribute "peer" or "orderer" depending on the type of node it is used for.
+    * **Peer or ordering node identity private key** This is your private key corresponding to the signed certificate from your third-party CA that this peer or ordering node will use.
+    * **Peer or ordering service TLS CA certificate** This is the public signing certificate created by your external TLS CA that will be used by this peer or ordering node. The certificate needs to contain the x.509 Subject alternative name (SAN) for the peer or ordering nodes. If you are using the [Fabric CA client](https://hyperledger-fabric-ca.readthedocs.io/en/release-1.4/clientcli.html) to enroll the identity, you specify the SAN by passing the `--csr.hosts` parameter on the `enroll` command. If the host name is not yet known, you can specify a wild card with the domain name, for example: `--csr.hosts '*.ibpv2-cluster.us-south.containers.appdomain.cloud,127.0.0.1'`.
+    * **Peer or ordering service TLS CA private key** This is the private key corresponding to the signed certificate from your TLS CA that will be used by this peer or ordering node for secure communications with other members on the network.
+    * **CA root certificate** (Optional) This is the root certificate of your external CA. You can also provide an intermediate CA root certificate or both.
+    * **TLS CA root certificate** (Optional) This is the root certificate of your external TLS CA. You must provide either a TLS CA root certificate or an intermediate TLS CA certificate, you can also provide both.
+    * **Intermediate CA TLS certificate**: (Optional) This is the TLS certificate if your TLS certificate is issued by an intermediate TLS CA. Upload the intermediate TLS CA certificate. You must provide either a TLS CA root certificate or an intermediate TLS CA certificate, you may also provide both.
+    * **Peer or ordering service admin identity certificate** This is the signing certificate from your external CA that the admin identity of this peer or ordering service will use. This certificate is also known as your peer or ordering service admin identity key. This certificate must contain the OU attribute "admin".
+    * **Peer or ordering service admin identity private key** This is the private key corresponding to the signed certificate from your external CA that the admin identity of this peer or ordering service will use.
+    * **Peer or ordering service organization MSP definition** You must manually generate this file by using instructions that are provided in [Manually building an MSP JSON file](/docs/blockchain?topic=blockchain-ibp-console-organizations#console-organizations-build-msp).
 
 2. Import the generated peer or ordering service organization MSP definition file into the console, by clicking the **Organizations** tab followed by **Import MSP definition**.
 
@@ -1162,7 +1162,7 @@ Now the private key can be used by the console. If you plan to include it in an 
 {: #ibp-console-adv-deployment-third-party-ca-create-peer-orderer}
 
 You can skip to **Option 2** if you want to create a new five node ordering service. The following instructions are only for creating a peer or single-node ordering service with certificates from your external CA.
-{:note}
+{: note}
 
 Now that you have gathered all the necessary certificates, you are ready to create a peer or ordering service that uses those certificates. Follow these instructions to create the peer or single-node ordering service with certificates from an external CA.
 
@@ -1177,11 +1177,11 @@ Now that you have gathered all the necessary certificates, you are ready to crea
 9. In the **Private key** field, upload the file that contains the **Peer or ordering service admin identity private key**.
 10. Review the information on the Summary page and click **Add peer** or **Add ordering service**.
 11. After you have created the peer or ordering node, you can upload the orderer admin identity to the {{site.data.keyword.blockchainfull_notm}} console. On the **Wallet** tab, click **Add identity**:
- - In the **Name** field, enter an identity name that is used for your reference only.
- - In the **Certificate** field, upload a file that contains the admin identity's signing certificate (in base64 or PEM format).
- - In the **Private Key** field, upload a file that contains the admin identity's private key (in base64 or PEM format).  
+    - In the **Name** field, enter an identity name that is used for your reference only.
+    - In the **Certificate** field, upload a file that contains the admin identity's signing certificate (in base64 or PEM format).
+    - In the **Private Key** field, upload a file that contains the admin identity's private key (in base64 or PEM format).  
 
-	After you upload the certificate and private key of the identity to the console, you can use the console associate the identity with the peer or ordering node.
+    After you upload the certificate and private key of the identity to the console, you can use the console associate the identity with the peer or ordering node.
 
 ### Option 2: Create a five node ordering service using certificates from an external CA
 {: #ibp-console-adv-deployment-create-five-node}
@@ -1316,11 +1316,11 @@ After you create the `JSON` file with all of the certificates for the ordering n
 7. Because you are using a paid cluster, on  the next panel, you have the opportunity to configure resource allocation for the nodes. The selections that you make here are applied to all five ordering nodes. If you want to learn more about how to allocate resources to your node, see this topic on [Allocating resources](#ibp-console-adv-deployment-allocate-resources).
 8. Review the summary and click **Add ordering service**.
 9. After you have created the ordering service, you can upload the orderer admin identity to the {{site.data.keyword.blockchainfull_notm}} console. On the **Wallet** tab, click **Add identity**:
-  - In the **Name** field, enter an identity name that is used for your reference only.
-  - In the **Certificate** field, upload a file that contains the admin identity's signing certificate (in base64 or PEM format).
-  - In the **Private Key** field, upload a file that contains the admin identity's private key (in base64 or PEM format).  
+    - In the **Name** field, enter an identity name that is used for your reference only.
+    - In the **Certificate** field, upload a file that contains the admin identity's signing certificate (in base64 or PEM format).
+    - In the **Private Key** field, upload a file that contains the admin identity's private key (in base64 or PEM format).  
 
-	After you upload the certificate and private key of the identity to the console, you can use the console associate the identity with your ordering node.
+    After you upload the certificate and private key of the identity to the console, you can use the console associate the identity with your ordering node.
 
 #### What's next
 {: #ibp-console-adv-deployment-third-party-ca-next}
@@ -1355,7 +1355,7 @@ When a CA, peer, or ordering node is configured to use an HSM, their private key
 
 Configuring a node to use HSM is a three-part process:
 1. **Deploy an HSM**. Utilize the HSM appliance that is available in [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/infrastructure/hardware-security-module){: external} or configure your own HSM. Record the value of the HSM `partition` and `PIN` to be used in the subsequent steps.
-	- If you plan to use {{site.data.keyword.cloud_notm}} HSM see this [tutorial](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) for an example of how to configure {{site.data.keyword.cloud_notm}} HSM 6.0 with the {{site.data.keyword.blockchainfull_notm}} Platform. After that is completed you can skip to Part 3 **Configure the node to use HSM**. 
+    - If you plan to use {{site.data.keyword.cloud_notm}} HSM see this [tutorial](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) for an example of how to configure {{site.data.keyword.cloud_notm}} HSM 6.0 with the {{site.data.keyword.blockchainfull_notm}} Platform. After that is completed you can skip to Part 3 **Configure the node to use HSM**. 
 2. **Configure an HSM client image** or **Set up a PKCS #11 proxy (Deprecated)** [See Build a Docker image](#ibp-console-adv-deployment-hsm-build-docker).
 3. **Configure the node to use HSM**.  From the APIs or the console, when you deploy a peer, CA, or ordering node, you can select the advanced option to use an HSM. See [Configure the node to use the HSM](#ibp-console-adv-deployment-cfg-hsm-node).
 
@@ -1455,13 +1455,13 @@ SLOT_USER_PIN=${EP11_SLOT_USER_PIN:-"98765432"}
 EXISTED_LABEL=$(pkcsconf -t | grep -w ${SLOT_TOKEN_LABEL})
 if [ -z "$EXISTED_LABEL" ]
 then
-  echo "initialized slot: "${SLOT_NO}
-  printf "87654321\n${SLOT_TOKEN_LABEL}\n" | pkcsconf -I -c ${SLOT_NO}
-  printf "87654321\n${SLOT_SO_PIN}\n${SLOT_SO_PIN}\n" | pkcsconf -P -c ${SLOT_NO}
-  printf "${SLOT_SO_PIN}\n${SLOT_USER_PIN}\n${SLOT_USER_PIN}\n" | pkcsconf -u -c ${SLOT_NO}
-  echo "The slot[${SLOT_NO}] initialized!"
+    echo "initialized slot: "${SLOT_NO}
+    printf "87654321\n${SLOT_TOKEN_LABEL}\n" | pkcsconf -I -c ${SLOT_NO}
+    printf "87654321\n${SLOT_SO_PIN}\n${SLOT_SO_PIN}\n" | pkcsconf -P -c ${SLOT_NO}
+    printf "${SLOT_SO_PIN}\n${SLOT_USER_PIN}\n${SLOT_USER_PIN}\n" | pkcsconf -u -c ${SLOT_NO}
+    echo "The slot[${SLOT_NO}] initialized!"
 else
-  echo "The slot already initialized!"
+    echo "The slot already initialized!"
 fi
 
 # Determine the process id
@@ -1483,28 +1483,28 @@ The entrypoint script performs multiple functions:
 
 - **Copy files required by HSM to volume:** The script is responsible for copying any files that are needed by the HSM client to a volume. For example, the openCryptoki implementation for zHSM requires a set of token-specific libraries. These files need to be provided to the HSM client and are required to be mounted on to the CA, peer, and ordering node containers. The following line shows how to copy the files to a mount path (see section 2) from the zHSM entrypoint script:
 
-   ```sh
-   cp -r /hsm/opencryptoki/stdll/* /stdll/
-   ```
-   {: codeblock}
+    ```sh
+    cp -r /hsm/opencryptoki/stdll/* /stdll/
+    ```
+    {: codeblock}
 
 - **Determine the process id:** The {{site.data.keyword.blockchainfull_notm}} Platform operator requires that the following snippet is included at the end of the entrypoint script. The contents of `pid=$(pidof /hsm/usr.sbin.pkcsslotd)` in the following snippet from the script is vendor-specific and needs to be adjusted to determine the process id of the running daemon.
 
-	```sh
-	# Determine the process id
-	set +x
-	touch /shared/daemon-launched
-	while true;
-	do
-	    pid=$(pidof /hsm/usr.sbin.pkcsslotd)
-	    if [ -z $pid ]; then
-	        echo "pkcsslotd not running"
-	        break
-	    fi
-	    sleep 10
-	done
-	```
-	{: codeblock}
+    ```sh
+    # Determine the process id
+    set +x
+    touch /shared/daemon-launched
+    while true;
+    do
+        pid=$(pidof /hsm/usr.sbin.pkcsslotd)
+        if [ -z $pid ]; then
+            echo "pkcsslotd not running"
+            break
+        fi
+        sleep 10
+    done
+    ```
+    {: codeblock}
 
 - **Start the daemon:** The daemon needs to be started from a location that is not a mountpath (see section 2). In the preceding example, the zHSM is launched from location `/hsm/usr.sbin.pkcsslotd`, which is not a defined mountpath.
 
@@ -1549,15 +1549,15 @@ The following example shows what the file would look like if you were using {{si
 
 ```
 Chrystoki2 = {
-   LibUNIX = /hsm/libCryptoki2.so;
-   LibUNIX64 = /hsm/libCryptoki2_64.so;
+    LibUNIX = /hsm/libCryptoki2.so;
+    LibUNIX64 = /hsm/libCryptoki2_64.so;
 }
 ...
 LunaSA Client = {
 ...
-   ClientPrivKeyFile = /hsm/key.pem;
-   ClientCertFile = /hsm/cert.pem;
-   ServerCAFile = /hsm/cafile.pem;
+    ClientPrivKeyFile = /hsm/key.pem;
+    ClientCertFile = /hsm/cert.pem;
+    ServerCAFile = /hsm/cafile.pem;
 ...
 }
 ```
@@ -1579,15 +1579,15 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal as builder
 COPY 64 64
 
 RUN microdnf install -y \
-   gcc \
-   gcc-c++ \
-   openssh-clients \
-   bind-utils \
-   iputils \
-   && cd 64 && \
-   # NOTE we are accepting the license for installing gemalto client here
-   # please take a look at the license before moving forward
-   echo "y" | ./install.sh -p sa
+    gcc \
+    gcc-c++ \
+    openssh-clients \
+    bind-utils \
+    iputils \
+    && cd 64 && \
+    # NOTE we are accepting the license for installing gemalto client here
+    # please take a look at the license before moving forward
+    echo "y" | ./install.sh -p sa
 
 ### Final image ###
 
@@ -1639,7 +1639,7 @@ Replace:
 - `DOCKER_EMAIL` - Email address for container registry user.
 - `NAMESPACE` - Name of the  project or namespace that is visible on the console **Support** page.
 
-  These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
+These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
 
     - [Using an image pull secret to access images in other IBM Cloud accounts or external private registries from non-default Kubernetes namespaces](/docs/containers?topic=containers-registry#other)
     - [Copying an existing image pull secret](/docs/containers?topic=containers-registry#copy_imagePullSecret)
@@ -1691,7 +1691,7 @@ metadata:
 
 
 <staging-zHSM>
-Because the console needs to know the configuration settings to use for your HSM, you need to create a Kubernetes [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/){:external} to store these values. The configMap settings depend on whether you configured a daemon for your HSM or not. In that case, the {{site.data.keyword.blockchainfull_notm}} Platform operator uses the HSM configuration passed in this configmap to get the details about the HSM client image, such as what image pull secret to use, and the folder mounts that are required. Based on the information provided, when a CA, peer, or ordering node is deployed with HSM enabled, the operator mounts required the files for the HSM client image. If you are using a daemon with your HSM, skip ahead to [Configure the operator to work with an HSM daemon](#daemon-configmap).
+Because the console needs to know the configuration settings to use for your HSM, you need to create a Kubernetes [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/){: external} to store these values. The configMap settings depend on whether you configured a daemon for your HSM or not. In that case, the {{site.data.keyword.blockchainfull_notm}} Platform operator uses the HSM configuration passed in this configmap to get the details about the HSM client image, such as what image pull secret to use, and the folder mounts that are required. Based on the information provided, when a CA, peer, or ordering node is deployed with HSM enabled, the operator mounts required the files for the HSM client image. If you are using a daemon with your HSM, skip ahead to [Configure the operator to work with an HSM daemon](#daemon-configmap).
 
 **Configure the operator to work with an HSM that does not use a daemon**
 {: #x86-configmap}

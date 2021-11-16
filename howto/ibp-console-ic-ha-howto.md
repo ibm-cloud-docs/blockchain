@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-02-14"
+lastupdated: "2021-11-11"
 
 keywords: HA, highly availability, multiregion
 
@@ -65,15 +65,15 @@ After the smart contract definition has been proposed, it must be [approved](/do
 {: #ibp-console-hadr-export-meta1}
 
 1. Export the CA definition to a JSON file.
-   - Open the CA in the **Nodes** tab.
-   - Click the download icon to generate the CA JSON file from your browser session.
+    - Open the CA in the **Nodes** tab.
+    - Click the download icon to generate the CA JSON file from your browser session.
 2. Export the peer's organization MSP definition to a JSON file.
-   - Open the MSP definition in the **Organizations** tab.
-   - Click the download icon on the tile.
+    - Open the MSP definition in the **Organizations** tab.
+    - Click the download icon on the tile.
 3. Export the peer's organization admin identity from your wallet.
-   - Navigate to the **Wallet** tab.
-   - Click the peer's organization admin identity and then click **Export identity**.
-   - A JSON file that contains the organization admin certificates is created. Make note of the file name and secure the file, because it is required when you create additional peers in your other clusters.
+    - Navigate to the **Wallet** tab.
+    - Click the peer's organization admin identity and then click **Export identity**.
+    - A JSON file that contains the organization admin certificates is created. Make note of the file name and secure the file, because it is required when you create additional peers in your other clusters.
 
 ### Step three: Import the metadata and identities in to cluster two and three
 {: #ibp-console-hadr-import-meta23}
@@ -81,10 +81,10 @@ After the smart contract definition has been proposed, it must be [approved](/do
 1. In clusters two and three, [import the CA JSON file](/docs/blockchain?topic=blockchain-ibp-console-import-nodes#ibp-console-import-ca) that you exported from cluster one.  
 2. If you will need to use the CA to register other identities, you need to open the imported CA and associate the CA administrator enroll ID and secret that you used when you deployed the CA on cluster one.
 3. Import the peer organization MSP definition JSON file that you exported from cluster one.
-   - In the **Organizations** tab click **Import MSP definition**.
-   - Click **Add file** to upload the JSON file.
-   - Click **I have an administrator identity for the MSP definition** checkbox to allow you to use this MSP definition when you create new peers in other zones.
-   - Click **Import MSP definition**.
+    - In the **Organizations** tab click **Import MSP definition**.
+    - Click **Add file** to upload the JSON file.
+    - Click **I have an administrator identity for the MSP definition** checkbox to allow you to use this MSP definition when you create new peers in other zones.
+    - Click **Import MSP definition**.
 4. Import the organization admin identity JSON file that you exported from cluster one into the console wallet on clusters two and three.
 5. In clusters two and three, [import the ordering service JSON file](/docs/blockchain?topic=blockchain-ibp-console-join-network#ibp-console-join-network-import-remote-orderer) to your console.
 

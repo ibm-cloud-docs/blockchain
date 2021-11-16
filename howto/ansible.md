@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-10-14"
+lastupdated: "2021-11-11"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -64,13 +64,13 @@ The Ansible playbooks include a set of modules that you can use to automate the 
 
 - **Deploying your blockchain network** After you deploy the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, or on your supported Kubernetes distribution, there are three ways to build your network. To understand the benefit of using the Ansible playbooks, we compare the options:
 
-  1. **Deploy your nodes and configure your network manually using the console user interface.** This option is most useful for getting started and learning about the platform and how the console works. It requires stepping through multiple panels to configure all the settings for your nodes, organizations, channels, and smart contracts.
+    1. **Deploy your nodes and configure your network manually using the console user interface.** This option is most useful for getting started and learning about the platform and how the console works. It requires stepping through multiple panels to configure all the settings for your nodes, organizations, channels, and smart contracts.
 
-  2. **Use the {{site.data.keyword.blockchainfull_notm}} Platform REST APIs to build your network.** This option is for advanced users who want to leverage the available REST APIs, often in conjunction with the Hyperledger Fabric APIs, to set up and administer their blockchain network. Configuration is done through editing API parameters. Because the {{site.data.keyword.blockchainfull_notm}} Platform APIs are mainly for create, retrieve, update, and delete operations on a node, you may need to also learn and use the **Hyperledger Fabric APIs** for some tasks.
+    2. **Use the {{site.data.keyword.blockchainfull_notm}} Platform REST APIs to build your network.** This option is for advanced users who want to leverage the available REST APIs, often in conjunction with the Hyperledger Fabric APIs, to set up and administer their blockchain network. Configuration is done through editing API parameters. Because the {{site.data.keyword.blockchainfull_notm}} Platform APIs are mainly for create, retrieve, update, and delete operations on a node, you may need to also learn and use the **Hyperledger Fabric APIs** for some tasks.
 
-  3. **Use the {{site.data.keyword.blockchainfull_notm}} Platform Ansible Collection**. After you are familiar with the process to set up the various nodes, organizations, channels, and smart contracts, you might want to automate the process. The Ansible playbooks provide a simple, straightforward, way to build and deploy a reproducible network. For getting started, a set of scripts is provided that stitches the relevant playbooks together into a single executable shell script of deployments to perform on your network. Configuration is done through editing `.yml` files.  The Ansible playbooks also automate some of the tasks performed by the Fabric APIs, such as creating a channel, joining a peer to a channel, and installing and instantiating smart contracts. Even more, there are playbooks available for tearing down the configuration so you can reset your network as needed. This option is a great option for setting up networks for POCs, demos, development, and test networks.
+    3. **Use the {{site.data.keyword.blockchainfull_notm}} Platform Ansible Collection**. After you are familiar with the process to set up the various nodes, organizations, channels, and smart contracts, you might want to automate the process. The Ansible playbooks provide a simple, straightforward, way to build and deploy a reproducible network. For getting started, a set of scripts is provided that stitches the relevant playbooks together into a single executable shell script of deployments to perform on your network. Configuration is done through editing `.yml` files.  The Ansible playbooks also automate some of the tasks performed by the Fabric APIs, such as creating a channel, joining a peer to a channel, and installing and instantiating smart contracts. Even more, there are playbooks available for tearing down the configuration so you can reset your network as needed. This option is a great option for setting up networks for POCs, demos, development, and test networks.
 
-  The Ansible playbooks provide an easy-to-use, automated process to replicate your blockchain networks on-demand. All components that are deployed with the playbooks are also visible in the console where you can interact with them as normal and govern your network.
+    The Ansible playbooks provide an easy-to-use, automated process to replicate your blockchain networks on-demand. All components that are deployed with the playbooks are also visible in the console where you can interact with them as normal and govern your network.
 
 ## Considerations and Limitations
 {: #ansible-limits}

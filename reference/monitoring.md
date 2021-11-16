@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-05-19"
+lastupdated: "2021-11-11"
 
 keywords:  monitoring, resource consumption, resource allocation, disk space, memory usage, disk usage  
 
@@ -120,21 +120,21 @@ First configure the notification channel and then define the alert triggers.
 
 1. Configure your preferred notification channel by clicking on your user icon followed by **Settings**.
 
-   ![{{site.data.keyword.mon_full_notm}} settings panel](../images/configure-alert-channel.png){: caption="Figure 2. {{site.data.keyword.mon_full_notm}} settings panel" caption-side="bottom"}
+    ![{{site.data.keyword.mon_full_notm}} settings panel](../images/configure-alert-channel.png){: caption="Figure 2. {{site.data.keyword.mon_full_notm}} settings panel" caption-side="bottom"}
 
-   When you subsequently click **Notification Channels** > **Add Notification Channel** you are able to select how you want to be notified when an alert is triggered.
+    When you subsequently click **Notification Channels** > **Add Notification Channel** you are able to select how you want to be notified when an alert is triggered.
 
-   ![{{site.data.keyword.mon_full_notm}} notifications](../images/configure-sysdig-notification.png){: caption="Figure 3. {{site.data.keyword.mon_full_notm}} notifications" caption-side="bottom"}
+    ![{{site.data.keyword.mon_full_notm}} notifications](../images/configure-sysdig-notification.png){: caption="Figure 3. {{site.data.keyword.mon_full_notm}} notifications" caption-side="bottom"}
 
-   For more information about configuring notifications, see [Working with notification channels](/docs/monitoring?topic=monitoring-notifications#notifications){: external}.
+    For more information about configuring notifications, see [Working with notification channels](/docs/monitoring?topic=monitoring-notifications#notifications){: external}.
 
 2. If you return to one of the dashboards that you created, you can click on the action menu in the upper right corner for any panel, and then click **Create Alert** from the drop-down menu.
 
-   ![{{site.data.keyword.mon_full_notm}} alerts](../images/configure-sysdig-alert.png){: caption="Figure 4. {{site.data.keyword.mon_full_notm}} alerts" caption-side="bottom"}
+    ![{{site.data.keyword.mon_full_notm}} alerts](../images/configure-sysdig-alert.png){: caption="Figure 4. {{site.data.keyword.mon_full_notm}} alerts" caption-side="bottom"}
 
-   After you configure the alert based on your custom triggers, scroll down to associate the notification channel that you configured above and select your notification preferences. Optionally, you can also enable {{site.data.keyword.mon_full_notm}} capture which generates a trace file that you can use to analyze what happens in a host during a selected time frame.
+    After you configure the alert based on your custom triggers, scroll down to associate the notification channel that you configured above and select your notification preferences. Optionally, you can also enable {{site.data.keyword.mon_full_notm}} capture which generates a trace file that you can use to analyze what happens in a host during a selected time frame.
 
-   For more information about the various options when configuring alerts in {{site.data.keyword.mon_full_notm}}. see [{{site.data.keyword.mon_full_notm}} alerts](/docs/monitoring?topic=monitoring-alerts){: external}.
+    For more information about the various options when configuring alerts in {{site.data.keyword.mon_full_notm}}. see [{{site.data.keyword.mon_full_notm}} alerts](/docs/monitoring?topic=monitoring-alerts){: external}.
 
 As a general guideline, we recommend that you configure alerts for when your node CPU, memory, and storage usage exceeds 80% so that you can take appropriate action. Feel free to adjust the alert settings according to your notification preferences.
 {: tip}
@@ -144,3 +144,5 @@ As a general guideline, we recommend that you configure alerts for when your nod
 {: #ibp-monitoring-summary}
 
 This tutorial has provided some basic steps for getting started using {{site.data.keyword.mon_full_notm}} to monitor your blockchain node resource allocation. You now have three dashboards that you can use to monitor the resource allocation of your peer, CA, and ordering nodes in your Kubernetes cluster. With a graduated tier purchase of the  {{site.data.keyword.mon_full_notm}} service, you can edit your charts and add more segmentations to further scope the data. You've also configured alerts for when nodes approach exceeding their allocated resources. Combined, these actions allow you to monitor your blockchain nodes, alerting you when resources are constrained, so that you can take the appropriate action to scale your network.
+
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-08-31"
+lastupdated: "2021-11-11"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -10,101 +10,7 @@ subcollection: blockchain
 
 ---
 
-{:DomainName: data-hd-keyref="APPDomain"}
-{:DomainName: data-hd-keyref="DomainName"}
-{:android: data-hd-operatingsystem="android"}
-{:api: .ph data-hd-interface='api'}
-{:apikey: data-credential-placeholder='apikey'}
-{:app_key: data-hd-keyref="app_key"}
-{:app_name: data-hd-keyref="app_name"}
-{:app_secret: data-hd-keyref="app_secret"}
-{:app_url: data-hd-keyref="app_url"}
-{:audio: .audio}
-{:authenticated-content: .authenticated-content}
-{:beta: .beta}
-{:c#: .ph data-hd-programlang='c#'}
-{:c#: data-hd-programlang="c#"}
-{:cli: .ph data-hd-interface='cli'}
-{:codeblock: .codeblock}
-{:curl: #curl .ph data-hd-programlang='curl'}
-{:curl: .ph data-hd-programlang='curl'}
-{:deprecated: .deprecated}
-{:dotnet-standard: .ph data-hd-programlang='dotnet-standard'}
-{:download: .download}
-{:external: .external target="_blank"}
-{:external: target="_blank" .external}
-{:faq: data-hd-content-type='faq'}
-{:fuzzybunny: .ph data-hd-programlang='fuzzybunny'}
-{:generic: data-hd-operatingsystem="generic"}
-{:generic: data-hd-programlang="generic"}
-{:gif: data-image-type='gif'}
-{:go: .ph data-hd-programlang='go'}
-{:help: data-hd-content-type='help'}
-{:hide-dashboard: .hide-dashboard}
-{:hide-in-docs: .hide-in-docs}
-{:important: .important}
-{:ios: data-hd-operatingsystem="ios"}
-{:java: #java .ph data-hd-programlang='java'}
-{:java: .ph data-hd-programlang='java'}
-{:java: data-hd-programlang="java"}
-{:javascript: .ph data-hd-programlang='javascript'}
-{:javascript: data-hd-programlang="javascript"}
-{:middle: .ph data-hd-position='middle'}
-{:navgroup: .navgroup}
-{:new_window: target="_blank"}
-{:node: .ph data-hd-programlang='node'}
-{:note: .note}
-{:objectc: .ph data-hd-programlang='Objective C'}
-{:objectc: data-hd-programlang="objectc"}
-{:org_name: data-hd-keyref="org_name"}
-{:php: .ph data-hd-programlang='PHP'}
-{:php: data-hd-programlang="php"}
-{:pre: .pre}
-{:preview: .preview}
-{:python: .ph data-hd-programlang='python'}
-{:python: data-hd-programlang="python"}
-{:release-note: data-hd-content-type='release-note'}
-{:right: .ph data-hd-position='right'}
-{:route: data-hd-keyref="route"}
-{:row-headers: .row-headers}
-{:ruby: .ph data-hd-programlang='ruby'}
-{:ruby: data-hd-programlang="ruby"}
-{:runtime: architecture="runtime"}
-{:runtimeIcon: .runtimeIcon}
-{:runtimeIconList: .runtimeIconList}
-{:runtimeLink: .runtimeLink}
-{:runtimeTitle: .runtimeTitle}
-{:screen: .screen}
-{:script: data-hd-video='script'}
-{:service: architecture="service"}
-{:service_instance_name: data-hd-keyref="service_instance_name"}
-{:service_name: data-hd-keyref="service_name"}
-{:shortdesc: .shortdesc}
-{:space_name: data-hd-keyref="space_name"}
-{:step: data-tutorial-type='step'}
-{:step: data-tutorial-type='step'} 
-{:subsection: outputclass="subsection"}
-{:support: data-reuse='support'}
-{:swift: #swift .ph data-hd-programlang='swift'}
-{:swift: .ph data-hd-programlang='swift'}
-{:swift: data-hd-programlang="swift"}
-{:table: .aria-labeledby="caption"}
-{:term: .term}
-{:terraform: .ph data-hd-interface='terraform'}
-{:tip: .tip}
-{:tooling-url: data-tooling-url-placeholder='tooling-url'}
-{:topicgroup: .topicgroup}
-{:troubleshoot: data-hd-content-type='troubleshoot'}
-{:tsCauses: .tsCauses}
-{:tsResolve: .tsResolve}
-{:tsSymptoms: .tsSymptoms}
-{:tutorial: data-hd-content-type='tutorial'}
-{:ui: .ph data-hd-interface='ui'}
-{:unity: .ph data-hd-programlang='unity'}
-{:url: data-credential-placeholder='url'}
-{:user_ID: data-hd-keyref="user_ID"}
-{:vbnet: .ph data-hd-programlang='vb.net'}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 
 
@@ -138,26 +44,27 @@ Because only the private keys of node identities are secured in the HSM, when yo
 
 - [Part One: Set up the HSM device and HSM client](#ibp-hsm-gemalto-part-one)
 
-  This process involves deploying an **HSM** and configuring a partition as well as deploying an **HSM client** that you will use to configure the device. Throughout these instructions you will run some commands from the HSM server and others from the HSM client. For clarity, we prefix these steps with either <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> or <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>.
+    This process involves deploying an **HSM** and configuring a partition as well as deploying an **HSM client** that you will use to configure the device. Throughout these instructions you will run some commands from the HSM server and others from the HSM client. For clarity, we prefix these steps with either <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> or <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>.
 
 - [Part Two: Configure communications between the HSM server and client](#ibp-hsm-gemalto-part-two)
 
-  Communications between the HSM and client require a **Network Trust Link (NTL)** -- an encrypted, secure communications channel between the HSM and client. NTL uses digital certificates that the client and HSM server can use to verify each other's identity. You will run a command to get the HSM server certificate that allows the client to communicate with the HSM server. Likewise, you will generate a certificate and private key for the client and then copy them to the HSM server.
+    Communications between the HSM and client require a **Network Trust Link (NTL)** -- an encrypted, secure communications channel between the HSM and client. NTL uses digital certificates that the client and HSM server can use to verify each other's identity. You will run a command to get the HSM server certificate that allows the client to communicate with the HSM server. Likewise, you will generate a certificate and private key for the client and then copy them to the HSM server.
 
 - [Part Three: Register the client with the HSM server](#ibp-hsm-gemalto-part-three)
 
-  After the secure communications are configured, you can register the client with the HSM server and then assign the HSM partition to the client.
+    After the secure communications are configured, you can register the client with the HSM server and then assign the HSM partition to the client.
 
 - [Part Four: Build a Docker image](#ibp-hsm-gemalto-part-four)  
 
-  You have two options:
-  - **(Recommended)** Build an HSM Client image
-  - **(Deprecated)** Build a PKCS #11 proxy image and deploy it to your Kubernetes cluster
+    You have two options:
+    - **(Recommended)** Build an HSM Client image
+    - **(Deprecated)** Build a PKCS #11 proxy image and deploy it to your Kubernetes cluster
 
 This process requires [Docker](https://docs.docker.com/install/){: external} to be installed on the machine where the HSM client is running and that you are familiar with the process for building Docker images. It also presumes you are comfortable with using the Kubernetes CLI to administer your Kubernetes cluster.
 
  If you are using a Kubernetes cluster on {{site.data.keyword.cloud_notm}} and {{site.data.keyword.cloud_notm}} HSM, both services need to be deployed from the same {{site.data.keyword.cloud_notm}} account and on the same VLAN. If they are not on the same VLAN, then VLAN spanning must be enabled.
 {: important}
+
 
 
 When the entire HSM configuration is complete, it resembles the following diagram:
@@ -179,13 +86,13 @@ When you choose to deploy the PKCS #11 proxy and configure a node with HSM, you 
 
 1. Provision the HSM and configure it with at least one partition. For example, you can follow instructions for [Provisioning {{site.data.keyword.cloud_notm}} HSM](/docs/hardware-security-modules?topic=hardware-security-modules-provisioning-ibm-cloud-hsm){: external}.
 
-   Be sure to record the `Label` and `PIN` for the partition. You will need to provide these values later when you configure a blockchain node to use this HSM partition. Also, save the IP address associated with the HSM device. We will refer to this value throughout these instructions as `<HSM_ADDRESS>`.
-   {: important}
+    Be sure to record the `Label` and `PIN` for the partition. You will need to provide these values later when you configure a blockchain node to use this HSM partition. Also, save the IP address associated with the HSM device. We will refer to this value throughout these instructions as `<HSM_ADDRESS>`.
+    {: important}
 
 2. [Install the HSM client](/docs/hardware-security-modules?topic=hardware-security-modules-installing-the-ibm-cloud-hsm-client){: external} on your local machine. **Make sure the client version that you are running matches the HSM server version.** Record the IP address or fully qualified host name where the HSM client is running. We will refer to this value throughout these instructions as `<CLIENT_ADDRESS>`.
 
-  The client runs on AIX, Linux, Oracle Solaris, or Microsoft Windows, but is not supported on MacOS.
-  {: tip}
+    The client runs on AIX, Linux, Oracle Solaris, or Microsoft Windows, but is not supported on MacOS.
+    {: tip}
 
 ### Part Two: Configure communications between the HSM server and client
 {: #ibp-hsm-gemalto-part-two}
@@ -194,133 +101,134 @@ In this section you will get the HSM server certificate and create the HSM clien
 
 1. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Run the following command using the HSM client to get the server certificate. This certificate enables the client to communicate with the server.
 
-  ```bash
-  scp hsm_admin@<HSM_ADDRESS>:server.pem server.pem
-  ```
-  {: codeblock}
+    ```bash
+    scp hsm_admin@<HSM_ADDRESS>:server.pem server.pem
+    ```
+    {: codeblock}
 
-  Replace
-  - `<HSM_ADDRESS>` with the IP address of the HSM.
+    Replace
+    - `<HSM_ADDRESS>` with the IP address of the HSM.
 
 2. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Now, add the HSM server to the client configuration by running the following command:
 
-  ```bash
-  vtl addServer -n <HSM_ADDRESS> -c server.pem
-  ```
-  {: codeblock}
+    ```bash
+    vtl addServer -n <HSM_ADDRESS> -c server.pem
+    ```
+    {: codeblock}
 
-  Replace
-  - `<HSM_ADDRESS>` with the IP address of the HSM.
+    Replace
+    - `<HSM_ADDRESS>` with the IP address of the HSM.
 
 3. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Create the certificate and private key for the client by running the command:
 
-  ```bash
-  vtl createcert -n <CLIENT_ADDRESS>
-  ```
-  {: codeblock}
+    ```bash
+    vtl createcert -n <CLIENT_ADDRESS>
+    ```
+    {: codeblock}
 
-  Replace
-  - `<CLIENT_ADDRESS>` with the IP address or fully qualified host name of the client.
+    Replace
+    - `<CLIENT_ADDRESS>` with the IP address or fully qualified host name of the client.
 
-  The name of the generated certificates includes the `<CLIENT_ADDRESS>`. The output of this command looks similar to:
-  ```
-  Private Key created and written to: /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>Key.pem
-  Certificate created and written to: /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem
-  ```
+    The name of the generated certificates includes the `<CLIENT_ADDRESS>`. The output of this command looks similar to:
+    ```
+    Private Key created and written to: /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>Key.pem
+    Certificate created and written to: /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem
+    ```
 
 4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Copy the client certificate and private key to the HSM server by running the command:
 
-  ```bash
-  scp /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem hsm_admin@<HSM_ADDRESS>:.
-  ```
-  {: codeblock}
+    ```bash
+    scp /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem hsm_admin@<HSM_ADDRESS>:.
+    ```
+    {: codeblock}
 
-  Replace
-  - `<CLIENT_ADDRESS>` with the IP address or fully qualified host name of the client.
-  - `<HSM_ADDRESS>` with the IP address of the HSM.
+    Replace
+    - `<CLIENT_ADDRESS>` with the IP address or fully qualified host name of the client.
+    - `<HSM_ADDRESS>` with the IP address of the HSM.
 
 ### Part Three: Register the client with the HSM server
 {: #ibp-hsm-gemalto-part-three}
 
 1. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> SSH into the HSM as the admin the HSM server and register the client by running **one** of the following commands.
 
-  If the `<CLIENT_ADDRESS>` is the IP address of the client:
+    If the `<CLIENT_ADDRESS>` is the IP address of the client:
 
-  ```bash
-  client register -client ${CLIENT_NAME} -ip <CLIENT_ADDRESS>
-  ```
-  {: codeblock}
+    ```bash
+    client register -client ${CLIENT_NAME} -ip <CLIENT_ADDRESS>
+    ```
+    {: codeblock}
 
-  If the `<CLIENT_ADDRESS>` is the fully qualified host name of the client:
+    If the `<CLIENT_ADDRESS>` is the fully qualified host name of the client:
 
-  ```bash
-  client register -client ${CLIENT_NAME} -hostname <CLIENT_ADDRESS>
-  ```
-  {: codeblock}
+    ```bash
+    client register -client ${CLIENT_NAME} -hostname <CLIENT_ADDRESS>
+    ```
+    {: codeblock}
 
-  Replace
-  - `{CLIENT_NAME}` with the name of the client. This value can be anything meaningful to you.
-  - `<CLIENT_ADDRESS>` with either the IP address or fully qualified host name of the client.
+    Replace
+    - `{CLIENT_NAME}` with the name of the client. This value can be anything meaningful to you.
+    - `<CLIENT_ADDRESS>` with either the IP address or fully qualified host name of the client.
 
 2. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> Because network address translation (NAT) exists between the client and the HSM, we need to disable client source IP address validation by the Network Trust Link Server (NTLS) upon Network Trust Link Agent (NTLA) client connection.  Disable ip check on the HSM server and then restart the NTLS service on the HSM server by running the following commands:
 
-  ```bash
-  ntls ipcheck disable
-  service restart ntls
-  ```
-  {: codeblock}
+    ```bash
+    ntls ipcheck disable
+    service restart ntls
+    ```
+    {: codeblock}
 
 3. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> Assign a partition to the newly created client on the HSM server by running the following command:
 
-  ```bash
-  client assignpartition -client ${CLIENT_NAME} -partition ${PARTITION_NAME}
-  ```
-  {: codeblock}
+    ```bash
+    client assignpartition -client ${CLIENT_NAME} -partition ${PARTITION_NAME}
+    ```
+    {: codeblock}
 
-  Replace
-  - `{CLIENT_NAME}` with the name that you gave to your HSM client.
-  - `{PARTITION_NAME}` with the name of the HSM partition you created in [Part one](#ibp-hsm-gemalto-part-one), step 1.
+    Replace
+    - `{CLIENT_NAME}` with the name that you gave to your HSM client.
+    - `{PARTITION_NAME}` with the name of the HSM partition you created in [Part one](#ibp-hsm-gemalto-part-one), step 1.
 
-  You can verify the command worked by running the following command:
+    You can verify the command worked by running the following command:
 
-  ```bash
-  client show -client ${CLIENT_NAME}
-  ```
-  {: codeblock}
+    ```bash
+    client show -client ${CLIENT_NAME}
+    ```
+    {: codeblock}
 
-  The output will look similar to:
+    The output will look similar to:
 
-  ```
-  ClientID:     hsmclient
-  IPAddress:    10.220.203.73
-  HTL Required: no
-  OTT Expiry:   n/a
-  Partitions:   "partition1"
+    ```
+    ClientID:     hsmclient
+    IPAddress:    10.220.203.73
+    HTL Required: no
+    OTT Expiry:   n/a
+    Partitions:   "partition1"
 
-  Command Result : 0 (Success)
-  ```
+    Command Result : 0 (Success)
+    ```
+    {: codeblock}
 
 4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Verify the client can connect to HSM server by running the command:
 
-  ```bash
-  vtl verify
-  ```
-  {: codeblock}
+    ```bash
+    vtl verify
+    ```
+    {: codeblock}
 
-  The output will look similar to:
+    The output will look similar to:
 
-  ```
-  The following Luna SA Slots/Partitions were found:
-  Slot	Serial #        	Label
-  ====	================	=====
-  0	    500752010 	      partition1
-  ```
+    ```
+    The following Luna SA Slots/Partitions were found:
+    Slot    Serial #            Label
+    ====    ================    =====
+    0       500752010           partition1
+    ```
 
 5. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>  Create a `configs` folder on the client and then copy the `server.pem` certificate from [Part two](#ibp-hsm-gemalto-part-two), step 1 and the `<CLIENT_ADDRESS>Key.pem` and `<CLIENT_ADDRESS>.pem` files from [Part two](#ibp-hsm-gemalto-part-two), step 3 into the folder:
 
-   - Copy `server.pem` to `configs/server.pem`  
-   - Copy `/usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>Key.pem` to `configs/key.pem`  
-   - Copy `/usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem` to `configs/cert.pem`  
+    - Copy `server.pem` to `configs/server.pem`  
+    - Copy `/usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>Key.pem` to `configs/key.pem`  
+    - Copy `/usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem` to `configs/cert.pem`  
 
 ### Part Four: Build a Docker image
 {: #ibp-hsm-gemalto-part-four}
@@ -356,15 +264,15 @@ The following example shows what the file would look like if you were using {{si
 
 ```
 Chrystoki2 = {
-   LibUNIX = /hsm/libCryptoki2.so;
-   LibUNIX64 = /hsm/libCryptoki2_64.so;
+    LibUNIX = /hsm/libCryptoki2.so;
+    LibUNIX64 = /hsm/libCryptoki2_64.so;
 }
 ...
 LunaSA Client = {
 ...
-   ClientPrivKeyFile = /hsm/key.pem;
-   ClientCertFile = /hsm/cert.pem;
-   ServerCAFile = /hsm/cafile.pem;
+    ClientPrivKeyFile = /hsm/key.pem;
+    ClientCertFile = /hsm/cert.pem;
+    ServerCAFile = /hsm/cafile.pem;
 ...
 }
 ```
@@ -386,15 +294,15 @@ FROM registry.access.redhat.com/ubi8/ubi-minimal as builder
 COPY 64 64
 
 RUN microdnf install -y \
-   gcc \
-   gcc-c++ \
-   openssh-clients \
-   bind-utils \
-   iputils \
-   && cd 64 && \
-   # NOTE we are accepting the license for installing gemalto client here
-   # please take a look at the license before moving forward
-   echo "y" | ./install.sh -p sa
+    gcc \
+    gcc-c++ \
+    openssh-clients \
+    bind-utils \
+    iputils \
+    && cd 64 && \
+    # NOTE we are accepting the license for installing gemalto client here
+    # please take a look at the license before moving forward
+    echo "y" | ./install.sh -p sa
 
 ### Final image ###
 
@@ -446,7 +354,7 @@ Replace:
 - `DOCKER_EMAIL` - Email address for container registry user.
 - `NAMESPACE` - Name of the  project or namespace that is visible on the console **Support** page.
 
-  These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
+These instructions are obviously for the Docker registry. If you are using the {{site.data.keyword.IBM_notm}} Container Registry, then you need to set up your own image pull secret in your cluster:
 
     - [Using an image pull secret to access images in other IBM Cloud accounts or external private registries from non-default Kubernetes namespaces](/docs/containers?topic=containers-registry#other)
     - [Copying an existing image pull secret](/docs/containers?topic=containers-registry#copy_imagePullSecret)
@@ -498,7 +406,7 @@ metadata:
 
 
 <staging-zHSM>
-Because the console needs to know the configuration settings to use for your HSM, you need to create a Kubernetes [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/){:external} to store these values. The configMap settings depend on whether you configured a daemon for your HSM or not. In that case, the {{site.data.keyword.blockchainfull_notm}} Platform operator uses the HSM configuration passed in this configmap to get the details about the HSM client image, such as what image pull secret to use, and the folder mounts that are required. Based on the information provided, when a CA, peer, or ordering node is deployed with HSM enabled, the operator mounts required the files for the HSM client image. If you are using a daemon with your HSM, skip ahead to [Configure the operator to work with an HSM daemon](#daemon-configmap).
+Because the console needs to know the configuration settings to use for your HSM, you need to create a Kubernetes [configmap](https://kubernetes.io/docs/concepts/configuration/configmap/){: external} to store these values. The configMap settings depend on whether you configured a daemon for your HSM or not. In that case, the {{site.data.keyword.blockchainfull_notm}} Platform operator uses the HSM configuration passed in this configmap to get the details about the HSM client image, such as what image pull secret to use, and the folder mounts that are required. Based on the information provided, when a CA, peer, or ordering node is deployed with HSM enabled, the operator mounts required the files for the HSM client image. If you are using a daemon with your HSM, skip ahead to [Configure the operator to work with an HSM daemon](#daemon-configmap).
 
 **Configure the operator to work with an HSM that does not use a daemon**
 {: #x86-configmap}

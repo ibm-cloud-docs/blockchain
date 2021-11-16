@@ -97,13 +97,15 @@ On a Hyperledger Fabric network, the flow of data for queries and transactions i
 1. Using APIs available in the SDK, a client application signs and submits a transaction proposal to the appropriate endorsing peers on the specified channel. This initial transaction proposal is a **request** for endorsement.
 2. Each peer on the channel verifies the identity and authority of the submitting client, and (if valid) runs the specified chaincode against the supplied inputs. Based on the transaction results and the endorsement policy for the invoked chaincode, each peer returns a signed YES or NO response to the application. Each signed YES response is an **endorsement** of the transaction.
 
-	At this point in the transaction flow, the process diverges for queries and transactions. If the proposal called a query function in the chaincode, the application returns the data to the client. If the proposal called a function in the chaincode to update the ledger, the application continues with the following steps:
+    At this point in the transaction flow, the process diverges for queries and transactions. If the proposal called a query function in the chaincode, the application returns the data to the client. If the proposal called a function in the chaincode to update the ledger, the application continues with the following steps:
 3. The application forwards the transaction, which includes the read/write set and endorsements, to the **ordering service**.
 4. The transaction is then relayed to the ordering service. All channel peers validate each transaction in the block by applying the chaincode-specific Validation Policy and running a Concurrency Control Version Check.
-	* Any transaction that fail the validation process is marked as invalid in the block, and the block is appended to the channel's ledger.
-	* All valid transactions update the state database accordingly with the modified key/value pairs.
+    * Any transaction that fail the validation process is marked as invalid in the block, and the block is appended to the channel's ledger.
+    * All valid transactions update the state database accordingly with the modified key/value pairs.
 
 The **gossip data dissemination protocol** continually broadcasts ledger data across the channel to ensure synchronized ledgers among peers. For more information, see [Gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/release-1.4/gossip.html){: external} in
 [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
 
 For a step-by-step introduction on transaction flow, see [Transaction Flow](https://hyperledger-fabric.readthedocs.io/en/release-1.4/txflow.html){: external} in [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/){: external}.
+
+

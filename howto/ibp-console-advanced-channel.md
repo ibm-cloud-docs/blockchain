@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-08-10"
+lastupdated: "2021-11-11"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, access control
 
@@ -33,7 +33,7 @@ When you create a channel, there are a number of advanced options that allow you
 
 
 The roles played by the various participants in channel creation, as well as the underlying method used to create and update the channel configuration, is inherited from the [Hyperledger Fabric processes for creating and editing a channel](https://hyperledger-fabric.readthedocs.io/en/release-2.2/configtx.html){: external}.
-{:tip}
+{: tip}
 
 The parameters that govern how channels function, from the organizations on the channel to their permissions to the policies, are all contained in the channel configuration. When you create a channel, you are asked to decide on a number of these parameters. Some options, such as the channel name, cannot be changed after a channel has been created, while other options can only be changed after the channel has been created.
 
@@ -48,11 +48,11 @@ For an overview of the channel creation process that ignores the advanced option
 
 * **Organizations**. This section of the panel is how organizations are added or removed from a channel. Organizations that can be added can be seen in the drop-down list. Note that an organization must be a member of the consortium of the ordering service before it can be added to a channel. For more information about how to add an organization to the consortium, see [Add your organization to list of organizations that can transact](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-add-org).
 
-  You can also update an organization's level of permission on the channel:
+You can also update an organization's level of permission on the channel:
 
-   - A channel **operator** has permission to create and sign channel configuration updates. There must be at least one operator in each a channel.
-   - A channel **writer** can update the ledger by invoking a smart contract. A channel writer can also instantiate a smart contract on a channel.
-   - A channel **reader** can only query the ledger, by invoking a read only function in smart contract for example.
+- A channel **operator** has permission to create and sign channel configuration updates. There must be at least one operator in each a channel.
+- A channel **writer** can update the ledger by invoking a smart contract. A channel writer can also instantiate a smart contract on a channel.
+- A channel **reader** can only query the ledger, by invoking a read only function in smart contract for example.
 
 * **Update policy**. The update policy of a channel specifies how many organizations (out of the total number of operators in the channel), who must approve of an update to the channel configuration. To ensure a good balance between collaborative administration and efficient processing of channel configuration updates, consider setting this policy to a majority of admins. For example, if there are five admins in a channel, choose `3 out of 5`.
 
@@ -62,7 +62,7 @@ For an overview of the channel creation process that ignores the advanced option
 By clicking the box under advanced options, users can access parameters that users should take caution in updating. Note that if you are attempting to change any parameter that requires the signature of ordering service admins (for example, the **Block cutting parameters** or **ordering service consenters**) and are one of the ordering service admins on this channel, you will see a field for the ordering service organization. Select the MSP of the relevant ordering service organization from the drop-down list (if you are not an ordering service admin, the MSP will have to be exported to you). If you are not an admin of the ordering service organization, you can still make a request to change one of the block cutting parameters, but the request must be signed by an ordering service admin.
 
 If the signature of an ordering service org admin is required, you will not see a pending tile for the channel in your console until the ordering service org has signed the request. When you see the tile, you can join your peer to it.
-{:tip}
+{: tip}
 
 * **Capabilities**. If you're unfamiliar with capabilities, check out [Channel capabilities](https://hyperledger-fabric.readthedocs.io/en/release-2.2/capabilities_concept.html){: external} in the Fabric documentation. Note that there is a strict relationship between the Fabric version of your nodes and the levels of certain capabilities that must be followed to ensure that nodes do not crash and desired functionalities are available. Currently, only **application** and **orderer** capabilities can be set during channel creation. For information about **channel** capabilities (which are a level of capabilities that span both ordering nodes and peers and do not refer to "capabilities on the channel") and how to change them, check out the [Capabilities](#ibp-console-govern-capabilities) section below.
 
@@ -80,8 +80,8 @@ If the signature of an ordering service org admin is required, you will not see 
 
 * **Access control lists (ACLs)**. To specify a finer grained control over resources, you can restrict access to a resource to an organization and a role within that organization. For example, setting access to the resource `ChaincodeExists` to `Application/Admins` would mean that only the admin of an application would be able to access the `ChaincodeExists` resource. Users have the option to edit the access control list one at a time or by uploading a JSON containing the list. For more information about Access Control, see [Access Control Lists (ACLs)](https://hyperledger-fabric.readthedocs.io/en/release-2.2/access_control.html){: external} in the Fabric documentation.
 
-  If you restrict access to a resource to a particular organization, be aware that only that organization will be able to access the resource. If you want other organizations to be able to access the resource, you will have to add them one by one. As a result, consider your access control decisions carefully. Restricting access to certain resources in certain ways can have a highly negative effect on how your channel functions.
-  {:important}
+    If you restrict access to a resource to a particular organization, be aware that only that organization will be able to access the resource. If you want other organizations to be able to access the resource, you will have to add them one by one. As a result, consider your access control decisions carefully. Restricting access to certain resources in certain ways can have a highly negative effect on how your channel functions.
+    {: important}
 
 ## Updating a channel configuration
 {: #ibp-console-govern-update-channel}
@@ -114,7 +114,7 @@ When you click on the **Notifications** button, you may have one or more actions
 If a channel configuration update request has been made, you have the ability to click on **Review and update channel configuration** and see the changes to the channel configuration update that are being proposed or have been made (if the new channel configuration has been approved). If you are an operator on the channel, and not enough signatures have been gathered to approve the channel configuration update request, you will have the ability to sign the update request.
 
 You are not required to sign a channel configuration update, however note that there is no way to sign **against** a channel update. If you do not approve of a channel configuration update, you can simply close the panel and reach out to other channel operators out of band to voice your concerns. However, if enough operators in the channel approve of the update to satisfy the channel update policy, the new configuration will take effect.
-{:note}
+{: note}
 
 ### Channel configuration parameters you can update
 {: #ibp-console-govern-update-channel-available-parameters}
@@ -138,9 +138,9 @@ Because cross organizational [gossip](https://hyperledger-fabric.readthedocs.io/
 Note that while anchor peers are a channel configuration parameter, they are not set through the normal process of creating and editing a channel configuration.
 
 To configure a peer to be an anchor peer, click the **Channels** tab and open the channel where the smart contract was deployed.
- - Click the **Channel details** tab.
- - Scroll down to the Anchor peers table and click **Add anchor peer**.
- - Select at least one peer from each organization in collection definition that you want to serve as the anchor peer for the organization. For redundancy reasons, you can consider selecting more than one peer from each organization in the collection.
+- Click the **Channel details** tab.
+- Scroll down to the Anchor peers table and click **Add anchor peer**.
+- Select at least one peer from each organization in collection definition that you want to serve as the anchor peer for the organization. For redundancy reasons, you can consider selecting more than one peer from each organization in the collection.
 
 #### Join a peer to a channel
 {: #ibp-console-govern-channels-join-peer}
@@ -170,13 +170,13 @@ The `application` and `channel` capabilities are relevant to peers, while the `o
 
 While all capabilities can be edited as part of a channel configuration update request, you have the opportunity to edit these capabilities in a few places:
 
-  * **Channel and orderer**: in the [system channel](#ibp-console-govern-capabilities-system-channel) by ordering service admins.
-  * **Application and orderer**: during [channel creation](#ibp-console-govern-capabilities-application-channels).
+* **Channel and orderer**: in the [system channel](#ibp-console-govern-capabilities-system-channel) by ordering service admins.
+* **Application and orderer**: during [channel creation](#ibp-console-govern-capabilities-application-channels).
 
 Note that what you see in this section will depend on the configuration of your channel and the Fabric level of your peers and ordering nodes, as **only valid and possible capability upgrades will appear**. For example, if your channel, orderer, and application capabilities are already at the highest level, you will only see the capability levels that have been selected. Similarly, you will not see potential capability updates if your nodes in the channel are not at a sufficient Fabric level to process the capability. Note that the **default** orderer capability shown is inherited from the system channel, as noted above, while the default application capability is set to a reasonable level that will ensure that peers who attempt to join the channel will not crash. The application capability can always be updated later.
 
 To ensure that you will always be able to see and propose updates to get a channel to the latest capability levels, **it is a best practice to upgrade your peers and ordering nodes to the latest Fabric version as soon as it is available in the console**. From a channel management perspective, it is also a best practice to discuss capability updates with other organizations before proposing a change. This will allow organizations to update nodes, as necessary, before the channel update request is submitted.
-{:important}
+{: important}
 
 #### Capabilities in the system channel
 {: #ibp-console-govern-capabilities-system-channel}
@@ -218,7 +218,7 @@ The following table shows the compatibility levels of peer image versions with t
 Like the orderer and channel capabilities, the application capability level can be edited through a channel configuration update. The orderer capability can also be specified during the creation of a channel, but will require the approval of the ordering service.
 
 If you are using the SDK to create or edit a channel, take caution to not submit a channel configuration with an invalid `application` capability. Because application capabilities are not validated by the ordering service, invalid application capabilities are not flagged. Because the peers cannot process capabilities that do not exist, the peers will crash when attempting to read the configuration block containing an invalid capability. Because the peers will be unable to progress beyond this configuration block, it will not be possible to reverse this configuration block and submit another one to "fix" the problem. A channel in this state is unrepairable.
-{:important}
+{: important}
 
 ## Tuning your ordering service
 {: #ibp-console-govern-orderer-tuning}
@@ -233,12 +233,12 @@ The following parameters are available in the console by clicking the orderer no
 The following three parameters work together to control when a block is cut, based on a combination of setting the maximum number of transactions in a block as well as the block size itself.
 
 - **Absolute max bytes**
-  Set this value to the largest block size in bytes that can be cut by the orderer.  No transaction may be larger than the value of `Absolute max bytes`. Usually, this setting can safely be two to ten times larger than your `Preferred max bytes`.
-  **Note**: The maximum size permitted is 99MB.
+    Set this value to the largest block size in bytes that can be cut by the orderer.  No transaction may be larger than the value of `Absolute max bytes`. Usually, this setting can safely be two to ten times larger than your `Preferred max bytes`.
+    **Note**: The maximum size permitted is 99MB.
 - **Max message count**
-  Set this value to the maximum number of transactions that can be included in a single block.
+    Set this value to the maximum number of transactions that can be included in a single block.
 - **Preferred max bytes**
-  Set this value to the ideal block size in bytes, but it must be less than `Absolute max bytes`. A minimum transaction size, one that contains no endorsements, is around 1KB.  If you add 1KB per required endorsement, a typical transaction size is approximately 3-4KB. Therefore, it is recommended to set the value of `Preferred max bytes` to be around `Max message count * expected averaged tx size`. At run time, whenever possible, blocks will not exceed this size. If a transaction arrives that causes the block to exceed this size, the block is cut and a new block is created for that transaction. But if a transaction arrives that exceeds this value without exceeding the `Absolute max bytes`, the transaction will be included. If a block arrives that is larger than `Preferred max bytes`, then it will only contain a single transaction, and that transaction size can be no larger than `Absolute max bytes`.
+    Set this value to the ideal block size in bytes, but it must be less than `Absolute max bytes`. A minimum transaction size, one that contains no endorsements, is around 1KB.  If you add 1KB per required endorsement, a typical transaction size is approximately 3-4KB. Therefore, it is recommended to set the value of `Preferred max bytes` to be around `Max message count * expected averaged tx size`. At run time, whenever possible, blocks will not exceed this size. If a transaction arrives that causes the block to exceed this size, the block is cut and a new block is created for that transaction. But if a transaction arrives that exceeds this value without exceeding the `Absolute max bytes`, the transaction will be included. If a block arrives that is larger than `Preferred max bytes`, then it will only contain a single transaction, and that transaction size can be no larger than `Absolute max bytes`.
 
 Together, these parameters can be configured to optimize throughput of your orderer.
 
@@ -248,4 +248,4 @@ Together, these parameters can be configured to optimize throughput of your orde
 Set the **Timeout** value to the amount of time, in seconds, to wait after the first transaction arrives before cutting the block. If you set this value too low, you risk preventing the batches from filling to your preferred size. Setting this value too high can cause the orderer to wait for blocks and overall performance to degrade. In general, we recommend that you set the value of `Batch timeout` to be at least `max message count / maximum transactions per second`.
 
 When you modify these parameters, you do not affect the behavior of existing channels on the orderer; rather, any changes you make to the orderer configuration apply only to new channels you create on this orderer.
-{:important}
+{: important}
