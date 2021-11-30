@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-29"
+lastupdated: "2021-11-30"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -116,6 +116,8 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 {: #ibp-console-overview-supported-cfg}
 
 **Reminder:** {{site.data.keyword.containerlong_notm}} 1.18 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.18 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20. Be aware that  {{site.data.keyword.containerlong_notm}} 1.19 is already deprecated, and therefore now is a good time to upgrade to 1.20 (the expected date for removal of 1.19 support is January 31, 2022). To get started, see [1.18 to 1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.18 to 1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
+
+
 
 | | |
 |----|----|
