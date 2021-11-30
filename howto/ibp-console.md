@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-15"
+lastupdated: "2021-11-30"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -115,8 +115,9 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ## Supported {{site.data.keyword.cloud_notm}} configuration
 {: #ibp-console-overview-supported-cfg}
 
-**{{site.data.keyword.blockchainfull}} Platform is currently incompatible with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions.** <br/><br/> **Reminder:** {{site.data.keyword.containerlong_notm}} 1.17 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.17 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20.  Be aware that  {{site.data.keyword.containerlong_notm}} 1.19 is already deprecated, therefore now is a good time to upgrade to 1.20. To get started, see [1.17 to 1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.17 to 1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
-{: important}
+**Reminder:** {{site.data.keyword.containerlong_notm}} 1.18 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.18 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20. Be aware that  {{site.data.keyword.containerlong_notm}} 1.19 is already deprecated, and therefore now is a good time to upgrade to 1.20 (the expected date for removal of 1.19 support is January 31, 2022). To get started, see [1.18 to 1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.18 to 1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
+
+
 
 | | |
 |----|----|
@@ -243,5 +244,3 @@ For a list of the current security certifications that {{site.data.keyword.block
 {: #ibp-console-overview-support}
 
 For more information about how to get support on {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}, as well as free blockchain developer resources and support forums that you can use to troubleshoot problems, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
-
-
