@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-12-03"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -115,7 +115,7 @@ The following tables describe the types of certificates that you need to manage,
 **CA TLS certificate:**
 
 |  Certificate | Description| How generated | Default expiration | How to view expiration | How to renew | Impact if expires | What to do if expired |
-|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
+|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|
 | **CA TLS certificate** | Used to trust the CA server. Contains the public key that must be shared with all members in the organization that want to transact with any node in the organization. When any client or node submits a transaction to another node, it must include this certificate as part of the transaction to prevent “man in the middle” attacks. | Generated when the CA is first started because TLS is enabled.| **2.5.x:** 10 years[^how-to-view1]<br><br>**2.1.x:** 1 year  | If it expires within five years, the expiration date is visible from the console. Open CA node and view **TLS Cert Expiration** field[^how-to-view1]   | See [Renew the CA TLS certificate](#cert-mgmt-ca-tls).| Transactions continue.<br><br>- Cannot register or enroll new identities, but transaction traffic does not stop.<br><br>- Automatic certificate renewal fails.<br><br>- Cannot renew other certificates without fixing CA TLS certificate first. | See [Renew the CA TLS certificate](#cert-mgmt-ca-tls). |
 {: caption="Table 1. How to manage the CA certificates" caption-side="top"}
 [^how-to-view1]: If a certificate expires in more than five years, the expiration date is not visible from the console.
@@ -517,7 +517,7 @@ Fabric includes a [setting](https://hyperledger-fabric.readthedocs.io/en/release
     }
     ```
     {: codeblock}
-    
+
 1. Click **Update ordering node**.  
 1. Repeat these steps for each ordering node in the ordering service.
 
