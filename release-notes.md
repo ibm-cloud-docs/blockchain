@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-15"
+lastupdated: "2021-12-06"
 
 
 keywords: release note, latest changes, Hyperledger Fabric
@@ -67,18 +67,18 @@ Export certificates in .pem format for easy management and maintenance in {{site
 ## 13 Jul 2021
 {: #13-07-2021}
 
-**Certificate Authority (CA) patch 1.5.0-1, Peer and ordering node patch 1.4.12-2, 2.2.4-2**
+**Certificate Authority (CA) patch 1.5.0-1, Peer and ordering node patch 1.4.12-2, 2.2.3-2**
 
 Miscellaneous bug fixes and security patches.
 
 ## 16 Jun 2021
 {: #16-06-2021}
 
-**Certificate Authority (CA) patch 1.4.9-8, Peer and ordering node patch 1.4.12-1, 2.2.4-1**
+**Certificate Authority (CA) patch 1.4.9-8, Peer and ordering node patch 1.4.12-1, 2.2.3-1**
 
 Miscellaneous bug fixes and security patches.
 
-The platform has been updated to include support for Hyperledger Fabric v1.4.12 and v2.2.4.
+The platform has been updated to include support for Hyperledger Fabric v1.4.12 and v2.2.3.
 
 
 ## 05 May 2021
