@@ -1369,6 +1369,10 @@ subcollection: blockchain
 
 [Getting support](/docs/blockchain?topic=blockchain-blockchain-support)
 
+* [Security incidents](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-security-incidents)
+
+* [General support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support)
+
 * [Resources and support forums](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-resources)
 
 * [Submitting support cases](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases)
