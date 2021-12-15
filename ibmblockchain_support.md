@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-11-11"
+lastupdated: "2021-12-08"
 
 keywords: IBM Blockchain Platform, support case, Hyperledger Fabric Community, Cloud tickets, Rocket Chat, dWAnswers
 
@@ -17,36 +17,52 @@ subcollection: blockchain
 # Getting support
 {: #blockchain-support}
 
-{{site.data.keyword.blockchainfull}} Platform provides several avenues for troubleshooting problems and getting support, which depend on the {{site.data.keyword.blockchainfull_notm}} Platform offerings that you use.
+{{site.data.keyword.blockchainfull}} Platform provides several avenues for troubleshooting problems and getting support, which depend on your   {{site.data.keyword.blockchainfull_notm}} Platform product, support plan and
+case severity.
 {: shortdesc}
+
+## Security incidents
+{: #blockchain-security-incidents}
+
+{{site.data.keyword.blockchainfull}} Platform provides the following methods for  investigating and reporting security incidents:
+
+- Search known IBM security issues on the [IBM Product Security Incident Response](https://www.ibm.com/blogs/psirt/) blog. You can filter the issues by severity.
+- Report your security issue to the [IBM Product Security Incident Response Team (PSIRT)](https://www.ibm.com/trust/security-psirt). Reporting methods for third-parties and anonymous sources are also provided.
+- IBM support subscribers can log in and open a case with the appropriate severity. Refer to details, including IBM response times, below in [Submitting support cases](/docs/blockchain?topic=blockchain-blockchain-support#submitting-support-cases).
+
+## General support
+{: #blockchain-general-support}
 
 For all {{site.data.keyword.blockchainfull_notm}} Platform offerings, it is recommended to first use [free digital support resources](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-resources) to troubleshoot problems and get help from {{site.data.keyword.IBM_notm}} and the Hyperledger Fabric Community.
 
 If your problem cannot be solved by any of the [free digital support resources](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-resources), consider the following approaches to get support for the offerings that you use.
 
 - **{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}**
-    Submit a support case through {{site.data.keyword.cloud_notm}}. For more information, see [Submitting support cases](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases).
+
+Submit a support case through {{site.data.keyword.cloud_notm}}. For more information, see [Submitting support cases](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases).
 
 - **{{site.data.keyword.blockchainfull_notm}} Platform Visual Studio Code extension**
-    Submit any issues in the [{{site.data.keyword.blockchainfull_notm}} Platform Visual Studio Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues){: external}.
+
+Submit any issues in the [{{site.data.keyword.blockchainfull_notm}} Platform Visual Studio Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues){: external}.
 
 ## Resources and support forums
 {: #blockchain-support-resources}
 
 **{{site.data.keyword.blockchainfull_notm}} Service docs**
-    [{{site.data.keyword.blockchainfull_notm}} Service docs](/docs/blockchain?topic=blockchain-get-started-ibp#get-started-ibp), provides guidance on how to start with {{site.data.keyword.blockchainfull_notm}} Platform. You can find corresponding topics from the table of contents or search any term from the search bar.
+
+[{{site.data.keyword.blockchainfull_notm}} Service docs](/docs/blockchain?topic=blockchain-get-started-ibp#get-started-ibp), provides guidance on how to start with {{site.data.keyword.blockchainfull_notm}} Platform. You can find corresponding topics from the table of contents or search any term from the search bar.
 
 **Hyperledger Fabric resources**  
-    [Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-2.2/){: external}, the [Fabric community wiki](https://wiki.hyperledger.org/display/fabric){: external}, and the [Fabric Jira dashboard](https://jira.hyperledger.org/secure/Dashboard.jspa?selectPageId=10104){: external} provide more details about the Fabric stack.
 
-    You can also talk to a Fabric expert in [Rocket.Chat](https://chat.hyperledger.org/channel/fabric){: external} to get answers to questions about Fabric.
+[Hyperledger Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-2.2/){: external}, the [Fabric community wiki](https://wiki.hyperledger.org/display/fabric){: external}, and the [Fabric Jira dashboard](https://jira.hyperledger.org/secure/Dashboard.jspa?selectPageId=10104){: external} provide more details about the Fabric stack.
 
-    You can also post questions or check if your question was answered in [Stack Overflow](https://stackoverflow.com/questions/tagged/hyperledger-fabric){: external}.
+You can also post questions or check if your question was answered in [Stack Overflow](https://stackoverflow.com/questions/tagged/hyperledger-fabric){: external}.
 
 **Developer resources**  
-    [IBM Developer](https://developer.ibm.com/technologies/blockchain/) provides tutorials, code patterns, and videos for blockchain developers. Application developers can use the [Blockchain Design patterns](https://developer.ibm.com/technologies/blockchain/articles/getting-started-with-blockchain-design-patterns) to learn about common patterns and best practices for building applications that communicate with blockchain networks.
 
-    Because {{site.data.keyword.IBM_notm}} does not support using Hyperledger Composer for production implementation, you are encouraged to engage with [Hyperledger Composer community](https://chat.hyperledger.org/channel/composer){: external} and [Stack Overflow](https://stackoverflow.com/questions/tagged/hyperledger-composer){: external} when you work on demos and proofs of concept.
+[IBM Developer](https://developer.ibm.com/technologies/blockchain/) provides tutorials, code patterns, and videos for blockchain developers. Application developers can use the [Blockchain Design patterns](https://developer.ibm.com/technologies/blockchain/articles/getting-started-with-blockchain-design-patterns) to learn about common patterns and best practices for building applications that communicate with blockchain networks.
+
+Because {{site.data.keyword.IBM_notm}} does not support using Hyperledger Composer for production implementation, you are encouraged to engage with [Hyperledger Composer community](https://chat.hyperledger.org/channel/composer){: external} and [Stack Overflow](https://stackoverflow.com/questions/tagged/hyperledger-composer){: external} when you work on demos and proofs of concept.
 
 ## Submitting support cases
 {: #blockchain-support-cases}
@@ -78,5 +94,3 @@ Follow these steps to submit a support case.
 4. Click the **Submit** button.  You will receive an email notification in a few minutes for this case.
 
 You can find your previously submitted cases by clicking **My Cases** in the {{site.data.keyword.cloud_notm}} Service Portal. Click and open a case to check its status or provide additional information.
-
-

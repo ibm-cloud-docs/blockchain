@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2021
-lastupdated: "2021-11-15"
+lastupdated: "2021-12-13"
 
 
 keywords: release note, latest changes, Hyperledger Fabric
@@ -27,12 +27,22 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch)  
 For instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative. This means that if multiple patches, for example `1.4.7-0` and `1.4.12-1`, are available for a node, you should always select the latest patch, `1.4.12-1` in this case, wherever possible because it includes the fixes from the previous patches as well.   
 
+
+## 14 Dec 2021
+{: #14-12-2021}
+
+**Certificate Authority (CA) patch 1.5.2-4, Peer and ordering node patch 1.4.12-7, 2.2.4-4.**
+
+Miscellaneous bug fixes and security patches.
+
+
 ## 16 Nov 2021
 {: #16-11-2021}
 
 **Certificate Authority (CA) patch 1.5.2-3, Peer and ordering node patch 1.4.12-6, 2.2.4-3.**
 
 Miscellaneous bug fixes and security patches.
+
 
 
 **Deprecation notice for {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}**: Because Kubernetes v1.22 deprecates a number of APIs, nodes running Kubernetes v1.13, v1.14, or v1.15 will no longer be updated to the latest {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} patches. In addition, no Kubernetes cluster nodes will be updated if the master node is not reachable. Impacted clusters are identified via Kubernetes calls to the master node and calls to health check endpoints for blockchain components. Migration instructions for impacted clusters will be posted here soon. 
@@ -67,18 +77,18 @@ Export certificates in .pem format for easy management and maintenance in {{site
 ## 13 Jul 2021
 {: #13-07-2021}
 
-**Certificate Authority (CA) patch 1.5.0-1, Peer and ordering node patch 1.4.12-2, 2.2.4-2**
+**Certificate Authority (CA) patch 1.5.0-1, Peer and ordering node patch 1.4.12-2, 2.2.3-2**
 
 Miscellaneous bug fixes and security patches.
 
 ## 16 Jun 2021
 {: #16-06-2021}
 
-**Certificate Authority (CA) patch 1.4.9-8, Peer and ordering node patch 1.4.12-1, 2.2.4-1**
+**Certificate Authority (CA) patch 1.4.9-8, Peer and ordering node patch 1.4.12-1, 2.2.3-1**
 
 Miscellaneous bug fixes and security patches.
 
-The platform has been updated to include support for Hyperledger Fabric v1.4.12 and v2.2.4.
+The platform has been updated to include support for Hyperledger Fabric v1.4.12 and v2.2.3.
 
 
 ## 05 May 2021
