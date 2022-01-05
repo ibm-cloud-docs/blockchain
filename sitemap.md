@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-12-13"
+  years: 2017, 2022
+lastupdated: "2022-01-05"
 
 keywords: site map
 subcollection: blockchain
