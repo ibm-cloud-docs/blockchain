@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-11"
+  years: 2019, 2022
+lastupdated: "2022-01-11"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
