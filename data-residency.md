@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-11"
+  years: 2017, 2022
+lastupdated: "2022-01-11"
 
 keywords: IBM Blockchain Platform, Data residency, world state
 
