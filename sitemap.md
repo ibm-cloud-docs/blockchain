@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-18"
+lastupdated: "2022-01-19"
 
 keywords: site map
 subcollection: blockchain
@@ -794,7 +794,7 @@ subcollection: blockchain
     * [Monitoring file storage](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-monitor-storage)
     * [Adding storage](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-add-storage)
 * [Upgrading to a new version of Fabric](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade)
-    * [Step one: Backup your ledger](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-one-ledger)
+    * [Step one: Back up your ledger (optional)](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-one-ledger)
     * [Step two: Upgrade your nodes one at a time](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-two-rolling-upgrade)
     * [Step three: Update SDKs and smart contracts](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-three)
     * [Step four: Update capabilities](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-four-rolling-upgrade)

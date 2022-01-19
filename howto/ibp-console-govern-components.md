@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-01-19"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -34,7 +34,7 @@ After a node has been created, there are three main ways to update it.
 
 1. **Update its configuration**. Just as it is possible to override configuration parameters when deploying a node, it is possible to edit many parameters and redeploy the node. For more information, see our topic on [Advanced deployment options](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment).
 2. **Increase the resources allocated to it**. If you notice that the performance of a node is beginning to lag or that its storage is beginning to run out, you can choose whether to deploy a larger node and join it to channels or whether to increase the resources allocated to your existing node.
-3. **Upgrade its Fabric version**. Every node is deployed using a release version of Hyperledger Fabric. When new versions of Fabric become available on the IBM Blockchain Platform, **Upgrade available** is visible on the tile representing the node. While upgrading to a new version of Fabric is always recommended, unless is rendered necessary by the capabilities of channels you want to join, it is typically optional. For more information, check out [Upgrading to a new version of Fabric](#ibp-console-govern-components-upgrade).
+3. **Upgrade its Fabric version**. Every node is deployed using a release version of Hyperledger Fabric. When new versions of Fabric become available on IBM Blockchain Platform, **Upgrade available** is visible on the tile representing the node. While upgrading to a new version of Fabric is always recommended, unless is rendered necessary by the capabilities of channels you want to join, it is typically optional. For more information, check out [Upgrading to a new version of Fabric](#ibp-console-govern-components-upgrade).
 
 In this topic, we'll cover the process for [reallocating resources](#ibp-console-govern-components-reallocate-resources), upgrading to a new version of Fabric, and [deleting nodes](#ibp-console-govern-components-delete).
 
@@ -109,15 +109,12 @@ Users can allocate more storage to their running network by resizing the existin
 ## Upgrading to a new version of Fabric
 {: #ibp-console-govern-components-upgrade}
 
-When updating {{site.data.keyword.blockchainfull_notm}} Platform nodes from 1.4.x to 2.x.x, select 2.2.x or the latest version available. Do not select any version prior to 2.2.x. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
-{: important}
-
-While some new versions of Fabric are released where only the Fabric version of nodes must be upgraded in order to get the latest Fabric features, some new Fabric versions contain new channel capabilities that must also be updated.
+While some new versions of Fabric only require updating the Fabric version on nodes, some include new channel capabilities that must also be updated.
 
 In these cases, the process of "updating to the latest" release is, at a high level, a two step process:
 
-1. Upgrade the Fabric version of all nodes.
-2. Update the channels to the new capability levels. For information about how to edit channels to use the latest capabilities, check out [Capabilities](/docs/blockchain?topic=blockchain-ibp-console-govern#ibp-console-govern-capabilities).
+1. Upgrade the Fabric version on all nodes.
+2. Update the channels to the new capability levels. For information about how to update channels, see [Capabilities](/docs/blockchain?topic=blockchain-ibp-console-govern#ibp-console-govern-capabilities).
 
 You must upgrade nodes before you update the channels. If a node attempts to read a configuration block containing a capability level it does not understand (which is true in cases where the capability is a higher level than the node version), the node will crash **on all channels**. The node must then be upgraded to the appropriate Fabric version before it can be used again.
 {: important}
@@ -130,7 +127,7 @@ At a high level, the process of upgrading a node involves two main steps:
 It may also be necessary to update SDKs and smart contracts before you can take advantage of the latest Fabric features. For more information, check out [Step three: Update SDKs and smart contracts](#ibp-console-govern-components-upgrade-step-three).
 {: tip}
 
-### Step one: Backup your ledger
+### Step one: Back up your ledger (optional)
 {: #ibp-console-govern-components-upgrade-step-one-ledger}
 
 It is recommended to take regular backups of the persistent volumes of your nodes as part of the normal process of network administration. For example, in our topic on backing up and restoring components and networks, an [example schedule](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-schedule-snapshot) is provided which recommends that backups be taken of the ordering nodes and the peers (including the state database of the peer, if using CouchDB) each night.
@@ -143,6 +140,9 @@ However, if you are not taking regular backups, it is recommended that you minim
 If you are upgrading both peer and ordering node binaries, it is a best practice to upgrade the ordering nodes first, as ensuring that the ordering nodes (and by extension, the ordering service) is functioning correctly is more important to the health of your network as a whole than the functioning of any particular peer.
 {: tip}
 
+Do not attempt to upgrade {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from Hyperledger Fabric 1.4.x to the latest version. Instead, add a new peer with the latest version of Fabric (2.2.x) installed. This Fabric installation is done by {{site.data.keyword.blockchainfull_notm}} Platform, but can take hours or days depending on the size of the database to be built. The new Fabric Gateway transaction lifecycle is available in 2.2.4, but a node upgrade from 1.4.x is not required&mdash;the legacy 1.4.x  transaction lifecycle remains supported. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
+{: important}
+
 The process for upgrading a node is relatively straightforward. First, make sure you are using the console where the node was created. You cannot use the console to update imported nodes. When a node upgrade is available, **Upgrade available** is visible on the node tile. If **Upgrade available** does not appear on the tile when it should be there, make sure your console is using the latest version using the [**Refresh cluster**](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-refresh) feature. <blockchain-sw-25>If **Upgrade available** does not appear on the tile when it should be there, make sure you have upgraded to the latest version of the console.</blockchain-sw-25>
 
 You can then update the node:
@@ -154,10 +154,7 @@ You can then update the node:
 
 The node will be unavailable during the upgrade. The status was turn grey and will read **Status unknown** or **Unavailable**. When the upgrade has completed, the status will turn green and be **Ready**. If the upgrade fails and the node lapses into an unrecoverable state, follow the instructions for [Restoring nodes](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-restore) from a snapshot.
 
-To upgrade from a v1.4.x peer to a 2.x peer, the databases of all peers (which include not just the state database but the history database and other internal databases for the peer) must be rebuilt using the v2.x data format. Depending on the size of your ledgers and the number of channels your peer is joined to, the process of rebuilding your state databases can take quite a bit of time (several hours, in some cases), and is a mandatory part of the upgrade process. The time it takes to upgrade varies not just on the number of blocks, but on your network speed and the average size of the blocks in your channels. Note that the node is down during upgrade as the pods are rebuilt. When the upgrade has completed, access to the node is restored.
-{: tip}
-
-**It is a best practice to only upgrade one node of each type at a time**. In other words, if you need to upgrade both peers and ordering node, it is alright if you start a peer upgrade and an ordering node upgrade at the same time. However, do not attempt to upgrade multiple peers or multiple ordering nodes at the same time, as this threatens the availability of your components.
+**It is a best practice to only upgrade one node of each type at a time**. In other words, if you need to upgrade both peers and ordering nodes, you can start a single peer upgrade and a single ordering node upgrade at the same time. However, do not attempt to upgrade multiple peers or multiple ordering nodes at the same time, as this threatens the availability of your components.
 
 It is not possible to upgrade an ordering node if any node in your ordering service is down for any reason. Coordinate with all of the administrators of your ordering service before attempting to upgrade.
 
