@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-30"
+  years: 2019, 2022
+lastupdated: "2022-01-19"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -176,12 +176,12 @@ Notice how a single instance of the console, also known as Operational Tooling, 
 
 
 | **Kubernetes cluster on {{site.data.keyword.cloud_notm}} instance** | **Description** |
-| ------------------------- |-----------|-----------|-----------|
+| -------------- | ----------- |
 | **Operator** | A Kubernetes operator that is used to deploy the console. |
 | **Ingress** | A [Kubernetes object](https://kubernetes.io/docs/concepts/services-networking/ingress/){: external} that allows access to the cluster resources from outside the cluster. |
 | **Proxy** | The {{site.data.keyword.blockchainfull_notm}} Platform proxy is responsible for routing traffic to the correct peer, CA and ordering nodes by using host header routing. |
 | **Peers, CAs, ordering nodes** | These are the nodes that are created. These nodes can also be imported from other consoles. Because the private keys are never stored by {{site.data.keyword.IBM_notm}}, every peer and ordering node includes a gRPC web proxy that allows the console to communicate with each node by using the keys in the wallet. |
-| **RBAC** | Role based access control.  The {{site.data.keyword.blockchainfull_notm}} Platform configures [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/){: external} in the cluster which is required to manage blockchain components in the cluster.
+| **RBAC** | Role based access control.  The {{site.data.keyword.blockchainfull_notm}} Platform configures [Kubernetes RBAC](https://kubernetes.io/docs/reference/access-authn-authz/rbac/){: external} in the cluster which is required to manage blockchain components in the cluster. |
 
 {: caption="Table 3. Components that reside in the customer Kubernetes Cluster" caption-side="bottom"}
 
@@ -199,12 +199,12 @@ A single instance of the console, also known as Operational Tooling, is created 
 
 
 | **OpenShift cluster** | **Description** |
-| ------------------------- |-----------|-----------|-----------|
+| ---------- | -----------|
 | **Operator** | A Kubernetes operator that is used to deploy the console. |
 | **Routes** | An OpenShift route is a way to expose a service by giving it an externally reachable hostname. |
 | **Proxy** | The {{site.data.keyword.blockchainfull_notm}} Platform proxy is responsible for routing traffic to the correct peer, CA and ordering nodes by using host header routing. |
 | **Peers, CAs, Ordering nodes** | These are the nodes that are created. Note: these nodes could also be imported from other Kubernetes Cluster Service Instances. Because the keys are never stored by {{site.data.keyword.IBM_notm}}, every peer and ordering node includes a gRPC web proxy that allows the console to communicate with each node by using the keys in the wallet. |
-| **RBAC** | Role based access control.  The {{site.data.keyword.blockchainfull_notm}} Platform configures [OpenShift RBAC](https://docs.openshift.com/container-platform/4.3/authentication/using-rbac.html){: external} in the cluster which is required to manage blockchain components in the cluster.
+| **RBAC** | Role based access control. The {{site.data.keyword.blockchainfull_notm}} Platform configures [OpenShift RBAC](https://docs.openshift.com/container-platform/4.3/authentication/using-rbac.html){: external} in the cluster which is required to manage blockchain components in the cluster. |
 
 {: caption="Table 5. Components that reside in the customer Red Hat OpenShift Cluster" caption-side="bottom"}
 
