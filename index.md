@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-11"
+  years: 2017, 2022
+lastupdated: "2022-02-01"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -13,7 +13,7 @@ subcollection: blockchain
 {{site.data.keyword.attribute-definition-list}}
 
 
-{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions. 
+{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions.
 {: important}
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform
@@ -50,7 +50,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ### Developer Tools
 
 - [**{{site.data.keyword.blockchainfull_notm}} Platform Developer Tools**](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode)
-    Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally or run it from the cloud by using Red Hat CodeReady Workspaces.
+    Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally.
 
 ### {{site.data.keyword.blockchainfull_notm}} images
 {: #get-started-ibp-images}
@@ -66,5 +66,3 @@ After you deploy {{site.data.keyword.blockchainfull_notm}} Platform in the envir
 {: #get-started-ibp-getting-support}
 
 {{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
-
-
