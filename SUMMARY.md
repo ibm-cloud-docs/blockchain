@@ -14,3 +14,4 @@
   * [Data residency](data-residency.md)
     * [FAQs](howto/ibp-v2-faq.md)
   	* [Disclaimer](needtoknow.md)
+  * [Build a network](howto/ibp-console-build-network.md)
