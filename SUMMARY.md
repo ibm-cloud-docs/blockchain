@@ -1,0 +1,16 @@
+# IBM Blockchain Platform 2.5.2
+
+* [Getting started with IBM Blockchain Platform 2.5.2](index.md)
+  * [About IBM Blockchain Platform 2.5.2](getting-started/console-ocp-about.md)
+  * [What is blockchain?](https://www.ibm.com/topics/what-is-blockchain)
+  * [What's new](whats_new.md)
+  * [Pricing](howto/pricing-sw.md)
+  * [Blockchain component overview](blockchain_component_overview.md)
+  * [Security](security.md)
+  * [High availability (HA)](ibp-console-ha.md)
+	  * [Setting up multiregion High Availability (HA) deployments for peers](howto/ibp-console-ic-ha-howto.md)
+    * [Setting up multiregion High Availability (HA) deployments for the ordering service](howto/ibp-console-ha-os.md)
+    * [Building a high availability Certificate Authority (CA)](howto/ibp-console-ha-ca.md)
+  * [Data residency](data-residency.md)
+    [FAQs](howto/ibp-v2-faq.md)
+  	[Disclaimer](needtoknow.md)
