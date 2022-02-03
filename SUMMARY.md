@@ -12,5 +12,5 @@
     * [Setting up multiregion High Availability (HA) deployments for the ordering service](howto/ibp-console-ha-os.md)
     * [Building a high availability Certificate Authority (CA)](howto/ibp-console-ha-ca.md)
   * [Data residency](data-residency.md)
-    [FAQs](howto/ibp-v2-faq.md)
-  	[Disclaimer](needtoknow.md)
+    * [FAQs](howto/ibp-v2-faq.md)
+  	* [Disclaimer](needtoknow.md)
