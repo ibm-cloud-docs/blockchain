@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-02-08"
 
 keywords: high availability, HA, IBM Cloud, failures, zone failure, region failure, component failure, worker node failure, RTO, RPO
 
@@ -58,7 +58,7 @@ Finally, your peer redundancy strategy needs to take into account your smart con
 ### Ordering service considerations
 {: #ibp-console-ha-ordering-service}
 
-{{site.data.keyword.blockchainfull_notm}} Platform  is built upon Hyperledger Fabric v1.4.12 and v2.2.4  that includes the Raft [ordering service](#x9826021){: term}. Raft is a crash fault tolerant (CFT) ordering service based on an implementation of [Raft protocol](https://raft.github.io/raft.pdf){: external}. By design, Raft ordering nodes automatically synchronize data between them using Raft-based consensus. In {{site.data.keyword.blockchainfull_notm}} Platform, an organization network operator can choose to stand up either a single node Raft-based orderer, with no HA, or five orderers in a single region or across multiple regions that are automatically configured for HA via Raft.
+{{site.data.keyword.blockchainfull_notm}} Platform  is built upon Hyperledger Fabric v1.4.12 and v2.2.5  that includes the Raft [ordering service](#x9826021){: term}. Raft is a crash fault tolerant (CFT) ordering service based on an implementation of [Raft protocol](https://raft.github.io/raft.pdf){: external}. By design, Raft ordering nodes automatically synchronize data between them using Raft-based consensus. In {{site.data.keyword.blockchainfull_notm}} Platform, an organization network operator can choose to stand up either a single node Raft-based orderer, with no HA, or five orderers in a single region or across multiple regions that are automatically configured for HA via Raft.
 
 
 ### Certificate Authority (CA) considerations

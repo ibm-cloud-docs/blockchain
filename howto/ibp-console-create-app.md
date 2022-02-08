@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-02-08"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -391,7 +391,7 @@ git clone https://github.com/hyperledger/fabric-samples.git
 ```
 {: codeblock}
 
-After you download the Fabric Samples, run the following commands to ensure that you are using the version of the samples compatible with Fabric v1.4.12 and v2.2.4.
+After you download the Fabric Samples, run the following commands to ensure that you are using the version of the samples compatible with Fabric v1.4.12 and v2.2.5.
 
 ```
 cd fabric-samples
