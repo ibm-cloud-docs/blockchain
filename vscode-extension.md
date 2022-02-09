@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-02-01"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -20,7 +20,7 @@ subcollection: blockchain
 
 
 
-The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an environment within Visual Studio Code or Red Hat CodeReady Workspaces for developing, packaging, and testing smart contracts. You can use the tools to create your smart contract project and get started developing your business logic. You can then use the tools to test your smart contract either on your local machine by using a preconfigured instance of Hyperledger Fabric, or by connecting to an {{site.data.keyword.blockchainfull_notm}} Platform network, before you deploy the smart contract to the {{site.data.keyword.blockchainfull_notm}} Platform. This tutorial describes how to install and use the Developer Tools.
+The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an environment within Visual Studio Code for developing, packaging, and testing smart contracts. You can use the tools to create your smart contract project and get started developing your business logic. You can then use the tools to test your smart contract either on your local machine by using a preconfigured instance of Hyperledger Fabric, or by connecting to an {{site.data.keyword.blockchainfull_notm}} Platform network, before you deploy the smart contract to the {{site.data.keyword.blockchainfull_notm}} Platform. This tutorial describes how to install and use the Developer Tools.
 
 
 
@@ -36,119 +36,18 @@ The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an env
 
 
 
-The {{site.data.keyword.blockchainfull_notm}} Platform extension works seamlessly with any instance of the {{site.data.keyword.blockchainfull_notm}} Platform that uses Hyperledger Fabric versions 1.4 and later. This tutorial is oriented toward users of the high-level Fabric smart contract programming model. If you are using low-level smart contract APIs, you can find additional instructions in the [{{site.data.keyword.blockchainfull_notm}} Platform extension documentation](https://github.com/IBM-Blockchain/blockchain-vscode-extension/blob/master/README.md). For more information, see the [Writing Your First Chaincode](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode4ade.html) tutorial in the Fabric documentation.
+The {{site.data.keyword.blockchainfull_notm}} Platform extension works seamlessly with any instance of the {{site.data.keyword.blockchainfull_notm}} Platform that uses Hyperledger Fabric versions 1.4 and later. This tutorial is oriented toward users of the high-level Fabric smart contract programming model. If you are using low-level smart contract APIs, you can find additional instructions in the [{{site.data.keyword.blockchainfull_notm}} Platform extension documentation](https://github.com/IBM-Blockchain/blockchain-vscode-extension/blob/master/README.md). For more information, see the [Writing Your First Chaincode](https://hyperledger-fabric.readthedocs.io/en/latest/chaincode4ade.html) tutorial in the Fabric documentation.
 {: note}
 
 ## Before you begin
 {: #develop-vscode-before}
 
-The {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools can be installed as a **VS Code extension** on your local system, or if you have a Red Hat OpenShift cluster, it can be deployed into a **Red Hat CodeReady Workspaces 2.1 or higher**. Both options use the exact same tooling but the Red Hat CodeReady Workspaces provide a developer workspace server and cloud IDE. The option that you choose largely depends on whether you prefer to develop locally or collaborate with a development team in a cloud-integrated development environment (IDE).
-
-### What are the benefits of CodeReady Workspaces?
-{: #develop-vscode-crw-why}
-
-If you are an existing Red Hat OpenShift customer, CodeReady Workspaces are available at no cost with an OpenShift subscription and can be accessed by joining the [Red Hat developer](https://developers.redhat.com/register/) program. Built on the open **Eclipse Che** project, Red Hat CodeReady Workspaces use Kubernetes and containers to provide any member of the development or IT team with a consistent, secure, and preconfigured development environment. The user experience is as fast and familiar as the IDE on their laptop.
-
-**Browser interface**  
-The CodeReady Workspaces use the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools to build a repeatable workspace that is designed for development teams to collaborate on smart contract or client applications. Instead of the tooling running on your local machine, it runs in an OpenShift cluster and is accessible through a web browser. It includes the same benefits of running the tooling locally including access to tutorials and samples, as well as the syntax highlighting and code completion that you expect from the IDE.
-
-**Collaboration**  
-Teams of developers can work in the same shareable preconfigured environment. Onboarding new developers is streamlined as they avoid spending time configuring a local development environment and can get started quickly.
-
-**Restricted teams**  
-This option is beneficial to customers who operate in highly regulated spaces and cannot download tooling locally, allowing them to maintain a secure development environment.
-
-**Familiar development experience**  
-The workspace uses the open source **Eclipse Theia IDE** that serves as the editor component of the CodeReady Workspaces, and includes all of the popular packages, tools, and utilities similar to VS Code and supports VS Code extensions. The workspace is also preconfigured with the prerequisite tooling that is required by the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling and can be customized for your development team, such as version control so that you can import projects from **GitHub**.
-
-
-
-### Current limitations of the CodeReady Workspaces
-{: #develop-vscode-crw-limits}
-
-While the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling that runs in the CodeReady Workspaces is exactly the same experience as when you run on your local system, the following features will not work in the CodeReady Workspaces and are not currently supported. Bi-weekly updates to the tooling are planned to address these features.
-
-- Creation of a local Fabric network from a template (one organization, or two organizations)
-
-    If you want to deploy and test your smart contracts, instead of using a local Fabric network, you can build an {{site.data.keyword.blockchainfull_notm}} Platform network outside of Red Hat CodeReady Workspaces, and then use the **Add Environment** command to import it into the {{site.data.keyword.blockchainfull_notm}} Platform extension. Detailed steps are included later in this topic.
-    {: note}
-
-- If you plan to work on Go smart contracts, you need to configure the Go extension to the editor in your developer workspace.
-
-### Choose your Developer Tooling environment
-{: #develop-vscode-crw-choose}
-
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/rh-crw.png" width="188" h alt="Install Developer Tooling into Red Hat CodeReady Workspaces in the cloud." style="width:188px;" /><map name="home_map" id="home_map"><area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw" alt="Install Developer Tooling into Red Hat CodeReady Workspaces in the cloud" title="Install Developer Tooling into Red Hat CodeReady Workspaces in the cloud" shape="rect" coords="1,-4,187,71" /></map>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<img usemap="#home_map2" border="0" class="image" id="image_ztx_crb_f1b" src="images/visual-studio.png" width="188" alt="Install the  {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension into Visual Studio on your local system." style="width:188px;" /><map name="home_map2" id="home_map"><area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-install" alt="Install the {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension into Visual Studio on your local system" title="Install the {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension into Visual Studio on your local system" shape="rect" coords="-2, 0, 192, 68" /></map>
-
-Both development environments include the same rich functionality of the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling. The **Red Hat CodeReady Workspaces** include the pre-installed stack of prerequisites to get up and running quickly in an IDE that is accessible from your web browser. Choose **VS Code extension from the VisualStudio Marketplace** if you prefer to develop smart contracts and applications locally. You will need to download, install, and configure everything on your local system.
-
-## Install Developer Tooling into Red Hat CodeReady Workspaces
-{: #develop-vscode-crw}
-
-The following set of steps can be used to install the CodeReady Workspaces and configure it with the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling on an OpenShift 4.3+ cluster. If you prefer to install the tooling on your local system, see [Install {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension](#develop-vscode-install).
-
-1. Log in as the administrator of your OpenShift 4.3 cluster.
-2. In the navigation bar, click **Operators** > **Operator Hub**. Ensure you have selected the project from the twistie at the top of the page, where you want the operator to be installed.
-3. Search for **CodeReady Workspaces** and then, click **Install**.
-4. When the operator is successfully installed, it is visible from the **Installed Operators** tab and the status is `Succeeded`.
-5. From the table of Installed Operators, click **Red Hat CodeReady Workspaces** > **CodeReady Workspaces cluster**.
-6. Red Hat CodeReady Workspaces are based on the open **Eclipse Che** project that uses Kubernetes and containers to provide any member of a development or IT team with a consistent, secure, and zero-configuration development environment. Click **Create CheCluster**.
-7. It takes several minutes for the CheCluster creation to complete. When it is ready, there are two URLs visible in the CheCluster Details **Overview** tab:
-    - **CodeReady Workspaces URL** - used to access the workspace.
-    - **Red Hat SSO Admin Console URL** - used to manage the users that are allowed to interact with the workspace.  
-
-    Click the **CodeReady Workspaces URL** and log in. You are asked to provide a `Username` that is used to form the name of the workspace, along with your `Email` address.  
-
-    To avoid errors when creating the custom workspace in the next step, do not include any special characters in the `Username`.
-    {: tip}
-
-8. Click **Create a Custom Workspace** and then click **IMPORT DEVFILE**. CodeReady Workspaces use **Devfiles** to describe the contents of a developer workspace. When you want to use CodeReady Workspaces with the {{site.data.keyword.blockchainfull_notm}} Platform Developer Tooling, you need to bring several components into your Devfile. Specifically, you need to add the Developer Tooling as a `chePlugin` by including it in your list of components. The following `.yaml` file represents a minimal Devfile for using the {{site.data.keyword.blockchainfull_notm}} Platform extension with CodeReady Workspaces:
-    ```
-    ---
-    apiVersion: 1.0.0
-    metadata:
-        name: ibp-sample-devfile
-      components:
-    - type: cheEditor
-      id: eclipse/che-theia/latest
-      alias: theia-editor
-      memoryLimit: 1024M
-    - type: chePlugin
-      reference: https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/latest/download/ibm-blockchain-platform-che.yaml
-      alias: ibm-blockchain-platform
-    ```
-    {: codeblock}
-
-    Where:  
-    - **metadata:** is the name that is given to the workspace. In this example, it is `ibp-sample-devfile`. Users should specify their own value for this property.
-    - **components: - type: cheEditor** is the default **Eclipse Theia editor** that is automatically included in the CodeReady Workspaces and is not a required component in a Devfile. However, the {{site.data.keyword.blockchainfull_notm}} Platform extension requires a higher memory limit than the default, so it must be included along with the `memoryLimit` property to override the defaults.
-    - **components: - type: chePlugin** is the reference to the **{{site.data.keyword.blockchainfull_notm}} Platform VS Code extension**. The sample includes a reference to the latest version of our extension by using a URL from GitHub: `https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/latest/download/ibm-blockchain-platform-che.yaml`. This means that whenever the workspace starts or restarts, the latest version of our extension is installed. It is expected that updates are published to the extension every two weeks.
-
-    If you prefer to pin your workspace to a specific version of the VS Code extension, go to the [GitHub Releases page](https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases) and navigate to the URL for the version you prefer. Scroll down to the Assets twistie for that release to locate a set of files. Copy the URL for the file named `ibm-blockchain-platform-che-x.y.z.yaml`, for example `ibm-blockchain-platform-che-1.0.31.yaml`. The URL should look similar to: `https://github.com/IBM-Blockchain/blockchain-vscode-extension/releases/download/v1.0.31/ibm-blockchain-platform-che-1.0.31.yaml`. Paste this URL into the `reference` field, replacing the URL provided in the sample.
-    {: tip}
-
-    This file can be further customized according to your developer environment needs, for example to check out Hyperledger Fabric samples from GitHub. Learn more about Devfiles in the [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/end-user_guide/workspaces-overview_crw#what-is-a-devfile_making-a-workspace-portable-using-a-devfile){: external}.
-
-9. Click the **YAML** tile, and paste the edited sample into the `YAML` box. Then, click **Create & Open**. It takes several minutes for the workspace to load. After it loads successfully, click the blockchain icon to launch the Developer Tooling.
-
-    ![CodeReady Workspaces UI](images/crw.png "CodeReady Workspaces UI"){: caption="Figure 2. CodeReady Workspaces UI" caption-side="bottom"}  
-
-### Next steps
-{: #develop-vscode-crw-next}
-
-An additional benefit of the CodeReady Workspaces is that after your workspace is up and running and you want to share it with a colleague, you can use the **Factories** feature to create a template for the workspace and share the factory via a URL. Read more about how to use Factories in the CodeReady Workspaces [documentation](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/1.0/html/administration_guide/administering_workspaces#factories){: external}.  
-
-Proceed to [Step one](#develop-vscode-guided-tutorials) to learn how to access the tutorials.
-
-**Reference**  
-- [CodeReady Workspaces 2.1 Installation Guide](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/installation_guide/index){: external}
-- [CodeReady Workspaces 2.1 Administration Guide](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/administration_guide/index){: external}
-- [CodeReady Workspaces 2.1 End-user Guide](https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/2.1/html/end-user_guide/index){: external}
+The {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools can be installed as a **VS Code extension** on your local system. Use **VS Code extension from the VisualStudio Marketplace** to develop smart contracts and applications locally. You will need to download, install, and configure everything on your local system.
 
 ## Install {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension for free
 {: #develop-vscode-install}
 
-Before you install the {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension on your local system, you must complete the prerequisites. If you have already configured the [Red Hat CodeReady Workspaces](#develop-vscode-crw) for your developer environment, you can skip ahead to [Step one](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-guided-tutorials) to get started with the tooling.
+Before you install the {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension on your local system, you must complete the prerequisites.
 
 ### Prerequisites
 {: #develop-vscode-prerequisites}
@@ -318,7 +217,7 @@ You can also click **Delete Package** to remove the smart contract package from 
 
 You can use the VS Code extension to deploy your smart contract to a preconfigured Hyperledger Fabric network that the extension creates on your local machine. If you are deploying to a V1 capability enabled channel, you need to install and instantiate your smart contract. If you are deploying to a V2 capability enabled channel that uses the new Fabric 2.x lifecycle process, you need to install then "approve" and "commit" a smart contract, as opposed to instantiating it.
 
-This option to deploy a smart contract to a preconfigured network is currently not available if you are running your developer environment from Red Hat CodeReady Workspaces. Instead, you can use an existing {{site.data.keyword.blockchainfull_notm}} Platform network. See the instructions in [Step six](#develop-vscode-connecting-ibp) to connect to that network.
+To deploy a smart contract to a preconfigured network, you can use an existing {{site.data.keyword.blockchainfull_notm}} Platform network. See the instructions in [Step six](#develop-vscode-connecting-ibp) to connect to that network.
 
 ### Deploying a preconfigured Hyperledger Fabric network
 {: #develop-vscode-connecting-and-disconnecting}

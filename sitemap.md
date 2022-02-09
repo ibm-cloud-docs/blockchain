@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-20"
+lastupdated: "2022-02-09"
 
 keywords: site map
 subcollection: blockchain
@@ -383,12 +383,6 @@ subcollection: blockchain
 * [What version of the {{site.data.keyword.blockchainfull_notm}} Platform works with the Ansible collection?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-ansible-version)
 
 * [How do I get support for running the {{site.data.keyword.blockchainfull_notm}} Platform Ansible playbook?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-ansible-support)
-
-* [Do I need OpenShift to run CodeReady Workspace?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-codeready-openshift)
-
-* [How often do updates get rolled out for the CodeReady Workspace extension?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-codeready-updates)
-
-* [How can I test my smart contract that is running in CodeReady workspace?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-test-smart-contracts)
 
 * [How can I find the examples and tutorials within the VSCode extension?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-vscode-tutorials)
 
@@ -815,11 +809,6 @@ subcollection: blockchain
 
 [Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools](/docs/blockchain?topic=blockchain-develop-vscode)
 * [Before you begin](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-before)
-    * [What are the benefits of CodeReady Workspaces?](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw-why)
-    * [Current limitations of the CodeReady Workspaces](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw-limits)
-    * [Choose your Developer Tooling environment](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw-choose)
-* [Install Developer Tooling into Red Hat CodeReady Workspaces](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw)
-    * [Next steps](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw-next)
 * [Install {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension for free](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-install)
     * [Prerequisites](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-prerequisites)
     * [Install the extension](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-installing-the-extension)
@@ -1204,6 +1193,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
+
+* [08 Feb 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-02-2022)
 
 * [11 Jan 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-01-2022)
 

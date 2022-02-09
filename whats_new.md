@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-02-01"
 
 keywords: IBM Blockchain Platform, release, new features
 
@@ -29,7 +29,7 @@ subcollection: blockchain
 {: #whats-new-04-13-2021}
 {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 is now available with support for:
 
-- For customers who want to use openCryptoki Hardware Security Module (HSM) on s390x, the platform now supports configuration of HSM with a daemon. For more information, see [Configure an HSM daemon](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-hsm-daemon). 
+- For customers who want to use openCryptoki Hardware Security Module (HSM) on s390x, the platform now supports configuration of HSM with a daemon. For more information, see [Configure an HSM daemon](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-hsm-daemon).
 
 
 ## January 19, 2021
@@ -73,15 +73,11 @@ The {{site.data.keyword.blockchainfull_notm}} Platform can now be deployed onto 
 ## June 18, 2020
 {: #whats-new-06-18-2020}
 
-{{site.data.keyword.blockchainfull_notm}} Platform provides tighter integration with Red Hat solutions, including additional integration with Red Hat OpenShift 4.3 and support for Red Hat CodeReady Workspaces. This latest release also makes available a set of Ansible Content Collections to help accelerate the deployment of blockchain solutions.
+{{site.data.keyword.blockchainfull_notm}} Platform provides tighter integration with Red Hat solutions, including additional integration with Red Hat OpenShift 4.3. This latest release also makes available a set of Ansible Content Collections to help accelerate the deployment of blockchain solutions.
 
 **IBM Blockchain Platform Ansible Playbooks**  
 
 The {{site.data.keyword.blockchainfull_notm}} Platform improvements are designed to enable enterprises to launch production blockchain networks faster. This release helps organizations accelerate deployment through support of Ansible, an open source tool that automates provisioning, configuration management, and application deployment. **Ansible Content Collections** are packages of modules, plug-ins, and other Ansible content that automate these processes. The platform has published a set of Ansible Content Collections to help organizations deploy blockchain components and networks with greater speed. See [Getting started with Ansible playbooks on the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible) to learn more.
-
-**Red Hat CodeReady Workspaces**  
-
-The platform expands its developer tool ecosystem with **Red Hat CodeReady Workspaces**, that help organizations speed up and simplify the set up of blockchain development environments. Red Hat CodeReady Workspaces provide a preconfigured and shared runtime environment that enables cloud-native blockchain development to be performed across teams. Red Hat CodeReady Workspaces offer strong security and adhere to enterprise-grade compliance for cloud-native development. Read about the [benefits of CodeReady Workspaces](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-crw-why) to learn more.
 
 **Hyperledger Fabric 2.0 images**
 
@@ -370,4 +366,3 @@ This release also debuts some improvements to the documentation table of content
 {: #whats-new-8-11-2017}
 
 {{site.data.keyword.blockchainfull_notm}} Platform replaces {{site.data.keyword.blockchainfull_notm}} on Cloud and releases Enterprise Plan.
-

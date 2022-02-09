@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-01-11"
+lastupdated: "2022-02-08"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -76,9 +76,6 @@ content-type: faq
 - [What languages are supported for smart contracts?](#ibp-v2-faq-v2-IBP-Overview-1-4)
 - [What version of the IBM Blockchain Platform works with the Ansible collection?](#ibp-v2-faq-ansible-version)
 - [How do I get support for running the IBM Blockchain Platform Ansible playbook?](#ibp-v2-faq-ansible-support)
-- [Do I need OpenShift to run CodeReady Workspace?](#ibp-v2-faq-codeready-openshift)
-- [How often do updates get rolled out for the CodeReady Workspace extension?](#ibp-v2-faq-codeready-updates)
-- [How can I test my smart contract that is running in CodeReady workspace?](#ibp-v2-faq-test-smart-contracts)
 - [How can I find the examples and tutorials within the VSCode extension?](#ibp-v2-faq-vscode-tutorials)
 - [Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?](#ibp-v2-faq-mon-client-app)
 
@@ -101,7 +98,7 @@ Hyperledger Fabric is a powerful, versatile, pluggable, open source, distributed
 {: faq}
 
 
-{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.4.
+{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.5.
 
 
 
@@ -362,24 +359,6 @@ Versions 2.1.3 and 2.5.x of the {{site.data.keyword.blockchainfull_notm}} Platfo
 {: faq}
 
 Ansible is an open source technology and this product is not officially supported by {{site.data.keyword.IBM_notm}}. For support related to the usage of the {{site.data.keyword.blockchainfull_notm}}  Platform and Ansible playbooks use the [GitHub repository](https://github.com/IBM-Blockchain/ansible-collection/issues){: external}.
-
-## Do I need OpenShift to run CodeReady Workspace?
-{: #ibp-v2-faq-codeready-openshift}
-{: faq}
-
-Yes, OpenShift is a prerequisite to running CodeReady because you have to deploy your workspace into an OpenShift cluster.
-
-## How often do updates get rolled out for the CodeReady Workspace extension?
-{: #ibp-v2-faq-codeready-updates}
-{: faq}
-
-Updates are scheduled to coincide with the VS Code extension and should be available every two weeks.
-
-## How can I test my smart contract that is running in CodeReady workspace?
-{: #ibp-v2-faq-test-smart-contracts}
-{: faq}
-
-Currently this can be achieved by connecting to a Fabric network running outside of the CodeReady Workspaces extension. In a subsequent release we plan to introduce a simple way to deploy a Fabric network from within the extension.
 
 ## How can I find the examples and tutorials within the VSCode extension?
 {: #ibp-v2-faq-vscode-tutorials}

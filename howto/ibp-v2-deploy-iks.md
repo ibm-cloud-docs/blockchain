@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-15"
+  years: 2019, 2022
+lastupdated: "2022-02-08"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -45,7 +45,7 @@ The following diagram illustrates the three elements of the {{site.data.keyword.
 
 - **{{site.data.keyword.blockchainfull_notm}} Platform Console (UI)**: This is the console that allows you to create and manage your blockchain components. After you provision a service instance in {{site.data.keyword.cloud_notm}}, you can deploy an instance of the {{site.data.keyword.blockchainfull_notm}} console and link it to your Kubernetes cluster on {{site.data.keyword.cloud_notm}}. Then you can use the console to create and manage your blockchain components in your Kubernetes cluster. There is no charge for the console.
 
-- **Hyperledger Fabric Components**: The console is used to create and manage blockchain components that are based on Hyperledger Fabric v1.4.12 and v2.2.4 Certificate Authority, peer, and ordering service images. These components are deployed into your Kubernetes cluster and storage is provisioned for them using the `default` storage class when they are deployed.
+- **Hyperledger Fabric Components**: The console is used to create and manage blockchain components that are based on Hyperledger Fabric v1.4.12 and v2.2.5 Certificate Authority, peer, and ordering service images. These components are deployed into your Kubernetes cluster and storage is provisioned for them using the `default` storage class when they are deployed.
 
 - **{{site.data.keyword.IBM_notm}} VS Code extension (Development Tools)**: Download the VS Code extension from the VS Code marketplace in order to get started with developing, packaging, and testing client applications and smart contracts.
 
@@ -54,7 +54,7 @@ The following diagram illustrates the three elements of the {{site.data.keyword.
 
 Before you deploy the console, ensure that you understand the following considerations:
 
-- {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} is built with Hyperledger Fabric v1.4.12 and v2.2.4.
+- {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} is built with Hyperledger Fabric v1.4.12 and v2.2.5.
 - You have the option to link your {{site.data.keyword.blockchainfull_notm}} Platform service instance to a free Kubernetes cluster for evaluation of the offering, however capacity and performance are limited, none of your data can be migrated, and the cluster is deleted after 30 days.
 - You are responsible for the management of health monitoring, security, and logging of your Kubernetes cluster. See this [information](/docs/containers?topic=containers-responsibilities_iks){: external} for details on what {{site.data.keyword.cloud_notm}} manages and what you are responsible for.
 - You are also responsible for monitoring the resource usage of your Kubernetes cluster by using the Kubernetes dashboard. If you need to increase storage capacity of your cluster, see this information on how to modify your existing volume:
