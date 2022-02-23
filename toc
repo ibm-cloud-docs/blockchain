@@ -104,7 +104,7 @@ IBM Blockchain Platform for IBM Cloud
 	Monitoring your network
 		reference/tracking.md
 		reference/monitoring.md
-		[IBM Blockchain Platform Monitoring with Prometheus](https://developer.ibm.com/technologies/blockchain/tutorials/using-prometheus-metrics-to-monitor-your-ibm-blockchain-platform-network)
+		reference/monitoring-prometheus.md)
 
 	howto/backup-restore.md
 	howto/planning-updates-maint.md

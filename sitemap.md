@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-02-23"
 
 keywords: site map
 subcollection: blockchain
@@ -931,8 +931,6 @@ subcollection: blockchain
     * [Create dashboards for the CA and ordering nodes](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-configure-ca-os)
 * [Step four: Configure alerts to monitor resource usage](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-configure-alerts)
 * [Summary](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-summary)
-
-[IBM Blockchain Platform Monitoring with Prometheus](https://developer.ibm.com/technologies/blockchain/tutorials/using-prometheus-metrics-to-monitor-your-ibm-blockchain-platform-network){: external}
 
 
 ## Backing up and restoring components and networks
