@@ -932,6 +932,14 @@ subcollection: blockchain
 * [Step four: Configure alerts to monitor resource usage](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-configure-alerts)
 * [Summary](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-summary)
 
+[Using Prometheus to monitor your network](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus)
+* [Before you begin](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-before)
+* [Step one: Create a Sysdig identity to access nodes](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-sysdig)
+* [Step two: Provision an IBM Cloud Monitoring instance](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-provision)
+* [Step three: Configure the TLS secret](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-configure)
+* [Step four: Configure Prometheus settings](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-configure-settings)
+* [5. View Prometheus metrics](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#5.-view-prometheus-metrics)
+
 
 ## Backing up and restoring components and networks
 {: #sitemap_backing_up_and_restoring_components_and_networks}
