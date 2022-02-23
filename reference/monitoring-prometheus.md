@@ -22,7 +22,7 @@ subcollection: blockchain
 {:support: data-reuse='support'}
 {:download: .download}
 
-# Using Prometheus to monitor your network
+# Prometheus metrics
 {: #ibp-monitoring-prometheus}
 {: help}
 {: support}
@@ -193,7 +193,7 @@ kubectl apply -f cm-sysdig-agent-modified.yaml
 
 The `sysdig-agent` pods should automatically restart when the `daemonset` is applied, but you should still manually restart them after applying the `configmap`, using either the CLI or the Kubernetes dashboard.
 
-## 5. View Prometheus metrics
+## Step five: View Prometheus metrics
 
 View Prometheus metrics by clicking the `Explore` tab in your IBM Cloud Monitoring dashboard. From `Hosts & Containers`, click `Entire Infrastructure`. Expand `Overview by Host` and scroll down to view the `Prometheus` metrics.
 
