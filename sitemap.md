@@ -72,9 +72,10 @@ subcollection: blockchain
 
 [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview)
 
-* [What the {{site.data.keyword.blockchainfull_notm}} Platform offers](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities)
+* [What {{site.data.keyword.blockchainfull_notm}} Platform offers](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities)
 
 * [Supported {{site.data.keyword.cloud_notm}} configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg)
+    * [Fabric Component Support](/docs/blockchain?topic=blockchain-ibp-console-overview#fabric-component-support)
 
 * [Considerations](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-considerations)
 
