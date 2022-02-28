@@ -24,7 +24,7 @@ A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the o
 
 If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.19 - v1.22 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain?topic=blockchain-get-started-console-ocp).
 
-If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the {{site.data.keyword.blockchainfull_notm}} images ](/docs/blockchain?topic=blockchain-blockchain-images).
+If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the IBM Blockchain images](/docs/blockchain?topic=blockchain-blockchain-images).
 
 Watch the following video for an introduction to blockchain and the {{site.data.keyword.blockchainfull}} Platform:
 
@@ -141,8 +141,8 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 | Fabric Component | Support Level |
 |----|----|
 | IBM Certified Fabric images deployed using Kubernetes Operator and managed via the Certified Fabric Operations Console image. | All Certified Fabric images include IBM fix support for supported Hyperledger Fabric versions. |
-| Supported Environments | Recent [Kubernetes and OpenShift versions](/docs/blockchain?topic=blockchain-ibp-console#ibp-console#fabric-component-support) on IBM Cloud, third-party Cloud or local installations. |
-| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain?topic=ibmblockchain_support#blockchain-general-support) |
+| Supported Environments | Recent [Kubernetes and OpenShift versions](docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) on IBM Cloud, third-party Cloud or local installations. |
+| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain?topic=blockchain-general-support) |
 | Hyperledger Fabric Labs Support | Fabric Operations Console via Certified Image and deployed by Kubernetes Operator is supported. |
 | Hyperledger Fabric Open Source Projects - [IBM Blockchain GitHub](https://github.com/ibm-blockchain) | Open source projects are not included in support, with the exception of [Ansible](/docs/blockchain?topic=blockchain-ansible). All other open source projects are [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). | 
 | Hyperledger Fabric SDK and CLI | Basic connectivity diagnostics is supported. Code support and SDK API usage and tuning are not included in support - [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). |
