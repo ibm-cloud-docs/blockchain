@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-24"
+lastupdated: "2022-02-28"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -22,9 +22,9 @@ The {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_
 
 A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments.
 
-If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.19 - v1.22 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-get-started-console-ocp).
+If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.19 - v1.22 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain?topic=blockchain-get-started-console-ocp).
 
-If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the {{site.data.keyword.blockchainfull_notm}} images ](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-images).
+If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the {{site.data.keyword.blockchainfull_notm}} images ](/docs/blockchain?topic=blockchain-blockchain-images).
 
 Watch the following video for an introduction to blockchain and the {{site.data.keyword.blockchainfull}} Platform:
 
@@ -140,17 +140,17 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 
 | Fabric Component | Support Level |
 |----|----|
-| IBM Certified Fabric images deployed using Kubernetes Operator and managed via the Certified Fabric Operations Console image. | All Certified Fabric images include IBM fix support for [supported Hyperledger Fabric versions](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#fabric-component-support). |
-| Supported Environments | Recent [Kubernetes and OpenShift versions](/docs/blockchain-sw-252?topic=blockchain-sw-252-console-ocp-about#console-ocp-about-prerequisites) on IBM Cloud, third-party Cloud or local installations. |
-| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support#blockchain-support-resources) |
+| IBM Certified Fabric images deployed using Kubernetes Operator and managed via the Certified Fabric Operations Console image. | All Certified Fabric images include IBM fix support for supported Hyperledger Fabric versions. |
+| Supported Environments | Recent [Kubernetes and OpenShift versions](/docs/blockchain?topic=blockchain-ibp-console#ibp-console#fabric-component-support) on IBM Cloud, third-party Cloud or local installations. |
+| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain?topic=ibmblockchain_support#blockchain-general-support) |
 | Hyperledger Fabric Labs Support | Fabric Operations Console via Certified Image and deployed by Kubernetes Operator is supported. |
-| Hyperledger Fabric Open Source Projects - [IBM Blockchain GitHub](https://github.com/ibm-blockchain) | Open source projects are not included in support, with the exception of [Ansible](/docs/blockchain-sw-252?topic=blockchain-sw-252-ansible). All other open source projects are [community support only](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support#blockchain-support-resources). | 
-| Hyperledger Fabric SDK and CLI | Basic connectivity diagnostics is supported. Code support and SDK API usage and tuning are not included in support - [community support only](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support#blockchain-support-resources). |
-| Hyperledger Fabric Chaincode | Basic chaincode diagnostics is supported. Code support and tuning are not included in support - [community support only](/docs/blockchain-sw-252?topic=blockchain-sw-252-blockchain-support#blockchain-support-resources). |
-| Deployment Architecture and Design | Basic deployment and management of highly available [peer](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha#ibp-console-ha-peers), [orderer](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha#ibp-console-ha-ordering-service), and [Certificate Authority](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-ha#ibp-console-ha-ca) nodes via the Console are supported. Detailed Deployment Architecture and Design are not included in support - see [deployment options](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment) for more information. |
-| Solution Architecture and Design | [Deploying and managing smart contracts](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-smart-contracts-v2) via the Console are supported. Solution Architecture and Design are not included in  support. |
-| Performance Tuning | [Resource allocation](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-adv-deployment#ibp-console-adv-deployment-options) via the Console is supported. Detailed performance analysis and tuning of the environment or application code are not included in support - see the documentation on creating [highly available applications and using indexes with CouchDB](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-app#console-app-couchdb). |
-| Certificate Renewal | [Automatic](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt#cert-mgmt-auto-renewal) and [Manual](/docs/blockchain-sw-252?topic=blockchain-sw-252-cert-mgmt#cert-mgmt-manual-renewal) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using a [Certificate Management Solution](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-identities#storing-and-managing-certificates-in-ibm-cloud-certificate-manager) is recommended for keeping track of identities and certificates. |
+| Hyperledger Fabric Open Source Projects - [IBM Blockchain GitHub](https://github.com/ibm-blockchain) | Open source projects are not included in support, with the exception of [Ansible](/docs/blockchain?topic=blockchain-ansible). All other open source projects are [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). | 
+| Hyperledger Fabric SDK and CLI | Basic connectivity diagnostics is supported. Code support and SDK API usage and tuning are not included in support - [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). |
+| Hyperledger Fabric Chaincode | Basic chaincode diagnostics is supported. Code support and tuning are not included in support - [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). |
+| Deployment Architecture and Design | Basic deployment and management of highly available [peer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-peers), [orderer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ordering-service), and [Certificate Authority](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ca) nodes via the Console are supported. Detailed Deployment Architecture and Design are not included in support - see [deployment options](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment) for more information. |
+| Solution Architecture and Design | [Deploying and managing smart contracts](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2) via the Console are supported. Solution Architecture and Design are not included in  support. |
+| Performance Tuning | [Resource allocation](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-options) via the Console is supported. Detailed performance analysis and tuning of the environment or application code are not included in support - see the documentation on creating [highly available applications and using indexes with CouchDB](/docs/blockchain?topic=blockchain-ibp-console-app#console-app-couchdb). |
+| Certificate Renewal | [Automatic](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-auto-renewal) and [Manual](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-manual-renewal) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using a [Certificate Management Solution](/docs/blockchain?topic=blockchain-ibp-console-identities#storing-and-managing-certificates-in-ibm-cloud-certificate-manager) is recommended for keeping track of identities and certificates. |
 {: caption="Table 2. Fabric component support" caption-side="bottom"}
 
 
