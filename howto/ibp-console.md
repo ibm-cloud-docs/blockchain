@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-28"
+lastupdated: "2022-03-01"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -132,7 +132,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ### Fabric Component Support
 {: #fabric-component-support}
 
-The following support levels are provided for Hyperledger Fabric v1.4.12, v2.2.2, v2.2.4, and
+The following support levels are provided for Hyperledger Fabric v1.4.12, v2.2.4, v2.2.5, and
 Fabric CA v1.5.0 and v1.5.2.
 
 Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Operations Console **are required for support** and provide Hyperledger Fabric clients with a verified production setup, simplified management and support, and verified security patches.
