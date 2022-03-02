@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-01"
+lastupdated: "2022-03-02"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -141,8 +141,8 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 | Fabric Component | Support Level |
 |----|----|
 | IBM Certified Fabric images deployed using Kubernetes Operator and managed via the Certified Fabric Operations Console image. | All Certified Fabric images include IBM fix support for supported Hyperledger Fabric versions. |
-| Supported Environments | Recent [Kubernetes and OpenShift versions](docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) on IBM Cloud, third-party Cloud or local installations. |
-| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain?topic=blockchain-general-support) |
+| Supported Environments | Recent [Kubernetes and OpenShift versions](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) on IBM Cloud, third-party Cloud or local installations. |
+| Hyperledger Fabric without IBM Certified Images, Kubernetes Operator or Certified Fabric Operations Console image. | Not included in support - [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support) |
 | Hyperledger Fabric Labs Support | Fabric Operations Console via Certified Image and deployed by Kubernetes Operator is supported. |
 | Hyperledger Fabric Open Source Projects - [IBM Blockchain GitHub](https://github.com/ibm-blockchain) | Open source projects are not included in support, with the exception of [Ansible](/docs/blockchain?topic=blockchain-ansible). All other open source projects are [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). | 
 | Hyperledger Fabric SDK and CLI | Basic connectivity diagnostics is supported. Code support and SDK API usage and tuning are not included in support - [community support only](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-general-support). |
