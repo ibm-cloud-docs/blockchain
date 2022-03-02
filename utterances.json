@@ -138,20 +138,6 @@
         "limitation of using free IBP",
         "limitation of using free IBM Blockchain Platform"
     ],
-    "ibp-v2-faq-ocp-versions": [
-        "Redhat Open shift support Blockchain",
-        "versions of Red Hat OpenShift supported on IBP",
-        "Redhat Open shift support IBM Blockchain Platform",
-        "versions of OpenShift supported on IBP",
-        "Redhat Open shift support IBP"
-    ],
-    "ibp-v2-faq-ocp-trial": [
-        "free trial redhat openshift Blockchain",
-        "trial option available for blockchain using a Red Hat ",
-        "free trial redhat openshift on blockchain",
-        "free trial redhat openshift IBM Blockchain Platform",
-        "free trial redhat openshift IBP"
-    ],
     "ibp-v2-faq-ocp-migrate": [
         "migrate Kubernetes cluster to a Red Hat OpenShift in Blockchain",
         "migrate off kubernetes to red hat for blockchain",
@@ -192,15 +178,6 @@
         "existing Kubernetes cluster working with Blockchain",
         "existing Kubernetes cluster works with the IBP 1.13 1.14 1.15"
     ],
-    "ibp-v2-faq-customer-logs": [
-        "audit logs for Blockchain",
-        "blockchain store the customer's logs",
-        "how long are audit logs maintained in blockchain",
-        "find the logs for blockchain",
-        "audit logs for IBP",
-        "long are audit logs for blockchain kept",
-        "audit logs for IBM Blockchain Platform"
-    ],
     "ibp-v2-faq-v2-Logging-and-Monitoring-11-6": [
         "access to logging services in blockchain",
         "get access to logging information in blockchain",
@@ -232,13 +209,6 @@
         "IBP console issue in Chrome",
         "blockchain console failing in Chrome",
         "IBM blockchain conflict with Chrome version 77.0.3865.90"
-    ],
-    "ibp-v2-troubleshooting-status-unavailable": [
-        "hover over my node the status is Status unavailable",
-        "IBP node status unavailable.",
-        "Blockchain console peer status unavailable",
-        "IBP CA status unavailable",
-        "IBP orderer node status unavailable"
     ],
     "ibp-v2-troubleshooting-status-undetectable": [
         "hover over my node, the status is Status undetectable",
@@ -392,13 +362,6 @@
         "Kubernetes cluster reporting that the pod has hit a crash loop backoff in blockchain",
         "deployed blockchain node and Kubernetes says the pod has hit a crash loop backoff"
     ],
-    "ibp-v2-troubleshooting-healthchecks": [
-        "nodes deployed on IBM Cloud Private not processing transactions and are failing health checks",
-        "ICP Blockchain failing health check",
-        "ICP IBP failing health check",
-        "health checks fail for blockchain",
-        "Cloud private blockchain not processing transactions "
-    ],
     "ibp-console-transientfailure": [
         "Blockchain Platform Console is showing a \"all SubConns are in TransientFailure\" error. ",
         "IBP console \"all SubConns are in TransientFailure\" error",
@@ -424,13 +387,6 @@
         "IBP lost contracts after upgrade of smart contract container",
         "crash removed all blockchain contracts",
         "Blockchain can't find contracts after upgrade of container "
-    ],
-    "ibp-v2-troubleshooting-upgrade-tool": [
-        "retry a chaincode migration in blockchain",
-        "upgrade my chaincode and get a blockchain error",
-        "encountered an error starting the chaincode container in blockchain",
-        "failed chaincode migration in blockchain",
-        "chaincode migration fails in blockchain console"
     ],
     "ibp-v2-faq-cert-mgmt": [
         "rotate blockchain certificates",
