@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-03-07"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -12,9 +12,6 @@ subcollection: blockchain
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-{{site.data.keyword.blockchainfull}} Platform is currently **incompatible** with Kubernetes v1.22. Upgrading an Kubernetes cluster running {{site.data.keyword.blockchainfull}} Platform to v1.22 will cause blockchain to stop functioning. See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) for compatible versions.
-{: important}
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform
 {: #get-started-ibp}
