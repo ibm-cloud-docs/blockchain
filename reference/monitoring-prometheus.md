@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-02-23"
+lastupdated: "2022-03-07"
 
 keywords:  monitoring, resource consumption, resource allocation, disk space, memory usage, disk usage, Prometheus, metrics  
 
@@ -59,14 +59,14 @@ If you have multiple components with certificates issued by the same CA, it is n
 
 In this step you will provision an IBM Cloud Monitoring instance, which collects and displays metrics for Kubernetes clusters, including IBM Blockchain Platform Prometheus metrics.
 
-Navigate to the `Catalog` from your IBM Cloud dashboard and search for `IBM Cloud Monitoring`. `Platform Metrics` does not have to be enabled for Prometheus metrics to work. Furthermore, the instance is not situated in a restricted region.
+Navigate to the `Catalog` from your IBM Cloud dashboard and search for `IBM Cloud Monitoring`. `Platform Metrics` does not have to be enabled for Prometheus metrics to work. Furthermore, you can choose any region to locate the instance&mdash;the region will not affect the setup.
 
 Once your IBM Cloud Monitoring instance is provisioned, navigate to `Get Started > Install the agent > Add Sources`. This will redirect you to the command for installing `sysdig` agents on your Kubernetes cluster. Log in to your cluster using the CLI and run the `Public Endpoint` curl command to install the agents, if necessary.
 
 ## Step three: Configure the TLS secret
 {: #ibp-monitoring-prometheus-configure}
 
-Configuring Sysdig created the `ibm-observe` namespace in your Kubernetes cluster. You will repeat this configuration for Prometheus by editing the associated `daemonset` and `configmap`. First, store the TLS certs that you previously downloaded in a Kubernetes secret. Then log in to your cluster using the CLI and run the following commands.
+Configuring Sysdig created the `ibm-observe` namespace in your Kubernetes cluster. You will repeat this configuration for Prometheus by editing the associated `daemonset` and `configmap`. First, store the downloaded TLS certs in a Kubernetes secret by logging into the cluster (via the CLI) and running the following commands.
 
 Create a TLS secret in the `ibm-observe` namespace by running the following command, where `<cert-path>` and `<key-path>` are the paths to the certs you downloaded to your local file system. Be sure to keep a record of the `<secret-name>` that you use:
 
