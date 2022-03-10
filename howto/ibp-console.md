@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-10"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -22,7 +22,7 @@ The {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_
 
 A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments.
 
-If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.19 - v1.22 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain?topic=blockchain-get-started-console-ocp).
+If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.19 - v1.23 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.2](/docs/blockchain?topic=blockchain-get-started-console-ocp).
 
 If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the IBM Blockchain images](/docs/blockchain?topic=blockchain-blockchain-images).
 
@@ -121,7 +121,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 
 | | |
 |----|----|
-| Kubernetes | <ul><li>v1.19 - v1.22</ul> |
+| Kubernetes | <ul><li>v1.19 - v1.23</ul> |
 | Orchestration Service| <ul><li>Kubernetes</li><li>OpenShift Container Platform on IBM Cloud 4.6, 4.7, 4.8, 4.9</li></ul> |
 | Infrastructure| <ul><li>Classic</li></ul>|
 | Hardware Security Module [(HSM)](#x6704988){: term} | <ul><li>Tested with [Cloud HSM ](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) <li> Support any HSM that implements the [PKCS #11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external} </ul> |
