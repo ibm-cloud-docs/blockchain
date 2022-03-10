@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-03-10"
 
 keywords: site map
 subcollection: blockchain
@@ -72,9 +72,10 @@ subcollection: blockchain
 
 [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview)
 
-* [What the {{site.data.keyword.blockchainfull_notm}} Platform offers](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities)
+* [What {{site.data.keyword.blockchainfull_notm}} Platform offers](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities)
 
 * [Supported {{site.data.keyword.cloud_notm}} configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg)
+    * [Fabric Component Support](/docs/blockchain?topic=blockchain-ibp-console-overview#fabric-component-support)
 
 * [Considerations](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-considerations)
 
@@ -932,7 +933,13 @@ subcollection: blockchain
 * [Step four: Configure alerts to monitor resource usage](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-configure-alerts)
 * [Summary](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-summary)
 
-[IBM Blockchain Platform Monitoring with Prometheus](https://developer.ibm.com/technologies/blockchain/tutorials/using-prometheus-metrics-to-monitor-your-ibm-blockchain-platform-network){: external}
+[Prometheus metrics](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus)
+* [Before you begin](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-before)
+* [Step one: Create a Sysdig identity to access nodes](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-sysdig)
+* [Step two: Provision an IBM Cloud Monitoring instance](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-provision)
+* [Step three: Configure the TLS secret](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-configure)
+* [Step four: Configure Prometheus settings](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#ibp-monitoring-prometheus-configure-settings)
+* [Step five: View Prometheus metrics](/docs/blockchain?topic=blockchain-ibp-monitoring-prometheus#step-five-view-prometheus-metrics)
 
 
 ## Backing up and restoring components and networks
@@ -1193,6 +1200,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
+
+* [08 Mar 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-03-2022)
 
 * [08 Feb 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-02-2022)
 
