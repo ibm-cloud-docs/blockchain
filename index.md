@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-03-10"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -63,3 +63,5 @@ After you deploy {{site.data.keyword.blockchainfull_notm}} Platform in the envir
 {: #get-started-ibp-getting-support}
 
 {{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
+
+    
