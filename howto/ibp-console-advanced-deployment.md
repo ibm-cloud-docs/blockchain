@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-11"
+  years: 2022
+lastupdated: "2022-03-14"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -642,7 +642,7 @@ The ability to override the peer configuration by using the console or APIs is a
 #### Why would I want to override a peer configuration?
 {: #ibp-console-adv-deployment-peer-customization-why}
 
-A common use case would be to override some of the default timeouts, or peer private data settings. Additionally you can customize the gossip configuration. These are just a few suggestions of customizations you might want to make, but the full list of available overrides is provided below. This list contains all of fields that can be overridden via editing the `JSON` when a peer is deployed from the console. For more information about what each field is used for you can refer to the [Fabric sample peer configuration file](https://github.com/hyperledger/fabric/blob/release-2.2/sampleconfig/core.yaml){: external} options.
+A common use case is to override some of the default timeouts, or peer private data settings. You can also customize the gossip configuration. The full list of available overrides is provided below, which contains all fields that can be overridden by editing the `JSON` when a peer is deployed from the console. For more information on each field, refer to the [Fabric sample peer configuration file](https://github.com/hyperledger/fabric/blob/release-2.4/sampleconfig/core.yaml){: external} options.
 
 ```json
 {
@@ -723,16 +723,6 @@ A common use case would be to override some of the default timeouts, or peer pri
                     "KeyStore": null
                 }
             },
-            "PKCS11": {
-                "Library": null,
-                "Label": null,
-                "Pin": null,
-                "Hash": null,
-                "Security": null,
-                "FileKeyStore": {
-                    "KeyStore": null
-                }
-            }
         },
         "client": {
             "connTimeout": "3s"
@@ -1333,7 +1323,7 @@ You have gathered all of your peer or ordering service certificates from your th
 ## Configuring a node to use a Hardware Security Module (HSM)
 {: #ibp-console-adv-deployment-cfg-hsm}
 
-Key management is a critical aspect of managing a blockchain network. Because private keys are not stored by the platform, users are responsible for downloading and securing the private key of their node identities. In a production network, when a higher level of security is required for private keys, an HSM is an optional hardware appliance that performs cryptographic operations and provides the capability to ensure that the private keys never leave the HSM. Currently, Hyperledger Fabric supports HSM devices that implement the [PKCS #11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}.  PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys.
+Key management is a critical aspect of managing a blockchain network. Because private keys are not stored by the platform, users are responsible for downloading and securing the private key of their node identities. In a production network, when a higher level of security is required for private keys, an HSM is an optional hardware appliance that performs cryptographic operations and provides the capability to ensure that the private keys never leave the HSM. 
 
 The ability to configure a node to use HSM is available only in paid clusters.
 {: note} 
@@ -1356,7 +1346,7 @@ When a CA, peer, or ordering node is configured to use an HSM, their private key
 Configuring a node to use HSM is a three-part process:
 1. **Deploy an HSM**. Utilize the HSM appliance that is available in [{{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/catalog/infrastructure/hardware-security-module){: external} or configure your own HSM. Record the value of the HSM `partition` and `PIN` to be used in the subsequent steps.
     - If you plan to use {{site.data.keyword.cloud_notm}} HSM see this [tutorial](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) for an example of how to configure {{site.data.keyword.cloud_notm}} HSM 6.0 with the {{site.data.keyword.blockchainfull_notm}} Platform. After that is completed you can skip to Part 3 **Configure the node to use HSM**. 
-2. **Configure an HSM client image** or **Set up a PKCS #11 proxy (Deprecated)** [See Build a Docker image](#ibp-console-adv-deployment-hsm-build-docker).
+2. **Configure an HSM client image** [See Build a Docker image](#ibp-console-adv-deployment-hsm-build-docker).
 3. **Configure the node to use HSM**.  From the APIs or the console, when you deploy a peer, CA, or ordering node, you can select the advanced option to use an HSM. See [Configure the node to use the HSM](#ibp-console-adv-deployment-cfg-hsm-node).
 
 ### Before you begin
@@ -1514,11 +1504,7 @@ You are now ready to build the [HSM Client image](#ibp-console-adv-deployment-hs
 ### Build a Docker image
 {: #ibp-console-adv-deployment-hsm-build-docker}
 
-There are two ways to configure HSM on your blockchain network: by **publishing an HSM client image to a container registry**, or by **configuring a PKCS #11 proxy**. The use of a PKCS #11 proxy has been deprecated in favor of building an HSM client image which is simpler to configure and provides better overall performance. Both processes are supported, however if you are configuring a new HSM device, it is recommended that you build and publish the HSM client image. Both sets of instructions are provided, starting with **Build an HSM client image**. If you still prefer to use a PKCS #11 proxy, you can refer to those [instructions](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy) instead.  
-
-It is not possible to migrate an existing node, that uses HSM with a PKCS #11 proxy, to use the HSM client image. To take advantage of the HSM client image, you need to deploy a new CA, peer, or ordering node.
-{: note}
-
+Configure HSM on your blockchain network by **publishing an HSM client image to a container registry**, as described below.
 
 **Build an HSM client image**
 {: #ibp-console-adv-deployment-hsm-client}
@@ -1564,7 +1550,7 @@ LunaSA Client = {
 {: codeblock}
 
 #### Step two: Build the HSM client image
-{: #ibp-console-adv-deployment-hsm-client-docker} 
+{: #ibp-console-adv-deployment-hsm-client-docker}
 
 The HSM client image can be built with a Docker file similar to the following:
 
@@ -1890,12 +1876,10 @@ If you published an HSM client image and created the HSM configmap, the **Use HS
 - **HSM label** - Enter the name of the HSM partition to be used for this node.
 - **HSM PIN** - Enter the PIN for the HSM slot.  
 
-If you prefer to use an HSM that was configured with a PKCS #11 proxy, or did not create the HSM configmap, an additional field is required:
-- **HSM proxy endpoint** -Enter the URL for the PKCS #11 proxy that begins with `tcp://` and includes the `CLUSTER-IP` address and `PORT`. For example, `tcp://172.21.106.217:2345`.
+If you did not create the HSM configmap, an additional field is required:
+
+- **HSM proxy endpoint** -Enter the URL for the endpoint.
 
 Lastly, on the CA **Summary** panel, you can override the default HSM configuration, for example if you want to customize which crypto library implementation to use. Click **Edit configuration JSON (Advanced)** on the **Summary** panel to view the `JSON`. Scroll down to the `BCCSP (Blockchain Crypto Service Provider) section` where you can modify the crypto library settings.
-
-Because the HSM implementation currently only supports HSMs that implement the PKCS #11 standard, you cannot modify the `bccsp.default` that is set to `PKCS11`.
-{: note}
 
 When the node is deployed, a private key for the specified node enroll ID and secret is generated by the HSM and stored securely in the appliance.

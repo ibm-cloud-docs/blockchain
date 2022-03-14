@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2021
-lastupdated: "2021-11-11"
+  years: 2022
+lastupdated: "2022-03-14"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -22,9 +22,6 @@ subcollection: blockchain
 {{site.data.keyword.cloud_notm}} includes an [HSM](#x6704988){: term}
 service that provides cryptographic processing for key generation, encryption, decryption, and key storage. This document describes how to use that service with the {{site.data.keyword.blockchainfull}} Platform.
 {: shortdesc}
-
-While this tutorial focuses specifically on using {{site.data.keyword.cloud_notm}} HSM, you can learn more about the overall configuration process for using any HSM that supports PCKS #11 with the {{site.data.keyword.blockchainfull_notm}} Platform, see
-[Configuring a node to use a Hardware Security Module](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
 
 ## Why would I want to use an HSM with my {{site.data.keyword.blockchainfull_notm}} Platform network?
 {: #ibp-hsm-gemalto-why}
@@ -56,9 +53,7 @@ Because only the private keys of node identities are secured in the HSM, when yo
 
 - [Part Four: Build a Docker image](#ibp-hsm-gemalto-part-four)  
 
-    You have two options:
-    - **(Recommended)** Build an HSM Client image
-    - **(Deprecated)** Build a PKCS #11 proxy image and deploy it to your Kubernetes cluster
+    Build an HSM Client image
 
 This process requires [Docker](https://docs.docker.com/install/){: external} to be installed on the machine where the HSM client is running and that you are familiar with the process for building Docker images. It also presumes you are comfortable with using the Kubernetes CLI to administer your Kubernetes cluster.
 
@@ -74,12 +69,6 @@ When the entire HSM configuration is complete, it resembles the following diagra
 ![HSM configured with an HSM client image](../images/hsm_2proxy.svg "HSM configured with an HSM client image"){: caption="Figure 1. An example configuration of an HSM configured with an HSM client image." caption-side="bottom"}
 
 The steps in this topic focus specifically on the creation of the Cloud HSM and the HSM Client in the diagram.  When you deploy a CA, peer, or ordering node to use the HSM, you need to provide the label and PIN of the HSM partition. This configuration assumes you enabled HSM on your Kubernetes cluster when you deployed the service.  
-
-**(Deprecated) HSM configured with a PKCS #11 proxy**  
-
-![HSM configured with a PKCS #11 proxy](../images/hsm_1proxy.svg "HSM configured with a PKCS #11 proxy"){: caption="Figure 2. An example configuration of an HSM configured with a PKCS #11 proxy." caption-side="bottom"}  
-
-When you choose to deploy the PKCS #11 proxy and configure a node with HSM, you need to provide the PKCS #11 proxy endpoint URL, along with the label and PIN of the HSM partition. It is the combination of the PKCS #11 proxy and the HSM client that allows the node to store and retrieve the node private key from the HSM.
 
 ### Part One: Set up the HSM device and HSM client
 {: #ibp-hsm-gemalto-part-one}
@@ -233,10 +222,10 @@ In this section you will get the HSM server certificate and create the HSM clien
 ### Part Four: Build a Docker image
 {: #ibp-hsm-gemalto-part-four}
 
-There are two ways to configure HSM on your blockchain network. The use of a **PKCS #11 proxy** has been deprecated in favor of building an **HSM client image** which is simpler to configure and provides better overall performance. Both processes are supported, however if you are configuring a new HSM, it is recommended that you build the HSM client image. Both sets of instructions are provided, starting with **Build an HSM client image**. If you still prefer to use a PKCS #11 proxy, you can refer to those [instructions](/docs/blockchain?topic=blockchain-ibp-hsm-build-pkcs11-proxy-ic) instead. If you are currently using the **PKCS #11 proxy** and want to try out the **HSM client image**, it is possible to have both HSM configurations running on the platform at the same time. However, when you deploy a new node you have to choose which HSM implementation you want to use.
+To configure HSM on your blockchain network, build an **HSM client image** as follows below.
 
 #### Build an HSM client image
-{: #ibp-console-adv-deployment-hsm-client} 
+{: #ibp-console-adv-deployment-hsm-client}
 
 Next we build a Docker file that contains the HSM client image. These instructions assume that you have successfully configured your HSM appliance and HSM client. Use these steps to generate an image that is consumable by the {{site.data.keyword.blockchainfull_notm}} Platform operator.
 
@@ -588,23 +577,14 @@ configmap/ibp-hsm-config created
 ### What's next
 {: #ibp-hsm-gemalto-next-steps}
 
-After you have used these instructions to configure your {{site.data.keyword.cloud_notm}} HSM and build the  **HSM client image** or **PKCS #11 proxy**, you are ready to configure your blockchain nodes to use the HSM. When you create a CA, peer, or ordering node, select the [HSM Advanced deployment option](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm-node) to configure the node to use this HSM.
+After you have used these instructions to configure your {{site.data.keyword.cloud_notm}} HSM and build the  **HSM client image**, you are ready to configure your blockchain nodes to use the HSM. When you create a CA, peer, or ordering node, select the [HSM Advanced deployment option](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm-node) to configure the node to use this HSM.
 
-When a node is configured with HSM, a temporary Kubernetes job is started to run this HSM "enrollment" process. Before configuring a node to use HSM, ensure that you have enough resources in your cluster to support this job that takes approximately 0.1CPU and 100Mi memory.
+When a node is configured with HSM, a temporary Kubernetes job is started to run this HSM "enrollment" process. Before configuring a node to use HSM, ensure that you have enough resources in your cluster to support this job that takes approximately 0.1CPU and 100M memory.
 {: important}
 
 On the **HSM configuration** panel, the **Use HSM client image** toggle is visible. When it is on, you can enter the following values:
 
 - **HSM label** - Enter the name of the HSM partition to be used for this node.
-- **HSM PIN** - Enter the PIN for the HSM slot.  
-
-If you prefer to use an HSM that was configured with a PKCS #11 proxy instead, slide the **Use HSM client image** toggle to **off**. One additional field becomes visible:
-- **HSM proxy endpoint** -Enter the URL for the PKCS #11 proxy that begins with `tcp://` and includes the `CLUSTER-IP` address and `PORT`. For example, `tcp://172.21.106.217:2345`.
+- **HSM PIN** - Enter the PIN for the HSM slot.
 
 When the node is deployed, a private key for the specified node enroll ID and secret is generated by the HSM and stored securely in the appliance.
-
-## Using multiple partitions
-{: #ibp-hsm-gemalto-multiple-partitions}
-
-If your HSM has multiple partitions, only one PKCS #11 proxy is required to communicate with the HSM.
-

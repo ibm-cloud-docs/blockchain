@@ -118,8 +118,6 @@ IBM Blockchain Platform for IBM Cloud
 	reference/k8s.md
 	[IBM Developer](https://developer.ibm.com/technologies/blockchain/)
 	reference/ibp_regions.md
-	reference/hsm-pkcs11.md
-	reference/hsm-pkcs11-ic.md
 	[IBM Cloud storage](https://cloud.ibm.com/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks#ibp-console-storage)
 	glossary.md
 	{: .navgroup-end}
