@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-08"
+lastupdated: "2022-03-16"
 
 
 keywords: release note, latest changes, Hyperledger Fabric
@@ -12,6 +12,7 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
 
 
 
