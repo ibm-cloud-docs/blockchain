@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-21"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -723,6 +723,16 @@ A common use case is to override some of the default timeouts, or peer private d
                     "KeyStore": null
                 }
             },
+            "PKCS11": {
+                "Library": null,
+                "Label": null,
+                "Pin": null,
+                "Hash": null,
+                "Security": null,
+                "FileKeyStore": {
+                    "KeyStore": null
+                }
+            }
         },
         "client": {
             "connTimeout": "3s"
@@ -1323,7 +1333,7 @@ You have gathered all of your peer or ordering service certificates from your th
 ## Configuring a node to use a Hardware Security Module (HSM)
 {: #ibp-console-adv-deployment-cfg-hsm}
 
-Key management is a critical aspect of managing a blockchain network. Because private keys are not stored by the platform, users are responsible for downloading and securing the private key of their node identities. In a production network, when a higher level of security is required for private keys, an HSM is an optional hardware appliance that performs cryptographic operations and provides the capability to ensure that the private keys never leave the HSM. 
+Key management is a critical aspect of managing a blockchain network. Because private keys are not stored by the platform, users are responsible for downloading and securing the private key of their node identities. In a production network, when a higher level of security is required for private keys, an HSM is an optional hardware appliance that performs cryptographic operations and provides the capability to ensure that the private keys never leave the HSM. Currently, Hyperledger Fabric supports HSM devices that implement the [PKCS #11 standard](http://docs.oasis-open.org/pkcs11/pkcs11-base/v2.40/os/pkcs11-base-v2.40-os.html){: external}. PKCS #11 is a cryptographic standard for secure operations, generation, and storage of keys.
 
 The ability to configure a node to use HSM is available only in paid clusters.
 {: note} 

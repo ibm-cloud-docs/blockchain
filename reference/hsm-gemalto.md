@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-14"
+lastupdated: "2022-03-21"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -22,6 +22,9 @@ subcollection: blockchain
 {{site.data.keyword.cloud_notm}} includes an [HSM](#x6704988){: term}
 service that provides cryptographic processing for key generation, encryption, decryption, and key storage. This document describes how to use that service with the {{site.data.keyword.blockchainfull}} Platform.
 {: shortdesc}
+
+While this tutorial focuses specifically on using {{site.data.keyword.cloud_notm}} HSM, you can learn more about the overall configuration process for using any HSM that supports PCKS #11 with the {{site.data.keyword.blockchainfull_notm}} Platform, see
+[Configuring a node to use a Hardware Security Module](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm).
 
 ## Why would I want to use an HSM with my {{site.data.keyword.blockchainfull_notm}} Platform network?
 {: #ibp-hsm-gemalto-why}
