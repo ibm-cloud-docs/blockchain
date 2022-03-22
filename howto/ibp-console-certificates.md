@@ -595,10 +595,10 @@ If you previously imported the MSP into your console, you need to update the def
 ## Download certificates
 {: #cert-mgmt-download-certs}
 
-You can download {{site.data.keyword.blockchainfull}} Platform certificates from the console, in PEM format, for viewing certificate expirations. This includes all peer, Certificate Authority (CA) and orderer node certificates.
+You can download {{site.data.keyword.blockchainfull_notm}} Platform certificates from the console, in PEM format, for viewing certificate expirations. This includes all peer, Certificate Authority (CA) and orderer node certificates.
 
-Navigate to the console tab for the desired node and select the download icon for **Enrollment certs expiration** or **TLS certs expiration**:
+Navigate to the console tab for the desired node and select the download icon for **Enrollment Cert Expiration** or **TLS Cert Expiration**.
 
 ![How to download certificates](../images/download-certs.png "How to download certificates"){: caption="Figure 14. How to download certs" caption-side="bottom"}
 
-Save the PEM file to view or import into [Certificate Manager](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started){: external}.
+You can then save the downloaded PEM file for viewing or importing into [Certificate Manager](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started){: external}.
