@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-04"
+  years: 2019, 2022
+lastupdated: "2022-03-22"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -190,10 +190,10 @@ The following diagram summarizes the process for updating orderer organization a
 
 While the platform automatically renews the certificates for peer and ordering nodes if the associated CA is available, customers are responsible for managing certificate expiration and renewal of the following certificates:
 
-- CA TLS certificate.
-- Peer and ordering node enrollment and TLS certificates, only when automatic renewal is not successful.
-- MSP admin certificates.
-- Certificates from an external CA
+- CA TLS certificate
+- Peer and ordering node enrollment and TLS certificates, only when automatic renewal is not successful
+- MSP admin certificates
+- Certificates from an external CA.
 
 If the admin certificates have been stored or imported into the console wallet, you can monitor the exact date of expiration for each identity. Click an admin identity tile to view the expiration date of the certificate and private key.
 
@@ -591,3 +591,14 @@ If you previously imported the MSP into your console, you need to update the def
 1. On the **Organizations** tab and click the MSP tile.
 2. Click the **Settings** icon and then **Add file** to browse to the new JSON file.
 3. Click **Update MSP**.  If you created any nodes in your console that use this MSP, they are updated with the new MSP and restarted.
+
+## Download certificates
+{: #cert-mgmt-download-certs}
+
+You can download {{site.data.keyword.blockchainfull}} Platform certificates from the console, in PEM format, for viewing certificate expirations. This includes all peer, Certificate Authority (CA) and orderer node certificates.
+
+Navigate to the console tab for the desired node and select the download icon for **Enrollment certs expiration** or **TLS certs expiration**:
+
+![How to download certificates](../images/download-certs.png "How to download certificates"){: caption="Figure 14. How to download certs" caption-side="bottom"}
+
+Save the PEM file to view or import into [Certificate Manager](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started){: external}.
