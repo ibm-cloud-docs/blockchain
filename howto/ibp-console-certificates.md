@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-22"
+lastupdated: "2022-03-31"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -591,14 +591,3 @@ If you previously imported the MSP into your console, you need to update the def
 1. On the **Organizations** tab and click the MSP tile.
 2. Click the **Settings** icon and then **Add file** to browse to the new JSON file.
 3. Click **Update MSP**.  If you created any nodes in your console that use this MSP, they are updated with the new MSP and restarted.
-
-## Download certificates
-{: #cert-mgmt-download-certs}
-
-You can download {{site.data.keyword.blockchainfull_notm}} Platform certificates from the console, in PEM format, for viewing certificate expirations. This includes all peer, Certificate Authority (CA) and orderer node certificates.
-
-Navigate to the console tab for the desired node and select the download icon for **Enrollment Cert Expiration** or **TLS Cert Expiration**.
-
-![How to download certificates](../images/download-certs.png "How to download certificates"){: caption="Figure 14. How to download certs" caption-side="bottom"}
-
-You can then save the downloaded PEM file for viewing or importing into [Certificate Manager](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started){: external}.

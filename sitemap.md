@@ -734,6 +734,7 @@ subcollection: blockchain
 * [Storing identities in your console wallet](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-wallet)
     * [Adding identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-add)
     * [Viewing and updating identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-update-identities)
+    * [Downloading certificates](/docs/blockchain?topic=blockchain-ibp-console-identities#cert-mgmt-downloading-certs)
 * [Storing and managing certificates in IBM Cloud Certificate Manager](/docs/blockchain?topic=blockchain-ibp-console-identities#storing-and-managing-certificates-in-ibm-cloud-certificate-manager)
 * [Storing identities in a Hardware Security Module (HSM)](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-hsm)
 * [Associating identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-associate-admin)
@@ -782,7 +783,6 @@ subcollection: blockchain
 * [Using the command line to view certificate expiration](/docs/blockchain?topic=blockchain-cert-mgmt#ibp-console-identities-cli-expiration)
 * [Export an MSP](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-export-msp)
 * [Import an MSP](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-import-msp)
-* [Download certificates](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-download-certs)
 
 [Upgrading and deleting deployed nodes](/docs/blockchain?topic=blockchain-ibp-console-govern-components)
 * [Considerations when reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-reallocate-resources)
