@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-02-09"
+lastupdated: "2022-03-31"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -109,6 +109,10 @@ Users can allocate more storage to their running network by resizing the existin
 ## Upgrading to a new version of Fabric
 {: #ibp-console-govern-components-upgrade}
 
+Support for Hyperledger Fabric **v1.4 is now deprecated**, and support for Fabric v1.4 will be removed from  {{site.data.keyword.blockchainfull_notm}} Platform on March 31, 2023. Users should therefore upgrade to Fabric v2.2 as soon as possible. Your applications may  require changes as a result of upgrading to v2.2, so please plan for appropriate testing.
+Note that Fabric v1.4 has not been supported by the Hyperledger community since April of 2021. In addition, Fabric v1.4 uses Golang v1.14, which is no longer receiving security updates from the Golang community.
+{: important}
+
 While some new versions of Fabric only require updating the Fabric version on nodes, some include new channel capabilities that must also be updated.
 
 In these cases, the process of "updating to the latest" release is, at a high level, a two step process:
@@ -127,6 +131,9 @@ At a high level, the process of upgrading a node involves two main steps:
 It may also be necessary to update SDKs and smart contracts before you can take advantage of the latest Fabric features. For more information, check out [Step three: Update SDKs and smart contracts](#ibp-console-govern-components-upgrade-step-three).
 {: tip}
 
+Upgrading {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from Hyperledger Fabric 1.4.x to the latest Fabric version is possible, but deploying a new Fabric 2.2.x peer instead of upgrading is recommended. Fabric installation is done by {{site.data.keyword.blockchainfull_notm}} Platform, but can take hours or days depending on the size of the database to be built. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
+{: important}
+
 ### Step one: Back up your ledger (optional)
 {: #ibp-console-govern-components-upgrade-step-one-ledger}
 
@@ -139,9 +146,6 @@ However, if you are not taking regular backups, it is recommended that you minim
 
 If you are upgrading both peer and ordering node binaries, it is a best practice to upgrade the ordering nodes first, as ensuring that the ordering nodes (and by extension, the ordering service) is functioning correctly is more important to the health of your network as a whole than the functioning of any particular peer.
 {: tip}
-
-Upgrading {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from Hyperledger Fabric 1.4.x to the latest Fabric version is possible, but deploying a new Fabric 2.2.x peer instead of upgrading is recommended. Fabric installation is done by {{site.data.keyword.blockchainfull_notm}} Platform, but can take hours or days depending on the size of the database to be built. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
-{: important}
 
 The process for upgrading a node is relatively straightforward. First, make sure you are using the console where the node was created. You cannot use the console to update imported nodes. When a node upgrade is available, **Upgrade available** is visible on the node tile. If **Upgrade available** does not appear on the tile when it should be there, make sure your console is using the latest version using the [**Refresh cluster**](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-refresh) feature. <blockchain-sw-25>If **Upgrade available** does not appear on the tile when it should be there, make sure you have upgraded to the latest version of the console.</blockchain-sw-25>
 

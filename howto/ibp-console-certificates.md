@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-12-04"
+  years: 2019, 2022
+lastupdated: "2022-03-31"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -190,10 +190,10 @@ The following diagram summarizes the process for updating orderer organization a
 
 While the platform automatically renews the certificates for peer and ordering nodes if the associated CA is available, customers are responsible for managing certificate expiration and renewal of the following certificates:
 
-- CA TLS certificate.
-- Peer and ordering node enrollment and TLS certificates, only when automatic renewal is not successful.
-- MSP admin certificates.
-- Certificates from an external CA
+- CA TLS certificate
+- Peer and ordering node enrollment and TLS certificates, only when automatic renewal is not successful
+- MSP admin certificates
+- Certificates from an external CA.
 
 If the admin certificates have been stored or imported into the console wallet, you can monitor the exact date of expiration for each identity. Click an admin identity tile to view the expiration date of the certificate and private key.
 
