@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-03-31"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -132,7 +132,11 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ### Fabric Component Support
 {: #fabric-component-support}
 
-The following support levels are provided for Hyperledger Fabric v1.4.12, v2.2.4, v2.2.5, and
+Support for Hyperledger Fabric **v1.4 is now deprecated**, and support for Fabric v1.4 will be removed from  {{site.data.keyword.blockchainfull_notm}} Platform on March 31, 2023. Users should therefore [upgrade to Fabric v2.2](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade) as soon as possible. Your applications may require changes as a result of upgrading to v2.2, so please plan for appropriate testing.
+Note that Fabric v1.4 has not been supported by the Hyperledger community since April of 2021. In addition, Fabric v1.4 uses Golang v1.14, which is no longer receiving security updates from the Golang community.
+{: important}
+
+The following support levels are provided for Hyperledger Fabric v1.4.12 (Deprecated), v2.2.4, v2.2.5, and
 Fabric CA v1.5.0 and v1.5.2.
 
 Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Operations Console **are required for support** and provide Hyperledger Fabric clients with a verified production setup, simplified management and support, and verified security patches.

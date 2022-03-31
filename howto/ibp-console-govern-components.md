@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-29"
+lastupdated: "2022-03-31"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -109,7 +109,7 @@ Users can allocate more storage to their running network by resizing the existin
 ## Upgrading to a new version of Fabric
 {: #ibp-console-govern-components-upgrade}
 
-Support for Hyperledger Fabric **v1.4 is now deprecated**, and support for Fabric v1.4 will be removed from  {{site.data.keyword.blockchainfull_notm}} Platform on March 31, 2023. Users should therefore [upgrade to Fabric v2.2](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-console-govern-components#ibp-console-govern-components-upgrade) as soon as possible. Your applications may  require changes as a result of upgrading to v2.2, so please plan for appropriate testing.
+Support for Hyperledger Fabric **v1.4 is now deprecated**, and support for Fabric v1.4 will be removed from  {{site.data.keyword.blockchainfull_notm}} Platform on March 31, 2023. Users should therefore upgrade to Fabric v2.2 as soon as possible. Your applications may  require changes as a result of upgrading to v2.2, so please plan for appropriate testing.
 Note that Fabric v1.4 has not been supported by the Hyperledger community since April of 2021. In addition, Fabric v1.4 uses Golang v1.14, which is no longer receiving security updates from the Golang community.
 {: important}
 
