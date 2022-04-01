@@ -1,7 +1,7 @@
 ---
 
-copyright:
-  years: 2022
+copyright: 
+  years: 2014, 2022
 lastupdated: "2022-02-01"
 
 keywords: smart contract, lifecycle, package, definition
@@ -10,9 +10,9 @@ subcollection: blockchain
 
 ---
 
+
+
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 # Writing powerful smart contracts
 {: #write-powerful-smart-contracts}
@@ -117,4 +117,3 @@ For more information, see [Developing smart contracts with {{site.data.keyword.b
 {: #write-powerful-smart-contracts-installing-proposing}
 
 For information about how to use the console to install smart contract packages and propose and commit smart contract definitions on a channel, see [Deploy a smart contract using Fabric v2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2).
-

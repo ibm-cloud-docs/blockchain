@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-21"
+lastupdated: "2022-04-01"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -11,7 +11,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 

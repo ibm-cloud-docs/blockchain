@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2021
-lastupdated: "2021-11-11"
+  years: 2017, 2022
+lastupdated: "2022-04-01"
 
 keywords: Log analysis, IBM Log Analysis, viewing logs, monitoring, activity tracker
 

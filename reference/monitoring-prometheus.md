@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-03-07"
+lastupdated: "2022-04-01"
 
 keywords:  monitoring, resource consumption, resource allocation, disk space, memory usage, disk usage, Prometheus, metrics  
 

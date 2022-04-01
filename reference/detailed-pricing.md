@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2021
-lastupdated: "2021-11-11"
+  years: 2019, 2022
+lastupdated: "2022-04-01"
 
 keywords: Pricing, pricing examples
 

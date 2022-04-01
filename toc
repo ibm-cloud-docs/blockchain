@@ -7,7 +7,7 @@ IBM Blockchain Platform for IBM Cloud
 	{: .navgroup id="learn"}
 	{: .topicgroup}
 	Getting started
-		index.md
+		index_blockchain.md
 		howto/ibp-v2-deploy-iks.md
 
 		{: .topicgroup}
@@ -30,57 +30,57 @@ IBM Blockchain Platform for IBM Cloud
 	{: .topicgroup}
 	High availability
 		ibp-console-ha.md
-		howto/ibp-console-ic-ha-howto.md
-		howto/ibp-console-ha-os.md
-		howto/ibp-console-ha-ca.md
+		ibp-console-ic-ha-howto.md
+		ibp-console-ha-os.md
+		ibp-console-ha-ca.md
 
 	data-residency.md
-	howto/ibp-v2-faq.md
+	ibp-v2-faq.md
 	needtoknow.md
 	{: .navgroup-end}
 
 	{: .navgroup id="tutorial"}
 	{: .topicgroup}
 	Getting started
-		howto/ibp-console-build-network.md
-		howto/ibp-console-join-network.md
-		reference/videos.md
+		ibp-console-build-network.md
+		ibp-console-join-network.md
+		videos.md
 
 	{: .topicgroup}
 	Deploy a smart contract
-		howto/ibp-console-smart-contracts.md
-		howto/ibp-console-smart-contracts-v2.md
-		howto/ibp-console-smart-contracts-v14.md
+		ibp-console-smart-contracts.md
+		ibp-console-smart-contracts-v2.md
+		ibp-console-smart-contracts-v14.md
 
-	howto/ibp-console-create-app.md
+	ibp-console-create-app.md
 
 	{: .topicgroup}
 	Certificate Authority (CA) options
-		howto/ibp-console-int-ca.md
-		howto/ibp-v2-tutorial-extca.md
+		ibp-console-int-ca.md
+		ibp-v2-tutorial-extca.md
 
 	{: .topicgroup}
 	Hardware Security Module (HSM)
-		reference/hsm-gemalto.md
+		hsm-gemalto.md
 
 	{: .topicgroup}
 	Ansible Playbooks
-		howto/ansible.md
-		howto/ansible-build-network.md
+		ansible.md
+		ansible-build-network.md
 	{: .navgroup-end}
 
 	{: .navgroup id="howto"}
 	{: .topicgroup}
 	IBM Blockchain Platform console
 		howto/ibp-console-manage.md
-		howto/ibp-console-advanced-deployment.md
-		howto/ibp-console-advanced-channel.md
-		howto/ibp-console-add-remove-raft.md
-		howto/ibp-console-import-nodes.md
-		howto/ibp-console-identities.md
-		howto/ibp-console-organizations.md
-		howto/ibp-console-certificates.md
-		howto/ibp-console-govern-components.md
+		ibp-console-advanced-deployment.md
+		ibp-console-advanced-channel.md
+		ibp-console-add-remove-raft.md
+		ibp-console-import-nodes.md
+		ibp-console-identities.md
+		ibp-console-organizations.md
+		ibp-console-certificates.md
+		ibp-console-govern-components.md
 		howto/ibp-v2-operations-service.md
 
 	{: .topicgroup}
@@ -91,14 +91,14 @@ IBM Blockchain Platform for IBM Cloud
 
 	{: .topicgroup}
 	Advanced tutorials
-		howto/ibp-console-int-ca.md
+		ibp-console-int-ca.md
 		reference/hsm-gemalto.md
-		howto/ibp-v2-tutorial-extca.md
+		ibp-v2-tutorial-extca.md
 
 		{: .topicgroup}
 		Using Ansible Playbooks
-			howto/ansible.md
-			howto/ansible-build-network.md
+			ansible.md
+			ansible-build-network.md
 
 	{: .topicgroup}
 	Monitoring your network
@@ -106,10 +106,10 @@ IBM Blockchain Platform for IBM Cloud
 		reference/monitoring.md
 		reference/monitoring-prometheus.md
 
-	howto/backup-restore.md
+	backup-restore.md
 	howto/planning-updates-maint.md
 
-	howto/ibp-v2-apis.md
+	howto/ibp-v2-apis-blockchain.md
 	{: .navgroup-end}
 
 	{: .navgroup id="reference"}
@@ -125,7 +125,7 @@ IBM Blockchain Platform for IBM Cloud
 	{: .navgroup id="help"}
 	release-notes.md
 	knownissues-saas.md
-	howto/ibp-v2-troubleshooting.md
+	ibp-v2-troubleshooting.md
 	ibmblockchain_support.md
 	sitemap.md
 	{: .navgroup-end}
