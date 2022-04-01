@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-31"
+lastupdated: "2022-04-01"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -11,7 +11,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}

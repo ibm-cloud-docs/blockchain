@@ -1,7 +1,7 @@
 ---
 
-copyright:
-  years: 2019, 2022
+copyright: 
+  years: 2014, 2022
 lastupdated: "2022-02-01"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
@@ -10,10 +10,9 @@ subcollection: blockchain
 
 ---
 
+
+
 {{site.data.keyword.attribute-definition-list}}
-
-
-
 
 # Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools
 {: #develop-vscode}

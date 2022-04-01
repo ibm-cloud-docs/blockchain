@@ -1,9 +1,8 @@
 ---
 
-copyright:
-  years: 2019, 2022
-lastupdated: "2022-03-16"
-
+copyright: 
+  years: 2014, 2022
+lastupdated: "2022-04-01"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -11,11 +10,9 @@ subcollection: blockchain
 
 ---
 
+
+
 {{site.data.keyword.attribute-definition-list}}
-
-
-
-
 
 # Release notes
 {: #release-notes-saas-20}

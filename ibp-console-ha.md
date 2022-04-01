@@ -1,8 +1,8 @@
 ---
 
-copyright:
-  years: 2019, 2022
-lastupdated: "2022-02-08"
+copyright: 
+  years: 2014, 2022
+lastupdated: "2022-04-01"
 
 keywords: high availability, HA, IBM Cloud, failures, zone failure, region failure, component failure, worker node failure, RTO, RPO
 
@@ -10,10 +10,9 @@ subcollection: blockchain
 
 ---
 
+
+
 {{site.data.keyword.attribute-definition-list}}
-
-
-
 
 # High availability (HA)
 {: #ibp-console-ha}

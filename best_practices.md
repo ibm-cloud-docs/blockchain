@@ -1,8 +1,8 @@
 ---
 
-copyright:
-  years: 2019, 2022
-lastupdated: "2022-01-11"
+copyright: 
+  years: 2014, 2022
+lastupdated: "2022-04-01"
 
 keywords: best practices, develop applications, connectivity, availability, mutual TLS, CouchDB
 
@@ -10,10 +10,9 @@ subcollection: blockchain
 
 ---
 
+
+
 {{site.data.keyword.attribute-definition-list}}
-
-
-
 
 # Best practices for application development
 {: #best-practices-app}

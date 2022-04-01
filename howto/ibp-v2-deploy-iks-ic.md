@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-03-16"
+lastupdated: "2022-04-01"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -11,7 +11,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 
 # Deploy from {{site.data.keyword.cloud_notm}}

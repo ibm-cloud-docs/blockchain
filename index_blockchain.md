@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-03-10"
+lastupdated: "2022-04-01"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -11,7 +11,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform
 {: #get-started-ibp}
