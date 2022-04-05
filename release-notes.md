@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-05"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -23,6 +23,15 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+## 05 Apr 2022
+{: #05-04-2022}
+
+**Certificate Authority (CA) patch 1.5.2-8, Peer and ordering node patch 1.4.12-11, 2.2.5-3.**
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
 
 ## 08 Mar 2022
 {: #08-03-2022}
