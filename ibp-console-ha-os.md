@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -24,7 +24,7 @@ content-type: tutorial
 In this tutorial, you learn how to set up a Raft ordering service with five ordering nodes that span multiple regions for maximum high availability.
 {: shortdesc}
 
-![Architectural diagram](../images/mr-ha-os.png "Multiregion ordering service"){: caption="Figure 1. A diagram that shows the architecture of a multiregion ordering service" caption-side="bottom"}
+![Architectural diagram](images/mr-ha-os.png "Multiregion ordering service"){: caption="Figure 1. A diagram that shows the architecture of a multiregion ordering service" caption-side="bottom"}
 
 The diagram shows a multiregion ordering service that includes five ordering nodes that are spread across three Kubernetes clusters in three different regions. For simplicity, this tutorial assumes that all of the ordering nodes are contributed by the same organization. The setup requires a single Certificate Authority (CA), created in one cluster and imported into the blockchain consoles on the other two clusters. 
 
@@ -67,7 +67,7 @@ Choose the regions of your Kubernetes clusters carefully. While it is fine for t
 
 In this section, we create a single-node ordering service and then add a second ordering node as highlighted in yellow in the diagram below:
 
-![Region 1 ordering service](../images/mr-ha-os-region1.png "Region 1 ordering service"){: caption="Figure 2. Create the ordering service and second ordering node" caption-side="bottom"}
+![Region 1 ordering service](images/mr-ha-os-region1.png "Region 1 ordering service"){: caption="Figure 2. Create the ordering service and second ordering node" caption-side="bottom"}
 
 Before we can deploy the ordering service, we create the ordering organization CA, register the ordering organization admin users and the ordering node user, and create the organization Membership Service Provider (MSP). The bulk of the work to set up an ordering service is performed in this section, making it simple in later steps to add ordering nodes from other regions.
 
@@ -271,7 +271,7 @@ Now that the ordering service is available, we can add nodes to it from the two 
 
 In this section, we create a third ordering node and then add it to the system channel as highlighted in yellow in the diagram below:
 
-![Region 2 ordering node](../images/mr-ha-os-region2.png "Region 2 ordering node"){: caption="Figure 3. Create a third ordering node in Region 2" caption-side="bottom"}
+![Region 2 ordering node](images/mr-ha-os-region2.png "Region 2 ordering node"){: caption="Figure 3. Create a third ordering node in Region 2" caption-side="bottom"}
 
 Because all of the actions in this section are performed from the blockchain console in **Region 2**, log in to the **Region 2** console now.
 
@@ -353,7 +353,7 @@ Open the new ordering node and click `Export` ![export icon](../../icons/downloa
 
 In this section, we largely repeat the instructions performed in **Region 2**. The major difference is that **Region 3** will contain two ordering nodes, highlighted in yellow in the following diagram, whereas in **Region 2** there is only one ordering node. Along with the two nodes in **Region 1** and one node from **Region 2**, this configuration will complete the recommended minimum number of five ordering nodes for a production ordering service.  
 
-![Region 3 ordering nodes](../images/mr-ha-os-region3.png "Region 3 ordering node"){: caption="Figure 4. Create fourth and fifth ordering nodes in Region 3" caption-side="bottom"}
+![Region 3 ordering nodes](images/mr-ha-os-region3.png "Region 3 ordering node"){: caption="Figure 4. Create fourth and fifth ordering nodes in Region 3" caption-side="bottom"}
 
 Because all of the actions in this section are performed from the blockchain console in **Region 3**, log in to the **Region 3** console now.
 
@@ -451,7 +451,7 @@ To summarize, anytime a new ordering node is added to the ordering service in a 
 
 The following screen capture shows what the ordering service looks like on the console in **Region 1**. Notice the **Imported** label on the three tiles from the other clusters. The ordering service should be identical in **Region 2** and **Region 3** except for the **Imported** labels, since they will vary by region.
 
-![Multiregion ordering service](../images/multiregion-os.png "Multiregion ordering service"){: caption="Figure 5. Multiregion ordering service" caption-side="bottom"}
+![Multiregion ordering service](images/multiregion-os.png "Multiregion ordering service"){: caption="Figure 5. Multiregion ordering service" caption-side="bottom"}
 
 
 ## Next steps
@@ -465,7 +465,7 @@ The following screen capture shows what the ordering service looks like on the c
 
     For simplicity, we use a single organization for all five ordering nodes in this tutorial. But it is possible when you build an HA ordering service that multiple organizations will want to contribute their own ordering nodes to the ordering service. In that case, the process is largely the same. The major difference is that each organization that wants to contribute an ordering node needs to have their own CA and own organization MSP definition. The process to add ordering nodes from separate organizations is described in the [Adding and removing ordering service nodes](/docs/blockchain?topic=blockchain-ibp-console-add-remove-orderer) topic and the resulting architecture in this case would be similar to:
 
-    ![Multiregion multi-organization ordering service](../images/mr-ha-os-multiorg.png "Multiregion multi-organization ordering service"){: caption="Figure 6. Multiregion, multi-organization ordering service" caption-side="bottom"}
+    ![Multiregion multi-organization ordering service](images/mr-ha-os-multiorg.png "Multiregion multi-organization ordering service"){: caption="Figure 6. Multiregion, multi-organization ordering service" caption-side="bottom"}
 
 
 * Clean up  

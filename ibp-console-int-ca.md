@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: intermediate CA, root CA, parent server, Certificate Authority
 
@@ -36,7 +36,7 @@ As an alternative to deploying multiple intermediate CAs, you can limit the scop
 
 
 The following diagram illustrates how the root CA issues the certificates for the intermediate CA and the intermediate CA then issues the certificates for the nodes and users in the organization.
-![Intermediate CA](../images/int_ca.svg "Intermediate CA"){: caption="Figure 1. Intermediate CA in the network." caption-side="bottom"}
+![Intermediate CA](images/int_ca.svg "Intermediate CA"){: caption="Figure 1. Intermediate CA in the network." caption-side="bottom"}
 
 ## Can I convert an existing CA to be an intermediate CA?
 {: #ibp-ica-convert}
@@ -90,7 +90,7 @@ This process can be performed using the console or the APIs, if you are an exper
 3. **Register the intermediate TLS CA admin identity with the root CA.** Because TLS communications are enabled on the network, whenever you deploy a CA, a TLS CA is automatically deployed along side the CA, and uses the same endpoint address. Therefore, you also need to register an identity that will serve as the intermediate TLS CA admin. Repeat the actions that you performed in the previous step to register the admin identity, but this time specify a different enroll ID and secret. For purposes of the tutorial, we use `itlscaadmin` and `itlscaadminpw`.
 
 4. **Export the root CA to a JSON file.** Now that you have the intermediate CA admins registered with the root CA, there is one last piece of information we need: the root CA TLS signed certificate. This certificate is shared with each node in the organization and is used to secure the communications between the nodes. Therefore, in order for the intermediate CA to communicate with the root CA, it has to be included in the intermediate CA configuration. To get the root CA TLS signed certificate, simply export the root CA to a JSON file. Open the root CA and click the **Export** icon.
-![Export root CA](../images/export-root-ca.png "Export root CA"){: caption="Figure 2. Export root CA" caption-side="bottom"}
+![Export root CA](images/export-root-ca.png "Export root CA"){: caption="Figure 2. Export root CA" caption-side="bottom"}
 
     - Open the downloaded JSON file and locate the value corresponding to the `tls_cert` element. You will need to copy and paste the certificate in a later step. It will resemble:
 
@@ -293,7 +293,7 @@ Your intermediate CA is now operational and can be used to register and enroll i
 {: #ibp-ica-next-steps-msp}
 
 When you build organization MSP definitions for your peer or ordering nodes, you can now reference the intermediate CA as the "root CA" instead of your root CA.
-![Int CA MSP](../images/int-ca-msp.png "MSP using intermediate CA"){: caption="Figure 3. MSP using intermediate CA" caption-side="bottom"}
+![Int CA MSP](images/int-ca-msp.png "MSP using intermediate CA"){: caption="Figure 3. MSP using intermediate CA" caption-side="bottom"}
 If you want to learn more about creating MSPs, see [Managing organizations](/docs/blockchain?topic=blockchain-ibp-console-organizations).
 
 ### Scale down the root CA

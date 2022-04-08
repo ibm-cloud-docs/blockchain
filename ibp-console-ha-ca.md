@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: high availability, CA, PostgreSQL, replica sets, zone
 
@@ -68,7 +68,7 @@ For all three PostgreSQL database options, you need to provide a file that conta
 
 - **{{site.data.keyword.cloud_notm}} Databases for PostgreSQL** If you are using a PostgreSQL database from {{site.data.keyword.cloud_notm}} Databases for PostgreSQL, you need to generate Service Credentials from the PostgreSQL resources page in your **{{site.data.keyword.cloud_notm}} Databases for PostgreSQL** dashboard by completing the process in the following clip:
 
-    ![Service credentials](../images/service_credentials_postgresql.mp4 "Service credentials"){: video controls loop}
+    ![Service credentials](images/service_credentials_postgresql.mp4 "Service credentials"){: video controls loop}
 
     Save the credentials that you copied to a file of type JSON on your local system. When you create your CA, you need to provide this file.
 

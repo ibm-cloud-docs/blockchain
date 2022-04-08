@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -69,7 +69,7 @@ When the entire HSM configuration is complete, it resembles the following diagra
 
 **HSM configured with an HSM client image**  
 
-![HSM configured with an HSM client image](../images/hsm_2proxy.svg "HSM configured with an HSM client image"){: caption="Figure 1. An example configuration of an HSM configured with an HSM client image." caption-side="bottom"}
+![HSM configured with an HSM client image](images/hsm_2proxy.svg "HSM configured with an HSM client image"){: caption="Figure 1. An example configuration of an HSM configured with an HSM client image." caption-side="bottom"}
 
 The steps in this topic focus specifically on the creation of the Cloud HSM and the HSM Client in the diagram.  When you deploy a CA, peer, or ordering node to use the HSM, you need to provide the label and PIN of the HSM partition. This configuration assumes you enabled HSM on your Kubernetes cluster when you deployed the service.  
 

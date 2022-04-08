@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, orderer, ordering node, ordering service, tutorial
 
@@ -92,18 +92,18 @@ Now that you have created the `Ordering Service2 MSP`, you need to export it to 
 
 Until your organization is an administrator of the ordering service, you cannot add a new node to it.
 
-![Export the MSP from Console 2](../images/addremove_exportmsp_console2.png "Export the MSP from Console 2"){: caption="Figure 1. Export the MSP from Console 2" caption-side="bottom"}
+![Export the MSP from Console 2](images/addremove_exportmsp_console2.png "Export the MSP from Console 2"){: caption="Figure 1. Export the MSP from Console 2" caption-side="bottom"}
 
 #### Console 1: import `Ordering Service2 MSP` and export `Ordering Service`
 {: #ibp-console-add-remove-orderer-add-orderer-export-ordering-service-console1}
 
 The operator of Console 1 must take the `Ordering Service 2 MSP` and add it to its console by clicking on the **Organizations** tab and then the **Import MSP definition** tab.
 
-![Import the MSP into Console 1](../images/addremove_importmsp_console1.png "Import the MSP into Console 1"){: caption="Figure 2. Import the MSP into Console 1" caption-side="bottom"}
+![Import the MSP into Console 1](images/addremove_importmsp_console1.png "Import the MSP into Console 1"){: caption="Figure 2. Import the MSP into Console 1" caption-side="bottom"}
 
 This MSP can then be added as an ordering service administrator by clicking on the tile representing the ordering service and then the **Add ordering service administrator** tab and selecting `Ordering Service 2 MSP` from the drop-down list.
 
-![Make Ordering Service2 MSP an admin](../images/addremove_addadmin.png "Make Ordering Service2 MSP an admin"){: caption="Figure 3. Make Ordering Service2 MSP an admin" caption-side="bottom"}
+![Make Ordering Service2 MSP an admin](images/addremove_addadmin.png "Make Ordering Service2 MSP an admin"){: caption="Figure 3. Make Ordering Service2 MSP an admin" caption-side="bottom"}
 
 While it is also possible to upload a JSON representing the MSP by clicking the **Upload JSON** tab, be aware that if you do this, the MSP will not appear in the **Organizations** tab and will therefore not be selectable later (for example, when updating an application channel to add the MSP as an ordering service administrator). For this reason, the best practice is to import the MSP through the **Organizations** tab first.
 {: tip}
@@ -117,7 +117,7 @@ After the operator of Console 2 has the JSON representing `Ordering Service` on 
 
 After Console 2 has imported the `Ordering Service`, they will be able to create the new node.
 
-![Import the ordering service](../images/addremove_import_orderingservice.png "Import the ordering service"){: caption="Figure 4. Import the ordering service" caption-side="bottom"}
+![Import the ordering service](images/addremove_import_orderingservice.png "Import the ordering service"){: caption="Figure 4. Import the ordering service" caption-side="bottom"}
 
 ### Create the node
 {: #ibp-console-add-remove-orderer-add-orderer-create-node}
@@ -127,7 +127,7 @@ While it is not possible to ensure that the ordering service is available (that 
 
 To add a node, click on the tile representing the ordering service in the **Nodes** panel. Then click on the **Ordering nodes** panel and the **Add another node** tile. Then click **Create an ordering node**. This will open a series of panels similar to the process for creating an ordering service.
 
-![Add another node](../images/addremove_addnode.png "Add another node"){: caption="Figure 5. Add another node" caption-side="bottom"}
+![Add another node](images/addremove_addnode.png "Add another node"){: caption="Figure 5. Add another node" caption-side="bottom"}
 
 You will need to:
 
@@ -196,7 +196,7 @@ To do this, click on the tile representing the ordering service, which in this t
 
 Then click **Import an existing node**. After clicking **Add file**, find the JSON representing the `Ordering Service_2` node that was sent to you by the operator of Console 2. After you have added the `Ordering Service_2` node, you should see it on the **Ordering nodes** page.
 
-![Add the Ordering Service_2 node to your console](../images/addremove_addnode_console1.png "Add the Ordering Service_2 node to your console"){: caption="Figure 6. Add the Ordering Service_2 node to your console" caption-side="bottom"}
+![Add the Ordering Service_2 node to your console](images/addremove_addnode_console1.png "Add the Ordering Service_2 node to your console"){: caption="Figure 6. Add the Ordering Service_2 node to your console" caption-side="bottom"}
 
 ### Update `channel1` to add the `Ordering Service2 MSP` and the `Ordering Service_2` node
 {: #ibp-console-add-remove-orderer-update-channel1}
@@ -259,7 +259,7 @@ In these cases, it is necessary to edit the configuration of the peer itself wit
 
 If your channel is in the state described above, in which none of the original ordering nodes are still servicing the channel, when attempting to join a peer to the channel the **Join a peer to the channel** screen will show a message similar to the following advising you that the configuration of the peer must include an "orderer override":
 
-![Orderer override code snippet](../images/orderer_override.png "Orderer override code snippet"){: caption="Figure 7. Orderer override code snippet" caption-side="bottom"}
+![Orderer override code snippet](images/orderer_override.png "Orderer override code snippet"){: caption="Figure 7. Orderer override code snippet" caption-side="bottom"}
 
 When you see this screen, **copy the code snippet**. Note the `addressOverrides` section. It should contain the address of one of the original ordering nodes as well as the address of one of the nodes now servicing the channel.
 
@@ -273,7 +273,7 @@ Then, **paste the code snippet into the configuration of the peer**. To do this:
 
 The peer will automatically restart. When it is back up, you should be able to join the channel.
 
-![Editing the peer configuration](../images/orderer_override_peer_config.png "Editing the peer configuration"){: caption="Figure 8. Editing the peer configuration" caption-side="bottom"}
+![Editing the peer configuration](images/orderer_override_peer_config.png "Editing the peer configuration"){: caption="Figure 8. Editing the peer configuration" caption-side="bottom"}
 
 Note that you may have to edit the configuration of a peer multiple times, depending on the status of the ordering nodes on different channels. The override logic is designed to handle more than one "override" section in the peer configuration.
 

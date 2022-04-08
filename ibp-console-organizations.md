@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization
 
@@ -23,7 +23,7 @@ You can use the {{site.data.keyword.blockchainfull}} Platform console to create 
 
 You can also use the console to manage which organizations are members of your channel. The administrator of the ordering service can use the organizations tab to add members to the blockchain [consortium](/docs/blockchain?topic=blockchain-glossary#glossary-consortium). Members of the channel can then use the console to add members to new or existing channels.
 
-![{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab](../images/console_organizations_tab.png "{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab"){: caption="Figure 1. You can use the organizations panel to create, import, and manage organization MSP definitions" caption-side="bottom"}
+![{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab](images/console_organizations_tab.png "{{site.data.keyword.blockchainfull_notm}} Platform console organizations tab"){: caption="Figure 1. You can use the organizations panel to create, import, and manage organization MSP definitions" caption-side="bottom"}
 
 **Target audience:** This topic is designed for network operators who are responsible for creating, monitoring, and managing the blockchain network.
 
@@ -109,7 +109,7 @@ If you plan to use a client application to register and enroll users with the or
 
 If the CA that is associated with the MSP resides in a different console, when you attempt to download the connection profile you see a warning message and the ``"certificateAuthorities:"`` section of the generated connection profile is empty.
 
-![Create connection profile warning panel](../images/create-connx-profile2.png "Create connection profile panel"){: caption="Figure 3. You can use the organizations panel to create, import, and manage organization MSP definitions" caption-side="bottom"}
+![Create connection profile warning panel](images/create-connx-profile2.png "Create connection profile panel"){: caption="Figure 3. You can use the organizations panel to create, import, and manage organization MSP definitions" caption-side="bottom"}
 
 The generated connection profile without the CA information resembles:
 
@@ -162,7 +162,7 @@ But if the `"certificateAuthorities"` section is empty and client application ne
 1. From the nodes panel, open the CA.
 2. Click the **Export** icon to download the CA configuration to a JSON file.
 
-    ![Export CA](../images/ca-export.png "Export your CA"){: caption="Figure 4. Click the export icon to download the CA configuration to a JSON file." caption-side="bottom"}
+    ![Export CA](images/ca-export.png "Export your CA"){: caption="Figure 4. Click the export icon to download the CA configuration to a JSON file." caption-side="bottom"}
 
     The downloaded _CA JSON file_ resembles:
 
