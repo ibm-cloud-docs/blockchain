@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: import nodes, another console, import a CA, import a peer, import admin identities, import an ordering service node
 
@@ -123,7 +123,7 @@ The exports and imports of MSPs are performed in the **Organizations** tab.
 1. Navigate to the **Organizations** tab and click your organization MSP tile.
 2. In the tile that opens, click the **Export** icon.
 
-    ![Export MSP button](../images/export-msp.png "Export MSP button"){: caption="Figure 1. Export MSP button" caption-side="bottom"}
+    ![Export MSP button](images/export-msp.png "Export MSP button"){: caption="Figure 1. Export MSP button" caption-side="bottom"}
 
 3. A JSON file is generated and downloaded to your local system.
 4. Share this file with the other organization admins of your channel.

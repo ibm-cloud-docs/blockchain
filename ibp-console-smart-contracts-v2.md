@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: smart contract, private data, private data collection, anchor peer, implicit collections
 
@@ -28,7 +28,7 @@ Instead of a single organization administrator making decisions for all organiza
 
 **Lifecycle process overview**  
 
-![Smart contract lifecycle](../images/smart-contract-lc-illustrationv3.png "Smart contract lifecycle"){: caption="Figure 1. Smart contract lifecycle" caption-side="bottom"}
+![Smart contract lifecycle](images/smart-contract-lc-illustrationv3.png "Smart contract lifecycle"){: caption="Figure 1. Smart contract lifecycle" caption-side="bottom"}
 
 The diagram illustrates the smart contract lifecycle process. Org1 begins the process by packaging the smart contract using the blockchain [VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform){: external} or the Fabric [peer CLI](https://hyperledger-fabric.readthedocs.io/en/v2.2.0/commands/peerlifecycle.html){: external}. After packaging, all smart contract lifecycle management is performed from the **Channels** tab in the console.  Org1 proposes the smart contract definition to the channel and installs it on one or more Org1 peers. The smart contract definition includes the definition name, version, endorsement policy, and optionally, private data collections. As a proposer of the definition, Org1 attaches the smart contract _package_, which contains the agreed to business logic that updates the ledger. The package can be shared with the channel members out of band, who can review the source code. However, it's important to understand that channel members **approve the smart contract definition, not the package**. Because Org1 is proposing the smart contract definition, their approval is automatically submitted with the proposal. The other three organizations can approve or abstain. When channel members approve a smart contract definition, they are not required to install the package on their peers. They have three options:
 - Simply approve the definition.
@@ -46,7 +46,7 @@ For more information about advanced channel options, which includes setting the 
 {: #ibp-console-smart-contracts-v2-before-fabimage}
 
 As a reminder, to leverage the smart contract lifecycle process, the peers on the channel must be running a Fabric v2.x image. The Fabric level of a peer is visible in the console by clicking a peer node to open it.
-![Peer version](../images/peer-version.png "How to find the Fabric version of the peer"){: caption="Figure 1. How to find the Fabric version of the peer" caption-side="bottom"}
+![Peer version](images/peer-version.png "How to find the Fabric version of the peer"){: caption="Figure 1. How to find the Fabric version of the peer" caption-side="bottom"}
 
 If your peer is running a Fabric v1.4.x image, you cannot use this tutorial to manage your smart contract. Instead, see the [Deploy a smart contract using Fabric v1.4](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v14) tutorial for instructions on how to deploy the smart contract on the channel or upgrade the peer to use a Fabric v2.x image.
 
@@ -298,7 +298,7 @@ If other organizations will run the package on their peers, you need to share th
 
 The decentralized governance of the smart contract lifecycle requires that the specified number of organizations in the channel lifecycle endorsement policy approve the smart contract definition before it can be committed to a channel. All organizations listed in the channel lifecycle endorsement policy receive a notification when a proposal definition is submitted to the channel. They can access the proposal from the Notification (bell) icon in the console or simply open the **Channels** tab where they can find the smart contract definition tile in the `Proposed` state. Clicking the tile or the notification opens the same approval panel.  
 
-![smart contract approval](../images/lifecycle-approve.png "Smart contract approval panel"){: caption="Figure 2. Smart contract approval panel" caption-side="bottom"}
+![smart contract approval](images/lifecycle-approve.png "Smart contract approval panel"){: caption="Figure 2. Smart contract approval panel" caption-side="bottom"}
 
 Proposal originators can view the proposal using the same mechanisms. However, by virtue of submitting the proposal, their approval is automatic.  
 
@@ -339,7 +339,7 @@ If you are familiar with the process that Fabric v1.4 used for deploying a smart
 
 When enough organizations have _approved_ the smart contract definition according to the channel lifecycle endorsement policy, the status of the definition on the tile changes to **Ready to commit**.
 
-![Ready to commit status](../images/ready-to-commit.png "Smart contract definition ready to commit status"){: caption="Figure 3. Smart contract definition ready to commit status" caption-side="bottom"}
+![Ready to commit status](images/ready-to-commit.png "Smart contract definition ready to commit status"){: caption="Figure 3. Smart contract definition ready to commit status" caption-side="bottom"}
 
 All organizations on the channel that received the approval notification can click the tile to see the organizations that have approved the definition and begin the commit process or they can update the package that will run on their peers after the definition is committed.
 

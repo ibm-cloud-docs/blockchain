@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-08"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -36,7 +36,7 @@ Each organization in the network has their own CA. Your organization CA signs re
 
 The following diagram shows all of the certificates that need to be managed and where they reside on your network.
 
-![Certificate overview diagram](../images/cert-expiration-all.png "Certificate overview diagram"){: caption="Figure 1. Certificate overview diagram" caption-side="bottom"}
+![Certificate overview diagram](images/cert-expiration-all.png "Certificate overview diagram"){: caption="Figure 1. Certificate overview diagram" caption-side="bottom"}
 
 The left column includes the certificates for the blockchain CA, peer, and ordering nodes. There are two certificates that are included on the CA node, the CA root certificate and the CA TLS cert. The root certificate is included here for completeness, but because it expires in 15 years, update instructions are not provided. The peer and ordering nodes are similar in that they both contain an **enrollment certificate** (the public key or signed certificate), their **TLS certificate** that enables them to transact with other nodes in their organization, and their **MSP admin certificate**, which represents the admin identity that is allowed to administer the node.  
 
@@ -61,16 +61,16 @@ If your certificates have already expired, you are not able to complete these st
 
 **Pre-requisite:** Before you can take advantage of Node OU support, ensure that your CAs are at Fabric v1.4.3 or higher. Open the CA tile to view the Fabric version. If the CA is not at v1.4.3 or higher, you should [upgrade](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) it now.
 
-![View CA Fabric version](../images/ca-fabric-version.png "View CA Fabric version"){: caption="Figure 2. View CA Fabric version" caption-side="bottom"}
+![View CA Fabric version](images/ca-fabric-version.png "View CA Fabric version"){: caption="Figure 2. View CA Fabric version" caption-side="bottom"}
 
 Enabling Node OU support for an MSP definition is a two-part process. First, you have to update the MSP definition itself, then you have to update the same MSP definition on the channel.
 
 **Part one: Enable Node OU support for an MSP definition:**  
 
 1. Open the **Organizations** tab to view the Node OU status for each MSP:
-    ![View Node OU status on MSP tile](../images/msp-nodeou.png "View Node OU status on MSP tile"){: caption="Figure 3. View Node OU status on MSP tile" caption-side="bottom"}
+    ![View Node OU status on MSP tile](images/msp-nodeou.png "View Node OU status on MSP tile"){: caption="Figure 3. View Node OU status on MSP tile" caption-side="bottom"}
 2. Click the **Settings** icon for the MSP.  The checkbox to add Node OU is selected by default. You do not have to add a new JSON file, you can simply click **Update MSP definition** to enable Node OU support for the MSP.  
-    ![Node OU checkbox](../images/nodeou-checkbox.png "Node OU checkbox"){: caption="Figure 4. Node OU checkbox" caption-side="bottom"}
+    ![Node OU checkbox](images/nodeou-checkbox.png "Node OU checkbox"){: caption="Figure 4. Node OU checkbox" caption-side="bottom"}
 
 The MSP is also automatically updated on any peer or ordering nodes that are configured to use this MSP. There is a brief downtime when the node is automatically restarted to use the updated MSP.
 
@@ -142,7 +142,7 @@ The following tables describe the types of certificates that you need to manage,
 
 The following diagram summarizes the process for updating peer admin certificates on your network. Click a circle to view the instructions.
 
-<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="../images/peer-admin-nodes.png" width="750" alt="Peer admin certificate renewal process." style="width:750px;" />
+<img usemap="#home_map" border="0" class="image" id="image_ztx_crb_f1b" src="images/peer-admin-nodes.png" width="750" alt="Peer admin certificate renewal process." style="width:750px;" />
 <map name="home_map" id="home_map">
 <area href="/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-manual-renewal" alt="View certificate expiration date" title="View certificate expiration date" shape="rect" coords="2, 290, 68, 390" />
 <area href="/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-manual-enroll" alt="Enroll a new identity" title="Enroll a new identity" shape="rect" coords="118, 210, 196, 300" />
@@ -165,7 +165,7 @@ The following diagram summarizes the process for updating peer admin certificate
 
 The following diagram summarizes the process for updating orderer organization admin certificates on your network. Click a circle to view the instructions.
 
-<img usemap="#home_map2" border="0" class="image" id="image_ztx_crb_f13" src="../images/orderer-admin-nodesv2.png" width="750" alt="Orderer organization admin certificate renewal process." style="width:750px;" />
+<img usemap="#home_map2" border="0" class="image" id="image_ztx_crb_f13" src="images/orderer-admin-nodesv2.png" width="750" alt="Orderer organization admin certificate renewal process." style="width:750px;" />
 <map name="home_map2" id="home_map2">
 <area href="/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-manual-renewal" alt="View certificate expiration date" title="View certificate expiration date" shape="rect" coords="0, 287, 73, 388" />
 <area href="/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-manual-enroll" alt="Enroll a new identity" title="Enroll a new identity" shape="rect" coords="112, 210, 179, 290" />
@@ -197,7 +197,7 @@ While the platform automatically renews the certificates for peer and ordering n
 
 If the admin certificates have been stored or imported into the console wallet, you can monitor the exact date of expiration for each identity. Click an admin identity tile to view the expiration date of the certificate and private key.
 
-![Admin Certificate expiration](../images/cert-expiration.png "Admin Identity certificate expiration"){: caption="Figure 5. Admin identity certificate expiration" caption-side="bottom"}
+![Admin Certificate expiration](images/cert-expiration.png "Admin Identity certificate expiration"){: caption="Figure 5. Admin identity certificate expiration" caption-side="bottom"}
 
 Otherwise, if certificates expire within five years, their expiration date is visible from the peer, ordering node, MSP, and channel tiles.
 
@@ -233,14 +233,14 @@ When the peer enrollment certificate expires, the peer can no longer communicate
 
 While you can use the following steps to renew certificates before or after they expire, to avoid an interruption of service, it is best to renew the certificates before they expire. Check the expiration date of your peer enrollment and TLS certificates by opening the peer node.
 
-![Peer enrollment and TLS certificate expiration](../images/peer-cert-expiry.png "Peer enrollment and TLS certificate expiration"){: caption="Figure 6. Peer enrollment and TLS certificate expiration" caption-side="bottom"}
+![Peer enrollment and TLS certificate expiration](images/peer-cert-expiry.png "Peer enrollment and TLS certificate expiration"){: caption="Figure 6. Peer enrollment and TLS certificate expiration" caption-side="bottom"}
 
 1. Open the peer and click the **Settings** icon.
 2. Click **Update certificates**. You can renew either the `Enrollment certificate` or the `TLS certificate` or both, based on their expiration dates.
 3. In the drop-down box for each certificate type, select **Re-enroll certificate** if the certificate has not expired, or **Enroll certificate** if it has already expired.
 4. When you click **Update certificates**, the peer is restarted. Verify the renewal is successful by clicking the refresh icon and examining the updated enrollment and TLS certificate expiration dates.
 
-    ![Certificate refresh button](../images/cert-refresh.png "Certificate refresh button"){: caption="Figure 7. Certificate refresh button" caption-side="bottom"}
+    ![Certificate refresh button](images/cert-refresh.png "Certificate refresh button"){: caption="Figure 7. Certificate refresh button" caption-side="bottom"}
 
 While the console does not allow you to set custom expiration dates for certificates, notice that the Peer TLS certificate expiration date is in 15 years, so that renewal of this TLS certificate is not required again next year.  However, the peer enrollment certificate expires again in one year, so you will need to renew it again before that date.
 {: note}
@@ -256,7 +256,7 @@ An alternative to renewing these certificates is to simply deploy a new peer, an
 
 If any single ordering node enrollment certificate expires, the entire ordering service goes down. When the ordering node TLS certificate expires, the node can no longer participate in the Raft cluster, which can cause  consenter [quorum](/docs/blockchain?topic=blockchain-glossary#glossary-quorum) to be lost, and the blockchain network goes down. It’s also not possible to upgrade any node in the ordering service if one of ordering nodes in the orderer consenter set is down. The automatic certificate renewal process attempts to re-enroll the ordering node enrollment and TLS certificates 30 days before they expire, and when successful, no further action is required on your part. But if the automatic certificate renewal fails because the CA is down or unreachable when the renewal attempt is made, or if the associated CA TLS certificate is expired, you have to manually update these certificates. When automatic renewal fails, a warning is displayed on the ordering node tile. While you can use this process to renew certificates before or after they expire, to avoid an interruption of service, it is best to renew the certificates before they expire.  Check the expiration date of your ordering node enrollment and TLS certificates by opening the ordering node.  
 
-![Ordering node enrollment and TLS certificate expiration](../images/ordering-node-cert-expiry.png "Ordering node enrollment and TLS certificate expiration"){: caption="Figure 8. Ordering node enrollment and TLS certificate expiration" caption-side="bottom"}
+![Ordering node enrollment and TLS certificate expiration](images/ordering-node-cert-expiry.png "Ordering node enrollment and TLS certificate expiration"){: caption="Figure 8. Ordering node enrollment and TLS certificate expiration" caption-side="bottom"}
 
 Because this certificate renewal process restarts the ordering node, and in the case of a TLS certificate renewal, the node can no longer participate in the application channel [consenter set](/docs/blockchain?topic=blockchain-glossary#glossary-consenter), you need to pay particular attention to maintaining quorum on the application channel throughout this process. Before attempting these steps, and to avoid any interruption of service, **ensure that you still have enough ordering nodes available to maintain quorum** while this node is restarted or offline, in the case of a TLS certificate update.
 {: important}
@@ -354,7 +354,7 @@ Before attempting these steps, be aware that these actions trigger a restart of 
 8. In the **Organizations** tab, open the MSP tile for the peer and click the **Settings** icon.
 9. In the side panel, click **Add file** and select the updated MSP JSON file.
 10. Notice that the `Node OU` checkbox is selected for you, which means that Node OU support will be enabled on the MSP and that you will not have to repeat this process again _in another year_ when the certificates expire. For now though, you still need to complete all of the steps in this manual renewal process.
-    ![Node OU checkbox](../images/nodeou-checkbox.png "Node OU checkbox"){: caption="Figure 9. Update MSP with Node OU enabled" caption-side="bottom"}
+    ![Node OU checkbox](images/nodeou-checkbox.png "Node OU checkbox"){: caption="Figure 9. Update MSP with Node OU enabled" caption-side="bottom"}
 11. Click **Update MSP definition**. All Peer and ordering nodes in this console that include this MSP as their node admin are automatically updated with the new MSP and restarted.
 12. **Export this updated MSP**, and in an out of band action, share the file with all of the members of the network who must import it into their console. It is important for them to import the updated MSP, so when they create a new channel, they are using the MSP definition with the latest admin certificate.  
 
@@ -392,7 +392,7 @@ If this is a peer admin MSP that is an ordering service consortium member, the o
 
 1. From the **Nodes** tab, the ordering service admin opens the ordering service tile.
 2. Delete the existing consortium member that contains the original MSP definition, and then add the consortium again with the new admin certificate by clicking **Add organization**.  Browse to the new MSP JSON file from [step two](#cert-mgmt-manual-update-msp).
-    ![Update Ordering service consortium member](../images/del-add-node.png "Update Ordering service consortium member"){: caption="Figure 10. Ordering service admin MSP update" caption-side="bottom"}
+    ![Update Ordering service consortium member](images/del-add-node.png "Update Ordering service consortium member"){: caption="Figure 10. Ordering service admin MSP update" caption-side="bottom"}
 
 ### Step six: Update ordering service admin on ordering service system channel
 {: #cert-mgmt-manual-update-os-admin}
@@ -401,7 +401,7 @@ If the updated certificate is for the ordering service MSP admin, you need to up
 
 1. From the **Nodes** tab, open the ordering service tile.
 2. Under **Ordering service administrators** click the **Settings** icon on the ordering service organization MSP tile.
-    ![Ordering service admin MSP update](../images/os-msp-gear-icon.png "Ordering service admin MSP update"){: caption="Figure 11. Ordering service admin MSP update" caption-side="bottom"}
+    ![Ordering service admin MSP update](images/os-msp-gear-icon.png "Ordering service admin MSP update"){: caption="Figure 11. Ordering service admin MSP update" caption-side="bottom"}
 3. From the **Existing MSP ID** tab, select the MSP that needs to be updated and then select the **original identity** to sign the request. You must use the original identity for this step because it's the only one with permission to make channel updates. This action replaces the existing MSP definition for the ordering service admin with the updated MSP with the new admin certificate.
 
 ### Step seven: Update orderer organization MSP on channel  
@@ -435,7 +435,7 @@ Some customers prefer to use a third-party, or "external" CA to generate their p
 If the certificates are for peer or ordering node enrollment or TLS certificates, they can be updated by completing the following steps:
 
 1. Open the peer or ordering node tile and click the **Settings** icon and then **Update certificates**:
-    ![How to update certificates from an external CA](../images/ext-ca-certs-update.png "How to update certificates from an external CA"){: caption="Figure 12. How to update certificates from an external CA" caption-side="bottom"}
+    ![How to update certificates from an external CA](images/ext-ca-certs-update.png "How to update certificates from an external CA"){: caption="Figure 12. How to update certificates from an external CA" caption-side="bottom"}
 2. Click **Add certificate** and browse to the updated certificate `.pem` files. You do not have to replace all of them, but if you provide an enrollment certificate, you also need to provide the associated key file. And likewise, if you provide a TLS certificate you also need to provide the associated key.
 3. When you click **Update certificates**, the peer or ordering node is restarted. Verify the renewal is successful by examining the updated enrollment and TLS certificate expiration dates.
 
@@ -576,7 +576,7 @@ You can find the expiration date in the **Validity** section and follows `Not Af
 
 MSPs can be exported from the console to your local file system. Navigate to the **Organizations** tab and click the MSP that you want to export. Click the **Export** icon to download the MSP to a JSON file on your local system.
 
-![How to export MSP](../images/export-msp.png "How to export MSP"){: caption="Figure 13. How to export MSP" caption-side="bottom"}
+![How to export MSP](images/export-msp.png "How to export MSP"){: caption="Figure 13. How to export MSP" caption-side="bottom"}
 
 Share the JSON file with all of the members of the network who must import it into their console. It is important for them to import the updated MSP, so that when they create a new channel, they are using the MSP definition with the latest admin certificate.
 
