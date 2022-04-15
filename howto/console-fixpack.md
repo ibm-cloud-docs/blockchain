@@ -6,8 +6,7 @@ lastupdated: "2022-04-15"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
-subcollection: blockchain-sw-253
-
+subcollection: blockchain
 ---
 
 {:external: target="_blank" .external}
