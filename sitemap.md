@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: site map
 subcollection: blockchain
@@ -102,8 +102,6 @@ subcollection: blockchain
 
 
 [What's new](/docs/blockchain?topic=blockchain-whats-new)
-
-* [March 29, 2021](/docs/blockchain?topic=blockchain-whats-new#whats-new-03-29-2021)
 
 * [April 13, 2021](/docs/blockchain?topic=blockchain-whats-new#whats-new-04-13-2021)
 
