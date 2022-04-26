@@ -25,7 +25,6 @@ subcollection: blockchain
 
 
 
-
 ## April 13, 2021
 {: #whats-new-04-13-2021}
 {{site.data.keyword.blockchainfull_notm}} Platform 2.5.2 is now available with support for:

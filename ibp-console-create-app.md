@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-04-26"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -14,15 +14,20 @@ subcollection: blockchain
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating applications
+# Developing applications
 {: #ibp-console-app}
 
 
 
-After you install smart contracts and deploy your nodes, you can use client applications to transact with other members of your network. Applications can invoke the business logic that is contained in smart contracts to create, transfer, or update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks that you manage from {{site.data.keyword.blockchainfull}} Platform console.
+After you install smart contracts (chaincode) and deploy your nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}
 
-**Target audience:** This topic is designed for application developers who are interested in learning more about how to create a client application that interacts with a blockchain network.
+**Target audience:** This topic is designed for application developers who are interested in developing client apps for a {{site.data.keyword.blockchainfull_notm}} Platform network, in Node.js, Go, or Java.
+
+Hyperledger Fabric v2.4 introduced a Fabric Gateway service which facilitates client application development by migrating gateway requirements and transaction processing from the Fabric client SDKs to peer nodes. This [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) architecture enables developers to focus on coding business solutions, without having to include blockchain transaction logic such as collecting endorsements and committing to the ledger. For developing new applications, this v2.4 Fabric Gateway method and API are recommended. However, **no** migration is required for existing client applications, and the [Fabric v2.3](https://hyperledger-fabric.readthedocs.io/en/release-2.3/developapps/developing_applications.html) (and earlier) method of developing apps, including the legacy gateway SDKs, remain supported in both Fabric v2.4 and {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3.
+{: important}
+
+The remainder of this topic describes the legacy method of developing applications for a Hyperledger Fabric blockchain network, which remains supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3. For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the Fabric documentation on running apps on the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html).
 
 ## Overview
 {: #ibp-console-app-learning-resources}
@@ -690,7 +695,7 @@ fabric_client.createUser({
 ```
 {: codeblock}
 
-If you are using low-level SDK APIs to connect to your network, there are additional steps that you can take to manage the performance and availability of your application. 
+If you are using low-level SDK APIs to connect to your network, there are additional steps that you can take to manage the performance and availability of your application.
 
 ## Highly available applications
 {: #console-app-ha}
