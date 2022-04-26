@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -27,7 +27,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## 03 May 2022
 {: #05-03-2022}
 
-**Certificate Authority (CA) patch 1.5.2-8, Peer and ordering node patch 1.4.12-11, 2.2.5-3.**
+**Certificate Authority (CA) patch 1.5.3.1, Peer and ordering node patch 1.4.12-12, 2.4.3-1.**
 
 Miscellaneous bug fixes and security patches.
 

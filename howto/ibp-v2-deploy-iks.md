@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-04-26"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -96,8 +96,9 @@ When you plan to use the service instance in the context of a broader organizati
 {: #ibp-v2-deploy-iks-browsers}
 The {{site.data.keyword.blockchainfull_notm}} Platform console has been successfully tested on the following browsers:
 
-- Chrome Version 91.0.4472.114 (Official Build) (64-bit)
-- Safari Version 14.1.1 (16611.2.7.1.4)
+- Chrome Version 100.0.4896.127 (Official Build) (x86_64)
+- Safari Version 15.4 (16613.1.17.1.13, 16613)
+- Firefox 99.0.1 (64-bit)
 
 ### Resources required
 {: #ibp-v2-deploy-iks-resources-required}
