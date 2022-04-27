@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-04-27"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -22,12 +22,12 @@ subcollection: blockchain
 After you install smart contracts (chaincode) and deploy your nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}
 
-**Target audience:** This topic is designed for application developers who are interested in developing client apps for a {{site.data.keyword.blockchainfull_notm}} Platform network, in Node.js, Go, or Java.
+**Target audience:** This topic is designed for application developers who are interested in developing client apps for an {{site.data.keyword.blockchainfull_notm}} Platform network, in Node.js, Go, or Java.
 
-Hyperledger Fabric v2.4 introduced **the new Fabric Gateway service**, which facilitates client application development by migrating gateway requirements and transaction processing from the Fabric client SDKs to peer nodes. The [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) architecture enables developers to focus on coding business solutions, without having to include blockchain transaction logic such as collecting endorsements and committing to the ledger. For developing new applications, this v2.4 Fabric Gateway method and API are recommended. However, **no** migration is required for existing client applications, and the [Fabric v2.3](https://hyperledger-fabric.readthedocs.io/en/release-2.3/developapps/developing_applications.html) (and earlier) method of developing apps, including the legacy gateway SDKs, remain supported in both Fabric v2.4 and {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3.
+Hyperledger Fabric v2.4 has introduced the **Fabric Gateway service**, which facilitates client application development by migrating gateway requirements and transaction processing from the client SDKs to v2.4 peer nodes. This [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) service enables developers to focus on coding business solutions, without having to include blockchain node connection or transaction processing logic such as collecting endorsements and committing to the ledger. **For developing new applications, this v2.4 Fabric Gateway method and API are recommended.** However, for existing applications, **no migration is required** and the [Fabric v2.3](https://hyperledger-fabric.readthedocs.io/en/release-2.3/developapps/developing_applications.html) (and earlier) method of developing apps, including the legacy SDKs, remain supported in both Fabric v2.4 and {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3.
 {: important}
 
-The remainder of this topic describes the legacy method of developing applications for a Hyperledger Fabric blockchain network, which remains supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3. For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the Fabric documentation on running apps on the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html).
+**Attention**: For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html) documentation. The documentation includes v2.4 [Fabric Gateway samples](https://github.com/hyperledger/fabric-gateway/tree/main/samples) and [connection details](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html#first-establish-a-grpc-connection-to-the-gateway). (The remainder of this page below describes the Fabric v2.3 and earlier methods of developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.)
 
 ## Overview
 {: #ibp-console-app-learning-resources}
