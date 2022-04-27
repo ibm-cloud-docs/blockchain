@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-15"
+lastupdated: "2022-04-27"
 
 keywords: Log analysis, logDNA, viewing logs, monitoring
 
