@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-27"
+lastupdated: "2022-04-29"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -19,18 +19,53 @@ subcollection: blockchain
 
 
 
-After you install smart contracts (chaincode) and deploy your nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this tutorial to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
+After you install smart contracts (chaincode) and deploy your peer and ordering nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this page to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}
 
 **Target audience:** This topic is designed for application developers who are interested in developing client apps for an {{site.data.keyword.blockchainfull_notm}} Platform network, in Node.js, Go, or Java.
 
-Hyperledger Fabric v2.4 has introduced the **Fabric Gateway service**, which facilitates client application development by migrating gateway requirements and transaction processing from the client SDKs to v2.4 peer nodes. This [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) service enables developers to focus on coding business solutions, without having to include blockchain node connection or transaction processing logic such as collecting endorsements and committing to the ledger. **For developing new applications, this v2.4 Fabric Gateway method and API are recommended.** However, for existing applications, **no migration is required** and the [Fabric v2.3](https://hyperledger-fabric.readthedocs.io/en/release-2.3/developapps/developing_applications.html) (and earlier) method of developing apps, including the legacy SDKs, remain supported in both Fabric v2.4 and {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3.
-{: important}
+## Using the v2.4 Fabric Gateway peer service
+{: #ibp-console-app-gateway-peer-service}
 
-**Attention**: For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html) documentation. The documentation includes v2.4 [Fabric Gateway samples](https://github.com/hyperledger/fabric-gateway/tree/main/samples) and [connection details](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html#first-establish-a-grpc-connection-to-the-gateway). (The remainder of this page below describes the Fabric v2.3 and earlier methods of developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.)
+{{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 adds support for the v2.4 Hyperledger Fabric Gateway peer service, which introduces an updated model for developing applications. The v2.4 gateway peer model relocates node connection and transaction processing requirements from the client application to the v2.4 peer nodes. The [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) method therefore enables developers to focus on business solutions, without having to code gateway connection or transaction processing logic in client applications, as is required for earlier releases.
 
-## Overview
+### Supported app development methods in Fabric v2.4
+{: #ibp-console-app-dev-methods-v24}
+
+**To develop new applications** for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3, using the latest v2.4 Hyperledger Fabric Gateway peer service and API are recommended, as documented in [Running a Fabric Application](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html). However, **for existing applications** developed for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2 and earlier, no migration is required&mdash; your existing applications will continue to run seamlessly on v2.5.3. In addition, the prior [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html) (and earlier) development methods, using the legacy SDKs (both high-level and low-level programming models), remain supported for new applications in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.
+
+### Fabric Peer Gateway documentation
+{: #ibp-console-app-fabric-gateway docs}
+
+For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html) documentation. The documentation includes v2.4 [Fabric Gateway samples](https://github.com/hyperledger/fabric-gateway/tree/main/samples), [connection details](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html#first-establish-a-grpc-connection-to-the-gateway), and related client application development topics.
+
+### Connecting to the Fabric Gateway peer service
+{: #ibp-console-app-connecting-fabric-gateway}
+
+A client application that uses the v2.4 Fabric Gateway peer service needs to specify the connection profile for the target peer. The recommended method for retrieving peer connection information is to download the connection profile for your organization, which contains the peer endpoint URL, and the TLS Root CA certificate in `pem` format, required for the client application to connect.
+
+**Attention:** The peer endpoint URL in the downloaded connection profile starts with `grpcs://`, which is not recognized as part of the endpoint URL. The endpoint URL is therefore the `url` field in the peer connection profile, with the `grpcs://` prefix removed. Peer node details in the organization connection profile will look similar to the following example:
+
+`
+"url": "grpcs://n257768-org1peer1.us-east.containers.appdomain.cloud:7051",
+           "tlsCACerts": {
+               "pem": "-----BEGIN CERTIFICATE-----\nMIICCzCCAbKgAwIBAgIUYH1G2I60YOEZuiAQPsvSmWXABxUwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAg
+< MATERIAL REMOVED FOR BREVITY AND SECURITY>
+DAQH/MB0GA1UdDgQWBBRDV6AdNnpIEGO9\n7mbUM5bk4U0/yTAKBggqhkjOPQQDAgNHADBEAiAxjAM3zkf4v0TXUlJZZgS4TFE5\nY7eO7e16X1rETFryywIgHuSvyhPDUog0hD5VUUtZjroXYG4pO1aI1L/zue9lr48=\n-----END CERTIFICATE-----\n"
+           },
+           "grpcOptions": {
+               "ssl-target-name-override": "n257768-org1peer1.us-east.containers.appdomain.cloud"
+           }
+`
+
+**Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4. (({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
+
+
+## Legacy model of developing applications
 {: #ibp-console-app-learning-resources}
+
+The remainder of this page describes the legacy model of developing applications, which was designed for Hyperledger Fabric v2.2 and earlier. Refer to the previous section on [using the v2.4 Fabric Gateway peer service](#ibp-console-app-gateway-peer-service) for details on developing new applications for Fabric v2.4.
+{: important}
 
 Developing an application might require coordination between two distinct users of your network, the network operator and the application developer:
 - **The network operator** is the administrator who uses the {{site.data.keyword.blockchainfull_notm}} Platform console to deploy the nodes of your organization and installs the smart contracts on your network.
