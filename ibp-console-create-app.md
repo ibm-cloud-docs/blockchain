@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-04-29"
+lastupdated: "2022-05-02"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -32,7 +32,12 @@ After you install smart contracts (chaincode) and deploy your peer and ordering 
 ### Supported app development methods in Fabric v2.4
 {: #ibp-console-app-dev-methods-v24}
 
-**To develop new applications** for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3, using the latest v2.4 Hyperledger Fabric Gateway peer service and API are recommended, as documented in [Running a Fabric Application](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html). However, **for existing applications** developed for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2 and earlier, no migration is required&mdash; your existing applications will continue to run seamlessly on v2.5.3. In addition, the prior [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html) (and earlier) development methods, using the legacy SDKs (both high-level and low-level programming models), remain supported for new applications in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.
+**To develop new applications** for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3, using the latest v2.4 Hyperledger Fabric Gateway peer service and API are recommended, as documented in [Running a Fabric Application](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html). However, **for existing applications** developed for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2 and earlier, no migration is required&mdash; your existing applications will continue to run on v2.5.3. In addition, the prior [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html) (and earlier) development methods, using the legacy SDKs (both high-level and low-level programming models), remain supported for new applications in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.
+
+If you are using Node.js chaincode, refer to [Upgrading nodes from Fabric v1.4 to v2.4](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-govern-components#ibp-console-govern-components-upgrade) before upgrading a peer from Fabric v1.4 to v2.4.
+
+Although legacy applications will continue to run on v2.5.3, upgrading development methods to use the v2.4 Fabric Gateway API as soon as possible is recommended.
+{: important}
 
 ### Fabric Peer Gateway documentation
 {: #ibp-console-app-fabric-gateway docs}
@@ -46,9 +51,9 @@ A client application that uses the v2.4 Fabric Gateway peer service needs to spe
 
 **Attention:** The peer endpoint URL in the downloaded connection profile starts with `grpcs://`, which is not recognized as part of the endpoint URL. The endpoint URL is therefore the `url` field in the peer connection profile, with the `grpcs://` prefix removed. Peer node details in the organization connection profile will look similar to the following example:
 
-`
+```
 "url": "grpcs://n257768-org1peer1.us-east.containers.appdomain.cloud:7051",
-           "tlsCACerts": {
+          "tlsCACerts": {
                "pem": "-----BEGIN CERTIFICATE-----\nMIICCzCCAbKgAwIBAgIUYH1G2I60YOEZuiAQPsvSmWXABxUwCgYIKoZIzj0EAwIw\nZDELMAkGA1UEBhMCVVMxFzAVBgNVBAg
 < MATERIAL REMOVED FOR BREVITY AND SECURITY>
 DAQH/MB0GA1UdDgQWBBRDV6AdNnpIEGO9\n7mbUM5bk4U0/yTAKBggqhkjOPQQDAgNHADBEAiAxjAM3zkf4v0TXUlJZZgS4TFE5\nY7eO7e16X1rETFryywIgHuSvyhPDUog0hD5VUUtZjroXYG4pO1aI1L/zue9lr48=\n-----END CERTIFICATE-----\n"
@@ -56,7 +61,10 @@ DAQH/MB0GA1UdDgQWBBRDV6AdNnpIEGO9\n7mbUM5bk4U0/yTAKBggqhkjOPQQDAgNHADBEAiAxjAM3z
            "grpcOptions": {
                "ssl-target-name-override": "n257768-org1peer1.us-east.containers.appdomain.cloud"
            }
-`
+```
+
+
+Click the Organization MSP tile for the organization that your client application interacts with. Click Create connection profile to open a side panel where you can build and download your connection profile.
 
 **Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4. (({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
 

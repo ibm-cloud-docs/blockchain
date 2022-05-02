@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-05-02"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -125,8 +125,19 @@ At a high level, the process of upgrading a node involves two main steps:
 It may also be necessary to update SDKs and smart contracts before you can take advantage of the latest Fabric features. For more information, check out [Step three: Update SDKs and smart contracts](#ibp-console-govern-components-upgrade-step-three).
 {: tip}
 
+### Upgrading nodes from Fabric v1.4 to v2.4
+{: #ibp-console-govern-components-upgrade-v14-v24}
+
 Upgrading {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from Hyperledger Fabric 1.4.x to the latest Fabric version is possible, but deploying a new Fabric 2.2.x peer instead of upgrading is recommended. Fabric installation is done by {{site.data.keyword.blockchainfull_notm}} Platform, but can take hours or days depending on the size of the database to be built. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
 {: important}
+
+If your Fabric v1.4 nodes use Node.js chaincode, use the following sequence to upgrade these nodes from Fabric v1.4 to v2.4:
+
+1. Deploy new peers with Fabric v2.2
+2. Update the Node.js chaincode on these peers to 2.4 shim
+3. Install and instantiate the new chaincode
+4. Upgrade the peers from Fabric v2.2 to v2.4.
+
 
 ### Step one: Back up your ledger (optional)
 {: #ibp-console-govern-components-upgrade-step-one-ledger}
