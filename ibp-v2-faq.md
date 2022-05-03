@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-04-15"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -56,6 +56,7 @@ content-type: faq
 - [Do ordering service Raft nodes use Transport Layer Security (TLS) for communication?](#ibp-v2-faq-raft-tls)
 - [How can I back up and restore components and networks?](#ibp-v2-faq-backup-restore)
 - [What benefits are available with the new smart contract lifecycle available on nodes and channels running on Fabric v2.x?](#ibp-v2-faq-new-lifecycle)
+- [How can I check and interpret the status of my components through the Kubernetes command line?](#ibm-v2-faq-cr-status)
 
 **Certificates**
 - [Do you support using certificates from non-IBM Certificate Authorities (CAs)?](#ibp-v2-faq-v2-external-certs)
@@ -196,7 +197,7 @@ Currently, {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.ke
 {: #ibp-v2-faq-ocp-trial}
 {: faq}
 
-A free 30 day trial is available in the [Red Hat Marketplace.](https://marketplace.redhat.com/en-us/products/ibm-blockchain){: external}. See [Deploy from Red Hat Marketplace](/docs/blockchain-sw-252?topic=blockchain-sw-252-deploy-ocp-rhm) to learn more.
+A free 30 day trial is available in the [Red Hat Marketplace.](https://marketplace.redhat.com/en-us/products/ibm-blockchain){: external}. See [Deploy from Red Hat Marketplace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-rhm) to learn more.
 
 
 ## Is it possible to deploy blockchain nodes to multiple clouds from a single blockchain console?
@@ -228,7 +229,7 @@ If you are moving from v1.4.x to v2.x, you may have to update your smart contrac
 {: #ibp-v2-faq-migrate-raft}
 {: faq}
 
-Yes. The {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}  uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-252?topic=blockchain-sw-252-ibp-v2-faq#ibp-v2-faq-interoperability).
+Yes. The {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}  uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-interoperability).
 
 ## Can I migrate the blockchain components on my {{site.data.keyword.IBM_notm}} Kubernetes service cluster to a Red Hat OpenShift cluster in {{site.data.keyword.cloud_notm}}?
 {: #ibp-v2-faq-ocp-migrate}
@@ -302,6 +303,36 @@ This separation of concerns opens exciting new opportunities for collaborating o
 For a tutorial on how this process is handled by the console, check out [Deploy a smart contract using Fabric v2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2).
 
 For information about to take advantage of the new lifecycle when writing a smart contract, check out [Writing powerful smart contracts](/docs/blockchain?topic=blockchain-write-powerful-smart-contracts).
+
+## How can I check and interpret the status of my components through the Kubernetes command line?
+{: #ibm-v2-faq-cr-status}
+{: faq}
+
+To check the status of your component, run the following command:
+```
+kubectl get <CUSTOM_RESOURCE_TYPE> <CUSTOM_RESOURCE_NAME> -n <NAMESPACE> -o yaml
+```
+{: codeblock}
+
+- Replace `<CUSTOM_RESOURCE_TYPE>` with the custom resource type of your component (`ibpca`, `ibppeer`, `ibporderer`, or `ibpconsole`).
+- Replace `<CUSTOM_RESOURCE_NAME>` with the name of your component.
+- Replace `<NAMESPACE>` with the name of your {{site.data.keyword.IBM_notm}} Support for Hyperledger Fabric deployment namespace or OpenShift project.
+
+The `spec.status` field will contain details of your component's status:
+- `errorCode`
+- `lastHeartbeatTime`: when the controller last reconciled the component
+- `message`: long explanation of the status type
+- `reason`: short explanation of the status
+- `status`: "true" or "false" bsed on if status is valid
+- `version`: the product (IBP) version of the component
+- `versions`: the operand version of the component
+- `type`: describes the current status of the component
+    - **Deploying**: component pod(s) spinning up but not yet running and ready
+    - **Deployed**: component pod(s) are running
+    - **Precreated**: (specific to the Orderer) Orderer is waiting for the genesis block to be created
+    - **Error**: component hit an error during reconcile, or a certificate has expired
+    - **Warning**: one or more of the component's certificate will be expiring within 30 days (by default)
+    - **Initializing**: component is being reconciled again due to spec updates in the pre-reconcile checks
 
 ## Do you support using certificates from non-IBM Certificate Authorities?
 {: #ibp-v2-faq-v2-external-certs}
