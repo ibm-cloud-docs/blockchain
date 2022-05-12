@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-05-11"
+lastupdated: "2022-05-12"
 
 keywords: site map
 subcollection: blockchain
@@ -104,60 +104,6 @@ subcollection: blockchain
 [What's new](/docs/blockchain?topic=blockchain-whats-new)
 
 * [May 03, 2022](/docs/blockchain?topic=blockchain-whats-new#whats-new-05-03-2022)
-
-* [April 13, 2021](/docs/blockchain?topic=blockchain-whats-new#whats-new-04-13-2021)
-
-* [January 19, 2021](/docs/blockchain?topic=blockchain-whats-new#whats-new-01-19-2021)
-
-* [November 02, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-11-02-2020)
-
-* [August 27, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-08-19-2020)
-
-* [June 18, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-06-18-2020)
-
-* [May 20, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-05-20-2020)
-
-* [March 24, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-03-24-2020)
-
-* [February 14, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-2-14-2019)
-
-* [February 06, 2020](/docs/blockchain?topic=blockchain-whats-new#whats-new-02-06-2020)
-
-* [October 02, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019)
-    * [Reminders for Starter Plan users](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-reminders)
-    * [The {{site.data.keyword.blockchainfull_notm}} Platform console UI has been updated](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-02-2019-Console)
-
-* [August 27, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-8-27-2019)
-
-* [August 7, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-8-7-2019)
-
-* [June 18, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-6-18-2019)
-
-* [May 31, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-5-31-2019)
-
-* [May 9, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-5-09-2019)
-
-* [April 23, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-4-23-2019)
-
-* [February 8, 2019](/docs/blockchain?topic=blockchain-whats-new#whats-new-2-08-2019)
-
-* [December 7, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-12-07-2018)
-
-* [November 27, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-11-27-2018)
-
-* [November 13, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-11-13-2018)
-
-* [October 4, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-10-04-2018)
-
-* [September 4, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-9-04-2018)
-
-* [June 15, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-6-15-2018)
-
-* [May 15, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-5-15-2018)
-
-* [March, 18, 2018](/docs/blockchain?topic=blockchain-whats-new#whats-new-3-18-2018)
-
-* [August 11, 2017](/docs/blockchain?topic=blockchain-whats-new#whats-new-8-11-2017)
 
 
 ## Blockchain component overview

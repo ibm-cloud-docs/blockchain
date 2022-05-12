@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-12"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -66,13 +66,13 @@ DAQH/MB0GA1UdDgQWBBRDV6AdNnpIEGO9\n7mbUM5bk4U0/yTAKBggqhkjOPQQDAgNHADBEAiAxjAM3z
 
 Click the Organization MSP tile for the organization that your client application interacts with. Click Create connection profile to open a side panel where you can build and download your connection profile.
 
-**Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4. (({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
+**Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4. ({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
 
 
 ## Legacy model of developing applications
 {: #ibp-console-app-learning-resources}
 
-The remainder of this page describes the legacy model of developing applications, which was designed for Hyperledger Fabric v2.2 and earlier. Refer to the previous section on [using the v2.4 Fabric Gateway peer service](#ibp-console-app-gateway-peer-service) for details on developing new applications for Fabric v2.4.
+This section describes the legacy model of developing applications, which was designed for Hyperledger Fabric v2.2 and earlier. Refer to the previous section on [using the v2.4 Fabric Gateway peer service](#ibp-console-app-gateway-peer-service) for details on developing new applications for Fabric v2.4.
 {: important}
 
 Developing an application might require coordination between two distinct users of your network, the network operator and the application developer:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-05-02"
+lastupdated: "2022-05-12"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -117,7 +117,7 @@ In these cases, the process of "updating to the latest" release is, at a high le
 You must upgrade nodes before you update the channels. If a node attempts to read a configuration block containing a capability level it does not understand (which is true in cases where the capability is a higher level than the node version), the node will crash **on all channels**. The node must then be upgraded to the appropriate Fabric version before it can be used again.
 {: important}
 
-At a high level, the process of upgrading a node involves two main steps:
+The process of upgrading a node involves two main steps:
 
 1. Backing up the persistent volumes associated with the node. These backups ensure that in the case of an upgrade failure in which the peer pod is corrupted that the node can be re-deployed using the ledger. For more information, see [Backup considerations for each node type](/docs/blockchain?topic=blockchain-backup-restore#backup-restore-node-considerations).
 2. Upgrading the Fabric versions of the nodes one at a time (also known as a "rolling upgrade").
