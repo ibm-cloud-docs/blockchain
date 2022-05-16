@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-26"
+lastupdated: "2022-05-16"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -109,7 +109,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform console has been successf
 When you link your {{site.data.keyword.blockchainfull_notm}} Platform console to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}, you need to ensure that your Kubernetes cluster meets the minimum hardware resource requirements:
 
 |Kubernetes cluster type | Use case | CPU | RAM | Worker nodes |
-|-----------|------|-----|-----------------------|
+|-----------|------|-----|-----------------------|----------|
 |Standard (Recommended) | Suitable for MVPs | 4 (Shared) | 16 GB (Shared)|multiple|
 |Free** | Suitable for evaluation | 2 | 4 GB | 1 |
 {: caption="Table 1. Recommended cluster size on Kubernetes cluster on {{site.data.keyword.cloud_notm}}" caption-side="bottom"}
