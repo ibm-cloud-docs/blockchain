@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-05-27"
 
 keywords: IBM Blockchain Platform, Data residency, world state
 
@@ -44,7 +44,7 @@ The architecture of Hyperledger Fabric that underlies the {{site.data.keyword.bl
 Peers maintain a separate ledger for each channel that they join. Only organizations that are members of the channel can join their peers to the channel and receive ledger updates from the ordering service. As a result, each channel is bound to an ordering service, which stores the blockchain portion of every channel ledger that it maintains. Client applications submit transactions to the peers and ordering service of a given channel. These transactions are added to the transaction log within the blockchain and include a [read-write set](https://hyperledger-fabric.readthedocs.io/en/release-2.2/readwrite.html){: external} that is used to update the key-value pairs in the world state.
 
 If in-country data residency is a requirement, you need to consider the location of your peers and the ordering service, as well as your client applications. You also need to know the location of the peers that belong to other organizations on your channels.
-If you are using {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}, you can find the list of [{{site.data.keyword.blockchainfull_notm}} Platform regions and locations](/docs/blockchain/reference?topic=blockchain-ibp-regions-locations#ibp-regions-locations) where you and the members of your consortium can deploy your components.
+If you are using {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}, you can find the list of [{{site.data.keyword.blockchainfull_notm}} Platform regions and locations](/docs/blockchain?topic=blockchain-ibp-regions-locations#ibp-regions-locations) where you and the members of your consortium can deploy your components.
 
 
 ## A use case for data residency
