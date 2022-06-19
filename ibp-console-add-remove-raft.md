@@ -64,7 +64,7 @@ The process of creating a CA, registering identities, and creating an MSP is ide
 **Task: Create a CA and register users**
 
 | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
-| ------------------------- |-----------|-----------|-----------|-----------|-----------|
+| ------------------------- |-----------|-----------|-----------|-----------|
 | **Create CA** | Ordering Service2 CA | admin | adminpw ||
 | **Register users** | Ordering Service2 admin | OS2admin | OS2adminpw | admin |
 |  | Ordering Service node identity |  OS2 | OS2pw | orderer |
@@ -143,8 +143,8 @@ The **TLS Certificate Signing Request (CSR) hostname** is an option available to
 
 **Task: Create an ordering service**
 
-|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** | **Version**
-| ------------------------- |-----------|-----------|-----------|-----------|
+|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** | **Version** |
+| ------------------------- |-----------|-----------|-----------|-----------|-----------|
 | **Add another node** | Ordering Service_2 |||||
 | **CA** | Ordering Service2 CA |||||
 | **Ordering Service Identity** | |  | OS2 | OS2pw ||
