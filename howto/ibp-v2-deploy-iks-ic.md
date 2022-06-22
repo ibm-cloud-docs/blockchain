@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-19"
+lastupdated: "2022-06-22"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -122,7 +122,7 @@ Consider bookmarking the URL of your console so you can come back at a later tim
 
 If you use an existing {{site.data.keyword.cloud_notm}} Kubernetes service cluster, ensure that it is running Kubernetes v1.20 - v1.23.
 
-Before upgrading to Kubernetes version 1.22 or 1.23, ensure that you have migrated to [Kubernetes ingress controllers](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/). 
+Before upgrading to Kubernetes version 1.22 or 1.23, ensure that you have migrated to [Kubernetes ingress controllers](https://cloud.ibm.com/docs/containers?topic=containers-ingress-types#about-alb-images). 
 {: important}
 
 You can check the Kubernetes version of your cluster in the [Kubernetes clusters page](https://cloud.ibm.com/kubernetes/clusters){: external} on {{site.data.keyword.cloud_notm}}, which lists all your clusters in a table.
