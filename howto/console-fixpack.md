@@ -19,7 +19,7 @@ subcollection: blockchain
 {:pre: .pre}
 
 
-# Installing the 2.5.3 fix pack
+# Installing fix packs
 {: #install-fixpack}
 
 Use these instructions if you have already installed or upgraded to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and want to apply the latest 2.5.3 fix pack. Fix packs are cumulative, which means they include all of the fixes from previous fixpacks. Fix packs contain important fixes and upgrades and should be applied to your network as soon as possible. If you install {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 after the [date of the latest fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-docker-registry-secret), your installation will already contain the latest fix pack.
