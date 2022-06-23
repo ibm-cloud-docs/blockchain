@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-06-19"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, orderer, ordering node, ordering service, tutorial
 
@@ -64,7 +64,7 @@ The process of creating a CA, registering identities, and creating an MSP is ide
 **Task: Create a CA and register users**
 
 | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
-| ------------------------- |-----------|-----------|-----------|-----------|-----------|
+| ------------------------- |-----------|-----------|-----------|-----------|
 | **Create CA** | Ordering Service2 CA | admin | adminpw ||
 | **Register users** | Ordering Service2 admin | OS2admin | OS2adminpw | admin |
 |  | Ordering Service node identity |  OS2 | OS2pw | orderer |
@@ -143,8 +143,8 @@ The **TLS Certificate Signing Request (CSR) hostname** is an option available to
 
 **Task: Create an ordering service**
 
-|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** | **Version**
-| ------------------------- |-----------|-----------|-----------|-----------|
+|  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** | **Version** |
+| ------------------------- |-----------|-----------|-----------|-----------|-----------|
 | **Add another node** | Ordering Service_2 |||||
 | **CA** | Ordering Service2 CA |||||
 | **Ordering Service Identity** | |  | OS2 | OS2pw ||
@@ -239,11 +239,11 @@ As a result, when you delete a node, a check is performed to see if it is a cons
 
 As part of this same process, make sure to reach out to the other console operators to let them know that the node has been deleted so they can remove the tile from their console.
 
-<blockchain orderer mapping>
+
 Note: if you remove all of the ordering nodes that originally formed the consenter set of a channel, you might have to create a mapping from the old ordering nodes to the new nodes by editing the configuration of any new peers you attempt to join to the channel. For more information, see [Mapping to existing ordering nodes](#ibp-console-add-remove-orderer-mapping).
 {: important}
 
-</blockchain orderer mapping>
+
 
 ### Mapping to existing ordering nodes
 {: #ibp-console-add-remove-orderer-mapping}
