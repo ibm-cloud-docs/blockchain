@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-01"
+lastupdated: "2022-06-23"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -24,14 +24,25 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
-## 01 June 2022
-{: #06-01-2022}
+## 22 June 2022
+{: #06-22-2022}
 
-**Certificate Authority (CA) patch 1.5.3.2, Peer and ordering node patch 1.4.12-13, 2.2.5-5, 2.4.3-2.**
+**Certificate Authority (CA) patch 1.5.3-3, Peer and ordering node patch 1.4.12-14, 2.2.5-6, 2.4.3-3.**
 
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
+
+## 01 June 2022
+{: #06-01-2022}
+
+**Certificate Authority (CA) patch 1.5.3-2, Peer and ordering node patch 1.4.12-13, 2.2.5-5, 2.4.3-2.**
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
+
 
 ## 03 May 2022
 {: #05-03-2022}
@@ -44,6 +55,7 @@ Miscellaneous bug fixes and security patches.
 
 Severity: medium
 
+
 ## 05 Apr 2022
 {: #05-04-2022}
 
@@ -52,6 +64,7 @@ Severity: medium
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
 
 ## 08 Mar 2022
 {: #08-03-2022}
@@ -62,6 +75,7 @@ Miscellaneous bug fixes and security patches.
 
 Severity: medium
 
+
 ## 08 Feb 2022
 {: #08-02-2022}
 
@@ -70,6 +84,7 @@ Severity: medium
 Miscellaneous bug fixes and security patches.
 
 Severity: medium
+
 
 ## 11 Jan 2022
 {: #11-01-2022}
@@ -97,6 +112,7 @@ Miscellaneous bug fixes and security patches.
 
 
 **Deprecation notice for {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}**: Because Kubernetes v1.22 deprecates a number of APIs, nodes running Kubernetes v1.13, v1.14, or v1.15 will no longer be updated to the latest {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} patches. In addition, no Kubernetes cluster nodes will be updated if the master node is not reachable. Impacted clusters are identified via Kubernetes calls to the master node and calls to health check endpoints for blockchain components. Migration instructions for impacted clusters will be posted here soon. 
+
 
 ## 26 Oct 2021
 {: #26-10-2021}
