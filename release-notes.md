@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -23,6 +23,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
 
 ## 22 June 2022
 {: #06-22-2022}
