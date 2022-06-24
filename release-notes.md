@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-23"
+lastupdated: "2022-06-24"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -17,12 +17,13 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12) and [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
 {: shortdesc}
 
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
 
 ## 22 June 2022
 {: #06-22-2022}
