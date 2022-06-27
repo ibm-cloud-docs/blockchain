@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-06-27"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -242,25 +242,27 @@ Because {{site.data.keyword.blockchainfull_notm}} Platform is based on Hyperledg
 {: #ibp-security-enable-network-policy}
 
 Enable network policy will automatically install when the console is created. In the operator deployment specification, the operator needs to add an environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY` and set its value to `true`.
+
 ```
 kubectl edit deploy ibm-hlfsupport-operator -n <offering-namespace>
 ```
-{: codeblock}
 
 In the environment section under `spec.containers`, add the following:
+
 ```
 - name: IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY
    value:"true"
-    ```
-    {: codeblock}
+```
 
-    When the above option is enabled, the operator will install 2 network policies during the console installation. These network policies are meant to give basic defensive security mechanism, and opens only the ports that the offering uses. This by no means is a policy that can replace a firewall. The policies applied provide ingress security, as blockchain network may require to call npm, gradle, maven servers to get chaincode modules as well as to communicate with the orderers/peers/applications running outside the cluster on internet we do not provide egress policies.
+When the option above is enabled, the operator will install two network policies during the console installation. These network policies are meant to give basic defensive security mechanism, and opens only the ports that the offering uses. This by no means is a policy that can replace a firewall. The policies applied provide ingress security, as blockchain network may require to call npm, gradle, maven servers to get chaincode modules as well as to communicate with the orderers/peers/applications running outside the cluster on internet we do not provide egress policies.
 
-Following are the two policies that we apply:
+The following two policies are applied:
+
 1. Deny-all-ingress.
 
-    This policy denies all ingress (`ingress: []`) network traffic to the pods (`podSelector: {}`) in the namespace it applies to. This ensure only the needed traffics go through.
-    ```
+This policy denies all ingress (`ingress: []`) network traffic to the pods (`podSelector: {}`) in the namespace it applies to. This ensure only the needed traffics go through.
+    
+```
     kind: NetworkPolicy
     apiVersion: networking.k8s.io/v1
     metadata:
@@ -276,14 +278,13 @@ Following are the two policies that we apply:
     spec:
       podSelector: {}
       ingress: []
-    ```
-    {: codeblock}
-
+```
 
 2. Ingress.
 
-    This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibp"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
-    ```
+This ingress network policy applies to network traffic coming from anywhere (`from: [])`. It applies to all pods that labels `app.kubernetes.io/name: "ibp"` which are all the offering related pods. This policy only opens the ports that are required for the blockchain components and the available management console from outside for them to connect to each other.
+
+```
     kind: NetworkPolicy
     apiVersion: networking.k8s.io/v1
     metadata:
@@ -324,5 +325,4 @@ Following are the two policies that we apply:
           app.kubernetes.io/name: "ibp"
       policyTypes:
         - Ingress
-    ```
-    {: codeblock}
+```
