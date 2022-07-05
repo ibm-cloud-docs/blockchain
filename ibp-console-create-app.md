@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-06-28"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -232,7 +232,7 @@ The Hyperledger Fabric [Transaction Flow](https://hyperledger-fabric.readthedocs
 
 Click the **Organization MSP** tile for the organization that your client application interacts with. Click **Create connection profile** to open a side panel where you can build and download your connection profile.
 
-![Create connection profile panel](../images/create-connx-profile.png "Create connection profile panel")
+![Create connection profile panel](images/create-connx-profile.png "Create connection profile panel")
 
 If you plan to use the client application to register and enroll users with the organization CA, you need to include the Certificate Authority in the connection profile definition.
 

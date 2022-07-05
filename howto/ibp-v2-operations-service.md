@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-06-15"
+lastupdated: "2022-06-30"
 
 keywords: logging levels, metrics, health check, peer, orderer
 

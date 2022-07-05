@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-06-28"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization
 
@@ -87,7 +87,7 @@ After you create an organization MSP definition and create peers with that organ
 
 Click the **Organization MSP** tile for the organization that your client application interacts with. Click **Create connection profile** to open a side panel where you can build and download your connection profile.
 
-![Create connection profile panel](../images/create-connx-profile.png "Create connection profile panel")
+![Create connection profile panel](images/create-connx-profile.png "Create connection profile panel")
 
 If you plan to use the client application to register and enroll users with the organization CA, you need to include the Certificate Authority in the connection profile definition.
 

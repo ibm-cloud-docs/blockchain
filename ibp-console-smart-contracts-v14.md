@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-06-28"
 
 keywords: smart contract, private data, private data collection, anchor peer, instantiation, install smart contract
 
@@ -217,7 +217,7 @@ After you create an organization MSP definition, you can download a connection p
 
 Click the **Organization MSP** tile for the organization that your client application interacts with. Click **Create connection profile** to open a side panel where you can build and download your connection profile.
 
-![Create connection profile panel](../images/create-connx-profile.png "Create connection profile panel")
+![Create connection profile panel](images/create-connx-profile.png "Create connection profile panel")
 
 If you plan to use the client application to register and enroll users with the organization CA, you need to include the Certificate Authority in the connection profile definition.
 
