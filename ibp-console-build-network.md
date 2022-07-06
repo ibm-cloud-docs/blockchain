@@ -104,37 +104,37 @@ Watch the following video to learn about the process to create the peer's organi
 <details>
 <summary>Video transcript</summary>
 <p>
+<p>
 Hello everyone, and welcome to this demonstration of how to create a peer using the IBM Blockchain platform console. I’ll be following the process from the IBM Blockchain platform documentation, which you can see here. At the end of this tutorial, you will have created this structure, representing the components related to org1. In our next video, we’ll create an ordering service. And after that, a channel, to complete the infrastructure of our network.
-
+<p>
 In this video, we’ll be using recommended values for the various fields in the UI. These are the same values you’ll find in the docs, which are cataloged in tables for the various tasks. These values are not mandatory, but if you’re using the console for the first time, we do recommended them. In cases where you have to reenter a value, for example an enroll ID and secret, which are not stored in the console, you will be able to refer to the tables in the documentation to remember what you entered. If you do choose different values, make sure to write them down somewhere.
-
+<p>
 Alright, so let’s get started creating that peer. If you're unfamiliar with Hyperledger Fabric, which the IBM Blockchain Platform is based on, you might not realize you have to create a Certificate Authority before you create a peer. This is because before we can create a peer, we have to create some identities. These identities allow a network entity, whether it’s an admin or a node, to sign its actions using a certificate. Those certificates are issued by a Certificate Authority, also known as a CA. Therefore, our first step in creating a peer is to create a CA and use it to register identities for the peer admin and for the peer itself. After which we’ll need to create a definition for org1.
-
+<p>
 To do that, click on Add certificate authority. We’re going to be creating a CA here, not importing one. Then, give this CA a display name. Because it's going to be associated with org1, we'll call it org1 CA. Next we’ll give an enroll ID and secret for the user who will be the admin of the CA itself: admin and adminpw. Note the resource allocation box. If you leave this box deselected, your CA will be deployed with default resources. If you want to know what those resources are, for example to check against the resources available in your cluster, click the box and then next. If you’re comfortable with the default allocation, click next. You’ll be taken to the summary screen which will show the values for the CA you are creating.
-
+<p>
 If these seem right to you, click Add Certificate Authority. The process of deploying a CA can take a few minutes.
-
+<p>
 To check on the status of your deployments, make sure to refer to your Kubernetes dashboard. If the box on a node does not turn green, or turns gray at some point, you can check on its status by making sure you’re in the correct resource group and clicking on your deployments. The Kubernetes dashboard is also how you will extend resources in your cluster, as needed. When the CA is ready, you’ll see the gray box turn green, indicating that the CA has been deployed.
-
+<p>
 But before we can use the CA to register identities for org 1, we need to enroll an admin for this CA. Which we can do by clicking on the CA and clicking on associate identity. From there, enter the enroll ID and secret you used when creating the CA: admin and adminpw. Then give this identity the name Org1 CA Admin. Then click associate identity. If you click over to your wallet, you can see that the CA Admin is there, indicating it has been enrolled successfully. The CA is now ready to be used to register and enroll identities.
-
+<p>
 We’ll start by registering the admin of org1. Because it will be an admin, use an enroll ID of org1admin and a secret of org1adminpw. Then give it a type of admin. Do not use the peer or orderer type. Use the default affiliation for now, and ignore the enrollments and attributes. If you want to learn about affiliations and enrollments and attributes you can read about them in our documentation. Now that the admin identity of org1 has been registered we need to register the identity for the peer itself. Remember that nodes have identities just as admins and users do. So we'll use peer1 and peer1pw as the enroll id and secret of the peer. This is a peer so we need to use the “peer” type, again using default affiliations and ignoring enrollments and attributes.
-
+<p>
 So now that we have registered the two identities we can create the definition of org1, which is represented by an MSP. We do that through the Organizations tab. Click create. We’ll use an msp display name of Org1 MSP and an mspid of org1msp. Then specify org1 CA. You’ll see some values in the fields below. They’re the enroll ID and secret you entered when creating the admin of the CA. You don't want to use them as the admin of org1 as well. You want to create separate identities for the admins of your components. In this case that means using the identity you registered to be the admin of org1, org1admin and org1adminpw, and giving this identity the name Org1 MSP Admin. Then click generate. This will enroll the identity and put it in your wallet. Then export it. A JSON representing the Org1 Admin will be downloaded to your system. Make sure you always export your identities and MSPs as they’re only stored in the browser. If you switch to a different browser or a different machine, you won’t be able operate your components without uploading the admin of that component. When that is done, we can create this MSP definition. After which, we check our wallet and see that the Org1 Admin is there.
-
+<p>
 Now we can create the peer. Let’s give this peer a display name of Peer Org1. Again this is a display name for the UI. If you do not check any of the boxes below, default values for the various options will remain selected. To inspect these values, for example the default resources that will be allocated to the peer, click the box. You will also have a chance to review these values on the summary screen. For now, accept the defaults by leaving these boxes deselected.
-
+<p>
 In the next panel, make sure Org1 CA is selected.
-
+<p>
 Now we want to use the peer identity that we registered, peer1 and peer1pw. Then select the org1msp, as this peer will be associated with org 1. You can ignore this CSR hostname for now. That's only if you want to use a specific domain name for your peer. Next, select which Fabric version image you want to use to deploy this peer. I will select the highest version available here. Keep in mind that 2.x peers will have a lower resource allocation than 1.4.x peers because starting in Fabric version 2, smart contracts are deployed into their own pods by the smart contract launcher. Because Fabric v2.x peers do not have a "shim" (the external dependencies that allowed smart contracts to run on earlier versions of Fabric), you will have to vendor the shim and then repackage any smart contracts written in Golang (go) that you installed on peers deployed using the 1.4.x Fabric image. Without this vendoring and repackaging, the go smart contract will not run on a peer using a Fabric 2.x image. You will not need to do this for smart contracts written in Java or Node.js, nor for smart contracts written and packaged using the 2.0 package. Note also that you will not be able to enable any v2 capabilities on any channels for the time being.
-
-
-
+<p>
 Then, associate an identity --- this defines who the admin of the peer will be. In this case we're going to be using the same admin for the org as for the peer, Org1 MSP Admin. While you can create a separate admin for the peer, it’s perfectly fine to use the same identity that’s the admin of your organization.
-
+<p>
 On the next panel, review the summary to make sure these values are what you expect. Because we choose not to customize our resource allocation, pay particular attention to this section, as it represents the total amount of resources needed for this deployment. If you want to take a closer look at these values, go back and click the resource allocation box. A panel will come up showing these resources and the containers they are linked to. You can see the resources I have available in my cluster, which has three nodes with 4 CPUs and 16 gigs of RAM in a single zone. Based on the resources set to be allocated for my peer, I have enough space. When you are ready, click Add peer on the summary screen. It can take several minutes to create a peer. Check your Kubernetes cluster to monitor the status of your deployment. When the peer has finished deploying, you’ll see the gray box turn green. And that’s all there is to it.
-
+<p>
 We created a CA. We created an identity for the peer and for the admin. Then we created the definition of org1 and used all of that information to create the peer. And now that we have a peer we have everything we need to join a channel or join a network. If you want to host a channel, check out our next video, which will show you how to create an ordering service. So thank you for watching this video, and happy block chaining. 
+<p>
 <p>
 </details>
 
