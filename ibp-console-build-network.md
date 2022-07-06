@@ -549,29 +549,31 @@ Watch the following video to learn how to add a peer organization to the consort
 <details>
 <summary>Video transcript</summary>
 <p>
+<p>
 Hello again, and welcome to this demonstration of how to create a channel using the IBM Blockchain Platform console. If you've watched our videos on creating a peer and an ordering service, you should have a deployment that looks similar to this one, with one peer org, two CAs and an ordering service.
-
+<p>
 As with our previous videos, the steps we'll be going through today are from our Build a network tutorial in the IBM Blockchain Platform documentation. This tutorial will complete the structure you see here, with Org1, which we created in our first video, creating a channel run on our ordering service, which we created in our second video.
-
+<p>
 If you don't know what channels are, they're the place where transactions involving assets happen in the IBM Blockchain Platform. And because channels can be created with a subset of the members of a network, channels are also a powerful tool to enable privacy. Only the members of a channel will know about that channel and have access to its ledger, enabling the related business partners who form networks a space to execute deals that only they know about. Whatever the reason, the process for creating a channel is the same.
-
+<p>
 Since we’re creating a channel, you might be tempted to click over to the channels tab. But there's actually a step we need to do first, which is to add org1 to the consortium. Now what is the consortium? A consortium is the list of organizations that are allowed to create channels on a particular ordering service. Once an organization is added to this list, which is maintained by the admins of the ordering service, an organization will be able to create a channel. To do that, we must click into the Ordering Service and click Add Organization under the Consortium members header. Then we must select the org1msp, as this is our peer organization. Then click submit. Easy as that. Org1 is now a member of the consortium and allowed to create channels on this ordering service.
-
+<p>
 Now let’s create the channel. Navigate to the channel tab and click create channel. After reviewing the information on the prerequisites panel, decide whether you want to create your channel using any of the advanced options. For the purpose of this demonstration, we will not be modifying any of these fields, so this box will stay unchecked. Note that even if you select 2.x as the Fabric version of your nodes, you will not be able to use the new smart contract lifecycle unless the 2.0 application capability has been selected. If you want to learn more about any of the other advanced options, check out the documentation on advanced channel creation and management. Note that these advanced options can be changed later.
-
+<p>
 On the channel details page, give this channel a name, channel1. And specify the ordering service it will be hosted on, Ordering Service. These two fields cannot be changed later, so in the case of the channel name make sure to choose a name that will be relevant to the way in which the channel will be used. Also, choose a unique since each channel hosted on an ordering service must have a different name. On the Organizations panel select the organizations who will be joining peers to the channel. In this case that is Org1, so select Org1 MSP from the drop down list. Make this organization an operator. Do not add any ordering service organizations here. Note that during the creation of a channel, all organizations that are added must already be members of the consortium.
-
+<p>
 The update policy determines how many organizations must sign channel update requests before the channel configuration can be changed. Because we only have one organization, we only have one option, 1 out of 1. But as more organizations are added to the channel, you will have the option to change the update policy to 1 out of 2, or 2 out of 2, and so on.
-
+<p>
 Next, specify the organization that is signing the channel creation request. This is, once again, the Org1 MSP. And also sign the request using the Org1 MSP Admin identity you created. Then review the channel creation request you're submitting. If it looks good to you, click Create Channel.
-
+<p>
 You should see a pending tile on the channel page. This is because you haven’t joined a peer to this channel. So click the pending tile and select the peer you want to join to the channel. In this case that’s the only peer we have, Peer Org1. You will also see that this peer is being made an anchor peer by default. Anchor peers bootstrap the communication between peers in different orgs, and are important for enabling features like Service Discovery, so leave this option enabled. Note also the state database of your peer, as every peer in this channel should use the same state database type to ensure consistency between ledgers. Note that by default CouchDB is selected for all peers.
-
+<p>
 After you have joined the channel you can inspect it. You’ll see the block height of one. That’s the config block that was created during the create channel flow. On the channel details tab you’ll see nodes and channel members.
-
+<p>
 To initiate a channel update, click the update button. This will allow you to edit many of the fields you specified when creating the channel, and to perform important tasks like adding channel members. The advanced configuration tab allows you to edit features like capability levels and ordering service consenters that were not edited during channel create. Note that some of these options will require the approval of an ordering service organization.
-
+<p>
 So now that we have created a channel and joined a peer to it, we can install a smart contract. We can add other members to our channel. We have everything we need to start transacting using the IBM Blockchain platform console. Thank you for watching, and happy block chaining.
+<p>
 <p>
 </details>
 
