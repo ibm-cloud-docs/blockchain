@@ -74,7 +74,7 @@ Before we can deploy the ordering service, we create the ordering organization C
 ### Create the ordering service CA
 {: #ibp-console-hadr-mr-os-region1-ca}
 
-For simplicity, we create an ordering service where all of the ordering nodes belong to the same organization. Therefore, we create a single CA and register and enroll the identities for each ordering node with the CA. After you have logged in to the console in **Region 1** complete the following steps:
+For simplicity, we create an ordering service where all the ordering nodes belong to the same organization. Therefore, we create a single CA and register and enroll the identities for each ordering node with the CA. After you have logged in to the console in **Region 1** complete the following steps:
 
 1. Navigate to the **Nodes** tab and click **Add Certificate Authority**.
 2. In this step, we're creating a CA, as opposed to importing one, so make sure that the option to **Create a Certificate Authority** is selected. Then click **Next**
