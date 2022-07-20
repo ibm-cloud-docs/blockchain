@@ -1112,7 +1112,7 @@ subcollection: blockchain
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
 
-* [20 July 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-20-2022)
+* [19 July 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-19-2022)
 
 * [22 June 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-22-2022)
 

@@ -26,8 +26,8 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
-## 20 July 2022
-{: #07-20-2022}
+## 19 July 2022
+{: #07-19-2022}
 
 **Certificate Authority (CA) patch 1.5.5-1, Peer and ordering node patch 1.4.12-15, 2.2.7-1, 2.4.5-1.**
 
