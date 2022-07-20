@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-06-24"
+lastupdated: "2022-07-16"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -323,7 +323,7 @@ The `spec.status` field will contain details of your component's status:
 - `lastHeartbeatTime`: when the controller last reconciled the component
 - `message`: long explanation of the status type
 - `reason`: short explanation of the status
-- `status`: "true" or "false" bsed on if status is valid
+- `status`: "true" or "false" based on if status is valid
 - `version`: the product (IBP) version of the component
 - `versions`: the operand version of the component
 - `type`: describes the current status of the component
