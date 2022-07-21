@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-07-21"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # IBM Cloud Hardware Security Module (HSM)
 {: #ibp-hsm-gemalto}

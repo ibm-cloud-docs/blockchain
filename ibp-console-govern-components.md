@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-05-12"
+lastupdated: "2022-07-21"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Upgrading and deleting deployed nodes
 {: #ibp-console-govern-components}

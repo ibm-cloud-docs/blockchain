@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-05"
+lastupdated: "2022-07-21"
 
 keywords: high availability, CA, PostgreSQL, replica sets, zone
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Building a high availability Certificate Authority (CA)
 {: #ibp-console-build-ha-ca}

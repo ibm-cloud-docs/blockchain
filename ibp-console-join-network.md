@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-07-21"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, join a network, system channel
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Join a network
 {: #ibp-console-join-network}

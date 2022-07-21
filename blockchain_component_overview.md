@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-07-21"
 
 keywords: blockchain components, ca, certificate authorities, peer, ordering service, orderer, channel, smart contract, applications
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Blockchain component overview
 {: #blockchain-component-overview}

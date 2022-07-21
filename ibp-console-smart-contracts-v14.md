@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-06-28"
+lastupdated: "2022-07-21"
 
 keywords: smart contract, private data, private data collection, anchor peer, instantiation, install smart contract
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Deploy a smart contract using Fabric v1.4 (Deprecated)
 {: #ibp-console-smart-contracts-v14}

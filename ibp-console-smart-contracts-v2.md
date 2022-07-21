@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-08"
+lastupdated: "2022-07-21"
 
 keywords: smart contract, private data, private data collection, anchor peer, implicit collections
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Deploy a smart contract using Fabric v2.x
 {: #ibp-console-smart-contracts-v2}

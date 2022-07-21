@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-07-21"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -14,6 +14,10 @@ content-type: troubleshoot
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Troubleshooting
 {: #ibp-v2-troubleshooting}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-05-16"
+lastupdated: "2022-07-21"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Managing certificates
 {: #cert-mgmt}

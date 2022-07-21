@@ -14,6 +14,10 @@ subcollection: blockchain
 
 {{site.data.keyword.attribute-definition-list}}
 
+
+
+
+
 # Release notes
 {: #release-notes-saas-20}
 
