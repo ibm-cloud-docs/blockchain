@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-07-21"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -18,7 +18,7 @@ subcollection: blockchain
 {: #release-notes-saas-20}
 
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.5](https://github.com/hyperledger/fabric/releases/tag/v2.2.5), and [v2.4.3](https://github.com/hyperledger/fabric/releases/tag/v2.4.3).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.7](https://github.com/hyperledger/fabric/releases/tag/v2.2.7), and [v2.4.5](https://github.com/hyperledger/fabric/releases/tag/v2.4.5).
 
 {: shortdesc}
 
