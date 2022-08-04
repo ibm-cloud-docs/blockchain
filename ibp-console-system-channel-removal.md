@@ -1,23 +1,18 @@
+---
 
-copyright:
-  years: 2022
+copyright: 
+  years: 2014, 2022
 lastupdated: "2022-08-04"
 
-keywords: tutorials, how-to, learn
+keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
-subcollection: blockchain-sw-253
+subcollection: blockchain
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:codeblock: .codeblock}
-{:note: .note}
-{:important: .important}
-{:tip: .tip}
-{:term: .term}
-{:pre: .pre}
+
+
+{{site.data.keyword.attribute-definition-list}}
 
 
 # System channel removal
