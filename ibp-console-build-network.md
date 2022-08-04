@@ -604,7 +604,7 @@ In this tutorial, we can easily access the `Org1 MSP` because both the peer orga
 ### Create a TLS identity
 {: #ibp-console-build-network-create-tls-id}
 
-*This step is only needed on clusters that _do_ use a system channel. You can verify if a cluster does or does not use a system channel by clicking the cluster's tile and looking near the `Orderer Type` text.*
+*This step _is needed_ on clusters that _do not_ use a system channel. You can verify if a cluster does or does not use a system channel by clicking the cluster's tile and looking near the `Orderer Type` text.*
 
 After you click the ordering cluster tile you may see a warning about missing a TLS identity.
 This identity is a different type than we've used in the past and is only need for orderers that do not have a system channel.
