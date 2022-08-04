@@ -331,7 +331,7 @@ In other distributed blockchains, such as Ethereum and Bitcoin, there is no cent
 The ordering service is a key component in a network because it performs a few essential functions:
 
 - It literally **orders** the blocks of transactions that are sent to the peers to be written to their ledgers. This process is called "ordering".
-- It maintains the **ordering system channel**, the place where the **consortium**, the list of peer organizations permitted to create channels, resides (*does not apply to newer orderers that do not use a system channel*). 
+- On orderers with a system channel, it maintains the **consortium**, the list of peer organizations permitted to create channels, resides. 
 - It **enforces the policies** decided by the consortium or the channel administrators. These policies dictate everything from who gets to read or write to a channel, to who can create or modify a channel. For example, when a network participant asks to modify a channel or consortium policy, the ordering service processes the request to see if the participant has the proper administrative rights for that configuration update, validates it against the existing configuration, generates a new configuration, and relays it to the peers.
 
 For more information about ordering services and the role they play in networks based on Hyperledger Fabric, see [The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html){: external}.

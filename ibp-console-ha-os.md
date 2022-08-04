@@ -335,7 +335,7 @@ Now we are ready to create a third ordering node that resides in **Region 2** an
 | **Ordering Service Identity** | |  | os1 | os1pw |
 {: caption="Table 8. Create third ordering node" caption-side="bottom"}
 
-To complete the process of adding the node, you need to add it to the consenter set of the system channel (skip if your orderer is not using a system channel).
+To complete the process of adding the node to a system channel, you need to add it to the consenter set of the system channel.
 
 ### Add the `OS3-Region2` node to the orderer system channel
 {: #ibp-console-hadr-mr-os-region2-osn3-system}
