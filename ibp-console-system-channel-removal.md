@@ -1,7 +1,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-22-08"
+lastupdated: "2022-08-04"
 
 keywords: tutorials, how-to, learn
 
@@ -95,6 +95,21 @@ You will then unjoin the system channel from each orderer node (step 3 below) us
     - Click the **unjoin (trash can)** icon on the system channel tile
     - Follow the prompts to unjoin each ordering Node.js from the system channel
 1. Complete the process by upgrading the Node.js chaincode from Peer v1.4.x to v2.4.x
+
+## Create a TLS identity
+{: #create-tls-id}
+
+After you click the ordering cluster tile you may see a warning about missing a TLS identity.
+This identity is a different type than we've used in the past and is only need for orderers that do not have a system channel.
+This identity is actually the same identity the orderer is using when it enrolls on startup against the TLS CA.
+To get this identity:
+
+1. From the **Nodes** tab, select the CA tile that this orderer cluster used (during create)
+1. Find the row for the identity this orderer used and click the dot dot dot
+1. On the enroll wizard select the * **TLS CA** * in the CA drop down (**its important to select the TLS CA**)
+1. Type the enroll secret that was used earlier when creating the orderer
+1. Follow any other directions in the enroll wizard and click submit
+1. If you browse back to the nodes page and select the Orderer Cluster tile the TLS identity error should be gone
 
 ## Upgrading Node.js chaincode
 {: #upgrade-nodejs-chaincode}

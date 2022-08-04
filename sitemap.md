@@ -753,6 +753,7 @@ subcollection: blockchain
 * [Benefits](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#benefits-removal-system-channel)
     * [Systemless orderers details](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-systemless-orderers)
 * [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
+* [Create a TLS identity](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-tls-id)
 * [Upgrading Node.js chaincode](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#upgrade-nodejs-chaincode)
 
 

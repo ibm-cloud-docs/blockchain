@@ -604,19 +604,19 @@ In this tutorial, we can easily access the `Org1 MSP` because both the peer orga
 ### Create a TLS identity
 {: #ibp-console-build-network-create-tls-id}
 
-*This step is only needed on clusters that do not use a system channel. You can verify if a cluster does or does not use a system channel by clicking the cluster's tile and looking near the `Orderer Type` text.*
+*This step is only needed on clusters that _do_ use a system channel. You can verify if a cluster does or does not use a system channel by clicking the cluster's tile and looking near the `Orderer Type` text.*
 
 After you click the ordering cluster tile you may see a warning about missing a TLS identity.
-This identity is a different type than we've used in the past (it is not something you would have added to your wallet before).
-The identity we need to manage channels is now the same identity the orderer is using when it enrolls on startup against the TLS CA.
+This identity is a different type than we've used in the past and is only need for orderers that do not have a system channel.
+This identity is actually the same identity the orderer is using when it enrolls on startup against the TLS CA.
 To get this identity:
 
 1. From the **Nodes** tab, select the CA tile that this orderer cluster used (during create)
 1. Find the row for the identity this orderer used and click the dot dot dot
 1. On the enroll wizard select the * **TLS CA** * in the CA drop down (**its important to select the TLS CA**)
-1. Type the enroll secret that was used earlier
+1. Type the enroll secret that was used earlier when creating the orderer
 1. Follow any other directions in the enroll wizard and click submit
-1. If you browse back to the nodes page and select the Orderer Cluster tile the TLS error should be gone
+1. If you browse back to the nodes page and select the Orderer Cluster tile the TLS identity error should be gone
 
 ## Step four: Create a channel
 {: #ibp-console-build-network-create-channel}
