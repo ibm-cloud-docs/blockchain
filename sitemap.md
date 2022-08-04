@@ -579,6 +579,13 @@ subcollection: blockchain
 {: #sitemap_ibm_blockchain_platform_console}
 
 
+[Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support)
+* [What is happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-what)
+* [Why is it happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-why)
+* [How to transition licensing?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-licensing)
+* [Planning and Considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-planning)
+* [Next steps](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-next-steps)
+
 [Administering your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console)
 * [Refreshing your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-refresh)
 * [Adding and removing users from the console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-console-add-remove)
