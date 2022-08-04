@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-08-04"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -331,7 +331,7 @@ In other distributed blockchains, such as Ethereum and Bitcoin, there is no cent
 The ordering service is a key component in a network because it performs a few essential functions:
 
 - It literally **orders** the blocks of transactions that are sent to the peers to be written to their ledgers. This process is called "ordering".
-- It maintains the **ordering system channel**, the place where the **consortium**, the list of peer organizations permitted to create channels, resides.
+- It maintains the **ordering system channel**, the place where the **consortium**, the list of peer organizations permitted to create channels, resides (*does not apply to newer orderers that do not use a system channel*). 
 - It **enforces the policies** decided by the consortium or the channel administrators. These policies dictate everything from who gets to read or write to a channel, to who can create or modify a channel. For example, when a network participant asks to modify a channel or consortium policy, the ordering service processes the request to see if the participant has the proper administrative rights for that configuration update, validates it against the existing configuration, generates a new configuration, and relays it to the peers.
 
 For more information about ordering services and the role they play in networks based on Hyperledger Fabric, see [The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html){: external}.
@@ -542,6 +542,8 @@ After the ordering service has been created, you are able to see it on the **Nod
 ## Step three: Join the consortium hosted by the ordering service
 {: #ibp-console-build-network-add-org}
 
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
+
 As we noted earlier, a peer organization must be known to the ordering service before it can create a channel or be joined to a channel when the channel is created. This act of being "known" to the ordering service is also known as "joining the consortium", the list of organizations known to the ordering service. This is because channels are, at a technical level, **messaging paths** between peers through the ordering service. Just as a peer can be joined to multiple channels without information passing from one channel to another, so too can an ordering service have multiple channels running through it without exposing data to organizations on other channels.
 
 Because only ordering service admins can add peer organizations to the consortium, you will either need to **be** the ordering service admin or **send** MSP information to the ordering service admin.
@@ -586,6 +588,8 @@ So now that we have created a channel and joined a peer to it, we can install a 
 
 
 
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
+
 After the Ordering service tile has the green status indicator you can proceed with the following steps. Because you created the ordering service admin using the console, this process is relatively straightforward:
 1. Navigate to the **Nodes** tab.
 2. Scroll down to the ordering service you created and click the tile to open it.
@@ -596,6 +600,23 @@ After the Ordering service tile has the green status indicator you can proceed w
 When this process is complete, it is possible for `Org1` to create or join a channel hosted on your `Ordering Service`.
 
 In this tutorial, we can easily access the `Org1 MSP` because both the peer organization and the ordering service organization were created in the same console. In a production scenario, the MSP definitions of other organization would be created by different network operators in their own cluster using their own {{site.data.keyword.blockchainfull_notm}} console. In those cases, when the organization wants to join your consortium, the organization MSP definition of the organization will need to be sent to your console in an out of band operation. Additionally, you will need to export your ordering service and send it to them so they can import it into their console and join a peer to the channel (if they are added to the consortium, they will also be able to create a new channel). This process is described in the Join a network tutorial under [Exporting your organization information](/docs/blockchain?topic=blockchain-ibp-console-join-network#ibp-console-join-network-add-org2-remote).
+
+### Create a TLS identity
+{: #ibp-console-build-network-create-tls-id}
+
+*This step is only needed on clusters that do not use a system channel. You can verify if a cluster does or does not use a system channel by clicking the cluster's tile and looking near the `Orderer Type` text.*
+
+After you click the ordering cluster tile you may see a warning about missing a TLS identity.
+This identity is a different type than we've used in the past (it is not something you would have added to your wallet before).
+The identity we need to manage channels is now the same identity the orderer is using when it enrolls on startup against the TLS CA.
+To get this identity:
+
+1. From the **Nodes** tab, select the CA tile that this orderer cluster used (during create)
+1. Find the row for the identity this orderer used and click the dot dot dot
+1. On the enroll wizard select the * **TLS CA** * in the CA drop down (**its important to select the TLS CA**)
+1. Type the enroll secret that was used earlier
+1. Follow any other directions in the enroll wizard and click submit
+1. If you browse back to the nodes page and select the Orderer Cluster tile the TLS error should be gone
 
 ## Step four: Create a channel
 {: #ibp-console-build-network-create-channel}

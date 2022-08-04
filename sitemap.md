@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-28"
+lastupdated: "2022-08-04"
 
 keywords: site map
 subcollection: blockchain
@@ -748,6 +748,12 @@ subcollection: blockchain
 * [Viewing the metrics](/docs/blockchain?topic=blockchain-operations_service#operations_service_view_metrics)
 * [Viewing logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_view)
 * [Setting logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_set)
+
+[System channel removal](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel)
+* [Benefits](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#benefits-removal-system-channel)
+    * [Systemless orderers details](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-systemless-orderers)
+* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
+* [Upgrading Node.js chaincode](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#upgrade-nodejs-chaincode)
 
 
 ## Developing smart contracts and applications

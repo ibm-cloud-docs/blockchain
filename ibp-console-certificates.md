@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-08-04"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -394,6 +394,8 @@ You can verify that this process is successful by opening the channel member til
 ### Step five: Update channel member on ordering service system channel
 {: #cert-mgmt-manual-update-os-channel-member}
 
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
+
 If this is a peer admin MSP that is an ordering service consortium member, the ordering service admin needs to update the ordering service system channel. Because the ordering service system channel serves as a template for new application channels, taking this action keeps it current as the associated MSPs are updated. Before attempting these steps, the ordering service admin should have already imported the updated MSP from step two into their console.
 
 1. From the **Nodes** tab, the ordering service admin opens the ordering service tile.
@@ -402,6 +404,8 @@ If this is a peer admin MSP that is an ordering service consortium member, the o
 
 ### Step six: Update ordering service admin on ordering service system channel
 {: #cert-mgmt-manual-update-os-admin}
+
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
 
 If the updated certificate is for the ordering service MSP admin, you need to update the ordering service.  
 

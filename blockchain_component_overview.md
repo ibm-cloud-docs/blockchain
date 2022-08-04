@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-08-04"
 
 keywords: blockchain components, ca, certificate authorities, peer, ordering service, orderer, channel, smart contract, applications
 
@@ -62,7 +62,8 @@ Hyperledger Fabric works differently. It features a kind of a node that relies o
 
 In addition to promoting finality, separating the endorsement of smart contract execution (which happens at the peers) from ordering gives Fabric advantages in performance and scalability, eliminating bottlenecks that can occur when execution and ordering are performed by the same nodes.
 
-The ordering service performs one other key function: it maintains what is known as the "system channel", a default channel that hosts the "consortium", the list of organizations that can create and join application channels. Because some aspects of the configuration of application channels are inherited by default from the system channel (certain capability levels, for example), it is the job of ordering service admins to establish these defaults. Note however that the ordering service organization can add additional administrating organizations to the system channel.
+The ordering service performs one other key function: In networks that use a system channel the orderers maintain the "consortium", the list of organizations that can create and join application channels. Because some aspects of the configuration of application channels are inherited by default from the system channel (certain capability levels, for example), it is the job of ordering service admins to establish these defaults. Note however that the ordering service organization can add additional administrating organizations to the system channel.
+- Orderers that do not use a system channel have REST APIs, called Channel Participation APIs. These APIs replace the application channel management features that the system channel provided.
 
 The {{site.data.keyword.blockchainfull_notm}} Platform uses an implementation of the Raft protocol, in which a leader node is dynamically elected among the ordering nodes in a channel (this collection of nodes is known as the “consenter set”), and that leader replicates messages to the follower nodes. Because the system can sustain the loss of nodes, including leader nodes, as long as there is a majority of ordering nodes (what’s known as a “quorum”) remaining, Raft is said to be “crash fault tolerant” (CFT). In the {{site.data.keyword.blockchainfull_notm}} Platform, users have the ability to select a single node ordering service or a five node ordering service, though it is possible to add or remove nodes from an ordering service and from channels later on. Similarly, it is possible for either one organization or multiple organizations to manage the ordering service and contribute nodes.
 
