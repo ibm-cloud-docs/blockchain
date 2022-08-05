@@ -2,12 +2,11 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-08-05"
 
 keywords: blockchain network, migration
 
 subcollection: blockchain
-
 ---
 
 
@@ -35,8 +34,6 @@ To maintain a focused development, delivery & support effort for IBM Blockchain 
 
 ## How to transition licensing?
 {: #ibp-migration-licensing}
-
-
 
 IBM Blockchain Platform SaaS PayGo customers can transition their license to IBM Support for Hyperledger Fabric during any month, without any existing long-term customer commitment, through coordination with their IBM Blockchain Support team or IBM Account Representative.
 
