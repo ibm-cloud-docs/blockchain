@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-19"
+lastupdated: "2022-08-04"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -14,6 +14,10 @@ content-type: tutorial
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Setting up multiregion High Availability (HA) deployments for the ordering service
 {: #ibp-console-hadr-mr-os}
@@ -242,6 +246,8 @@ Now we can create a second ordering node in **Region 1** and add it to the order
 ### Add the `OS2-Region1` node to the orderer system channel
 {: #ibp-console-hadr-mr-os-region1-osn2-system}
 
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
+
 To complete the process of adding the node, you need to add it to the consenter set of the system channel. After the ordering node has been successfully added, a new tile with the name of `OS2-Region1` appears on the **Multiregion Ordering Service** page with the label "Requires attention". This state reflects the fact that, while the node creation process has been successful, the node is not yet part of the consenter set of the system channel. The node must be added to the system channel before it can be added to any of the application channels.
 
 Recall that the "consenter set" refers to the ordering service nodes actively participating in the ordering process on a channel, while the "system channel", which is managed by the ordering service, forms the template for application channels.
@@ -269,7 +275,7 @@ These actions download the components in `JSON` format to your local file system
 
 Now that the ordering service is available, we can add nodes to it from the two other regions.  
 
-In this section, we create a third ordering node and then add it to the system channel as highlighted in yellow in the diagram below:
+In this section, we create a third ordering node and then add it to the system channel (if applicable) as highlighted in yellow in the diagram below:
 
 ![Region 2 ordering node](images/mr-ha-os-region2.png "Region 2 ordering node"){: caption="Figure 3. Create a third ordering node in Region 2" caption-side="bottom"}
 
@@ -329,10 +335,12 @@ Now we are ready to create a third ordering node that resides in **Region 2** an
 | **Ordering Service Identity** | |  | os1 | os1pw |
 {: caption="Table 8. Create third ordering node" caption-side="bottom"}
 
-To complete the process of adding the node, you need to add it to the consenter set of the system channel.
+To complete the process of adding the node to a system channel, you need to add it to the consenter set of the system channel.
 
 ### Add the `OS3-Region2` node to the orderer system channel
 {: #ibp-console-hadr-mr-os-region2-osn3-system}
+
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
 
 Just as when we performed these steps in the console in **Region 1**, a new tile with the name of `OS3-Region2` appears on the **Multiregion Ordering Service** page with the label "Requires attention". Again, this state reflects the fact that, while the node creation process has been successful, the node is not yet part of the consenter set of the system channel. The node must be added to the system channel before it can be added to any of the application channels.
 
@@ -421,6 +429,8 @@ Repeat this exact same set of steps for the fifth ordering node, but give it the
 
 ### Add the ordering nodes to the orderer system channel
 {: #ibp-console-hadr-mr-os-region3-system}
+
+*If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
 
 Add both ordering nodes to the consenter set of the system channel. Click each new ordering node, then **Add node to ordering service**. After the nodes have been added to the ordering service, the nodes are now part of the system channel.
 

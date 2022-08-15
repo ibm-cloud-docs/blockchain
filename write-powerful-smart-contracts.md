@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-02-01"
+lastupdated: "2022-07-21"
 
 keywords: smart contract, lifecycle, package, definition
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Writing powerful smart contracts
 {: #write-powerful-smart-contracts}

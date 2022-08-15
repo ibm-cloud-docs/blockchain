@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-08-04"
 
 keywords: site map
 subcollection: blockchain
@@ -579,6 +579,13 @@ subcollection: blockchain
 {: #sitemap_ibm_blockchain_platform_console}
 
 
+[Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support)
+* [What is happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-what)
+* [Why is it happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-why)
+* [How to transition licensing?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-licensing)
+* [Planning and Considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-planning)
+* [Next steps](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-next-steps)
+
 [Administering your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console)
 * [Refreshing your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-refresh)
 * [Adding and removing users from the console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-console-add-remove)
@@ -748,6 +755,13 @@ subcollection: blockchain
 * [Viewing the metrics](/docs/blockchain?topic=blockchain-operations_service#operations_service_view_metrics)
 * [Viewing logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_view)
 * [Setting logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_set)
+
+[System channel removal](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel)
+* [Benefits](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#benefits-removal-system-channel)
+    * [Systemless orderers details](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-systemless-orderers)
+* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
+* [Create a TLS identity](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-tls-id)
+* [Upgrading Node.js chaincode](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#upgrade-nodejs-chaincode)
 
 
 ## Developing smart contracts and applications
@@ -1111,6 +1125,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
+
+* [16 Aug 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-16-2022)
 
 * [19 July 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-19-2022)
 

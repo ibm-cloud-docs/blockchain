@@ -72,6 +72,7 @@ IBM Blockchain Platform for IBM Cloud
 	{: .navgroup id="howto"}
 	{: .topicgroup}
 	IBM Blockchain Platform console
+		howto/saas-migration-support.md
 		howto/ibp-console-manage.md
 		ibp-console-advanced-deployment.md
 		ibp-console-advanced-channel.md
@@ -82,6 +83,7 @@ IBM Blockchain Platform for IBM Cloud
 		ibp-console-certificates.md
 		ibp-console-govern-components.md
 		howto/ibp-v2-operations-service.md
+		ibp-console-system-channel-removal.md
 
 	{: .topicgroup}
 	Developing smart contracts and applications

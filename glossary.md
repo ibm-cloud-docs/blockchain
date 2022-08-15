@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-08-04"
 
 keywords: IBM Blockchain, IBM Blockchain Platform, terms, Fabric, Raft, CouchDB, consortium, MSP
 
@@ -13,6 +13,10 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+
 
 # Glossary
 {: #glossary}
@@ -76,7 +80,7 @@ The name of the user interface in the {{site.data.keyword.blockchainfull_notm}} 
 
 ## Consortium
 {: #glossary-consortium}
-The group of non-orderer organizations listed on the orderer system channel. These are the only organizations that can create channels. At channel creation time, all organizations added to the channel must be part of a consortium. However, an organization that is not defined in a consortium may be added to an existing channel. While a blockchain network can have multiple consortia, most blockchain networks have a single consortium.
+The group of non-orderer organizations listed on the orderer system channel. *The following lines do not apply to orderers that do not use a system channel:* These are the only organizations that can create channels. At channel creation time, all organizations added to the channel must be part of a consortium. However, an organization that is not defined in a consortium may be added to an existing channel. While a blockchain network can have multiple consortia, most blockchain networks have a single consortium.
 
 ## CouchDB
 {: #glossary-couchdb}
