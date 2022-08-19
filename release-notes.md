@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-08-16"
+lastupdated: "2022-08-19"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -34,7 +34,7 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 ## 16 Aug 2022
 {: #08-16-2022}
 
-**Certificate Authority (CA) patch 1.5.5-2, Peer and ordering node patch 1.4.12-16, 2.2.7-2, 2.4.5-2.**
+**Certificate Authority (CA) patch 1.5.5-2, Peer and ordering node patch 1.4.12-16, 2.2.8-1, 2.4.6-1.**
 
 Added ability to remove the system channel and ability to create orderers without a system channel.
 
