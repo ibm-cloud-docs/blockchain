@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-08-31"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -103,9 +103,9 @@ The application developer can use two programming models to interact with the ne
 ### High-Level Programming Model APIs
 {: #ibp-console-app-high-level}
 
-Starting with Fabric v1.4, a simplified _application_ and _smart contract_ programming model, known as the `fabric-network` API, was introduced, and is now the recommended way to develop applications. The new model reduces the number of steps and amount of code that is required to submit a transaction and is supported for applications that are written in **Node.js**, **Java**, and **Go**. The Fabric High-Level Programming Model APIs include the **High-level Fabric Gateway SDKs** for writing client applications and the **High-Level Fabric contract APIs** for writing smart contracts. This tutorial focuses on using the **High-level Fabric Gateway SDKs**.  
+Starting with Fabric v1.4, a simplified _application_ and _smart contract_ programming model, known as the `fabric-network` API, was introduced, and is now the recommended way to develop applications. The new model reduces the number of steps and amount of code that is required to submit transactions, which are written in **Node.js**, **Java**, or **Go**. The Fabric High-Level Programming Model APIs include the **High-level Fabric Gateway SDKs** for writing client applications and the **High-Level Fabric contract APIs** for writing smart contracts. This tutorial focuses on using the **High-level Fabric Gateway SDKs**.  
 
-{{site.data.keyword.IBM_notm}} recommends and supports the High-level Fabric Gateway SDKs that allow client applications to interact with {{site.data.keyword.blockchainfull_notm}} Platform networks. These SDKs, available for Node, Java, and Go, allow a client application to invoke smart contracts for the purpose of submitting transactions and evaluating queries. It is recommended that administrative tasks, such as creating channels, deploying smart contracts, are done by using the console, APIs, or Ansible scripts.  
+{{site.data.keyword.IBM_notm}} recommends the High-level Fabric Gateway SDKs which allow client applications to interact with {{site.data.keyword.blockchainfull_notm}} Platform networks. These SDKs, available for Node, Java, and Go, allow a client application to invoke smart contracts for the purpose of submitting transactions and evaluating queries. It is recommended that administrative tasks, such as creating channels, deploying smart contracts, are done by using the console, APIs, or Ansible scripts.  
 
 The SDKs use the concept of a "Gateway" object to represent the connection of a single identity (user) to a blockchain network. For performance reasons, applications need to keep a gateway object instance in scope for as long as it is required, and can use it to submit multiple transactions across different smart contracts and network channels. If an application needs to handle multiple user identities, then a separate gateway object instance should be maintained for each identity.
 {: important}
@@ -120,7 +120,7 @@ For best practices and examples of how to use the SDKs see the Fabric [Asset Tra
 
 For information about migrating your applications created using the v1.4 SDK to the 2.x SDK, check out [Migrating client applications from v1.4 to v2.0](https://hyperledger.github.io/fabric-sdk-node/release-2.2/tutorial-migration.html){: external}.    
 
-Client applications can leverage the capabilities of the Go SDK, but currently only the high-level programming model in the [gateway package](https://pkg.go.dev/github.com/hyperledger/fabric-sdk-go/pkg/gateway){: external} is supported. Direct usage of the rest of the Go SDK is not yet supported.
+Client applications can leverage the capabilities of the Go SDK in the high-level programming model in the [gateway package](https://pkg.go.dev/github.com/hyperledger/fabric-sdk-go/pkg/gateway){: external}
 {: note}
 
 If you want to take advantage of the High-Level Fabric contract-APIs, you can also use this tutorial to complete the following actions on an {{site.data.keyword.blockchainfull_notm}} Platform network:
