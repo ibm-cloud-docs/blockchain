@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-14"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -30,16 +30,22 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
+## 13 Sept 2022
+{: #09-13-2022}
+
+**Certificate Authority (CA) patch 1.5.5-3, Peer and ordering node patch 1.4.12-17, 2.2.8-2, 2.4.6-2.**
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
+
 
 ## 16 Aug 2022
 {: #08-16-2022}
 
 **Certificate Authority (CA) patch 1.5.5-2, Peer and ordering node patch 1.4.12-16, 2.2.8-1, 2.4.6-1.**
 
-Added ability to remove the system channel and ability to create orderers without a system channel. Note there are two known issues when creating orderers without a system channel:
-
-1. After selecting the "2 out of 2" Update Policy, the **Review channel information** screen displays "1 out of 1".  
-2. For a **Channel configuration update**, the console is not listing the MSP of the orderer organization.
+Added ability to remove the system channel and ability to create orderers without a system channel.
 
 Added support to use the channel participation APIs offered by Fabric peers/orderers to manage channels.
 
