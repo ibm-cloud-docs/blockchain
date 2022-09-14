@@ -2,11 +2,11 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-08-25"
+lastupdated: "2022-09-14"
 
-keywords: release note, latest changes, Hyperledger Fabric
+keywords: release note, latest changes, Hyperledger Fabric<blockchain-sw-253>release note, latest changes, Hyperledger Fabric, multicloud</blockchain-sw-253>
 
-subcollection: blockchain
+subcollection: blockchain<blockchain-sw-253>blockchain-sw-253</blockchain-sw-253>
 
 ---
 
@@ -16,19 +16,30 @@ subcollection: blockchain
 
 
 
-
+<ibm-cloud-redirects>Documentation for this on-prem product has been moved from IBM Cloud to IBM Documentation at [https://www.ibm.com/docs/en/SSVKZ7_2.5.3/release-notes.html](https://www.ibm.com/docs/en/SSVKZ7_2.5.3/release-notes.html){: external}. Update your bookmarks.
+{: important}</ibm-cloud-redirects>
 
 # Release notes
-{: #release-notes-saas-20}
+{: #release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>}
 
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.7](https://github.com/hyperledger/fabric/releases/tag/v2.2.7), and [v2.4.5](https://github.com/hyperledger/fabric/releases/tag/v2.4.5).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform <blockchain-sw-253>v2.5.3</blockchain-sw-253> for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.7](https://github.com/hyperledger/fabric/releases/tag/v2.2.7), and [v2.4.5](https://github.com/hyperledger/fabric/releases/tag/v2.4.5).
 
 {: shortdesc}
 
-
+<blockchain-sw-253>
+[Installing the 2.5.3 fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-install-fixpack) provides instructions on how to apply the latest fix pack to your blockchain instance.  </blockchain-sw-253>
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+## 13 Sept 2022
+{: #09-13-2022}
+
+**Certificate Authority (CA) patch 1.5.5-3, Peer and ordering node patch 1.4.12-17, 2.2.8-2, 2.4.6-2.**
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
 
 
 ## 16 Aug 2022
@@ -171,7 +182,14 @@ Miscellaneous bug fixes and security patches.
 
 Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
 
+<blockchain-sw-253>
 
+## 14 Jul 2021
+{: #14-07-2021}
+
+**Certificate Authority (CA) patch 1.5.0-1, Peer and ordering node patch 1.4.12-2, 2.2.3-2**
+
+Miscellaneous bug fixes and security patches.</blockchain-sw-253>
 
 
 
@@ -206,7 +224,12 @@ Miscellaneous bug fixes and security patches.
 
 **Certificate Authority (CA) patch 1.4.9-6, Peer and ordering node patch 1.4.11-2, 2.2.2-1** 
 
+<blockchain-sw-253>
 
+## 29 Mar 2021
+{: #29-03-2021}
+
+**Certificate Authority (CA) patch 1.4.9-6, Peer and ordering node patch 1.4.11-1, 2.2.2-1** </blockchain-sw-253>
 
 ## 22 Feb 2021
 {: #02-22-2021}
@@ -223,7 +246,7 @@ Miscellaneous bug fixes and security patches.
 ### New logging configuration panel
 {: #01-12-2021-logger-ui}
 
-A new panel is available to override peer and ordering node log levels for specific component loggers. See [Configuring node logging](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-logger) for more information.
+A new panel is available to override peer and ordering node log levels for specific component loggers. See [Configuring node logging](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-logger) for more information.<blockchain-sw-253>See [Configuring node logging](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#ibp-console-manage-logger) for more information.</blockchain-sw-253>
 
 ## 08 Dec 2020
 {: #12-08-2020}
@@ -247,7 +270,10 @@ When you link a new {{site.data.keyword.blockchainfull_notm}} Platform service i
 
 ## 02 Nov 2020
 {: #11-02-2020}
-
+<blockchain-sw-253>
+## 30 Oct 2020
+{: #10-20-2020}
+</blockchain-sw-253>
 
 **Certificate Authority (CA) patch 1.4.9-1, Peer and ordering node patch 1.4.9-1, 2.2.1-1**
 

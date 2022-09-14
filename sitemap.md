@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-09-14"
 
 keywords: site map
 subcollection: blockchain
@@ -1124,104 +1124,112 @@ subcollection: blockchain
 {: #sitemap_release_notes}
 
 
-[Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
+[Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>)
 
-* [16 Aug 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-16-2022)
+* [13 Sept 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#09-13-2022)
 
-* [19 July 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-19-2022)
+* [16 Aug 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-16-2022)
 
-* [22 June 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-22-2022)
+* [19 July 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#07-19-2022)
 
-* [01 June 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-01-2022)
+* [22 June 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-22-2022)
 
-* [03 May 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-03-2022)
+* [01 June 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-01-2022)
 
-* [05 Apr 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-04-2022)
+* [03 May 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-03-2022)
 
-* [08 Mar 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-03-2022)
+* [05 Apr 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-04-2022)
 
-* [08 Feb 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-02-2022)
+* [08 Mar 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-03-2022)
 
-* [11 Jan 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-01-2022)
+* [08 Feb 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-02-2022)
 
-* [14 Dec 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#14-12-2021)
+* [11 Jan 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-01-2022)
 
-* [16 Nov 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#16-11-2021)
+* [14 Dec 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#14-12-2021)
 
-* [26 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#26-10-2021)
+* [16 Nov 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#16-11-2021)
 
-* [05 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-10-2021)
+* [26 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#26-10-2021)
 
-* [10 Aug 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-08-2021)
+* [05 Oct 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-10-2021)
 
-* [13 Jul 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#13-07-2021)
+* [10 Aug 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#10-08-2021)
 
-* [16 Jun 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#16-06-2021)
+* [14 Jul 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#14-07-2021)
 
-* [05 May 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-05-2021)
+* [13 Jul 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#13-07-2021)
 
-* [13 Apr 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#13-04-2021)
+* [16 Jun 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#16-06-2021)
 
-* [22 Feb 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#02-22-2021)
+* [05 May 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-05-2021)
 
-* [12 Jan 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-12-2021)
-    * [New logging configuration panel](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-12-2021-logger-ui)
+* [13 Apr 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#13-04-2021)
 
-* [08 Dec 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#12-08-2020)
+* [29 Mar 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#29-03-2021)
 
-* [19 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-19-2020)
+* [22 Feb 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#02-22-2021)
 
-* [02 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020)
-    * [Fabric v2.x node upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-upgrade)
-    * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-lc)
-    * [Improvements for HSM support](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-hsm)
-    * [Certificate renewal enhancements](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-cert-renew)
-    * [Remove registered user from CA](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-02-2020-delete-user)
+* [12 Jan 2021](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#01-12-2021)
+    * [New logging configuration panel](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#01-12-2021-logger-ui)
 
-* [1 Oct 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-01-2020)
+* [08 Dec 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#12-08-2020)
 
-* [25 Aug 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-25-2020)
+* [19 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-19-2020)
 
-* [14 July 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-14-2020)
+* [02 Nov 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020)
 
-* [18 June 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020)
-    * [Fabric peer and ordering node images](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-images)
-    * [Elimination of Docker daemon dependency](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-docker)
-    * [Multizone-capable storage](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-Multizone)
-    * [Kubernetes version upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20#06-18-2020-k8s)
+* [30 Oct 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#10-20-2020)
+    * [Fabric v2.x node upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020-upgrade)
+    * [Support for Fabric v2.x smart contract lifecycle](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020-lc)
+    * [Improvements for HSM support](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020-hsm)
+    * [Certificate renewal enhancements](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020-cert-renew)
+    * [Remove registered user from CA](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-02-2020-delete-user)
 
-* [20 May 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020)
-    * [Support for Intermediate Certificate Authorities (CAs)](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-ICA)
-    * [Updated connection profile](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-20-2020-connx-profile)
+* [1 Oct 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#10-01-2020)
 
-* [16 April 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-16-2020)
-    * [Support for AWS HSM](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-16-2020-AWS-HSM)
+* [25 Aug 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-25-2020)
 
-* [24 March 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#03-24-2020)
+* [14 July 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#07-14-2020)
 
-* [6 February 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20#02-06-2020)
+* [18 June 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-18-2020)
+    * [Fabric peer and ordering node images](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-18-2020-images)
+    * [Elimination of Docker daemon dependency](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-18-2020-docker)
+    * [Multizone-capable storage](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-18-2020-Multizone)
+    * [Kubernetes version upgrade](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#06-18-2020-k8s)
 
-* [11 December 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#12-11-2019)
+* [20 May 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-20-2020)
+    * [Support for Intermediate Certificate Authorities (CAs)](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-20-2020-ICA)
+    * [Updated connection profile](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-20-2020-connx-profile)
 
-* [15 November 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-15-2019)
+* [16 April 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#04-16-2020)
+    * [Support for AWS HSM](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#04-16-2020-AWS-HSM)
 
-* [06 November 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-06-2019)
+* [24 March 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#03-24-2020)
 
-* [02 October 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-02-2019)
+* [6 February 2020](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#02-06-2020)
 
-* [21 August 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-21-2019)
+* [11 December 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#12-11-2019)
 
-* [12 August 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#08-12-2019)
+* [15 November 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-15-2019)
 
-* [10 July 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#07-10-2019)
+* [06 November 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#11-06-2019)
 
-* [24 May 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-24-2019)
+* [02 October 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#10-02-2019)
 
-* [9 May 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#05-09-2019)
+* [21 August 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-21-2019)
 
-* [17 April 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-17-2019)
+* [12 August 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#08-12-2019)
 
-* [3 April 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-03-2019)
+* [10 July 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#07-10-2019)
+
+* [24 May 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-24-2019)
+
+* [9 May 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#05-09-2019)
+
+* [17 April 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#04-17-2019)
+
+* [3 April 2019](/docs/blockchain?topic=blockchain-release-notes-saas-20<blockchain-sw-253>release-notes-sw-253</blockchain-sw-253>#04-03-2019)
 
 
 ## Known issues
