@@ -45,10 +45,7 @@ Severity: medium
 
 **Certificate Authority (CA) patch 1.5.5-2, Peer and ordering node patch 1.4.12-16, 2.2.8-1, 2.4.6-1.**
 
-Added ability to remove the system channel and ability to create orderers without a system channel. Note there are two known issues when creating orderers without a system channel:
-
-1. After selecting the "2 out of 2" Update Policy, the **Review channel information** screen displays "1 out of 1".  
-2. For a **Channel configuration update**, the console is not listing the MSP of the orderer organization.
+Added ability to remove the system channel and ability to create orderers without a system channel.
 
 Added support to use the channel participation APIs offered by Fabric peers/orderers to manage channels.
 

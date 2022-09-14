@@ -50,7 +50,7 @@ To upgrade your network, you need to [retrieve your entitlement key](/docs/block
 The process of updating your network begins with updating the webhook that you created when you initially deployed or upgraded to the 2.5.3 blockchain service. Run the following command to update the webhook in the `ibpinfra` namespace or project:
 
 ```
-kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook=cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220816-amd64
+kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook=cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220913-amd64
 ```
 {: codeblock}
 
@@ -80,7 +80,7 @@ You can start applying the fix pack to your network by updating the {{site.data.
 
 Run the following command to download the operator deployment spec to your local file system. The default name of the operator deployment is `ibp-operator`. If you changed the name during the deployment process, you can use the `kubectl get deployment -n <namespace>` command to get the name of the deployments on your namespace. Replace `<namespace>` with the name of your namespace or OpenShift project:
 ```
-kubectl set image deploy/ibp-operator -n <namespace> ibp-operator=cp.icr.io/cp/ibp-operator:2.5.3-20220816-amd64
+kubectl set image deploy/ibp-operator -n <namespace> ibp-operator=cp.icr.io/cp/ibp-operator:2.5.3-20220913-amd64
 ```
 {: codeblock}
 
@@ -239,7 +239,7 @@ After you complete these steps, you can use the following instructions to deploy
 First, you need to update the webhook that you created when you initially deployed or upgraded to the 2.5.3 blockchain service. Run the following command to update the webhook in the `ibpinfra` namespace or project:
 
 ```
-kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook=cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220816-amd64
+kubectl set image deploy/ibp-webhook -n ibpinfra ibp-webhook=cp.icr.io/cp/ibp-crdwebhook:2.5.3-20220913-amd64
 ```
 {: codeblock}
 
@@ -268,7 +268,7 @@ You can start applying the fix pack to your network by updating the {{site.data.
 
 Run the following command to download the operator deployment spec to your local file system. The default name of the operator deployment is `ibp-operator`. If you changed the name during the deployment process, you can use the `kubectl get deployment -n <namespace>` command to get the name of the deployments on your namespace. Replace `<namespace>` with the name of your namespace or OpenShift project:
 ```
-kubectl set image deploy/ibp-operator -n <namespace> ibp-operator=cp.icr.io/cp/ibp-operator:2.5.3-20220816-amd64
+kubectl set image deploy/ibp-operator -n <namespace> ibp-operator=cp.icr.io/cp/ibp-operator:2.5.3-20220913-amd64
 ```
 {: codeblock}
 
