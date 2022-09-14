@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-08"
+lastupdated: "2022-09-14"
 
 subcollection: blockchain
 
