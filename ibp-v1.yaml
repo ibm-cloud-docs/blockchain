@@ -1,0 +1,3091 @@
+openapi: 3.0.0
+info:
+  title: IBM Blockchain Platform APIs
+  description: This doc lists APIs that you can use to interact with your IBM Blockchain Platform console.
+  contact:
+    name: Blockchain Service Support
+    url: https://cloud.ibm.com/docs/services/blockchain/ibmblockchain_support.html#ibmblockchain_support
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.2
+  x-alternate-name: blockchain
+  x-codegen-config:
+    go:
+      apiPackage: 'github.ibm.com/ibmcloud/blockchain-go-sdk'
+  x-try-it-out-enabled:
+    enabled: true
+    credentials: false
+externalDocs:
+  description: |
+    Find out more about Swagger
+  url: http://swagger.io
+servers:
+- url: https://<your-instance-id-here>.<cluster-id>.blockchain.cloud.ibm.com
+security:
+- BearerAuth: []
+
+tags:
+- name: Managing components
+  description: APIs to create, import, edit and delete components.
+- name: Monitoring the network
+  description: APIs read and write notifications as well manage the logging behavior.
+- name: Administer the console
+  description: APIs to understand the console settings and health.
+paths:
+  /ak/api/v1/logs/file_settings:
+    put:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"client":{"enabled": true,"level": "silly","unique_name": false},"server":{"enabled": true,"level": "info","unique_name": false}}'
+      tags:
+      - Monitoring the network
+      summary: Change logging settings
+      description: |
+        Change your **console's** file logging settings. Settings that are omitted from the request body will remain unchanged.
+      operationId: update_file_settings
+      requestBody:
+        description: |
+          Include only the settings that you want to change, and the other settings will remain unchanged.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChangeLoggingSettings'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X PUT \
+                        https://<API endpoint>/ak/api/v1/logs/file_settings \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                            "client": {
+                              "enabled": true,
+                              "level": "silly",
+                              "unique_name": false
+                              },
+                              "server": {
+                                "enabled": true,
+                                "level": "info",
+                                "unique_name": false
+                              }
+                            }'
+      responses:
+        200:
+          description: |
+            Successful and the updated settings are returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConsoleLoggingSettings'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Get all components
+      description: |
+        Get all components from the console database. The components include peers, CAs, orderers, MSPs, and so on.
+      operationId: list_components
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        https://<API endpoint>/ak/api/v1/components \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and returns an array of all components.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Component'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/kubernetes/components/ca:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"display_name": "Sample CA","enroll_id": "admin","enroll_secret": "secret"}'
+      tags:
+      - Managing components
+      summary: Create a CA
+      description: |
+        Create a CA in your Kubernetes cluster.
+      operationId: create_ca
+      requestBody:
+        description: |
+          Create a CA in your Kubernetes cluster.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFabricCA'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/kubernetes/components/ca \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                          "display_name": "Sample CA",
+                          "enroll_id": "admin",
+                          "enroll_secret": "secret"
+                          }'
+      responses:
+        200:
+          description: |
+            Successful and the CA is created in your Kubernetes cluster.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateFabricComponentResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/ca:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"display_name": "Sample CA","api_url": "https://169.55.231.189:30159","ca_name": "org1CA","tlsca_name": "org1CA","enroll_id": "admin","enroll_secret": "secret","pem": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="}'
+      tags:
+      - Managing components
+      summary: Import a CA
+      description: |
+        Import an existing CA to your console. You can only use this API to import IBM Blockchain components created by using these APIs or another IBM Blockchain Platform console.
+      operationId: import_ca
+      requestBody:
+        description: |
+          Import a CA.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportFabricCA'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/components/ca \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                          "display_name": "Sample CA",
+                          "location": "ibm_saas",
+                          "api_url": "https://169.55.231.189:30159",
+                          "ca_name": "org1CA",
+                          "tlsca_name": "org1CA",
+                          "enroll_id": "admin",
+                          "enroll_secret": "secret",
+                          "pem": "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+                          }'
+      responses:
+        200:
+          description: |
+            Successful and the CA is imported.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportFabricCAResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/ca/{id}:
+    put:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"display_name": "Sample CA","api_url": "https://169.55.231.189:30123","msp_id": "PeerOrg1","ca_name": "org1CA"}'
+      tags:
+      - Managing components
+      summary: Edit a CA
+      description: |
+        Modify one or more properties in a CA. For example, the "display_name" property.
+      operationId: update_ca
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to modify. Use the `Get all components` API to determine the component id.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: |
+          Edit a CA.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditCA'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X PUT \
+                        https://<API endpoint>/ak/api/v1/components/ca \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "display_name": "Sample CA",
+                        "api_url": "https://169.55.231.189:30123",
+                        "ca_name": "ca"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and CA properties are updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditFabricComponentResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/kubernetes/components/orderer:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"orderer_type": "raft", "msp_id": "orderermsp","config": [<configuration file 1>,<configuration file 2>],"cluster_name": "Ordering Service1", "display_name": "orderer"}'
+      tags:
+      - Managing components
+      summary: Create an ordering service
+      description: |
+        Create a Raft ordering service in your Kubernetes cluster.
+      operationId: create_orderer
+      requestBody:
+        description: |
+          Create an ordering service in your Kubernetes cluster.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFabricOrdererRaft'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/kubernetes/components/orderer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "orderer_type": "raft",
+                        "msp_id": "orderermsp",
+                        "config": [<configuration file 1>,<configuration file 2>],
+                        "cluster_name": "ordering service1",
+                        "display_name": "orderer"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the orderer is created in your Kubernetes cluster.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateFabricComponentResponse'
+        401:
+          description: |
+            Unauthorized.
+  # hiding solo orderer, use raft
+  #/ak/api/v1/kubernetes/components/orderer:
+  #  post:
+  #    x-try-it-out-example:
+  #      -
+  #        in: header
+  #        name: Authorization
+  #        value: Bearer <token>
+  #      -
+  #        in: body
+  #        name: body
+  #        value: '{"msp_id": "org2","config": <paste configuration here>,"display_name": "orderer2"}'
+  #    tags:
+  #    - Managing components
+  #    summary: Create an orderer
+  #    description: |
+  #      Create an orderer in your Kubernetes cluster.
+  #    operationId: createFabricOrderer
+  #    requestBody:
+  #      description: |
+  #        Create an orderer in your Kubernetes cluster.
+  #      content:
+  #        application/json:
+  #          schema:
+  #            $ref: '#/components/schemas/CreateFabricOrderer'
+  #      required: true
+  #    x-sdk-operations:
+  #      request-examples:
+  #        curl:
+  #          - name: Example request
+  #            example:
+  #              - type: code
+  #                lang: curl
+  #                source:
+  #                  - |-
+  #                    curl -X POST \
+  #                      https://<API endpoint>/ak/api/v1/kubernetes/components/orderer \
+  #                      -H 'Content-Type: application/json' \
+  #                      -H 'Authorization: Bearer <IAM_token>' \
+  #                      -d '{
+  #                      "msp_id": "org2",
+  #                      "config": <paste configuration here>,
+  #                      "display_name": "orderer2"
+  #                      }'
+  #    responses:
+  #      200:
+  #        description: |
+  #          Successful and the orderer is created in your Kubernetes cluster.
+  #        content:
+  #          application/json:
+  #            schema:
+  #              $ref: '#/components/schemas/CreateFabricComponentResponse'
+  #      401:
+  #        description: |
+  #          Unauthorized.
+  /ak/api/v1/components/orderer:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"cluster_id": "njuunjxpgn","cluster_name": "ordering service1","display_name": "orderer","location": "ibm_saas","api_url": "https://169.55.231.189:31086","msp_id": "orderermsp","operations_url": "https://optools.so01.blockchain.cloud.ibm.com","grpcwp_url": "https://optools.so01.blockchain.cloud.ibm.com"}'
+      tags:
+      - Managing components
+      summary: Import an ordering service
+      description: |
+        Import an existing orderer to your console. You can only use this API to import IBM Blockchain components created by using these APIs or another IBM Blockchain Platform console.
+      operationId: import_orderer
+      requestBody:
+        description: |
+          Import an ordering service.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportFabricOrderer'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/components/orderer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "cluster_id": "njuunjxpgn",
+                        "cluster_name": "ordering service1",
+                        "display_name": "orderer",
+                        "location": "ibm_saas",
+                        "api_url": "https://169.55.231.189:31086",
+                        "msp_id": "orderermsp",
+                        "operations_url": "https://optools.so01.blockchain.cloud.ibm.com",
+                        "grpcwp_url": "https://optools.so01.blockchain.cloud.ibm.com"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the orderer is imported.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportFabricOrdererResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/orderer/{id}:
+    put:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"cluster_name": "ordering service1","display_name": "orderer","api_url": "https://169.55.231.189:30141","msp_id": "orderermsp",}'
+      tags:
+      - Managing components
+      summary: Edit an ordering service
+      description: |
+        Modify one or more properties in an orderer. For example, the "display_name" property.
+      operationId: update_orderer
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to modify. Use the `Get all components` API to determine the component id.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: |
+          Edit an ordering service.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditOrderer'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X PUT \
+                        https://<API endpoint>/ak/api/v1/components/orderer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "cluster_name": "ordering service1",
+                        "display_name": "orderer",
+                        "api_url": "https://169.55.231.189:30141",
+                        "msp_id": "orderermsp"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the orderer properties are updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditFabricComponentResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/kubernetes/components/peer:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"msp_id": "org2","config": <paste configuration here>,"display_name": "peer2"}'
+      tags:
+      - Managing components
+      summary: Create a peer
+      description: |
+        Create a peer in your Kubernetes cluster.
+      operationId: create_peer
+      requestBody:
+        description: |
+          Create a peer in your Kubernetes cluster.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateFabricPeer'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/kubernetes/components/peer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "msp_id": "org2",
+                        "config": <paste configuration here>,
+                        "display_name": "peer2"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the peer is created in your Kubernetes cluster.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateFabricComponentResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/peer:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"display_name":"Peer1Org1","location":"ibm_saas","api_url":"https://169.55.231.189:31336","msp_id":"PeerOrg1","operations_url":"https://optools.so01.blockchain.cloud.ibm.com","grpcwp_url":"https://optools.so01.blockchain.cloud.ibm.com"}'
+      tags:
+      - Managing components
+      summary: Import a peer
+      description: |
+        Import an existing peer into your console. You can only use this API to import IBM Blockchain components created by using these APIs or another IBM Blockchain Platform console.
+      operationId: import_peer
+      requestBody:
+        description: |
+          Import a peer.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportFabricPeer'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/components/peer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "display_name": "Peer1Org1",
+                        "location": "ibm_saas",
+                        "api_url": "https://169.55.231.189:31336",
+                        "msp_id": "PeerOrg1",
+                        "operations_url": "https://optools.so01.blockchain.cloud.ibm.com",
+                        "grpcwp_url": "https://optools.so01.blockchain.cloud.ibm.com"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the peer is imported.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportFabricPeerResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/peer/{id}:
+    put:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"display_name": "Peer1Org1","api_url": "https://169.55.231.189:31289","msp_id": "PeerOrg1"}'
+      tags:
+      - Managing components
+      summary: Edit a peer
+      description: |
+        Modify one or more properties in a peer. For example, the "display_name" property.
+      operationId: update_peer
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to modify. Use the `Get all components` API to determine the component id.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: |
+          Edit a peer.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditPeer'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X PUT \
+                        https://<API endpoint>/ak/api/v1/components/peer \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "display_name": "Peer1Org1",
+                        "api_url": "https://169.55.231.189:31289",
+                        "msp_id": "PeerOrg1"
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the peer properties are updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditFabricComponentResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/msp:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"msp_id": "PeerOrg1","display_name": "PeerOrg1 msp","root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"intermediate_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"admins": ["admin1"],"tls_root_certs":  ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"revocation_list": ["revocation_member1"],"organizational_unit_identifiers": ["oui id 1"],"fabric_node_ous": ["ous id 1"]}'
+      tags:
+      - Managing components
+      summary: Create or import a Membership Service Provider (MSP)
+      description: |
+        Import an MSP definition into your console. You can use this definition to represent the peer or orderer organization.
+      operationId: import_msp
+      requestBody:
+        description: |
+         Create or import an MSP.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AddMSP'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/components/msp \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "msp_id": "PeerOrg1",
+                        "display_name": "PeerOrg1 msp",
+                        "root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "intermediate_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "admins": ["admin1"],
+                        "tls_root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation_list": ["revocation_member1"],
+                        "organizational_unit_identifiers": ["oui id 1"],
+                        "fabric_node_ous": ["ous id 1"]
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the new MSP is imported.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddMSPResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/msp/{id}:
+    put:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+        -
+          in: body
+          name: body
+          value: '{"msp_id": "PeerOrg1","display_name": "PeerOrg1 msp","root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"intermediate_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"admins": ["admin1"],"tls_root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],"revocation_list": ["revocation_member1"],"organizational_unit_identifiers": ["oui id 1"],"fabric_node_ous": ["ous id 1"]}'
+      tags:
+      - Managing components
+      summary: Edit an MSP
+      description: |
+        Modify one or more properties in an MSP definition. For example, the "fabric_node_ous" property.
+      operationId: update_msp
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to modify. Use the `Get all components` API to determine the component id.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: |
+          Edit an MSP.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EditMSP'
+        required: true
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/components/msp \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>' \
+                        -d '{
+                        "msp_id": "PeerOrg1",
+                        "display_name": "PeerOrg1 msp",
+                        "root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "intermediate_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "admins": ["admin1"],
+                        "tls_root_certs": ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="],
+                        "revocation_list": ["revocation_member1"],
+                        "organizational_unit_identifiers": ["oui id 1"],
+                        "fabric_node_ous": ["ous id 1"]
+                        }'
+      responses:
+        200:
+          description: |
+            Successful and the MSP properties are updated.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EditFabricComponentResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/components/msps/{msp_id}:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Get a local MSP's certificate
+      description: |
+        External party's IBM Blockchain Platform consoles can use this API to get the public certificate for a given MSP id.
+      operationId: get_msp_certificate
+      parameters:
+        - name: msp_id
+          in: path
+          description: |
+            The `msp_id` to fetch
+          required: true
+          schema:
+            type: string
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        https://<API endpoint>/ak/api/v1/components/msps/{msp_id} \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and the local msp's certificate is returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMSPCertificateResponse'
+  /ak/api/v1/components/{id}:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Get a component
+      description: |
+        Get the parameters for a single component by specifying its id.
+      operationId: get_component
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to retrieve. Use the `Get all components` API to determine the component id.
+          required: true
+          schema:
+            type: string
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        https://<API endpoint>/ak/api/v1/components/<ID> \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and returns an object of the component.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Component'
+        401:
+          description: |
+            Unauthorized.
+    delete:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Remove an imported component
+      description: |
+        Remove a single component that was imported to the console. Note this action does not delete the component from the Kubernetes cluster where it resides. It simply removes it from the IBM Blockchain Platform console.
+      operationId: remove_component
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the imported component to remove. Use the `Get all components` API to determine the component id.
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X DELETE \
+                        https://<API endpoint>/ak/api/v1/components/<ID> \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and the component is deleted.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteComponentResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/kubernetes/components/{id}:
+    delete:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Delete a component
+      description: |
+        Delete a single component from your IBM Blockchain Platform console and from your Kubernetes cluster. A component can be a peer, CA, or orderer.
+      operationId: delete_component
+      parameters:
+        - name: id
+          in: path
+          description: |
+            The `id` of the component to delete. Use the `Get all components` API to determine the id of the component to be deleted.
+          required: true
+          style: simple
+          explode: false
+          schema:
+            type: string
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X DELETE \
+                        https://<API endpoint>/ak/api/v1/kubernetes/components/<ID> \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and the component is deleted from your Kubernetes cluster.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteComponentResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/kubernetes/components/purge:
+    delete:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Managing components
+      summary: Delete all components
+      description: |
+        Delete all components in your Kubernetes cluster. The components include Fabric peers, CAs, and orderers.
+      operationId: delete_all_components
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X DELETE \
+                        https://<API endpoint>/ak/api/v1/kubernetes/components/purge \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and all componentes are deleted from your Kubernetes cluster.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteComponentResponse'
+        401:
+          description: Unauthorized
+  /ak/api/v1/notifications:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Monitoring the network
+      summary: Get notifications
+      description: |
+        Retrieve all notifications. Use this API to paginate through notifications. Possible notifications include actions such as creating a component, deleting a component, server restart, and so on.
+      operationId: list_notifications
+      parameters:
+        - name: limit
+          in: query
+          description: |
+            The number of notifications to return. The default value is 100.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+        - name: skip
+          in: query
+          description: |
+            `skip` is used to paginate through a long list of sorted entries. For example, if there are 100 notifications, you can issue the API with limit=10 and skip=0 to get the first 1-10. To get the next 10, you can set limit=10 and skip=10 so that the values of entries 11-20 are returned.
+          required: false
+          style: form
+          explode: true
+          schema:
+            type: number
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        'https://<API endpoint>/ak/api/v1/notifications?limit=20&skip=0' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and all notifications are returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNotificationsResponseBody'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/notifications/purge:
+    delete:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Monitoring the network
+      summary: Delete all notifications
+      description: |
+        Delete all notifications. This API is intended for debugging and administration.
+      operationId: delete_all_notifications
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X DELETE \
+                        https://<API endpoint>/ak/api/v1/notifications/purge \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and all notifications are deleted.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteAllNotificationsResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/settings:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Administer the console
+      summary: Get settings for the IBM Blockchain Platform console
+      description: |
+        Retrieve all non-sensitive settings for IBM Blockchain Platform console. Use this API for debugging purposes and to view the current settings. This API informs you of what behavior to expect and confirms whether the desired settings are active.
+      operationId: get_settings
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        https://<API endpoint>/ak/api/v1/settings \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and the IBM Blockchain Platform console settings are returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody'
+  /ak/api/v1/restart:
+    post:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Administer the console
+      summary: Restart IBM Blockchain Platform console
+      description: |
+        Restart the IBM Blockchain Platform console process.
+      operationId: restart
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X POST \
+                        https://<API endpoint>/ak/api/v1/restart \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and IBM Blockchain Platform console is restarted.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RestartAthenaResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/sessions:
+    delete:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Administer the console
+      summary: Delete all IBM Blockchain Platform console sessions
+      description: |
+        Delete all client sessions in IBM Blockchain Platform console. Use this API to delete all client sessions in order to clear any active logins and force everyone to login again. This API is useful for debugging purposes and when you change roles of a user and want those changes to take effect immediately. Otherwise, permission or role changes will take effect during the user's next login or session expiration.
+      operationId: delete_all_sessions
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X DELETE \
+                        https://<API endpoint>/ak/api/v1/sessions \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and all sessions are deleted.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeleteAllSessionsResponse'
+        401:
+          description: |
+            Unauthorized.
+  /ak/api/v1/health:
+    get:
+      x-try-it-out-example:
+        -
+          in: header
+          name: Authorization
+          value: Bearer <token>
+      tags:
+      - Administer the console
+      summary: Get IBM Blockchain Platform console health stats
+      description: |
+        See memory and CPU usage for the console process and other OS stats.
+      operationId: get_health
+      x-sdk-operations:
+        request-examples:
+          curl:
+            - name: Example request
+              example:
+                - type: code
+                  lang: curl
+                  source:
+                    - |-
+                      curl -X GET \
+                        https://<API endpoint>/ak/api/v1/health \
+                        -H 'Content-Type: application/json' \
+                        -H 'Authorization: Bearer <IAM_token>'
+      responses:
+        200:
+          description: |
+            Successful and health statistics are returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetAthenaHealthStatsResponse'
+        401:
+          description: |
+            Unauthorized.
+
+  # Lines in this file with 3 hashes indicate that these apis are for IBP Software product.
+  # The (###) will get deleted by travis in our docker image.
+  # The SaaS swagger file will keep these apis commented out.
+  ###/ak/api/v1/permissions/keys:
+  ###  post:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Create an api key
+  ###    description: |
+  ###      ICP - Create an api key. This key can be used to authenticate and call other apis. Only users or api keys with a `manager` role can call this api. The ###`api_secret` in the reponse must be saved by the user. It is unrecoverable. API keys do not expire.
+  ###    requestBody:
+  ###      description: |
+  ###        Pass the desired roles for the new api key. Valid roles - "reader", "writer", "manager".
+  ###      content:
+  ###        application/json:
+  ###          schema:
+  ###            $ref: '#/components/schemas/CreateApiKeyBody'
+  ###      required: true
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/CreateApiKeyBodyResponse'
+  ###      401:
+  ###        description: Unauthorized.
+  ###  get:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - List api keys
+  ###    description: |
+  ###      ICP - List all api keys.
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/GetApiKeyBodyResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###/ak/api/v1/permissions/keys/{key_id}:
+  ###  delete:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Delete an api key
+  ###    description: |
+  ###      ICP - Delete an api key.
+  ###    parameters:
+  ###      - name: key_id
+  ###        in: path
+  ###        description: |
+  ###          The `api_key` to delete.
+  ###        required: true
+  ###        schema:
+  ###          type: string
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/DeleteApiKeyBodyResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###/ak/api/v1/permissions/users:
+  ###  post:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Add users to the IBM Blockchain Platform console
+  ###    description: |
+  ###      ICP - add new users. Only users or api keys with a `manager` role can call this api.
+  ###    requestBody:
+  ###      description: |
+  ###        Pass the desired roles for the usernames. Valid roles - "reader", "writer", "manager".
+  ###      content:
+  ###        application/json:
+  ###          schema:
+  ###            $ref: '#/components/schemas/AddUserBody'
+  ###      required: true
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/AddUserResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###  delete:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Delete users from the IBM Blockchain Platform console
+  ###    description: |
+  ###      ICP - Delete existing users by uuid. Only users or api keys with a `manager` role can call this api. Note that uuids are expected, not usernames.
+  ###    requestBody:
+  ###      description: |
+  ###        Pass the desired roles for the usernames. Valid roles - "reader", "writer", "manager".
+  ###      content:
+  ###        application/json:
+  ###          schema:
+  ###            $ref: '#/components/schemas/DeleteUserBody'
+  ###      required: true
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/DeleteUserResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###  put:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Edit users on the IBM Blockchain Platform console
+  ###    description: |
+  ###      ICP - edit existing users by uuid. Only users or api keys with a `manager` role can call this api. Note that uuids are expected, not usernames.
+  ###    requestBody:
+  ###      description: |
+  ###        Pass the desired roles for the usernames. Valid roles - "reader", "writer", "manager".
+  ###      content:
+  ###        application/json:
+  ###          schema:
+  ###            $ref: '#/components/schemas/EditUserBody'
+  ###      required: true
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/EditUserResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###  get:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - List users on the IBM Blockchain Platform console
+  ###    description: |
+  ###      ICP - List existing users by uuid.
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/GetUsersResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+  ###/ak/api/v1/permissions/users/password/reset:
+  ###  put:
+  ###    tags:
+  ###    - Administer the console
+  ###    summary: ICP - Reset users' passwords
+  ###    description: |
+  ###      ICP - Change a user's password to the default password. Only users or api keys with a `manager` role can call this api.
+  ###    requestBody:
+  ###      description: |
+  ###        Pass an array of uuids to reset.
+  ###      content:
+  ###        application/json:
+  ###          schema:
+  ###            $ref: '#/components/schemas/ResetPassBody'
+  ###      required: true
+  ###    responses:
+  ###      200:
+  ###        description: Successful response.
+  ###        content:
+  ###          application/json:
+  ###            schema:
+  ###              $ref: '#/components/schemas/ResetPassResponse'
+  ###      401:
+  ###        description:  Unauthorized.
+
+components:
+  schemas:
+    AddMSP:
+      required:
+      - admins
+      - msp_id
+      - display_name
+      type: object
+      properties:
+        msp_id:
+          type: string
+          description: An id that is used to represent this MSP internally in the console.
+          example: PeerOrg1
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component that is used to represent this MSP internally in the console.
+          example: PeerOrg1 msp
+        root_certs:
+          $ref: '#/components/schemas/RootCerts'
+        intermediate_certs:
+          $ref: '#/components/schemas/IntermediateCerts'
+        admins:
+          $ref: '#/components/schemas/AdminCerts'
+        tls_root_certs:
+           $ref: '#/components/schemas/TlsRootCerts'
+        revocation_list:
+          $ref: '#/components/schemas/RevocationCerts'
+        organizational_unit_identifiers:
+          $ref: '#/components/schemas/OrganizationalUnitIdentifiers'
+        fabric_node_ous:
+          $ref: '#/components/schemas/FabricNodeOus'
+      description: |
+        MSP body
+    AddMSPResponseBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          description: |
+            This is your component's id.
+          example: cf2cec3c2edffa78fac5c3ac5d001b1d
+        type:
+          type: string
+          description: |
+            Type of component
+          example: msp
+        msp_id:
+          type: string
+          example: PeerOrg1
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        root_certs:
+          $ref: '#/components/schemas/RootCerts'
+        intermediate_certs:
+          $ref: '#/components/schemas/IntermediateCerts'
+        admins:
+          $ref: '#/components/schemas/AdminCerts'
+        tls_root_certs:
+           $ref: '#/components/schemas/TlsRootCerts'
+        revocation_list:
+          $ref: '#/components/schemas/RevocationCerts'
+        organizational_unit_identifiers:
+          $ref: '#/components/schemas/OrganizationalUnitIdentifiers'
+        fabric_node_ous:
+          $ref: '#/components/schemas/FabricNodeOus'
+      description: |
+        Details for your component are returned
+    ChangeLoggingSettings:
+      type: object
+      properties:
+        client:
+          allOf:
+            - description: |
+                (Optional) Use this section to change client side (browser) logging settings, otherwise it can be omitted if no changes.
+            - $ref: '#/components/schemas/LoggingSettings'
+        server:
+          allOf:
+            - description: |
+                (Optional) Use this section to change server side logging settings, otherwise it can be omitted if no changes.
+            - $ref: '#/components/schemas/LoggingSettings'
+      description: |
+        Only include the settings you want to change, the other settings will remain
+    ConsoleLoggingSettings:
+      type: object
+      properties:
+        client:
+          allOf:
+            - description: The client side (browser) logging settings.
+            - $ref: '#/components/schemas/LoggingSettings'
+        server:
+          allOf:
+            - description: The server side logging settings.
+            - $ref: '#/components/schemas/LoggingSettings'
+      description: |
+        The logging settings for the client and server.
+    CreateFabricCA:
+      required:
+      - enroll_id
+      - enroll_secret
+      - display_name
+      type: object
+      properties:
+        display_name:
+          type: string
+          example: ca2
+        enroll_id:
+          type: string
+          example: admin
+        enroll_secret:
+          type: string
+          example: secret
+        resources:
+            type: object
+            properties:
+              ca:
+                type: object
+                $ref: '#/components/schemas/ResourceObject'
+        storage:
+          type: object
+          properties:
+            ca:
+              type: object
+              $ref: '#/components/schemas/StorageObject'
+        zone:
+          type: string
+          description: "**(IBM Cloud and OpenShift only)** Specify the zone of your cluster where you want this component to be deployed. Find the list of possible zones (for your k8s cluster) by retrieving your node labels: `kubectl get nodes --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+        #region:
+        #  type: string
+        #  description: "**(IBM Cloud only)** Specify the IBM Cloud Kubernetes service region where you want this component to be deployed. Find the list of possible regions (for your k8s cluster) by retrieving your node labels: `kubectl get nodes
+        #  --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+      description: |
+        Fabric CA body
+    CreateFabricComponentResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          example: 7ae83e81c3930a98d9683d3aa207ba4a
+        type:
+          type: string
+          description: 'The type of this component: "fabric-peer" || "fabric-ca" || "fabric-orderer"'
+          example: fabric-peer
+        display_name:
+          type: string
+          example: peer1
+        location:
+          type: string
+          example: ibm_saas
+        msp_id:
+          type: string
+          example: org1
+        api_url:
+          type: string
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31337:30000
+        operations_url:
+          type: string
+          description: |
+            Used by Fabric health checker to monitor health status of the node. For more inforamtion, see [Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/operations_service.html).
+          example: https://169.46.223.99:30001
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30002
+        timestamp:
+          type: number
+          description: |
+            Unix timestamp of component creation, UTC, ms.
+          example: 1549490200312
+        resources:
+          $ref: '#/components/schemas/CreateFabricComponentResponse_resources'
+      description: |
+        Details for your component are returned
+    CreateFabricOrdererRaft:
+      required:
+      - config
+      - msp_id
+      - cluster_name
+      - display_name
+      - orderer_type
+      type: object
+      properties:
+        orderer_type:
+          type: string
+          example: raft
+          description: Currently only the type "raft" is supported. [etcd/raft](/docs/services/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-ordering-console)
+        msp_id:
+          type: string
+          example: org2
+        config:
+          type: array
+          description: |
+            An array of config objects. Add one config object per desired raft node. 1 or 5 nodes are recommended [etcd/raft](/docs/services/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-ordering-console).
+
+            See this [topic](/docs/services/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config) for instructions on how to build a config object.
+          items:
+            $ref: '#/components/schemas/ConfigBody'
+        cluster_name:
+          type: string
+          example: My Orderers
+          description: The display name of the ordering service cluster.
+        display_name:
+          type: string
+          example: An Orderer
+          description: The base display name of a single ordering node.
+        resources:
+            type: object
+            properties:
+              orderer:
+                type: object
+                $ref: '#/components/schemas/ResourceObject'
+              grpcweb:
+                type: object
+                $ref: '#/components/schemas/ResourceObject'
+        storage:
+          type: object
+          properties:
+            orderer:
+              type: object
+              $ref: '#/components/schemas/StorageObject'
+        zone:
+          type: array
+          description: "**(IBM Cloud and OpenShift only)** Specify the zone of your cluster where you want this component to be deployed. Find the list of possible zones (for your k8s cluster) by retrieving your node labels: `kubectl get nodes
+          --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+          items:
+            type: string
+            description: An array of strings. Add one string per desired raft node. Should be the same number of elements in the `config` array.
+        #region:
+        #  type: array
+        #  description: "**(IBM Cloud only)** Specify the IBM Cloud Kubernetes service region where you want this component to be deployed. Find the list of possible regions (for your k8s cluster) by retrieving your node labels: `kubectl get nodes
+        #  --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+        #  items:
+        #    type: string
+        #    description: An array of strings. Add one string per desired raft node. Should be the same number of elements in the `config` array.
+
+      description: |
+        Fabric orderer body
+    CreateFabricOrderer:
+      required:
+      - config
+      - msp_id
+      - display_name
+      type: object
+      properties:
+        msp_id:
+          type: string
+          example: org2
+        config:
+          type: object
+          description: |
+            See this [topic](/docs/services/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config) for instructions on how to build a config object.
+          $ref: '#/components/schemas/ConfigBody'
+        display_name:
+          type: string
+          example: orderer2
+        resources:
+            type: object
+            properties:
+              orderer:
+                type: object
+                $ref: '#/components/schemas/ResourceObject'
+              grpcweb:
+                type: object
+                $ref: '#/components/schemas/ResourceObject'
+        storage:
+          type: object
+          properties:
+            orderer:
+              type: object
+              $ref: '#/components/schemas/StorageObject'
+        zone:
+          type: string
+          description: "**(IBM Cloud and OpenShift only)** Specify the zone of your cluster where you want this component to be deployed. Find the list of possible zones (for your k8s cluster) by retrieving your node labels: `kubectl get nodes --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+        #region:
+        #  type: string
+        #  description: "**(IBM Cloud only)** Specify the IBM Cloud Kubernetes service region where you want this component to be deployed. Find the list of possible regions (for your k8s cluster) by retrieving your node labels: `kubectl get nodes
+        #  --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+      description: |
+        Fabric orderer body
+    CreateFabricPeer:
+      required:
+      - config
+      - msp_id
+      - display_name
+      type: object
+      properties:
+        msp_id:
+          type: string
+          example: org2
+        type:
+          type: string
+          example: fabric-peer
+        config:
+          type: object
+          description: |
+            See this [topic](/docs/services/blockchain?topic=blockchain-ibp-v2-apis#ibp-v2-apis-config) for instructions on how to build a config object.
+          $ref: '#/components/schemas/ConfigBody'
+        display_name:
+          type: string
+          example: peer2
+        resources:
+          type: object
+          properties:
+            peer:
+              type: object
+              $ref: '#/components/schemas/ResourceObject'
+            grpcweb:
+              type: object
+              $ref: '#/components/schemas/ResourceObject'
+            couchdb:
+              type: object
+              $ref: '#/components/schemas/ResourceObject'
+            dind:
+              type: object
+              $ref: '#/components/schemas/ResourceObject'
+        storage:
+          type: object
+          properties:
+            peer:
+              type: object
+              $ref: '#/components/schemas/StorageObject'
+        zone:
+          type: string
+          description: "**(IBM Cloud and OpenShift only)** Specify the zone of your cluster where you want this component to be deployed. Find the list of possible zones (for your k8s cluster) by retrieving your node labels: `kubectl get nodes --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+        db_type:
+          type: string
+          description: Select the state database for the peer. Can be either "couchdb" or "leveldb". The default is "couchdb".
+        #region:
+        #  type: string
+        #  description: "**(IBM Cloud only)** Specify the IBM Cloud Kubernetes service region where you want this component to be deployed. Find the list of possible regions (for your k8s cluster) by retrieving your node labels: `kubectl get nodes
+        #  --show-labels`. [More info](https://kubernetes.io/docs/setup/best-practices/multiple-zones)"
+      description: Fabric peer body
+    EditCA:
+      type: object
+      properties:
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: Sample CA
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the peer. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31337
+        ca_name:
+          type: string
+          example: ca
+      description: |
+        Fabric CA body
+    EditOrderer:
+      type: object
+      properties:
+        cluster_name:
+          type: string
+          description: |
+            The display name of the ordering service cluster.
+          example: ordering service1
+        display_name:
+          type: string
+          description: |
+            The base display name of a single ordering node.
+          example: orderer
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the peer. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31337
+        msp_id:
+          type: string
+          example: orderermsp
+      description: |
+        Orderer body
+    EditPeer:
+      type: object
+      properties:
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: Peer1Org1
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the peer. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31335
+        msp_id:
+          type: string
+          example: PeerOrg1
+      description: |
+        Peer body
+    EditFabricComponentResponseBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          description: |
+            This is your component's id.
+          example: cf2cec3c2edffa78fac5c3ac5d001b1d
+        type:
+          type: string
+          example: fabric-ca
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        api_url:
+          type: string
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31337
+        msp_id:
+          type: string
+          example: PeerOrg1
+        ca_name:
+          type: string
+          example: org1CA
+        timestamp:
+          type: number
+          example: 1537262855753
+          description: |
+            Unix timestamp of component creation, UTC, ms.
+      description: |
+        Details for your Fabric component are returned
+    EditMSP:
+      required:
+      - msp_id
+      - display_name
+      type: object
+      properties:
+        msp_id:
+          type: string
+          example: PeerOrg1
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        root_certs:
+          $ref: '#/components/schemas/RootCerts'
+        intermediate_certs:
+          $ref: '#/components/schemas/IntermediateCerts'
+        certificate:
+          type: string
+          description: |
+            (Optional).
+          example: cert1
+        admins:
+          $ref: '#/components/schemas/AdminCerts'
+        tls_root_certs:
+           $ref: '#/components/schemas/TlsRootCerts'
+        revocation_list:
+          $ref: '#/components/schemas/RevocationCerts'
+        organizational_unit_identifiers:
+          $ref: '#/components/schemas/OrganizationalUnitIdentifiers'
+        fabric_node_ous:
+          $ref: '#/components/schemas/FabricNodeOus'
+      description: |
+        MSP body
+    Component:
+      type: object
+      description: A component
+      properties:
+        id:
+          type: string
+          description: The unique identifier of this component'
+          example: cf2cec3c2edffa78fac5c3ac5d5b4ce7
+        type:
+          type: string
+          description: 'The type of this component'
+          enum:
+            - fabric-peer
+            - fabric-ca
+            - fabric-orderer
+          example: fabric-ca
+        display_name:
+          type: string
+          description: The name of this component
+          example: Example CA
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example:  https://optools.so01.blockchain.cloud.ibm.com:30147
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the node. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31337
+        operations_url:
+          type: string
+          description: |
+            Used by Fabric health checker to monitor health status of the node. For more inforamtion, see [Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/operations_service.html).
+          example: grpcs://another.url.com
+        msp_id:
+          type: string
+          example: PeerOrg1
+        location:
+          type: string
+          description: |
+            Location where the node is running.
+          example: ibm_saas
+        ca_name:
+          type: string
+          description: |
+            Field exists if its a CA.
+          example: org1CA
+        timestamp:
+          type: number
+          description: |
+            Unix timestamp of component creation, UTC, ms.
+          example: 1537262855753
+    GetNonSensitiveSettingsResponseBody:
+      type: object
+      properties:
+        ATHENA_ID:
+          type: string
+          description: |
+            Random/unique id for an instance of IBM Blockchain Platform console.
+          example: 17v7e
+        AUTH_SCHEME:
+          type: string
+          description: |
+            "appid", "ibmid", or "iam".
+          example: appid
+        REGION:
+          type: string
+          description: |
+            If it's "local", things like https are disabled.
+        DOMAIN:
+          type: string
+          description: |
+            Domain that IBM Blockchain Platform console is using for cookies, and it should match the URL in the browser. `null` is valid, but don't make it a "?".
+        PORT:
+          type: string
+          description: |
+            Port that IBM Blockchain Platform console is running on.
+          example: "3000"
+        DEPLOYER_URL:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        DB_SYSTEM:
+          type: string
+          description: |
+            Name of settings/tx database.
+          example: athena_system
+        HOST_URL:
+          type: string
+          description: |
+            Home URL.
+          example: http://localhost:3000
+        CONFIGTXLATOR_URL:
+          type: string
+          description: |
+            URL to reach a configtxlator.
+          example: https://example.com
+        LANDING_URL:
+          type: string
+          example: http://localhost:3000
+        LOGIN_URI:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        LOGOUT_URI:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        CALLBACK_URI:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        CONFIGTXLATOR_URLS:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        CRN_STRING:
+          type: string
+          example: 'crn:v1:staging:public:blockchain:us-south:a/df663f1351e50279adcc6be42918ae07:7c658bd5-c257-4c0a-bd6f-6bed91f359e2::'
+        CRN:
+          type: string
+          example: 'crn:v1:staging:public:blockchain:us-south:a/df663f1351e50279adcc6be42918ae07:7c658bd5-c257-4c0a-bd6f-6bed91f359e2::'
+        ENVIRONMENT:
+          type: string
+          example: 'an environment'
+        TIMESTAMPS:
+          $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody_TIMESTAMPS'
+        FILE_LOGGING:
+          $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody_FILE_LOGGING'
+        FEATURE_FLAGS:
+          $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody_FEATURE_FLAGS'
+        VERSION:
+          type: string
+          example: 1.0.0
+        PROXY_TLS_HTTP_URL:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        PROXY_TLS_WS_URL:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        PROXY_TLS_FABRIC_REQS:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        IAM_URL:
+          type: string
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        IAM_CACHE_ENABLED:
+          type: boolean
+          example: true
+    GetNotificationsResponseBody:
+      type: object
+      properties:
+        total:
+          type: number
+          description: |
+            Number of notifications in database.
+          example: 10
+        returning:
+          type: number
+          description: |
+            Number of notifications returned.
+          example: 3
+        notifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/GetNotificationsResponseBody_notifications'
+    ImportFabricCA:
+      required:
+      - ca_name
+      - enroll_id
+      - enroll_secret
+      - display_name
+      - tlsca_name
+      - api_url
+      - tls_cert
+      type: object
+      properties:
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: Sample CA
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          description: |
+            The URL for the CA. Typically, client applications would send requests to this URL.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30159
+        ca_name:
+          type: string
+          example: org1CA
+        tlsca_name:
+          type: string
+          example: org1CA
+        enroll_id:
+          type: string
+          example: admin
+        enroll_secret:
+          type: string
+          example: secret
+        tls_cert:
+          type: string
+          example: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+          description: |
+            The TLS certificate as base 64 encoded pem.
+      description: |
+        Fabric CA body
+    ImportFabricCAResponseBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          description: |
+            This is your component's id.
+          example: cf2cec3c2edffa78fac5c3ac5d001b1d
+        type:
+          type: string
+          example: fabric-ca
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:30159
+        msp_id:
+          type: string
+          example: PeerOrg1
+        ca_name:
+          type: string
+          example: org1CA
+        tlsca_name:
+          type: string
+          example: org1CA
+        enroll_id:
+          type: string
+          example: admin
+        enroll_secret:
+          type: string
+          example: < secret for the enroll_id >
+        tls_cert:
+          type: string
+          description: |
+            '< pem >'
+          example: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlCOGpDQ0FaaWdBd0lCQWdJVUVoRllva1hRbDJqcnZIU3Z3NEdkSElwWUJNY3dDZ1lJS29aSXpqMEVBd0l3DQpiekVMTUFrR0ExVUVCaE1DVlZNeEZ6QVZCZ05WQkFnVERrNXZjblJvSUVOaGNtOXNhVzVoTVJRd0VnWURWUVFLDQpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVNBd0hnWURWUVFERXhkbVlXSnlhV010DQpZMkV0YzJWeWRtVnlMVzl5WnpGRFFUQWVGdzB4T0RFeU1ERXdOREkzTURCYUZ3MHhPVEV5TURFd05ETXlNREJhDQpNQ0V4RHpBTkJnTlZCQXNUQm1Oc2FXVnVkREVPTUF3R0ExVUVBeE1GWVdSdGFXNHdXVEFUQmdjcWhrak9QUUlCDQpCZ2dxaGtqT1BRTUJCd05DQUFSRUtzRlIwdzJ6MzNGUlRCSkVONDE4WDlOVFdGR3hOS21VTmZUcVFVQ3RPcjIvDQo4WWcxWDJuRTZUWkNUQ05TMTNSQ0VQV3NMZHhZR25IRW5sZmtkYWhzbzJBd1hqQU9CZ05WSFE4QkFmOEVCQU1DDQpCNEF3REFZRFZSMFRBUUgvQkFJd0FEQWRCZ05WSFE0RUZnUVUvdlRyWlR6MFN2MlFtaVZRR1JEcStzbzA1N0l3DQpId1lEVlIwakJCZ3dGb0FVSk9IYU50NkZDaHgwaWpvc1E2VUtDUXR2ZjlBd0NnWUlLb1pJemowRUF3SURTQUF3DQpSUUloQU5iUUU5OEtVQlpjK3QwNzBYK0RoQ0thcDRDV01wQzdhZTRTYWNuQ0t1TEVBaUF2UzQ4RHFDc3U5dXhQDQpvcm9halg3aWpDSFdFOXR4OVQwaDlGenlGbllOU3c9PQ0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQ0K"
+        operations_url:
+          type: string
+          description: |
+            Used by Fabric health checker to monitor health status of the node. For more inforamtion, see [Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/operations_service.html).
+          example: https://169.46.223.99:30001
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30147
+        timestamp:
+          type: number
+          example: 1537262855753
+          description: |
+            Unix timestamp of import, UTC, ms.
+      description: |
+        Details for your Fabric component are returned
+    ImportFabricOrderer:
+      required:
+      - msp_id
+      - cluster_id
+      - cluster_name
+      - display_name
+      - grpcwp_url
+      type: object
+      properties:
+        cluster_id:
+          type: string
+          description: |
+            The cluster ID the ordering service cluster.
+        cluster_name:
+          type: string
+          description: |
+            The display name of the ordering service cluster.
+          example: ordering service1
+        display_name:
+          type: string
+          description: |
+            The base display name of a single ordering node.
+          example: orderer
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the orderer. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31086
+        msp_id:
+          type: string
+          example: orderermsp
+        operations_url:
+          type: string
+          description: |
+            (Optional) Used by Fabric health checker to monitor health status of the node. For more inforamtion, see [Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/operations_service.html).
+          example: https://169.46.223.99:30001
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30147
+        tls_cert:
+          type: string
+          example: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+          description: |
+            The TLS certificate as base 64 encoded pem.
+      description: |
+        Fabric orderer body
+    ImportFabricOrdererResponseBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          description: |
+            This is your component's id.
+          example: cf2cec3c2edffa78fac5c3ac5d001b1d
+        type:
+          type: string
+          description: |
+            Type of component.
+          example: fabric-orderer
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31086
+        msp_id:
+          type: string
+          example: PeerOrg1
+        operations_url:
+          type: string
+          example: https://169.46.223.99:30001
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30147
+        timestamp:
+          type: number
+          example: 1537262855753
+          description: |
+            Unix timestamp of import, UTC, ms.
+      description: |
+        Details for your Fabric component are returned
+    ImportFabricPeer:
+      required:
+      - msp_id
+      - display_name
+      - grpcwp_url
+      type: object
+      properties:
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: Peer1Org1
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          description: |
+            The gRPC web proxy URL for the peer. Typically, client applications would send requests to this URL.
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31336
+        msp_id:
+          type: string
+          example: PeerOrg1
+        operations_url:
+          type: string
+          description: |
+            (Optional) Used by Fabric health checker to monitor health status of the node. For more inforamtion, see [Fabric documentation](https://hyperledger-fabric.readthedocs.io/en/release-1.4/operations_service.html).
+          example: https://optools.so01.blockchain.cloud.ibm.com
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+          example: https://optools.so01.blockchain.cloud.ibm.com:30147
+        tls_cert:
+          type: string
+          example: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="
+          description: |
+            The TLS certificate as base 64 encoded pem.
+      description: |
+        Fabric peer body
+    ImportFabricPeerResponseBody:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          description: |
+            This is your component's id.
+          example: cf2cec3c2edffa78fac5c3ac5d001b1d
+        type:
+          type: string
+          description: |
+            Type of component.
+          example: fabric-orderer
+        display_name:
+          type: string
+          description: |
+            A descriptive name for this component.
+          example: my first node
+        location:
+          type: string
+          example: ibm_saas
+        api_url:
+          type: string
+          example: grpcs://optools.so01.blockchain.cloud.ibm.com:31336
+        msp_id:
+          type: string
+          example: PeerOrg1
+        operations_url:
+          type: string
+          example: https://169.46.223.99:30001
+        grpcwp_url:
+          type: string
+          description: |
+            The URL for the grpc web proxy for this component.
+        timestamp:
+          type: number
+          example: 1537262855753
+          description: |
+            Unix timestamp of import, UTC, ms.
+      description: |
+        Details for your Fabric component are returned
+    DeleteComponentResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        id:
+          type: string
+          example: cf2cec3c2edffa78fac5c3ac5d5b4ce7
+    DeleteAllNotificationsResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+    RestartAthenaResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: restarting - give me 10 seconds
+    DeleteAllSessionsResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          example: ok
+        deleted:
+          type: number
+          example: 1000000
+    LoggingSettings:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+          description: If true logging will be stored to file.
+          example: true
+        level:
+          type: string
+          description: |
+            "error", "warn", "info", "verbose", "debug", or "silly" logs will be stored.
+          example: silly
+        unique_name:
+          type: boolean
+          description: |
+            If true, log file names will have a random suffix.
+          example: false
+    CreateFabricComponentResponse_resources_requests:
+      type: object
+      properties:
+        cpu:
+          type: string
+          example: 40m
+        memory:
+          type: string
+          example: 40M
+    CreateFabricComponentResponse_resources_limits:
+      type: object
+      properties:
+        cpu:
+          type: string
+          example: 8000m
+        memory:
+          type: string
+          example: 16384M
+    CreateFabricComponentResponse_resources:
+      type: object
+      properties:
+        requests:
+          $ref: '#/components/schemas/CreateFabricComponentResponse_resources_requests'
+        limits:
+          $ref: '#/components/schemas/CreateFabricComponentResponse_resources_limits'
+    GetNonSensitiveSettingsResponseBody_TIMESTAMPS:
+      type: object
+      properties:
+        now:
+          type: number
+          description: |
+            The current unix timestamp.
+          example: 1542746836056
+        born:
+          type: number
+          description: |
+            The timestamp IBM Blockchain Platform console started.
+          example: 1542746836056
+        next_settings_update:
+          type: string
+          description: |
+            The next db settings refresh.
+          example: 1.1 mins
+        up_time:
+          type: string
+          description: |
+            How long this IBM Blockchain Platform console process has been up.
+          example: 28.9 mins
+    GetNonSensitiveSettingsResponseBody_FILE_LOGGING_server:
+      type: object
+      properties:
+        path:
+          type: string
+          description: |
+            Directory of log files.
+          example: ./logs
+        file_name:
+          type: string
+          description: |
+            Name of log file.
+          example: athena.log
+        enabled:
+          type: boolean
+          description: |
+            If true historic logs will be saved to the file system.
+          example: true
+        level:
+          type: string
+          description: |
+            This logging level and above will be stored.
+          example: silly
+      description: |
+        IBM Blockchain Platform console logs.
+    GetNonSensitiveSettingsResponseBody_FILE_LOGGING_client:
+      type: object
+      properties:
+        path:
+          type: string
+          description: |
+            Directory of log files.
+          example: ./logs
+        file_name:
+          type: string
+          description: |
+            Name of log file.
+          example: athena.log
+        enabled:
+          type: boolean
+          description: |
+            If true historic logs will be saved to the file system.
+          example: true
+        level:
+          type: string
+          description: |
+            This logging level and above will be stored.
+          example: silly
+      description: |
+        Apollo logs.
+    GetNonSensitiveSettingsResponseBody_FILE_LOGGING:
+      type: object
+      properties:
+        server:
+          $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody_FILE_LOGGING_server'
+        client:
+          $ref: '#/components/schemas/GetNonSensitiveSettingsResponseBody_FILE_LOGGING_client'
+      description: |
+        File logging settings.
+    GetNonSensitiveSettingsResponseBody_FEATURE_FLAGS:
+      type: object
+      properties:
+        remote_peer_config_enabled:
+          type: boolean
+          description: |
+            Example feature flag.
+          example: true
+      description: |
+        Copy of "FEATURE_FLAGS" key in the settings doc.
+    GetNotificationsResponseBody_notifications:
+      type: object
+      properties:
+        id:
+          type: string
+          description: |
+            Unique id for the notification.
+          example: "12345"
+        type:
+          type: string
+          description: |
+            Values can be "webhook_tx" or "other".
+          example: webhook_tx
+        status:
+          type: string
+          description: |
+            Indicates the icon/color to use for the notification. Values can be "pending", "error", or "success".
+          example: pending
+        message:
+          type: string
+          description: |
+            Short message to show the user of the tx description + outcome.
+          example: Message to show the user
+        ts_display:
+          type: number
+          description: |
+            Unix timestamp to display for the notification. integer, UTC.
+          example: 0
+        tag:
+          type: string
+          description: |
+            Visibility of the notification. Values can be "admin" or "any".
+          example: admin
+        on_step:
+          type: number
+          description: |
+            (provided if available) what step the tx is on.
+          example: 1
+        total_steps:
+          type: number
+          description: |
+            (provided if available) how many steps this tx will take to complete.
+          example: 3
+        timeout_ms:
+          type: number
+          description: |
+            Max time in milliseconds before the IBM Blockchain Platform console should give up.
+          example: 10000
+        ts_started:
+          type: number
+          description: |
+            Unix timestamp of start of webhook. integer, UTC.
+          example: 0
+        ts_completed:
+          type: number
+          description: |
+            (provided if available) unix timestamp of webhook completion. integer, UTC.
+          example: 0
+      description: |
+        This array is ordered; see "Sort Order" note above
+    GetAthenaHealthStatsResponse:
+      type: object
+      properties:
+        OPTOOLS:
+          type: object
+          properties:
+            instance_id:
+              type: string
+              example: p59ta
+              description: |
+                Random/unique id for an instance of IBM Blockchain Platform console
+            now:
+              type: number
+              example: 1554125709422
+              description: |
+                The current unix timestamp, ms
+            born:
+              type: number
+              example: 1554125691549
+              description: |
+                The timestamp IBM Blockchain Platform console started, ms
+            up_time:
+              type: string
+              example: 17.9 secs
+              description: |
+                How long this IBM Blockchain Platform console process has been up
+            memory_usage:
+              type: object
+              properties:
+                rss:
+                  type: string
+                  example: 56.1 MB
+                  description: |
+                    Resident set size - total memory allocated for the process
+                heapTotal:
+                  type: string
+                  example: 34.4 MB
+                  description: |
+                    Memory allocated for the heap of V8
+                heapUsed:
+                  type: string
+                  example: 28.4 MB
+                  description: |
+                    Current heap used by V8
+                external:
+                  type: string
+                  example: 369.3 KB
+                  description: |
+                    Memory used by bound C++ objects
+        OS:
+          type: object
+          properties:
+            arch:
+              type: string
+              example: x64
+              description: |
+                CPU architecture
+            type:
+              type: string
+              example: Windows_NT
+              description: |
+                Operating system name
+            endian:
+              type: string
+              example:  LE
+              description: |
+                Endianness of the CPU. LE - little endian, BE - big endian
+            loadavg:
+              type: string
+              example: [0,0,0]
+              description: |
+                CPU load in 1, 5, & 15 minute averages. n/a on windows
+            cpus:
+              type: array
+              items:
+                $ref: '#/components/schemas/GetAthenaHealthStatsResponse_cpus'
+            total_memory:
+              type: string
+              example: 31.7 GB
+              description: |
+                Total memory known to the OS
+            free_memory:
+              type: string
+              example: 21.9 GB
+              description: |
+                Free memory on the OS
+            up_time:
+              type: string
+              example: 4.9 days
+              description: |
+                Time OS has been running
+    GetAthenaHealthStatsResponse_cpus:
+      type: object
+      properties:
+        model:
+          type: string
+          example: Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz
+          description: |
+            Model of CPU core
+        speed:
+          type: string
+          example: 2592
+          description: |
+            Speed of core in MHz
+        times:
+          type: object
+          properties:
+            idle:
+              type: number
+              example: 131397203
+              description: |
+                ms CPU is in idle
+            irq:
+              type: number
+              example: 6068640
+              description: |
+                ms CPU is in irq
+            nice:
+              type: number
+              example: 0
+              description: |
+                ms CPU is in nice
+            sys:
+              type: number
+              example: 9652328
+              description: |
+                ms CPU is in sys
+            user:
+              type: number
+              example: 4152187
+              description: |
+                ms CPU is in user
+    GetMSPCertificateResponse:
+      type: object
+      properties:
+        msps:
+          type: array
+          items:
+            $ref: '#/components/schemas/GetMSPCertificateResponse_msps'
+    GetMSPCertificateResponse_msps:
+      type: object
+      properties:
+        msp_id:
+          type: string
+          example: org1
+          description: |
+            Org's msp id
+        name:
+          type: string
+          example: msp1
+          description: |
+            Whatever the client named this msp
+        root_certs:
+          $ref: '#/components/schemas/RootCerts'
+        admins:
+          $ref: '#/components/schemas/AdminCerts'
+        tls_root_certs:
+           $ref: '#/components/schemas/TlsRootCerts'
+    ResourceObject:
+      type: object
+      properties:
+        requests:
+          type: object
+          properties:
+            cpu:
+              type: string
+              example: 0.100
+              description: |
+                Maximum CPU for subcomponent. [Resource details](/docs/services/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-allocate-resources)
+            memory:
+              type: string
+              example: 256M
+              description: Maximum memory for subcomponent. [Resource details](/docs/services/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-allocate-resources)
+    StorageObject:
+      type: object
+      properties:
+        size:
+          type: string
+          example: 5G
+          description: |
+            Maximum disk space for subcomponent. [Resource details](/docs/services/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-allocate-resources)
+        class:
+          type: string
+          example: default
+          description: Kubernetes storage class for subcomponent's disk space.
+    ConfigBody:
+      type: object
+      properties:
+        enrollment:
+          type: object
+          properties:
+            component:
+              type: object
+              properties:
+                cahost:
+                  type: string
+                  example: 192.168.1.1
+                caport:
+                  type: string
+                  example: 30023
+                caname:
+                  type: string
+                  example: ca
+                catls:
+                  type: object
+                  properties:
+                    cacert:
+                      type: string
+                      example: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+                enrollid:
+                  type: string
+                  example: admin
+                enrollsecret:
+                  type: string
+                  example: secret
+                admincerts:
+                  type: array
+                  items:
+                    type: string
+                    description: base 64 encoded PEM certificates
+            tls:
+              type: object
+              properties:
+                cahost:
+                  type: string
+                  example: 192.168.1.1
+                caport:
+                  type: string
+                  example: 30023
+                caname:
+                  type: string
+                  example: ca
+                catls:
+                  type: object
+                  properties:
+                    cacert:
+                      type: string
+                      example: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+                enrollid:
+                  type: string
+                  example: admin
+                enrollsecret:
+                  type: string
+                  example: secret
+                admincerts:
+                  type: array
+                  items:
+                    type: string
+                    description: base 64 encoded PEM certificates
+                    example: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+                csr:
+                  type: object
+                  properties:
+                    hosts:
+                      type: array
+                      items:
+                        type: string
+                        description: host names
+    RootCerts:
+      type: array
+      description: |
+        An array that contains one or more base 64 encoded PEM root certificates for your MSP. You must provide either a CA root certificate or an intermediate CA certificate, you may also provide both.
+      items:
+        type: string
+        example: ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="]
+    IntermediateCerts:
+      type: array
+      items:
+        type: string
+        description: An array that contains one or base 64 encoded PEM intermediate certificates for your MSP. You must provide either a CA root certificate or an intermediate CA certificate, you may also provide both.
+        example: ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="]
+    TlsRootCerts:
+      type: array
+      items:
+        type: string
+        description: |
+          Required if using TLS.  An array that contains one or more base 64 encoded PEM certificates for the TLS CA. You must provide either an external TLS CA root certificate or an external intermediate TLS CA certificate, you may also provide both.
+        example: ["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlCOGpDQ0FaaWdBd0lCQWdJVUVoRllva1hRbDJqcnZIU3Z3NEdkSElwWUJNY3dDZ1lJS29aSXpqMEVBd0l3DQpiekVMTUFrR0ExVUVCaE1DVlZNeEZ6QVZCZ05WQkFnVERrNXZjblJvSUVOaGNtOXNhVzVoTVJRd0VnWURWUVFLDQpFd3RJZVhCbGNteGxaR2RsY2pFUE1BMEdBMVVFQ3hNR1JtRmljbWxqTVNBd0hnWURWUVFERXhkbVlXSnlhV010DQpZMkV0YzJWeWRtVnlMVzl5WnpGRFFUQWVGdzB4T0RFeU1ERXdOREkzTURCYUZ3MHhPVEV5TURFd05ETXlNREJhDQpNQ0V4RHpBTkJnTlZCQXNUQm1Oc2FXVnVkREVPTUF3R0ExVUVBeE1GWVdSdGFXNHdXVEFUQmdjcWhrak9QUUlCDQpCZ2dxaGtqT1BRTUJCd05DQUFSRUtzRlIwdzJ6MzNGUlRCSkVONDE4WDlOVFdGR3hOS21VTmZUcVFVQ3RPcjIvDQo4WWcxWDJuRTZUWkNUQ05TMTNSQ0VQV3NMZHhZR25IRW5sZmtkYWhzbzJBd1hqQU9CZ05WSFE4QkFmOEVCQU1DDQpCNEF3REFZRFZSMFRBUUgvQkFJd0FEQWRCZ05WSFE0RUZnUVUvdlRyWlR6MFN2MlFtaVZRR1JEcStzbzA1N0l3DQpId1lEVlIwakJCZ3dGb0FVSk9IYU50NkZDaHgwaWpvc1E2VUtDUXR2ZjlBd0NnWUlLb1pJemowRUF3SURTQUF3DQpSUUloQU5iUUU5OEtVQlpjK3QwNzBYK0RoQ0thcDRDV01wQzdhZTRTYWNuQ0t1TEVBaUF2UzQ4RHFDc3U5dXhQDQpvcm9halg3aWpDSFdFOXR4OVQwaDlGenlGbllOU3c9PQ0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQ0K"]
+    AdminCerts:
+      type: array
+      items:
+        type: string
+        description: An array that contains one or more base 64 encoded PEM certificates for admin identities for your MSP. These are also known as the signing certificate of an organization admin.
+        example: '["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="]'
+    RevocationCerts:
+      type: array
+      items:
+        type: string
+        description: A list of certificates that are no longer valid. For X.509-based identities, these identifiers are pairs of strings known as Subject Key Identifier (SKI) and Authority Access Identifier (AKI), and are checked whenever the X.509 certificate is being used to verify that the certificate has not been revoked.
+        example: '["LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCkNlcnQgZGF0YSB3b3VsZCBiZSBoZXJlIGlmIHRoaXMgd2FzIHJlYWwKLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo="]'
+    OrganizationalUnitIdentifiers:
+      type: array
+      items:
+        type: string
+        description: A list of Organizational Units (OU) that members of this MSP should include in their X.509 certificate. An organization is often divided up into multiple organizational units (OUs), each of which has a certain set of responsibilities. When a CA issues X.509 certificates, the OU field in the certificate specifies the line of business to which the identity belongs.
+        example: '["oui id 1"]'
+    FabricNodeOus:
+      type: array
+      items:
+        type: string
+        description: Fabric-specific OUs that enable identity classification. NodeOUs contain information on how to distinguish clients, peers, and orderers based on their OU. If the check is enforced, by setting Enabled to `true`, the MSP will consider an identity valid if it is an identity of a client or a peer. An identity should have only one of these special OUs.
+        example: '["ous id 1"]'
+
+    # Lines in this file with 3 hashes indicate that these apis are for IBP Software product.
+    # The (###) will get deleted by travis in our docker image.
+    # The SaaS swagger file will keep these apis commented out.
+    ###CreateApiKeyBody:
+    ###  type: object
+    ###  properties:
+    ###    roles:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        description: The roles for this api key.
+    ###        example: '"reader"'
+    ###    description:
+    ###      type: string
+    ###      description: |
+    ###        User defined description can go here.
+    ###      example: Batman's key
+    ###CreateApiKeyBodyResponse:
+    ###  type: object
+    ###  properties:
+    ###    api_key:
+    ###      type: string
+    ###      example: asdf
+    ###    api_secret:
+    ###      type: string
+    ###      example: asdf
+    ###    roles:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        description: The roles for this api key.
+    ###        example: '"reader"'
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###GetApiKeyBodyResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    keys:
+    ###      type: array
+    ###      items:
+    ###         $ref: '#/components/schemas/KeysResponse'
+    ###KeysResponse:
+    ###  type: object
+    ###  properties:
+    ###    api_key:
+    ###      type: string
+    ###      example: asdf
+    ###    ts_created:
+    ###      type: number
+    ###      description: |
+    ###        Unix timestamp of component creation, UTC, ms.
+    ###      example: 1549490200312
+    ###    roles:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        description: The roles for this api key.
+    ###        example: '"reader"'
+    ###    description:
+    ###      type: string
+    ###      description: |
+    ###        User defined description can go here.
+    ###      example: Batman's key
+    ###DeleteApiKeyBodyResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    deleted:
+    ###      type: string
+    ###      description: The api_key wil be listed here.
+    ###      example: asdf
+    ###AddUserBody:
+    ###  type: object
+    ###  properties:
+    ###    users:
+    ###      type: object
+    ###      properties:
+    ###        someone@gmail.com:
+    ###          type: object
+    ###          properties:
+    ###            roles:
+    ###              type: array
+    ###              items:
+    ###                type: string
+    ###                example: "reader"
+    ###AddUserResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###DeleteUserBody:
+    ###  type: object
+    ###  properties:
+    ###    users:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+    ###DeleteUserResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    uuids:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+    ###EditUserBody:
+    ###  type: object
+    ###  properties:
+    ###    users:
+    ###      type: object
+    ###      properties:
+    ###        b26e67a3-8f4c-40e4-b5e2-6303ad2979fc:
+    ###          type: object
+    ###          properties:
+    ###            roles:
+    ###              type: array
+    ###              items:
+    ###                type: string
+    ###                example: "writer"
+    ###EditUserResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    uuids:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+    ###GetUsersResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    uuids:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+    ###ResetPassBody:
+    ###  type: object
+    ###  properties:
+    ###    users:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+    ###ResetPassResponse:
+    ###  type: object
+    ###  properties:
+    ###    message:
+    ###      type: string
+    ###      example: ok
+    ###    uuids:
+    ###      type: array
+    ###      items:
+    ###        type: string
+    ###        example: "b26e67a3-8f4c-40e4-b5e2-6303ad2979fc"
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
