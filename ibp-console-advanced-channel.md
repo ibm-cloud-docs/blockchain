@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-10-03"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, access control
 
@@ -72,7 +72,7 @@ If the signature of an ordering service org admin is required, you will not see 
 
 * **Ordering administrator** (only available when updating a channel). This section shows the ordering service administrator organizations for this channel.
     - **Ordering cluster with a system channel** - By default, all ordering organizations that are administrators are added to an application channel at channel creation time. If an ordering service organization was added as an administrator of the system channel after this application channel was created, it must be added to the channel before any nodes belonging to it can be added as application channel consenters. Note: if your console is at a build before `2.1.3-104`, you will not see this option. To see the version of your build, click on the support icon in the upper right  corner (it resembles a question mark). The version will be listed below **IBM Blockchain Platform version** on the upper left.
-    - **Ordering cluster without a system channel** - Ordering organizations that are administrators were added to the application channel at channel creation. If an ordering service organization was created and intended to be an administrator after the application channel was created, it must be added to the channel before any nodes belonging to it can be added as application channel consenters. 
+    - **Ordering cluster without a system channel** - Ordering organizations that are administrators were added to the application channel at channel creation. If an ordering service organization was created and intended to be an administrator after the application channel was created, it must be added to the channel before any nodes belonging to it can be added as application channel consenters.
 
 * **Consenter set**. The ordering service nodes on a particular channel are known in a Raft consensus mechanism as a "consenter set". For this reason, the ordering nodes in a consenter set are sometimes referred to as "consenters". The orderer's system channel (when applicable) will always contain all of the possible consenters available in a network (its consenter set is "all consenters"), while application channels might have all consenters or some subset of consenters. It is possible to add or remove particular nodes from this consenter set during both the creation of an application channel and through a channel update. For example to add newly created orderers, if a system channel is being used they are first added to the system channel, then to the consenter set of an application channel. To add a node to the consenter set, first ensure that the organization that owns the consenter is an admin of the ordering service of the application channel through the **Ordering service administrator** panel. You can then add the consenter through this **Consenter set** panel by opening the drop-down list, clicking on a node, and clicking **Add**. For information about creating a new ordering node and adding it to a consenter set, see the [Adding and removing ordering service nodes](/docs/blockchain?topic=blockchain-ibp-console-add-remove-orderer#ibp-console-add-remove-orderer) tutorial. If you modify the consenter set, you also have the ability to change the size of the ordering service Snapshot. For more information about Snapshots, see [Snapshots](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html#snapshots){: external} in the Fabric documentation.
 
@@ -249,3 +249,15 @@ Set the **Timeout** value to the amount of time, in seconds, to wait after the f
 
 When you modify these parameters, you do not affect the behavior of existing channels on the orderer; rather, any changes you make to the orderer configuration apply only to new channels you create on this orderer.
 {: important}
+
+### Other performance considerations
+{: #ibp-console-advanced-performance-considerations}
+
+In addition to the previous topics, the following considerations can help optimize your network performance:
+
+- Ensure persistent storage IOPS is not a bottleneck. Persistent storage IO requests can become a bottleneck in some solutions. 10 IOPS/GB+ is recommended.
+- Performance generally scales with CPU allocated to peer nodes. Providing each peer and CouchDB (if used) with the maximum CPU capacity is recommended.
+- Use Fabric 2.x so chaincode runs as a separate process.
+- Increase the send buffer in the peer configuration.
+- Check CouchDB logs for warnings such as "The number of documents examined is high in proportion to the number of results returned. Consider adding a more specific index to improve this." Indexes for CouchDB rich queries are essential for performance, and will indicate when too many documents are being scanned (full table scans) for a relatively low number of results.
+- For ordering service nodes, use monitoring to determine load and CPU pressure. Generally, 1 CPU/2GB RAM prevents ordering service nodes from becoming a bottleneck.
