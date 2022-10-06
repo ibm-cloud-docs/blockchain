@@ -114,6 +114,7 @@ oc adm policy add-scc-to-user <PROJECT_NAME> system:serviceaccounts:<PROJECT_NAM
 Replace `<PROJECT_NAME>` with the name that you want to use for your {{site.data.keyword.blockchainfull_notm}} Platform deployment project.
 
 When the command is successful, you see a response that is similar to the following example:
+
 ```
 securitycontextconstraints.security.openshift.io/blockchain-project created
 scc "blockchain-project" added to: ["system:serviceaccounts:blockchain-project"]
