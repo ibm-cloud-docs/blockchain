@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-09-30"
 
 keywords:  monitoring, resource consumption, resource allocation, disk space, memory usage, disk usage, Prometheus, metrics  
 
@@ -49,7 +49,7 @@ For the component you are scraping Prometheus metrics from, select the CA that i
 
 Next, click `Enroll Identity` and select the `TLS Certificate Authority` from the CA drop-down list. Enter the `Enroll ID` and `Secret` that you specified in the previous step. When you click `Next`, the subsequent panel contains the certificates generated for your new user identity.
 
-Click `Add identity to Wallet` to store the keys in your console wallet. These certificates are stored in the browser and are not saved by {{site.data.keyword.blockchainfull_notm}} Platform. It is your responsibility to manage the certificates and keep them secure&mdash;click `Export identity` to save the identity to your file system for importing back into the wallet, as needed.
+Enter an `Identity display name`. Click `Add identity to Wallet` to store the keys in your console wallet. These certificates are stored in the browser and are not saved by {{site.data.keyword.blockchainfull_notm}} Platform. It is your responsibility to manage the certificates and keep them secure&mdash;click `Export identity` to save the identity to your file system for importing back into the wallet, as needed. Export the `Certificate` and `Private key` to the file system.
 
 If you have multiple components with certificates issued by the same CA, it is not necessary to create a new identity for each component&mdash;the certificates generated for the identity will be valid for all of these components. To collect metrics for components with certificates issued by a different CA, repeat the previous steps (create a new identity) for this other CA.
 {: note}
@@ -121,6 +121,8 @@ For example:
 If you set up multiple `volumeMounts`, you should add as many volumes as there are `volumeMounts`, each using the corresponding unique `name` and `secretName`.
 {: note}
 
+Copy `dm-sysdig-agent.yaml` to `dm-sysdig-agent-modified.yaml`.
+
 Finally, apply the modified `daemonset` by running:
 
 ```bash
@@ -185,6 +187,8 @@ prometheus.yaml: |
 To scrape metrics for multiple components, add a new job by duplicating the `job_name: 'ibm-blockchain'` section, specifying a unique `job_name`, and modifying the `cert_file` and `key_file` fields to the correct location.
 {: note}
 
+Copy `cm-sysdig-agent.yaml` to `cm-sysdig-agent-modified.yaml`.
+
 Finally, apply the modified `configmap` by running:
 
 ```bash
@@ -196,5 +200,7 @@ The `sysdig-agent` pods should automatically restart when the `daemonset` is app
 ## Step five: View Prometheus metrics
 
 View Prometheus metrics by clicking the `Explore` tab in your IBM Cloud Monitoring dashboard. From `Hosts & Containers`, click `Entire Infrastructure`. Expand `Overview by Host` and scroll down to view the `Prometheus` metrics.
+
+![Explore metrics](../images/explore-metrics.png){: caption="Figure 1. Explore metrics in {{site.data.keyword.mon_full_notm}}" caption-side="bottom"}
 
 Dashboards are useful for saving customizations to a chart for later viewing. Simply create a new IBM Cloud Monitoring dashboard and click `+` to add a new panel, where you can select the metric and segmentation type. The process for creating a new dashboard is described in the [IBM Cloud Monitoring documentation](/docs/blockchain?topic=blockchain-ibp-monitoring#ibp-monitoring-configure-db).

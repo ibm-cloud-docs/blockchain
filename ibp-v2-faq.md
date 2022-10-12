@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-09-25"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -14,8 +14,6 @@ content-type: faq
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

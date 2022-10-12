@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-09-25"
 
 keywords: IBM Blockchain Platform, video series, videos, getting started videos, demo videos
 
@@ -11,8 +11,6 @@ subcollection: blockchain-sw-253
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

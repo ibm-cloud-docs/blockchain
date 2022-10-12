@@ -13,7 +13,7 @@ IBM Blockchain Platform for IBM Cloud
 		{: .topicgroup}
 		Deployment options
 			howto/ibp-v2-deploy-iks-ic.md
-			/blockchain-sw-253/blockchain-sw-253-deploy-ocp-rhm
+			console-deploy-ocp-rhm.md
 
 	howto/ibp-console.md
 	[What is blockchain?](https://www.ibm.com/topics/what-is-blockchain)

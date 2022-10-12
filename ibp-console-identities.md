@@ -2,7 +2,7 @@
 
 copyright: 
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-09-25"
 
 keywords: create identities, manage identities, Certificate Authorities, register, enroll, TLS CA, wallet, certificate expiration, delete user
 
@@ -13,8 +13,6 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

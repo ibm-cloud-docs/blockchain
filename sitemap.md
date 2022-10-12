@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-10-10"
 
 keywords: site map
 subcollection: blockchain
@@ -10,7 +10,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
 
 # Site map
 {: #sitemap}
@@ -62,6 +61,21 @@ subcollection: blockchain
 * [Post-install instructions](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-post-install)
     * [Returning to your console from {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-rtn-to-console)
 * [Deleting a service instance](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-delete-service-instance)
+
+[Deploy from Red Hat Marketplace](/docs/blockchain?topic=blockchain-deploy-ocp-rhm)
+* [What is the Red Hat Marketplace?](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-whatis)
+* [Before you begin](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-prerequisites)
+* [Step one: Apply the Security Context Constraint](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-scc)
+* [Step two: Apply the image pull secrets](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-secrets)
+* [Step three: Deploy the {{site.data.keyword.blockchainfull_notm}} Platform console](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-console)
+    * [Advanced deployment options](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#console-deploy-ocp-rhm-advanced)
+    * [Use your own TLS Certificates (Optional)](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#console-deploy-ocp-use-your-own-tls-certificates-optional)
+* [Step four: Verify the console installation](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#console-deploy-ocp-verify-install)
+* [Step five: Log in to the console](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-log-in)
+* [Removing your deployment](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#console-deploy-ocp-rhm-remove-deployment)
+* [Next steps](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#console-deploy-ocp-rhm-next-steps)
+* [Support](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-support)
+* [Create a project for your {{site.data.keyword.blockchainfull_notm}} Platform deployment](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-project)
 
 
 ## About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
@@ -1125,6 +1139,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20)
+
+* [11 Oct 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#10-11-2022)
 
 * [13 Sept 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#09-13-2022)
 
