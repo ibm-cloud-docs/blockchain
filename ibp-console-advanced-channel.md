@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-10-03"
+lastupdated: "2022-10-14"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, access control
 
@@ -258,6 +258,6 @@ In addition to the previous topics, the following considerations can help optimi
 - Ensure persistent storage IOPS is not a bottleneck. Persistent storage IO requests can become a bottleneck in some solutions. 10 IOPS/GB+ is recommended.
 - Performance generally scales with CPU allocated to peer nodes. Providing each peer and CouchDB (if used) with the maximum CPU capacity is recommended.
 - Use Fabric 2.x so chaincode runs as a separate process.
-- Increase the send buffer in the peer configuration.
+- Increasing the ordering node `sendBufferSize` default of `10` can improve ordering service performance (`100` is the recommended starting point).
 - Check CouchDB logs for warnings such as "The number of documents examined is high in proportion to the number of results returned. Consider adding a more specific index to improve this." Indexes for CouchDB rich queries are essential for performance, and will indicate when too many documents are being scanned (full table scans) for a relatively low number of results.
 - For ordering service nodes, use monitoring to determine load and CPU pressure. Generally, 1 CPU/2GB RAM prevents ordering service nodes from becoming a bottleneck.
