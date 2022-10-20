@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-10-20"
 
 keywords: network components, IBM Cloud Kubernetes Service, backup, restore, disaster, peer, orderer, ordering node, LevelDB, CouchDB
 
@@ -76,6 +76,8 @@ Consult the following chart to help you plan your strategy for taking backups:
 {: tab-group="IAM-simple"}
 {: class="simple-tab-table"}
 
+
+
 ### Scheduling snapshots
 {: #backup-restore-schedule-snapshot}
 
@@ -84,10 +86,10 @@ It is a best practice to create a regular schedule for the snapshotting of your 
 Even though snapshots do not disrupt the functionality of your nodes, try to schedule snapshots during a time when the fewest transactions are being made. This ensures that differences in ledger heights between peers are kept to a minimum. In widely distributed networks, scheduling such a time might be difficult. Prioritize the proper ordering of snapshots over relative lulls in network activity.
 {: tip}
 
-For this example, we assume one back up every 24 hours and retain seven backups.
+For this example, we assume one backup every 24 hours and retain seven backups.
 
 For the peer pods:
-- CouchDB snapshot daily at 3:00 a.m.
+- CouchDB snapshot daily at 3:00 a.m. 
 - Peer snapshot daily at 3:05 a.m.
 
 For the ordering node pods:
@@ -301,7 +303,7 @@ kubectl patch <component> <componentName> --type merge --patch '{"spec":{"replic
 
 
 
-Where `<component>` is one of: `ibppeer`, `ibporderer`, or `ibpca`.
+Where `<component>` is one of: `ibppeer`, `ibporderer`,  or `ibpca`.
 
 In this example, scale down `peera`:
 
@@ -379,7 +381,7 @@ File volume 155617812 is being restored using snapshot 167189176.
 ```
 {: codeblock}
 
-When restoring a volume from a snapshot, any existing snapshots older than the one you're using to restore are deleted as they no longer apply.
+Restoring a volume results in deleting all snapshots that were taken after the snapshot that was used for the restore.
 {: important}
 
 Repeat the process for the other volume used by the peer container, which can be found by using the same commands. Choose the 3:05 a.m. snapshot corresponding to the 3:00 a.m. snapshot you restored for CouchDB volume.
@@ -418,7 +420,7 @@ kubectl patch <component> <componentName> --type merge --patch '{"spec":{"replic
 
 
 
-Where `<component>` is, once again, one of: `ibppeer`, `ibporderer`, or `ibpca`.
+Where `<component>` is, once again, one of: `ibppeer`, `ibporderer`,  or `ibpca`.
 
 In this example, scale up `peera`:
 
