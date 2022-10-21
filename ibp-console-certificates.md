@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-09-25"
+lastupdated: "2022-10-21"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -393,8 +393,6 @@ If the peer organization MSP was not originally created with the Node OU configu
 3. Click the channel member that you want to update.
 4. On the **Update MSP definition** panel, select the updated MSP and the **original identity** and click **Update MSP definition**. You must use the original identity for this step because it's currently the only one with permission to make channel updates.  This action replaces the existing peer organization admin MSP definition with the updated MSP that includes the new admin certificate. Now this channel has the newest organization admin certificate.
 
-You can verify that this process is successful by opening the channel member tile again and viewing the updated expiration date.
-
 ### Step five: Update channel member on ordering service system channel
 {: #cert-mgmt-manual-update-os-channel-member}
 
@@ -435,8 +433,6 @@ Orderer organization admin identities cannot update an application channel. Ther
 3. Click the orderer member that you want to update.
 4. On the **Update MSP definition** panel, select the updated MSP and click **Update MSP definition**. An update notification request is generated.
 5. The orderer organization admin needs to approve the request and submit it to the channel.
-
-After the change is approved by the orderer organization admin identity, you can verify that this process is successful, by opening the channel member tile again and viewing the updated expiration date.
 
 ## Certificates from an external CA
 {: #cert-mgmt-manual-ext-ca}
