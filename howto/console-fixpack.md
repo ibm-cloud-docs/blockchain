@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-24"
+lastupdated: "2022-10-28"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -199,7 +199,6 @@ skopeo copy docker://cp.icr.io/cp/ibp-console:2.5.3-20221011 docker://<LOCAL_REG
 skopeo copy docker://cp.icr.io/cp/ibp-grpcweb:2.5.3-20221011 docker://<LOCAL_REGISTRY>/ibp-grpcweb:2.5.3-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-deployer:2.5.3-20221011 docker://<LOCAL_REGISTRY>/ibp-deployer:2.5.3-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-fluentd:2.5.3-20221011 docker://<LOCAL_REGISTRY>/ibp-fluentd:2.5.3-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
-skopeo copy docker://cp.icr.io/cp/ibp-couchdb:2.3.1-20221011 docker://<LOCAL_REGISTRY>/ibp-couchdb:2.3.1-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-couchdb:3.2.2-20221011 docker://<LOCAL_REGISTRY>/ibp-couchdb:3.2.2-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-peer:1.4.12-20221011 docker://<LOCAL_REGISTRY>/ibp-peer:1.4.12-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-orderer:1.4.12-20221011 docker://<LOCAL_REGISTRY>/ibp-orderer:1.4.12-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
