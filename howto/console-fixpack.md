@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022
-lastupdated: "2022-10-28"
+lastupdated: "2022-10-31"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -227,6 +227,7 @@ skopeo copy docker://cp.icr.io/cp/ibp-goenv:1.4.12-20221011 docker://<LOCAL_REGI
 skopeo copy docker://cp.icr.io/cp/ibp-nodeenv:1.4.12-20221011 docker://<LOCAL_REGISTRY>/ibp-nodeenv:1.4.12-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-javaenv:1.4.12-20221011 docker://<LOCAL_REGISTRY>/ibp-javaenv:1.4.12-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 skopeo copy docker://cp.icr.io/cp/ibp-enroller:2.5.3-20221011 docker://<LOCAL_REGISTRY>/ibp-enroller:2.5.3-20221011 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
+skopeo copy docker://icr.io/cp/ibp-mustgather:2.5.3-20221011-amd64 docker://<LOCAL_REGISTRY>/ibp-mustgather:2.5.3-20221011-amd64 -q --src-creds cp:<ENTITLEMENT_KEY> --dest-creds <LOCAL_REGISTRY_USER>:<LOCAL_REGISTRY_PASSWORD> --all
 ```
 {: codeblock}
 
