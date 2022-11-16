@@ -50,80 +50,80 @@ toc:
       - needtoknow.md
 
   - navgroup:
-    id: tutorial
-    topics:
-    - topicgroup:
-        label: Getting started
-        topics:
-        - ibp-console-build-network.md
-        - ibp-console-join-network.md
-        - videos.md
-    - topicgroup:
-        label: Deploy a smart contract
-        topics:
-        - ibp-console-smart-contracts.md
-        - ibp-console-smart-contracts-v2.md
-        - ibp-console-smart-contracts-v14.md
-    - ibp-console-create-app.md
-    - topicgroup:
-        label: Certificate Authority (CA) options
-        topics:
-        - ibp-console-int-ca.md
-        - ibp-v2-tutorial-extca.md
-    - topicgroup:
-        label: Hardware Security Module (HSM)
-        topics:
-        - hsm-gemalto.md
-    - topicgroup:
-        label: Ansible Playbooks
-        topics:
-        - ansible.md
-        - ansible-build-network.md
+      id: tutorial
+      topics:
+      - topicgroup:
+          label: Getting started
+          topics:
+          - ibp-console-build-network.md
+          - ibp-console-join-network.md
+          - videos.md
+      - topicgroup:
+          label: Deploy a smart contract
+          topics:
+          - ibp-console-smart-contracts.md
+          - ibp-console-smart-contracts-v2.md
+          - ibp-console-smart-contracts-v14.md
+      - ibp-console-create-app.md
+      - topicgroup:
+          label: Certificate Authority (CA) options
+          topics:
+          - ibp-console-int-ca.md
+          - ibp-v2-tutorial-extca.md
+      - topicgroup:
+          label: Hardware Security Module (HSM)
+          topics:
+          - hsm-gemalto.md
+      - topicgroup:
+          label: Ansible Playbooks
+          topics:
+          - ansible.md
+          - ansible-build-network.md
 
   - navgroup:
-    id: howto
-    topics:
-    - topicgroup:
-        label: IBM Blockchain Platform console
-        topics:
-        - howto/saas-migration-support.md
-        - howto/ibp-console-manage.md
-        - ibp-console-advanced-deployment.md
-        - ibp-console-advanced-channel.md
-        - ibp-console-add-remove-raft.md
-        - ibp-console-import-nodes.md
-        - ibp-console-identities.md
-        - ibp-console-organizations.md
-        - ibp-console-certificates.md
-        - ibp-console-govern-components.md
-        - howto/ibp-v2-operations-service.md
-        - ibp-console-system-channel-removal.md
-    - topicgroup:
-        label: Developing smart contracts and applications
-        topics:
-        - vscode-extension.md
-        - write-powerful-smart-contracts.md
-        - best_practices.md
-    - topicgroup:
-        label: Advanced tutorials
-        topics:
-        - ibp-console-int-ca.md
-        - reference/hsm-gemalto.md
-        - ibp-v2-tutorial-extca.md
-        - topicgroup:
-            label: Using Ansible Playbooks
-            topics:
-            - ansible.md
-            - ansible-build-network.md
-    - topicgroup:
-            label: Monitoring your network
-            topics:
-            - reference/tracking.md
-            - reference/monitoring.md
-            - reference/monitoring-prometheus.md
-    - backup-restore.md
-    - howto/planning-updates-maint.md
-    - howto/ibp-v2-apis-blockchain.md
+      id: howto
+      topics:
+      - topicgroup:
+          label: IBM Blockchain Platform console
+          topics:
+          - howto/saas-migration-support.md
+          - howto/ibp-console-manage.md
+          - ibp-console-advanced-deployment.md
+          - ibp-console-advanced-channel.md
+          - ibp-console-add-remove-raft.md
+          - ibp-console-import-nodes.md
+          - ibp-console-identities.md
+          - ibp-console-organizations.md
+          - ibp-console-certificates.md
+          - ibp-console-govern-components.md
+          - howto/ibp-v2-operations-service.md
+          - ibp-console-system-channel-removal.md
+      - topicgroup:
+          label: Developing smart contracts and applications
+          topics:
+          - vscode-extension.md
+          - write-powerful-smart-contracts.md
+          - best_practices.md
+      - topicgroup:
+          label: Advanced tutorials
+          topics:
+          - ibp-console-int-ca.md
+          - reference/hsm-gemalto.md
+          - ibp-v2-tutorial-extca.md
+          - topicgroup:
+              label: Using Ansible Playbooks
+              topics:
+              - ansible.md
+              - ansible-build-network.md
+      - topicgroup:
+          label: Monitoring your network
+          topics:
+          - reference/tracking.md
+          - reference/monitoring.md
+          - reference/monitoring-prometheus.md
+      - backup-restore.md
+      - howto/planning-updates-maint.md
+      - howto/ibp-v2-apis-blockchain.md
 
   - navgroup:
       id: reference
