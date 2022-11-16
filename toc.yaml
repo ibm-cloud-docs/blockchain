@@ -2,11 +2,11 @@ toc:
   properties:
     subcollection: blockchain
     service-name: ibm-blockchain-platform
-    version:
+    version: 1
     category: platform_services
     audience: platform
     href: /docs/blockchain/index.html
-    console-page: /
+    console-page: /docs/blockchain/index.html
     product-page: https://ibm.com/cloud
     path: blockchain
     label: IBM Blockchain Platform
