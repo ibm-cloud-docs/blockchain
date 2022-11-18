@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-09-14"
+lastupdated: "2022-11-18"
 
 keywords: logging levels, metrics, health check, peer, orderer
 
@@ -99,7 +99,7 @@ You need to gather the following information from your peer and orderer.
     echo <base64_string> | base64 --decode $FLAG > <key_name>.pem
     ```
     {: codeblock}
-    
+
 {: important}
 
 
@@ -177,4 +177,53 @@ After you set a new logging level, you can use the [view logging level command](
 
 For more information about log level configuration, see [Log level management](https://hyperledger-fabric.readthedocs.io/en/release-2.2/operations_service.html#log-level-management){: external} in Hyperledger Fabric documentation.
 
+## osnadmin service endpoints
+{: #operations_service_osnadmin_endpoints}
 
+The Hyperledger Fabric osnadmin service allows administrators to perform channel-related operations for ordering service nodes.
+
+To list channels that are using an osnadmin service endpoint, run:
+
+```
+curl https://osntest-ordereranode1-admin.openshift4x-ibpv2-test-68e10f583f026529fe7a89da40169ef4-0000.us-south.containers.appdomain.cloud:443/participation/v1/channels --cert /tmp/msp/orderera/ca/tls/msp/signcerts/cert.pem --key /tmp/msp/orderera/ca/tls/msp/keystore/06fa54a3978e9df58778bce22b9140f043df920eb03150d1284d3579f70d57b5_sk --cacert /tmp/msp/orderera/ca/tls/msp/cacerts/tlsca.pem
+```
+
+The response should be similar to:
+
+
+```
+{
+  "systemChannel": {
+    "name": "testchainid",
+    "url": "/participation/v1/channels/testchainid"
+  },
+  "channels": [
+    {
+      "name": "mychannel",
+      "url": "/participation/v1/channels/mychannel"
+    }
+  ]
+}
+```
+
+
+To list details for an application channel that is using an osnadmin service endpoint, run:
+
+```
+curl https://osntest-ordereranode1-admin.openshift4x-ibpv2-test-68e10f583f026529fe7a89da40169ef4-0000.us-south.containers.appdomain.cloud:443/participation/v1/channels/mychannel --cert /tmp/msp/orderera/ca/tls/msp/signcerts/cert.pem --key /tmp/msp/orderera/ca/tls/msp/keystore/06fa54a3978e9df58778bce22b9140f043df920eb03150d1284d3579f70d57b5_sk --cacert /tmp/msp/orderera/ca/tls/msp/cacerts/tlsca.pem
+```
+
+The response should be similar to:
+
+```
+{
+  "name": "mychannel",
+  "url": "/participation/v1/channels/mychannel",
+  "consensusRelation": "consenter",
+  "status": "active",
+  "height": 13
+}
+```
+
+
+For additional osnadmin information, see [osnadmin channel](https://hyperledger-fabric.readthedocs.io/en/latest/commands/osnadminchannel.html){: external} in the Hyperledger Fabric documentation.

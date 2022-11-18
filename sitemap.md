@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-16"
+lastupdated: "2022-11-18"
 
 keywords: site map
 subcollection: blockchain
@@ -1194,6 +1194,8 @@ subcollection: blockchain
 * [Viewing logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_view)
 
 * [Setting logging levels](/docs/blockchain?topic=blockchain-operations_service#operations_service_log_level_set)
+
+* [osnadmin service endpoints](/docs/blockchain?topic=blockchain-operations_service#operations_service_osnadmin_endpoints)
 
 [System channel removal](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#ibp-howto-remove-system-channel)
 
