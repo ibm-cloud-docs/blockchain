@@ -21,6 +21,10 @@ subcollection: blockchain
 
 
 
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
+{: important}
+
+
 The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an environment within Visual Studio Code for developing, packaging, and testing smart contracts. You can use the tools to create your smart contract project and get started developing your business logic. You can then use the tools to test your smart contract either on your local machine by using a preconfigured instance of Hyperledger Fabric, or by connecting to an {{site.data.keyword.blockchainfull_notm}} Platform network, before you deploy the smart contract to the {{site.data.keyword.blockchainfull_notm}} Platform. This tutorial describes how to install and use the Developer Tools.
 
 
