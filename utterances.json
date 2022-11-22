@@ -56,13 +56,6 @@
         "migrate from HLF v1.4.x to IBP and use raft",
         "migrate from HLF v1.4.x to blockchain and use raft"
     ],
-    "ibp-v2-faq-vscode-tutorials": [
-        "VSCode extension tutorials Blockchain",
-        "vscode tutorial for blockchain",
-        "VSCode extension tutorials IBM Blockchain Platform",
-        "tutorials within the VSCode extension for blockchain",
-        "VSCode extension tutorials IBP"
-    ],
     "ibp-v2-faq-mon-client-app": [
         "monitor IBM Blockchain Platform health",
         "monitoring the health of a IBP client ",
