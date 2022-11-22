@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-18"
+lastupdated: "2022-11-22"
 
 keywords: site map
 subcollection: blockchain
@@ -23,8 +23,6 @@ subcollection: blockchain
 [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain?topic=blockchain-get-started-ibp#get-started-ibp)
 
 * [Which {{site.data.keyword.blockchainfull_notm}} Platform offering is right for your business?](/docs/blockchain?topic=blockchain-get-started-ibp#get-started-console-ocp-which-ibp)
-
-    * [Developer Tools](/docs/blockchain?topic=blockchain-get-started-ibp#developer-tools)
 
     * [{{site.data.keyword.blockchainfull_notm}} images](/docs/blockchain?topic=blockchain-get-started-ibp#get-started-ibp-images)
 
@@ -198,8 +196,6 @@ subcollection: blockchain
 * [Pricing model](/docs/blockchain?topic=blockchain-ibp-saas-pricing#ibp-saas-pricing-model)
 
     * [Benefits of the new pricing model](/docs/blockchain?topic=blockchain-ibp-saas-pricing#ibp-saas-pricing-benefits)
-
-    * [Are you a developer?](/docs/blockchain?topic=blockchain-ibp-saas-pricing#ibp-saas-pricing-developer)
 
     * [Find out how to preview the platform free for 30 days](/docs/blockchain?topic=blockchain-ibp-saas-pricing#ibp-saas-pricing-free)
 
@@ -466,8 +462,6 @@ subcollection: blockchain
 * [What version of the {{site.data.keyword.blockchainfull_notm}} Platform works with the Ansible collection?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-ansible-version)
 
 * [How do I get support for running the {{site.data.keyword.blockchainfull_notm}} Platform Ansible playbook?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-ansible-support)
-
-* [How can I find the examples and tutorials within the VSCode extension?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-vscode-tutorials)
 
 * [Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?](/docs/blockchain?topic=blockchain-ibp-v2-faq#ibp-v2-faq-mon-client-app)
 

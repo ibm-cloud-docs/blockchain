@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-11-22"
 
 keywords: smart contract, private data, private data collection, anchor peer, implicit collections
 
@@ -20,7 +20,7 @@ subcollection: blockchain
 
 # Deploy a smart contract using Fabric v2.x
 {: #ibp-console-smart-contracts-v2}
-<img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> Using the **Hyperledger Fabric v2.x chaincode lifecycle**, learn how to create and package a smart contract and how to propose the smart contract definition to channel members on a channel that runs `application capability 2.x`. Learn how to install the smart contract package on peers that run a Fabric 2.x image. Finally, see how channel members can approve and commit the smart contract definition to the channel.
+<img src="images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> Using the **Hyperledger Fabric v2.x chaincode lifecycle**, learn how to create and package a smart contract and how to propose the smart contract definition to channel members on a channel that runs `application capability 2.x`. Learn how to install the smart contract package on peers that run a Fabric 2.x image. Finally, see how channel members can approve and commit the smart contract definition to the channel.
 {: shortdesc}
 
 While the terms "smart contract" and "chaincode" are often used interchangeably, "smart contracts" refers to the business logic that governs transactions and access to its data, while "chaincode" refers to the larger infrastructure of packages and other code that encompasses a smart contract.
@@ -31,6 +31,9 @@ If you prefer to continue to use the legacy smart contract deployment process, s
 Instead of a single organization administrator making decisions for all organizations about when a smart contract is updated, what it contains, and where it runs, Fabric v2.0 introduced a new distributed process to manage the lifecycle of a smart contract that allows for decentralizing the governance of smart contracts on a channel. The process for installing, proposing, and updating a smart contract is known as the "lifecycle" of a smart contract. This lifecycle is necessarily ongoing, as it encompasses changes to the smart contract itself as well as updates to a channel, as for example when a new member starts using the smart contract, and is managed through a combination of processes inside and outside the console.
 
 **Lifecycle process overview**  
+
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
+{: important}
 
 ![Smart contract lifecycle](images/smart-contract-lc-illustrationv3.png "Smart contract lifecycle"){: caption="Figure 1. Smart contract lifecycle" caption-side="bottom"}
 
@@ -136,6 +139,9 @@ If the smart contract was written using the **low-level APIs** provided by the F
 
 **Repackage smart contract**  
 
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
+{: important}
+
 After you have updated your smart contract, use [v2](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain?topic=blockchain-develop-vscode#packaging-a-smart-contract) your smart contract.   
 
 
@@ -143,6 +149,9 @@ After you have updated your smart contract, use [v2](/docs/blockchain?topic=bloc
 {: #ibp-console-smart-contracts-v2-pkg}
 
 The {{site.data.keyword.blockchainfull_notm}} Platform console manages the *deployment* of smart contracts rather than development. If you are interested in developing smart contracts, you can get started with tutorials provided by the Hyperledger Fabric community and tooling provided by {{site.data.keyword.IBM_notm}}.
+
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159). 
+{: important}
 
 - To learn how smart contracts can be used to conduct transactions among multiple parties, see the [Developing applications topic](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html){: external} in the Hyperledger Fabric documentation.
 - When you are ready to start building smart contracts, use the IBM Developer Tooling, by downloading the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) locally. New to the VS Code extension? Check out [Developing smart contracts with IBM Blockchain Platform Developer Tools](/docs/blockchain?topic=blockchain-develop-vscode) to get started using the extension to create smart contracts that run on the network and clients applications to send transactions.

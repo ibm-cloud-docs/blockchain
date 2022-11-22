@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-04-25"
+lastupdated: "2022-11-22"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -35,7 +35,6 @@ Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, r
 | Can my data center be [on-prem](#x4561212){: term} and behind a firewall? | Yes| No |
 | Can I use a console UI to deploy and manage my blockchain components? | Yes | Yes|
 | Are APIs available for node management? | Yes | Yes|
-| Does the product integrate with the {{site.data.keyword.blockchainfull_notm}} Platform VSCode extension to develop and test my smart contracts?| Yes | Yes|
 | I am an experienced Fabric customer. Are peer, CA, orderer, and smart contract images available and supported? | Yes | No |
 | Where can I learn more? | See [About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-ocp-about#console-ocp-about-offers) | See [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities) |
 | Ready to get started? | See [Step one: Install the IBM Blockchain Platform](/docs/blockchain-sw-253?topic=blockchain-sw-253-get-started-console-ocp#get-started-console-ocp-step-two-deploy-console) | See [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks) |
@@ -43,10 +42,6 @@ Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, r
 
 Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}} Platform expert? [Schedule a consult](https://www.ibm.com/cloud/blockchain-platform/developer?schedulerform){: external} now to learn more about how blockchain can transform your business.
 
-### Developer Tools
-
-- [**{{site.data.keyword.blockchainfull_notm}} Platform Developer Tools**](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode)
-    Developers can start with a free VS Code extension IDE that provides an explorer and commands accessible from the command palette for developing smart contracts quickly. Install it locally.
 
 ### {{site.data.keyword.blockchainfull_notm}} images
 {: #get-started-ibp-images}
@@ -62,5 +57,3 @@ After you deploy {{site.data.keyword.blockchainfull_notm}} Platform in the envir
 {: #get-started-ibp-getting-support}
 
 {{site.data.keyword.IBM_notm}} offers various support options on {{site.data.keyword.IBM_notm}}-implemented blockchain solutions. For more information about {{site.data.keyword.blockchainfull_notm}} Platform support, see [Getting support](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support).
-
-    

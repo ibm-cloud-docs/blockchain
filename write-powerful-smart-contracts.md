@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-11-22"
 
 keywords: smart contract, lifecycle, package, definition
 
@@ -112,6 +112,9 @@ For more information about smart contract best practices (as well as how smart c
 
 ## Smart contract development tooling
 {: #write-powerful-smart-contracts-tooling}
+
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
+{: important}
 
 While a smart contract can be packaged using the peer CLI, the VS Code extension for developing smart contracts is a highly useful tool and can be downloaded to your local system.
 

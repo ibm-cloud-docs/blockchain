@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-07-20"
+lastupdated: "2022-11-22"
 
 keywords: getting started tutorials, videos, integration, storage
 
@@ -43,7 +43,6 @@ The following diagram illustrates the three elements of the {{site.data.keyword.
 
 - **Hyperledger Fabric Components**: The console is used to create and manage blockchain components that are based on Hyperledger Fabric v1.4.12 and v2.2.5 Certificate Authority, peer, and ordering service images. These components are deployed into your Kubernetes cluster and storage is provisioned for them using the `default` storage class when they are deployed.
 
-- **{{site.data.keyword.IBM_notm}} VS Code extension (Development Tools)**: Download the VS Code extension from the VS Code marketplace in order to get started with developing, packaging, and testing client applications and smart contracts.
 
 ## Considerations
 {: #ibp-v2-deploy-iks-considerations}

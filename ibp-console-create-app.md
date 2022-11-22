@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-08-31"
+lastupdated: "2022-11-22"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -481,6 +481,9 @@ You can find the commercial paper smart contract inside the `contract` folder of
 Smart contracts running on peers using the Fabric v1.4.x image must be packaged in [.cds format](https://hyperledger-fabric.readthedocs.io/en/release-1.4/chaincode4noah.html#packaging){: external}. These smart contracts are installed and then instantiated on a channel. For information on using smart contracts with Fabric v1.4.x peers, check out [Deploy a smart contract using Fabric v1.4.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v14).
 
 Smart contracts running on peers using a Fabric v2.x image must be packed using the [.tar.gz format](https://hyperledger-fabric.readthedocs.io/en/release-2.2/chaincode_lifecycle.html#step-one-packaging-the-smart-contract){: external}. These smart contracts must be installed and proposed by you, then approved by other channel members before being committed on the channel. For information on using smart contracts with Fabric v2.x peers, check out [Deploying a smart contract using Fabric 2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2).
+
+The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
+{: important}
 
 You can use the [{{site.data.keyword.blockchainfull_notm}} VS code extension](/docs/blockchain?topic=blockchain-develop-vscode) to package the smart contract. After you install the extension, use Visual Studio Code to open the `contracts` folder in your workspace. Open the _{{site.data.keyword.blockchainfull_notm}} Platform_ tab. In the _{{site.data.keyword.blockchainfull_notm}} Platform_ pane, go to the smart contract packages section and click **Package Open Project**. The VS code extension uses the files in the `contracts` folder to create a new package named `papernet-js@.0.0.1.cds`. Right-click this package to export it to your local file system. You can then use your console to install your smart contract and either instantiate or propose it.
 
