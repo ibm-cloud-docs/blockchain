@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-11-23"
 
 keywords: smart contract, private data, private data collection, anchor peer, implicit collections
 
@@ -32,8 +32,7 @@ Instead of a single organization administrator making decisions for all organiza
 
 **Lifecycle process overview**  
 
-The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
-{: important}
+**Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
 
 ![Smart contract lifecycle](images/smart-contract-lc-illustrationv3.png "Smart contract lifecycle"){: caption="Figure 1. Smart contract lifecycle" caption-side="bottom"}
 
@@ -139,8 +138,7 @@ If the smart contract was written using the **low-level APIs** provided by the F
 
 **Repackage smart contract**  
 
-The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
-{: important}
+**Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
 
 After you have updated your smart contract, use [v2](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-installing-the-extension) of the VS Code extension to [repackage](/docs/blockchain?topic=blockchain-develop-vscode#packaging-a-smart-contract) your smart contract.   
 
@@ -150,8 +148,7 @@ After you have updated your smart contract, use [v2](/docs/blockchain?topic=bloc
 
 The {{site.data.keyword.blockchainfull_notm}} Platform console manages the *deployment* of smart contracts rather than development. If you are interested in developing smart contracts, you can get started with tutorials provided by the Hyperledger Fabric community and tooling provided by {{site.data.keyword.IBM_notm}}.
 
-The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM. Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159). 
-{: important}
+**Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
 
 - To learn how smart contracts can be used to conduct transactions among multiple parties, see the [Developing applications topic](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html){: external} in the Hyperledger Fabric documentation.
 - When you are ready to start building smart contracts, use the IBM Developer Tooling, by downloading the [VS Code extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) locally. New to the VS Code extension? Check out [Developing smart contracts with IBM Blockchain Platform Developer Tools](/docs/blockchain?topic=blockchain-develop-vscode) to get started using the extension to create smart contracts that run on the network and clients applications to send transactions.
