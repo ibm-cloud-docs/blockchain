@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-09-25"
+lastupdated: "2022-11-29"
 
 keywords: create identities, manage identities, Certificate Authorities, register, enroll, TLS CA, wallet, certificate expiration, delete user
 
@@ -183,7 +183,6 @@ Click **Update** to change the identity name in the wallet or paste a new set of
 
 {{site.data.keyword.blockchainfull_notm}} Platform can auto renew the enrolment (signing) certificates for the peer and ordering nodes and the peer TLS certificate. For the other certificates, you can see [certificate types and actions](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-cert-types) to learn on how to maintain them.
 
-A one stop solution is also available for easy management and maintenance on your certificates. You can store them in {{site.data.keyword.cloud_notm}} Certificate Manager and receive notification before they expire. See what [{{site.data.keyword.cloud_notm}} Certificate Manager](/docs/certificate-manager?topic=certificate-manager-getting-started) can do for you in details.
 
 ### Downloading certificates
 {: #cert-mgmt-downloading-certs}
@@ -194,16 +193,7 @@ Navigate to the console tab for the desired node and select the download icon fo
 
 ![How to download certificates](images/download-certs.png "How to download certificates"){: caption="Figure 14. How to download certs" caption-side="bottom"}
 
-You can then save the downloaded PEM file for viewing or importing into [Certificate Manager](https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started){: external}.
-
-## Storing and managing certificates in IBM Cloud Certificate Manager
-After downloading the identity’s certificate and its private key as a .pem file, you can use the {{site.data.keyword.cloud_notm}} Certificate Manager service dashboard to obtain, store and manage all your SSL/TLS certificates. To get started with using {{site.data.keyword.cloud_notm}} Certificate Manager, see the steps in [set up procedures](/docs/certificate-manager?topic=certificate-manager-getting-started#getting-started-step1). To import certificate and private key in certificate manager, select **Import certificate** from the left navigation. Then, input the **Name** for the certificate. Browse and upload the certificate and private key you downloaded to your local system from **Wallet**. Click **Import** to store the certificate. Importing certificate into certificate manager allows you to easily manage and store all the third parties certificates in a centralize repository. In addition, you can receive notifications to renew the certificate before it expires to avoid service disruption. See how to [import certificates in .pem files](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate) to learn more.
-<br><br>
-<img src="images/import_certificate.png" alt="Import certificate" style="border-style: none"/>
-<br><br>
-
-It is your company’s responsibility to ensure all certificates are up to date and get renewal before they expire.  Expired certificates may cause service disruption to the {{site.data.keyword.blockchainfull_notm}} Platform. {{site.data.keyword.cloud_notm}} Certificate Manager is a central repository for your company to easily maintain and store all the certificates but it does not automatically re-order or re-enrol them. To avoid any service downtime, you can set up notifications in {{site.data.keyword.cloud_notm}} Certificate Manager to remind your company to renew the certificates before it is too late. See [configure notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications) in {{site.data.keyword.cloud_notm}} Certificate Manager to learn more.
-{: important}
+You can then save the downloaded PEM file for viewing or importing.
 
 ## Storing identities in a Hardware Security Module (HSM)
 {: #ibp-console-identities-hsm}

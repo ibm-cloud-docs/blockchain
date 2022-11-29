@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-11-29"
 
 keywords: site map
 subcollection: blockchain
@@ -1060,8 +1060,6 @@ subcollection: blockchain
     * [Viewing and updating identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-update-identities)
 
     * [Downloading certificates](/docs/blockchain?topic=blockchain-ibp-console-identities#cert-mgmt-downloading-certs)
-
-* [Storing and managing certificates in IBM Cloud Certificate Manager](/docs/blockchain?topic=blockchain-ibp-console-identities#storing-and-managing-certificates-in-ibm-cloud-certificate-manager)
 
 * [Storing identities in a Hardware Security Module (HSM)](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-hsm)
 

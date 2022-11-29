@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-11-07"
+lastupdated: "2022-11-29"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -194,8 +194,6 @@ Miscellaneous bug fixes and security patches.
 {: #10-08-2021}
 
 Miscellaneous bug fixes and security patches.
-
-Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
 
 
 
