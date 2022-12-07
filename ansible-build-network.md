@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-12-07"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -26,16 +26,16 @@ Customers can use Ansible playbooks to automate the setup and tear down of {{sit
 
 **Target audience:** This topic is designed for system administrators or operators who are responsible for creating or removing components in an {{site.data.keyword.blockchainfull_notm}} Platform network and are new to Ansible playbooks.
 
-In this tutorial, we gather the connection information to your console and demonstrate how to use that information to configure the playbooks. The playbooks group and automate common network deployment tasks so that you can bypass manually configuring your network from the console. We teach you how to run an individual playbook and then how to run them sequentially from a script.  In just a few minutes, you can deploy an entire set of blockchain components that are ready to process transactions on your {{site.data.keyword.blockchainfull_notm}} Platform network.
+In this tutorial, we gather the connection information to your console and demonstrate how to use that information to configure the playbooks. The playbooks group and automate common network deployment tasks so that you can bypass manually configuring your network from the console. We teach you how to run an individual playbook and then how to run them sequentially from a script. In just a few minutes, you can deploy an entire set of blockchain components that are ready to process transactions on your {{site.data.keyword.blockchainfull_notm}} Platform network.
 
-The Ansible scripts can be used to build the following network that includes two organizations (Org1 and Org2) that each contains one peer and an [ordering service](#x9826021){: term} with a [channel](#x2016483){: term} joined by both peers. It's a simple process to customize the playbooks with your own component or organization names. They can also be used to deploy smart contracts on the channel. And as you become more proficient, you can use the playbooks to build additional organizations, peers, ordering services, and channels according to your use case.
+The Ansible scripts can be used to build the following network that includes two organizations (Org1 and Org2) that each contains one peer and an ordering service with a channel joined by both peers. It's a simple process to customize the playbooks with your own component or organization names. They can also be used to deploy smart contracts on the channel. And as you become more proficient, you can use the playbooks to build additional organizations, peers, ordering services, and channels according to your use case.
 
 ![Ansible network](images/ansible_network.svg "Network components created by the Ansible playbooks"){: caption="Figure 1. Network components created by the Ansible playbooks" caption-side="bottom"}
 
 ## Prerequisites
 {: #ansible-build-prereqs}
 
-Before using the playbook, you need to complete the following steps:
+Before using the playbook, you need to complete the following steps: 
 - [Link an instance of the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks-ic#ibp-v2-deploy-iks-create-service-instance) to your Kubernetes cluster on {{site.data.keyword.cloud_notm}}.
 - Review the topic on [Getting started with Ansible playbooks on the {{site.data.keyword.blockchainfull_notm}} Platform](/docs/blockchain?topic=blockchain-ansible).
 - Install [Docker](https://docs.docker.com/get-docker/){: external}.

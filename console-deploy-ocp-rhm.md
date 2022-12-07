@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2022
-lastupdated: "2022-10-06"
+lastupdated: "2022-12-07"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -120,6 +120,7 @@ securitycontextconstraints.security.openshift.io/blockchain-project created
 scc "blockchain-project" added to: ["system:serviceaccounts:blockchain-project"]
 ```
 {: codeblock}
+
 
 ## Step two: Apply the image pull secrets
 {: #deploy-ocp-rhm-secrets}

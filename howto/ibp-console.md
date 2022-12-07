@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-11-22"
+lastupdated: "2022-12-07"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -150,7 +150,7 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 | Deployment Architecture and Design | Basic deployment and management of highly available [peer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-peers), [orderer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ordering-service), and [Certificate Authority](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ca) nodes via the Console are supported. Detailed Deployment Architecture and Design are not included in support - see [deployment options](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment) for more information. |
 | Solution Architecture and Design | [Deploying and managing smart contracts](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2) via the Console are supported. Solution Architecture and Design are not included in  support. |
 | Performance Tuning | [Resource allocation](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-options) via the Console is supported. Detailed performance analysis and tuning of the environment or application code are not included in support - see the documentation on creating [highly available applications and using indexes with CouchDB](/docs/blockchain?topic=blockchain-ibp-console-app#console-app-couchdb). |
-| Certificate Renewal | [Automatic and Manual](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-renew-expiration) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using a [Certificate Management Solution](/docs/blockchain?topic=blockchain-ibp-console-identities#storing-and-managing-certificates-in-ibm-cloud-certificate-manager) is recommended for keeping track of identities and certificates. |
+| Certificate Renewal | [Automatic and Manual](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-renew-expiration) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using a [Certificate Management Solution](/docs/blockchain?topic=blockchain-ibp-console-identities) is recommended for keeping track of identities and certificates. |
 {: caption="Table 2. Fabric component support" caption-side="bottom"}
 
 
