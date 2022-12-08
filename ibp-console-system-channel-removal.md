@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-08-04"
+lastupdated: "2022-12-08"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -15,12 +15,12 @@ subcollection: blockchain
 {{site.data.keyword.attribute-definition-list}}
 
 
-# System channel removal
+# Removing a system channel
 {: #ibp-howto-remove-system-channel}
 
-Hyperledger Fabric v2.2 introduced the capability to create application channels, using [Channel Participation APIs](https://github.com/hyperledger/fabric/blob/main/swagger/swagger-fabric.json). 
-Prior to v2.2, all application channels were created with transactions on the system channel. 
-Legacy system channels are therefore now obsolete, and can (and should) be removed for improved security and performance. 
+Hyperledger Fabric v2.2 introduced the capability to create application channels, using [Channel Participation APIs](https://github.com/hyperledger/fabric/blob/main/swagger/swagger-fabric.json).
+Prior to v2.2, all application channels were created with transactions on the system channel.
+Legacy system channels are therefore now obsolete, and can (and should) be removed for improved security and performance.
 The Fabric Operations Console has added support for system channel removal, as of version v1.0.3-25.
 
 With the latest Fabric Operations Console you can:
@@ -52,29 +52,29 @@ Operating without a system channel has the following benefits:
 ### Systemless orderers details
 {: #create-systemless-orderers}
 
-This section, for network administrators, describes the details of an ordering service **without** a system channel. 
-When a system channel **is** used for creating an ordering service, each ordering node receives a configuration block that is generated prior to creating the orderer container. 
+This section, for network administrators, describes the details of an ordering service **without** a system channel.
+When a system channel **is** used for creating an ordering service, each ordering node receives a configuration block that is generated prior to creating the orderer container.
 Each ordering node gets this configuration block to bootstrap it and bring it online. By contrast, when using systemless ordering nodes this process has changed.
 
-With no system channel, an orderer is simply created and started. 
-It does not wait for a genesis block before becoming online. 
-The node will be online immediately and the channel participation APIs are available to use. 
-Once an orderer has joined a channel via a channel participation API request it will be considered either a `consenter` or `follower` of the application channel. 
-A `consenter` has its TLS certificate listed in the `consenters` field in the channel's configuration block, which authorizes the node to participate in the ordering of transactions. 
-A `follower` ordering node has joined an application channel, but is not listed in the consenters field and cannot order transactions. 
-Follower nodes can download the ledger to enable data redundancy without additional consenter networking and communication overhead. 
+With no system channel, an orderer is simply created and started.
+It does not wait for a genesis block before becoming online.
+The node will be online immediately and the channel participation APIs are available to use.
+Once an orderer has joined a channel via a channel participation API request it will be considered either a `consenter` or `follower` of the application channel.
+A `consenter` has its TLS certificate listed in the `consenters` field in the channel's configuration block, which authorizes the node to participate in the ordering of transactions.
+A `follower` ordering node has joined an application channel, but is not listed in the consenters field and cannot order transactions.
+Follower nodes can download the ledger to enable data redundancy without additional consenter networking and communication overhead.
 Note that a follower orderer can always be upgraded to a consenter orderer, and vice versa, by editing the application channel's config block.
 
-Removal of the system channel means that the legacy concept of orderering nodes belonging to a centralized group (the consortium of network organizations) is obsolete. Orderering nodes without a system channel are a much more loosely grouped entity. 
-They may or may not be members of the same channels, and each orderer can choose to join or unjoin any application channel. 
-This also means that appending orderers to an existing ordering cluster, and creating the ordering cluster from scratch, now both follow the same path. 
+Removal of the system channel means that the legacy concept of orderering nodes belonging to a centralized group (the consortium of network organizations) is obsolete. Orderering nodes without a system channel are a much more loosely grouped entity.
+They may or may not be members of the same channels, and each orderer can choose to join or unjoin any application channel.
+This also means that appending orderers to an existing ordering cluster, and creating the ordering cluster from scratch, now both follow the same path.
 Which is to create and start the orderers and then join them to an application channel.
 
 ## Removing an existing system channel
 {: #remove-system-channel}
 
-The process of removing an existing system channel is to remove the system channel configuration from each ordering node. 
-You should first place the system channel into maintenance mode (step 2 below) to prevent any application channels from being created while the system channel is being removed. 
+The process of removing an existing system channel is to remove the system channel configuration from each ordering node.
+You should first place the system channel into maintenance mode (step 2 below) to prevent any application channels from being created while the system channel is being removed.
 You will then unjoin the system channel from each orderer node (step 3 below) using the Fabric Operations console, as follows:
 
 1. Ensure that each ordering node in the Ordering Service is running Fabric v2.4.x or higher
@@ -110,7 +110,7 @@ To get this identity:
 {: #upgrade-nodejs-chaincode}
 
 You may need to be cautions about upgrading peers and orderers to use the system channel removal features.
-Hyperledger Fabric v2.4 updated its chaincode version of Node.js to v16 and removed support for the earlier Node.js v12. 
+Hyperledger Fabric v2.4 updated its chaincode version of Node.js to v16 and removed support for the earlier Node.js v12.
 If you are upgrading your peers and orderers to use the channel participation APIs, and are using Node.js v12 based chaincode, you must also incrementally upgrade the Node.js chaincode, as follows:
 
 1. Upgrade any v1.4.x peers to v2.2.x (note that earlier Node.js v12 chaincode will continue to work, because Fabric v2.2.x provides both Node.js environments (v12 and v16)
