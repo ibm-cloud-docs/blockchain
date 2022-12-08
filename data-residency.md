@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-11-21"
+lastupdated: "2022-12-08"
 
 keywords: IBM Blockchain Platform, Data residency, world state
 
@@ -74,7 +74,7 @@ We can use the previous example to explore the options that organizations can us
 
 Org C and Org D can use the [private data feature](https://hyperledger-fabric.readthedocs.io/en/release-2.2/private-data/private-data.html#what-is-a-private-data-collection "What is a private data collection?"){: external} of Hyperledger Fabric to prevent data from being distributed to all organizations on the channel. Private data collections allow organizations to share state data peer-to-peer (via a [gossip data dissemination protocol](https://hyperledger-fabric.readthedocs.io/en/release-2.2/gossip.html)) with other organizations that are authorized to read the collection. The data is stored in a private, separate database on the peer. The ordering service is not involved and does not see the private data. Only a hash of the data in the collection is added to the channel ledger and is stored on the peers of other channel members and the ordering service. This allows organizations to verify private data if they want to make the transaction details public. To learn more, visit the [Private Data](https://hyperledger-fabric.readthedocs.io/en/release-2.2/private-data/private-data.html#private-data "Private data"){: external} concept article in the Fabric documentation.
 
-![Private data](images/data_res_private_data2.svg "caption three"){: caption="Figure 3. Org C and Org D use a private data collection to keep data from being distributed on channel X and from leaving Germany. Hashes of data in the collection are stored on ledger X." caption-side="bottom"}
+![Private data](images/data_res_private_data.svg "caption three"){: caption="Figure 3. Org C and Org D use a private data collection to keep data from being distributed on channel X and from leaving Germany. Hashes of data in the collection are stored on ledger X." caption-side="bottom"}
 
 In **Figure 3**, Org C and Org D have created a private data collection, the `OrgC-OrgD` collection, that allows the organizations to transact without having to share data with Org A, Org B, or the ordering service. The key-value state data inside this collection is only stored on the peers of Org C and Org D and does not leave Germany. However, a hash of the data within the collection is stored on ledger X and shared with the broader channel. This means that a hash of the data in the `OrgC-OrgD` collection is stored on the peers and the ordering service in the United States.
 

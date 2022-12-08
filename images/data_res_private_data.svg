@@ -5,16 +5,16 @@
 	 xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#171717;}
-	.st1{clip-path:url(#SVGID_00000008855983700582426560000000312317465240945841_);}
+	.st1{clip-path:url(#SVGID_00000016064687755640135890000016062227757654901399_);}
 	.st2{fill:#F0F0F0;}
-	.st3{clip-path:url(#SVGID_00000040562544932693256880000006806128206910645149_);}
+	.st3{clip-path:url(#SVGID_00000144310971067331976120000013406321746321098152_);}
 	.st4{fill:#F0F0F0;stroke:#F0F0F0;stroke-width:1.0003;stroke-miterlimit:10.0031;}
-	.st5{clip-path:url(#SVGID_00000052073717988075597480000003250879972731720376_);}
+	.st5{clip-path:url(#SVGID_00000156586704397131047670000003154801649132493488_);}
 	.st6{font-family:'IBMPlexSans-Bold';}
 	.st7{font-size:14.0043px;}
 	.st8{fill:#282828;stroke:#282828;stroke-width:1.0003;stroke-miterlimit:10.0031;}
 	.st9{fill:none;stroke:#6F6F6F;stroke-width:0.7502;stroke-miterlimit:8.0025;}
-	.st10{clip-path:url(#SVGID_00000066482540752803755600000016610726954145086095_);}
+	.st10{clip-path:url(#SVGID_00000132784103190906464690000012199379478146651779_);}
 	.st11{fill:#006161;}
 	.st12{fill:#757575;}
 	.st13{fill:#FFFFFF;}
@@ -37,15 +37,17 @@
 <g>
 	<g>
 		<g>
-			<defs>
-				<rect id="SVGID_1_" x="44.6" y="177.4" width="559.9" height="478.8"/>
-			</defs>
-			<clipPath id="SVGID_00000096055827420257081910000000863312444839532694_">
-				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-			</clipPath>
-			<g style="clip-path:url(#SVGID_00000096055827420257081910000000863312444839532694_);">
-				<path class="st0" d="M44.6,177.4h559.9v478.8H44.6V177.4z"/>
-				<path class="st0" d="M42.9,662.2l603.1,1.9V159.9L42.9,158V662.2z"/>
+			<g>
+				<defs>
+					<rect id="SVGID_1_" x="44.6" y="177.4" width="559.9" height="478.8"/>
+				</defs>
+				<clipPath id="SVGID_00000147200651314713581980000017210628606075941804_">
+					<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_00000147200651314713581980000017210628606075941804_);">
+					<path class="st0" d="M44.6,177.4h559.9v478.8H44.6V177.4z"/>
+					<path class="st0" d="M42.9,662.2l603.1,1.9V159.9L42.9,158V662.2z"/>
+				</g>
 			</g>
 		</g>
 	</g>
@@ -55,15 +57,17 @@
 	<g>
 		<g>
 			<g>
-				<defs>
-					<rect id="SVGID_00000046303755134013056920000002542221981301989817_" x="634.3" y="177.3" width="458.6" height="478.9"/>
-				</defs>
-				<clipPath id="SVGID_00000076603193162144168430000009369421389565357499_">
-					<use xlink:href="#SVGID_00000046303755134013056920000002542221981301989817_"  style="overflow:visible;"/>
-				</clipPath>
-				<g style="clip-path:url(#SVGID_00000076603193162144168430000009369421389565357499_);">
-					<path class="st4" d="M634.3,177.3h458.6v478.9H634.3V177.3z"/>
-					<path class="st0" d="M632.8,662.2l493.9,1.9V159.8l-493.9-1.9L632.8,662.2L632.8,662.2z"/>
+				<g>
+					<defs>
+						<rect id="SVGID_00000015355308987027200780000001109467625505270972_" x="634.3" y="177.3" width="458.6" height="478.9"/>
+					</defs>
+					<clipPath id="SVGID_00000098928917825093134290000005284463943025850546_">
+						<use xlink:href="#SVGID_00000015355308987027200780000001109467625505270972_"  style="overflow:visible;"/>
+					</clipPath>
+					<g style="clip-path:url(#SVGID_00000098928917825093134290000005284463943025850546_);">
+						<path class="st4" d="M634.3,177.3h458.6v478.9H634.3V177.3z"/>
+						<path class="st0" d="M632.8,662.2l493.9,1.9V159.8l-493.9-1.9L632.8,662.2L632.8,662.2z"/>
+					</g>
 				</g>
 			</g>
 		</g>
@@ -72,16 +76,18 @@
 <g>
 	<g>
 		<g>
-			<defs>
-				<rect id="SVGID_00000128471615135846602570000002399305758718999685_" x="824.3" y="145.4" width="36" height="24"/>
-			</defs>
-			<clipPath id="SVGID_00000044884867197211756280000004939057993013932933_">
-				<use xlink:href="#SVGID_00000128471615135846602570000002399305758718999685_"  style="overflow:visible;"/>
-			</clipPath>
-			<g style="clip-path:url(#SVGID_00000044884867197211756280000004939057993013932933_);">
-				
-					<image style="overflow:visible;enable-background:new    ;" width="38" height="26" xlink:href="../E142FEED7D315AC.png"  transform="matrix(0.9313 0 0 0.9313 824.624 145.258)">
-				</image>
+			<g>
+				<defs>
+					<rect id="SVGID_00000174591112674830126850000000904096903681494402_" x="824.3" y="145.4" width="36" height="24"/>
+				</defs>
+				<clipPath id="SVGID_00000178908564335999834570000015352723197595071656_">
+					<use xlink:href="#SVGID_00000174591112674830126850000000904096903681494402_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_00000178908564335999834570000015352723197595071656_);">
+					
+						<image style="overflow:visible;enable-background:new    ;" width="38" height="26" xlink:href="../E142FEED7D315AC.png"  transform="matrix(0.9313 0 0 0.9313 824.624 145.258)">
+					</image>
+				</g>
 			</g>
 		</g>
 	</g>
@@ -92,16 +98,18 @@
 <g>
 	<g>
 		<g>
-			<defs>
-				<rect id="SVGID_00000036971286406096551310000013387850450947589036_" x="246.8" y="146.4" width="36" height="23"/>
-			</defs>
-			<clipPath id="SVGID_00000071521641736503377060000012318241117835574670_">
-				<use xlink:href="#SVGID_00000036971286406096551310000013387850450947589036_"  style="overflow:visible;"/>
-			</clipPath>
-			<g style="clip-path:url(#SVGID_00000071521641736503377060000012318241117835574670_);">
-				
-					<image style="overflow:visible;enable-background:new    ;" width="38" height="25" xlink:href="../E142FEED7D315AB.png"  transform="matrix(0.9294 0 0 0.9294 247.1117 146.2471)">
-				</image>
+			<g>
+				<defs>
+					<rect id="SVGID_00000093155539928154699170000004444332084132275881_" x="246.8" y="146.4" width="36" height="23"/>
+				</defs>
+				<clipPath id="SVGID_00000057827500786004574250000008131118189547717775_">
+					<use xlink:href="#SVGID_00000093155539928154699170000004444332084132275881_"  style="overflow:visible;"/>
+				</clipPath>
+				<g style="clip-path:url(#SVGID_00000057827500786004574250000008131118189547717775_);">
+					
+						<image style="overflow:visible;enable-background:new    ;" width="38" height="25" xlink:href="../E142FEED7D315AB.png"  transform="matrix(0.9294 0 0 0.9294 247.1117 146.2471)">
+					</image>
+				</g>
 			</g>
 		</g>
 	</g>
@@ -134,7 +142,7 @@
 <circle class="st22" cx="295.6" cy="573.4" r="19.7"/>
 <circle class="st23" cx="282.5" cy="588.2" r="1.5"/>
 <text transform="matrix(1 0 0 1 273.998 612.0254)" class="st13 st18 st24">Org B Peer</text>
-<ellipse transform="matrix(0.4899 -0.8718 0.8718 0.4899 -52.3673 616.3312)" class="st15" cx="500.5" cy="352.9" rx="23.6" ry="23.6"/>
+<ellipse transform="matrix(0.6232 -0.7821 0.7821 0.6232 -87.394 524.3697)" class="st15" cx="500.5" cy="352.9" rx="23.6" ry="23.6"/>
 <path class="st21" d="M500.4,355.8v-20.3 M506.6,352.7v-17.2 M494.1,352.7v-17.2"/>
 <path class="st15" d="M515.3,354l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6l14.9-8.6V354"/>
 <path class="st20" d="M515.3,354l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6l14.9-8.6V354"/>
