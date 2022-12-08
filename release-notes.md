@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-11-07"
+lastupdated: "2022-12-05"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -29,6 +29,18 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+
+## 07 Dec 2022
+{: #12-07-2022}
+
+**Certificate Authority (CA) patch 1.5.5-6, Peer and ordering node patch 1.4.12-20, 2.2.9-2, 2.4.7-2.**
+
+Updates to VS Code documentation.
+
+Miscellaneous bug fixes and security patches.
+
+Severity: medium
 
 
 ## 08 Nov 2022
@@ -194,8 +206,6 @@ Miscellaneous bug fixes and security patches.
 {: #10-08-2021}
 
 Miscellaneous bug fixes and security patches.
-
-Export certificates in .pem format for easy management and maintenance in {{site.data.keyword.cloud_notm}} Certificate Manager. See [viewing and updating identities](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-identities#ibp-console-identities-update-identities) to learn more details.
 
 
 

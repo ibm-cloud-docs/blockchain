@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-09-25"
+lastupdated: "2022-11-22"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -70,7 +70,6 @@ content-type: faq
 - [What languages are supported for smart contracts?](#ibp-v2-faq-v2-IBP-Overview-1-4)
 - [What version of the IBM Blockchain Platform works with the Ansible collection?](#ibp-v2-faq-ansible-version)
 - [How do I get support for running the IBM Blockchain Platform Ansible playbook?](#ibp-v2-faq-ansible-support)
-- [How can I find the examples and tutorials within the VSCode extension?](#ibp-v2-faq-vscode-tutorials)
 - [Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?](#ibp-v2-faq-mon-client-app)
 
 **Monitoring your network**
@@ -383,12 +382,6 @@ Versions 2.1.3 and 2.5.x of the {{site.data.keyword.blockchainfull_notm}} Platfo
 {: faq}
 
 Ansible is an open source technology and this product is not officially supported by {{site.data.keyword.IBM_notm}}. For support related to the usage of the {{site.data.keyword.blockchainfull_notm}}  Platform and Ansible playbooks use the [GitHub repository](https://github.com/IBM-Blockchain/ansible-collection/issues){: external}.
-
-## How can I find the examples and tutorials within the VSCode extension?
-{: #ibp-v2-faq-vscode-tutorials}
-{: faq}
-
-The {{site.data.keyword.blockchainfull_notm}} Platform extension provides guided tutorials within VS Code to help you get started. You can find these tutorials on the extension home page when the extension is first installed. However, you can return to the tutorials and the home page by going to the extensions tab. For more information, see [Guided tutorials in VS Code](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-guided-tutorials).
 
 ## Can the {{site.data.keyword.blockchainfull_notm}} Platform monitor the health of a client application?
 {: #ibp-v2-faq-mon-client-app}

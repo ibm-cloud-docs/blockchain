@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2022
-lastupdated: "2022-07-21"
+lastupdated: "2022-11-17"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -248,7 +248,7 @@ Because {{site.data.keyword.blockchainfull_notm}} Platform is based on Hyperledg
 Enable network policy will automatically install when the console is created. In the operator deployment specification, the operator needs to add an environment variable `IBPOPERATOR_CONSOLE_APPLYNETWORKPOLICY` and set its value to `true`.
 
 ```
-kubectl edit deploy ibm-hlfsupport-operator -n <offering-namespace>
+kubectl edit deploy ibp-operator -n <offering-namespace>
 ```
 
 In the environment section under `spec.containers`, add the following:
@@ -265,7 +265,7 @@ The following two policies are applied:
 1. Deny-all-ingress.
 
 This policy denies all ingress (`ingress: []`) network traffic to the pods (`podSelector: {}`) in the namespace it applies to. This ensure only the needed traffics go through.
-    
+
 ```
     kind: NetworkPolicy
     apiVersion: networking.k8s.io/v1

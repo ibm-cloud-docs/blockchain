@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-04-01"
+lastupdated: "2022-11-22"
 
 keywords: pricing model, hourly, per hour, CPU, vCPU, virtual core, cost, scalability, estimation, optimize your cost, billing, free, trial, preview, pricing examples
 
@@ -47,10 +47,6 @@ For a total cost estimate, remember that your blockchain network consists of an 
 
 In summary, these features remove the complexity of accounting for membership limitations or purchasing compute ahead of your needs.
 
-### Are you a developer?
-{: #ibp-saas-pricing-developer}
-
-Developers can get started with the free [extension for VS Code](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform){: external}. Use this integrated developer environment to write, test, debug, and package smart contracts locally and for {{site.data.keyword.blockchainfull_notm}} Platform deployment, as well as to write client applications. Start from scratch or access tutorials and samples to learn blockchain fundamentals. Then, come back and link an {{site.data.keyword.blockchainfull_notm}} Platform service instance to your Kubernetes cluster so that you can build your blockchain network by using the console.
 
 ### Find out how to preview the platform free for 30 days
 {: #ibp-saas-pricing-free}
@@ -196,5 +192,3 @@ One of the key benefits of the {{site.data.keyword.blockchainfull_notm}} Platfor
 
 - **Monitor and adjust your resource allocation based on your needs**.
     When you monitor your resource usage over time, you might decide that you can scale down the resources that are allocated to a node while still ensuring adequate performance. When you follow instructions for [reallocating resources](/docs/blockchain?topic=blockchain-ibp-console-govern-components) in the console, the effects on total VPC for the node are updated and can be used to estimate revised monthly costs.  
-
-
