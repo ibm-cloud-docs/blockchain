@@ -1,108 +1,72 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1018.61 774">
-  <defs>
-    <style>
-      .cls-2{fill:#5a6872}.cls-3{fill:#011688;stroke:#857b7b}.cls-13,.cls-16,.cls-4,.cls-7{isolation:isolate;font-family:IBMPlexSans-Medium,IBM Plex Sans;font-weight:500}.cls-4{font-size:19px}.cls-13,.cls-16,.cls-4,.cls-6{fill:#fff}.cls-5{letter-spacing:-.02em}.cls-29,.cls-6{stroke:#fff}.cls-7{font-size:16px}.cls-31,.cls-7{fill:#010f5e}.cls-8{letter-spacing:-.02em}.cls-9{letter-spacing:0}.cls-10{letter-spacing:-.02em}.cls-11{letter-spacing:0}.cls-12{fill:#0ccaeb}.cls-13,.cls-16{font-size:14px}.cls-13{letter-spacing:-.01em}.cls-14{letter-spacing:0}.cls-15{letter-spacing:-.01em}.cls-22{letter-spacing:0}.cls-23{letter-spacing:.01em}.cls-24{letter-spacing:-.01em}.cls-29{fill:none}
-    </style>
-  </defs>
-  <path id="Rectangle" fill="#dcdcdc" stroke="#dcdcdc" d="M89.15 120.09h847v548h-847z"/>
-  <g id="UI-Icon_checkmark--outline_ui-05" data-name="UI-Icon/checkmark--outline/$ui-05">
-    <path id="Oval-2" class="cls-2" d="M355.65 276.09a6.5 6.5 0 1 0-6.5-6.5 6.49 6.49 0 0 0 6.5 6.5zm0 1.5a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-    <path id="check" class="cls-2" d="M358.95 266.29l1.4 1.4-5.9 5.9-3.5-3.4 1.4-1.4 2.1 2 4.5-4.5z"/>
-  </g>
-  <path id="Rectangle-2" data-name="Rectangle" class="cls-3" d="M113.15 157.09h347v151h-347z"/>
-  <text class="cls-4" transform="translate(131.86 191.59)">
-    Org 1<tspan class="cls-5" x="13.53" y="0"></tspan>
-  </text>
-  <path id="Rectangle-3" data-name="Rectangle" class="cls-6" d="M396.15 145.09h105v35h-105z"/>
-  <text class="cls-7" transform="translate(418.83 168.59)">
-    Org1 CA<tspan class="cls-8" x="11.39" y="0">r</tspan>
-  </text>
-  <path id="Rectangle-4" data-name="Rectangle" class="cls-6" d="M338.15 213.09h105v55h-105z"/>
-  <text class="cls-7" transform="translate(353.02 236.59)">
-    Org1 MSP<tspan class="cls-8" x="11.39" y="0">r</tspan>
-  </text>
-  <text class="cls-7" transform="translate(356.27 256.59)">
-    definition
-  </text>
-  <path id="Rectangle-5" data-name="Rectangle" class="cls-3" d="M111.15 478.09h347v151h-347z"/>
-  <text class="cls-4" transform="translate(129.86 512.59)">
-    Org 2<tspan class="cls-5" x="13.53" y="0"></tspan>
-  </text>
-  <path id="Rectangle-6" data-name="Rectangle" class="cls-6" d="M130.15 536.09h105v61h-105z"/>
-  <text class="cls-7" transform="translate(142.77 572.59)">
-    <tspan class="cls-10">Peer Org2</tspan>
-  </text>
-  <path id="Rectangle-7" data-name="Rectangle" class="cls-6" d="M394.15 466.09h105v35h-105z"/>
-  <text class="cls-7" transform="translate(416.83 489.59)">
-    Org2 CA<tspan class="cls-8" x="11.39" y="0"></tspan>
-  </text>
-  <path id="Rectangle-8" data-name="Rectangle" class="cls-6" d="M338.15 537.09h105v55h-105z"/>
-  <text class="cls-7" transform="translate(353.02 560.59)">
-    Org2 MSP<tspan class="cls-8" x="11.39" y="0"></tspan>
-  </text>
-  <text class="cls-7" transform="translate(356.27 580.59)">
-    definition
-  </text>
-  <path id="Rectangle-9" data-name="Rectangle" class="cls-6" d="M134.15 211.09h105v61h-105z"/>
-  <g id="Group-3">
-    <path id="Fill-1" class="cls-12" d="M235.55 233.59h51v39c-25.5 0-25.5 14.9-51 6.4z"/>
-  </g>
-  <g id="Group-3-Copy">
-    <path id="Fill-1-2" data-name="Fill-1" class="cls-12" d="M229.55 564.59h51v39c-25.5 0-25.5 14.9-51 6.4z"/>
-  </g>
-  <text class="cls-7" transform="translate(146.77 247.59)">
-    <tspan class="cls-10">Peer Org1</tspan><tspan class="cls-11" x="9.71" y="0"></tspan>
-  </text>
-  <text class="cls-13" transform="translate(239.65 257.59)">
-    Ledger<tspan class="cls-14" x="7.04" y="0"></tspan>
-  </text>
-  <text class="cls-16" transform="translate(283.35 257.59)">
-  </text>
-  <text class="cls-16" transform="translate(239.65 272.59)">
-    X
-  </text>
-  <text class="cls-13" transform="translate(233.65 588.59)">
-    Ledger<tspan class="cls-14" x="7.04" y="0"></tspan>
-  </text>
-  <text class="cls-16" transform="translate(277.35 588.59)">
-  </text>
-  <text class="cls-16" transform="translate(233.65 603.59)">
-    X
-  </text>
-  <ellipse id="Oval" cx="350.15" cy="395.09" rx="194.5" ry="51.5" stroke="#979797" fill="#fff"/>
-  <text transform="translate(307.4 406.59)" style="isolation:isolate" fill="#010f5e" font-size="19" font-family="IBMPlexSans-Medium,IBM Plex Sans" font-weight="500">
-    Channel 1
-  </text>
-  <path id="Rectangle-10" data-name="Rectangle" class="cls-3" d="M524.15 286.59h347v214.5h-347z"/>
-  <text class="cls-4" transform="translate(544.1 321.09)">
-    Ordering Service Org<tspan x="13.53" y="0" letter-spacing="0"></tspan>
-  </text>
-  <path id="Rectangle-11" data-name="Rectangle" class="cls-6" d="M738.57 274.59h173.58v35H738.57z"/>
-  <text class="cls-7" transform="translate(754.02 298.09)">
-    Ordering service CA<tspan class="cls-22" x="11.39" y="0"></tspan>
-  </text>
-  <path id="Rectangle-12" data-name="Rectangle" class="cls-6" d="M721.15 371.64h135.83v55H721.15z"/>
-  <text class="cls-7" transform="translate(728.19 395.44)">
-    Ordering service<tspan class="cls-22" x="11.39" y="0"></tspan>
-  </text>
-  <text class="cls-7" transform="translate(734.89 415.44)">
-    MSP definition
-  </text>
-  <path id="Rectangle-13" data-name="Rectangle" fill="#011688" d="M552.65 408.59h10v10h-10z"/>
-  <g id="Group-18">
-    <g id="Group-5">
-      <path id="Fill-1-3" data-name="Fill-1" fill="#fff" d="M546.15 337.59h159.5v136.53h-159.5V337.59z"/>
-      <path id="Stroke-3" stroke="#001588" fill="none" d="M546.15 474.12h159.5V337.59h-159.5v136.53z"/>
-    </g>
-  </g>
-  <path class="cls-29" d="M182.65 272.09v95M184.65 422.09v111"/>
-  <circle cx="625.9" cy="419.09" r="32.14" stroke="#12c3f4" stroke-width="2" fill="none"/>
-  <circle class="cls-31" cx="595.04" cy="412.58" r="8.35"/>
-  <circle class="cls-31" cx="625.9" cy="389.06" r="8.35"/>
-  <circle class="cls-31" cx="656.63" cy="412.58" r="8.35"/>
-  <circle class="cls-31" cx="607.67" cy="446.93" r="8.35"/>
-  <circle class="cls-31" cx="642.6" cy="446.93" r="8.35"/>
-  <text transform="translate(562.65 363.52)" style="isolation:isolate" font-size="12" fill="#010f5e" font-family="IBMPlexSans-Medium,IBM Plex Sans" font-weight="500">
-    Ordering service nodes<tspan x="8.54" y="0" letter-spacing="0"></tspan>
-  </text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1018.6px" height="774px" viewBox="0 0 1018.6 774" style="enable-background:new 0 0 1018.6 774;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DCDCDC;stroke:#DCDCDC;}
+	.st1{fill:#5A6872;}
+	.st2{fill:#011688;stroke:#857B7B;}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'IBMPlexSans-Medium';}
+	.st5{font-size:19px;}
+	.st6{fill:#FFFFFF;stroke:#FFFFFF;}
+	.st7{fill:#010F5E;}
+	.st8{font-size:16px;}
+	.st9{fill:#0CCAEB;}
+	.st10{font-size:14px;}
+	.st11{fill:#FFFFFF;stroke:#979797;}
+	.st12{fill:none;stroke:#001588;}
+	.st13{fill:none;stroke:#FFFFFF;}
+	.st14{fill:none;stroke:#12C3F4;stroke-width:2;}
+	.st15{font-size:12px;}
+</style>
+<path id="Rectangle" class="st0" d="M53.1,120.1h936.1v548H53.1L53.1,120.1z"/>
+<g id="UI-Icon_checkmark--outline_ui-05">
+	<path id="Oval-2" class="st1" d="M320.3,282.1c3.6,0,6.5-2.9,6.5-6.5s-2.9-6.5-6.5-6.5s-6.5,2.9-6.5,6.5l0,0
+		C313.8,279.1,316.7,282.1,320.3,282.1C320.3,282.1,320.3,282.1,320.3,282.1z M320.3,283.6c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8
+		S324.8,283.6,320.3,283.6z"/>
+	<path id="check" class="st1" d="M323.6,272.3l1.4,1.4l-5.9,5.9l-3.5-3.4l1.4-1.4l2.1,2L323.6,272.3z"/>
+</g>
+<path id="Rectangle-2" class="st2" d="M77.8,163.1H493v151H77.8L77.8,163.1z"/>
+<text transform="matrix(1 0 0 1 96.5554 197.561)" class="st3 st4 st5">Org 1</text>
+<path id="Rectangle-3" class="st6" d="M393.5,151.1h126.2v35H393.5V151.1z"/>
+<text transform="matrix(1 0 0 1 427.5413 174.561)" class="st7 st4 st8">Org1 CA</text>
+<path id="Rectangle-4" class="st6" d="M302.8,219.1h163v55h-163V219.1z"/>
+<text transform="matrix(1 0 0 1 312.8456 253.561)" class="st7 st4 st8">Org1 MSP definition</text>
+<path id="Rectangle-5" class="st2" d="M75.8,484.1H493v151H75.8L75.8,484.1z"/>
+<text transform="matrix(1 0 0 1 94.5554 518.561)" class="st3 st4 st5">Org 2</text>
+<path id="Rectangle-6" class="st6" d="M94.8,542.1h105v61h-105V542.1z"/>
+<text transform="matrix(1 0 0 1 107.4655 578.561)" class="st7 st4 st8">Peer Org2</text>
+<path id="Rectangle-7" class="st6" d="M393.5,472.1h126.2v35H393.5V472.1z"/>
+<text transform="matrix(1 0 0 1 426.6614 495.561)" class="st7 st4 st8">Org2 CA</text>
+<path id="Rectangle-8" class="st6" d="M302.8,543.1h163v55h-163V543.1z"/>
+<text transform="matrix(1 0 0 1 312.3452 578.561)" class="st7 st4 st8">Org2 MSP definition</text>
+<path id="Rectangle-9" class="st6" d="M98.8,217.1h105v61h-105V217.1z"/>
+<g id="Group-3">
+	<path id="Fill-1" class="st9" d="M194.2,239.6h64.3v39c-32.1,0-32.1,14.9-64.3,6.4L194.2,239.6z"/>
+</g>
+<g id="Group-3-Copy">
+	<path id="Fill-1-2" class="st9" d="M194.2,570.6h63.4v39c-31.7,0-31.7,14.9-63.5,6.4L194.2,570.6z"/>
+</g>
+<text transform="matrix(1 0 0 1 111.4655 253.561)" class="st7 st4 st8">Peer Org1</text>
+<text transform="matrix(1 0 0 1 199.8452 267.5612)" class="st3 st4 st10">Ledger X</text>
+<text transform="matrix(1 0 0 1 198.5497 597.529)" class="st3 st4 st10">Ledger X</text>
+<ellipse id="Oval" class="st11" cx="314.8" cy="401.1" rx="194.5" ry="51.5"/>
+<text transform="matrix(1 0 0 1 272.0955 412.561)" class="st7 st4 st5">Channel 1</text>
+<path id="Rectangle-10" class="st2" d="M531.7,282.7H959v214.5H531.7V282.7z"/>
+<text transform="matrix(1 0 0 1 544.6199 317.1797)" class="st3 st4 st5">Ordering Service Org</text>
+<path id="Rectangle-11" class="st6" d="M782.4,276.8H972v35H782.4V276.8z"/>
+<text transform="matrix(1 0 0 1 806.4976 300.25)" class="st7 st4 st8">Ordering service CA</text>
+<path id="Rectangle-12" class="st6" d="M712.8,367.8h240v55h-240V367.8z"/>
+<text transform="matrix(1 0 0 1 718.2734 402.0151)" class="st7 st4 st8">Ordering service MSP definition</text>
+<path id="Fill-1-3" class="st3" d="M546.7,333.7h159.5v136.5H546.7V333.7z"/>
+<path id="Stroke-3" class="st12" d="M546.7,470.2h159.5V333.7H546.7V470.2z"/>
+<path class="st13" d="M147.3,278.1v95 M149.3,428.1v111"/>
+<circle class="st14" cx="626.4" cy="415.2" r="32.1"/>
+<circle class="st7" cx="595.6" cy="408.7" r="8.3"/>
+<circle class="st7" cx="626.4" cy="385.1" r="8.3"/>
+<circle class="st7" cx="657.1" cy="408.7" r="8.3"/>
+<circle class="st7" cx="608.2" cy="443" r="8.3"/>
+<circle class="st7" cx="643.1" cy="443" r="8.3"/>
+<text transform="matrix(1 0 0 1 563.1699 359.6097)" class="st7 st4 st15">Ordering service nodes</text>
 </svg>
