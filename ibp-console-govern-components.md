@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-11-23"
+lastupdated: "2022-12-14"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -128,6 +128,63 @@ The process of upgrading a node involves two main steps:
 
 It may also be necessary to update SDKs and smart contracts before you can take advantage of the latest Fabric features. For more information, check out [Step three: Update SDKs and smart contracts](#ibp-console-govern-components-upgrade-step-three).
 {: tip}
+
+
+### Upgrading nodes from Fabric v1.4 to v2.2
+{: #ibp-console-govern-components-upgrade-v14-v22}
+
+Use the following recommended procedure to upgrade your Fabric v1.4 peer and orderer nodes to v2.2, regardless of whether you are also migrating your v1.4 chaincode to run on Fabric v2.2. Once on v2.2, you can migrate your nodes to v2.4.
+
+**Attention**: To update to Fabric v2.2, the recommended process (below) adds a new peer, rather than updating an existing peer in place. Adding a new peer avoids the extended time to rebuild CouchDB (if applicable) and downtime when an existing peer is updating. The final step then deletes the replaced peer.
+
+### Update your CAs
+
+Update your Certificate Authority (CA) nodes before you upgrade your peer and orderer nodes, as follows:
+
+**Note**: Most application solutions do not interact with CAs continually, in which case CAs can be upgraded with no impact to application usage. However, any application flows that use fabric-ca functionality may be unavailable for 1-2 minutes during the update.
+
+1. Using your console, navigate to your Certificate Authority and select the first CA node. Click on  **upgrade available** and select **1.5.5-2** or later.
+2. The CA node will restart with the upgrade installed.
+3. Repeat the steps for each CA node.
+
+### Update your orderers
+
+After updating your Certificate Authority (CA) nodes, update your orderer nodes, as follows:
+
+1. Using your console, navigate to the ordering service and select the first ordering node. Click on **upgrade available** and select **2.2.8-1** or later. Click through the confirmations dialogs.
+2. The node will restart using the 2.2.8-1 (or selected) image. Transaction processing will continue during the node restart, because the remaining four orderer nodes make a quorum. The selected orderer node will be unavailable for 1-2 minutes during the update. **ATTENTION!!**: If the updating orderer node does not restart and come back online successfully, please contact IBM Support. **DO NOT** attempt to update any remaining orderer nodes before contacting IBM Support.
+3. Repeat the procedure for each remaining orderer node.
+
+### Update your peers
+
+After updating both your Certificate Authority (CA) and orderer nodes, update your peer nodes, as follows:
+
+1. Before upgrading any peer with CouchDB installed, you must rebuild the CouchDB state database from CouchDB v2.x to v3.x. The recommended process is to add a new peer, and then let the database synchronize. This removes the downtime that would occur when upgrading in place. Then continue as follows, for peers both with and without CouchDB:
+2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
+3. Remove the new peer from both peer gossip and service discovery, as follows:
+   a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
+   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
+   c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
+   d) Change `spec.peerExternalEndpoint:` to `do-not-set` as follows: `spec.peerExternalEndpoint: do-not-set`
+   e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]`
+   f) The peer will restart - then it should not be discoverable by application service discovery. Do **NOT** update the client connection profiles at this time.
+4. Add the new peer to the channel(s) that existing peers are participating in. Do **NOT** install channel chaincode on the new peer.
+5. Let the new peer synchronize its blocks, to the block height of the existing peers.
+6. Reenable PEER_GOSSIP on the new peer, as follows:
+   a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
+   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
+   c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
+   d) Change `spec.peerExternalEndpoint` to a blank string, using empty quotation marks, as follows: `spec.peerExternalEndpoint: ""`
+   e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]``
+   f) The new peer will restart - then it should begin participating in service discovery and getting new blocks. Application targeting will depend on the connection profile and application logic.
+7. Install chaincode on the new peer.
+8. Test the new environment by running applications with all peers (original and new) enabled.
+9. (Recommended) Test applications by turning off the peer that is being replaced, as follows:
+   a) Run: `kubectl patch [ibppeer-name] -n [namespace] -p=‘[{“op”: “replace”, “path”:“/spec/replicas”, “value”:0}]’ --type=json`
+   b) Ensure application continuity with the original peer is **NOT** running.
+10. Delete the original peer.
+11. Repeat the prior steps for each peer you are updating.
+
 
 ### Upgrading nodes from Fabric v1.4 to v2.4
 {: #ibp-console-govern-components-upgrade-v14-v24}
