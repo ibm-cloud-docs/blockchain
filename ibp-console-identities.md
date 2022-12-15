@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-12-12"
+lastupdated: "2022-12-15"
 
 keywords: create identities, manage identities, Certificate Authorities, register, enroll, TLS CA, wallet, certificate expiration, delete user
 
@@ -177,8 +177,8 @@ cat $HOME/<path-to-certificate>/cert.pem | base64 $FLAG
 
 From the **Wallet** tab, click a tile to view, update, or remove an identity from the wallet. It might be necessary to update your identities if their certificates have expired, and they need to be issued new keys from the CA. You can also use this tab to delete keys from your console and your local system.
 
-Clicking an identity opens a side panel that displays its certificates and private keys in base64 format. Click the download button <img src="images/download.png" alt="Download .pem icon" width="26" style="width:26px; border-style: none"/> to export both the certificate and the private key as a .pem file to your local file system. <br><br>
-<img src="images/export_identity.png" alt="Export identity" style="border-style: none"/><br><br>
+Clicking an identity opens a side panel that displays its certificates and private keys in base64 format. Click the download button ![Download](images/download.png "Download") to export both the certificate and the private key as a .pem file to your local file system. 
+![Export identity](images/export_identity.png "Export identity")
 Click **Update** to change the identity name in the wallet or paste a new set of keys into the panel. Click **Remove** when you no longer need to use this identity and want to delete its keys.
 
 {{site.data.keyword.blockchainfull_notm}} Platform can auto-renew the enrollment (signing) certificates for the peer and ordering nodes and the peer TLS certificate. For the other certificates, you can see [certificate types and actions](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-cert-types) to learn on how to maintain them.
