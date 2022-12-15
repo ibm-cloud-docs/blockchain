@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2022
-lastupdated: "2022-12-14"
+lastupdated: "2022-12-15"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -163,7 +163,7 @@ After updating both your Certificate Authority (CA) and orderer nodes, update yo
 2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
 3. Remove the new peer from both peer gossip and service discovery, as follows:
    a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
-   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
+   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml` 
    c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
    d) Change `spec.peerExternalEndpoint:` to `do-not-set` as follows: `spec.peerExternalEndpoint: do-not-set`
    e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]`
@@ -174,13 +174,13 @@ After updating both your Certificate Authority (CA) and orderer nodes, update yo
    a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
    b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
    c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
-   d) Change `spec.peerExternalEndpoint` to a blank string, using empty quotation marks, as follows: `spec.peerExternalEndpoint: ""`
-   e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]``
+   d) Change `spec.peerExternalEndpoint` to a blank string, using empty quotation marks, as follows:  `spec.peerExternalEndpoint: ""`
+   e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]`
    f) The new peer will restart - then it should begin participating in service discovery and getting new blocks. Application targeting will depend on the connection profile and application logic.
 7. Install chaincode on the new peer.
 8. Test the new environment by running applications with all peers (original and new) enabled.
 9. (Recommended) Test applications by turning off the peer that is being replaced, as follows:
-   a) Run: `kubectl patch [ibppeer-name] -n [namespace] -p=‘[{“op”: “replace”, “path”:“/spec/replicas”, “value”:0}]’ --type=json`
+   a) Run: `kubectl patch [ibppeer-name] -n [namespace] -p=`[{"op": "replace", "path":"/spec/replicas", "value":0}]` - type=json`
    b) Ensure application continuity with the original peer is **NOT** running.
 10. Delete the original peer.
 11. Repeat the prior steps for each peer you are updating.
