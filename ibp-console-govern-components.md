@@ -162,26 +162,43 @@ After updating both your Certificate Authority (CA) and orderer nodes, update yo
 1. Before upgrading any peer with CouchDB installed, you must rebuild the CouchDB state database from CouchDB v2.x to v3.x. The recommended process is to add a new peer, and then let the database synchronize. This removes the downtime that would occur when upgrading in place. Then continue as follows, for peers both with and without CouchDB:
 2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
 3. Remove the new peer from both peer gossip and service discovery, as follows:
+
    a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
-   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml` 
+
+   b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
+
    c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
+
    d) Change `spec.peerExternalEndpoint:` to `do-not-set` as follows: `spec.peerExternalEndpoint: do-not-set`
+
    e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]`
+
    f) The peer will restart - then it should not be discoverable by application service discovery. Do **NOT** update the client connection profiles at this time.
+
 4. Add the new peer to the channel(s) that existing peers are participating in. Do **NOT** install channel chaincode on the new peer.
 5. Let the new peer synchronize its blocks, to the block height of the existing peers.
 6. Reenable PEER_GOSSIP on the new peer, as follows:
+
    a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
+
    b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
+
    c) Edit the CRD: `kubectl edit ibppeer [IBPPEER_NAME] -n [NAMESPACE]`
+
    d) Change `spec.peerExternalEndpoint` to a blank string, using empty quotation marks, as follows:  `spec.peerExternalEndpoint: ""`
+
    e) Delete the peer deployment: `kubectl get deployment -n [NAMESPACE]` and then: `kubectl delete deployment [PEER DEPLOYMENT NAME] -n [NAMESPACE]`
+
    f) The new peer will restart - then it should begin participating in service discovery and getting new blocks. Application targeting will depend on the connection profile and application logic.
+
 7. Install chaincode on the new peer.
 8. Test the new environment by running applications with all peers (original and new) enabled.
 9. (Recommended) Test applications by turning off the peer that is being replaced, as follows:
+
    a) Run: `kubectl patch [ibppeer-name] -n [namespace] -p=`[{"op": "replace", "path":"/spec/replicas", "value":0}]` - type=json`
+
    b) Ensure application continuity with the original peer is **NOT** running.
+
 10. Delete the original peer.
 11. Repeat the prior steps for each peer you are updating.
 
