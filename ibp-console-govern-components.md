@@ -141,7 +141,7 @@ Use the following recommended procedure to upgrade your Fabric v1.4 peer and ord
 
 Update your Certificate Authority (CA) nodes before you upgrade your peer and orderer nodes, as follows:
 
-**Note**: Most application solutions do not interact with CAs continually, in which case CAs can be upgraded with no impact to application usage. However, any application flows that use fabric-ca functionality may be unavailable for 1-2 minutes during the update.
+**Attention**: Most application solutions do not interact with CAs continually, in which case CAs can be upgraded with no impact to application usage. However, any application flows that use fabric-ca functionality may be unavailable for 1-2 minutes during the update.
 
 1. Using your console, navigate to your Certificate Authority and select the first CA node. Click on  **upgrade available** and select **1.5.5-2** or later.
 2. The CA node will restart with the upgrade installed.
@@ -163,7 +163,11 @@ After updating both your Certificate Authority (CA) and orderer nodes, update yo
 2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
 3. Remove the new peer from both peer gossip and service discovery, as follows:
 
-   a) Get the Custom Resource Definition (CRD) of the new peer, by running: `kubectl get ibppeer -n [NAMESPACE]`
+   a) Get the Custom Resource Definition (CRD) of the new peer, by running:
+   ```
+   kubectl get ibppeer -n [NAMESPACE]
+   ```
+   {: codeblock}
 
    b) Back up the CRD: `kubectl get ibppeer [IBPPEER_NAME] -n [NAMESPACE] -o yaml > ibppeer_crd_backup.yaml`
 
