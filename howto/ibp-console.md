@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2022
-lastupdated: "2022-12-07"
+lastupdated: "2022-12-12"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -16,7 +16,15 @@ subcollection: blockchain
 # About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
 {: #ibp-console-overview}
 
-The {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} is the next generation of {{site.data.keyword.blockchainfull_notm}} Platform offerings, which gives you total control over your deployments, certificates, and private keys. It includes the new {{site.data.keyword.blockchainfull_notm}} Platform console, a user interface that can simplify and accelerate the process of deploying components into a Kubernetes cluster on {{site.data.keyword.cloud_notm}} managed and controlled by you. For more information about deploying an Kubernetes cluster on {{site.data.keyword.cloud_notm}}, see [Kubeg
+The {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_notm}} is the next generation of {{site.data.keyword.blockchainfull_notm}} Platform offerings, which gives you total control over your deployments, certificates, and private keys. It includes the new {{site.data.keyword.blockchainfull_notm}} Platform console, a user interface that can simplify and accelerate the process of deploying components into a Kubernetes cluster on {{site.data.keyword.cloud_notm}} managed and controlled by you. For more information about deploying an Kubernetes cluster on {{site.data.keyword.cloud_notm}}, see [Kubernetes](/docs/blockchain/reference?topic=blockchain-k8s-overview).
+{: shortdesc}
+
+A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments.
+
+If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.20 - v1.23 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.3](/docs/blockchain?topic=blockchain-get-started-console-ocp).
+
+If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the IBM Blockchain images](/docs/blockchain?topic=blockchain-blockchain-images).
+
 Watch the following video for an introduction to blockchain and the {{site.data.keyword.blockchainfull}} Platform:
 
 ![Key concepts video](https://www.youtube.com/embed/AvQa1W38J4I){: video output="iframe" data-script="#video-transcript-key-concepts" id="youtubeplayer" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen}
@@ -150,7 +158,7 @@ Using IBM Certified Fabric Images, Kubernetes Operator, and Certified Fabric Ope
 | Deployment Architecture and Design | Basic deployment and management of highly available [peer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-peers), [orderer](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ordering-service), and [Certificate Authority](/docs/blockchain?topic=blockchain-ibp-console-ha#ibp-console-ha-ca) nodes via the Console are supported. Detailed Deployment Architecture and Design are not included in support - see [deployment options](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment) for more information. |
 | Solution Architecture and Design | [Deploying and managing smart contracts](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2) via the Console are supported. Solution Architecture and Design are not included in  support. |
 | Performance Tuning | [Resource allocation](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-options) via the Console is supported. Detailed performance analysis and tuning of the environment or application code are not included in support - see the documentation on creating [highly available applications and using indexes with CouchDB](/docs/blockchain?topic=blockchain-ibp-console-app#console-app-couchdb). |
-| Certificate Renewal | [Automatic and Manual](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-renew-expiration) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using a [Certificate Management Solution](/docs/blockchain?topic=blockchain-ibp-console-identities) is recommended for keeping track of identities and certificates. |
+| Certificate Renewal | [Automatic and Manual](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-renew-expiration) Certificate renewal via the Certified Console image is supported. The user is responsible for keeping track of identities and performing manual certificate renewal. Using [IBM Secrets Manager](https://www.ibm.com/cloud/secrets-manager) is recommended for keeping track of identities and certificates. |
 {: caption="Table 2. Fabric component support" caption-side="bottom"}
 
 

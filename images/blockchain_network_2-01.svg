@@ -1,206 +1,181 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="15.36in" height="801.6" viewBox="0 0 1105.58 601.48">
-  <defs>
-    <clipPath id="a">
-      <path fill="#171717" d="M44.6 77.44h559.72V556.1H44.6z"/>
-    </clipPath>
-    <clipPath id="b">
-      <path fill="#f0f0f0" d="M641.24 77.34h419.33V556.1H641.24z"/>
-    </clipPath>
-  </defs>
-  <path fill="#171717" d="M44.6 77.44h559.72V556.1H44.6z"/>
-  <g clip-path="url(#a)" fill="#171717">
-    <path d="M44.6 77.44h559.72V556.1H44.6z"/>
-    <path d="M42.88 562.04l602.87 1.94V59.95L42.88 58.01v504.03z"/>
-  </g>
-  <g style="isolation:isolate">
-    <path fill="#f0f0f0" d="M641.24 77.34h419.33V556.1H641.24z"/>
-    <g clip-path="url(#b)">
-      <path fill="#f0f0f0" stroke="#f0f0f0" stroke-miterlimit="10" d="M641.24 77.34h419.33V556.1H641.24z"/>
-      <path fill="#171717" d="M639.95 562.04l451.65 1.94V59.85l-451.65-1.94v504.13z"/>
-    </g>
-  </g>
-  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M665.53 102.33h212.76v174.59H665.53z"/>
-  <path fill="none" stroke="#6f6f6f" stroke-miterlimit="8" stroke-width=".75" d="M931.06 151.18h-52.77M931.07 436.65H878.3M665.53 151.23H552.38M665.54 436.31H374.69"/>
-  <path fill="#006161" d="M70.88 155.76h105v46.47h-105z"/>
-  <text transform="translate(89.62 181.26)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Client App 1
-  </text>
-  <path fill="#757575" d="M70.88 123.76h105v32h-105z"/>
-  <text transform="translate(102.26 142.76)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Fabric SDK
-  </text>
-  <path fill="#fff" d="M448.38 130h104v42h-104z"/>
-  <text transform="translate(473.26 155.5)" font-size="12" font-family="IBMPlexSans, IBM Plex Sans">
-    Channel X
-  </text>
-  <text transform="translate(456.85 279)" font-size="8" fill="#fff" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700">
-    Ledger
-  </text>
-  <path fill="#282828" d="M578.04 301.82v-107.7h-151v203.13h151v-95.43z"/>
-  <text transform="translate(466.87 375.95)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ordering Service<tspan x="20.52" y="10.8">Nodes</tspan>
-  </text>
-  <circle cx="499.96" cy="337.92" r="23.6" fill="#f3f3f3"/>
-  <path d="M517.61 337.79a17.65 17.65 0 10-35.29 0M482.32 337.92a17.65 17.65 0 0035.29 0" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="488.73" cy="351.15" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="483.42" cy="332.4" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="512.03" cy="351.15" r="2.54" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="500.36" cy="320.27" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="516.51" cy="332.4" r="2.55" fill="#fff" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <path fill="none" stroke="#6f6f6f" stroke-miterlimit="8" stroke-width=".75" d="M448.38 151.18h-73.69M214.88 151.18h-39M214.88 436.65h-38M500.18 194.12V172M500.01 436.65v-39.4"/>
-  <text transform="translate(444.69 216.22)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ordering Service Org
-  </text>
-  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M215.29 354.85H374.7v174.59H215.29z"/>
-  <circle cx="295.14" cy="385.84" r="23.58" fill="#f3f3f3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M294.99 388.7v-20.33M301.25 385.58v-17.21M288.73 385.58v-17.21M309.93 386.88l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M280.13 386.88l14.9 8.6 14.9-8.6"/>
-  <circle cx="294.99" cy="388.7" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="288.73" cy="385.58" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="301.25" cy="385.58" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <text transform="translate(272.65 422.85)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
-  </text>
-  <circle cx="294.99" cy="473.29" r="24.76" fill="#f3f3f3"/>
-  <path d="M302.13 464.89a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M282.45 488a13.34 13.34 0 0126.14-.17" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="295.54" cy="473.29" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="282.45" cy="488.01" r="1.52" transform="rotate(-34.6 282.4944 488.0444)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
-  <text transform="translate(282.76 510.81)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org B<tspan x="1.89" y="10.8">Peer</tspan>
-  </text>
-  <circle cx="500.38" cy="252.88" r="23.58" fill="#f3f3f3"/>
-  <path fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M500.23 255.74v-20.33M506.49 252.61v-17.2M493.98 252.61v-17.2"/>
-  <path fill="#f3f3f3" d="M515.17 253.92l-14.9-8.61-14.89 8.61v7.29l14.89 8.61 14.9-8.61v-7.29"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M515.17 253.92l-14.9-8.61-14.89 8.61v7.29l14.89 8.61 14.9-8.61v-7.29"/>
-  <path fill="#f3f3f3" d="M485.38 253.92l14.89 8.6 14.9-8.6"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M485.38 253.92l14.89 8.6 14.9-8.6"/>
-  <circle cx="500.23" cy="255.74" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="493.98" cy="252.61" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="506.49" cy="252.61" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <text transform="translate(477.89 289.88)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
-  </text>
-  <path fill="#282828" stroke="#282828" stroke-miterlimit="10" d="M665.32 354.95h212.76v174.59H665.32zM214.88 102.33h159.8v174.59h-159.8z"/>
-  <circle cx="770.1" cy="386.93" r="23.58" fill="#f3f3f3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M769.95 389.8v-20.33M776.2 386.67v-17.2M763.69 386.67v-17.2M784.89 387.97l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M755.09 387.97l14.9 8.6 14.9-8.6"/>
-  <circle cx="769.95" cy="389.8" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="763.69" cy="386.67" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="776.2" cy="386.67" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <text transform="translate(747.6 423.94)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
-  </text>
-  <circle cx="769.95" cy="474.38" r="24.76" fill="#f3f3f3"/>
-  <path d="M777.09 466a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M757.41 489.1a13.35 13.35 0 0126.14-.17" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="770.5" cy="474.38" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="757.41" cy="489.1" r="1.52" transform="rotate(-34.6 757.501 489.1212)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
-  <text transform="translate(757.64 511.9)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Org D<tspan x="1.98" y="10.8">Peer</tspan>
-  </text>
-  <circle cx="770.38" cy="134.33" r="23.58" fill="#f3f3f3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M770.23 137.19v-20.33M776.49 134.06v-17.2M763.97 134.06v-17.2M785.17 135.36l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M755.37 135.36l14.9 8.61 14.9-8.61"/>
-  <circle cx="770.23" cy="137.19" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="763.97" cy="134.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="776.49" cy="134.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <text transform="translate(747.88 171.33)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
-  </text>
-  <circle cx="770.23" cy="220.77" r="24.76" fill="#f3f3f3"/>
-  <path d="M777.37 212.37a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M757.69 235.49a13.35 13.35 0 0126.14-.16" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="770.78" cy="220.77" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="757.69" cy="235.49" r="1.52" transform="rotate(-34.6 757.7785 235.4934)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
-  <text transform="translate(758.15 258.29)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Org C<tspan x="1.75" y="10.8">Peer</tspan>
-  </text>
-  <text transform="translate(224.76 120.8)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org A
-  </text>
-  <circle cx="294.42" cy="133.33" r="23.58" fill="#f3f3f3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M294.27 136.19v-20.33M300.53 133.06v-17.2M288.01 133.06v-17.2M309.21 134.36l-14.9-8.6-14.9 8.6v7.3l14.9 8.6 14.9-8.6v-7.3"/>
-  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03" d="M279.41 134.36l14.9 8.61 14.9-8.61"/>
-  <circle cx="294.27" cy="136.19" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="288.01" cy="133.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <circle cx="300.53" cy="133.06" r="1.56" fill="#f3f3f3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.03"/>
-  <text transform="translate(271.92 170.33)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Certificate<tspan x="2.19" y="10.8">Authority</tspan>
-  </text>
-  <circle cx="294.27" cy="220.77" r="24.76" fill="#f3f3f3"/>
-  <path d="M301.41 212.37a6.67 6.67 0 11-6.67-6.67 6.67 6.67 0 016.67 6.67M281.73 235.49a13.35 13.35 0 0126.14-.16" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="294.82" cy="220.77" r="19.7" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.03"/>
-  <circle cx="281.73" cy="235.49" r="1.52" transform="rotate(-34.6 281.7618 235.511)" fill="#f3f3f3" stroke="#000" stroke-miterlimit="10" stroke-width="1.03"/>
-  <text transform="translate(282.09 258.29)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org A<tspan x="1.84" y="10.8">Peer</tspan>
-  </text>
-  <text transform="translate(223.88 373.31)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org B
-  </text>
-  <text transform="translate(675.26 373.42)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org D
-  </text>
-  <text transform="translate(675.56 120.8)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Org C
-  </text>
-  <path fill="#006161" d="M71.88 429.41h105v46.47h-105z"/>
-  <text transform="translate(90.62 454.71)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Client App 2
-  </text>
-  <path fill="#757575" d="M71.88 397.41h105v32h-105z"/>
-  <text transform="translate(101.26 416.41)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Fabric SDK
-  </text>
-  <path fill="#006161" d="M931.07 429.08h105v46.47h-105z"/>
-  <text transform="translate(949.82 454.37)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Client App 4
-  </text>
-  <path fill="#757575" d="M931.07 397.08h105v32h-105z"/>
-  <text transform="translate(960.45 416.08)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Fabric SDK
-  </text>
-  <path fill="#006161" d="M930.07 147.92h105v46.47h-105z"/>
-  <text transform="translate(948.82 173.21)" font-size="12" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Client App 3
-  </text>
-  <path fill="#757575" d="M930.07 115.92h105v32h-105z"/>
-  <text transform="translate(959.45 134.92)" font-size="9" fill="#f3f3f3" font-family="IBMPlexSans, IBM Plex Sans">
-    Fabric SDK
-  </text>
-  <path d="M787.72 441.85h40.75v27.63c-20.38 0-20.38 10.52-40.75 4.54z" fill="#0f6dff" fill-rule="evenodd"/>
-  <text transform="translate(790.44 461.52)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger X
-  </text>
-  <path d="M787.72 476.9h40.75v27.62c-20.38 0-20.38 10.52-40.75 4.54z" fill="#a11950" fill-rule="evenodd"/>
-  <text transform="translate(790.53 496.57)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger Y
-  </text>
-  <path d="M312.76 441.76h40.75v27.63c-20.38 0-20.38 10.52-40.75 4.54z" fill="#0f6dff" fill-rule="evenodd"/>
-  <text transform="translate(315.48 461.43)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger X
-  </text>
-  <path d="M312 188.25h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
-  <text transform="translate(314.76 206.92)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger X
-  </text>
-  <path d="M788 188.25h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
-  <text transform="translate(790.72 206.92)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger X
-  </text>
-  <path d="M442.88 322h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#0f6dff" fill-rule="evenodd"/>
-  <text transform="translate(445.6 340.7)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger X
-  </text>
-  <path d="M516.51 322h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#a11950" fill-rule="evenodd"/>
-  <text transform="translate(519.32 340.7)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger Y
-  </text>
-  <path fill="none" stroke="#a5a5a5" stroke-miterlimit="8" stroke-width=".75" d="M770.67 354.3v-76.9"/>
-  <path fill="none" stroke="#a5a5a5" stroke-miterlimit="10" d="M719.51 316.72H578.04"/>
-  <path fill="#fff" d="M719.51 295.32h104v42h-104z"/>
-  <text transform="translate(744.38 320.82)" font-size="12" font-family="IBMPlexSans, IBM Plex Sans">
-    Channel Y
-  </text>
-  <path d="M788 223.29h40.75v27.62c-20.38 0-20.38 10.53-40.75 4.55z" fill="#a11950" fill-rule="evenodd"/>
-  <text transform="translate(790.81 242.96)" font-size="9" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans">
-    Ledger Y
-  </text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="1080px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#171717;}
+	.st1{clip-path:url(#SVGID_00000125585868767178557920000010817529765019559302_);}
+	.st2{fill:#F0F0F0;}
+	.st3{clip-path:url(#SVGID_00000125604643156707751150000015012399687172445371_);}
+	.st4{fill:#F0F0F0;stroke:#F0F0F0;stroke-width:1.0003;stroke-miterlimit:10.0031;}
+	.st5{fill:#282828;stroke:#282828;stroke-width:1.0003;stroke-miterlimit:10.0031;}
+	.st6{fill:none;stroke:#6F6F6F;stroke-width:0.7502;stroke-miterlimit:8.0025;}
+	.st7{fill:#006161;}
+	.st8{fill:#FFFFFF;}
+	.st9{font-family:'IBMPlexSans';}
+	.st10{font-size:12.0037px;}
+	.st11{fill:#757575;}
+	.st12{fill:#F3F3F3;}
+	.st13{font-size:9.0028px;}
+	.st14{font-family:'IBMPlexSans-Bold';}
+	.st15{font-size:8.0025px;}
+	.st16{fill:#282828;}
+	.st17{fill:#FFFFFF;stroke:#000000;stroke-width:1.0303;stroke-linecap:round;stroke-miterlimit:10.0031;}
+	.st18{fill:none;stroke:#000000;stroke-width:1.0303;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0012;}
+	.st19{fill:#F3F3F3;stroke:#000000;stroke-width:1.0303;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4.0012;}
+	.st20{fill:none;stroke:#000000;stroke-width:1.0303;stroke-linecap:round;stroke-miterlimit:10.0031;}
+	.st21{fill:#F3F3F3;stroke:#000000;stroke-width:1.0303;stroke-miterlimit:10.0031;}
+	.st22{fill-rule:evenodd;clip-rule:evenodd;fill:#0F6DFF;}
+	.st23{fill-rule:evenodd;clip-rule:evenodd;fill:#A11950;}
+	.st24{fill:none;stroke:#A5A5A5;stroke-width:0.7502;stroke-miterlimit:8.0025;}
+	.st25{fill:none;stroke:#A5A5A5;stroke-width:1.0003;stroke-miterlimit:10.0031;}
+</style>
+<path class="st0" d="M458.3,335.7h559.9v478.8H458.3V335.7z"/>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="458.3" y="335.7" width="559.9" height="478.8"/>
+	</defs>
+	<clipPath id="SVGID_00000101819004184225722890000000715035031798302879_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000101819004184225722890000000715035031798302879_);">
+		<path class="st0" d="M458.3,335.7h559.9v478.8H458.3V335.7z"/>
+		<path class="st0" d="M456.6,820.5l603.1,1.9V318.2l-603.1-1.9V820.5z"/>
+	</g>
+</g>
+<g>
+	<path class="st2" d="M1055.1,335.6h419.5v478.9h-419.5V335.6z"/>
+	<g>
+		<defs>
+			<rect id="SVGID_00000008869277221060664560000013891045426457222808_" x="1055.1" y="335.6" width="419.5" height="478.9"/>
+		</defs>
+		<clipPath id="SVGID_00000147931920417722973120000006399362761217890993_">
+			<use xlink:href="#SVGID_00000008869277221060664560000013891045426457222808_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_00000147931920417722973120000006399362761217890993_);">
+			<path class="st4" d="M1055.1,335.6h419.5v478.9h-419.5V335.6z"/>
+			<path class="st0" d="M1053.8,820.5l451.8,1.9V318.1l-451.8-1.9V820.5L1053.8,820.5z"/>
+		</g>
+	</g>
+</g>
+<path class="st5" d="M1079.4,360.6h212.8v174.6h-212.8V360.6z"/>
+<path class="st6" d="M1345,409.5h-52.8 M1345.1,695.1h-52.8 M1079.4,409.5H966.2 M1079.4,694.7H788.5"/>
+<path class="st7" d="M484.6,414.1h105v46.5h-105V414.1z"/>
+<text transform="matrix(1 0 0 1 503.3468 439.5882)" class="st8 st9 st10">Client App 1</text>
+<path class="st11" d="M484.6,382.1h105v32h-105V382.1z"/>
+<text transform="matrix(1 0 0 1 515.9908 401.0765)" class="st12 st9 st13">Fabric SDK</text>
+<path class="st8" d="M862.2,388.3h104v42h-104V388.3z"/>
+<text transform="matrix(1 0 0 1 887.1051 413.8201)" class="st9 st10">Channel X</text>
+<text transform="matrix(1 0 0 1 870.6891 537.3587)" class="st8 st14 st15">Ledger</text>
+<path class="st16" d="M991.9,560.2V452.5h-151v203.2h151V560.2z"/>
+<text transform="matrix(1 0 0 1 866.7125 634.3382)" class="st8 st9 st13">Ordering Service Nodes</text>
+<circle class="st12" cx="913.8" cy="596.3" r="23.6"/>
+<path class="st12" d="M413.7,258.3"/>
+<circle class="st17" cx="902.6" cy="609.5" r="2.6"/>
+<circle class="st17" cx="897.3" cy="590.8" r="2.6"/>
+<ellipse transform="matrix(0.1602 -0.9871 0.9871 0.1602 175.9155 1425.825)" class="st17" cx="925.9" cy="609.5" rx="2.5" ry="2.5"/>
+<circle class="st17" cx="914.2" cy="578.6" r="2.6"/>
+<circle class="st17" cx="930.4" cy="590.8" r="2.6"/>
+<path class="st6" d="M862.2,409.5h-73.7 M628.6,409.5h-39 M628.6,695.1h-38 M914,452.5v-22.1 M913.9,695.1v-39.4"/>
+<text transform="matrix(1 0 0 1 858.526 474.5589)" class="st8 st9 st10">Ordering Service Org</text>
+<path class="st5" d="M629.1,613.2h159.5v174.6H629.1V613.2z"/>
+<circle class="st12" cx="708.9" cy="644.2" r="23.6"/>
+<path class="st18" d="M708.8,647.1v-20.3 M715,644v-17.2 M702.5,644v-17.2 M723.7,645.3l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6l14.9-8.6
+	V645.3"/>
+<path class="st18" d="M693.9,645.3l14.9,8.6l14.9-8.6"/>
+<circle class="st19" cx="708.8" cy="647.1" r="1.6"/>
+<circle class="st19" cx="702.5" cy="644" r="1.6"/>
+<circle class="st19" cx="715" cy="644" r="1.6"/>
+<circle class="st12" cx="708.8" cy="731.7" r="24.8"/>
+<path class="st12" d="M413.7,258.3"/>
+<circle class="st20" cx="709.3" cy="731.7" r="19.7"/>
+<circle class="st21" cx="696.2" cy="746.5" r="1.5"/>
+<text transform="matrix(1 0 0 1 686.5919 769.7191)" class="st8 st9 st13">Org B Peer</text>
+<ellipse transform="matrix(0.1891 -0.982 0.982 0.1891 239.3387 1312.2896)" class="st12" cx="914.2" cy="511.2" rx="23.6" ry="23.6"/>
+<path class="st19" d="M914.1,514.1v-20.3 M920.3,511v-17.2 M907.8,511v-17.2"/>
+<path class="st12" d="M929,512.3l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6l14.9-8.6V512.3"/>
+<path class="st18" d="M929,512.3l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6l14.9-8.6V512.3"/>
+<path class="st12" d="M899.2,512.3l14.9,8.6l14.9-8.6"/>
+<path class="st18" d="M899.2,512.3l14.9,8.6l14.9-8.6"/>
+<circle class="st19" cx="914.1" cy="514.1" r="1.6"/>
+<circle class="st19" cx="907.8" cy="511" r="1.6"/>
+<circle class="st19" cx="920.3" cy="511" r="1.6"/>
+<path class="st5" d="M1079.2,613.3H1292V788h-212.8V613.3z M628.6,360.6h159.8v174.6H628.6V360.6z"/>
+<circle class="st12" cx="1184" cy="645.3" r="23.6"/>
+<path class="st18" d="M1183.9,648.2v-20.3 M1190.1,645.1v-17.2 M1177.6,645.1v-17.2 M1198.8,646.4l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6
+	l14.9-8.6V646.4"/>
+<path class="st18" d="M1169,646.4l14.9,8.6l14.9-8.6"/>
+<circle class="st19" cx="1183.9" cy="648.2" r="1.6"/>
+<circle class="st19" cx="1177.6" cy="645.1" r="1.6"/>
+<circle class="st19" cx="1190.1" cy="645.1" r="1.6"/>
+<circle class="st12" cx="1183.9" cy="732.8" r="24.8"/>
+<path class="st12" d="M413.7,258.3"/>
+<circle class="st20" cx="1184.4" cy="732.8" r="19.7"/>
+<ellipse transform="matrix(0.8231 -0.5678 0.5678 0.8231 -217.3392 797.3608)" class="st21" cx="1171.3" cy="747.6" rx="1.5" ry="1.5"/>
+<text transform="matrix(1 0 0 1 1162.5104 769.7191)" class="st12 st9 st13">Org D Peer</text>
+<circle class="st12" cx="1184.3" cy="392.6" r="23.6"/>
+<path class="st18" d="M1184.2,395.5v-20.3 M1190.4,392.4v-17.2 M1177.9,392.4v-17.2 M1199.1,393.7l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6
+	l14.9-8.6V393.7"/>
+<path class="st18" d="M1169.3,393.7l14.9,8.6l14.9-8.6"/>
+<circle class="st19" cx="1184.2" cy="395.5" r="1.6"/>
+<circle class="st19" cx="1177.9" cy="392.4" r="1.6"/>
+<circle class="st19" cx="1190.4" cy="392.4" r="1.6"/>
+<circle class="st12" cx="1184.2" cy="479.1" r="24.8"/>
+<path class="st12" d="M413.7,258.3"/>
+<circle class="st20" cx="1184.7" cy="479.1" r="19.7"/>
+<ellipse transform="matrix(0.8231 -0.5678 0.5678 0.8231 -73.2302 752.6563)" class="st21" cx="1171.6" cy="493.9" rx="1.5" ry="1.5"/>
+<text transform="matrix(1 0 0 1 1163.0826 516.6419)" class="st12 st9 st13">Org C Peer</text>
+<text transform="matrix(1 0 0 1 638.5284 379.1097)" class="st8 st9 st10">Org A</text>
+<circle class="st12" cx="708.2" cy="391.6" r="23.6"/>
+<path class="st18" d="M708.1,394.5v-20.3 M714.3,391.4v-17.2 M701.8,391.4v-17.2 M723,392.7l-14.9-8.6l-14.9,8.6v7.3l14.9,8.6
+	L723,400V392.7"/>
+<path class="st18" d="M693.2,392.7l14.9,8.6l14.9-8.6"/>
+<circle class="st19" cx="708.1" cy="394.5" r="1.6"/>
+<circle class="st19" cx="701.8" cy="391.4" r="1.6"/>
+<circle class="st19" cx="714.3" cy="391.4" r="1.6"/>
+<text transform="matrix(1 0 0 1 666.3397 427.7188)" class="st8 st9 st13">Certificate Authority</text>
+<circle class="st12" cx="708.1" cy="479.1" r="24.8"/>
+<path class="st12" d="M413.7,258.3"/>
+<circle class="st20" cx="708.6" cy="479.1" r="19.7"/>
+<ellipse transform="matrix(0.8231 -0.5678 0.5678 0.8231 -157.4232 482.2858)" class="st21" cx="695.5" cy="493.9" rx="1.5" ry="1.5"/>
+<text transform="matrix(1 0 0 1 686.8756 516.6419)" class="st8 st9 st13">Org A Peer</text>
+<text transform="matrix(1 0 0 1 637.6481 631.6976)" class="st8 st9 st10">Org B</text>
+<text transform="matrix(1 0 0 1 1089.1666 631.8069)" class="st8 st9 st10">Org D</text>
+<text transform="matrix(1 0 0 1 1089.4664 379.1097)" class="st8 st9 st10">Org C</text>
+<path class="st7" d="M485.6,687.8h105v46.5h-105V687.8z"/>
+<text transform="matrix(1 0 0 1 504.3468 713.1224)" class="st8 st9 st10">Client App 2</text>
+<path class="st11" d="M485.6,655.8h105v32h-105V655.8z"/>
+<text transform="matrix(1 0 0 1 514.9904 674.8109)" class="st12 st9 st13">Fabric SDK</text>
+<path class="st7" d="M1345.1,687.5h105V734h-105V687.5z"/>
+<text transform="matrix(1 0 0 1 1363.8112 712.7825)" class="st8 st9 st10">Client App 4</text>
+<path class="st11" d="M1345.1,655.5h105v32h-105V655.5z"/>
+<text transform="matrix(1 0 0 1 1374.4449 674.4808)" class="st12 st9 st13">Fabric SDK</text>
+<path class="st7" d="M1344.1,406.2h105v46.5h-105L1344.1,406.2z"/>
+<text transform="matrix(1 0 0 1 1362.8112 431.5359)" class="st8 st9 st10">Client App 3</text>
+<path class="st11" d="M1344.1,374.2h105v32h-105L1344.1,374.2z"/>
+<text transform="matrix(1 0 0 1 1373.444 393.2342)" class="st12 st9 st13">Fabric SDK</text>
+<path class="st22" d="M1215.7,698.3h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.5V698.3z"/>
+<text transform="matrix(1 0 0 1 1218.3824 717.9339)" class="st8 st9 st13">Ledger X</text>
+<path class="st23" d="M1215.7,733.3h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.5V733.3z"/>
+<text transform="matrix(1 0 0 1 1218.4723 752.9954)" class="st8 st9 st13">Ledger Y</text>
+<path class="st22" d="M738.6,700.2h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.5V700.2z"/>
+<text transform="matrix(1 0 0 1 741.276 719.8441)" class="st8 st9 st13">Ledger X</text>
+<path class="st22" d="M737.8,446.6h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.6V446.6z"/>
+<text transform="matrix(1 0 0 1 740.5558 465.2562)" class="st8 st9 st13">Ledger X</text>
+<path class="st22" d="M1214.9,446.6h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.6V446.6z"/>
+<text transform="matrix(1 0 0 1 1217.6617 465.2562)" class="st8 st9 st13">Ledger X</text>
+<path class="st22" d="M856.7,580.4h40.8V608c-20.4,0-20.4,10.5-40.8,4.6V580.4z"/>
+<text transform="matrix(1 0 0 1 859.4362 599.0775)" class="st8 st9 st13">Ledger X</text>
+<path class="st23" d="M930.4,580.4h40.8V608c-20.4,0-20.4,10.5-40.8,4.6V580.4z"/>
+<text transform="matrix(1 0 0 1 933.1793 599.0775)" class="st8 st9 st13">Ledger Y</text>
+<path class="st24" d="M1184.6,612.7v-76.9"/>
+<path class="st25" d="M1133.4,575.1H991.9"/>
+<path class="st8" d="M1133.4,553.7h104v42h-104V553.7z"/>
+<text transform="matrix(1 0 0 1 1158.3082 579.1907)" class="st9 st10">Channel Y</text>
+<path class="st23" d="M1214.9,481.6h40.8v27.6c-20.4,0-20.4,10.5-40.8,4.6V481.6z"/>
+<text transform="matrix(1 0 0 1 1217.7526 501.3069)" class="st8 st9 st13">Ledger Y</text>
+<text transform="matrix(1 0 0 1 667.3397 681.7189)" class="st8 st9 st13">Certificate Authority</text>
+<text transform="matrix(1 0 0 1 1143.3394 681.719)" class="st8 st9 st13">Certificate Authority</text>
+<text transform="matrix(1 0 0 1 1143.3394 427.7189)" class="st8 st9 st13">Certificate Authority</text>
+<text transform="matrix(1 0 0 1 871.5735 548.7382)" class="st8 st9 st13">Certificate Authority</text>
 </svg>

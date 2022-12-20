@@ -1,210 +1,152 @@
-<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="1046.86" height="1000">
-  <path d="M993.26 928.94H61.36a12 12 0 0 1-12-12V86a12 12 0 0 1 12-12h931.9a12 12 0 0 1 12 12v830.8a12.06 12.06 0 0 1-12 12.14z" fill="#010f5e" fill-rule="evenodd"/>
-  <path d="M662 908.14H386.36a12 12 0 0 1-12-12v-752.6a12 12 0 0 1 12-12H662a12 12 0 0 1 12 12v752.6a12 12 0 0 1-12 12zM353.66 908.14H78a12 12 0 0 1-12-12v-752.6a12 12 0 0 1 12-12h275.6a12 12 0 0 1 12 12v752.6a11.89 11.89 0 0 1-11.94 12zM972.46 908.14h-275.6a12 12 0 0 1-12-12v-752.6a12 12 0 0 1 12-12h275.6a12 12 0 0 1 12 12v752.6a12 12 0 0 1-12 12z" fill="#fff" fill-rule="evenodd"/>
-  <path d="M946 887.44H92.36a12 12 0 0 1-12-12V199a12 12 0 0 1 12-12H946a12 12 0 0 1 12 12v676.5a12 12 0 0 1-12 11.94z" fill="#fff" stroke="#08caeb" stroke-dasharray="8" fill-rule="evenodd"/>
-  <path d="M918.16 867.74h-805.5a12 12 0 0 1-12-12v-528.8a12 12 0 0 1 12-12h805.5a12 12 0 0 1 12 12v528.8a12 12 0 0 1-12 12z" fill="#fff" stroke="#6182bb" fill-rule="evenodd"/>
-  <path fill="none" d="M409.36 328.14h230.4v23.3h-230.4z"/>
-  <text transform="translate(458.41 345.95)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    WorkerPool
-  </text>
-  <path fill="none" d="M117.36 148.44h196.9v34h-196.9z"/>
-  <text transform="translate(180.61 166.23)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Zone 1
-  </text>
-  <path fill="none" d="M416.36 94.14h214.6v34h-214.6z"/>
-  <text transform="translate(484.39 111.99)" font-size="24.07" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
-    Region 1
-  </text>
-  <text transform="translate(429.66 237.57)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Multizone-Cluster">
-    Multizone Cluster
-  </text>
-  <ellipse cx="43.96" cy="74.04" rx="19.9" ry="20.5" fill="#08caeb"/>
-  <path d="M304.06 511.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V500a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="#0039c8" d="M133.36 392.04h166.5v23.3h-166.5z"/>
-  <text transform="translate(157.42 404.85)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 1
-  </text>
-  <path d="M304.06 683.44h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12v120.6a12 12 0 0 1-12 11.9z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="none" d="M133.36 563.54h166.5v23.3h-166.5z"/>
-  <text transform="translate(157.42 576.36)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 2
-  </text>
-  <path d="M304.06 854.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V843a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="none" d="M133.36 735.04h166.5v23.3h-166.5z"/>
-  <text transform="translate(157.42 747.88)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 3
-  </text>
-  <path fill="none" d="M416.36 148.44h196.9v34h-196.9z"/>
-  <text transform="translate(479.58 166.23)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Zone 2
-  </text>
-  <path d="M602.06 511.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V500a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="none" d="M431.36 392.04h166.5v23.3h-166.5z"/>
-  <text transform="translate(455.39 404.85)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 1
-  </text>
-  <path d="M602.06 683.44h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12v120.6a12 12 0 0 1-12 11.9z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="none" d="M431.36 563.54h166.5v23.3h-166.5z"/>
-  <text transform="translate(455.39 576.36)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 2
-  </text>
-  <path d="M602.06 854.94h-174.9a12 12 0 0 1-12-12v-120.5a12 12 0 0 1 12-12h174.9a12 12 0 0 1 12 12V843a12 12 0 0 1-12 11.94z" fill="#0039c8" fill-rule="evenodd"/>
-  <path fill="none" d="M431.36 735.04h166.5v23.3h-166.5z"/>
-  <text transform="translate(455.39 747.88)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 3
-  </text>
-  <path fill="none" d="M733.16 151.24h196.9v34h-196.9z"/>
-  <text transform="translate(796.45 169.08)" font-size="24.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Zone 3
-  </text>
-  <path d="M900.29 520.11H698.05c-7.64 0-13.88-6-13.88-13.28V373.38c0-7.3 6.24-13.27 13.88-13.27h202.24c7.64 0 13.88 6 13.88 13.27v133.45c0 7.3-6.24 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(742.52 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 1
-  </text>
-  <path d="M332.67 520.11H130.42c-7.63 0-13.88-6-13.88-13.28V373.38c0-7.3 6.25-13.27 13.88-13.27h202.25c7.63 0 13.87 6 13.87 13.27v133.45c0 7.3-6.24 13.28-13.87 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(174.89 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 1
-  </text>
-  <path d="M616.48 520.11H414.23c-7.63 0-13.87-6-13.87-13.28V373.38c0-7.3 6.24-13.27 13.87-13.27h202.25c7.63 0 13.88 6 13.88 13.27v133.45c0 7.3-6.25 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(458.71 381.44)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 1
-  </text>
-  <path d="M900.29 688.38H698.05c-7.64 0-13.88-6-13.88-13.27V541.66c0-7.3 6.24-13.28 13.88-13.28h202.24c7.64 0 13.88 6 13.88 13.28v133.45c0 7.3-6.24 13.27-13.88 13.27z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(742.52 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 2
-  </text>
-  <path d="M332.67 688.38H130.42c-7.63 0-13.88-6-13.88-13.27V541.66c0-7.3 6.25-13.28 13.88-13.28h202.25c7.63 0 13.87 6 13.87 13.28v133.45c0 7.3-6.24 13.27-13.87 13.27z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(174.89 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 2
-  </text>
-  <path d="M616.48 688.38H414.23c-7.63 0-13.87-6-13.87-13.27V541.66c0-7.3 6.24-13.28 13.87-13.28h202.25c7.63 0 13.88 6 13.88 13.28v133.45c0 7.3-6.25 13.27-13.88 13.27z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(458.71 549.71)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 2
-  </text>
-  <path d="M900.29 856.66H698.05c-7.64 0-13.88-6-13.88-13.28V709.94c0-7.3 6.24-13.28 13.88-13.28h202.24c7.64 0 13.88 6 13.88 13.28v133.44c0 7.31-6.24 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(742.52 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 3
-  </text>
-  <path d="M332.67 856.66H130.42c-7.63 0-13.88-6-13.88-13.28V709.94c0-7.3 6.25-13.28 13.88-13.28h202.25c7.63 0 13.87 6 13.87 13.28v133.44c0 7.31-6.24 13.28-13.87 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(174.89 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 3
-  </text>
-  <path d="M616.48 856.66H414.23c-7.63 0-13.87-6-13.87-13.28V709.94c0-7.3 6.24-13.28 13.87-13.28h202.25c7.63 0 13.88 6 13.88 13.28v133.44c0 7.31-6.25 13.28-13.88 13.28z" fill="#0039c8" fill-rule="evenodd"/>
-  <text transform="translate(458.71 717.99)" font-size="17" fill="#fff" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Worker Node 3
-  </text>
-  <path fill="none" d="M729.36 392.04h166.5v23.3h-166.5zM729.36 563.54h166.5v23.3h-166.5z"/>
-  <text transform="translate(38.35 81.69)" font-size="21.66" font-family="Helvetica" style="isolation:isolate">
-    3
-  </text>
-  <text transform="translate(370.2 277.62)" font-size="18" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    + anti-affinity (across worker nodes)
-  </text>
-  <path d="M239 802.16h-48.76c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6H239c2.26 0 4.11 4.32 4.11 9.6v30.8c.02 5.28-1.83 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(192.32 793.86)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    (Raft)
-  </text>
-  <text transform="translate(192.32 764.84)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Ordering<tspan x="0" y="12">Node 1</tspan>
-  </text>
-  <path d="M174.08 633.44H125.3c-2.26 0-4.11-4.32-4.11-9.6V593c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.32-1.85 9.64-4.11 9.64z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(127.38 612.06)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    Org 1
-  </text>
-  <text transform="translate(127.38 599.64)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
-    Peer 2
-  </text>
-  <path d="M174.92 466.23h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c-.03 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(128.22 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    Org 1
-  </text>
-  <text transform="translate(128.22 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
-    Peer 1
-  </text>
-  <path d="M742.55 633.44h-48.79c-2.25 0-4.1-4.32-4.1-9.6V593c0-5.28 1.85-9.6 4.1-9.6h48.79c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.32-1.85 9.64-4.11 9.64z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(695.84 610.86)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    Org 1
-  </text>
-  <text transform="translate(695.84 598.44)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
-    Peer 4
-  </text>
-  <path d="M458.74 466.23H410c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c-.05 5.28-1.89 9.6-4.15 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(412.03 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    Org 1
-  </text>
-  <text transform="translate(412.03 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" letter-spacing="-.02em" style="isolation:isolate">
-    Peer 3
-  </text>
-  <path d="M539.7 801.24h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.81 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(493 792.94)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    (Raft)
-  </text>
-  <text transform="translate(493 763.92)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-        Ordering<tspan x="0" y="12">Node 3</tspan>
-  </text>
-  <path d="M539.7 633.44h-48.78c-2.26 0-4.11-4.32-4.11-9.6V593c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.32-1.81 9.64-4.11 9.64z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(493 596.12)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Ordering<tspan x="0" y="12">Node 2</tspan>
-  </text>
-  <text transform="translate(491.32 625.59)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    (<tspan x="3.04" y="0" letter-spacing="-.01em">R</tspan><tspan x="8.75" y="0">aft)</tspan>
-  </text>
-  <g opacity=".5">
-    <path d="M903.83 633.44h-48.78c-2.26 0-4.11-4.32-4.11-9.6V593c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.32-1.85 9.64-4.11 9.64z" fill="#fff" fill-rule="evenodd"/>
-    <text transform="translate(857.12 610.86)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-      <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
-    </text>
-    <text transform="translate(857.12 627.6)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
-      R2
-    </text>
-    <text transform="translate(857.12 598.44)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-      CA 2
-    </text>
-  </g>
-  <path d="M620.15 633.44h-48.78c-2.26 0-4.11-4.32-4.11-9.6V593c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.32-1.85 9.64-4.11 9.64z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(573.45 610.86)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
-  </text>
-  <text transform="translate(573.45 627.6)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
-    R1
-  </text>
-  <text transform="translate(573.45 598.44)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    CA 2
-  </text>
-  <g opacity=".5">
-    <path d="M620.15 466.23h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-    <text transform="translate(573.45 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-      <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
-    </text>
-    <text transform="translate(573.45 460.39)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
-      R2
-    </text>
-    <text transform="translate(573.45 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-      CA 1
-    </text>
-  </g>
-  <path d="M335.16 466.23h-48.79c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.79c2.25 0 4.1 4.32 4.1 9.6v30.8c0 5.28-1.85 9.6-4.1 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(288.45 443.64)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    <tspan letter-spacing="-.02em">P</tspan><tspan x="5.31" y="0">eers</tspan>
-  </text>
-  <text transform="translate(288.45 460.39)" font-size="10" font-family="IBMPlexSans-Bold, IBM Plex Sans" font-weight="700" style="isolation:isolate" data-name="Peers">
-    R1
-  </text>
-  <text transform="translate(288.45 431.22)" font-size="12.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    CA 1
-  </text>
-  <path d="M823.59 466.23h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(776.89 457.92)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    (<tspan x="3.04" y="0" letter-spacing="-.01em">R</tspan><tspan x="8.75" y="0">aft)</tspan>
-  </text>
-  <text transform="translate(776.89 428.91)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Ordering<tspan x="0" y="12">Node 4</tspan>
-  </text>
-  <path d="M823.39 802h-48.78c-2.26 0-4.11-4.32-4.11-9.6v-30.8c0-5.28 1.85-9.6 4.11-9.6h48.78c2.26 0 4.11 4.32 4.11 9.6v30.8c0 5.28-1.85 9.6-4.11 9.6z" fill="#fff" fill-rule="evenodd"/>
-  <text transform="translate(776.69 764.68)" font-size="10" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate">
-    Ordering<tspan x="0" y="12">Node 5</tspan>
-  </text>
-  <text transform="translate(776.69 793.74)" font-size="9.07" font-family="IBMPlexSans, IBM Plex Sans" style="isolation:isolate" data-name="Peers">
-    (Raft)
-  </text>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1920px" height="1080px" viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#010F5E;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#08CAEB;stroke-dasharray:8;}
+	.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;stroke:#6182BB;}
+	.st4{fill:none;}
+	.st5{font-family:'IBMPlexSans';}
+	.st6{font-size:24.07px;}
+	.st7{fill:#FFFFFF;}
+	.st8{fill:#08CAEB;}
+	.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#0039C8;}
+	.st10{fill:#0039C8;}
+	.st11{font-size:17px;}
+	.st12{font-family:'Helvetica';}
+	.st13{font-size:21.66px;}
+	.st14{font-size:18px;}
+	.st15{font-size:9.07px;}
+	.st16{font-size:10px;}
+	.st17{font-size:12.07px;}
+	.st18{opacity:0.5;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+	.st19{font-family:'IBMPlexSans-Bold';}
+</style>
+<path class="st0" d="M1438.2,978H506.3c-6.6,0-12-5.4-12-12V135.1c0-6.6,5.4-12,12-12h931.9c6.6,0,12,5.4,12,12v830.8
+	C1450.3,972.6,1444.9,978,1438.2,978C1438.3,978,1438.3,978,1438.2,978z"/>
+<path class="st1" d="M1107,957.2H831.3c-6.6,0-12-5.4-12-12l0,0V192.6c0-6.6,5.4-12,12-12H1107c6.6,0,12,5.4,12,12v752.6
+	C1119,951.9,1113.6,957.2,1107,957.2L1107,957.2z M798.6,957.2H523c-6.6,0-12-5.4-12-12l0,0V192.6c0-6.6,5.4-12,12-12h275.6
+	c6.6,0,12,5.4,12,12v752.6c0.1,6.6-5.2,11.9-11.8,12C798.8,957.2,798.7,957.2,798.6,957.2z M1417.4,957.2h-275.6
+	c-6.6,0-12-5.4-12-12l0,0V192.6c0-6.6,5.4-12,12-12h275.6c6.6,0,12,5.4,12,12v752.6C1429.4,951.9,1424.1,957.2,1417.4,957.2
+	L1417.4,957.2L1417.4,957.2z"/>
+<path class="st2" d="M1391,936.5H537.3c-6.6,0-12-5.4-12-12V248.1c0-6.6,5.4-12,12-12H1391c6.6,0,12,5.4,12,12v676.5
+	C1403,931.2,1397.6,936.5,1391,936.5z"/>
+<path class="st3" d="M1363.1,916.8H557.6c-6.6,0-12-5.4-12-12V376c0-6.6,5.4-12,12-12h805.5c6.6,0,12,5.4,12,12v528.8
+	C1375.1,911.5,1369.8,916.8,1363.1,916.8z"/>
+<path class="st4" d="M854.3,377.2h230.4v23.3H854.3V377.2z"/>
+<text transform="matrix(1 0 0 1 903.3946 395.0592)" class="st5 st6">WorkerPool</text>
+<path class="st4" d="M562.3,197.5h196.9v34H562.3V197.5z"/>
+<text transform="matrix(1 0 0 1 625.5945 215.3392)" class="st5 st6">Zone 1</text>
+<path class="st4" d="M861.3,143.2h214.6v34H861.3L861.3,143.2z"/>
+<text transform="matrix(1 0 0 1 929.3746 161.0992)" class="st7 st5 st6">Region 1</text>
+<text transform="matrix(1 0 0 1 874.6446 286.6792)" class="st5 st6">Multizone Cluster</text>
+<ellipse class="st8" cx="488.9" cy="123.1" rx="19.9" ry="20.5"/>
+<path class="st9" d="M749,561H574.1c-6.6,0-12-5.4-12-12V428.5c0-6.6,5.4-12,12-12H749c6.6,0,12,5.4,12,12v120.6
+	C761,555.7,755.6,561,749,561z"/>
+<path class="st10" d="M578.3,441.1h166.5v23.3H578.3V441.1z"/>
+<text transform="matrix(1 0 0 1 602.4045 453.9592)" class="st7 st5 st11">Worker Node 1</text>
+<path class="st9" d="M749,732.5H574.1c-6.6,0-12-5.4-12-12V600c0-6.6,5.4-12,12-12H749c6.6,0,12,5.4,12,12v120.6
+	C761,727.2,755.6,732.5,749,732.5z"/>
+<path class="st4" d="M578.3,612.6h166.5v23.3H578.3V612.6z"/>
+<text transform="matrix(1 0 0 1 602.4045 625.4692)" class="st7 st5 st11">Worker Node 2</text>
+<path class="st9" d="M749,904H574.1c-6.6,0-12-5.4-12-12V771.5c0-6.6,5.4-12,12-12H749c6.6,0,12,5.4,12,12v120.6
+	C761,898.7,755.6,904,749,904z"/>
+<path class="st4" d="M578.3,784.1h166.5v23.3H578.3V784.1z"/>
+<text transform="matrix(1 0 0 1 602.4045 796.9892)" class="st7 st5 st11">Worker Node 3</text>
+<path class="st4" d="M861.3,197.5h196.9v34H861.3V197.5z"/>
+<text transform="matrix(1 0 0 1 924.5645 215.3392)" class="st5 st6">Zone 2</text>
+<path class="st9" d="M1047,561H872.1c-6.6,0-12-5.4-12-12V428.5c0-6.6,5.4-12,12-12H1047c6.6,0,12,5.4,12,12v120.6
+	C1059,555.7,1053.6,561,1047,561z"/>
+<path class="st4" d="M876.3,441.1h166.5v23.3H876.3V441.1z"/>
+<text transform="matrix(1 0 0 1 900.3746 453.9592)" class="st7 st5 st11">Worker Node 1</text>
+<path class="st9" d="M1047,732.5H872.1c-6.6,0-12-5.4-12-12V600c0-6.6,5.4-12,12-12H1047c6.6,0,12,5.4,12,12v120.6
+	C1059,727.2,1053.6,732.5,1047,732.5z"/>
+<path class="st4" d="M876.3,612.6h166.5v23.3H876.3V612.6z"/>
+<text transform="matrix(1 0 0 1 900.3746 625.4692)" class="st7 st5 st11">Worker Node 2</text>
+<path class="st9" d="M1047,904H872.1c-6.6,0-12-5.4-12-12V771.5c0-6.6,5.4-12,12-12H1047c6.6,0,12,5.4,12,12v120.6
+	C1059,898.7,1053.6,904,1047,904z"/>
+<path class="st4" d="M876.3,784.1h166.5v23.3H876.3V784.1z"/>
+<text transform="matrix(1 0 0 1 900.3746 796.9892)" class="st7 st5 st11">Worker Node 3</text>
+<path class="st4" d="M1178.1,200.3H1375v34h-196.9L1178.1,200.3z"/>
+<text transform="matrix(1 0 0 1 1241.4344 218.1892)" class="st5 st6">Zone 3</text>
+<path class="st9" d="M1345.3,569.2H1143c-7.6,0-13.9-6-13.9-13.3V422.5c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C1359.2,563.2,1352.9,569.2,1345.3,569.2L1345.3,569.2z"/>
+<text transform="matrix(1 0 0 1 1187.5045 430.5492)" class="st7 st5 st11">Worker Node 1</text>
+<path class="st9" d="M777.7,569.2H575.4c-7.6,0-13.9-6-13.9-13.3V422.5c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C791.5,563.2,785.3,569.2,777.7,569.2L777.7,569.2z"/>
+<text transform="matrix(1 0 0 1 619.8746 430.5492)" class="st7 st5 st11">Worker Node 1</text>
+<path class="st9" d="M1061.5,569.2H859.2c-7.6,0-13.9-6-13.9-13.3V422.5c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C1075.3,563.2,1069.1,569.2,1061.5,569.2L1061.5,569.2z"/>
+<text transform="matrix(1 0 0 1 903.6945 430.5492)" class="st7 st5 st11">Worker Node 1</text>
+<path class="st9" d="M1345.3,737.5H1143c-7.6,0-13.9-6-13.9-13.3V590.8c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C1359.2,731.5,1352.9,737.5,1345.3,737.5z"/>
+<text transform="matrix(1 0 0 1 1187.5045 598.8192)" class="st7 st5 st11">Worker Node 2</text>
+<path class="st9" d="M777.7,737.5H575.4c-7.6,0-13.9-6-13.9-13.3V590.8c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C791.5,731.5,785.3,737.5,777.7,737.5L777.7,737.5z"/>
+<text transform="matrix(1 0 0 1 619.8746 598.8192)" class="st7 st5 st11">Worker Node 2</text>
+<path class="st9" d="M1061.5,737.5H859.2c-7.6,0-13.9-6-13.9-13.3V590.8c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3
+	v133.5C1075.3,731.5,1069.1,737.5,1061.5,737.5z"/>
+<text transform="matrix(1 0 0 1 903.6945 598.8192)" class="st7 st5 st11">Worker Node 2</text>
+<path class="st9" d="M1345.3,905.8H1143c-7.6,0-13.9-6-13.9-13.3V759c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3v133.4
+	C1359.2,899.8,1352.9,905.8,1345.3,905.8L1345.3,905.8z"/>
+<text transform="matrix(1 0 0 1 1187.5045 767.0992)" class="st7 st5 st11">Worker Node 3</text>
+<path class="st9" d="M777.7,905.8H575.4c-7.6,0-13.9-6-13.9-13.3V759c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3v133.4
+	C791.5,899.8,785.3,905.8,777.7,905.8L777.7,905.8z"/>
+<text transform="matrix(1 0 0 1 619.8746 767.0992)" class="st7 st5 st11">Worker Node 3</text>
+<path class="st9" d="M1061.5,905.8H859.2c-7.6,0-13.9-6-13.9-13.3V759c0-7.3,6.2-13.3,13.9-13.3h202.2c7.6,0,13.9,6,13.9,13.3v133.4
+	C1075.3,899.8,1069.1,905.8,1061.5,905.8L1061.5,905.8z"/>
+<text transform="matrix(1 0 0 1 903.6945 767.0992)" class="st7 st5 st11">Worker Node 3</text>
+<path class="st4" d="M1174.3,441.1h166.5v23.3h-166.5V441.1z M1174.3,612.6h166.5v23.3h-166.5V612.6z"/>
+<text transform="matrix(1 0 0 1 483.3345 130.7992)" class="st12 st13">3</text>
+<text transform="matrix(1 0 0 1 815.1846 326.7292)" class="st5 st14">+ anti-affinity (across worker nodes)</text>
+<path class="st1" d="M692.6,851.3h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C698.1,846.9,695.6,851.3,692.6,851.3z"/>
+<text transform="matrix(1 0 0 1 647.3046 843.7397)" class="st5 st15">(Raft)</text>
+<text transform="matrix(1 0 0 1 622.3046 813.02)" class="st5 st16">Ordering Node 1</text>
+<path class="st1" d="M641.6,682.5h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C647.2,678.2,644.7,682.5,641.6,682.5z"/>
+<text transform="matrix(1 0 0 1 574.0208 648.6452)" class="st5 st17">Peer 2 Org 1</text>
+<path class="st1" d="M641.4,515h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C647,510.7,644.5,515,641.4,515z"/>
+<text transform="matrix(1 0 0 1 574.0209 479.6451)" class="st5 st17">Peer 1 Org 1</text>
+<path class="st1" d="M1207.1,682.5h-65.9c-3,0-5.5-4.3-5.5-9.6v-30.8c0-5.3,2.5-9.6,5.5-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1212.6,678.2,1210.1,682.5,1207.1,682.5z"/>
+<text transform="matrix(1 0 0 1 1141.8246 648.6454)" class="st5 st17">Peer 4 Org 1</text>
+<path class="st1" d="M925.4,516h-65.8c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3,0,5.5,4.3,5.5,9.6v30.8
+	C930.9,511.7,928.4,516,925.4,516L925.4,516z"/>
+<text transform="matrix(1 0 0 1 858.0146 479.6451)" class="st5 st17">Peer 3 Org 1</text>
+<path class="st1" d="M993.2,850.3h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C998.8,846,996.3,850.3,993.2,850.3z"/>
+<text transform="matrix(1 0 0 1 946.9846 843.7396)" class="st5 st15">(Raft)</text>
+<text transform="matrix(1 0 0 1 923.9846 813.0292)" class="st5 st16">Ordering Node 3</text>
+<path class="st1" d="M922.2,680.5h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C927.8,676.2,925.3,680.5,922.2,680.5z"/>
+<text transform="matrix(1 0 0 1 852.1057 648.0197)" class="st5 st16">Ordering Node 2</text>
+<path class="st18" d="M1349.4,682.5h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1354.9,678.2,1352.4,682.5,1349.4,682.5L1349.4,682.5z"/>
+<text transform="matrix(1 0 0 1 1288.1045 676.7092)" class="st19 st16">R2</text>
+<text transform="matrix(1 0 0 1 1287.1045 648.6454)" class="st5 st17">CA 2 Peers</text>
+<path class="st1" d="M1065.7,682.5h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1071.2,678.2,1068.7,682.5,1065.7,682.5z"/>
+<text transform="matrix(1 0 0 1 1001.4345 675.7092)" class="st19 st16">R1</text>
+<text transform="matrix(1 0 0 1 1000.5981 648.6454)" class="st5 st17">CA 2 Peers</text>
+<path class="st18" d="M1065.4,515h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1071,510.7,1068.5,515,1065.4,515z"/>
+<text transform="matrix(1 0 0 1 1000.4345 507.8703)" class="st19 st16">R2</text>
+<text transform="matrix(1 0 0 1 1000.5981 479.6451)" class="st5 st17">CA 1 Peers</text>
+<path class="st1" d="M778.5,515h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3,0,5.5,4.3,5.5,9.6v30.8
+	C784,510.7,781.5,515,778.5,515z"/>
+<text transform="matrix(1 0 0 1 712.4346 507.8703)" class="st19 st16">R1</text>
+<text transform="matrix(1 0 0 1 710.5979 479.645)" class="st5 st17">CA 1 Peers</text>
+<path class="st1" d="M1277.1,515.3h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1282.7,511,1280.2,515.3,1277.1,515.3L1277.1,515.3z"/>
+<text transform="matrix(1 0 0 1 1207.8745 479.0202)" class="st5 st16">Ordering Node 4</text>
+<text transform="matrix(1 0 0 1 1228.8447 508.0202)" class="st5 st16">(Rafts)</text>
+<path class="st1" d="M1274.5,851.1h-65.9c-3.1,0-5.6-4.3-5.6-9.6v-30.8c0-5.3,2.5-9.6,5.6-9.6h65.9c3.1,0,5.6,4.3,5.6,9.6v30.8
+	C1280,846.8,1277.5,851.1,1274.5,851.1z"/>
+<text transform="matrix(1 0 0 1 1204.6398 813.0203)" class="st5 st16">Ordering Node 5</text>
+<text transform="matrix(1 0 0 1 1230.6398 843.739)" class="st5 st15">(Raft)</text>
+<text transform="matrix(1 0 0 1 867.6418 675.7433)" class="st5 st16">(Rafts)</text>
 </svg>
