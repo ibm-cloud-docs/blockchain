@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2022-12-14"
+lastupdated: "2022-12-21"
 
 keywords: site map
 subcollection: blockchain
@@ -1160,14 +1160,6 @@ subcollection: blockchain
     * [Adding storage](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-add-storage)
 
 * [Upgrading to a new version of Fabric](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade)
-
-    * [Upgrading nodes from Fabric v1.4 to v2.2](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v22)
-
-    * [Update your CAs](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-cas)
-
-    * [Update your orderers](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-orderers)
-
-    * [Update your peers](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-peers)
 
     * [Upgrading nodes from Fabric v1.4 to v2.4](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v24)
 
