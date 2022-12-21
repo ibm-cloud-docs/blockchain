@@ -23,7 +23,7 @@ subcollection: blockchain
 
 
 
-After creating CAs, peers, and ordering nodes, you need to monitor the resources used by the nodes and potentially reallocate resources.
+After creating CAs, peers, and ordering nodes, you need to monitor the resources used by the nodes and potentially reallocate resources. 
 {: shortdesc}
 
 **Target audience:** This topic is designed for network operators who are responsible for creating, monitoring, managing, and upgrading their components in the blockchain network.
