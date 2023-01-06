@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-12-21"
+  years: 2017, 2023
+lastupdated: "2023-01-05"
 
 keywords: site map
 subcollection: blockchain
@@ -1161,6 +1161,14 @@ subcollection: blockchain
 
 * [Upgrading to a new version of Fabric](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade)
 
+    * [Upgrading nodes from Fabric v1.4 to v2.2](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v22)
+
+    * [Update your CAs](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-cas)
+
+    * [Update your orderers](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-orderers)
+
+    * [Update your peers](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-peers)
+
     * [Upgrading nodes from Fabric v1.4 to v2.4](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v24)
 
     * [Step one: Back up your ledger (optional)](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-one-ledger)
@@ -1702,6 +1710,8 @@ subcollection: blockchain
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
 
+* [04 Jan 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-04-2023)
+
 * [07 Dec 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#12-07-2022)
 
 * [08 Nov 2022](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-08-2022)
@@ -1914,3 +1924,4 @@ subcollection: blockchain
 * [Resources and support forums](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-resources)
 
 * [Submitting support cases](/docs/blockchain?topic=blockchain-blockchain-support#blockchain-support-cases)
+
