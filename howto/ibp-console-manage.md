@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-04-01"
+  years: 2019, 2023
+lastupdated: "2023-01-11"
 
 keywords: IBM Blockchain Platform console, administer a console, add users, remove users, modify a user's role, install patches, Kubernetes cluster expiration, iam, refresh cluster, refresh console
 
@@ -194,7 +194,7 @@ If you encounter issues with your smart contract, you can view the smart contrac
 
 ![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 1.How to find peer fabric version" caption-side="bottom"}
 
-#### <img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v2.x peer image
+#### ![version 2.x](../images/2-x_Pill.png "version 2.x") Hyperledger Fabric v2.x peer image
 {: #ibp-console-manage-console-container-logs-2x}
 
 While the terms "smart contract" and "chaincode" are often used interchangeably, "smart contracts" refers to the business logic that governs transactions and access to its data, while "chaincode" refers to the larger infrastructure of packages and other code that encompasses a smart contract.
@@ -245,7 +245,7 @@ kubectl  logs -f chaincode-execution-0a8fb504-78e2-4d50-a614-e95fb7e7c8f4 -n nf8
 ```
 {: codeblock}
 
-#### <img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v1.4 peer image
+#### ![version 1.4](../images/1-4_Pill.png "version 1.4") Hyperledger Fabric v1.4 peer image
 {: #ibp-console-manage-console-container-logs-14}
 
 Use these instructions when the peer is based on a Fabric v1.4 image.

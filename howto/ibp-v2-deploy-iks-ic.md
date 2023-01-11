@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-06-22"
+  years: 2019, 2023
+lastupdated: "2023-01-11"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -86,7 +86,7 @@ If your cluster is available, select it and click **Next**. It might take a few 
 
 
 
-<img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> The following illustration shows how the {{site.data.keyword.blockchainfull_notm}} Platform components are deployed to the Kubernetes cluster assuming Hyperledger Fabric v2.x images are used by the peer.
+![version 2.x](../images/2-x_Pill.png "version 2.x") The following illustration shows how the {{site.data.keyword.blockchainfull_notm}} Platform components are deployed to the Kubernetes cluster assuming Hyperledger Fabric v2.x images are used by the peer.
 
 ![{{site.data.keyword.blockchainfull_notm}} Platform and the Kubernetes Service](../images/IBP-IKS-Diagram-20.svg "Deploying the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}"){: caption="Figure 2: Deploying the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}." caption-side="bottom"}
 
@@ -95,7 +95,7 @@ If your cluster is available, select it and click **Next**. It might take a few 
 - **App containers**: Containers are created inside the pods for each node that is deployed.
 - **Persistent Storage**: Storage for each node is dynamically provisioned from the Kubernetes cluster `default` storage class every time a node is deployed.
 
-<img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> The following illustration shows how the {{site.data.keyword.blockchainfull_notm}} Platform components are deployed to the Kubernetes cluster assuming Hyperledger Fabric v1.4 images are used by the peer.
+![version 1.4](../images/1-4_Pill.png "version 1.4") The following illustration shows how the {{site.data.keyword.blockchainfull_notm}} Platform components are deployed to the Kubernetes cluster assuming Hyperledger Fabric v1.4 images are used by the peer.
 
 ![{{site.data.keyword.blockchainfull_notm}} Platform and the Kubernetes Service](../images/IBP-IKS-Diagram-14.svg "Deploying the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}"){: caption="Figure 3: Deploying the {{site.data.keyword.blockchainfull_notm}} Platform to a Kubernetes cluster on {{site.data.keyword.cloud_notm}}." caption-side="bottom"}
 

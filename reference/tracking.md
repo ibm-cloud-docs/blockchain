@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2022-04-01"
+  years: 2017, 2023
+lastupdated: "2023-01-11"
 
 keywords: Log analysis, IBM Log Analysis, viewing logs, monitoring, activity tracker
 
@@ -104,7 +104,7 @@ The process to view the logs for a smart contract is similar to how you view you
 ![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 2.How to find peer fabric version" caption-side="bottom"}
 
 
-#### <img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v1.4 peer image  
+#### ![version 1.4](../images/1-4_Pill.png "version 1.4") Hyperledger Fabric v1.4 peer image  
 {: #ibp-tracking-ibp-smart-contract-14}
 
 When your peer is using the Hyperledger Fabric v1.4 image, additional strings are required in the search input box.
@@ -121,7 +121,7 @@ pod:n4c817fpeer1org1-55885d5666-zq55t app:fluentd marbles 1.0.0
 
 ![Filtering on smart contract](../images/logDNAsc.png "Filtering logs by smart contract"){: caption="Figure 3.Filtering logs by smart contract" caption-side="bottom"}
 
-#### <img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v2.x peer image  
+#### ![version 2.x](../images/2-x_Pill.png "version 2.x") Hyperledger Fabric v2.x peer image  
 {: #ibp-tracking-ibp-smart-contract-2x}
 
 In order to filter on the smart contract logs, you need to provide the name of the pod where the smart contract is running. Complete the following steps to get the name of the smart contract pod:
