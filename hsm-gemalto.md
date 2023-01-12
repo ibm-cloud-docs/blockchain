@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-22"
+  years: 2014, 2023
+lastupdated: "2023-01-12"
 
 keywords: HSM, Gemalto, IBM Cloud
 
@@ -49,7 +49,7 @@ Because only the private keys of node identities are secured in the HSM, when yo
 
 - [Part One: Set up the HSM device and HSM client](#ibp-hsm-gemalto-part-one)
 
-    This process involves deploying an **HSM** and configuring a partition as well as deploying an **HSM client** that you will use to configure the device. Throughout these instructions you will run some commands from the HSM server and others from the HSM client. For clarity, we prefix these steps with either <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> or <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>.
+    This process involves deploying an **HSM** and configuring a partition as well as deploying an **HSM client** that you will use to configure the device. Throughout these instructions you will run some commands from the HSM server and others from the HSM client. For clarity, we prefix these steps with either ![HSM server](images/icon-hsm-2.png" "HSM server") or ![HSM client](images/icon-hsm-client.png" "HSM client").
 
 - [Part Two: Configure communications between the HSM server and client](#ibp-hsm-gemalto-part-two)
 
@@ -96,7 +96,7 @@ The steps in this topic focus specifically on the creation of the Cloud HSM and 
 
 In this section you will get the HSM server certificate and create the HSM client certificate-key pair in order for them to be exchanged.
 
-1. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Run the following command using the HSM client to get the server certificate. This certificate enables the client to communicate with the server.
+1. ![HSM client](images/icon-hsm-client.png" "HSM client") Run the following command using the HSM client to get the server certificate. This certificate enables the client to communicate with the server.
 
     ```bash
     scp hsm_admin@<HSM_ADDRESS>:server.pem server.pem
@@ -106,7 +106,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     Replace
     - `<HSM_ADDRESS>` with the IP address of the HSM.
 
-2. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Now, add the HSM server to the client configuration by running the following command:
+2. ![HSM client](images/icon-hsm-client.png" "HSM client") Now, add the HSM server to the client configuration by running the following command:
 
     ```bash
     vtl addServer -n <HSM_ADDRESS> -c server.pem
@@ -116,7 +116,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     Replace
     - `<HSM_ADDRESS>` with the IP address of the HSM.
 
-3. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Create the certificate and private key for the client by running the command:
+3. ![HSM client](images/icon-hsm-client.png" "HSM client") Create the certificate and private key for the client by running the command:
 
     ```bash
     vtl createcert -n <CLIENT_ADDRESS>
@@ -132,7 +132,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     Certificate created and written to: /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem
     ```
 
-4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Copy the client certificate and private key to the HSM server by running the command:
+4. ![HSM client](images/icon-hsm-client.png" "HSM client") Copy the client certificate and private key to the HSM server by running the command:
 
     ```bash
     scp /usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>.pem hsm_admin@<HSM_ADDRESS>:.
@@ -146,7 +146,7 @@ In this section you will get the HSM server certificate and create the HSM clien
 ### Part Three: Register the client with the HSM server
 {: #ibp-hsm-gemalto-part-three}
 
-1. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> SSH into the HSM as the admin the HSM server and register the client by running **one** of the following commands.
+1. ![HSM server](images/icon-hsm-2.png" "HSM server") SSH into the HSM as the admin the HSM server and register the client by running **one** of the following commands.
 
     If the `<CLIENT_ADDRESS>` is the IP address of the client:
 
@@ -166,7 +166,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     - `{CLIENT_NAME}` with the name of the client. This value can be anything meaningful to you.
     - `<CLIENT_ADDRESS>` with either the IP address or fully qualified host name of the client.
 
-2. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> Because network address translation (NAT) exists between the client and the HSM, we need to disable client source IP address validation by the Network Trust Link Server (NTLS) upon Network Trust Link Agent (NTLA) client connection.  Disable ip check on the HSM server and then restart the NTLS service on the HSM server by running the following commands:
+2. ![HSM server](images/icon-hsm-2.png" "HSM server") Because network address translation (NAT) exists between the client and the HSM, we need to disable client source IP address validation by the Network Trust Link Server (NTLS) upon Network Trust Link Agent (NTLA) client connection.  Disable ip check on the HSM server and then restart the NTLS service on the HSM server by running the following commands:
 
     ```bash
     ntls ipcheck disable
@@ -174,7 +174,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     ```
     {: codeblock}
 
-3. <img src="../images/icon-hsm-2.png" alt="HSM server" width="30" style="width:30px; border-style: none"/> Assign a partition to the newly created client on the HSM server by running the following command:
+3. ![HSM server](images/icon-hsm-2.png" "HSM server") Assign a partition to the newly created client on the HSM server by running the following command:
 
     ```bash
     client assignpartition -client ${CLIENT_NAME} -partition ${PARTITION_NAME}
@@ -205,7 +205,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     ```
     {: codeblock}
 
-4. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/> Verify the client can connect to HSM server by running the command:
+4. ![HSM client](images/icon-hsm-client.png" "HSM client") Verify the client can connect to HSM server by running the command:
 
     ```bash
     vtl verify
@@ -221,7 +221,7 @@ In this section you will get the HSM server certificate and create the HSM clien
     0       500752010           partition1
     ```
 
-5. <img src="../images/icon-hsm-client.png" alt="HSM client" width="30" style="width:30px; border-style: none"/>  Create a `configs` folder on the client and then copy the `server.pem` certificate from [Part two](#ibp-hsm-gemalto-part-two), step 1 and the `<CLIENT_ADDRESS>Key.pem` and `<CLIENT_ADDRESS>.pem` files from [Part two](#ibp-hsm-gemalto-part-two), step 3 into the folder:
+5. ![HSM client](images/icon-hsm-client.png" "HSM client")  Create a `configs` folder on the client and then copy the `server.pem` certificate from [Part two](#ibp-hsm-gemalto-part-two), step 1 and the `<CLIENT_ADDRESS>Key.pem` and `<CLIENT_ADDRESS>.pem` files from [Part two](#ibp-hsm-gemalto-part-two), step 3 into the folder:
 
     - Copy `server.pem` to `configs/server.pem`  
     - Copy `/usr/safenet/lunaclient/cert/client/<CLIENT_ADDRESS>Key.pem` to `configs/key.pem`  
