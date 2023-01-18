@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-18"
 
 keywords: smart contract, private data, private data collection, anchor peer, instantiation, install smart contract
 
@@ -20,6 +20,7 @@ subcollection: blockchain
 
 # Deploy a smart contract using Fabric v1.4 (Deprecated)
 {: #ibp-console-smart-contracts-v14}
+
 ![version 1.4](images/1-4_Pill.png "version 1.4") (Deprecated) Learn how to create and package a smart contract, how to install the smart contract on a peer running a Fabric 1.4 image, and how to instantiate the smart contract on a channel using application capability 1.x.
 {: shortdesc}
 

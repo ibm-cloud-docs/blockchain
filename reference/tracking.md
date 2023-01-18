@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-11"
+lastupdated: "2023-01-18"
 
 keywords: Log analysis, IBM Log Analysis, viewing logs, monitoring, activity tracker
 
@@ -104,10 +104,10 @@ The process to view the logs for a smart contract is similar to how you view you
 ![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 2.How to find peer fabric version" caption-side="bottom"}
 
 
-#### ![version 1.4](../images/1-4_Pill.png "version 1.4") Hyperledger Fabric v1.4 peer image  
+#### Hyperledger Fabric v1.4 peer image  
 {: #ibp-tracking-ibp-smart-contract-14}
 
-When your peer is using the Hyperledger Fabric v1.4 image, additional strings are required in the search input box.
+![version 1.4](../images/1-4_Pill.png "version 1.4") When your peer is using the Hyperledger Fabric v1.4 image, additional strings are required in the search input box.
 - Just like when you view node logs, you filter on the pod name, but it needs to be the name of the peer pod where the smart contract is running.
 - Smart contracts run in a `dind` container in the pod, but the logs are forwarded to the `chaincode-logs` container which is of type `fluentd`. Therefore, to filter the logs to only include the smart contract events, you need to include `app:fluentd` in the search input box.
 - Finally, you can append the name and optionally the version of the smart contract, `marbles 1.0.0`.
@@ -121,10 +121,10 @@ pod:n4c817fpeer1org1-55885d5666-zq55t app:fluentd marbles 1.0.0
 
 ![Filtering on smart contract](../images/logDNAsc.png "Filtering logs by smart contract"){: caption="Figure 3.Filtering logs by smart contract" caption-side="bottom"}
 
-#### ![version 2.x](../images/2-x_Pill.png "version 2.x") Hyperledger Fabric v2.x peer image  
+#### Hyperledger Fabric v2.x peer image  
 {: #ibp-tracking-ibp-smart-contract-2x}
 
-In order to filter on the smart contract logs, you need to provide the name of the pod where the smart contract is running. Complete the following steps to get the name of the smart contract pod:
+![version 2.x](../images/2-x_Pill.png "version 2.x") In order to filter on the smart contract logs, you need to provide the name of the pod where the smart contract is running. Complete the following steps to get the name of the smart contract pod:
 
 **Find your cluster namespace**  
 
@@ -166,6 +166,3 @@ pod:chaincode-execution-0a8fb504-78e2-4d50-a614-e95fb7e7c8f4
 {: #ibp-tracking-summary}
 
 Congratulations. In this tutorial you learned how easy it is to use {{site.data.keyword.la_full_notm}} to view the logs for your blockchain nodes and smart contracts. To learn more about monitoring your network, check out the tutorial on using [{{site.data.keyword.mon_full_notm}}](/docs/blockchain?topic=blockchain-ibp-monitoring) with your blockchain network.
-
-
-
