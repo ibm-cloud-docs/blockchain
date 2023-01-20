@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+copyright:
+  years: 2014, 2023
+lastupdated: "2023-01-18"
 
 keywords: smart contract, private data, private data collection, anchor peer
 
@@ -40,8 +40,8 @@ You are currently on the third part of our three-part tutorial series. This tuto
 You can use the steps in these tutorials to build a network with multiple organizations in one cluster for the purposes of development and testing. Use the **Build a network** tutorial if you want to form a blockchain consortium by creating an orderer node and adding organizations. Use the **Join a network** tutorial to connect a peer to the network. Following the tutorials with different consortium members helps you create a truly **distributed** blockchain network.
 
 Select the tutorial that corresponds to your channel configuration:
-- <img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/>*** [Channel application capabilities and peer Fabric images are 2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2)
-- <img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> [Channel application capabilities are 1.4 and peer Fabric images are 1.4 or 2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v14)
+- ![version 2.x](images/2-x_Pill.png "version 2.x")*** [Channel application capabilities and peer Fabric images are 2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v2)
+- ![version 1.4](images/1-4_Pill.png "version 1.4") [Channel application capabilities are 1.4 and peer Fabric images are 1.4 or 2.x](/docs/blockchain?topic=blockchain-ibp-console-smart-contracts-v14)
 
 *** Fabric v2.0 introduced a new distributed process to manage the lifecycle of a smart contract that allows for decentralizing the governance of smart contracts on a channel. Whenever possible, it is recommended that customers should move to using the new smart contract lifecycle to avoid any interruption of service in later upgrades when Fabric no longer supports the v1.4 process for installing and instantiating smart contracts.
 {: important}

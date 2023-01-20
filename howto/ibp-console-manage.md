@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019, 2022
-lastupdated: "2022-04-01"
+  years: 2019, 2023
+lastupdated: "2023-01-18"
 
 keywords: IBM Blockchain Platform console, administer a console, add users, remove users, modify a user's role, install patches, Kubernetes cluster expiration, iam, refresh cluster, refresh console
 
@@ -194,10 +194,10 @@ If you encounter issues with your smart contract, you can view the smart contrac
 
 ![How to find peer fabric version](../images/peerversion.png "How to find peer fabric version"){: caption="Figure 1.How to find peer fabric version" caption-side="bottom"}
 
-#### <img src="../images/2-x_Pill.png" alt="version 2.x" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v2.x peer image
+#### Hyperledger Fabric v2.x peer image
 {: #ibp-console-manage-console-container-logs-2x}
 
-While the terms "smart contract" and "chaincode" are often used interchangeably, "smart contracts" refers to the business logic that governs transactions and access to its data, while "chaincode" refers to the larger infrastructure of packages and other code that encompasses a smart contract.
+![version 2.x](../images/2-x_Pill.png "version 2.x") While the terms "smart contract" and "chaincode" are often used interchangeably, "smart contracts" refers to the business logic that governs transactions and access to its data, while "chaincode" refers to the larger infrastructure of packages and other code that encompasses a smart contract.
 {: important}
 
 If your peer is based on the Hyperledger Fabric v2.x image, you can run the following set of kubectl commands to view the smart contract logs.
@@ -245,10 +245,10 @@ kubectl  logs -f chaincode-execution-0a8fb504-78e2-4d50-a614-e95fb7e7c8f4 -n nf8
 ```
 {: codeblock}
 
-#### <img src="../images/1-4_Pill.png" alt="version 1.4" width="30" style="width:30px; border-style: none"/> Hyperledger Fabric v1.4 peer image
+#### Hyperledger Fabric v1.4 peer image
 {: #ibp-console-manage-console-container-logs-14}
 
-Use these instructions when the peer is based on a Fabric v1.4 image.
+![version 1.4](../images/1-4_Pill.png "version 1.4") Use these instructions when the peer is based on a Fabric v1.4 image.
 
 ##### Viewing smart contract logs on an {{site.data.keyword.cloud_notm}} Kubernetes Service cluster
 {: #ibp-console-manage-console-container-logs-iks}
@@ -295,5 +295,3 @@ When these actions are complete, you can follow the [original steps](/docs/block
 
 Note that if you delete your Kubernetes cluster, you will still be charged for your {{site.data.keyword.blockchainfull_notm}} Platform service instance until you delete that as well.
 {: important}
-
-
