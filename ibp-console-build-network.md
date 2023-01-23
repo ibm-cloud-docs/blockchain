@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2022
-lastupdated: "2022-12-09"
+copyright:
+  years: 2014, 2023
+lastupdated: "2023-01-23"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -221,6 +221,7 @@ Once you have associated the CA admin, you can use the CA tile to create these i
 2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `org1admin` and a **secret** of `org1adminpw`. Then set the `Type` for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register). Click **Next**.
 3. This tutorial does not configure attributes on identities, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register) if you want to learn more. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the peer (also using the `Org1 CA`). For the peer identity, give an enroll ID of `peer1` and a secret of `peer1pw`. This is a node identity, so select `peer` as the **Type**. You can ignore the **Maximum enrollments** field and, on the next panel, do not assign any **Attributes**, as before.
+5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`. 
 
 Registering these identities with the CA is only the first step in **creating** an identity. You will not be able to use these identities until they have been **enrolled**. Enrollment is the process that generates the certificate and private key for the registered user.  For the `org1admin` identity, this will happen during the creation of the MSP, which we will see in the next step. In the case of the peer1 identity, it happens during the creation of the peer.
 {: note}
@@ -331,7 +332,7 @@ In other distributed blockchains, such as Ethereum and Bitcoin, there is no cent
 The ordering service is a key component in a network because it performs a few essential functions:
 
 - It literally **orders** the blocks of transactions that are sent to the peers to be written to their ledgers. This process is called "ordering".
-- On orderers with a system channel, it maintains the **consortium**, the list of peer organizations permitted to create channels, resides. 
+- On orderers with a system channel, it maintains the **consortium**, the list of peer organizations permitted to create channels, resides.
 - It **enforces the policies** decided by the consortium or the channel administrators. These policies dictate everything from who gets to read or write to a channel, to who can create or modify a channel. For example, when a network participant asks to modify a channel or consortium policy, the ordering service processes the request to see if the participant has the proper administrative rights for that configuration update, validates it against the existing configuration, generates a new configuration, and relays it to the peers.
 
 For more information about ordering services and the role they play in networks based on Hyperledger Fabric, see [The Ordering Service](https://hyperledger-fabric.readthedocs.io/en/release-2.2/orderer/ordering_service.html){: external}.
@@ -510,7 +511,7 @@ Perform the following steps from your console:
 
 1. From the **Nodes** tab, click **Add ordering service**.
 1. Make sure the option to **Create an ordering service** is selected. Then click **Next**.
-1. Give your ordering service a **Display name** of `Ordering Service` 
+1. Give your ordering service a **Display name** of `Ordering Service`
 1. If in a paid cluster, choose whether you want your ordering service to have one node (sufficient for testing) or five nodes (good for production). Choose **One ordering node** for this tutorial.
 1. Now choose the **Without a system channel** option. An orderer without the system channel will use the latest Fabric features to manage channels and is the preferred way. The legacy configuration, with-a-system channel can still be selected if you prefer the old way.
 1. For the purpose of this tutorial, do not choose any of the **Advanced deployment options**  (only available in paid clusters). For more information about these options, see the links below.
@@ -518,7 +519,7 @@ Perform the following steps from your console:
     * [Use your own CA certificate and private key](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-third-party-ca)
     * [Hardware Security Module (HSM)](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-cfg-hsm)
     * [Resource allocation](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-allocate-resources)
-1. Click **Next**. 
+1. Click **Next**.
 1. On the next step, the **Add ordering service** page
     * Select `Ordering Service CA` as your CA.
     * Then, select the **enroll ID** for the node identity that you created for your ordering service from the drop-down list, `OS1`.
@@ -659,12 +660,12 @@ Perform the following steps from your console:
 4. On the **Channel details** page, give your channel a name and specify the ordering service the channel will be hosted on. In this tutorial, our channel is called `channel1` while the ordering service is called `Ordering Service`. Note: you will not be able to change the channel name or the ordering service it is hosted on later. Click **Next**.
 5. On the **Organizations** page, select the organizations that will be part of this channel. As we have only created one organization, this will be `Org1 MSP (org1msp)`. After clicking **Add**, you can assign the organization a role on the channel. Because each channel must have at least one operator, make `Org1 MSP (org1msp)` an **Operator**.
 6. Next, choose a **Channel update policy** for the channel. This is the policy that will dictate how many organizations will have to approve updates to the channel configuration. Because this tutorial only involves creating a single organization, this policy should be `1 out of 1`. As you add organizations to the channel, you should change this policy to reflect the needs of your use case. A sensible standard in a five organization channel is to use a majority of organizations. For example, `3 out of 5`.
-7. If the ordering service is not using a system channel follow step A, else step B. 
+7. If the ordering service is not using a system channel follow step A, else step B.
     - A. On the **Orderer organizations** page, choose the `Ordering Service (osmsp)` option from the drop-down. Then select the `Administrator` checkbox. The orgs selected in this step will be able edit orderer configuration settings, (such as block size, timeouts, consenters, etc) for the channel.
     - B. On the **Channel creator organization** page, pick the channel's creator. Because the console allows multiple organizations to be owned by a single user, it is necessary to specify which organization is creating the channel. Because this tutorial is limited to the creation of a single organization, choose `Org1 MSP (org1msp)` from the drop-down list. Likewise, choose `Org1 MSP Admin` as the identity submitting the channel creation request.
-8. On the **Review channel information** page, make sure you have entered the correct values in the correct fields. If a required field is missing, you will see an error notification relating to the field or value that must be corrected. When you are ready, click **Create channel**. 
-    - If the ordering service has a system channel you will be taken back to the **Channels** tab and you can see a pending tile of the channel that you just created (under the **Peer channels** section). 
-    - If the ordering service does not have a system channel you will be taken to the wizard to join orderer nodes. Select the orderer `Ordering Service (osmsp)` and click **Join channel**. You will now be taken back to the **Channels** tab. 
+8. On the **Review channel information** page, make sure you have entered the correct values in the correct fields. If a required field is missing, you will see an error notification relating to the field or value that must be corrected. When you are ready, click **Create channel**.
+    - If the ordering service has a system channel you will be taken back to the **Channels** tab and you can see a pending tile of the channel that you just created (under the **Peer channels** section).
+    - If the ordering service does not have a system channel you will be taken to the wizard to join orderer nodes. Select the orderer `Ordering Service (osmsp)` and click **Join channel**. You will now be taken back to the **Channels** tab.
 
 **Task: Create a channel**
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-12-15"
+  years: 2014, 2023
+lastupdated: "2023-01-23"
 
 keywords: create identities, manage identities, Certificate Authorities, register, enroll, TLS CA, wallet, certificate expiration, delete user
 
@@ -26,8 +26,6 @@ The nodes of the {{site.data.keyword.blockchainfull_notm}} Platform are based on
 {: shortdesc}
 
 **Target audience:** This topic is designed for network operators who are responsible for creating, monitoring, and managing the blockchain network.
-
-
 
 
 ## Managing Certificate Authorities (CAs)
