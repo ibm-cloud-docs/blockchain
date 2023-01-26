@@ -3,7 +3,7 @@ toc:
     subcollection: blockchain
     service-name: ibm-blockchain-platform
     version: 1
-    category: platform_services
+    category: blockchain
     audience: platform
     href: /docs/blockchain/index.html
     console-page: /docs/blockchain/index.html
