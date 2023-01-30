@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-22"
+copyright:
+  years: 2014, 2023
+lastupdated: "2023-01-30"
 
 keywords: ansible playbooks, docker image, blockchain network, APIs, ansible galaxy
 
@@ -70,9 +70,7 @@ The Ansible playbooks include a set of modules that you can use to automate the 
 ## Considerations and Limitations
 {: #ansible-limits}
 
-**Console wallet identities**  
-
-When you use the Ansible playbooks to deploy blockchain nodes, the identities that are required to operate the nodes in the network are generated for you. Don't worry, you have the opportunity to configure the node enroll ID and secrets. But the identities aren't added to the console wallet in the browser. That is a simple manual import step that you need to perform after the playbooks finish and is described in the [tutorial](/docs/blockchain?topic=blockchain-ansible-build#ansible-build-next-steps) on using the playbooks to build your network.
+**Console wallet identities** - When you use the Ansible playbooks to deploy blockchain nodes, the identities that are required to operate the nodes in the network are generated for you. Don't worry, you have the opportunity to configure the node enroll ID and secrets. But the identities aren't added to the console wallet in the browser. That is a simple manual import step that you need to perform after the playbooks finish and is described in the [tutorial](/docs/blockchain?topic=blockchain-ansible-build#ansible-build-next-steps) on using the playbooks to build your network.
 
 ## Getting started
 {: #ansible-getting-started}
