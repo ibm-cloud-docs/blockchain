@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-01"
 
 keywords: site map
 subcollection: blockchain
@@ -325,7 +325,7 @@ subcollection: blockchain
 
     * [Add second ordering node in Region 1](/docs/blockchain?topic=blockchain-ibp-console-hadr-mr-os#ibp-console-hadr-mr-os-region1-osn2)
 
-    * [Add the `OS2-Region1` node to the orderer system channel](/docs/blockchain?topic=blockchain-ibp-console-hadr-mr-os#ibp-console-hadr-mr-os-region1-osn2-system)
+    * [Add the OS2-Region1 node to the orderer system channel](/docs/blockchain?topic=blockchain-ibp-console-hadr-mr-os#ibp-console-hadr-mr-os-region1-osn2-system)
 
     * [Export components](/docs/blockchain?topic=blockchain-ibp-console-hadr-mr-os#ibp-console-hadr-mr-os-region1-export)
 
@@ -1102,6 +1102,10 @@ subcollection: blockchain
 * [Overview](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-overview)
 
 * [Node OU support](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-nodeou)
+
+    * [Part one: Enable Node OU support for an MSP definition](/docs/blockchain?topic=blockchain-cert-mgmt#part-one-enable-node-ou-support-for-an-msp-definition)
+
+    * [Part two: Enable Node OU support for the MSP on a channel](/docs/blockchain?topic=blockchain-cert-mgmt#part-two-enable-node-ou-support-for-the-msp-on-a-channel)
 
 * [Certificate renewal and expiration](/docs/blockchain?topic=blockchain-cert-mgmt#cert-mgmt-renew-expiration)
 

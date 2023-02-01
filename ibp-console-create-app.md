@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-11-23"
+  years: 2014, 2023
+lastupdated: "2023-02-01"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -226,6 +226,7 @@ export FLAG=$(if [ "$(uname -s)" == "Linux" ]; then echo "-w 0"; else echo "-b 0
 echo <base64_string> | base64 --decode $FLAG > <key>.pem
 ```
 {: codeblock}
+
 
 ## Downloading your connection profile
 {: #ibp-console-app-profile}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-01-23"
+lastupdated: "2023-02-01"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -101,7 +101,7 @@ For each organization that you want to create with the console, you should deplo
 
 In this tutorial, we create two organizations, one which will own a peer and another which will own an ordering service. Each organization needs a CA to issue its certificates, therefore we need to create **two CAs**. For the purpose of this tutorial, **we will create only one CA at a time**.
 
-Watch the following video to learn about the process to create the peer's organization and the peer (for video tutorials on how how to create an ordering service and a channel, see [video series](https://developer.ibm.com/series/ibm-blockchain-platform-console-video-series/){: external}:
+Watch the following video to learn about the process to create the peer's organization and the peer (for video tutorials on how  to create an ordering service and a channel, see [video series](https://developer.ibm.com/series/ibm-blockchain-platform-console-video-series/){: external}:
 
 <p><object width="608" height="405" data="https://www.youtube.com/embed/PAC0PPPFxLE?iframeembed=true&amp;playerId=kaltura_player&amp;entry_id=0_s1wchnbg&amp;flashvars[akamaiHD.loadingPolicy]=preInitialize&amp;flashvars[akamaiHD.asyncInit]=true&amp;flashvars[twoPhaseManifest]=true&amp;flashvars[streamerType]=hdnetworkmanifest&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&amp;wid=1_1ogb4fz9" outputclass="iframe"/></p>
 
@@ -221,7 +221,7 @@ Once you have associated the CA admin, you can use the CA tile to create these i
 2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `org1admin` and a **secret** of `org1adminpw`. Then set the `Type` for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register). Click **Next**.
 3. This tutorial does not configure attributes on identities, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register) if you want to learn more. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the peer (also using the `Org1 CA`). For the peer identity, give an enroll ID of `peer1` and a secret of `peer1pw`. This is a node identity, so select `peer` as the **Type**. You can ignore the **Maximum enrollments** field and, on the next panel, do not assign any **Attributes**, as before.
-5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`. 
+5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`.
 
 Registering these identities with the CA is only the first step in **creating** an identity. You will not be able to use these identities until they have been **enrolled**. Enrollment is the process that generates the certificate and private key for the registered user.  For the `org1admin` identity, this will happen during the creation of the MSP, which we will see in the next step. In the case of the peer1 identity, it happens during the creation of the peer.
 {: note}
@@ -252,7 +252,7 @@ Now that we have created the peer's CA and used it to **register** identities fo
 7. On the **Review MSP information** panel, make sure you have entered the correct information. When you are satisfied, click **Create MSP definition**.
 8. After the MSP has been created, click on the tile representing it. Then **download** the MSP to your local filesystem. You will need to send this MSP to all of the organizations in the channels you join.
 
-**Task: Create the peer organization MSP**
+#### Task: Create the peer organization MSP
 
 |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
 | --- | --- | --- | --- | --- |
@@ -264,7 +264,7 @@ Now that we have created the peer's CA and used it to **register** identities fo
 
 After you have created the MSP, you should be able to see the peer organization admin in your console **Wallet**.
 
-**Task: Check your Wallet**
+#### Task: Check your Wallet
 
 | **Field** |  **Display name** | **Description** |
 | --- | --- | --- |
@@ -279,7 +279,7 @@ For more information about MSPs, see [managing organizations](/docs/blockchain?t
 
 After you have [created the Org1 CA](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-CA-org1CA), used it to register Org1 identities, and created the [Org1 MSP](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-peers-org1), you're ready to create a peer for Org1.
 
-**What role do peers play?**  
+#### What role do peers play?
 
 It's important to remember that organizations themselves do not maintain ledgers. Peers do. Organizations also use peers to sign transaction proposals and approve channel configuration updates. Because having at least two peers per organization on a channel makes them highly available, having three peers per organization joined to a channel is considered a best practice for production level implementations because it ensures high availability even while a peer is down for maintenance. In this tutorial though, we'll only show the process for creating a single peer. You can replicate the process to suit your own business needs.
 
@@ -310,7 +310,7 @@ Use your console to perform the following steps:
 7. The last side panel asks you to **Associate an identity** to make it the admin of your peer. For the purpose of this tutorial, make your organization admin, `Org1 MSP Admin`, the admin of your peer as well. It is possible to register and enroll a different identity with the `Org1 CA` and make that identity the admin of your peer, but this tutorial uses the `Org1 MSP Admin` identity.
 8. Review the summary and click **Add peer**. The **Edit configuration JSON** button allows you to override configuration settings for the peer. For this tutorial, the default settings are sufficient.  See [Customizing a peer configuration](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-peer-create-json) to learn more about the options that are available.
 
-**Task: Deploying a peer**
+#### Task: Deploying a peer
 
 |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
 | --- | --- | --- | --- | --- |
@@ -422,7 +422,7 @@ After the CA is running, as indicated by the green box in the tile, complete the
 2. On the side panel that opens,  provide an **Enroll ID** of `admin` and an **Enroll secret** of `adminpw`. For the **Identity display name**, you can use the default value of `Ordering Service CA Admin`.
 3. Click **Associate identity** to add the identity into your console Wallet and associate the admin identity with your CA.
 
-**Task: Associate identity**
+#### Task: Associate identity
 
 |  **Field** | **Display name** | **Enroll ID** | **Secret** |
 | --- | --- | --- | --- |
@@ -431,7 +431,7 @@ After the CA is running, as indicated by the green box in the tile, complete the
 
 You should be able to see the CA admin in your **Wallet**. As we said above, the identity is not stored in your console or managed by {{site.data.keyword.IBM_notm}}. It is only stored in local browser storage. If you change browsers, you will need to import this identity into your console Wallet to be able to operate the CA. Click the CA admin and then click **Export identity** to download the certificate and private key.
 
-**Task: Check your Wallet**
+#### Task: Check your Wallet
 
 | **Field** |  **Display name** | **Description** |
 | --- | --- | --- |
@@ -452,7 +452,7 @@ After you have associated the CA admin, you can use the CA tile to create these 
 3. This tutorial does not configure attributes on identities, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register) if you want to learn more. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the ordering service (also using the `Ordering Service CA`). For the ordering service node identities, give an enroll ID of `OS1` and a secret of `OS1pw`. This is a node identity, so select `orderer` as the **Type**. You can ignore the **Maximum enrollments** field and, on the next panel, do not assign any **Attributes**, as before.
 
-**Task: Create a CA and register users**
+#### Task: Create a CA and register users
 
 | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
 | --- | --- | --- | --- | --- |
@@ -480,7 +480,7 @@ Create your ordering service organization MSP definition and specify the admin i
 7. Click **Create MSP definition**.
 8. After the MSP has been created, click on the tile representing it. Then **download** the MSP to your local filesystem. You will need to send this MSP to all of the organizations in the channels you join.
 
-**Task: Create the ordering service organization MSP definition**
+#### Task: Create the ordering service organization MSP definition
 
 |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
 | ---  | --- | --- | --- | --- |
@@ -492,7 +492,7 @@ Create your ordering service organization MSP definition and specify the admin i
 
 After you have created the MSP, you should be able to see the ordering service organization admin in your **Wallet**, which can be accessed by clicking on the **Wallet** in the left navigation.
 
-**Task: Check your Wallet**
+#### Task: Check your Wallet
 
 | **Field** |  **Display name** | **Description** |
 | --- | --- | --- |
@@ -531,7 +531,7 @@ Perform the following steps from your console:
 1. The **Associate identity** step allows you to choose an admin for your ordering service. Select `Ordering Service MSP Admin` as before and click **Next**.
 1. Review the Summary page and click **Add ordering service**. The **Edit configuration JSON** button allows you to override configuration settings for the ordering service. For this tutorial, the default settings are sufficient. See [Customizing an ordering service  configuration](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-orderer-create-json) to learn more about the options that are available.
 
-**Task: Create an ordering service**
+#### Task: Create an ordering service
 
 |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
 | --- | --- | --- | --- | --- |
@@ -667,7 +667,7 @@ Perform the following steps from your console:
     - If the ordering service has a system channel you will be taken back to the **Channels** tab and you can see a pending tile of the channel that you just created (under the **Peer channels** section).
     - If the ordering service does not have a system channel you will be taken to the wizard to join orderer nodes. Select the orderer `Ordering Service (osmsp)` and click **Join channel**. You will now be taken back to the **Channels** tab.
 
-**Task: Create a channel**
+#### Task: Create a channel
 
 |  **Field** | **Name** |
 | --- | --- |
@@ -693,7 +693,6 @@ Perform the following steps from your console:
 2. Select which peers you want to join to the channel. For purposes of this tutorial, click the box next to `Peer Org1`.
 4. Leave the checkbox for **Make anchor peer** selected. It is a best practice for each organization to have at least one anchor peer on each channel, as anchor peers bootstrap the inter-organizational communication that enables features like [Private Data](https://hyperledger-fabric.readthedocs.io/en/release-2.2/private-data/private-data.html){: external} and [Service Discovery](https://hyperledger-fabric.readthedocs.io/en/release-2.2/discovery-overview.html){: external} to work. While it is only necessary to have one anchor peer on each channel, it does not hurt to make all peers anchor peers. The only downside will be a short-term increase in the stress on your communication layer when new organizations join their peers to the channel, as these peers are designed to contact every anchor peer in every organization to find out about the peers belonging to that organization. Note that you can also make a peer an anchor peer later through the **Channels** tab.
 5. Click **Join channel**.
-
 
 In this tutorial, we are only creating and joining a single peer to the channel. As a result, you don't have to worry about a conflict between the database type used by your peer (which in this tutorial is CouchDB) and any other peers on the channel. However, in a production scenario, a best practice will be to ensure that the peer you are joining to this channel uses the same database type as other peers on the channel. For more information, see [LevelDB vs CouchDB](/docs/blockchain?topic=blockchain-ibp-console-adv-deployment#ibp-console-adv-deployment-level-couch).
 {: important}

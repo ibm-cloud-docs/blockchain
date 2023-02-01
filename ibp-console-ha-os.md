@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-01-23"
+lastupdated: "2023-02-01"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -21,9 +21,6 @@ content-type: tutorial
 
 # Setting up multiregion High Availability (HA) deployments for the ordering service
 {: #ibp-console-hadr-mr-os}
-{: toc-content-type="tutorial"}
-{: toc-completion-time="45m"}
-
 
 In this tutorial, you learn how to set up a Raft ordering service with five ordering nodes that span multiple regions for maximum high availability.
 {: shortdesc}
@@ -40,7 +37,6 @@ After you understand how to spread the ordering nodes across regions, it is poss
 Although you cannot choose which worker node an ordering node is deployed to, the console is configured with an `anti-affinity` policy. This means that for high availability, whenever you deploy a blockchain node on a multi-node cluster, the console attempts to spread ordering nodes that belong to the same organization across the worker nodes if sufficient resources are available. If your cluster is configured with multiple zones, you can designate which zone the ordering node is deployed to when you create it, or you can let the console choose for you. In this case, it also leverages the anti-affinity policy across zones.
 
 A minimum of five ordering nodes is recommended for a production ordering service. In Raft, a majority of the total number of nodes is needed to form a [quorum](/docs/blockchain?topic=blockchain-glossary#glossary-quorum). In other words, if you have one node, you need that node available to have a quorum because the majority of one is one. Similarly, if you have two nodes, you will need both available, since the majority of two is two. In a similar vein, the majority of five is three. This means that in a five node configuration, the loss of two nodes can be tolerated and ensures zero downtime. You can see in the diagram that **Region 1** contains two ordering nodes, **Region 2** contains one ordering node, and **Region 3** contains two ordering nodes. Spreading the nodes across the regions guarantees that if any single region goes down, or if the ordering nodes within it need to be offline for maintenance, that quorum can be maintained by the nodes in the other regions.
-
 
 The tutorial walks you through the following steps:
 1. Deploy the ordering service in **Region 1**.
@@ -101,7 +97,7 @@ After the CA is running, as indicated by the green box in the tile, complete the
 2. On the side panel that opens, provide the **Enroll ID** of `admin` and **Enroll secret** of `adminpw` that you specified in the preceding section. For the **Identity display name**, you can use the default value of `Multiregion OS CA Admin`.
 3. Click **Associate identity** to add the identity into your console Wallet and associate the admin identity with your CA.
 
-**Task: Associate identity**
+#### Task: Associate identity
 
 |  **Field** | **Display name** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -110,7 +106,7 @@ After the CA is running, as indicated by the green box in the tile, complete the
 
 You should be able to see the CA admin in your **Wallet**.
 
-**Task: Check your Wallet**
+#### Task: Check your Wallet
 
 | **Field** |  **Display name** | **Description** |
 | ------------------------- |-----------|----------|
@@ -131,9 +127,9 @@ Because you have already associated the CA admin identity, you can now use the C
 2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `osadmin` and a **secret** of `osadminpw`. Then, use the `Type` drop-down to set the type for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register). Click **Next**.
 3. This tutorial does not configure attributes on identities. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the ordering nodes.  Use the information in the table below to register the ordering node user for the ordering nodes with an **Enroll ID** of `os1` and **secret** `os1pw`.  This is an ordering node identity, so be sure to select `orderer` from the **Type** drop-down list.
-5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`. 
+5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`.
 
-**Task: Create a CA and register users**
+#### Task: Create a CA and register users
 
 | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -160,7 +156,7 @@ Create your ordering service organization MSP definition and specify the admin i
 7. Review the information on the **Summary** panel and click **Create MSP definition**.
 8. After the MSP is created, click on its tile and then click **Export** ![export icon](../../icons/download.svg) to download the `Multiregion OS MSP` to your local filesystem as a `JSON` file. You will need to send this MSP to all operators of the blockchain consoles in other regions.
 
-**Task: Create the ordering service organization MSP definition**
+#### Task: Create the ordering service organization MSP definition
 
 |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -172,7 +168,7 @@ Create your ordering service organization MSP definition and specify the admin i
 
 After you create the MSP, you should be able to see the ordering service organization admin in your **Wallet**, which can be accessed by clicking the **Wallet** tab in the left navigation.
 
-**Task: Check your Wallet**
+#### Task: Check your Wallet
 
 | **Field**    |  **Display name** | **Description** |
 | -------------|-------------------|-----------------|
@@ -199,7 +195,7 @@ After you create the MSP, you should be able to see the ordering service organiz
 7. The **Associate identity** step allows you to choose an admin for your ordering service. Select `Multiregion OS MSP Admin` and click **Next**.
 8. Review the Summary page and click **Add ordering service**.
 
-**Task: Create an ordering service**
+#### Task: Create an ordering service
 
 |  | **Display name** | **MSP ID** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -233,7 +229,7 @@ Now we can create a second ordering node in **Region 1** and add it to the order
     * Click **Next**.
 8. Review the Summary page and click **Add another node**.
 
-**Task: Add second ordering node**
+#### Task: Add second ordering node
 
 |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -244,7 +240,7 @@ Now we can create a second ordering node in **Region 1** and add it to the order
 
 
 
-### Add the `OS2-Region1` node to the orderer system channel
+### Add the OS2-Region1 node to the orderer system channel
 {: #ibp-console-hadr-mr-os-region1-osn2-system}
 
 *If your cluster does not use a system channel, skip this step. To verify if a cluster uses a system channel, click the cluster tile and check the `Orderer Type`.*
@@ -327,7 +323,7 @@ Now we are ready to create a third ordering node that resides in **Region 2** an
     * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
 8. Review the Summary page and click **Add another node**.
 
-**Task: Add third ordering node**
+#### Task: Add third ordering node
 
 |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -407,7 +403,8 @@ Almost done. Let's create the last two ordering nodes that will reside in **Regi
     * For purposes of this tutorial you can skip the **TLS CSR hostname** option.
     * Select the latest available Fabric version from the drop-down list, as it will contain the latest bug fixes and click **Next**.
 8. Review the Summary page and click **Add another node**. Don't worry about adding `OS4-Region3` to the system channel yet. We'll do that after adding the last ordering node.
-**Task: Add fourth ordering node**
+
+#### Task: Add fourth ordering node
 
 |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -418,7 +415,8 @@ Almost done. Let's create the last two ordering nodes that will reside in **Regi
 
 
 Repeat this exact same set of steps for the fifth ordering node, but give it the name `OS5-Region3`.
-**Task: Add fifth ordering node**
+
+#### Task: Add fifth ordering node
 
 |  | **Display name** | **MSP** | **Enroll ID** | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
