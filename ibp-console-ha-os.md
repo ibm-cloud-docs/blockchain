@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2022
-lastupdated: "2022-08-04"
+copyright:
+  years: 2014, 2023
+lastupdated: "2023-01-23"
 
 keywords: high availability, Ordering Service, Raft
 
@@ -30,7 +30,7 @@ In this tutorial, you learn how to set up a Raft ordering service with five orde
 
 ![Architectural diagram](images/mr-ha-os.png "Multiregion ordering service"){: caption="Figure 1. A diagram that shows the architecture of a multiregion ordering service" caption-side="bottom"}
 
-The diagram shows a multiregion ordering service that includes five ordering nodes that are spread across three Kubernetes clusters in three different regions. For simplicity, this tutorial assumes that all the ordering nodes are contributed by the same organization. The setup requires a single Certificate Authority (CA), created in one cluster and imported into the blockchain consoles on the other two clusters. 
+The diagram shows a multiregion ordering service that includes five ordering nodes that are spread across three Kubernetes clusters in three different regions. For simplicity, this tutorial assumes that all the ordering nodes are contributed by the same organization. The setup requires a single Certificate Authority (CA), created in one cluster and imported into the blockchain consoles on the other two clusters.
 
 Throughout this tutorial we refer to two types of nodes: "ordering nodes" and "worker nodes". Ordering nodes belong to a Raft ordering service cluster. Worker nodes refer to the Kubernetes component that hosts the pods where the ordering nodes are deployed.
 {: note}
@@ -131,6 +131,7 @@ Because you have already associated the CA admin identity, you can now use the C
 2. First we'll register the organization admin, which we can do by giving an **Enroll ID** of `osadmin` and a **secret** of `osadminpw`. Then, use the `Type` drop-down to set the type for this identity as `admin`.  You can ignore the **Maximum enrollments** field. If you want to learn more about enrollments, see [Registering identities](/docs/blockchain?topic=blockchain-ibp-console-identities#ibp-console-identities-register). Click **Next**.
 3. This tutorial does not configure attributes on identities. Click **Register user**.
 4. After the organization admin has been registered, repeat this same process for the identity of the ordering nodes.  Use the information in the table below to register the ordering node user for the ordering nodes with an **Enroll ID** of `os1` and **secret** `os1pw`.  This is an ordering node identity, so be sure to select `orderer` from the **Type** drop-down list.
+5. You can also register identities of type `orderer` with the TLS CA. Completing this optional step for **your orderer's admin identity** allows viewing additional channel details for the orderer nodes that use this identity. Repeat steps 1-2 above, changing the `Certificate Authority` drop-down selection from `Root Certificate Authority` to `TLS Certificate Authority`. 
 
 **Task: Create a CA and register users**
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-20"
+lastupdated: "2023-01-30"
 
 keywords: site map
 subcollection: blockchain
@@ -93,7 +93,9 @@ subcollection: blockchain
 
 [Deploy from Red Hat Marketplace](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm)
 
-* [What is the Red Hat Marketplace?](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-whatis)
+* [What is Red Hat Marketplace?](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-whatis)
+
+* [Limitations](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-limitations)
 
 * [Before you begin](/docs/blockchain?topic=blockchain-deploy-ocp-rhm#deploy-ocp-rhm-prerequisites)
 
@@ -1709,6 +1711,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
+
+* [31 Jan 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-31-2023)
 
 * [04 Jan 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#01-04-2023)
 

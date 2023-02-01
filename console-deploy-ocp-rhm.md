@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2018, 2022
-lastupdated: "2022-12-07"
+  years: 2018, 2023
+lastupdated: "2023-01-30"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -23,12 +23,12 @@ subcollection: blockchain
 The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.3 operator onto a Kubernetes cluster on OpenShift Container Platform 4.4+. This operator deploys instances of the certificate authority (CA), peer, ordering nodes and the {{site.data.keyword.blockchainfull_notm}} Platform console that uses to manage the blockchain components on your network. This deployment option is available for OpenShift clusters that are running in {{site.data.keyword.cloud_notm}} or your cloud.
 {: shortdesc}
 
-## What is the Red Hat Marketplace?
+## What is Red Hat Marketplace?
 {: #deploy-ocp-rhm-whatis}
 
-The Red Hat Marketplace is available directly from your OpenShift web console. It provides an open cloud catalog that makes it easier to discover and access certified software for container-based environments in public clouds. With automated deployment, software is immediately available to deploy on any Red Hat OpenShift cluster, providing a fast, integrated experience. Discover and buy certified software, and quickly deploy. Access open source and proprietary software, with responsive support, streamlined billing and contracting, simplified governance, and single-dashboard visibility across clouds. Built in partnership by Red Hat and {{site.data.keyword.IBM_notm}}, this marketplace helps organizations deliver enterprise software and improve workload portability.
+Red Hat Marketplace is available directly from your OpenShift web console. It provides an open cloud catalog that makes it easier to discover and access certified software for container-based environments in public clouds. With automated deployment, software is immediately available to deploy on any Red Hat OpenShift cluster, providing a fast, integrated experience. Discover and buy certified software, and quickly deploy. Access open source and proprietary software, with responsive support, streamlined billing and contracting, simplified governance, and single-dashboard visibility across clouds. Built in partnership by Red Hat and {{site.data.keyword.IBM_notm}}, this marketplace helps organizations deliver enterprise software and improve workload portability.
 
-The marketplace provides a simplified alternative method for deploying an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your cluster instead of the [manual deployment steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or by using [Ansible playbook](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible) scripts.
+Red Hat Marketplace provides a simplified alternative method for deploying an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your cluster instead of the [manual deployment steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or by using [Ansible playbook](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible) scripts.
 
 With just a few simple steps, you can get started with the {{site.data.keyword.blockchainfull_notm}} Platform. After you install the operator to your OpenShift project, you can create a subscription that allows you to deploy the blockchain console UI.
 
@@ -36,6 +36,11 @@ Currently, you cannot deploy certificate authorities (CAs), peers, and ordering 
 {: important}
 
 To learn more about the Marketplace see the [Red Hat documentation](https://marketplace.redhat.com){: external}.
+
+## Limitations
+{: #deploy-ocp-rhm-limitations}
+
+
 - IBM Blockchain Platform 2.5.3 is supported on Red Hat OpenShift 4.4+.
 - You are responsible for the management of health monitoring, logging, and resource usage of your blockchain components.
 - IBM Blockchain Platform is not supported on OpenShift Online.
@@ -103,13 +108,15 @@ volumes:
 - "*"
 ```
 {: codeblock}
-Run the following commands to add the file to your cluster and add the constraint to your project.
+
+Run the following commands to add the file to your cluster and add the constraint to your project:
 
 ```
 oc apply -f ibp-scc.yaml -n <PROJECT_NAME>
 oc adm policy add-scc-to-user <PROJECT_NAME> system:serviceaccounts:<PROJECT_NAME>
 ```
 {: codeblock}
+
 
 Replace `<PROJECT_NAME>` with the name that you want to use for your {{site.data.keyword.blockchainfull_notm}} Platform deployment project.
 
@@ -150,7 +157,9 @@ The required global pull secret is automatically copied from the `openshift-conf
     ```
     {: codeblock}
 
+
 9. Your complete set of pull-secret YAML code is now as follows:
+
     ```
     kind: Secret
     apiVersion: v1
@@ -161,6 +170,7 @@ The required global pull secret is automatically copied from the `openshift-conf
     type: kubernetes.io/dockerconfigjson
     ```
     {: codeblock}
+
 
 10. Click **Create** to finish your setup.
 

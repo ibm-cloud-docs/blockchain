@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-01-04"
+lastupdated: "2023-01-30"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -29,6 +29,18 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+
+## 31 Jan 2023
+{: #01-31-2023}
+
+**Certificate Authority (CA) patch 1.5.5-8, Peer and ordering node patch 1.4.12-22, 2.2.9-4, 2.4.7-4.**
+
+Miscellaneous bug fixes and security patches.
+
+Known issue: If the **Launch the IBM Blockchain Platform console** button is not enabled, refresh the page to enable it.
+
+Severity: medium
 
 
 ## 04 Jan 2023
