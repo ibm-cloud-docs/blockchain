@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-08-04"
+  years: 2014, 2023
+lastupdated: "2023-02-01"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, orderer, ordering node, ordering service, tutorial
 
@@ -61,11 +61,11 @@ If an organization other than the organization that created the ordering service
 As part of describing the process for creating a new node from a separate console, we will refer to "Console 1" and "Console 2". Console 1 is the originating console; it's where the ordering service was originally created. Console 2 is where a user is attempting to create a new node for this ordering service using a different organization in a different console.
 {: important}
 
-**Unless you have already created new nodes for this ordering service, do not reuse an existing CA and MSP**.
+Unless you have already created new nodes for this ordering service, **do not reuse an existing CA and MSP**.
 
 The process of creating a CA, registering identities, and creating an MSP is identical to the process described in [Creating your ordering service organization CA](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-create-orderer-ca) from the Build a network tutorial. However, use the following values:
 
-**Task: Create a CA and register users**
+#### Task: Create a CA and register users
 
 | **Field** | **Description** | **Enroll ID** | **Secret** | **Type** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -79,7 +79,7 @@ If you are using a separate console, it is possible to specify exactly the same 
 
 After your CA has been created and your identities have been registered, create the MSP representing your organization and an admin representing that organization using the following values:
 
-**Task: Create the ordering service organization MSP definition**
+#### Task: Create the ordering service organization MSP definition
 
 |  | **Display name** | **MSP ID** | **Enroll ID**  | **Secret** |
 | ------------------------- |-----------|-----------|-----------|-----------|
@@ -89,7 +89,7 @@ After your CA has been created and your identities have been registered, create 
 | **Identity** | Ordering Service2 MSP Admin |||||
 {: caption="Table 11. Create the ordering service organization MSP definition" caption-side="bottom"}
 
-#### Console 2: export the `Ordering Service2 MSP`
+#### Console 2: export the Ordering Service2 MSP
 {: #ibp-console-add-remove-orderer-add-orderer-export-MSP}
 
 Now that you have created the `Ordering Service2 MSP`, you need to export it to other members of the network (in this tutorial, that means exporting it to the operator of Console 1). You should have downloaded a copy of your MSP to your local machine during the creation process, but if you have not yet done so, download the MSP now. Then send the JSON to the operator of the other console out of band.
@@ -98,7 +98,7 @@ Until your organization is an administrator of the ordering service, you cannot 
 
 ![Export the MSP from Console 2](images/addremove_exportmsp_console2.png "Export the MSP from Console 2"){: caption="Figure 1. Export the MSP from Console 2" caption-side="bottom"}
 
-#### Console 1: import `Ordering Service2 MSP` and export `Ordering Service`
+#### Console 1: import Ordering Service2 MSP and export Ordering Service
 {: #ibp-console-add-remove-orderer-add-orderer-export-ordering-service-console1}
 
 The operator of Console 1 must take the `Ordering Service 2 MSP` and add it to its console by clicking on the **Organizations** tab and then the **Import MSP definition** tab.
@@ -114,7 +114,7 @@ While it is also possible to upload a JSON representing the MSP by clicking the 
 
 After the MSP has been added as an ordering service administrator, the operator of Console 1 must export the ordering service to Console 2. To export a node, navigate to the node and click on the "download" button (the button looks the same as it does in the above image showing the download of `Ordering Service2 MSP`). Then send the JSON file representing the ordering service to the operator of Console 2.
 
-#### Console 2: import `Ordering Service`
+#### Console 2: import Ordering Service
 {: #ibp-console-add-remove-orderer-add-orderer-import-ordering-service-console2}
 
 After the operator of Console 2 has the JSON representing `Ordering Service` on its file system, they must click **Add ordering service** on the **Nodes** panel. Then, they must click **Import an existing ordering service** and click **Next**. On the following panel, they can click **Add file** and select the ordering service. Note that importing and associating an admin identity for this ordering service is an optional step. You can create a new node either way.
@@ -160,8 +160,8 @@ The **TLS Certificate Signing Request (CSR) hostname** is an option available to
 
 After reviewing the **Summary** page, click **Add another node**. This will submit the creation request.
 
-To complete the process of adding the node, you need to add it to the consenter set of the system channel (if applicable). 
-For information about how to do that, proceed to the next section. 
+To complete the process of adding the node, you need to add it to the consenter set of the system channel (if applicable).
+For information about how to do that, proceed to the next section.
 Ordering clusters that do not use a system channel can skip to the step [Add `Ordering Service2 MSP` to `channel1`](#ibp-console-add-remove-orderer-consenters-add)
 
 #### Add the `Ordering Service_2` node to the orderer system channel

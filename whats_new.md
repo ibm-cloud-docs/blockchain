@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+  years: 2014, 2023
+lastupdated: "2023-02-01"
 
 keywords: IBM Blockchain Platform, release, new features
 
@@ -18,8 +18,11 @@ subcollection: blockchain
 
 
 
+
 # What's new
 {: #whats-new}
+
+This page announces major changes to IBM Blockchain Platform.
 
 
 

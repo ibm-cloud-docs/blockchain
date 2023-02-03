@@ -1,8 +1,8 @@
 ---
 
-copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+copyright:
+  years: 2014, 2023
+lastupdated: "2023-02-01"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
