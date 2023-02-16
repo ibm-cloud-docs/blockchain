@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-11-23"
+  years: 2014, 2023
+lastupdated: "2023-02-16"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -26,20 +26,6 @@ subcollection: blockchain
 
 The {{site.data.keyword.blockchainfull}} Platform Developer Tools provide an environment within Visual Studio Code for developing, packaging, and testing smart contracts. You can use the tools to create your smart contract project and get started developing your business logic. You can then use the tools to test your smart contract either on your local machine by using a preconfigured instance of Hyperledger Fabric, or by connecting to an {{site.data.keyword.blockchainfull_notm}} Platform network, before you deploy the smart contract to the {{site.data.keyword.blockchainfull_notm}} Platform. This tutorial describes how to install and use the Developer Tools.
 
-
-
-
-<img usemap="#home_map1" border="0" class="image" id="image_ztx_crb_f1b2" src="images/SmartContractflow-251.png" width="750" alt="Click a box to get more details on the process." style="width:750px;" />
-<map name="home_map1" id="home_map1">
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-creating-a-project" alt="Create a smart contract project" title="Create a Smart contract project" shape="rect" coords="15, 50, 140, 104" />
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-creating-a-project" alt="Develop smart contract code in developer tooling" title="Develop smart contract in developer tooling" shape="rect" coords="161, 50, 288, 99" />
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#packaging-a-smart-contract" alt="Package the smart contract" title="Package the smart contract" shape="rect" coords="305, 49, 433, 102" />
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-deploy" alt="Deploy locally to test and debug" title="Deploy locally to test and debug" shape="rect" coords="303, 119, 429, 170"/>
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-exporting-deleting-smart-contract-package" alt="Export the package" title="Export the package" shape="rect" coords="449, 49, 572, 100" />
-<area href="/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-connecting-ibp" alt="Deploy to {{site.data.keyword.cloud_notm}}" title="Deploy to {{site.data.keyword.cloud_notm}}" shape="rect" coords="605, 45, 740, 105" /></map>  
-
-
-
 The {{site.data.keyword.blockchainfull_notm}} Platform extension works seamlessly with any instance of the {{site.data.keyword.blockchainfull_notm}} Platform that uses Hyperledger Fabric versions 1.4 and later. This tutorial is oriented toward users of the high-level Fabric smart contract programming model. If you are using low-level smart contract APIs, you can find additional instructions in the [{{site.data.keyword.blockchainfull_notm}} Platform extension documentation](https://github.com/IBM-Blockchain/blockchain-vscode-extension/blob/master/README.md). For more information, see the [Writing Your First Chaincode](https://hyperledger-fabric.readthedocs.io/en/latest/chaincode4ade.html) tutorial in the Fabric documentation.
 {: note}
 
@@ -48,14 +34,7 @@ The {{site.data.keyword.blockchainfull_notm}} Platform extension works seamlessl
 
 **Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
 
-The {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools can be installed as a **VS Code extension** on your local system. Use **VS Code extension from the VisualStudio Marketplace** to develop smart contracts and applications locally. You will need to download, install, and configure everything on your local system.
-
-## Install {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension for free
-{: #develop-vscode-install}
-
-Before you install the {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension on your local system, you must complete the prerequisites.
-
-### Prerequisites
+## Prerequisites
 {: #develop-vscode-prerequisites}
 
 - Windows 10, Linux, or Mac OS are currently the supported operating systems.
@@ -84,21 +63,6 @@ If you are using Windows, you also must ensure the following:
 
 **If you installed Node and npm by using a manager such as 'nvm' or 'nodenv', you need to set the default or global version. You can then restart VS Code for the version to be detected by the Prerequisites page.**
 
-### Install the extension
-{: #develop-vscode-installing-the-extension}
-
-**Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
-
-1. Ensure that you are running VS Code version 1.40 or greater.
-2. Go to the [Visual Studio Code extension marketplace page](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform){: external} or search for **{{site.data.keyword.blockchainfull_notm}} Platform** in the extensions panel within Visual Studio Code.
-3. Click **Install**.
-4. If you are upgrading the extension, you will need to restart VS Code to complete installation of the extension.  
-
-After the installation, you can use the {{site.data.keyword.blockchainfull_notm}} icon on the left side of VS Code to open the {{site.data.keyword.blockchainfull_notm}} Platform panel.
-
-![{{site.data.keyword.blockchainfull_notm}} icon](images/vscode-blockchain.png "{{site.data.keyword.blockchainfull_notm}} icon"){: caption="Figure 3. {{site.data.keyword.blockchainfull_notm}} icon in VS Code" caption-side="bottom"}
-
-The extension also adds new commands to the Visual Studio Code command palette. You can use the command palette to complete many of the operations that are explained in details in this guide.
 
 ## Step one: Guided tutorials in VS Code
 {: #develop-vscode-guided-tutorials}

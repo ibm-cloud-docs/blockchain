@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-16"
 
 keywords: site map
 subcollection: blockchain
@@ -1224,11 +1224,7 @@ subcollection: blockchain
 
 * [Before you begin](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-before)
 
-* [Install {{site.data.keyword.blockchainfull_notm}} Platform VS Code extension for free](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-install)
-
-    * [Prerequisites](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-prerequisites)
-
-    * [Install the extension](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-installing-the-extension)
+* [Prerequisites](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-prerequisites)
 
 * [Step one: Guided tutorials in VS Code](/docs/blockchain?topic=blockchain-develop-vscode#develop-vscode-guided-tutorials)
 
