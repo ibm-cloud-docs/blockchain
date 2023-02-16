@@ -11,7 +11,6 @@ subcollection: blockchain
 ---
 
 
-
 {{site.data.keyword.attribute-definition-list}}
 
 
