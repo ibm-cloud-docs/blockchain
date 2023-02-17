@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-06"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -127,7 +127,7 @@ kubectl delete deployment -n <namespace> ibpconsole
 ```
 {: codeblock}
 
-After you edit the custom resource, and delete the deployment and ConfigMap, the console will restart and download the new images and configuration settings provided by the 2.5.3 fix pack from the updated operator. You can use the following commands to confirm that the console has been updated with the latest images and configuration. The new images used by the console and your blockchain nodes will have the tags with the date `20230104`.
+After you edit the custom resource, and delete the deployment and ConfigMap, the console will restart and download the new images and configuration settings provided by the 2.5.3 fix pack from the updated operator. You can use the following commands to confirm that the console has been updated with the latest images and configuration. The new images used by the console and your blockchain nodes will have the tags with the date `20230131`.
 ```
 kubectl get deployment -n <namespace> ibpconsole -o yaml
 kubectl get configmap -n <namespace> ibpconsole-deployer -o yaml
@@ -314,7 +314,7 @@ kubectl delete deployment -n <namespace> ibpconsole
 ```
 {: codeblock}
 
-After you edit the custom resource, and delete the deployment and ConfigMap, the console will restart and download the new images and configuration settings provided by the 2.5.3 fix pack from the updated operator. You can use the following commands to confirm that the console has been updated with the latest images and configuration. The new images used by the console and your blockchain nodes will have the tags with the date `20230104`.
+After you edit the custom resource, and delete the deployment and ConfigMap, the console will restart and download the new images and configuration settings provided by the 2.5.3 fix pack from the updated operator. You can use the following commands to confirm that the console has been updated with the latest images and configuration. The new images used by the console and your blockchain nodes will have the tags with the date `20230131`.
 ```
 kubectl get deployment -n <namespace> ibpconsole -o yaml
 kubectl get configmap -n <namespace> ibpconsole-deployer -o yaml
