@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-12-21"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -158,6 +158,8 @@ After updating your Certificate Authority (CA) nodes, update your orderer nodes,
 ### Update your peers
 
 After updating both your Certificate Authority (CA) and orderer nodes, update your peer nodes, as follows:
+
+**ATTENTION!!**: When creating new v2.2 peers using the steps below, selecting **2.2.8-2** is **highly recommended** - other selectable versions may have chaincode implications. 
 
 1. Before upgrading any peer with CouchDB installed, you must rebuild the CouchDB state database from CouchDB v2.x to v3.x. The recommended process is to add a new peer, and then let the database synchronize. This removes the downtime that would occur when upgrading in place. Then continue as follows, for peers both with and without CouchDB:
 2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
