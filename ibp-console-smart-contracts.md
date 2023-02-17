@@ -19,6 +19,8 @@ subcollection: blockchain
 # Deploy a smart contract
 {: #ibp-console-smart-contracts}
 
+
+
 A smart contract is the code, packaged as chaincode, that applications interact with to read and update data on the blockchain ledger. A smart contract turns business logic into an executable program that is agreed to and verified by all members of a blockchain network. This tutorial is the third part in the [sample network tutorial series](#ibp-console-smart-contracts-structure) and describes how to deploy smart contracts to start transactions in the blockchain network.
 {: shortdesc}
 

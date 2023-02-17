@@ -19,6 +19,8 @@ subcollection: blockchain
 # Blockchain component overview
 {: #blockchain-component-overview}
 
+
+
 The components and structure of the {{site.data.keyword.blockchainfull}} Platform are based on the underlying infrastructure and tools of [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-2.2/){: external}, an open source permissioned blockchain solution to which {{site.data.keyword.IBM_notm}} is a major contributor. Networks based on Fabric include several standard components that can be deployed in a number of configurations to support a wide variety of use cases.
 
 For a more comprehensive overview of Fabric networks and the interrelation of the components that comprise it, see [this document on the structure of a blockchain network](https://hyperledger-fabric.readthedocs.io/en/release-2.2/network/network.html) from the Fabric community documentation, which shows how a network can be started and matured.

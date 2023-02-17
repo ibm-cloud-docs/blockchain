@@ -19,6 +19,8 @@ subcollection: blockchain
 # Developing applications
 {: #ibp-console-app}
 
+
+
 After you install smart contracts (chaincode) and deploy your peer and ordering nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this page to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}
 

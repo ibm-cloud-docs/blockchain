@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #ibp-console-build-ha-ca}
 
 
+
+
 Because redundancy is required to achieve high availability (HA) networks, you can use the {{site.data.keyword.blockchainfull}} Platform console to configure a CA for high availability.
 {: shortdesc}
 

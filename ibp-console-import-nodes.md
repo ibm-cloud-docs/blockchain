@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #ibp-console-import-nodes}
 
 
+
+
 The console includes the option to import nodes that were created in another {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}
 

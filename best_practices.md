@@ -21,4 +21,6 @@ subcollection: blockchain
 {: help}
 {: support}
 
+
+
 Information previously contained on this page has been refreshed and merged into the [Creating Applications tutorial](/docs/blockchain?topic=blockchain-ibp-console-app). For the most up to date recommendations, refer to that tutorial.

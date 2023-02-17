@@ -19,6 +19,8 @@ subcollection: blockchain
 # High availability (HA)
 {: #ibp-console-ha}
 
+
+
 Use the built-in Kubernetes features along with {{site.data.keyword.blockchainfull}} Platform component deployment strategies to make your blockchain networks more highly available and protect your network from downtime when a failure occurs in your cluster.
 {: shortdesc}
 

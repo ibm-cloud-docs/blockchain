@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #ibp-console-govern}
 
 
+
+
 When you create a channel, there are a number of advanced options that allow you fine tune the configuration of your channel to fit your use case. In this topic we'll discuss how to edit those options as part of creating a channel or when editing a channel after it has been created.
 {: shortdesc}
 
