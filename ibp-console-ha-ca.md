@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: high availability, CA, PostgreSQL, replica sets, zone
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Building a high availability Certificate Authority (CA)
 {: #ibp-console-build-ha-ca}
-
-
 
 
 Because redundancy is required to achieve high availability (HA) networks, you can use the {{site.data.keyword.blockchainfull}} Platform console to configure a CA for high availability.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-17"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Build a network
 {: #ibp-console-build-network}
-
-
 
 
 

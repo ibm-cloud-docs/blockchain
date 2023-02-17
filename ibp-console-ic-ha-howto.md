@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: HA, highly availability, multiregion
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Setting up multiregion High Availability (HA) deployments for peers
 {: #ibp-console-hadr-mr}
-
-
 
 Multiregion HA configuration provides the highest degree of HA coverage that is possible. Deploying peers across multiple geographic regions ensures that if any one region becomes unavailable, the peers in other regions can continue to transact. Note that multiregion HA support for CAs and the ordering service is not currently available.
 

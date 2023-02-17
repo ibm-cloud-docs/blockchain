@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-16"
+lastupdated: "2023-02-17"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -13,12 +13,8 @@ subcollection: blockchain
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # Developing smart contracts with {{site.data.keyword.blockchainfull_notm}} Platform Developer Tools
 {: #develop-vscode}
-
-
 
 **Attention! The IBM Blockchain Platform Extension for VS Code (VS Code extension) referenced throughout the documentation is an open-source project which is no longer active, and therefore not officially supported by IBM.** Refer to the [alternatives to the VS Code extension](https://github.com/IBM-Blockchain/blockchain-vscode-extension/issues/3159).
 

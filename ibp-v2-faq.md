@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-17"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -15,12 +15,8 @@ content-type: faq
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # FAQs
 {: #ibp-v2-faq}
-
-
 
 **Hyperledger Fabric**
 - [What is the value of using {{site.data.keyword.blockchainfull_notm}} Platform over native Hyperledger Fabric?](#ibp-v2-faq-v2-IBP-Overview-1-7)

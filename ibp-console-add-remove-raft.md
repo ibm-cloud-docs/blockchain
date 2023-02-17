@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-17"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, orderer, ordering node, ordering service, tutorial
 
@@ -13,8 +13,6 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

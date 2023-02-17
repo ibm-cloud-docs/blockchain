@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-12-08"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: high availability, HA, IBM Cloud, failures, zone failure, region failure, component failure, worker node failure, RTO, RPO
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # High availability (HA)
 {: #ibp-console-ha}
-
-
 
 Use the built-in Kubernetes features along with {{site.data.keyword.blockchainfull}} Platform component deployment strategies to make your blockchain networks more highly available and protect your network from downtime when a failure occurs in your cluster.
 {: shortdesc}

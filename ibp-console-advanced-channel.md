@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-10-14"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: network components, IBM Cloud Kubernetes Service, batch timeout, channel update, channels, Raft, channel configuration, access control
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Advanced channel deployment and management
 {: #ibp-console-govern}
-
-
 
 
 When you create a channel, there are a number of advanced options that allow you fine tune the configuration of your channel to fit your use case. In this topic we'll discuss how to edit those options as part of creating a channel or when editing a channel after it has been created.

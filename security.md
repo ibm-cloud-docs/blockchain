@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-11-17"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: security, encryption, storage, tls, iam, roles, keys
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Security
 {: #ibp-security}
-
-
 
 {{site.data.keyword.blockchainfull}} Platform provides a scalable, highly reliable platform that helps customers deploy applications and data quickly and securely. This document provides information about securing your {{site.data.keyword.blockchainfull_notm}} Platform service instance, where the blockchain console runs, and best practices for securing the linked Kubernetes cluster where the blockchain nodes are deployed.
 {: shortdesc}

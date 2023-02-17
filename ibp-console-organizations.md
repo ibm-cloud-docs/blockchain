@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: organizations, MSPs, create an MSP, MSP JSON file, consortium, system channel, remove an organization
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Managing organizations
 {: #ibp-console-organizations}
-
-
 
 You can use the {{site.data.keyword.blockchainfull}} Platform console to create a formal organization definition that is known as a Membership Services Provider (MSP). Your organization's MSP definition allows other members of the blockchain consortium to verify the identity of your nodes and applications. Your MSP definition also contains your organization's admin certificates.
 

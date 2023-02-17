@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-01"
+lastupdated: "2023-02-17"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Developing applications
 {: #ibp-console-app}
-
-
 
 After you install smart contracts (chaincode) and deploy your peer and ordering nodes, you are ready to develop client applications to transact with other members of your {{site.data.keyword.blockchainfull_notm}} Platform network. Applications invoke the business logic contained in smart contracts to create, transfer, and update assets on the blockchain ledger. Use this page to learn how to use client applications to interact with networks from the {{site.data.keyword.blockchainfull}} Platform console.
 {: shortdesc}

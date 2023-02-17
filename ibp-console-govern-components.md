@@ -16,12 +16,8 @@ subcollection: blockchain
 
 
 
-
-
 # Upgrading and deleting deployed nodes
 {: #ibp-console-govern-components}
-
-
 
 After creating CAs, peers, and ordering nodes, you need to monitor the resources used by the nodes and potentially reallocate resources.
 {: shortdesc}

@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-07-21"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -17,12 +17,8 @@ content-type: troubleshoot
 
 
 
-
-
 # Troubleshooting
 {: #ibp-v2-troubleshooting}
-
-
 
 General problems can occur when you use the console to manage nodes, channels, or smart contracts. In many cases, you can recover from these problems by following a few simple steps.
 {: shortdesc}

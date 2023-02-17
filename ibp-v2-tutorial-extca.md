@@ -1,8 +1,8 @@
 ---
 
 copyright: 
-  years: 2014, 2022
-lastupdated: "2022-09-25"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: external CA, certificate, private key, MSP
 
@@ -17,8 +17,6 @@ completion-time: 30m
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 # Using certificates from an external Certificate Authority
 {: #ibp-tutorial-extca}
