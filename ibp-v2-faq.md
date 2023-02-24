@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-24"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -250,7 +250,7 @@ When you delete an {{site.data.keyword.blockchainfull_notm}} Platform service in
 {: support}
 
 Your existing Kubernetes cluster works with the {{site.data.keyword.blockchainfull_notm}} Platform if it satisfies the following conditions:
-- It is running Kubernetes version v1.22 - v1.24.
+- It is running Kubernetes version v1.23 - v1.24.
 - There are enough available resources in the cluster.
 
 
