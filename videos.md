@@ -12,8 +12,6 @@ subcollection: blockchain
 
 {{site.data.keyword.attribute-definition-list}}
 
-
-
 # {{site.data.keyword.blockchainfull_notm}} Platform getting started videos
 {: #ibp-videos}
 

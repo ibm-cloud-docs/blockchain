@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-17"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -11,8 +11,6 @@ subcollection: blockchain
 ---
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

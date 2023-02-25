@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-03"
+lastupdated: "2023-02-24"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -21,7 +21,7 @@ The {{site.data.keyword.blockchainfull}} Platform for {{site.data.keyword.cloud_
 
 A key benefit of the platform is that {{site.data.keyword.IBM_notm}} tests the open source code for security vulnerabilities daily and provides 24x7x365 support with SLAs appropriate for production environments.
 
-If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.22 - v1.24 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.3](/docs/blockchain?topic=blockchain-get-started-console-ocp).
+If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.23 - v1.24 container platform on x86_64 hardware, see [Getting started with IBM Blockchain Platform 2.5.3](/docs/blockchain?topic=blockchain-get-started-console-ocp).
 
 If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract container images, see [Using the IBM Blockchain images](/docs/blockchain?topic=blockchain-blockchain-images).
 
@@ -128,8 +128,8 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 
 | | |
 |----|----|
-| Kubernetes | <ul><li>v1.22 - v1.24</ul> |
-| Orchestration Service| <ul><li>Kubernetes</li><li>OpenShift Container Platform on IBM Cloud 4.6, 4.7, 4.8, 4.9</li></ul> |
+| Kubernetes | <ul><li>v1.23 - v1.24</ul> |
+| Orchestration Service| <ul><li>Kubernetes</li><li>OpenShift Container Platform on IBM Cloud 4.9, 4.10, 4.11</li></ul> |
 | Infrastructure| <ul><li>Classic</li></ul>|
 | Hardware Security Module [(HSM)](#x6704988){: term} | <ul><li>Tested with [Cloud HSM ](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) </ul> |
 | [VLAN](#x2438470){: term} | <ul><li>[VLAN spanning](/docs/vlans?topic=vlans-vlan-spanning#manage-vlan-spanning){: external} must be enabled for multi-zone clusters. <li>Because  private ingress is not supported, a cluster with only private VLANs is not supported as a public internet connection is required for a connection between the {{site.data.keyword.blockchainfull_notm}} cluster and the customer Kubernetes cluster. A cluster with private and public VLANs configured is supported. </ul> |

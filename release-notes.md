@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-01-30"
+lastupdated: "2023-02-17"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -13,8 +13,6 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

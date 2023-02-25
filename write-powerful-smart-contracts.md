@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-11-23"
+  years: 2014, 2023
+lastupdated: "2023-02-17"
 
 keywords: smart contract, lifecycle, package, definition
 
@@ -13,8 +13,6 @@ subcollection: blockchain
 
 
 {{site.data.keyword.attribute-definition-list}}
-
-
 
 
 

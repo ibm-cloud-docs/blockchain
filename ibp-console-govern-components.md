@@ -16,8 +16,6 @@ subcollection: blockchain
 
 
 
-
-
 # Upgrading and deleting deployed nodes
 {: #ibp-console-govern-components}
 
