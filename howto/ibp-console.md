@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-02-27"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -122,8 +122,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ## Supported {{site.data.keyword.cloud_notm}} configuration
 {: #ibp-console-overview-supported-cfg}
 
-**Reminder:** {{site.data.keyword.containerlong_notm}} 1.19 is no longer supported. If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} 1.19 cluster, you must immediately upgrade it to {{site.data.keyword.containerlong_notm}} 1.20 or 1.21. To get started, see [1.20 considerations](/docs/containers?topic=containers-cs_versions#cs_v120) and [1.21 considerations](/docs/containers?topic=containers-cs_versions#cs_v121). For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update). For the list of {{site.data.keyword.containerlong_notm}} supported versions and expiration dates see the [release history](/docs/containers?topic=containers-cs_versions#release-history).
-
+**Reminder:** If your {{site.data.keyword.blockchainfull_notm}} Platform instance is linked to an {{site.data.keyword.containerlong_notm}} cluster that is no longer supported, you must immediately upgrade it to a supported version listed in the table below. See [Kubernetes version information](https://cloud.ibm.com/docs/containers?topic=containers-cs_versions) for Kubernetes version details. For the actual steps that are required, see [Updating clusters, worker nodes, and cluster components](/docs/containers?topic=containers-update#update).
 
 
 | | |
