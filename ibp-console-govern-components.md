@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-02-28"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -149,15 +149,15 @@ Update your Certificate Authority (CA) nodes before you upgrade your peer and or
 
 After updating your Certificate Authority (CA) nodes, update your orderer nodes, as follows:
 
-1. Using your console, navigate to the ordering service and select the first ordering node. Click on **upgrade available** and select **2.2.8-1** or later. Click through the confirmations dialogs.
-2. The node will restart using the 2.2.8-1 (or selected) image. Transaction processing will continue during the node restart, because the remaining four orderer nodes make a quorum. The selected orderer node will be unavailable for 1-2 minutes during the update. **ATTENTION!!**: If the updating orderer node does not restart and come back online successfully, please contact IBM Support. **DO NOT** attempt to update any remaining orderer nodes before contacting IBM Support.
+1. Using your console, navigate to the ordering service and select the first ordering node. Click on **upgrade available** and select **2.2.10-1** or later. Click through the confirmations dialogs.
+2. The node will restart using the 2.2.10-1 (or selected) image. Transaction processing will continue during the node restart, because the remaining four orderer nodes make a quorum. The selected orderer node will be unavailable for 1-2 minutes during the update. **ATTENTION!!**: If the updating orderer node does not restart and come back online successfully, please contact IBM Support. **DO NOT** attempt to update any remaining orderer nodes before contacting IBM Support.
 3. Repeat the procedure for each remaining orderer node.
 
 ### Update your peers
 
 After updating both your Certificate Authority (CA) and orderer nodes, update your peer nodes, as follows:
 
-**ATTENTION!!**: When creating new v2.2 peers using the steps below, selecting **2.2.8-2** is **highly recommended** - other selectable versions may have chaincode implications. 
+**ATTENTION!!**: When creating new v2.2 peers using the steps below, selecting **2.2.10-1** is **highly recommended** - other selectable versions may have chaincode implications.
 
 1. Before upgrading any peer with CouchDB installed, you must rebuild the CouchDB state database from CouchDB v2.x to v3.x. The recommended process is to add a new peer, and then let the database synchronize. This removes the downtime that would occur when upgrading in place. Then continue as follows, for peers both with and without CouchDB:
 2. Add a new peer using your console. Do **NOT** install chaincode on the new peer.
