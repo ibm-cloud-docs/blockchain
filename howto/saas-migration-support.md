@@ -69,14 +69,14 @@ While IBM is testing this migration tool internally for production usage, **ther
 
 3. Make sure that your Hyperledger Fabric v2.2 or v2.4 components are at the prerequisite levels required for migration:
 
-    - Hyperledger Fabric v2.2 components must be at the following levels:
-        a) peers - v2.2.10 or higher
-        b) ordering nodes - v2.2.10 or higher
-        c) certificate authorities - v1.5.5 or higher
+    - Hyperledger Fabric v2.2 components must be at the following levels:  
+        a) peers - v2.2.10 or higher  
+        b) ordering nodes - v2.2.10 or higher  
+        c) certificate authorities - v1.5.5 or higher  
 
-     - Hyperledger Fabric v2.4 components must be at the following levels:
-        a) peers - v2.4.8 or higher
-        b) ordering nodes - v2.4.8 or higher
-        c) certificate authorities - v1.5.5 or higher 
+     - Hyperledger Fabric v2.4 components must be at the following levels:  
+        a) peers - v2.4.8 or higher  
+        b) ordering nodes - v2.4.8 or higher  
+        c) certificate authorities - v1.5.5 or higher   
 
 **Attention**: Once available, the migration tool will verify these prerequisites from your console.
