@@ -55,7 +55,7 @@ Documentation for the IBM Support for Hyperledger Fabric is a current IBM produc
 
 A tool will be provided that migrates your IBM Blockchain Platform console from an IBM-hosted environment to your Kubernetes cluster. Before running this tool, your Kubernetes cluster must be preconfigured with the required Hyperledger Fabric blockchain components, which are your peers, ordering nodes, and certificate authorities. As part of this process, the images used for these components will be switched to images provided for IBM Support for Hyperledger Fabric.
 
-While IBM is testing this migration tool internally for production usage, **there are steps you can take now** to prepare for your migration to IBM Support for Hyperledger Fabric, as follows: 
+While IBM is testing this migration tool internally for production usage, **there are steps you can take now** to prepare for your migration to IBM Support for Hyperledger Fabric, as follows:
 
     1. Upgrade any blockchain components that are using Hyperledger Fabric v1.4:
 
@@ -64,7 +64,7 @@ While IBM is testing this migration tool internally for production usage, **ther
 
     2. Make sure that the Kubernetes version meets the following minimum requirements for migration:
 
-       - Your existing IBM Kubernetes Service must be at version 1.23 or 1.24. Note that the version should be upgraded to 1.24 **before April 26, 2023**, when support ends for version 1.23.
+       - Your existing IBM Kubernetes Service must be at version 1.23 or 1.24. Note that the version should be upgraded to 1.24 **before April 26, 2023**, when [support ends for version 1.23](https://cloud.ibm.com/docs/containers?topic=containers-cs_versions).
        - If your existing network is running on OpenShift Container Platform (OCP), the OCP version must be 4.9, 4.10, or 4.11.
 
     3. Make sure that your Hyperledger Fabric v2.2 or v2.4 components are at the prerequisite levels required for migration:
