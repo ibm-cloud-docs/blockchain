@@ -57,27 +57,26 @@ A tool will be provided that migrates your IBM Blockchain Platform console from 
 
 While IBM is testing this migration tool internally for production usage, **there are steps you can take now** to prepare for your migration to IBM Support for Hyperledger Fabric, as follows:
 
-    1. Upgrade any blockchain components that are using Hyperledger Fabric v1.4:
+1. Upgrade any blockchain components that are using Hyperledger Fabric v1.4:
 
-        - Hyperledger Fabric v1.4 will **NOT** be supported by IBM Blockchain Platform **after March 31, 2023**. Blockchain components must be upgraded to at least Hyperledger Fabric v2.2 **before March 31, 2023**.
-        - [Instructions for upgrading from Hyperledger Fabric v1.4 to Hyperledger Fabric v2.2 are available here.](https://cloud.ibm.com/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v22)
+    - Hyperledger Fabric v1.4 will **NOT** be supported by IBM Blockchain Platform **after March 31, 2023**. Blockchain components must be upgraded to at least Hyperledger Fabric v2.2 **before March 31, 2023**.
+    - [Instructions for upgrading from Hyperledger Fabric v1.4 to Hyperledger Fabric v2.2 are available here.](https://cloud.ibm.com/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v22)
 
-    2. Make sure that the Kubernetes version meets the following minimum requirements for migration:
+2. Make sure that the Kubernetes version meets the following minimum requirements for migration:
 
-       - Your existing IBM Kubernetes Service must be at version 1.23 or 1.24. Note that the version should be upgraded to 1.24 **before April 26, 2023**, when [support ends for version 1.23](https://cloud.ibm.com/docs/containers?topic=containers-cs_versions).
-       - If your existing network is running on OpenShift Container Platform (OCP), the OCP version must be 4.9, 4.10, or 4.11.
+    - Your existing IBM Kubernetes Service must be at version 1.23 or 1.24. Note that the version should be upgraded to 1.24 **before April 26, 2023**, when [support ends for version 1.23](https://cloud.ibm.com/docs/containers?topic=containers-cs_versions).
+    - If your existing network is running on OpenShift Container Platform (OCP), the OCP version must be 4.9, 4.10, or 4.11.
 
-    3. Make sure that your Hyperledger Fabric v2.2 or v2.4 components are at the prerequisite levels required for migration:
+3. Make sure that your Hyperledger Fabric v2.2 or v2.4 components are at the prerequisite levels required for migration:
 
-       - Hyperledger Fabric v2.2 components must be at the following levels:
-          a) peers - v2.2.10 or higher
-          b) ordering nodes - v2.2.10 or higher
-          c) certificate authorities - v1.5.5 or higher
+    - Hyperledger Fabric v2.2 components must be at the following levels:
+        a) peers - v2.2.10 or higher
+        b) ordering nodes - v2.2.10 or higher
+        c) certificate authorities - v1.5.5 or higher
 
-       - Hyperledger Fabric v2.4 components must be at the following levels:
-          a) peers - v2.4.8 or higher
-          b) ordering nodes - v2.4.8 or higher
-          c) certificate authorities - v1.5.5 or higher
+     - Hyperledger Fabric v2.4 components must be at the following levels:
+        a) peers - v2.4.8 or higher
+        b) ordering nodes - v2.4.8 or higher
+        c) certificate authorities - v1.5.5 or higher 
 
-
-Note: Once available, the migration tool will verify these prerequisites from your console.
+**Attention**: Once available, the migration tool will verify these prerequisites from your console.
