@@ -857,11 +857,11 @@ subcollection: blockchain
 
 [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#migrating-to-hlf-support)
 
-* [What is happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-what)
+* [What is changing?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-what)
 
-* [Why is it happening?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-why)
+* [Why is it changing?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-why)
 
-* [How to transition licensing?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-licensing)
+* [How do I transition my license?](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-licensing)
 
 * [Planning and Considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-planning)
 
