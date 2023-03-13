@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-13"
 
 keywords: deployment, advanced, CouchDB, LevelDB, external CA, HSM, resource allocation
 
@@ -18,6 +18,7 @@ subcollection: blockchain
 
 # Advanced deployment options
 {: #ibp-console-adv-deployment}
+
 
 
 
