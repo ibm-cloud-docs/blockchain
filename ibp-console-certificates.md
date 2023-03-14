@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-13"
 
 keywords: admin certificate, Node OU, admin identity, expiration
 
@@ -16,6 +16,9 @@ subcollection: blockchain
 
 # Managing certificates
 {: #cert-mgmt}
+
+
+
 
 {{site.data.keyword.blockchainfull}} Platform is based on Hyperledger Fabric and builds permissioned blockchain networks. Participants are known as members of the network, and their activities and access to network resources are verified continuously. Learn how to manage a member's identity in the form of a trusted x509 digital certificate.
 {: shortdesc}

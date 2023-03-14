@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-13"
 
 keywords: network components, IBM Cloud Kubernetes Service, backup, restore, disaster, peer, orderer, ordering node, LevelDB, CouchDB
 
@@ -18,6 +18,9 @@ subcollection: blockchain
 
 # Backing up and restoring components and networks
 {: #backup-restore}
+
+
+
 
 Users might want to back up their components individually or the network generally for a number of reasons. While it's a best practice to back up components before upgrading them to a new Fabric version, network backups can be useful for cases in which a flawed smart contract causes invalid transactions to be written to the ledger. While a proper development and testing cycle for a smart contract catches these errors, it might be necessary to reinstate a previous version of the network before the invalid transactions were written.
 

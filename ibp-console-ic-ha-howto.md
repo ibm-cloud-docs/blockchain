@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-13"
 
 keywords: HA, highly availability, multiregion
 

@@ -1,8 +1,8 @@
 ---
 
-copyright: 
+copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-13"
 
 keywords: troubleshooting, debug, why, what does this mean, how can I, when I
 
@@ -19,6 +19,7 @@ content-type: troubleshoot
 
 # Troubleshooting
 {: #ibp-v2-troubleshooting}
+
 
 
 
@@ -85,10 +86,10 @@ You may also see errors connecting to the proxy URL such as the following report
 ```
 {: codeblock}
 
-This problem can occur when the cluster is created after 01 December 2020 with version 1.18 or higher. Or, after you finish deploying the IBM Blockchain Platform while the Kubernetes user interface or CLI still displays the pod as running, but the orderer or the peer user interface does not appear online. 
+This problem can occur when the cluster is created after 01 December 2020 with version 1.18 or higher. Or, after you finish deploying the IBM Blockchain Platform while the Kubernetes user interface or CLI still displays the pod as running, but the orderer or the peer user interface does not appear online.
 {: tsCauses}
 
-Before resolving this problem, you can check the application load balancer (ALB) replica set by running `kubectl get replicasets -n kube-system` and look for result similar to `public-crbpt86avw0kfob73dpb3g-alb1-875bc4d57    2         2         2       24h`. 
+Before resolving this problem, you can check the application load balancer (ALB) replica set by running `kubectl get replicasets -n kube-system` and look for result similar to `public-crbpt86avw0kfob73dpb3g-alb1-875bc4d57    2         2         2       24h`.
 
 For clusters created after 01 December 2020 with version 1.18 or higher, you can check that the ingress configuration as follows:
 
@@ -100,14 +101,14 @@ For clusters created after 01 December 2020 with version 1.18 or higher, you can
     ```
     annotations:
         nginx.ingress.kubernetes.io/backend-protocol: HTTPS
-        nginx.ingress.kubernetes.io/proxy-ssl-verify: "false" 
+        nginx.ingress.kubernetes.io/proxy-ssl-verify: "false"
     ```
     {: codeblock}
 
 To resolve this problem, you can execute the following steps:
 {: tsResolve}
 
-**Get the list of ALB replica set.** 
+**Get the list of ALB replica set.**
 If your cluster has only one ALB, you can get the replica set as follows:
 ```
 kubectl get replicaset -n kube-system | grep <ALB-name>
@@ -115,7 +116,7 @@ kubectl get replicaset -n kube-system | grep <ALB-name>
 {: codeblock}
 
 If you have multiple ALBs, execute the following steps for each ALB as follows:
-1. Get the list of all replica sets. 
+1. Get the list of all replica sets.
     ```
     kubectl get replicaset -n kube-system | grep alb
     ```
