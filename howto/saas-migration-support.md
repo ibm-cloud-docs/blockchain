@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-14"
 
 keywords: blockchain network, migration
 
@@ -74,7 +74,7 @@ While IBM is testing this migration tool internally for production usage, **ther
         b) ordering nodes - v2.2.10 or higher  
         c) certificate authorities - v1.5.5 or higher  
 
-     - Hyperledger Fabric v2.4 components must be at the following levels:  
+    - Hyperledger Fabric v2.4 components must be at the following levels:  
         a) peers - v2.4.8 or higher  
         b) ordering nodes - v2.4.8 or higher  
         c) certificate authorities - v1.5.5 or higher   
