@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-02-27"
+lastupdated: "2023-03-17"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -22,7 +22,7 @@ subcollection: blockchain
 # Installing fix packs
 {: #install-fixpack}
 
-Use these instructions if you have already installed or upgraded to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and want to apply the latest 2.5.3 fix pack. Fix packs are cumulative, which means they include all of the fixes from previous fixpacks. Fix packs contain important fixes and upgrades and should be applied to your network as soon as possible. If you install {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 after the [date of the latest fix pack](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-docker-registry-secret), your installation will already contain the latest fix pack.
+Use these instructions if you have already installed or upgraded to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 and want to apply the latest 2.5.3 fix pack. Fix packs are cumulative, which means they include all of the fixes from previous fixpacks. Fix packs contain important fixes and upgrades and should be applied to your network as soon as possible. If you install {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 after the [date of the latest fix pack](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8#deploy-k8-docker-registry-secret), your installation will already contain the latest fix pack.
 {: shortdesc}
 
 You can install the fix pack by updating the {{site.data.keyword.blockchainfull_notm}} Platform deployment on your Kubernetes cluster to pull the latest images from the {{site.data.keyword.IBM_notm}} entitlement registry. You can apply the fix pack by using the following steps:
@@ -37,12 +37,12 @@ You can use these steps if you deployed the platform on the OpenShift Container 
 ## What this fix pack contains
 {: #install-fixpack-contents}
 
-This cumulative fix pack contains security patches for the Fabric images and miscellaneous bug fixes.  See the [Release notes](/docs/blockchain-sw-253?topic=blockchain-sw-253-release-notes-saas-20) for more details.
+This cumulative fix pack contains security patches for the Fabric images and miscellaneous bug fixes.  See the [Release notes](/docs/blockchain-sw-254?topic=blockchain-sw-254-release-notes-saas-20) for more details.
 
 ## Before you begin
 {: #install-fixpack-begin}
 
-To upgrade your network, you need to [retrieve your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-entitlement-key) from the My {{site.data.keyword.IBM_notm}} Dashboard, and [create a Kubernetes secret](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-docker-registry-secret) to store the key on your namespace. If the entitlement key secret was removed from your cluster, or if your key is expired, then you need to download another key and create a new secret.
+To upgrade your network, you need to [retrieve your entitlement key](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8#deploy-k8-entitlement-key) from the My {{site.data.keyword.IBM_notm}} Dashboard, and [create a Kubernetes secret](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8#deploy-k8-docker-registry-secret) to store the key on your namespace. If the entitlement key secret was removed from your cluster, or if your key is expired, then you need to download another key and create a new secret.
 
 ## Step one: Update the webhook
 {: #install-fixpack-webhook}
@@ -102,7 +102,7 @@ ibp-operator   1/1       1            1           1m
 ```
 {: codeblock}
 
-If you experience a problem while you are updating the operator, go to this [troubleshooting topic](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-cr) for a list of commonly encountered problems.
+If you experience a problem while you are updating the operator, go to this [troubleshooting topic](/docs/blockchain-sw-254?topic=blockchain-sw-254-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-cr) for a list of commonly encountered problems.
 
 ## Step three: Update the {{site.data.keyword.blockchainfull_notm}} console
 {: #install-fixpack-console}
@@ -173,7 +173,7 @@ You can continue to submit transactions to your network while you are upgrading 
 ### Before you begin
 {: #install-fixpack-begin-firewall}
 
-To upgrade your network, you need to [retrieve your entitlement key](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8-firewall#deploy-k8-entitlement-key-firewall) from the My {{site.data.keyword.IBM_notm}} Dashboard, and [create a Kubernetes secret](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-k8#deploy-k8-docker-registry-secret) to store the key on your namespace. If the entitlement key secret was removed from your cluster, or if your key is expired, then you need to download another key and create a new secret.
+To upgrade your network, you need to [retrieve your entitlement key](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8-firewall#deploy-k8-entitlement-key-firewall) from the My {{site.data.keyword.IBM_notm}} Dashboard, and [create a Kubernetes secret](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8#deploy-k8-docker-registry-secret) to store the key on your namespace. If the entitlement key secret was removed from your cluster, or if your key is expired, then you need to download another key and create a new secret.
 
 ### Step one: Pull the latest {{site.data.keyword.blockchainfull_notm}} Platform images
 {: #install-fixpack-images-firewall}
@@ -289,7 +289,7 @@ NAME           READY     UP-TO-DATE   AVAILABLE   AGE
 ibp-operator   1/1       1            1           1m
 ```
 
-If you experience a problem while you are updating the operator, go to this [troubleshooting topic](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-cr) for a list of commonly encountered problems.
+If you experience a problem while you are updating the operator, go to this [troubleshooting topic](/docs/blockchain-sw-254?topic=blockchain-sw-254-ibp-v2-troubleshooting#ibp-v2-troubleshooting-deployment-cr) for a list of commonly encountered problems.
 
 ### Step four: Update the {{site.data.keyword.blockchainfull_notm}} console
 {: #install-fixpack-console-firewall}

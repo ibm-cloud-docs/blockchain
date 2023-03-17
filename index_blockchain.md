@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-01-20"
+lastupdated: "2023-03-17"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -46,7 +46,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 ### {{site.data.keyword.blockchainfull_notm}} images
 {: #get-started-ibp-images}
 
-- Your purchase of {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 includes an entitlement to images for [peer](#x2033450){: term}, [Certificate Authority](#x2016383){: term}, [ordering service](#x9826021){: term}, and [smart contract](#x8888420){: term} containers that are signed by IBM. The images are based on the open source Hyperledger Fabric code base and contain a number of enhancements. The images are bundled with support from IBM. The {{site.data.keyword.blockchainfull_notm}} images do not include the {{site.data.keyword.blockchainfull_notm}} management console or operator. This offering is intended for experienced Fabric users with existing Fabric deployments. For more information, see [{{site.data.keyword.blockchainfull_notm}} images for Hyperledger  Fabric](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-images#blockchain-images).
+- Your purchase of {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 includes an entitlement to images for [peer](#x2033450){: term}, [Certificate Authority](#x2016383){: term}, [ordering service](#x9826021){: term}, and [smart contract](#x8888420){: term} containers that are signed by IBM. The images are based on the open source Hyperledger Fabric code base and contain a number of enhancements. The images are bundled with support from IBM. The {{site.data.keyword.blockchainfull_notm}} images do not include the {{site.data.keyword.blockchainfull_notm}} management console or operator. This offering is intended for experienced Fabric users with existing Fabric deployments. For more information, see [{{site.data.keyword.blockchainfull_notm}} images for Hyperledger  Fabric](/docs/blockchain-sw-254?topic=blockchain-sw-254-blockchain-images#blockchain-images).
 
 ## Next steps
 {: #get-started-ibp-next-steps}
