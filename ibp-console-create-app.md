@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-17"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -40,7 +40,7 @@ Although legacy applications will continue to run on v2.5.3, upgrading developme
 {: important}
 
 ### Fabric Peer Gateway documentation
-{: #ibp-console-app-fabric-gateway docs}
+{: #ibp-console-app-fabric-gateway-docs}
 
 For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html) documentation. The documentation includes v2.4 [Fabric Gateway samples](https://github.com/hyperledger/fabric-gateway/tree/main/samples), [connection details](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html#first-establish-a-grpc-connection-to-the-gateway), and related client application development topics.
 

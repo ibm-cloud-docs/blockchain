@@ -675,7 +675,7 @@ subcollection: blockchain
 
     * [Supported app development methods in Fabric v2.4](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-dev-methods-v24)
 
-    * [Fabric Peer Gateway documentation](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-fabric-gateway)
+    * [Fabric Peer Gateway documentation](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-fabric-gateway-docs)
 
     * [Connecting to the Fabric Gateway peer service](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-connecting-fabric-gateway)
 
