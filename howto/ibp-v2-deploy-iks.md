@@ -23,7 +23,7 @@ subcollection: blockchain
 
 **Target audience:** This topic is designed for system administrators who are responsible for setting up a Kubernetes cluster on {{site.data.keyword.cloud_notm}} and for deploying {{site.data.keyword.blockchainfull_notm}} Platform.
 
-If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution (OKD), or Kubernetes, see [Getting started with IBM Blockchain Platform 2.5.3](/docs/blockchain-sw-254?topic=blockchain-sw-254-get-started-console-ocp).
+If you are interested in learning more about how to use {{site.data.keyword.blockchainfull_notm}} Platform on Red Hat OpenShift Container Platform, Red Hat Open Kubernetes Distribution (OKD), or Kubernetes, see [Getting started with IBM Blockchain Platform 2.5.4](/docs/blockchain-sw-254?topic=blockchain-sw-254-get-started-console-ocp).
 
 If you are an experienced Hyperledger Fabric customer and are interested in learning more about how to use the  {{site.data.keyword.blockchainfull_notm}} peer, CA, orderer, and smart contract containers images, see [Using the {{site.data.keyword.blockchainfull_notm}} images ](/docs/blockchain-sw-254?topic=blockchain-sw-254-blockchain-images).
 
@@ -210,5 +210,5 @@ From your {{site.data.keyword.cloud_notm}} account, you can deploy the {{site.da
 
 - **IBM Cloud Catalog** Use the IBM Cloud Catalog to deploy blockchain to an {{site.data.keyword.IBM_notm}} Kubernetes service or OpenShift cluster in {{site.data.keyword.cloud_notm}}. With this [software-as-a-service](#x4585386){: term} option, {{site.data.keyword.IBM_notm}} manages the maintenance and the updates to the console for you, but you can choose when to update your blockchain components.
 - **Red Hat Marketplace** OpenShift customers who are already familiar with the OpenShift Container (OC) [CLI](#x2051424){: term} and the Red Hat Marketplace may prefer to use this option. Note that with this option, you are responsible for the maintenance of your console and blockchain components.
-- **Multicloud** Not running an OpenShift or Kubernetes cluster in IBM Cloud? The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 can be installed on your OpenShift or Kubernetes cluster in your cloud or on-prem. With this option as well, you are responsible for the maintenance of your console and blockchain components.
+- **Multicloud** Not running an OpenShift or Kubernetes cluster in IBM Cloud? The {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4 can be installed on your OpenShift or Kubernetes cluster in your cloud or on-prem. With this option as well, you are responsible for the maintenance of your console and blockchain components.
 

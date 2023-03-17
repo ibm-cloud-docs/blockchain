@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2014, 2022
-lastupdated: "2022-12-08"
+  years: 2014, 2023
+lastupdated: "2023-03-17"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -35,7 +35,7 @@ System channel support remains, however removing the system channel is recommend
 you should upgrade in stages - see [Upgrading Node.js chaincode](#upgrade-nodejs-chaincode) below for details.
 
 **Target audience:** This topic is designed for architects and system administrators who are responsible
-for planning, configuring, and installing {{site.data.keyword.blockchainfull_notm}} 2.5.3. Application
+for planning, configuring, and installing {{site.data.keyword.blockchainfull_notm}} 2.5.4. Application
 channels are identical regardless of the creation method used.
 
 ## Benefits

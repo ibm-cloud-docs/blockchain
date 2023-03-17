@@ -579,7 +579,7 @@ subcollection: blockchain
 
 [{{site.data.keyword.blockchainfull_notm}} Platform getting started videos](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos)
 
-* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos-ibp-v2)
+* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos-ibp-v2)
 
 
 ## Deploy a smart contract
