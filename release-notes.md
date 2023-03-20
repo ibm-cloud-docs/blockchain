@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-20"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -30,10 +30,28 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
 
 
+## 22 Mar 2023
+{: #03-22-2023}
+
+**Certificate Authority (CA) patch 1.5.5-10, Peer and ordering node patch 1.4.12-24, 2.2.10-2, 2.4.8-2.**
+
+Added ability to remove the system channel and ability to create orderers without a system channel.
+
+Added support to use the channel participation APIs offered by Fabric peers and orderers to manage channels
+
+Updates to VS Code documentation
+
+Updated supported platforms, including support for Kubernetes 1.25
+
+Bug Fixes and Security Patches
+
+Severity: medium
+
+
 ## 28 Feb 2023
 {: #02-28-2023}
 
-**Certificate Authority (CA) patch 1.5.5-9, Peer and ordering node patch 1.4.12-23, 2.2.10-1, 2.4.8-1.**
+**Certificate Authority (CA) patch 1.5.5-10, Peer and ordering node patch 1.4.12-24, 2.2.10-2, 2.4.8-2.**
 
 Miscellaneous bug fixes and security patches.
 
