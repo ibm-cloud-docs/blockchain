@@ -51,7 +51,7 @@ Severity: medium
 ## 28 Feb 2023
 {: #02-28-2023}
 
-**Certificate Authority (CA) patch 1.5.5-10, Peer and ordering node patch 1.4.12-24, 2.2.10-2, 2.4.8-2.**
+**Certificate Authority (CA) patch 1.5.5-9, Peer and ordering node patch 1.4.12-23, 2.2.10-1, 2.4.8-1.**
 
 Miscellaneous bug fixes and security patches.
 
