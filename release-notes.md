@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-03-21"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -83,7 +83,7 @@ Severity: medium
 ## 07 Dec 2022
 {: #12-07-2022}
 
-**Certificate Authority (CA) patch 1.5.5-6, Peer and ordering node patch 1.4.12-20, 2.2.9-2, 2.4.7-2.**
+**Certificate Authority (CA) patch 1.5.5-6, Peer and ordering node patch 1.4.12-24, 2.2.9-2, 2.4.7-2.**
 
 Updates to VS Code documentation.
 
