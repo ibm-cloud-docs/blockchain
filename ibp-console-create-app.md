@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-20"
 
 keywords: client application, Commercial Paper, SDK, wallet, generate a certificate, generate a private key, fabric gateway, APIs, smart contract, NTP, time, clock, date
 
@@ -29,18 +29,18 @@ After you install smart contracts (chaincode) and deploy your peer and ordering 
 ## Using the v2.4 Fabric Gateway peer service
 {: #ibp-console-app-gateway-peer-service}
 
-{{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 adds support for the v2.4 Hyperledger Fabric Gateway peer service, which introduces an updated model for developing applications. The v2.4 gateway peer model relocates node connection and transaction processing requirements from the client application to the v2.4 peer nodes. The [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) method therefore enables developers to focus on business solutions, without having to code gateway connection or transaction processing logic in client applications, as is required for earlier releases.
+{{site.data.keyword.blockchainfull_notm}} Platform v2.5.4 adds support for the v2.4 Hyperledger Fabric Gateway peer service, which introduces an updated model for developing applications. The v2.4 gateway peer model relocates node connection and transaction processing requirements from the client application to the v2.4 peer nodes. The [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/gateway.html) method therefore enables developers to focus on business solutions, without having to code gateway connection or transaction processing logic in client applications, as is required for earlier releases.
 
 ### Supported app development methods in Fabric v2.4
 {: #ibp-console-app-dev-methods-v24}
 
-**To develop new applications** for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3, using the latest v2.4 Hyperledger Fabric Gateway peer service and API are recommended, as documented in [Running a Fabric Application](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html). However, **for existing applications** developed for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2 and earlier, no migration is required&mdash; your existing applications will continue to run on v2.5.3. In addition, the prior [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html) (and earlier) development methods, using the legacy SDKs (both high-level and low-level programming models), remain supported for new applications in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4.
+**To develop new applications** for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.4, using the latest v2.4 Hyperledger Fabric Gateway peer service and API are recommended, as documented in [Running a Fabric Application](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html). However, **for existing applications** developed for {{site.data.keyword.blockchainfull_notm}} Platform v2.5.2 and earlier, no migration is required&mdash; your existing applications will continue to run on v2.5.4. In addition, the prior [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/developapps/developing_applications.html) (and earlier) development methods, using the legacy SDKs (both high-level and low-level programming models), remain supported for new applications in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.4 and Fabric v2.4.
 
-Although legacy applications will continue to run on v2.5.3, upgrading development methods to use the v2.4 Fabric Gateway API as soon as possible is recommended.
+Although legacy applications will continue to run on v2.5.4, upgrading development methods to use the v2.4 Fabric Gateway API as soon as possible is recommended.
 {: important}
 
 ### Fabric Peer Gateway documentation
-{: #ibp-console-app-fabric-gateway docs}
+{: #ibp-console-app-fabric-gateway-docs}
 
 For details on developing new applications for Hyperledger Fabric v2.4 networks, refer to the [v2.4 Fabric Gateway](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html) documentation. The documentation includes v2.4 [Fabric Gateway samples](https://github.com/hyperledger/fabric-gateway/tree/main/samples), [connection details](https://hyperledger-fabric.readthedocs.io/en/release-2.4/write_first_app.html#first-establish-a-grpc-connection-to-the-gateway), and related client application development topics.
 
@@ -66,7 +66,7 @@ DAQH/MB0GA1UdDgQWBBRDV6AdNnpIEGO9\n7mbUM5bk4U0/yTAKBggqhkjOPQQDAgNHADBEAiAxjAM3z
 
 Click the Organization MSP tile for the organization that your client application interacts with. Click Create connection profile to open a side panel where you can build and download your connection profile.
 
-**Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.3 and Fabric v2.4. ({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
+**Attention:** The remainder of this page describes the Fabric v2.2 and earlier methods for developing applications, which remain supported in {{site.data.keyword.blockchainfull_notm}} Platform v2.5.4 and Fabric v2.4. ({{site.data.keyword.blockchainfull_notm}} Platform does not support Hyperledger Fabric v2.3). The Fabric v2.2 and earlier development methods are described as the high-level programming model and SDKs and its predecessor, the low-level programming model.
 
 
 ## Legacy model of developing applications
@@ -433,7 +433,7 @@ git clone https://github.com/hyperledger/fabric-samples.git
 ```
 {: codeblock}
 
-After you download the Fabric Samples, run the following commands to ensure that you are using the version of the samples compatible with Fabric v1.4.12 and v2.2.5.
+After you download the Fabric Samples, run the following commands to ensure that you are using the version of the samples compatible with Fabric v1.4.12 and v2.2.10.
 
 ```
 cd fabric-samples

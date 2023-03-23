@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-02-24"
+lastupdated: "2023-03-20"
 
 keywords: APIs, build a network, authentication, service credentials, API key, API endpoint, IAM access token, Fabric CA client, import a network, generate certificates
 
@@ -119,7 +119,7 @@ Example cURL commands are provided for each API in the [{{site.data.keyword.bloc
 ## Limitations
 {: #ibp-v2-apis-limitations}
 
-You can only import CA, peer, and ordering nodes that are exported from other {{site.data.keyword.blockchainfull_notm}} Platform consoles running on {{site.data.keyword.cloud_notm}}, OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.23 - v1.24 container platform on x86_64. The platform is also supported on LinuxONE (s390x) using OpenShift Container Platform.
+You can only import CA, peer, and ordering nodes that are exported from other {{site.data.keyword.blockchainfull_notm}} Platform consoles running on {{site.data.keyword.cloud_notm}}, OpenShift Container Platform, Red Hat Open Kubernetes Distribution, or any Kubernetes v1.24 - v1.25 container platform on x86_64. The platform is also supported on LinuxONE (s390x) using OpenShift Container Platform.
 
 ## Building a network by using APIs
 {: #ibp-v2-apis-build-with-apis}

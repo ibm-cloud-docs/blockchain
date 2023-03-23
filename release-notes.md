@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-21"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -19,15 +19,33 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-
-
 Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.10](https://github.com/hyperledger/fabric/releases/tag/v2.2.10), and [v2.4.8](https://github.com/hyperledger/fabric/releases/tag/v2.4.8).
 
 {: shortdesc}
 
 
 
+
+
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+
+## 22 Mar 2023
+{: #03-22-2023}
+
+**Certificate Authority (CA) patch 1.5.5-10, Peer and ordering node patch 1.4.12-24, 2.2.10-2, 2.4.8-2.**
+
+Added ability to remove the system channel and ability to create orderers without a system channel.
+
+Added support to use the channel participation APIs offered by Fabric peers and orderers to manage channels
+
+Updates to VS Code documentation
+
+Updated supported platforms, including support for Kubernetes 1.25
+
+Bug Fixes and Security Patches
+
+Severity: medium
 
 
 ## 28 Feb 2023
@@ -65,7 +83,7 @@ Severity: medium
 ## 07 Dec 2022
 {: #12-07-2022}
 
-**Certificate Authority (CA) patch 1.5.5-6, Peer and ordering node patch 1.4.12-20, 2.2.9-2, 2.4.7-2.**
+**Certificate Authority (CA) patch 1.5.5-6, Peer and ordering node patch 1.4.12-24, 2.2.9-2, 2.4.7-2.**
 
 Updates to VS Code documentation.
 
@@ -152,7 +170,7 @@ Severity: medium
 
 **Certificate Authority (CA) patch 1.5.3-1, Peer and ordering node patch 1.4.12-12, 2.2.5-4, 2.4.3-1.**
 
-v2.5.3 release updates listed in [What's new](/docs/blockchain?topic=blockchain-whats-new) for May 03, 2022.
+v2.5.4 release updates listed in [What's new](/docs/blockchain?topic=blockchain-whats-new) for May 03, 2022.
 
 Miscellaneous bug fixes and security patches.
 

@@ -18,7 +18,7 @@ subcollection: blockchain
 You can watch the getting started video series to learn more about how to use {{site.data.keyword.blockchainfull}} Platform.
 {: shortdesc}
 
-## Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3
+## Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4
 {: #ibp-videos-ibp-v2}
 
 Watch the following [video series](https://developer.ibm.com/series/ibm-blockchain-platform-console-video-series/) to learn more about the {{site.data.keyword.blockchainfull_notm}} Platform and how you can get started to build your own network:

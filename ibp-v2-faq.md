@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-20"
 
 keywords: FAQs, can I, upgrade, what version, peer ledger database, supported languages, why do I, regions
 
@@ -90,7 +90,7 @@ Hyperledger Fabric is a powerful, versatile, pluggable, open source, distributed
 {: faq}
 
 
-{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.5.
+{{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} uses Hyperledger Fabric v1.4.12 and v2.2.10.
 
 
 
@@ -197,7 +197,7 @@ Currently, {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.ke
 {: #ibp-v2-faq-ocp-trial}
 {: faq}
 
-A free 30 day trial is available in the [Red Hat Marketplace.](https://marketplace.redhat.com/en-us/products/ibm-blockchain){: external}. See [Deploy from Red Hat Marketplace](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-rhm) to learn more.
+A free 30 day trial is available in the [Red Hat Marketplace.](https://marketplace.redhat.com/en-us/products/ibm-blockchain){: external}. See [Deploy from Red Hat Marketplace](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-ocp-rhm) to learn more.
 
 
 ## Is it possible to deploy blockchain nodes to multiple clouds from a single blockchain console?
@@ -229,7 +229,7 @@ If you are moving from v1.4.x to v2.x, you may have to update your smart contrac
 {: #ibp-v2-faq-migrate-raft}
 {: faq}
 
-Yes. The {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}  uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-faq#ibp-v2-faq-interoperability).
+Yes. The {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}  uses Raft consensus. All of the applications and smart contracts that you are using on Fabric v1.4.x are able to work on your {{site.data.keyword.blockchainfull_notm}} Platform network. However, no mechanism exists to migrate your ledger data from one network to another. Instead, you can reinstall your smart contract packages on your {{site.data.keyword.blockchainfull_notm}} Platform network. See also [Can IBM Blockchain Platform components interoperate with Hyperledger Fabric components on the same network?](/docs/blockchain-sw-254?topic=blockchain-sw-254-ibp-v2-faq#ibp-v2-faq-interoperability).
 
 ## Can I migrate the blockchain components on my {{site.data.keyword.IBM_notm}} Kubernetes service cluster to a Red Hat OpenShift cluster in {{site.data.keyword.cloud_notm}}?
 {: #ibp-v2-faq-ocp-migrate}
@@ -251,7 +251,7 @@ When you delete an {{site.data.keyword.blockchainfull_notm}} Platform service in
 {: support}
 
 Your existing Kubernetes cluster works with the {{site.data.keyword.blockchainfull_notm}} Platform if it satisfies the following conditions:
-- It is running Kubernetes version v1.23 - v1.24.
+- It is running Kubernetes version v1.24 - v1.25.
 - There are enough available resources in the cluster.
 
 

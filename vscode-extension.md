@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-17"
 
 keywords: vs code, Visual Studio Code extension, smart contract, development tools, code ready workspaces
 
@@ -401,7 +401,7 @@ You can then import the nodes of your network into the extension.
 8. Enter a name for your environment.
 9. Select the CAs and peers that belong to your organization, along with the ordering nodes of your channels, click **OK** when done.
 
-In steps 5 and 6, you can alternatively enter an API key and secret that you generate using the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-v2-apis#console-icp-manage-create-api-key).
+In steps 5 and 6, you can alternatively enter an API key and secret that you generate using the [{{site.data.keyword.blockchainfull_notm}} Platform REST APIs](/docs/blockchain-sw-254?topic=blockchain-sw-254-ibp-v2-apis#console-icp-manage-create-api-key).
 {: tip}
 
 You also need to import your admin identities into the wallet pane and associate them with your nodes. You need to associate an admin identity with your peers, CA, and an ordering node before you can connect with your network.

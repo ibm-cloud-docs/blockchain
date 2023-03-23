@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-17"
 
 keywords: OpenShift, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, Red Hat Marketplace, subscription, operators
 
@@ -21,7 +21,7 @@ subcollection: blockchain
 
 
 
-The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.3 operator onto a Kubernetes cluster on OpenShift Container Platform 4.4+. This operator deploys instances of the certificate authority (CA), peer, ordering nodes and the {{site.data.keyword.blockchainfull_notm}} Platform console that uses to manage the blockchain components on your network. This deployment option is available for OpenShift clusters that are running in {{site.data.keyword.cloud_notm}} or your cloud.
+The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchainfull}} Platform 2.5.4 operator onto a Kubernetes cluster on OpenShift Container Platform 4.4+. This operator deploys instances of the certificate authority (CA), peer, ordering nodes and the {{site.data.keyword.blockchainfull_notm}} Platform console that uses to manage the blockchain components on your network. This deployment option is available for OpenShift clusters that are running in {{site.data.keyword.cloud_notm}} or your cloud.
 {: shortdesc}
 
 ## What is Red Hat Marketplace?
@@ -29,7 +29,7 @@ The Red Hat Marketplace can be used to deploy the {{site.data.keyword.blockchain
 
 Red Hat Marketplace is available directly from your OpenShift web console. It provides an open cloud catalog that makes it easier to discover and access certified software for container-based environments in public clouds. With automated deployment, software is immediately available to deploy on any Red Hat OpenShift cluster, providing a fast, integrated experience. Discover and buy certified software, and quickly deploy. Access open source and proprietary software, with responsive support, streamlined billing and contracting, simplified governance, and single-dashboard visibility across clouds. Built in partnership by Red Hat and {{site.data.keyword.IBM_notm}}, this marketplace helps organizations deliver enterprise software and improve workload portability.
 
-Red Hat Marketplace provides a simplified alternative method for deploying an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your cluster instead of the [manual deployment steps](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp) or by using [Ansible playbook](/docs/blockchain-sw-253?topic=blockchain-sw-253-ansible) scripts.
+Red Hat Marketplace provides a simplified alternative method for deploying an instance of the {{site.data.keyword.blockchainfull_notm}} Platform to your cluster instead of the [manual deployment steps](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-ocp) or by using [Ansible playbook](/docs/blockchain-sw-254?topic=blockchain-sw-254-ansible) scripts.
 
 With just a few simple steps, you can get started with the {{site.data.keyword.blockchainfull_notm}} Platform. After you install the operator to your OpenShift project, you can create a subscription that allows you to deploy the blockchain console UI.
 
@@ -42,7 +42,7 @@ To learn more about the Marketplace see the [Red Hat documentation](https://mark
 {: #deploy-ocp-rhm-limitations}
 
 
-- IBM Blockchain Platform 2.5.3 is supported on Red Hat OpenShift 4.4+.
+- IBM Blockchain Platform 2.5.4 is supported on Red Hat OpenShift 4.4+.
 - You are responsible for the management of health monitoring, logging, and resource usage of your blockchain components.
 - IBM Blockchain Platform is not supported on OpenShift Online.
 - Mutual TLS is not supported between your applications and your blockchain nodes.
@@ -63,7 +63,7 @@ You must have the cluster administrator role to install the operators from the R
 7. Click **Purchase** to get started. From the **Purchase complete** page, click **Install now**. This installs the IBM Blockchain Platform operator into your cluster. Note that during the installation process you are required to select which OpenShift project to deploy the operator to from the **Namespace scope** drop-down. After the operator is installed, your cluster connects back to Red Hat Marketplace and then becomes a target cluster for installing and managing the operator from Red Hat Marketplace. You can deploy the operator multiple times across different clusters as long as they have registered with the Red Hat Marketplace. When selecting a namespace for operator installation, **All namespaces on the cluster** is selected by default&mdash;**you must change this default selection to a specific namespace in the cluster** to make operator and Fabric components run in a dedicated namespace. ![Install the operator in the openshift-operators namespace](images/allnamespace-install-operator.png "Install the operator in the openshift-operators namespace"){: caption="Figure 1. Install the operator in the openshift-operators namespace" caption-side="bottom"}
 8. The Console and Fabric components can be installed in any namespace. ![Console and Fabric components can be installed in any namespace](images/allnamespace-installed-operators.png "Console and Fabric components can be installed in any namespace"){: caption="Figure 2. Console and Fabric components can be installed in any namespace" caption-side="bottom"}
 9. Next, update the Security Context Constraint command settings to use the Fabric and Console namespaces. ![Update Security Context Constraint command settings to use the Fabric and Console namespaces.](images/allnamespace-ibp-consoles.png "Update Security Context Constraint command settings to use the Fabric and Console namespaces."){: caption="Figure 3. Update Security Context Constraint command settings to use the Fabric and Console namespaces." caption-side="bottom"}
-10. If your OpenShift cluster is behind a firewall, see [Deploy from Red Hat Marketplace (airgap installation)](/docs/blockchain-sw-253?topic=blockchain-sw-253-deploy-ocp-rhm-fw).
+10. If your OpenShift cluster is behind a firewall, see [Deploy from Red Hat Marketplace (airgap installation)](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-ocp-rhm-fw).
 11. Continue to [Step one: Apply the Security Context Constraint](#deploy-ocp-rhm-scc).
 
 ## Step one: Apply the Security Context Constraint
@@ -228,14 +228,14 @@ spec:
       size: 5Gi
   serviceAccountName: ibm-blockchain
   usetags: true
-  version: 2.5.3
+  version: 2.5.4
 ```
 {: codeblock}
 
 - Accept the IBM Blockchain Platform license by replacing `<ACCEPT>` with the text `true`.
 - Replace `<EMAIL>` with the email address that you want to use for the console administrator.
 - Replace `<PASSWORD>` with the password of your choice. This password becomes the default password for the console administrator but they are required to change it the first time they log in.
-- Replace `<DOMAIN>` with the name of your cluster domain. You can find this value from your OpenShift web console URL. Examine the URL for the current page. It is similar to: `https://console-openshift-console.pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.3/ibp.com~v1beta1~IBPConsole/~new`. The value of the domain then would be `pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud`, after you remove `console-openshift-console` and `/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.3/ibp.com~v1beta1~IBPConsole/~new`.  
+- Replace `<DOMAIN>` with the name of your cluster domain. You can find this value from your OpenShift web console URL. Examine the URL for the current page. It is similar to: `https://console-openshift-console.pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.4/ibp.com~v1beta1~IBPConsole/~new`. The value of the domain then would be `pa-0803-ocp43-0defdaa0c51bd4a2dcb024eab4bf04a1-0000.us-south.containers.appdomain.cloud`, after you remove `console-openshift-console` and `/k8s/ns/pa0804/clusterserviceversions/ibm-blockchain.v2.5.4/ibp.com~v1beta1~IBPConsole/~new`.  
 
 
 You also need to make additional edits to the file depending on your choices in the deployment process. For example, if you created a new storage class for your network, provide the storage class that you created to the `class:` field.
@@ -282,7 +282,7 @@ spec:
       size: 5Gi
   serviceAccountName: ibm-blockchain
   usetags: true
-  version: 2.5.3
+  version: 2.5.4
   clusterdata:
     zones:
   resources:
@@ -387,7 +387,7 @@ spec:
       size: 5Gi
   serviceAccountName: ibm-blockchain
   usetags: true
-  version: 2.5.3
+  version: 2.5.4
   tlsSecretName: "console-tls-secret"
   clusterdata:
     zones:
@@ -466,7 +466,7 @@ In your browser, you can see the console login screen:
 Ensure that you are not using the ESR version of Firefox. If you are, switch to another browser such as Chrome and log in.
 {: important}
 
-The administrator who provisions the console can grant access to other users and restrict the actions they can perform. For more information, see [Managing users from the console](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage-users){: external} in the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3 documentation.
+The administrator who provisions the console can grant access to other users and restrict the actions they can perform. For more information, see [Managing users from the console](/docs/blockchain-sw-254?topic=blockchain-sw-254-console-icp-manage#console-icp-manage-users){: external} in the {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4 documentation.
 
 ## Removing your deployment
 {: #console-deploy-ocp-rhm-remove-deployment}
@@ -497,16 +497,16 @@ And then remove any instances or the IBM Blockchain operator by using the OpenSh
 ## Next steps
 {: #console-deploy-ocp-rhm-next-steps}
 
-When you access your console, you can use the **Nodes** tab of your console UI to create CAs, peers, or an ordering service. See the [Build a network tutorial](/docs/blockchain-sw-253?topic=blockchain-sw-253-ibp-console-build-network#ibp-console-build-network){: external} to get started with the console.
+When you access your console, you can use the **Nodes** tab of your console UI to create CAs, peers, or an ordering service. See the [Build a network tutorial](/docs/blockchain-sw-254?topic=blockchain-sw-254-ibp-console-build-network#ibp-console-build-network){: external} to get started with the console.
 
-To learn how to manage the users that can access the console, view the logs of your console and your blockchain components, see [Administering your console](/docs/blockchain-sw-253?topic=blockchain-sw-253-console-icp-manage#console-icp-manage){: external}.
+To learn how to manage the users that can access the console, view the logs of your console and your blockchain components, see [Administering your console](/docs/blockchain-sw-254?topic=blockchain-sw-254-console-icp-manage#console-icp-manage){: external}.
 
 
 
 ## Support
 {: #deploy-ocp-rhm-support}
 
-Support is provided for the paid version of the Red Hat Marketplace offering and support cases can be opened through the Red Hat Marketplace [support portal](https://marketplace.redhat.com/en-us/support).  Customers that use the trial version from Red Hat Marketplace, can refer to [self-help resources](/docs/blockchain-sw-253?topic=blockchain-sw-253-blockchain-support#blockchain-support-resources) for assistance.
+Support is provided for the paid version of the Red Hat Marketplace offering and support cases can be opened through the Red Hat Marketplace [support portal](https://marketplace.redhat.com/en-us/support).  Customers that use the trial version from Red Hat Marketplace, can refer to [self-help resources](/docs/blockchain-sw-254?topic=blockchain-sw-254-blockchain-support#blockchain-support-resources) for assistance.
 
 ## Create a project for your {{site.data.keyword.blockchainfull_notm}} Platform deployment
 {: #deploy-ocp-rhm-project}

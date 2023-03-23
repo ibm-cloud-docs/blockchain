@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-03-23"
 
 keywords: site map
 subcollection: blockchain
@@ -123,7 +123,7 @@ subcollection: blockchain
 
 
 ## About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
-{: #sitemap_about__platform_for_}
+{: #sitemap_about_platform_for_}
 
 
 [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview)
@@ -154,13 +154,13 @@ subcollection: blockchain
 
 
 ## What is blockchain?
-{: #sitemap_what-is-blockchain?}
+{: #sitemap_what-is-blockchain}
 
 [What is blockchain?](http://stackoverflow.com/questions/tagged/ibm-cloud){: external}
 
 
 ## What's new
-{: #sitemap_what's_new}
+{: #sitemap_whats_new}
 
 
 [What's new](/docs/blockchain?topic=blockchain-whats-new#whats-new)
@@ -579,7 +579,7 @@ subcollection: blockchain
 
 [{{site.data.keyword.blockchainfull_notm}} Platform getting started videos](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos)
 
-* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.3](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos-ibp-v2)
+* [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4](/docs/blockchain?topic=blockchain-ibp-videos#ibp-videos-ibp-v2)
 
 
 ## Deploy a smart contract
@@ -675,7 +675,7 @@ subcollection: blockchain
 
     * [Supported app development methods in Fabric v2.4](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-dev-methods-v24)
 
-    * [Fabric Peer Gateway documentation](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-fabric-gateway)
+    * [Fabric Peer Gateway documentation](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-fabric-gateway-docs)
 
     * [Connecting to the Fabric Gateway peer service](/docs/blockchain?topic=blockchain-ibp-console-app#ibp-console-app-connecting-fabric-gateway)
 
@@ -1711,6 +1711,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
+
+* [22 Mar 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#03-22-2023)
 
 * [28 Feb 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#02-28-2023)
 
