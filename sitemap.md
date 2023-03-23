@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-03-23"
 
 keywords: site map
 subcollection: blockchain
@@ -123,7 +123,7 @@ subcollection: blockchain
 
 
 ## About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}
-{: #sitemap_about__platform_for_}
+{: #sitemap_about_platform_for_}
 
 
 [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview)
@@ -154,13 +154,13 @@ subcollection: blockchain
 
 
 ## What is blockchain?
-{: #sitemap_what-is-blockchain?}
+{: #sitemap_what-is-blockchain}
 
 [What is blockchain?](http://stackoverflow.com/questions/tagged/ibm-cloud){: external}
 
 
 ## What's new
-{: #sitemap_what's_new}
+{: #sitemap_whats_new}
 
 
 [What's new](/docs/blockchain?topic=blockchain-whats-new#whats-new)
