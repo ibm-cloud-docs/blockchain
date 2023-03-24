@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-14"
+lastupdated: "2023-03-24"
 
 keywords: blockchain network, migration
 
@@ -25,7 +25,7 @@ Customers who are currently operating and using {{site.data.keyword.blockchainfu
 ## What is changing?
 {: #ibp-migration-what}
 
-In September, 2021, IBM released the IBM Support for Hyperledger Fabric edition, which provides certified images of Hyperledger Fabric open source code, accelerators, and IBM support for Fabric-based blockchain solutions. Given the functional overlap with the IBM Blockchain Platform Software and SaaS editions, IBM will be withdrawing the IBM Blockchain Platform SaaS edition on July 31, 2023. The [IBM Cloud service withdrawal announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/1/897/ENUS922-101/index.html&lang=en&request_locale=en) was published on July 26, 2002.
+In September, 2021, IBM released the IBM Support for Hyperledger Fabric edition, which provides certified images of Hyperledger Fabric open source code, accelerators, and IBM support for Fabric-based blockchain solutions. Given the functional overlap with the IBM Blockchain Platform Software and SaaS editions, IBM will be withdrawing the IBM Blockchain Platform SaaS edition on July 31, 2023. The [IBM Cloud service withdrawal announcement](https://www.ibm.com/common/ssi/ShowDoc.wss?docURL=/common/ssi/rep_ca/1/897/ENUS922-101/index.html&lang=en&request_locale=en) was published on July 26, 2022.
 
 
 ## Why is it changing?
