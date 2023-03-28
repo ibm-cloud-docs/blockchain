@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-03-28"
 
 keywords: blockchain network, migration
 
@@ -79,4 +79,51 @@ While IBM is testing this migration tool internally for production usage, **ther
         b) ordering nodes - v2.4.8 or higher  
         c) certificate authorities - v1.5.5 or higher   
 
-**Attention**: Once available, the migration tool will verify these prerequisites from your console.
+**Attention**: The migration tool will verify the prerequisites above, from your console.
+
+## Post-migration considerations
+{: #ibp-post-migration-considerations}
+
+The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
+
+### Deploying a new SaaS instance
+
+The following steps are required **if** you choose to deploy a new SaaS instance of IBM Blockchain Platform **using the same Kubernetes cluster that you have already migrated to IBM Support for Hyperledger Fabric**.
+
+
+#### Step 1. Delete the ingressClass field from the configmap ibm-ingress-deploy-config in kube-system namespace
+
+Following migration of a Kubernetes cluster to IBM Support for Hyperledger Fabric, the data values will look similar to the following example:
+
+```
+data:
+  public-crbtdsmtdd0fs3n12v454g-alb4: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb5: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb6: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+```
+
+Edit the ibm-ingress-deploy-config configmap file (in the kube-system namespace) to delete the ingressClass:
+
+`kubectl edit cm -n kube-system ibm-ingress-deploy-config`
+
+The data values should then be similar to the following example:
+
+```
+data:
+  public-crbtdsmtdd0fs3n12v454g-alb4: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb5: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb6: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+```
+{: codeblock}
+
+
+#### Step 2. Reload albs to use the new configmap data values
+
+To complete the following step, you must be logged in to your IBM Cloud account. Then run the following command:
+
+`ibmcloud cs alb update -c <Cluster Name | Cluster ID>`
+
+
+#### Step 3. Restart alb pods
+
+**Make sure all alb pods are restarted in the kube-system** namespace of your cluster** (It will take 5-10 minutes to reflect the configmap changes.)
