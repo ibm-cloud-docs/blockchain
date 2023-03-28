@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-03-28"
 
 keywords: IBM Blockchain Platform, release, new features
 
@@ -21,6 +21,8 @@ subcollection: blockchain
 {: #whats-new}
 
 This page announces major changes to IBM Blockchain Platform.
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided in the console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](howto/saas-migration-support.md) for details.
 
 
 
