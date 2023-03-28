@@ -31,7 +31,7 @@ In September, 2021, IBM released the IBM Support for Hyperledger Fabric edition,
 ## Why is it changing?
 {: #ibp-migration-why}
 
-To maintain a focused development, delivery & support effort for IBM Blockchain Platform, it has been determined that the IBM Support for Hyperledger Fabric Support  best recognizes the opensource foundation of the core code and aligns IBM’s value with the support, certification, and accelerators.
+To maintain a focused development, delivery, and support effort for IBM Blockchain Platform, IBM Support for Hyperledger Fabric  best recognizes the opensource foundation of the core code and aligns IBM’s value with support, certification, and accelerators.
 
 
 ## How do I transition my license?
