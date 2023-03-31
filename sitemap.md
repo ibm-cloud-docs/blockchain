@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-29"
+lastupdated: "2023-03-31"
 
 keywords: site map
 subcollection: blockchain
@@ -1213,9 +1213,9 @@ subcollection: blockchain
 
     * [Systemless orderers details](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-systemless-orderers)
 
-* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
-
 * [Create a TLS identity](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-tls-id)
+
+* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
 
 * [Upgrading Node.js chaincode](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#upgrade-nodejs-chaincode)
 
