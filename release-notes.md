@@ -19,7 +19,7 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.10](https://github.com/hyperledger/fabric/releases/tag/v2.2.10), and [v2.4.8](https://github.com/hyperledger/fabric/releases/tag/v2.4.8).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v2.2.10](https://github.com/hyperledger/fabric/releases/tag/v2.2.10) and [v2.4.8](https://github.com/hyperledger/fabric/releases/tag/v2.4.8).
 
 {: shortdesc}
 
