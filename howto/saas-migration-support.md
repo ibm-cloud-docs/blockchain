@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-28"
+lastupdated: "2023-04-18"
 
 keywords: blockchain network, migration
 
@@ -80,6 +80,25 @@ While IBM is testing this migration tool internally for production usage, **ther
         c) certificate authorities - v1.5.5 or higher   
 
 **Attention**: The migration tool will verify the prerequisites above, from your console.
+
+## Running the migration tool
+
+You can access the IBM Blockchain Platform SaaS to IBM Support for Hyperledger Fabric migration tool from the banner on your console.
+
+
+
+Screenshot here
+
+The first page in your console reiterates the prerequisite levels and outlines the migration and details of what happens during the process. Please read that information carefully. This process must be executed for the console for EACH service instance in the participating network (i.e. if you manage more than one IBM Blockchain Platform SaaS instance ID, it would need to be run from each console separately).
+
+From a high-level, the migration process entails the following actions:
+
+    1. Checking version compatibility
+    1. Creating new login credentials for the new customer-hosted console
+    1. Redeploying the Fabric nodes (CAs, peers, orderers) with the IBM Support for Hyperledger Fabric images
+    1. Deploying a new console in the IBM Blockchain Platform cluster and copying the console data from the IBM Blockchain Platform SaaS console
+    1. Exporting the current wallet identities and importing them into the new console
+
 
 ## Post-migration considerations
 {: #ibp-post-migration-considerations}

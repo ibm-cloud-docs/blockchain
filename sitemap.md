@@ -867,6 +867,8 @@ subcollection: blockchain
 
 * [Next steps](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-next-steps)
 
+* [Running the migration tool](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#running-the-migration-tool)
+
 * [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
 
     * [Deploying a new SaaS instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance)
