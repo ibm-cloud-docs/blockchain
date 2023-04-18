@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-13"
+lastupdated: "2023-04-18"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, join a network, system channel
 
@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #ibp-console-join-network}
 
 
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 
 {{site.data.keyword.blockchainfull}} Platform is a blockchain-as-a-service offering that enables you to develop, deploy, and operate blockchain applications and networks. You can learn more about blockchain components and how they work together by visiting the [Blockchain component overview](/docs/blockchain?topic=blockchain-blockchain-component-overview#blockchain-component-overview). This tutorial is the second part in the [sample network tutorial series](/docs/blockchain?topic=blockchain-ibp-console-build-network#ibp-console-build-network-sample-tutorial) and describes how to create nodes in the {{site.data.keyword.blockchainfull_notm}} Platform console and connect them to a blockchain consortium hosted in another cluster.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-02-17"
+lastupdated: "2023-04-18"
 
 keywords: smart contract, private data, private data collection, anchor peer
 
@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #ibp-console-smart-contracts}
 
 
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 A smart contract is the code, packaged as chaincode, that applications interact with to read and update data on the blockchain ledger. A smart contract turns business logic into an executable program that is agreed to and verified by all members of a blockchain network. This tutorial is the third part in the [sample network tutorial series](#ibp-console-smart-contracts-structure) and describes how to deploy smart contracts to start transactions in the blockchain network.
 {: shortdesc}

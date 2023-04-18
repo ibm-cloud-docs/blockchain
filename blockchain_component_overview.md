@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-10"
+lastupdated: "2023-04-18"
 
 keywords: blockchain components, ca, certificate authorities, peer, ordering service, orderer, channel, smart contract, applications
 
@@ -20,6 +20,8 @@ subcollection: blockchain
 {: #blockchain-component-overview}
 
 
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 The components and structure of the {{site.data.keyword.blockchainfull}} Platform are based on the underlying infrastructure and tools of [Hyperledger Fabric](https://hyperledger-fabric.readthedocs.io/en/release-2.2/){: external}, an open source permissioned blockchain solution to which {{site.data.keyword.IBM_notm}} is a major contributor. Networks based on Fabric include several standard components that can be deployed in a number of configurations to support a wide variety of use cases.
 

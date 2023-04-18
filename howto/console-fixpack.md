@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-17"
+lastupdated: "2023-04-18"
 
 keywords: Kubernetes, IBM Blockchain Platform console, deploy, resource requirements, storage, parameters, fix pack, multicloud
 
@@ -21,6 +21,8 @@ subcollection: blockchain
 
 # Installing fix packs
 {: #install-fixpack}
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 Use these instructions if you have already installed or upgraded to {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4 and want to apply the latest 2.5.4 fix pack. Fix packs are cumulative, which means they include all of the fixes from previous fixpacks. Fix packs contain important fixes and upgrades and should be applied to your network as soon as possible. If you install {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4 after the [date of the latest fix pack](/docs/blockchain-sw-254?topic=blockchain-sw-254-deploy-k8#deploy-k8-docker-registry-secret), your installation will already contain the latest fix pack.
 {: shortdesc}
