@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-04-18"
 
 keywords: IBM Blockchain Platform offerings, VS code extension, IBM Cloud
 
@@ -14,6 +14,8 @@ subcollection: blockchain
 
 # Getting started with {{site.data.keyword.blockchainfull_notm}} Platform
 {: #get-started-ibp}
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 {{site.data.keyword.blockchainfull}} Platform provides a managed and full stack blockchain-as-a-service (BaaS) offering that allows you to deploy blockchain components in environments of your choice. Clients can build, operate, and grow their blockchain networks with an offering that can be used from development through production.
 {: shortdesc}
@@ -28,7 +30,7 @@ Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, r
 
 | |{{site.data.keyword.blockchainfull_notm}} Platform for anywhere (2.5.4) | {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} |
 |----|---|----|
-| Where do you want to deploy the platform?|  Multiple Kubernetes distributions on a private, public, or hybrid **multicloud** <br><br> See [Supported Platforms](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-about-blockchain-platform-253#console-ocp-about-prerequisites)) | A Kubernetes cluster on {{site.data.keyword.cloud_notm}} <br><br> See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) |  
+| Where do you want to deploy the platform?|  Multiple Kubernetes distributions on a private, public, or hybrid **multicloud** <br><br> See [Supported Platforms](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-about-blockchain-platform-254#console-ocp-about-prerequisites)) | A Kubernetes cluster on {{site.data.keyword.cloud_notm}} <br><br> See [Supported configuration](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-supported-cfg) |  
 | What are my deployment options? | <ul><li> Full platform </li> <li> <a href="#get-started-ibp-images">Only {{site.data.keyword.blockchainfull_notm}} images</a> </li> </ul>| <ul><li> Full platform </li> </ul>
 | How is it billed? |Contact us for [pricing](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=253-pricing) |[$0.29 USD per allocated CPU hour](/docs/blockchain?topic=blockchain-ibp-saas-pricing)  |
 | Can I connect with peers in other clouds? |  Yes| Yes |
@@ -36,8 +38,8 @@ Before you use an {{site.data.keyword.blockchainfull_notm}} Platform offering, r
 | Can I use a console UI to deploy and manage my blockchain components? | Yes | Yes|
 | Are APIs available for node management? | Yes | Yes|
 | I am an experienced Fabric customer. Are peer, CA, orderer, and smart contract images available and supported? | Yes | No |
-| Where can I learn more? | See [About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-about-blockchain-platform-253) | See [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities) |
-| Ready to get started? | See [Step one: Install the IBM Blockchain Platform](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-getting-blockchain-platform-253#get-started-console-ocp-step-two-deploy-console) | See [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks) |
+| Where can I learn more? | See [About {{site.data.keyword.blockchainfull_notm}} Platform 2.5.4](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-about-blockchain-platform-254) | See [About {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-console-overview#ibp-console-overview-capabilities) |
+| Ready to get started? | See [Step one: Install the IBM Blockchain Platform](https://www.ibm.com/docs/en/blockchain-platform/2.5.4?topic=started-getting-blockchain-platform-254#get-started-console-ocp-step-two-deploy-console) | See [Getting started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}}](/docs/blockchain?topic=blockchain-ibp-v2-deploy-iks) |
 {: caption="Table 1. Which offering is right for your business?" caption-side="bottom"}
 
 Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}} Platform expert? [Schedule a consult](https://www.ibm.com/cloud/blockchain-platform/developer?schedulerform){: external} now to learn more about how blockchain can transform your business.

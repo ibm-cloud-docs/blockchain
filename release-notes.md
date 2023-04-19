@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-21"
+lastupdated: "2023-04-19"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -19,15 +19,28 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  for {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v1.4.12](https://github.com/hyperledger/fabric/releases/tag/v1.4.12), [v2.2.10](https://github.com/hyperledger/fabric/releases/tag/v2.2.10), and [v2.4.8](https://github.com/hyperledger/fabric/releases/tag/v2.4.8).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  {{site.data.keyword.cloud_notm}} built on Hyperledger Fabric [v2.2.10](https://github.com/hyperledger/fabric/releases/tag/v2.2.10) and [v2.4.8](https://github.com/hyperledger/fabric/releases/tag/v2.4.8).
 
 {: shortdesc}
 
 
 
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
+
+
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+
+## 18 Apr 2023
+{: #04-18-2023}
+
+**Certificate Authority (CA) patch 1.5.5-11, Peer and ordering node patch 2.2.10-3, 2.4.8-3.**
+
+Miscellaneous bug fixes and security patches
+
+Severity: medium
 
 
 ## 22 Mar 2023

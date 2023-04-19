@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-17"
+lastupdated: "2023-03-31"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -67,8 +67,22 @@ Note that a follower orderer can always be upgraded to a consenter orderer, and 
 
 Removal of the system channel means that the legacy concept of orderering nodes belonging to a centralized group (the consortium of network organizations) is obsolete. Orderering nodes without a system channel are a much more loosely grouped entity.
 They may or may not be members of the same channels, and each orderer can choose to join or unjoin any application channel.
-This also means that appending orderers to an existing ordering cluster, and creating the ordering cluster from scratch, now both follow the same path.
-Which is to create and start the orderers and then join them to an application channel.
+This also means that appending orderers to an existing ordering cluster, and creating the ordering cluster from scratch, now both follow the same path, which is to create and start the orderers and then join them to an application channel.
+
+## Create a TLS identity
+{: #create-tls-id}
+
+After you click the ordering cluster tile, you may see a warning about a missing TLS identity. This identity is required only for orderers that do not have a system channel. This identity is the same identity the orderer is using when it enrolls on startup against the TLS CA.
+
+To create a TLS identity:
+
+1. From the **Nodes** tab, select the CA tile that this orderer cluster used (during create).
+1. Find the row for the identity this orderer used and click the ellipses (...).
+1. On the enroll wizard, select the **TLS CA** in the CA drop-down (**it is important to select the TLS CA**).
+1. Enter the enroll secret that was used earlier when creating the orderer.
+1. Follow any other directions in the enroll wizard and click submit.
+1. If you browse back to the nodes page and select the Orderer Cluster tile, the TLS identity error should be gone.
+
 
 ## Removing an existing system channel
 {: #remove-system-channel}
@@ -88,28 +102,14 @@ You will then unjoin the system channel from each orderer node (step 3 below) us
     - From the **Nodes** tab, click the Ordering cluster tile
     - Remain on the **Details** tab
     - Click the **unjoin (trash can)** icon on the system channel tile
-    - Follow the prompts to unjoin each ordering Node.js from the system channel
+    - Follow the prompts to unjoin each ordering node from the system channel
 1. Complete the process by upgrading the Node.js chaincode from Peer v1.4.x to v2.4.x
 
-## Create a TLS identity
-{: #create-tls-id}
-
-After you click the ordering cluster tile you may see a warning about missing a TLS identity.
-This identity is a different type than we've used in the past and is only need for orderers that do not have a system channel.
-This identity is actually the same identity the orderer is using when it enrolls on startup against the TLS CA.
-To get this identity:
-
-1. From the **Nodes** tab, select the CA tile that this orderer cluster used (during create)
-1. Find the row for the identity this orderer used and click the dot dot dot
-1. On the enroll wizard select the * **TLS CA** * in the CA drop down (**its important to select the TLS CA**)
-1. Type the enroll secret that was used earlier when creating the orderer
-1. Follow any other directions in the enroll wizard and click submit
-1. If you browse back to the nodes page and select the Orderer Cluster tile the TLS identity error should be gone
 
 ## Upgrading Node.js chaincode
 {: #upgrade-nodejs-chaincode}
 
-You may need to be cautions about upgrading peers and orderers to use the system channel removal features.
+You may need to be cautious about upgrading peers and orderers to use the system channel removal features.
 Hyperledger Fabric v2.4 updated its chaincode version of Node.js to v16 and removed support for the earlier Node.js v12.
 If you are upgrading your peers and orderers to use the channel participation APIs, and are using Node.js v12 based chaincode, you must also incrementally upgrade the Node.js chaincode, as follows:
 

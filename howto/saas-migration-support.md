@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-19"
 
 keywords: blockchain network, migration
 
@@ -31,7 +31,7 @@ In September, 2021, IBM released the IBM Support for Hyperledger Fabric edition,
 ## Why is it changing?
 {: #ibp-migration-why}
 
-To maintain a focused development, delivery & support effort for IBM Blockchain Platform, it has been determined that the IBM Support for Hyperledger Fabric Support  best recognizes the opensource foundation of the core code and aligns IBM’s value with the support, certification, and accelerators.
+To maintain a focused development, delivery, and support effort for IBM Blockchain Platform, IBM Support for Hyperledger Fabric  best recognizes the opensource foundation of the core code and aligns IBM’s value with support, certification, and accelerators.
 
 
 ## How do I transition my license?
@@ -79,4 +79,70 @@ While IBM is testing this migration tool internally for production usage, **ther
         b) ordering nodes - v2.4.8 or higher  
         c) certificate authorities - v1.5.5 or higher   
 
-**Attention**: Once available, the migration tool will verify these prerequisites from your console.
+**Attention**: The migration tool will verify the prerequisites above, from your console.
+
+## Running the migration tool
+
+You can access the IBM Blockchain Platform SaaS to IBM Support for Hyperledger Fabric migration tool from the banner on your console.
+
+![Migration tool](../images/saas_migration.png "SaaS migration"){: caption="Figure 8. IBM Blockchain Platform SaaS migration to IBM Support for Hyperledger Fabric" caption-side="bottom"}
+
+The first page in your console reiterates the prerequisite levels and outlines the migration and details of what happens during the process. Please read that information carefully. This process must be executed for the console for EACH service instance in the participating network (i.e. if you manage more than one IBM Blockchain Platform SaaS instance ID, it would need to be run from each console separately).
+
+From a high-level, the migration process entails the following actions:
+
+1. Checking version compatibility
+2. Creating new login credentials for the new customer-hosted console
+3. Redeploying the Fabric nodes (CAs, peers, orderers) with the IBM Support for Hyperledger Fabric images
+4. Deploying a new console in the IBM Blockchain Platform cluster and copying the console data from the IBM Blockchain Platform SaaS console
+5. Exporting the current wallet identities and importing them into the new console
+
+Once launched, the migration tool will walk you through the steps above. Once migrated, start using the [IBM Support for Hyperledger Fabric documentation](https://www.ibm.com/docs/en/hlf-support/1.0.0).
+
+
+## Post-migration considerations
+{: #ibp-post-migration-considerations}
+
+The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
+
+### Deploying a new SaaS instance
+
+The following steps are required **if** you choose to deploy a new SaaS instance of IBM Blockchain Platform **using the same Kubernetes cluster that you have already migrated to IBM Support for Hyperledger Fabric**.
+
+
+#### Step 1. Delete the ingressClass field from the configmap ibm-ingress-deploy-config in kube-system namespace
+
+Following migration of a Kubernetes cluster to IBM Support for Hyperledger Fabric, the data values will look similar to the following example:
+
+```
+data:
+  public-crbtdsmtdd0fs3n12v454g-alb4: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb5: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb6: '{"enableSslPassthrough":"true","ingressClass":"nginx","tcpServicesConfig":"kube-system/tcp-services"}'
+```
+
+Edit the ibm-ingress-deploy-config configmap file (in the kube-system namespace) to delete the ingressClass:
+
+`kubectl edit cm -n kube-system ibm-ingress-deploy-config`
+
+The data values should then be similar to the following example:
+
+```
+data:
+  public-crbtdsmtdd0fs3n12v454g-alb4: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb5: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+  public-crbtdsmtdd0fs3n12v454g-alb6: '{"enableSslPassthrough":"true","tcpServicesConfig":"kube-system/tcp-services"}'
+```
+{: codeblock}
+
+
+#### Step 2. Reload albs to use the new configmap data values
+
+To complete the following step, you must be logged in to your IBM Cloud account. Then run the following command:
+
+`ibmcloud cs alb update -c <Cluster Name | Cluster ID>`
+
+
+#### Step 3. Restart alb pods
+
+**Make sure all alb pods are restarted in the kube-system** namespace of your cluster** (It will take 5-10 minutes to reflect the configmap changes.)

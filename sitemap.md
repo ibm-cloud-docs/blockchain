@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-03-24"
+lastupdated: "2023-04-19"
 
 keywords: site map
 subcollection: blockchain
@@ -867,6 +867,12 @@ subcollection: blockchain
 
 * [Next steps](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-next-steps)
 
+* [Running the migration tool](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#running-the-migration-tool)
+
+* [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
+
+    * [Deploying a new SaaS instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance)
+
 [Administering your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-console)
 
 * [Refreshing your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-refresh)
@@ -1209,9 +1215,9 @@ subcollection: blockchain
 
     * [Systemless orderers details](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-systemless-orderers)
 
-* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
-
 * [Create a TLS identity](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#create-tls-id)
+
+* [Removing an existing system channel](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#remove-system-channel)
 
 * [Upgrading Node.js chaincode](/docs/blockchain?topic=blockchain-ibp-howto-remove-system-channel#upgrade-nodejs-chaincode)
 
@@ -1711,6 +1717,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
+
+* [18 Apr 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#04-18-2023)
 
 * [22 Mar 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#03-22-2023)
 

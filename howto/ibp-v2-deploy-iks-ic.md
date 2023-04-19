@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-03-20"
+lastupdated: "2023-04-18"
 
 keywords: getting started tutorials, videos, integration, storage, IBM Cloud
 
@@ -15,6 +15,8 @@ subcollection: blockchain
 
 # Deploy from {{site.data.keyword.cloud_notm}}
 {: #ibp-v2-deploy-iks-ic}
+
+**ATTENTION!! IBM Blockchain Platform SaaS Edition is being replaced by IBM Support for Hyperledger Fabric!!** IBM Blockchain Platform SaaS Edition will no longer be supported after **July 31, 2023**. Customers have been directed to migrate their networks by July 31, 2023. After this date, IBM Blockchain Platform SaaS networks that are not migrated to IBM Support for Hyperledger Fabric will be at risk for potential security vulnerabilities. A migration tool is provided from your console, and the disruption to your network is minimal. See [Migrating to IBM Support for Hyperledger Fabric](/docs/blockchain?topic=blockchain-migrating-to-hlf-support) for details.
 
 Learn how to get started with {{site.data.keyword.blockchainfull_notm}} Platform for {{site.data.keyword.cloud_notm}} from the {{site.data.keyword.cloud_notm}} Catalog.
 {: shortdesc}
@@ -32,7 +34,7 @@ For more information about the {{site.data.keyword.IBM_notm}} Kubernetes Service
 
 For more information about OpenShift, see [About the OpenShift Kubernetes Engine](https://docs.openshift.com/container-platform/4.3/welcome/oke_about.html){: external}.
 
-As both {{site.data.keyword.IBM_notm}} Kubernetes Service clusters and OpenShift clusters are based on Kubernetes, you will find that many of the underlying decisions about hardware and storage types will be the same regardless of which cluster provider you choose. Note that the Kubernetes version of the cluster you deploy must be v1.24 - v1.25 to be compatible with the {{site.data.keyword.blockchainfull_notm}} Platform.
+As both {{site.data.keyword.IBM_notm}} Kubernetes Service clusters and OpenShift clusters are based on Kubernetes, you will find that many of the underlying decisions about hardware and storage types will be the same regardless of which cluster provider you choose. Note that the Kubernetes version of the cluster you deploy must be v1.24 - v1.26 to be compatible with the {{site.data.keyword.blockchainfull_notm}} Platform.
 
 **Note that if you want high availability or disaster recovery, you will need to make a decision about the storage class you are using. The `default` storage class on the cluster will be used by the dynamic provisioning. So, customers can set any storage class as the default. For more information, see [Deciding on the file storage configuration](/docs/containers?topic=containers-file_storage#file_predefined_storageclass){: external}.**
 
@@ -120,9 +122,9 @@ Consider bookmarking the URL of your console so you can come back at a later tim
 ## Updating the Kubernetes version of your cluster
 {: #ibp-v2-deploy-iks-updating-kubernetes}
 
-If you use an existing {{site.data.keyword.cloud_notm}} Kubernetes service cluster, ensure that it is running Kubernetes v1.24 - v1.25.
+If you use an existing {{site.data.keyword.cloud_notm}} Kubernetes service cluster, ensure that it is running Kubernetes v1.24 - v1.26.
 
-Before upgrading to Kubernetes version v1.24 - v1.25, ensure that you have migrated to [Kubernetes ingress controllers](https://cloud.ibm.com/docs/containers?topic=containers-ingress-types#about-alb-images).
+Before upgrading to Kubernetes version v1.24 - v1.26, ensure that you have migrated to [Kubernetes ingress controllers](https://cloud.ibm.com/docs/containers?topic=containers-ingress-types#about-alb-images).
 {: important}
 
 You can check the Kubernetes version of your cluster in the [Kubernetes clusters page](https://cloud.ibm.com/kubernetes/clusters){: external} on {{site.data.keyword.cloud_notm}}, which lists all your clusters in a table.
