@@ -97,7 +97,8 @@ From a high-level, the migration process entails the following actions:
 4. Deploying a new console in the IBM Blockchain Platform cluster and copying the console data from the IBM Blockchain Platform SaaS console
 5. Exporting the current wallet identities and importing them into the new console
 
-Once launched, the migration tool will walk you through the steps above. Once migrated, start using the [IBM Support for Hyperledger Fabric documentation](https://www.ibm.com/docs/en/hlf-support/1.0.0). 
+Once launched, the migration tool will walk you through the steps above. Once migrated, start using the [IBM Support for Hyperledger Fabric documentation](https://www.ibm.com/docs/en/hlf-support/1.0.0).
+
 
 ## Post-migration considerations
 {: #ibp-post-migration-considerations}
