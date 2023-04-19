@@ -85,7 +85,7 @@ While IBM is testing this migration tool internally for production usage, **ther
 
 You can access the IBM Blockchain Platform SaaS to IBM Support for Hyperledger Fabric migration tool from the banner on your console.
 
-![Migration tool](../images/saas_migration_tool.png "SaaS migration"){: caption="Figure 8. IBM Blockchain Platform SaaS migration to IBM Support for Hyperledger fabric" caption-side="bottom"}
+![Migration tool](../images/saas_migration.png "SaaS migration"){: caption="Figure 8. IBM Blockchain Platform SaaS migration to IBM Support for Hyperledger fabric" caption-side="bottom"}
 
 The first page in your console reiterates the prerequisite levels and outlines the migration and details of what happens during the process. Please read that information carefully. This process must be executed for the console for EACH service instance in the participating network (i.e. if you manage more than one IBM Blockchain Platform SaaS instance ID, it would need to be run from each console separately).
 
