@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-04-19"
+lastupdated: "2023-05-12"
 
 keywords: blockchain network, migration
 
@@ -65,7 +65,7 @@ While IBM is testing this migration tool internally for production usage, **ther
 2. Make sure that the Kubernetes version meets the following minimum requirements for migration:
 
     - Your existing IBM Kubernetes Service must be at version 1.23 or 1.24. Note that the version should be upgraded to 1.24 **before April 26, 2023**, when [support ends for version 1.23](https://cloud.ibm.com/docs/containers?topic=containers-cs_versions).
-    - If your existing network is running on OpenShift Container Platform (OCP), the OCP version must be 4.9, 4.10, or 4.11.
+    - If your existing network is running on OpenShift Container Platform (OCP), the OCP version must be 4.9, 4.10, 4.11 or 4.12
 
 3. Make sure that your Hyperledger Fabric v2.2 or v2.4 components are at the prerequisite levels required for migration:
 
