@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-05-25"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -112,6 +112,9 @@ Note that Fabric v1.4 has not been supported by the Hyperledger community since 
 {: important}
 
 While some new versions of Fabric only require updating the Fabric version on nodes, some include new channel capabilities that must also be updated.
+
+When updating nodes from Hyperledger Fabric v1.4.x to v2.x.x, select a 2.2.x (or later) level from the available options. **Do not select v2.1.x, even if it is presented**. Selecting the latest level is recommended.
+{: important}
 
 In these cases, the process of "updating to the latest" release is, at a high level, a two step process:
 
