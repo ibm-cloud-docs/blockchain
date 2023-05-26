@@ -2,7 +2,7 @@
 
 copyright:
   years: 2019, 2023
-lastupdated: "2023-04-18"
+lastupdated: "2023-05-12"
 
 keywords: key features, build, operate, grow, architecture, multizone clusters, compliance, about
 
@@ -82,7 +82,7 @@ Have questions and want to speak to an {{site.data.keyword.blockchainfull_notm}}
 | | |
 |----|----|
 | Kubernetes | <ul><li>v1.24 - v1.26</ul> |
-| Orchestration Service| <ul><li>Kubernetes</li><li>OpenShift Container Platform on IBM Cloud 4.9, 4.10, 4.11</li></ul> |
+| Orchestration Service| <ul><li>Kubernetes</li><li>OpenShift Container Platform on IBM Cloud 4.9, 4.10, 4.11, 4.12</li></ul> |
 | Infrastructure| <ul><li>Classic</li></ul>|
 | Hardware Security Module [(HSM)](#x6704988){: term} | <ul><li>Tested with [Cloud HSM ](/docs/blockchain?topic=blockchain-ibp-hsm-gemalto) </ul> |
 | [VLAN](#x2438470){: term} | <ul><li>[VLAN spanning](/docs/vlans?topic=vlans-vlan-spanning#manage-vlan-spanning){: external} must be enabled for multi-zone clusters. <li>Because  private ingress is not supported, a cluster with only private VLANs is not supported as a public internet connection is required for a connection between the {{site.data.keyword.blockchainfull_notm}} cluster and the customer Kubernetes cluster. A cluster with private and public VLANs configured is supported. </ul> |
