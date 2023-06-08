@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-05-12"
+lastupdated: "2023-06-08"
 
 keywords: site map
 subcollection: blockchain
@@ -869,7 +869,11 @@ subcollection: blockchain
 
 * [Next steps](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-next-steps)
 
-* [Running the migration tool](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#running-the-migration-tool)
+* [Running the migration tool](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-tool)
+
+* [Troubleshooting based on migration tool messages](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-migration-troubleshooting)
+
+    * [Failure during step two: Migrating Fabric nodes](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#failure-during-step-two-migrating-fabric-nodes)
 
 * [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-05-12"
+lastupdated: "2023-06-08"
 
 keywords: blockchain network, migration
 
@@ -82,6 +82,7 @@ While IBM is testing this migration tool internally for production usage, **ther
 **Attention**: The migration tool will verify the prerequisites above, from your console.
 
 ## Running the migration tool
+{: #ibp-migration-tool}
 
 You can access the IBM Blockchain Platform SaaS to IBM Support for Hyperledger Fabric migration tool from the banner on your console.
 
@@ -99,6 +100,25 @@ From a high-level, the migration process entails the following actions:
 
 Once launched, the migration tool will walk you through the steps above. Once migrated, start using the [IBM Support for Hyperledger Fabric documentation](https://www.ibm.com/docs/en/hlf-support/1.0.0).
 
+## Troubleshooting based on migration tool messages
+{: #ibp-migration-troubleshooting}
+
+The migration tool allows you to retry the migration process from any point where the tool stopped on a previous attempt.  Choosing to retry is a non-destructive process and can correct issues in some cases.  Retrying the migration is an initial troubleshooting step that is suggested.
+
+### Failure during step two: Migrating Fabric nodes
+
+The console may display a message similar to:
+```
+failed to update annotations for deployment orderer1node1 for ... Operation cannot be fulfilled on deployments.apps "orderer1node1": the object has been modified please apply your changes to the latest version and try again"
+```
+
+This indicates there was a problem updating a deployment, but the migration process continues even though the console has displayed this message.
+
+To check if the migration has proceeded to create a new Fabric Operations Console and copy console data, check if a new console pod has been created.
+- List pods in the namespace where blockchain components are located: `kubectl get pods -n BLOCKCHAIN_NAMESPACE`
+- Check for a running pod that has a name starting with `ibm-hlfsupport-console`.
+
+If a new console pod is running, then select the retry option for the migration and you should be taken to step five for migrating the wallet.
 
 ## Post-migration considerations
 {: #ibp-post-migration-considerations}
