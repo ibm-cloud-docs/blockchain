@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-05-12"
+lastupdated: "2023-06-14"
 
 keywords: release note, latest changes, Hyperledger Fabric
 
@@ -17,7 +17,7 @@ subcollection: blockchain
 # Release notes
 {: #release-notes-saas-20}
 
-Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  {{site.data.keyword.cloud_notm}}built on Hyperledger Fabric [v2.2.11](https://github.com/hyperledger/fabric/releases/tag/v2.2.11) and [v2.4.9](https://github.com/hyperledger/fabric/releases/tag/v2.4.9).
+Use these release notes to learn about the latest changes to {{site.data.keyword.blockchainfull}} Platform  {{site.data.keyword.cloud_notm}}built on Hyperledger Fabric [v2.2.11](https://github.com/hyperledger/fabric/releases/tag/v2.2.11), [v2.4.9](https://github.com/hyperledger/fabric/releases/tag/v2.4.9) and [v2.5.1](https://github.com/hyperledger/fabric/releases/tag/v2.5.1).
 
 {: shortdesc}
 
@@ -29,6 +29,18 @@ Use these release notes to learn about the latest changes to {{site.data.keyword
 
 
 [Installing patches](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-patch) provides instructions on how to apply patches to your existing blockchain nodes. Patches are cumulative, so select the latest available patch to include all earlier patches.
+
+
+## 13 Jun 2023 
+  
+{: #06-13-2023}
+  
+**Certificate Authority (CA) patch 1.5.5-13, Peer and ordering node patch 2.2.11-2, 2.4.9-2, 2.5.1-1.**
+
+Miscellaneous bug fixes and security patches
+
+Severity: medium
+
 
 
 ## 16 May 2023 
