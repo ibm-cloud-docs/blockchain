@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-06-27"
 
 keywords: blockchain network, migration
 
@@ -47,7 +47,7 @@ IBM Blockchain Platform SaaS subscription customers will be able to transition t
 
 IBM Support for Hyperledger Fabric supports the Hyperledger Fabric v2.x codebase (the v1.4 codebase goes out of support in April, 2023) so existing environments need to utilize v2.x component images.
 
-Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the [documentation is available at https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
+Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the documentation is available at [https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
 
 
 ## Next steps
