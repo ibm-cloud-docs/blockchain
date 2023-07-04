@@ -49,9 +49,9 @@ IBM Support for Hyperledger Fabric supports the Hyperledger Fabric v2.x codebase
 
 Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the documentation is available at [https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
 
-Please note that the migration to Hyperledger Fabric Support Images will update the ingress class used in the cluster hosting the components. Applications sharing or using these ingresses may need changes post-migration to use the updated ingresses.
+Please note that the migration to IBM Support for Hyperledger Fabric will update the ingress class used in the cluster hosting the components. Applications sharing or using these ingresses may need changes post-migration to use the updated ingresses.
 
-Also note that the Fabric Operations console that will be created in the cluster will use the default StorageClass assigned in the cluster.
+Also note that the Fabric Operations Console that will be created in the cluster will use the default StorageClass assigned in the cluster.
 
 ## Next steps
 {: #ibp-migration-next-steps}
@@ -133,8 +133,8 @@ The migration to IBM Support for Hyperledger Fabric will update the ingress clas
 
 By running following commands it can be checked whether the ingresses have been updated as expected:
 `kubectl get ingress -n BLOCKCHAIN_NAMESPACE`
-`kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
 
+`kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
 
 ### Deploying a new SaaS instance in same cluster as a migrated instance
 
