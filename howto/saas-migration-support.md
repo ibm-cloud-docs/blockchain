@@ -129,12 +129,15 @@ If a new console pod is running, then select the retry option for the migration 
 The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
 
 ### Checking the Ingresses
+
 The migration to IBM Support for Hyperledger Fabric will update the ingress class from **public-iks-k8s-nginx** to **nginx**. This is because the operator uses the ingress class nginx in order to be portable across providers other than IBM Cloud. However they are both nginx based ingress classes.
 
 By running following commands it can be checked whether the ingresses have been updated as expected:
+
 `kubectl get ingress -n BLOCKCHAIN_NAMESPACE`
 
 `kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
+
 
 ### Deploying a new SaaS instance in same cluster as a migrated instance
 
