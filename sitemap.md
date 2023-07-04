@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-30"
+lastupdated: "2023-07-04"
 
 keywords: site map
 subcollection: blockchain
@@ -877,7 +877,9 @@ subcollection: blockchain
 
 * [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
 
-    * [Deploying a new SaaS instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance)
+    * [Checking the Ingresses](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#checking-the-ingresses)
+
+    * [Deploying a new SaaS instance in same cluster as a migrated instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance-in-same-cluster-as-a-migrated-instance)
 
 [Administering your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-console)
 

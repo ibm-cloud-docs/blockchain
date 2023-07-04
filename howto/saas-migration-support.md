@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-27"
+lastupdated: "2023-07-04"
 
 keywords: blockchain network, migration
 
@@ -49,6 +49,9 @@ IBM Support for Hyperledger Fabric supports the Hyperledger Fabric v2.x codebase
 
 Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the documentation is available at [https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
 
+Please note that the migration to Hyperledger Fabric Support Images will update the ingress class used in the cluster hosting the components. Applications sharing or using these ingresses may need changes post-migration to use the updated ingresses.
+
+Also note that the Fabric Operations console that will be created in the cluster will use the default StorageClass assigned in the cluster.
 
 ## Next steps
 {: #ibp-migration-next-steps}
@@ -125,7 +128,15 @@ If a new console pod is running, then select the retry option for the migration 
 
 The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
 
-### Deploying a new SaaS instance
+### Checking the Ingresses
+The migration to IBM Support for Hyperledger Fabric will update the ingress class from **public-iks-k8s-nginx** to **nginx**. This is because the operator uses the ingress class nginx in order to be portable across providers other than IBM Cloud. However they are both nginx based ingress classes.
+
+By running following commands it can be checked whether the ingresses have been updated as expected:
+`kubectl get ingress -n BLOCKCHAIN_NAMESPACE`
+`kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
+
+
+### Deploying a new SaaS instance in same cluster as a migrated instance
 
 The following steps are required **if** you choose to deploy a new SaaS instance of IBM Blockchain Platform **using the same Kubernetes cluster that you have already migrated to IBM Support for Hyperledger Fabric**.
 
