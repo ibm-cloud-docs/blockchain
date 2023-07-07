@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-07"
 
 keywords: site map
 subcollection: blockchain
@@ -1725,6 +1725,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
+
+* [11 Jul 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-jul-2023)
 
 * [13 Jun 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#13-jun-2023)
 
