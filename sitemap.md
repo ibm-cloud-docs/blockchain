@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-07-13"
 
 keywords: site map
 subcollection: blockchain
@@ -876,6 +876,8 @@ subcollection: blockchain
     * [Failure during step two: Migrating Fabric nodes](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#failure-during-step-two-migrating-fabric-nodes)
 
 * [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
+
+    * [Deleting the TLSCopy CronJob (Only For IBM Kubernetes Service)](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deleting-the-tlscopy-cronjob-only-for-ibm-kubernetes-service)
 
     * [Checking the Ingresses](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#checking-the-ingresses)
 

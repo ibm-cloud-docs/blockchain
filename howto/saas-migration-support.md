@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-04"
+lastupdated: "2023-07-13"
 
 keywords: blockchain network, migration
 
@@ -127,6 +127,20 @@ If a new console pod is running, then select the retry option for the migration 
 {: #ibp-post-migration-considerations}
 
 The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
+
+### Deleting the TLSCopy CronJob (Only For IBM Kubernetes Service)
+If you are using OpenShift Container Platform, this step can be skipped.
+
+When using IBM Kubernetes Service, a `tlscopy` image was used by a cron job in the Blockchain Platform namespace. After migrating to IBM Support for Hyperledger Fabric, this cron job is no longer needed.
+
+The cron job is located in the Blockchain-specific Kubernetes namespace which will be named in a form similar to n123abc. To delete the cron job, follow these steps:
+
+1.List all cron jobs in the Blockchain-specific namespace so the cron job name can be obtained (a hexadecimal string which is the historical IBM Cloud service instance ID): 
+`kubectl get cronjob -n BLOCKCHAIN_NAMESPACE`
+
+2.Delete the cron job:
+`kubectl delete cronjob <SIID> -n <NAMESPACE>`
+
 
 ### Checking the Ingresses
 
