@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-06-14"
+lastupdated: "2023-07-13"
 
 keywords: site map
 subcollection: blockchain
@@ -877,7 +877,11 @@ subcollection: blockchain
 
 * [Post-migration considerations](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#ibp-post-migration-considerations)
 
-    * [Deploying a new SaaS instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance)
+    * [Deleting the TLSCopy CronJob (Only For IBM Kubernetes Service)](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deleting-the-tlscopy-cronjob-only-for-ibm-kubernetes-service)
+
+    * [Checking the Ingresses](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#checking-the-ingresses)
+
+    * [Deploying a new SaaS instance in same cluster as a migrated instance](/docs/blockchain?topic=blockchain-migrating-to-hlf-support#deploying-a-new-saas-instance-in-same-cluster-as-a-migrated-instance)
 
 [Administering your console](/docs/blockchain?topic=blockchain-ibp-console-manage-console#ibp-console-manage-console)
 
@@ -1187,7 +1191,7 @@ subcollection: blockchain
 
     * [Update your peers](/docs/blockchain?topic=blockchain-ibp-console-govern-components#update-your-peers)
 
-    * [Upgrading nodes from Fabric v1.4 to v2.4](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v24)
+    * [Upgrading nodes from Fabric v1.4 to v2.5](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-v14-v25)
 
     * [Step one: Back up your ledger (optional)](/docs/blockchain?topic=blockchain-ibp-console-govern-components#ibp-console-govern-components-upgrade-step-one-ledger)
 
@@ -1723,6 +1727,8 @@ subcollection: blockchain
 
 
 [Release notes](/docs/blockchain?topic=blockchain-release-notes-saas-20#release-notes-saas-20)
+
+* [11 Jul 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#11-jul-2023)
 
 * [13 Jun 2023](/docs/blockchain?topic=blockchain-release-notes-saas-20#13-jun-2023)
 

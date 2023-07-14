@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-06-08"
+lastupdated: "2023-07-13"
 
 keywords: blockchain network, migration
 
@@ -47,8 +47,11 @@ IBM Blockchain Platform SaaS subscription customers will be able to transition t
 
 IBM Support for Hyperledger Fabric supports the Hyperledger Fabric v2.x codebase (the v1.4 codebase goes out of support in April, 2023) so existing environments need to utilize v2.x component images.
 
-Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the [documentation is available at https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
+Documentation for the IBM Support for Hyperledger Fabric is a current IBM product offering; the documentation is available at [https://www.ibm.com/docs/en/hlf-support/1.0.0](https://www.ibm.com/docs/en/hlf-support/1.0.0).
 
+Please note that the migration to IBM Support for Hyperledger Fabric will update the ingress class used in the cluster hosting the components. Applications sharing or using these ingresses may need changes post-migration to use the updated ingresses.
+
+Also note that the Fabric Operations Console that will be created in the cluster will use the default StorageClass assigned in the cluster.
 
 ## Next steps
 {: #ibp-migration-next-steps}
@@ -125,7 +128,32 @@ If a new console pod is running, then select the retry option for the migration 
 
 The following scenarios apply once you have completed migration of your IBM Blockchain Platform SaaS network to IBM Support for Hyperledger Fabric.
 
-### Deploying a new SaaS instance
+### Deleting the TLSCopy CronJob (Only For IBM Kubernetes Service)
+If you are using OpenShift Container Platform, this step can be skipped.
+
+When using IBM Kubernetes Service, a `tlscopy` image was used by a cron job in the Blockchain Platform namespace. After migrating to IBM Support for Hyperledger Fabric, this cron job is no longer needed.
+
+The cron job is located in the Blockchain-specific Kubernetes namespace which will be named in a form similar to n123abc. To delete the cron job, follow these steps:
+
+1.List all cron jobs in the Blockchain-specific namespace so the cron job name can be obtained (a hexadecimal string which is the historical IBM Cloud service instance ID): 
+`kubectl get cronjob -n BLOCKCHAIN_NAMESPACE`
+
+2.Delete the cron job:
+`kubectl delete cronjob <SIID> -n <NAMESPACE>`
+
+
+### Checking the Ingresses
+
+The migration to IBM Support for Hyperledger Fabric will update the ingress class from **public-iks-k8s-nginx** to **nginx**. This is because the operator uses the ingress class nginx in order to be portable across providers other than IBM Cloud. However they are both nginx based ingress classes.
+
+By running following commands it can be checked whether the ingresses have been updated as expected:
+
+`kubectl get ingress -n BLOCKCHAIN_NAMESPACE`
+
+`kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
+
+
+### Deploying a new SaaS instance in same cluster as a migrated instance
 
 The following steps are required **if** you choose to deploy a new SaaS instance of IBM Blockchain Platform **using the same Kubernetes cluster that you have already migrated to IBM Support for Hyperledger Fabric**.
 

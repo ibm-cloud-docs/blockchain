@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-05-25"
+lastupdated: "2023-06-30"
 
 keywords: network components, IBM Cloud Kubernetes Service, allocate resources, batch timeout, reallocate resources, LevelDB, CouchDB
 
@@ -136,7 +136,7 @@ It may also be necessary to update SDKs and smart contracts before you can take 
 ### Upgrading nodes from Fabric v1.4 to v2.2
 {: #ibp-console-govern-components-upgrade-v14-v22}
 
-Use the following recommended procedure to upgrade your Fabric v1.4 peer and orderer nodes to v2.2, regardless of whether you are also migrating your v1.4 chaincode to run on Fabric v2.2. Once on v2.2, you can migrate your nodes to v2.4.
+Use the following recommended procedure to upgrade your Fabric v1.4 peer and orderer nodes to v2.2, regardless of whether you are also migrating your v1.4 chaincode to run on Fabric v2.2. Once on v2.2, you can migrate your nodes to v2.5.
 
 **Attention**: To update to Fabric v2.2, the recommended process (below) adds a new peer, rather than updating an existing peer in place. Adding a new peer avoids the extended time to rebuild CouchDB (if applicable) and downtime when an existing peer is updating. The final step then deletes the replaced peer.
 
@@ -213,18 +213,18 @@ After updating both your Certificate Authority (CA) and orderer nodes, update yo
 
 
 
-### Upgrading nodes from Fabric v1.4 to v2.4
-{: #ibp-console-govern-components-upgrade-v14-v24}
+### Upgrading nodes from Fabric v1.4 to v2.5
+{: #ibp-console-govern-components-upgrade-v14-v25}
 
 Upgrading {{site.data.keyword.blockchainfull_notm}} Platform nodes directly from Hyperledger Fabric 1.4.x to the latest Fabric version is possible, but deploying a new Fabric 2.2.x peer instead of upgrading is recommended. Fabric installation is done by {{site.data.keyword.blockchainfull_notm}} Platform, but can take hours or days depending on the size of the database to be built. See the [Fabric documentation on upgrading](https://hyperledger-fabric.readthedocs.io/en/release-2.2/upgrade_to_newest_version.html#upgrading-to-2-2-from-the-1-4-x-long-term-support-release){: external} for more information.
 {: important}
 
-If your Fabric v1.4 nodes use Node.js chaincode, use the following sequence to upgrade these nodes from Fabric v1.4 to v2.4:
+If your Fabric v1.4 nodes use Node.js chaincode, use the following sequence to upgrade these nodes from Fabric v1.4 to v2.5:
 
 1. Deploy new peers with Fabric v2.2
-2. Update the Node.js chaincode on these peers to 2.4 shim
+2. Update the Node.js chaincode on these peers to 2.5 shim
 3. Install and instantiate the new chaincode
-4. Upgrade the peers from Fabric v2.2 to v2.4.
+4. Upgrade the peers from Fabric v2.2 to v2.5
 
 
 ### Step one: Back up your ledger (optional)
