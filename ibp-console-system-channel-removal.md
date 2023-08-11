@@ -2,7 +2,7 @@
 
 copyright:
   years: 2014, 2023
-lastupdated: "2023-03-31"
+lastupdated: "2023-08-11"
 
 keywords: getting started tutorials, create a CA, enroll, register, create an MSP, wallet, create a peer, create ordering service, Raft, ordering service, blockchain network, blockchain
 
@@ -18,10 +18,8 @@ subcollection: blockchain
 # Removing a system channel
 {: #ibp-howto-remove-system-channel}
 
-Hyperledger Fabric v2.2 introduced the capability to create application channels, using [Channel Participation APIs](https://github.com/hyperledger/fabric/blob/main/swagger/swagger-fabric.json).
-Prior to v2.2, all application channels were created with transactions on the system channel.
-Legacy system channels are therefore now obsolete, and can (and should) be removed for improved security and performance.
-The Fabric Operations Console has added support for system channel removal, as of version v1.0.3-25.
+Hyperledger Fabric v2.3 introduced the capability to create application channels, using [Channel Participation APIs](https://github.com/hyperledger/fabric/blob/main/swagger/swagger-fabric.json).
+Prior to v2.3, all application channels were created with transactions on the system channel. Legacy system channels are therefore now obsolete, and can be removed for improved security and performance. The Fabric Operations Console has added support for system channel removal, as of version v1.0.3-25.
 
 With the latest Fabric Operations Console you can:
 
