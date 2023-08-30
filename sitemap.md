@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-11"
+lastupdated: "2023-08-30"
 
 keywords: site map
 subcollection: blockchain
