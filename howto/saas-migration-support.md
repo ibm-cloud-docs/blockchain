@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-07-13"
+lastupdated: "2023-08-30"
 
 keywords: blockchain network, migration
 
@@ -144,13 +144,17 @@ The cron job is located in the Blockchain-specific Kubernetes namespace which wi
 
 ### Checking the Ingresses
 
-The migration to IBM Support for Hyperledger Fabric will update the ingress class from **public-iks-k8s-nginx** to **nginx**. This is because the operator uses the ingress class nginx in order to be portable across providers other than IBM Cloud. However they are both nginx based ingress classes.
+The migration to IBM Support for Hyperledger Fabric will update the ingress class from **public-iks-k8s-nginx** to **nginx**. This is because the operator uses the **nginx** ingress class in order to be portable across providers other than IBM Cloud. However they are both nginx-based ingress classes.
 
-By running following commands it can be checked whether the ingresses have been updated as expected:
+By running the following commands and reviewing the output, you can check whether the ingresses have been updated as expected:
 
 `kubectl get ingress -n BLOCKCHAIN_NAMESPACE`
 
 `kubectl describe ingress -n BLOCKCHAIN_NAMESPACE`
+
+All ingresses except the ones with names ending in **community** should list the **nginx** class name.  The ingresses that end in **community** and have an ingress class of **public-iks-k8s-nginx** were only used with IBM Blockchain Platform and will not be used with IBM Support for Hyperledger Fabric.
+
+Ingresses ending in **community-new** were created by the migration process and are needed for blockchain components that have been migrated.  Ingresses that match the blockchain component names, "org1peer" for example, are new ingresses that IBM Support for Hyperledger Fabric will use to address the components.  At this point, all ingresses should be left in place and should not be deleted.
 
 
 ### Deploying a new SaaS instance in same cluster as a migrated instance
